@@ -28,7 +28,15 @@ Build it twice and compare the bytes. They must be identical — that is what ma
 
 > *Boxed text renders in italic on a tinted ground, indented from both margins. This is where the players hear the scene, and it is the one place italic is doing its intended job.*
 
+## An Image
+
+Artwork in images/ reaches the published document through ImageRun on the docx side and a Markdown link in the corpus. The test card below has a border, a diagonal, and a filled top-right corner, so a scaling, aspect-ratio, or orientation error is visible at a glance.
+
+![Pipeline test card](../images/pipeline-test.png)
+
 ## A Table
+
+This one is marked full-width, so it spans both columns instead of wrapping to three words a line in the two-column body.
 
 | **Check** | **What it catches** | **Must be** |
 | --- | --- | --- |

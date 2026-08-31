@@ -78,6 +78,117 @@ def sect_xml(cols, with_footer):
     c = f'<w:cols w:num="{cols}" w:space="360"/>' if cols > 1 else '<w:cols w:num="1"/>'
     return foot + PGSZ + PGMAR + c
 
+IMAGE_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"
+
+def merge_images(doc, srcdir, work):
+    """Carry images from the generated .docx into the template package.
+
+    The template is a complete .docx with its own media and its own relationship
+    ids, and this script previously copied only document.xml and numbering.xml
+    across. Any image would therefore reference an rId that does not exist in the
+    template's rels, and its bytes would never be copied -- so the picture is
+    silently dropped or the document fails to load.
+
+    Three things have to happen, in this order:
+      1. copy word/media/* from the source package into the template package;
+      2. re-map the source image relationship ids, because they collide with the
+         template's (docx-js starts at rId1, and the template uses rId1-rId16
+         for its own styles, fonts, headers, footers and hyperlinks);
+      3. declare the file extension in [Content_Types].xml if it is not already.
+
+    docx-js names media files by content hash, so the names cannot collide with
+    the template's image1.png / image2.png, and identical images de-duplicate.
+    Returns the rewritten document.xml text.
+    """
+    src_rels_path = os.path.join(srcdir, "word", "_rels", "document.xml.rels")
+    if not os.path.exists(src_rels_path):
+        return doc
+    src_rels = open(src_rels_path, encoding="utf-8").read()
+    imgs = re.findall(r'<Relationship[^>]*Id="([^"]+)"[^>]*Target="([^"]+)"[^>]*/>', src_rels)
+    imgs = [(rid, tgt) for rid, tgt in imgs
+            if re.search(r'Id="%s"[^>]*Type="%s"' % (re.escape(rid), re.escape(IMAGE_REL)), src_rels)]
+    if not imgs:
+        return doc
+
+    work_rels_path = os.path.join(work, "word", "_rels", "document.xml.rels")
+    work_rels = open(work_rels_path, encoding="utf-8").read()
+    used = [int(n) for n in re.findall(r'Id="rId(\d+)"', work_rels)]
+    next_id = (max(used) if used else 0) + 1
+
+    media_dir = os.path.join(work, "word", "media")
+    os.makedirs(media_dir, exist_ok=True)
+
+    remap, exts, added = {}, set(), []
+    for rid, target in imgs:
+        src_file = os.path.join(srcdir, "word", target.replace("/", os.sep))
+        if not os.path.exists(src_file):
+            continue
+        shutil.copy(src_file, os.path.join(work, "word", target.replace("/", os.sep)))
+        new_id = "rId%d" % next_id
+        next_id += 1
+        remap[rid] = new_id
+        exts.add(os.path.splitext(target)[1].lstrip(".").lower())
+        added.append('<Relationship Id="%s" Type="%s" Target="%s"/>' % (new_id, IMAGE_REL, target))
+
+    if not remap:
+        return doc
+
+    work_rels = work_rels.replace("</Relationships>", "".join(added) + "</Relationships>")
+    open(work_rels_path, "w", encoding="utf-8").write(work_rels)
+
+    # Remap in one pass: replacing ids one at a time can chain (rId7 -> rId17,
+    # then a later rule rewrites that rId17 again).
+    doc = re.sub(r'r:embed="([^"]+)"',
+                 lambda m: 'r:embed="%s"' % remap.get(m.group(1), m.group(1)), doc)
+
+    ct_path = os.path.join(work, "[Content_Types].xml")
+    ct = open(ct_path, encoding="utf-8").read()
+    for ext in sorted(exts):
+        if 'Extension="%s"' % ext not in ct:
+            mime = {"jpg": "jpeg", "jpeg": "jpeg", "png": "png",
+                    "gif": "gif", "bmp": "bmp"}.get(ext, ext)
+            ct = ct.replace("</Types>",
+                            '<Default ContentType="image/%s" Extension="%s"/></Types>' % (mime, ext))
+    open(ct_path, "w", encoding="utf-8").write(ct)
+    return doc
+
+
+# Generators mark a table as full-width by giving it style FULLWIDTH_STYLE. The
+# style is never defined anywhere -- it is only a marker this script looks for and
+# then strips, so nothing downstream sees a dangling style reference.
+FULLWIDTH_STYLE = "KCFullWidth"
+FULLWIDTH_MARKER = '<w:tblStyle w:val="%s"/>' % FULLWIDTH_STYLE
+
+def wrap_fullwidth_tables(doc, two_col):
+    """Let marked tables span both columns of a two-column body.
+
+    A three-column table with a prose column is unreadable at half the page width;
+    it wraps to three or four words a line. OOXML has no "span the columns" flag on
+    a table, so the fix is a pair of continuous section breaks around it: the
+    paragraph before the table closes the two-column section, and the paragraph
+    after it closes the one-column section that the table now sits in. Text resumes
+    in two columns afterwards, from the body sectPr.
+
+    Both marker paragraphs are empty and set to an exact one-twip line so they add
+    no visible space. The type must be explicitly continuous -- the OOXML default is
+    nextPage, which would throw every full-width table onto a page of its own.
+    """
+    def _wrap(m):
+        blk = m.group(0)
+        if FULLWIDTH_MARKER not in blk:
+            return blk
+        blk = blk.replace(FULLWIDTH_MARKER, "")
+        if not two_col:
+            return blk          # already full width; nothing to do but drop the marker
+        def brk(cols):
+            return ('<w:p><w:pPr><w:spacing w:before="0" w:after="0" w:line="1" w:lineRule="exact"/>'
+                    '<w:sectPr><w:type w:val="continuous"/>'
+                    + sect_xml(cols, True) + '</w:sectPr></w:pPr></w:p>')
+        return brk(2) + blk + brk(1)
+
+    return re.sub(r"<w:tbl>.*?</w:tbl>", _wrap, doc, flags=re.S)
+
+
 def convert(src, dst, two_col=True):
     work = os.path.join(_HERE, "work_tpl")
     shutil.rmtree(work, ignore_errors=True)
@@ -91,6 +202,7 @@ def convert(src, dst, two_col=True):
         z.extractall(srcdir)
     doc = open(f"{srcdir}/word/document.xml", encoding="utf-8").read()
     shutil.copy(f"{srcdir}/word/numbering.xml", f"{work}/word/numbering.xml")
+    doc = merge_images(doc, srcdir, work)
 
     # --- section surgery on our document.xml ---
     # replace final sectPr with template-derived one (continuous so body starts on the title page)
@@ -125,6 +237,8 @@ def convert(src, dst, two_col=True):
         if h1:
             brk = ('<w:p><w:pPr><w:sectPr>' + sect_xml(1, True) + '</w:sectPr></w:pPr></w:p>')
             doc = doc[:h1.start()] + brk + doc[h1.start():]
+
+    doc = wrap_fullwidth_tables(doc, two_col)
 
     open(f"{work}/word/document.xml", "w", encoding="utf-8").write(doc)
 

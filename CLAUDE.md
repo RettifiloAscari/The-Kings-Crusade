@@ -141,7 +141,7 @@ project was explicitly set up to avoid.
 ## Repository Layout
 
 The generator scripts are the source of truth. Everything else is either input to them or
-output from them, with the single exception of `images/`.
+output from them.
 
 - `scripts/` — **the canon.** The docx-js generators, `transplant.py`, and the
   base64-encoded visual template. Editing canon means editing a script here.
@@ -157,7 +157,8 @@ output from them, with the single exception of `images/`.
 - `reference/` — mirrored instructions, if a Claude Chat project reads this repo.
   `reference/project-instructions.md` mirrors this file and **must be updated in the same
   pass**; they drift otherwise, which is the failure the mirroring rule exists to prevent.
-- `images/` — artwork, named for what it depicts.
+- `images/` — artwork, named for what it depicts. **Input to the build**, reached from a
+  generator with `IMG()`; see *The Authoring Kit*.
 - `README.md` — repository index.
 
 `corpus/` and `documents/` come from the same untouched scripts in the same build, so they
@@ -288,10 +289,15 @@ Prerequisites, all checked by the build:
 **Verification, every time:**
 
 ```bash
-grep -Pc '[^\x00-\x7F]' scripts/*.js                  # MUST be 0 — no literal non-ASCII
+grep -Pl '[^\x00-\x7F]' scripts/*.js                  # MUST print nothing — no literal non-ASCII
 pdftotext documents/<doc>.pdf - | grep -c '\\u'       # MUST be 0 — no escape leaks
 pdffonts documents/<doc>.pdf | grep -c DejaVu         # MUST be 0 — no font substitution
 ```
+
+`tools/build.sh` now runs the source check itself and fails the build on a literal
+typographic character in any generator, so this is a spot-check rather than the guard.
+Use `-Pl` (list offending files) rather than `-Pc`: with more than one generator, `-Pc`
+prints a `file:count` line per script and there is no single number to read.
 
 **Note the doubled backslash** in the escape check. Single-quoted `'\u'` matches the plain
 letter *u* and reports every ordinary word containing one, so it can never return 0 on real
@@ -337,6 +343,42 @@ every generator's `DM` constant; changing it means changing both together.
 `transplant.py` carries **four** filename references to the encoded template. Renaming the
 template means updating all four.
 
+## The Authoring Kit
+
+The helper preamble at the top of each generator is the portable authoring kit: `P`, `PS`,
+`DM`, `H1/H2/H3`, `BULLET`, `B`, `BUL`, `BOX`, `cell/row/table`, `mod/abCell/SB`. Copy it
+into each new generator. Three conventions are specific to this repository:
+
+**Output path.** Never hardcode a stage directory. Generators write with:
+
+```js
+const { stagePath } = require('./stage');
+fs.writeFileSync(stagePath("KC_Sourcebook.docx"), buf);
+```
+
+`stagePath` resolves `$KC_STAGE` (set by `tools/build.sh`) and falls back to `<repo>/.stage`
+so a generator also runs standalone. `.stage/` is gitignored build scratch.
+
+**Artwork.** `IMG(file, widthPt, heightPt, alt)` places an image from `images/`. Width and
+height are points at 72/inch, so 288 is four inches. The helper passes an extra `mdPath`
+field that the real `docx` ignores and the Markdown shim uses to write the corpus link —
+it is relative to `corpus/`, where the generated `.md` lives, so it reads as
+`../images/<file>`. `transplant.py` carries the image bytes and relationships into the
+template package, remapping relationship ids so they cannot collide with the template's
+own. **Keep images to PNG or JPEG**, and give every one real alt text.
+
+**Full-width tables.** `table(headers, widths, rows, { full: true })` makes a table span
+both columns instead of wrapping to three or four words a line. It works by tagging the
+table with a marker style that `transplant.py` finds, wraps in a pair of continuous
+section breaks, and strips. Use it for any table with a prose column; leave narrow
+numeric tables in the column flow. In a `--single` document the marker is simply removed.
+
+**Tables must not tear.** `row()` sets `cantSplit` so a row's cells cannot be torn across
+a column or page break, header rows carry `tableHeader` so they repeat when a long table
+does span a break, and the ability-score row in `SB()` uses `keepNext` so the values stay
+with their labels. A stat block whose STR/DEX/CON header lands in one column and its
+numbers in the next is a real bug and this is what prevents it.
+
 ## Current State
 
 - `scripts/smoke.js` — a throwaway one-page document exercising every rendering path.
@@ -344,12 +386,12 @@ template means updating all four.
   generators build clean.
 - `tools/build.sh` — `GENERATORS=(smoke)` and `SINGLE_COL_MATCH="__NONE__"` are the two
   lines to update as real documents arrive.
-- **Three approved pipeline changes are not yet built** (approved during bootstrap,
-  scheduled before any canon is written — cheap now with one generator, painful with
-  seven):
-  1. Parameterize the hardcoded `/home/claude` STAGE path out of the generators.
-  2. Add an image path so artwork in `images/` can reach the published documents —
-     both the docx-js side and the Markdown shim need extending.
-  3. Support full-width tables spanning both columns.
+- `images/pipeline-test.png` — a test card used only by `smoke.js` to prove the image
+  path. **Delete it with `smoke.js`.**
+- **The three bootstrap pipeline changes are built and verified** (done before any canon,
+  while there was one generator rather than seven):
+  1. The `/home/claude` stage path is parameterized — `scripts/stage.js`, `$KC_STAGE`.
+  2. Artwork in `images/` reaches both the PDF and the Markdown corpus.
+  3. Tables can span both columns with `{ full: true }`.
 - Everything else in `scripts/` and `tools/` is the campaign-agnostic pipeline, carried
   over intact from The Qilvayas Symphony.

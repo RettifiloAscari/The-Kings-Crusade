@@ -46,7 +46,7 @@ discards those edits.
 | `tools/` | `build.sh` regenerates and verifies everything; `docx-md-shim/` emits the Markdown; `normalize_pdf.py` makes the PDF reproducible. |
 | `drafts/` | Design drafts awaiting sign-off. **Not canon.** |
 | `reference/` | Mirrored instructions — `project-instructions.md` mirrors `CLAUDE.md`; update both together. |
-| `images/` | Artwork. **Outside the build** — see `CLAUDE.md`. |
+| `images/` | Artwork. **Input to the build** — generators place it with `IMG()`. |
 
 `corpus/` and `documents/` are produced from the same untouched scripts in the same build,
 so the Markdown and the published documents cannot drift apart.
@@ -71,7 +71,8 @@ differences change the byte stream without changing the document.
 
 ## What is here now
 
-`scripts/smoke.js` is a throwaway one-page document that exercises every rendering path
-(headings, DM markers, bullets, tables, read-aloud, a stat block). It exists so the
-pipeline could be proved before any canon was written. Delete it once real generators
-build clean.
+`scripts/smoke.js` is a throwaway document that exercises every rendering path — headings,
+DM markers, bullets, tables, read-aloud, a stat block, an embedded image, and a full-width
+table spanning both columns. It exists so the pipeline could be proved before any canon was
+written. Delete it, `images/pipeline-test.png`, and their generated output once real
+generators build clean.

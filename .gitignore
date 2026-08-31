@@ -23,3 +23,6 @@ scripts/_template_decoded.docx
 # .docx is a build intermediate only — never committed. The deliverable is the
 # PDF in documents/, which embeds its fonts and reads identically on any device.
 *.docx
+
+# Build intermediates: the generators stage their .docx here.
+/.stage/

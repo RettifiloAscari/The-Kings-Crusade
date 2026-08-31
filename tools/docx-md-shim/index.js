@@ -9,6 +9,16 @@ class TextRun {
     if (this.italics) return '*'+t.trim()+'* ';
     return t; }
 }
+// Images. The real docx ImageRun takes {type, data, transformation}; `data` is a
+// Buffer, from which the source path cannot be recovered. Generators therefore pass
+// an extra `mdPath` (repo-relative, as seen from corpus/) that the real docx ignores
+// and this shim uses to write the Markdown link. Alt text comes from altText.name.
+class ImageRun {
+  constructor(o){ o = o || {};
+    this.path = esc(o.mdPath);
+    this.alt  = esc((o.altText && (o.altText.name || o.altText.description)) || ''); }
+  md(){ return this.path ? '!['+this.alt+']('+this.path+')' : ''; }
+}
 class Paragraph {
   constructor(o){ o = o || {}; this.o = o; this.children = o.children || []; }
   md(){
@@ -51,7 +61,7 @@ function render(){
   });
   return out.join('\n') + '\n';
 }
-module.exports = { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
+module.exports = { Document, Packer, Paragraph, TextRun, ImageRun, Table, TableRow, TableCell,
   HeadingLevel: { HEADING_1:'Heading1', HEADING_2:'Heading2', HEADING_3:'Heading3', TITLE:'Title' },
   AlignmentType: { CENTER:'center', LEFT:'left', RIGHT:'right', JUSTIFIED:'both' },
   WidthType: { PERCENTAGE:'pct', DXA:'dxa', AUTO:'auto' },

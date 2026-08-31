@@ -27,10 +27,11 @@ NORMALIZE="$ROOT/tools/normalize_pdf.py"
 VERIFY=1
 [[ "${1:-}" == "--no-verify" ]] && VERIFY=0
 
-# The generator scripts write to a hardcoded /home/claude. They are kept
-# byte-identical to the copies in the Claude Chat project so files round-trip
-# between the two surfaces without edits, so the path is accommodated, not patched.
-STAGE=/home/claude
+# Where the generators write their .docx build intermediates. The generators read
+# this from $KC_STAGE via scripts/stage.js and fall back to <repo>/.stage when run
+# standalone, so nothing is hardcoded in any generator. Override to build elsewhere.
+STAGE="${KC_STAGE:-$ROOT/.stage}"
+export KC_STAGE="$STAGE"
 mkdir -p "$STAGE" "$DOCS" "$CORPUS"
 
 # TODO: replace `smoke` with the real generators as they are written, in the
@@ -125,6 +126,16 @@ rm -rf "$SCRIPTS/work_tpl" "$SCRIPTS/work_src" "$SCRIPTS/_template_decoded.docx"
 echo "    $(ls -1 "$DOCS"/*.pdf | wc -l) PDFs -> documents/"
 
 if [[ $VERIFY -eq 0 ]]; then echo "==> verification skipped"; exit 0; fi
+
+echo "==> verifying generator sources"
+# All prose lives in the generators as \uXXXX escapes. A literal typographic
+# character here renders fine but breaks the escape convention, and the mistake is
+# invisible in the rendered output -- so it is checked at the source, every build.
+if grep -Pl '[^\x00-\x7F]' "$SCRIPTS"/*.js >/dev/null 2>&1; then
+  echo "FATAL: literal non-ASCII in generator source (use \\uXXXX escapes):"
+  grep -Pl '[^\x00-\x7F]' "$SCRIPTS"/*.js | sed 's/^/       /'
+  exit 1
+fi
 
 echo "==> verifying the published PDFs"
 fail=0

@@ -17,8 +17,26 @@
 //     pdftotext documents/Smoke_Test.pdf - | grep -c '\\u'   # MUST be 0
 // The doubled backslash in the second grep is load-bearing.
 
-const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
+const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
 const fs = require('fs');
+const path = require('path');
+const { stagePath } = require('./stage');
+
+// Artwork from images/. Width and height are in points at 72/inch, so 360 is 5in.
+// `mdPath` is the shim-only field the Markdown corpus links with -- it is relative
+// to corpus/, where the generated .md lives. The real docx ignores it.
+const IMG_DIR = path.join(__dirname, '..', 'images');
+const IMG = (file, w, h, alt) => new Paragraph({
+  alignment: AlignmentType.CENTER,
+  spacing: { before: 140, after: 160 },
+  children: [new ImageRun({
+    type: path.extname(file).slice(1).toLowerCase().replace('jpeg', 'jpg'),
+    data: fs.readFileSync(path.join(IMG_DIR, file)),
+    transformation: { width: w, height: h },
+    altText: { name: alt, description: alt, title: alt },
+    mdPath: '../images/' + file
+  })]
+});
 
 // ---------- helpers (the portable authoring kit) ----------
 const P = (text, opts = {}) => new Paragraph({
@@ -58,12 +76,15 @@ const BOX = (text) => new Paragraph({
 
 const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 50, bottom: 50, left: 45, right: 45 }, children: [new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
-const row = (cells) => new TableRow({ children: cells });
-const table = (headers, widths, rows) => new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] }))), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// cantSplit keeps a row's cells from being torn across a column or page break;
+// tableHeader repeats the header row when a long table does span a break.
+const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
+const FULLWIDTH = "KCFullWidth";   // marker only; transplant.py acts on it and strips it
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
-const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
-const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 } })); out.push(B("Armor Class:", d.ac)); out.push(B("Hit Points:", d.hp)); out.push(B("Speed:", d.speed)); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
+const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
+const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 } })); out.push(B("Armor Class:", d.ac)); out.push(B("Hit Points:", d.hp)); out.push(B("Speed:", d.speed)); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
 
 // ---------- content ----------
 const c = [];
@@ -91,13 +112,18 @@ c.push(PS([DM("DM Only: "), { t: "the marker is bold and book-red; the prose aft
 c.push(H2("Read-Aloud"));
 c.push(BOX("Boxed text renders in italic on a tinted ground, indented from both margins. This is where the players hear the scene, and it is the one place italic is doing its intended job."));
 
+c.push(H2("An Image"));
+c.push(P("Artwork in images/ reaches the published document through ImageRun on the docx side and a Markdown link in the corpus. The test card below has a border, a diagonal, and a filled top-right corner, so a scaling, aspect-ratio, or orientation error is visible at a glance."));
+c.push(IMG("pipeline-test.png", 288, 180, "Pipeline test card"));
+
 c.push(H2("A Table"));
+c.push(P("This one is marked full-width, so it spans both columns instead of wrapping to three words a line in the two-column body."));
 c.push(table(["Check", "What it catches", "Must be"], [26, 52, 22], [
   ["grep -Pc non-ASCII", "Literal typographic characters in the generator source", "0"],
   ["pdftotext | grep -c escape", "Escape sequences leaking into the rendered output", "0"],
   ["pdffonts | grep -c DejaVu", "A template font missing and silently substituted", "0"],
   ["Second build, cmp", "Per-run randomness the normalizer failed to strip", "identical"]
-]));
+], { full: true }));
 
 c.push(H2("A Stat Block"));
 c.push(...SB({
@@ -129,6 +155,6 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then(buf => {
-  fs.writeFileSync("/home/claude/Smoke_Test.docx", buf);
+  fs.writeFileSync(stagePath("Smoke_Test.docx"), buf);
   console.log("Written.");
 });
