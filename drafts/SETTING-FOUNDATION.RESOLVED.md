@@ -1,4 +1,58 @@
-# Design Draft — Setting Foundation
+# Design Draft — Setting Foundation *(RESOLVED)*
+
+**Status: RESOLVED AND FOLDED INTO CANON.** Superseded by `CLAUDE.md` and
+`scripts/KC_Sourcebook.js`, which are authoritative. Kept as a decision record.
+
+## What was decided
+
+The recommended set in §13 was approved wholesale, with these answers to the three
+items that carried no recommendation:
+
+| § | Item | Decision |
+|---|---|---|
+| 2 | The kingdom | **A + C** — the Living Realm, with the archive-city inside it |
+| 3 | The wizard | **A** — the Usurper-Scholar |
+| 4 | The king | **A** framing, **C** as an event on the unchosen road |
+| 5 | The ruling family | **C + B** — one at large, the rest held separately |
+| 5b | Competing claims | **Mild version** — united on the war, divided on what follows |
+| 6 | The road | **C** — the coalition splits, written asymmetrically |
+| 7 | The coalition | Two powers plus an unaligned third party |
+| 8 | Magic different in kind | **Yes** |
+| 9 | Occupation length | **Three years** |
+| 10 | Arc structure | **B** — the siege-shaped campaign |
+| 10b | The turn-back ending | **Allowed**, as a genuinely available branch |
+| — | Naming register | **Elduvaine / Caer Ysolde / Maedoc Vale / Aldric III of Harrowmark** |
+
+## What changed on contact with the code
+
+- **Vale's motive got sharper in the writing.** §3 proposed "he wanted to finish
+  reading" as a sub-question. Written out, it became the load-bearing fact: the
+  deepest vaults were closed to the Keeper *by rule*, not by power, and he unmade a
+  country over a reading privilege. The clock follows from it — he is spending the
+  land to open the vaults, and when he has read enough he simply loses interest in
+  Elduvaine. The party is racing a man finishing a task, not a doomsday weapon.
+- **The land's habits were named and tabulated.** §2A described the Living Realm in
+  the abstract. The sourcebook needed concrete, relied-upon habits whose failure is
+  legible, so the Willing Road, the Listening Water, the Kept Season and the Standing
+  Light are now canon, each with a stated failure mode.
+- **One habit became deliberately open.** What the Willing Road actually measures is
+  canonically unestablished, and later passes must not helpfully establish it.
+- **The coalition stayed generic on purpose.** §7 was deferrable; rather than invent
+  the allied powers in passing to make a sentence read better, the sourcebook runs
+  them by role and flags it in a DM-only note.
+- **The second king is unnamed.** The Barbarossa event is canon; the crown it happens
+  to is not yet named.
+
+## Sign-off items that produced no canon
+
+§11's out-of-scope list still stands: NPC rosters, the region-level map, the pantheon,
+session content, stat blocks, and the Player Guide's shape each need their own draft.
+
+---
+
+*Original proposal follows, unedited.*
+
+---
 
 **Status: PROPOSAL. NOT CANON. Nothing here is decided.**
 

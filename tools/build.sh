@@ -34,18 +34,14 @@ STAGE="${KC_STAGE:-$ROOT/.stage}"
 export KC_STAGE="$STAGE"
 mkdir -p "$STAGE" "$DOCS" "$CORPUS"
 
-# TODO: replace `smoke` with the real generators as they are written, in the
-# order they should build. `smoke` is a throwaway one-pager that exercises every
-# rendering path (headings, DM markers, bullets, tables, read-aloud, a stat
-# block); it exists so the pipeline can be proved end to end before any canon is
-# written. Delete scripts/smoke.js once the real documents build clean.
-GENERATORS=(smoke)
+# The generators to run, in build order. Add each new document here as it is
+# written: the session modules, the DM Reference Guide, and the Player Guide.
+GENERATORS=(KC_Sourcebook)
 
-# Substring of the one document that takes --single on the transplant.py step.
-# In the first campaign this was the DM Reference Guide, whose value is wide
-# scannable tables that read badly in the two-column body. Set it to whatever
-# this campaign's equivalent is, or leave it unmatched for all-two-column.
-SINGLE_COL_MATCH="__NONE__"
+# Substring of the one document that takes --single on the transplant.py step:
+# the DM Reference Guide, whose value is wide scannable tables that read badly in
+# the two-column body. It matches nothing until that document exists.
+SINGLE_COL_MATCH="KC_DM_Reference_Guide"
 
 GS_ARGS=(-sDEVICE=pdfwrite -dCompatibilityLevel=1.6 -dEmbedAllFonts=true
          -dSubsetFonts=true -dNOPAUSE -dBATCH -dQUIET)

@@ -189,6 +189,43 @@ def wrap_fullwidth_tables(doc, two_col):
     return re.sub(r"<w:tbl>.*?</w:tbl>", _wrap, doc, flags=re.S)
 
 
+def carry_missing_styles(doc, srcdir, work):
+    """Carry over any paragraph style the content uses and the template lacks.
+
+    The transplant deliberately keeps the template's styles.xml, because that is
+    where the visual identity lives -- the template's Heading1 must beat the
+    generator's. But docx-js also emits styles of its own that the template never
+    heard of, and the most important is ListParagraph: every bullet carries
+    <w:pStyle w:val="ListParagraph"/>, and with no such style defined the
+    paragraph falls back to the template's default indent and LibreOffice drops
+    the bullet entirely. Bullets rendered as plain indented prose, in every
+    document, invisibly -- the numbering was intact the whole time.
+
+    So: template wins wherever both define a style; anything only the source
+    defines is carried across.
+    """
+    src_styles_path = os.path.join(srcdir, "word", "styles.xml")
+    work_styles_path = os.path.join(work, "word", "styles.xml")
+    if not (os.path.exists(src_styles_path) and os.path.exists(work_styles_path)):
+        return
+    src_styles = open(src_styles_path, encoding="utf-8").read()
+    work_styles = open(work_styles_path, encoding="utf-8").read()
+
+    have = set(re.findall(r'w:styleId="([^"]+)"', work_styles))
+    used = set(re.findall(r'<w:pStyle w:val="([^"]+)"/>', doc))
+
+    carried = []
+    for style_id in sorted(used - have):
+        m = re.search(r'<w:style [^>]*w:styleId="%s".*?</w:style>' % re.escape(style_id),
+                      src_styles, re.S)
+        if m:
+            carried.append(m.group(0))
+    if not carried:
+        return
+    work_styles = work_styles.replace("</w:styles>", "".join(carried) + "</w:styles>")
+    open(work_styles_path, "w", encoding="utf-8").write(work_styles)
+
+
 def convert(src, dst, two_col=True):
     work = os.path.join(_HERE, "work_tpl")
     shutil.rmtree(work, ignore_errors=True)
@@ -203,6 +240,7 @@ def convert(src, dst, two_col=True):
     doc = open(f"{srcdir}/word/document.xml", encoding="utf-8").read()
     shutil.copy(f"{srcdir}/word/numbering.xml", f"{work}/word/numbering.xml")
     doc = merge_images(doc, srcdir, work)
+    carry_missing_styles(doc, srcdir, work)
 
     # --- section surgery on our document.xml ---
     # replace final sectPr with template-derived one (continuous so body starts on the title page)

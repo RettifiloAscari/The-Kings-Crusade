@@ -6,11 +6,11 @@
 A Dungeons & Dragons 5th Edition campaign. High fantasy, traditionally D&D, built on a
 Third Crusade spine.
 
-> **STATUS: BOOTSTRAPPED. PREMISE SET. NO CANON WRITTEN.**
-> The pipeline is installed and proven. The premise, tone, document set, and table specs
-> below are decided and binding. **Everything else — the kingdom's name, the wizard, the
-> king, geography, NPCs, history — does not exist yet and must not be invented without
-> sign-off.** See *Canon and Sources of Truth*.
+> **STATUS: FOUNDATION SIGNED OFF. SOURCEBOOK v1 BUILT.**
+> The pipeline is proven and the setting's foundation is canon: the kingdom, the wizard,
+> the king, the occupation and the shape of the war. Detail below that — the coalition's
+> members, the map, the royal names, the module breakdown — is **still undecided and must
+> not be invented without sign-off.** See *Canon and Sources of Truth*.
 
 ---
 
@@ -65,33 +65,75 @@ What that means in practice:
 `documents/` are output; `drafts/` is proposal, never canon; this file records decisions,
 it does not create setting.
 
-**Currently canon:** the Premise, the Tone, and the table specs. That is all. There is
-no kingdom name, no wizard, no king, no map, no NPC roster, no timeline, no pantheon.
+**Canon, signed off and binding** (drafted in `drafts/SETTING-FOUNDATION.RESOLVED.md`,
+written in `scripts/KC_Sourcebook.js`):
+
+- **Elduvaine**, the Living Realm — the occupied kingdom. Its magic is *resident*, not
+  worked: it lives in the land and has **habits** rather than rules. The four established
+  habits are the **Willing Road** (shortens for travellers who mean well), the **Listening
+  Water** (returns speech spoken at its edge, in the speaker's voice), the **Kept Season**
+  (a wood holds the season it was planted in), and the **Standing Light** (worked stone
+  holds light poured into it). Elduvaine's magic is different *in kind* from everyone
+  else's, which is why the wizard wanted this kingdom specifically.
+- **Caer Ysolde** — the capital, where three rivers braid, and home of the **Ysolde
+  Archive**: the largest collection of magical knowledge in the world. Access was governed
+  by rule rather than by power.
+- **Maedoc Vale** — the wizard. Keeper of the Ysolde Archive for nineteen years; designed
+  a third of Elduvaine's wards and maintained the rest. Three years ago he opened all of
+  them in one night, from the inside, because he was the person entitled to. The kingdom
+  fell to a key, not a siege. **His motive: the deepest vaults were closed to the Keeper by
+  rule, and he wanted to finish reading.** He is spending the land to open them. He is not
+  mad and not tragic; he considers the price proportionate.
+- **Aldric III of Harrowmark** — the calling king. Harrowmark is cold, stony and
+  unmagical, which is the point: the party comes from somewhere ordinary. Aldric leads in
+  person, is an excellent field commander and an indifferent king, and chose the party
+  himself.
+- **The occupation is three years old** — long enough to have a bureaucracy, permits, a
+  grain levy and collaborators; short enough that everyone over ten remembers before.
+- **The ruling family** — one member escaped and runs what resistance survives, and
+  refuses to be evacuated. The rest are held in two or three separate places, unharmed.
+  They are united on the war and divided on what should follow it.
+- **The coalition** — Harrowmark plus two allied powers, and one unaligned third party
+  that will deal with either side and answers to nobody.
+- **The two roads** — the coalition split. The party chooses the sea road or the mountain
+  road; the other is met later as its aftermath. A second crown marches by the road the
+  party does not take, and that king is lost early, in water; his army comes apart behind
+  him.
+- **Arc shape** — the march; the siege of the great port; the field battle that proves the
+  enemy beatable; the approach; the decision at the gates.
 
 **Not yet decided — needs explicit sign-off before it can be used:**
 
 | Open item | Notes |
 |---|---|
-| Name of the occupied kingdom | Referred to in drafts as *the kingdom* until named. |
-| The wizard — name, nature, motive, power base | The campaign's spine villain. |
-| The calling king and their realm | The "King" of the title. Their motive for the crusade matters. |
-| The captured ruling family | Number, names, where held, whether all are alive. |
-| Geography and the route of march | Both realms, the distance between, what lies along it. |
-| The coalition | Which allies march, and what each of them actually wants. |
-| Cosmology, gods, and magical traditions | Including what makes the kingdom's magic distinctive. |
-| Timeline | How long the occupation has lasted; where the campaign opens in it. |
-| Session and arc structure | How many modules, and what each covers. |
+| The two allied powers and the unaligned third party | Named and detailed in a later pass. Run them by role until then. |
+| The second king and his realm | The crown lost on the road the party does not take. |
+| The great port besieged | The campaign's central siege. |
+| Names of the royal family | Including which one is at large. |
+| Region-level geography and a gazetteer | Both realms and what lies between. |
+| What the deepest vaults actually contain | What Vale is reading toward. The sourcebook states his motive; it does not state his destination. |
+| Whether Vale is still human | Deliberately ambiguous in v1; not yet an answer. |
+| Pantheon, planes, and magical traditions | Beyond "Elduvaine's magic is different in kind." |
+| Module breakdown | How many sessions, and what each covers. |
 
 **Deliberately open** — questions left unresolved *by design*, which later sessions must
-not helpfully close: *(none yet — this list opens once canon exists.)*
+not helpfully close:
+
+- **What the Willing Road measures.** Canon says no one has ever established it. Do not
+  establish it.
+- **Whether the party takes Elduvaine and holds it, or turns back within sight of it.**
+  Both endings are genuinely supported and neither is a trick. This is decided at the
+  table and lives in the Branch Ledger.
+- **What Elduvaine should be after the war.** The royals disagree; the campaign does not
+  adjudicate. A table that ignores it entirely has lost nothing.
 
 The distinction matters. An item in the table above is a **gap to be filled**. An item in
 *Deliberately open* is **finished as it stands**. Keep them apart.
 
 **Read before you write.** Ground yourself in `corpus/` at the start of any task. Never
 generate against remembered canon — grep the file. This rule catches more errors than any
-other. Right now `corpus/` holds only the smoke test, so the honest answer to most
-questions about this setting is *"that has not been decided."* Say that instead of
+other. `corpus/` now holds the sourcebook. For anything the sourcebook does not
+say, the honest answer is still *"that has not been decided."* Say that instead of
 inventing.
 
 ## Creative Latitude
@@ -384,17 +426,17 @@ numbers in the next is a real bug and this is what prevents it.
 
 ## Current State
 
-- `scripts/smoke.js` — a throwaway one-page document exercising every rendering path.
-  **It is not canon.** Delete it, and its `corpus/` and `documents/` output, once real
-  generators build clean.
-- `tools/build.sh` — `GENERATORS=(smoke)` and `SINGLE_COL_MATCH="__NONE__"` are the two
-  lines to update as real documents arrive.
-- `images/pipeline-test.png` — a test card used only by `smoke.js` to prove the image
-  path. **Delete it with `smoke.js`.**
-- **The three bootstrap pipeline changes are built and verified** (done before any canon,
-  while there was one generator rather than seven):
-  1. The `/home/claude` stage path is parameterized — `scripts/stage.js`, `$KC_STAGE`.
-  2. Artwork in `images/` reaches both the PDF and the Markdown corpus.
-  3. Tables can span both columns with `{ full: true }`.
+- `scripts/KC_Sourcebook.js` — **the sourcebook, and the only canon written so far.**
+  Three pages: the call, Elduvaine before the fall, the fall, the occupation, the crusade,
+  *What Is Actually Happening (DM Only)*, and running guidance.
+- The smoke test and its test image are deleted; the pipeline is proved by a real document
+  now. `images/` is empty, so `IMG()` is unexercised until real artwork arrives — the
+  helper and the transplant path are built and were verified against the test card.
+- **Still to write:** the session modules, the DM Reference Guide (with the Branch Ledger,
+  whose first entry is the two roads), and the Player Guide. `SINGLE_COL_MATCH` is already
+  set to `KC_DM_Reference_Guide` and matches nothing until that document exists.
+- **The three bootstrap pipeline changes are built and verified:** the stage path is
+  parameterized (`scripts/stage.js`, `$KC_STAGE`), artwork reaches both the PDF and the
+  Markdown corpus, and tables span both columns with `{ full: true }`.
 - Everything else in `scripts/` and `tools/` is the campaign-agnostic pipeline, carried
   over intact from The Qilvayas Symphony.

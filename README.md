@@ -2,16 +2,20 @@
 
 A Dungeons & Dragons 5th Edition campaign setting.
 
-**Status: bootstrapped, premise set, no canon written.** The document pipeline is
-installed and proven end to end. The premise, tone, document set, and table specifications
-are decided. The setting itself — the kingdom, the wizard, the king, the map, the NPCs —
-does not exist yet.
+**Status: foundation signed off, sourcebook v1 built.** The kingdom, the wizard, the
+king, the occupation and the shape of the war are canon. The coalition's members, the map,
+the royal names and the module breakdown are not.
 
 ## The campaign
 
-A friendly magical kingdom has fallen to an evil wizard and their army. The ruling family
-is captive, the land laid waste. A king calls a crusade, and the party is sent to reclaim
-those lands and deliver them.
+**Elduvaine** is the Living Realm, where magic is resident rather than worked: roads
+shorten for travellers who mean well, rivers keep what was said on their banks, woods hold
+the season they were planted in. Three years ago **Maedoc Vale**, Keeper of the Ysolde
+Archive, opened every ward he had spent his life maintaining and let an army through them.
+The kingdom fell to a key, not a siege.
+
+**Aldric III of Harrowmark** has called a crusade and is going himself. The party are the
+champions he sends ahead of the army.
 
 High fantasy, traditionally D&D, on a **Third Crusade** spine — the structure of a distant
 king answering a call, a long march, an occupying power, coalition allies with their own
@@ -71,8 +75,7 @@ differences change the byte stream without changing the document.
 
 ## What is here now
 
-`scripts/smoke.js` is a throwaway document that exercises every rendering path — headings,
-DM markers, bullets, tables, read-aloud, a stat block, an embedded image, and a full-width
-table spanning both columns. It exists so the pipeline could be proved before any canon was
-written. Delete it, `images/pipeline-test.png`, and their generated output once real
-generators build clean.
+`scripts/KC_Sourcebook.js` — the sourcebook, and the only canon written so far. The
+session modules, the DM Reference Guide and the Player Guide are still to come. The
+throwaway smoke test that proved the pipeline has been retired now that a real document
+builds clean.
