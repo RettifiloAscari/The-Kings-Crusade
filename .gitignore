@@ -1,0 +1,25 @@
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~
+
+# Google Drive artifacts
+*.gdoc
+*.gsheet
+*.gslides
+.tmp.drivedownload/
+.tmp.driveupload/
+
+# Build scratch
+node_modules/
+/export/
+scripts/tpl/
+scripts/work_tpl/
+scripts/work_src/
+scripts/_template_decoded.docx
+
+# .docx is a build intermediate only — never committed. The deliverable is the
+# PDF in documents/, which embeds its fonts and reads identically on any device.
+*.docx
