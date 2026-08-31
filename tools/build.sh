@@ -62,6 +62,19 @@ command -v node >/dev/null    || { echo "FATAL: node not found"; exit 1; }
 command -v python3 >/dev/null || { echo "FATAL: python3 not found"; exit 1; }
 node -e "require('docx')" 2>/dev/null || { echo "FATAL: 'docx' not installed - run: npm install docx"; exit 1; }
 command -v soffice >/dev/null || { echo "FATAL: soffice not found - apt-get install libreoffice-writer"; exit 1; }
+# soffice ships with libreoffice-core, but core alone loads NOTHING: every document
+# fails with "source file could not be loaded", which reads like a content bug and is
+# an environment one. Check that the Writer module is actually present, not just the
+# launcher. (This has already cost this project one debugging session.)
+SOFFICE_DIR="$(dirname "$(readlink -f "$(command -v soffice)")")"
+if ! ls "$SOFFICE_DIR"/libswlo.so /usr/lib/libreoffice/program/libswlo.so \
+        /etc/libreoffice/registry/writer.xcd "$SOFFICE_DIR"/../share/.registry/writer.xcd \
+        >/dev/null 2>&1; then
+  echo "FATAL: LibreOffice Writer module not found (libreoffice-core alone is not enough)"
+  echo "       every document would fail with 'source file could not be loaded'"
+  echo "       fix: apt-get install libreoffice-writer"
+  exit 1
+fi
 command -v gs >/dev/null      || { echo "FATAL: gs not found - apt-get install ghostscript"; exit 1; }
 if [[ $VERIFY -eq 1 ]]; then
   command -v pdftotext >/dev/null || { echo "FATAL: pdftotext not found - apt-get install poppler-utils"; exit 1; }

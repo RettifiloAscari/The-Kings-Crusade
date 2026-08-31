@@ -1,3 +1,6 @@
+<!-- MIRROR OF /CLAUDE.md — update both in the same pass. They drift otherwise,
+     which is the exact failure the mirroring rule exists to prevent. -->
+
 # The King's Crusade — Project Instructions
 
 A Dungeons & Dragons 5th Edition campaign. High fantasy, traditionally D&D, built on a
