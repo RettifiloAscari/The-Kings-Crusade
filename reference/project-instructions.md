@@ -59,6 +59,44 @@ What that means in practice:
   recurring comic NPCs. A campaign about a long grim march needs them by design, not by
   accident.
 
+### Touchstones
+
+Named by the DM as large inspirations. They are reference for *register* — how a scene
+should feel and look — and they do not override anything in *Canon and Sources of Truth*.
+
+**Ridley Scott's *Kingdom of Heaven* (2005).** What it supplies:
+
+- **The road as transformation.** Balian leaves an ordinary life in France and arrives
+  somewhere that has changed him. This campaign's road-heavy structure is the same shape,
+  and it is why the march must not be hurried through.
+- **The ordinary man made a champion, who takes the oath seriously when his betters do
+  not.** A strong model for the party. Aldric chose them personally; the film is about
+  what it means to deserve that.
+- **Complexity among the crusaders, not in the cause.** Guy de Lusignan and Reynald de
+  Chatillon are the film's real villains, and they are on the protagonist's side. This is
+  exactly the slot this campaign reserves for its complexity — costs, allies, and what the
+  liberated actually want — and it is where the coalition and the two allied powers should
+  draw from.
+- **The leper king.** Baldwin IV is one of cinema's great NPCs: dying, masked, cleverer
+  than everyone around him, and holding a kingdom together by sheer will. A usable model
+  for a member of Elduvaine's royal house.
+- **The visual register.** Dust, heat, banners, siege engines, and a place that is sacred
+  and lived-in at the same time. Elduvaine should feel inhabited, not curated.
+- **"What is Jerusalem worth? Nothing. Everything."** Balian defends a city he intends to
+  give up, and surrenders it having traded it for every life inside. **That is the
+  turn-back branch**, already approved: the party may take Elduvaine and choose not to
+  hold it, and the film is the proof that this reads as judgement rather than failure.
+
+**What deliberately does not transfer.** The film's thesis is that the crusade's cause is
+compromised and that the honourable party is the one on the other side — that is Saladin,
+and this campaign replaced Saladin with an evil wizard on purpose. Take the film's texture
+and its moral seriousness about *crusaders*. Do not import its moral ambiguity about the
+*enemy*. The villain is still a villain.
+
+**The Skaldic Bard.** A track named by the DM as a tonal reference. *Not yet described in
+this repository* — the link could not be reached from the build environment, and no
+session should invent what it sounds like. Ask before drawing on it.
+
 ## Canon and Sources of Truth
 
 **The generator scripts in `scripts/` are canon.** Nothing else is. `corpus/` and
