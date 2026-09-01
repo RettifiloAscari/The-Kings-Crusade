@@ -606,17 +606,35 @@ numbers in the next is a real bug and this is what prevents it.
 
 ## Current State
 
-- `scripts/KC_Sourcebook.js` — **the sourcebook, and the only canon written so far.**
-  Three pages: the call, Elduvaine before the fall, the fall, the occupation, the crusade,
-  *What Is Actually Happening (DM Only)*, and running guidance.
-- The smoke test and its test image are deleted; the pipeline is proved by a real document
-  now. `images/` is empty, so `IMG()` is unexercised until real artwork arrives — the
-  helper and the transplant path are built and were verified against the test card.
-- **Still to write:** the session modules, the DM Reference Guide (with the Branch Ledger,
-  whose first entry is the two roads), and the Player Guide. `SINGLE_COL_MATCH` is already
-  set to `KC_DM_Reference_Guide` and matches nothing until that document exists.
-- **The three bootstrap pipeline changes are built and verified:** the stage path is
-  parameterized (`scripts/stage.js`, `$KC_STAGE`), artwork reaches both the PDF and the
-  Markdown corpus, and tables span both columns with `{ full: true }`.
+- `scripts/KC_Sourcebook.js` — the sourcebook: the call, Elduvaine before the fall, the
+  fall, the occupation, the crusade (incl. the Promise), *What Is Actually Happening
+  (DM Only)*, and running guidance (the Four Voices, the Refrain).
+- `scripts/KC_Module01_TheMuster.js` through `KC_Module11_TheDecisionAtTheGates.js`
+  (twelve files — Module Two forks into `02A_TheSeaRoad` and `02B_TheMountainRoad`,
+  and only one half is played at a given table) — **all eleven module slots are
+  written**, each carrying the full skeleton: pacing overview, *What Is Actually
+  Happening (DM Only)*, numbered scenes with boxed read-aloud, tiered DCs, SRD-sourced
+  stat blocks, NPC profiles, Optional Content, *Diverging Paths (DM Only)*, Loot, and
+  the Refrain. Draws on the approved Draconic Layer (`drafts/DRACONIC-LAYER.RESOLVED.md`)
+  for Module 7's dragon and Xavier's earned "Wyvernheart" epithet. The Refrain's rhymed
+  wording, set once in the sourcebook, is repeated verbatim in every module and turns
+  only in its last line, only in Module 11.
+- `scripts/KC_DM_Reference_Guide.js` — **written**, the first and only document in
+  single-column layout (`SINGLE_COL_MATCH` in `tools/build.sh` already pointed at it).
+  Campaign at a Glance, a Stat Block Index of all nine unique SRD-sourced stat blocks
+  across the modules, a Recurring NPCs quick-reference, and the compiled Branch Ledger
+  — all twenty-four tracked divergences from every module's Diverging Paths section,
+  with a blank column for what actually happens at the table. Invents nothing; every
+  fact is drawn from the sourcebook and the module scripts already written.
+- **Still to write:** the Player Guide (`scripts/KC_Player_Guide.js`) — two-column,
+  authored as its own document rather than derived from the sourcebook, per *The
+  Document Set* above.
+- `images/` is still empty, so `IMG()` remains unexercised until real artwork arrives —
+  the helper and the transplant path are built and were verified against a test card
+  early in the build-out.
+- **The pipeline is proven and stable:** parameterized stage path (`scripts/stage.js`,
+  `$KC_STAGE`), artwork support reaching both the PDF and the Markdown corpus, tables
+  spanning both columns with `{ full: true }`, and single-column mode via `--single`.
+  Fourteen documents build clean and byte-identical across repeated rebuilds.
 - Everything else in `scripts/` and `tools/` is the campaign-agnostic pipeline, carried
   over intact from The Qilvayas Symphony.
