@@ -44,7 +44,7 @@ const BUL = (lead, rest) => BULLET(lead ? [{ t: lead + " ", b: true }, { t: rest
 const BOX = (text) => new Paragraph({
   spacing: { before: 120, after: 160 },
   shading: { type: "clear", fill: "F3EFE4" },
-  indent: { left: 220, right: 220 },
+  indent: { left: 220, right: 220, firstLine: 0 },   // template default firstLine=180 otherwise leaks in
   children: [new TextRun({ text, italics: true })]
 });
 
@@ -52,7 +52,7 @@ const BOX = (text) => new Paragraph({
 const VERSE = (lines) => new Paragraph({
   spacing: { before: 120, after: 160 },
   shading: { type: "clear", fill: "F3EFE4" },
-  indent: { left: 220, right: 220 },
+  indent: { left: 220, right: 220, firstLine: 0 },   // same fix as BOX -- see its comment
   children: lines.map((l, i) => new TextRun({ text: l, italics: true, ...(i ? { break: 1 } : {}) }))
 });
 
