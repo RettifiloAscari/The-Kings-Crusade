@@ -207,6 +207,26 @@ written in `scripts/KC_Sourcebook.js`):
   them is an ordinary and appalling hazard of Harrowmark life, done with ropes and pikes
   and losses. Harrowmark people are not brave so much as **unimpressed**, and that is the
   cultural note the party carries out of the country with them.
+- **Elduvaine's dragons are resident magic given shape and appetite.** Where a wyvern is
+  what a mundane land produces, a dragon is what a magical one produces at the same slot
+  — not a beast that happens to know magic, but a habit with teeth, the same kind of thing
+  as the Willing Road or the Listening Water. A dragon should visibly suffer, change, or
+  grow strange as its home region is drained, the same way a wood does in the Held Winter.
+  One dragon is older than the current wards and sleeps somewhere near or under the Ysolde
+  Archive, answering to neither Vale nor the party until the campaign needs it to — this is
+  a single deep-vault exception, not the general rule, and it does not answer what the
+  vaults actually contain.
+- **Vale has exactly one bound dragon.** Somewhere in the deepest vaults he found a way to
+  compel a resident-magic dragon the way he compelled the wards — by rule rather than by
+  force, the same kind of loophole that let him open Elduvaine in the first place. It is
+  used once, at the siege of Vindana, and it is visibly wrong: pained, diminished, working
+  for him the way a hostage works for a captor. He does not tame. He finds the rule that
+  makes refusal impossible.
+- **The battle where Xavier becomes the Wyvernheart is the siege of Vindana.** A handful of
+  Harrowmark wyvern-riders — scouts and skirmishers, not cavalry — travel with the army for
+  exactly this reason. Xavier earns the name airborne, mid-siege, in a battle that is going
+  badly, exactly as canon has always specified. No document may use the name in narration
+  set before that moment.
 - **The Promise of the Call.** Xavier's summons offers those who answer two things: **a
   share in Elduvaine's resident magic** — land held in the Living Realm, where the habits
   work — and **access to the Ysolde Archive**. This is the motive engine for the whole
@@ -237,8 +257,6 @@ written in `scripts/KC_Sourcebook.js`):
 |---|---|
 | What Oksitan, Auberitz and Norvatch each want | The realms are named; their agendas, rulers and grievances are not. |
 | The second king and his realm | The crown lost on the road the party does not take. Auberitz is a grand duchy and Norvatch does not march, so by elimination this is Oksitan's king — but that has not been signed off. The Barbarossa touchstone (above) is supporting material for how he is played and how he dies, not a name. |
-| The battle where Xavier becomes the Wyvernheart | Canon that he earns it mid-campaign, airborne, in a battle going badly. Which battle and which module are open. |
-| The draconic layer beyond Harrowmark | Harrowmark's wyverns are canon. Dragons in Elduvaine, their relation to resident magic, and anything draconic in Vale's army still need their own draft. |
 | Whether Harrowmark was ever otherwise | Left open deliberately for now: a Harrowmark that was *drained* long ago would give it a stake in this war and a dread of Vale. Evocative, unapproved, and not to be assumed. |
 | Names of the royal family | Including which one is at large. |
 | Region-level geography and a gazetteer | Both realms and what lies between. |

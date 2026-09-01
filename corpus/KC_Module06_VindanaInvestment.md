@@ -20,7 +20,7 @@ Play Vindana as a place with its own life going on behind its walls, not a monst
 | --- | --- | --- |
 | 1. The Lines Close | 30–40 min | First sight of Vindana up close; the siege lines form. |
 | 2. Raising the Engines | 45–60 min | A practical, largely non-combat scene. See Tiered Skill DCs. |
-| 3. The Harrowmark Riders | 45–60 min | A cavalry raid on Vindana’s supply. DC table and stat blocks below. |
+| 3. The Cavalry Screen | 45–60 min | A horse-raid on Vindana’s supply. DC table and stat blocks below. |
 | 4. First Assault | 60–90 min | A probing attack that does not take the city. The module’s setback. |
 | Optional Content | 30–45 min | Run if the table has time; cut cleanly if not. |
 
@@ -46,7 +46,7 @@ A siege needs engines, and building them under threat of sortie is its own kind 
 
 Use the Tiered Skill DCs below to resolve however the party wants to help — hauling material, correcting an engineer’s error, defending a work party from a probing sortie. Success speeds construction and gives Scene 4 a stronger opening position (advantage on the first round, or a wall section already weakened); failure does not lose the siege, only costs time the table can feel.
 
-## Scene 3: The Harrowmark Riders
+## Scene 3: The Cavalry Screen
 
 Xavier’s own cavalry — mounted scouts and raiders, Harrowmark-trained — range beyond the siege lines to cut Vindana’s remaining supply routes inland. The party can ride with them for a fast, mobile scene very different in texture from the siege lines’ grinding patience.
 
@@ -142,7 +142,7 @@ If the Ward was rescued in Module Four, she has real, specific knowledge of Vind
 
 # Loot
 
-- **Captured supply.** Whatever the Harrowmark riders took from the intercepted column — modest, practical, and a genuine (if small) blow to Vindana’s stores rather than treasure.
+- **Captured supply.** Whatever the cavalry took from the intercepted column — modest, practical, and a genuine (if small) blow to Vindana’s stores rather than treasure.
 - **A garrison officer’s dispatch.** Recovered from the supply column or from First Assault’s dead — real intelligence about Vindana’s internal state, useful DM ammunition for Module Seven rather than something that needs to pay off here.
 
 # The Refrain

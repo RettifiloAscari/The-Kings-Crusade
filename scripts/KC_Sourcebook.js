@@ -135,6 +135,8 @@ c.push(table(
   { full: true }
 ));
 
+c.push(P("Habits are not the only thing a resident magic produces. Where Harrowmark\u2019s crags breed wyverns \u2014 mundane, appalling, ordinary animals \u2014 Elduvaine\u2019s resident magic breeds something at the same slot in the world that is not an animal at all. A dragon here is not a beast that happens to know magic; it is closer kin to the Willing Road or the Listening Water, a habit that grew teeth and appetite and left the ground. They are rare, and a land in the process of being drained is not a land producing many of anything. What the party is more likely to meet is the damage: a dragon visibly suffering, changed, or grown strange as its home region empties, the same way a wood does in the Held Winter."));
+
 c.push(H2("Caer Ysolde and the Archive"));
 
 c.push(P("The capital sits where three rivers braid together, which was chosen deliberately: three Listening Waters meeting is the closest thing Elduvaine has to a public record. Caer Ysolde is a city of pale stone that glows faintly after dark from the light poured into it during the day, of observatories on every high roof, and of vaults."));
@@ -214,7 +216,7 @@ c.push(P("He was not always this. At nineteen he made war on his own father alon
 
 c.push(P("He chose this party himself. He does that sort of thing personally and remembers the names."));
 
-c.push(PS([DM("DM Only: "), { t: "he is Xavier III and nothing else yet. Before this war is over he will be Xavier the Wyvernheart, and he will earn it in the air, on the back of one of the things his country has spent nine centuries killing, in a battle that is going badly at the time. Do not use the name in any read-aloud before that scene. Do not let an NPC use it early as a slip. Do not foreshadow it. A campaign in which the players watch a king acquire his title is worth considerably more than one in which he arrives holding it." }]));
+c.push(PS([DM("DM Only: "), { t: "he is Xavier III and nothing else yet. Before this war is over he will be Xavier the Wyvernheart, earning it at the siege of Vindana, in the air, on the back of one of the things his country has spent nine centuries killing, in a battle that is going badly at the time. A handful of Harrowmark wyvern-riders travel with the army for exactly this reason, and should not be introduced with any fanfare before that moment. Do not use the name in any read-aloud before that scene. Do not let an NPC use it early as a slip. Do not foreshadow it. A campaign in which the players watch a king acquire his title is worth considerably more than one in which he arrives holding it." }]));
 
 c.push(H2("The Coalition"));
 

@@ -9,10 +9,11 @@
 // hand-typing an escape, use ONE backslash -- a doubled backslash compiles
 // clean and passes the non-ASCII scanner but leaks literal text into the PDF.
 //
-// GATED CONTENT NOTICE: "Harrowmark riders" here means mounted cavalry --
-// horses -- not the wyvern-riders proposed in drafts/DRACONIC-LAYER.md, which
-// is not yet signed off. Do not introduce wyverns as a coalition asset in this
-// module or assume that draft's recommendations. Vale does not appear in this
+// NOTE: "The Cavalry Screen" (Scene 3) is Harrowmark's ordinary mounted
+// scouts -- horses. The draconic layer is now signed off and canon (see
+// CLAUDE.md), and the campaign's actual wyvern-riders belong to Module Seven,
+// where Xavier earns "the Wyvernheart" -- they are deliberately absent here so
+// that introduction lands with its own weight. Vale does not appear in this
 // module either, continuing the pattern from Module Three: his officers run
 // this war, and his own first appearance is saved for later, larger weight.
 //
@@ -116,7 +117,7 @@ c.push(table(
   [
     ["1. The Lines Close", "30\u201340 min", "First sight of Vindana up close; the siege lines form."],
     ["2. Raising the Engines", "45\u201360 min", "A practical, largely non-combat scene. See Tiered Skill DCs."],
-    ["3. The Harrowmark Riders", "45\u201360 min", "A cavalry raid on Vindana\u2019s supply. DC table and stat blocks below."],
+    ["3. The Cavalry Screen", "45\u201360 min", "A horse-raid on Vindana\u2019s supply. DC table and stat blocks below."],
     ["4. First Assault", "60\u201390 min", "A probing attack that does not take the city. The module\u2019s setback."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
   ],
@@ -149,7 +150,7 @@ c.push(BOX("Timber comes in faster than the engineers can shape it and slower th
 c.push(P("Use the Tiered Skill DCs below to resolve however the party wants to help \u2014 hauling material, correcting an engineer\u2019s error, defending a work party from a probing sortie. Success speeds construction and gives Scene 4 a stronger opening position (advantage on the first round, or a wall section already weakened); failure does not lose the siege, only costs time the table can feel."));
 
 // ---------------------------------------------------------------- Scene 3
-c.push(H2("Scene 3: The Harrowmark Riders"));
+c.push(H2("Scene 3: The Cavalry Screen"));
 
 c.push(P("Xavier\u2019s own cavalry \u2014 mounted scouts and raiders, Harrowmark-trained \u2014 range beyond the siege lines to cut Vindana\u2019s remaining supply routes inland. The party can ride with them for a fast, mobile scene very different in texture from the siege lines\u2019 grinding patience."));
 
@@ -239,7 +240,7 @@ c.push(BUL("How First Assault was fought.", "Track whether the party\u2019s own 
 // ---------------------------------------------------------------- Loot
 c.push(H1("Loot"));
 
-c.push(BUL("Captured supply.", "Whatever the Harrowmark riders took from the intercepted column \u2014 modest, practical, and a genuine (if small) blow to Vindana\u2019s stores rather than treasure."));
+c.push(BUL("Captured supply.", "Whatever the cavalry took from the intercepted column \u2014 modest, practical, and a genuine (if small) blow to Vindana\u2019s stores rather than treasure."));
 c.push(BUL("A garrison officer\u2019s dispatch.", "Recovered from the supply column or from First Assault\u2019s dead \u2014 real intelligence about Vindana\u2019s internal state, useful DM ammunition for Module Seven rather than something that needs to pay off here."));
 
 // -------------------------------------------------------------- Refrain
