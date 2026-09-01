@@ -6,11 +6,14 @@
 A Dungeons & Dragons 5th Edition campaign. High fantasy, traditionally D&D, built on a
 Third Crusade spine.
 
-> **STATUS: FOUNDATION SIGNED OFF. SOURCEBOOK v1 BUILT.**
+> **STATUS: THE FULL DOCUMENT SET IS BUILT.** Sourcebook, all eleven session module
+> slots, the DM Reference Guide, and the Player Guide.
 > The pipeline is proven and the setting's foundation is canon: the kingdom, the wizard,
-> the king, the occupation and the shape of the war. Detail below that — the coalition's
-> members, the map, the royal names, the module breakdown — is **still undecided and must
-> not be invented without sign-off.** See *Canon and Sources of Truth*.
+> the king, the occupation, the coalition's named members, and the shape of the war
+> across a signed-off eleven-module arc. Detail below that — what Oksitan and Auberitz
+> each want, the map, the royal names, the deepest vaults' contents — is **still
+> undecided and must not be invented without sign-off.** See *Canon and Sources of
+> Truth*.
 
 ---
 
@@ -626,15 +629,22 @@ numbers in the next is a real bug and this is what prevents it.
   — all twenty-four tracked divergences from every module's Diverging Paths section,
   with a blank column for what actually happens at the table. Invents nothing; every
   fact is drawn from the sourcebook and the module scripts already written.
-- **Still to write:** the Player Guide (`scripts/KC_Player_Guide.js`) — two-column,
-  authored as its own document rather than derived from the sourcebook, per *The
-  Document Set* above.
-- `images/` is still empty, so `IMG()` remains unexercised until real artwork arrives —
-  the helper and the transplant path are built and were verified against a test card
-  early in the build-out.
+- `scripts/KC_Player_Guide.js` — **written**, two-column, authored as its own
+  independent document rather than by deleting paragraphs from the sourcebook, per
+  *The Document Set* above. Covers the Call, Harrowmark and the coalition realms (by
+  role only — none of their undecided agendas), the Promise, Elduvaine's four habits
+  as secondhand rumor rather than confirmed fact, a Rumors from the Road list, chargen
+  guidance (2014 SRD 5.1, level 5, milestone), and the Refrain printed as an in-world
+  marching verse. Deliberately withholds Vale's actual motive, whether he is human, the
+  Wyvernheart reveal, and the hold-or-turn-back ending structure — checked section by
+  section against the sourcebook's own DM Only notes for what must stay out.
+- **All four documents in the set are now written.** `images/` is still empty, so
+  `IMG()` remains unexercised until real artwork arrives — the helper and the
+  transplant path are built and were verified against a test card early in the
+  build-out.
 - **The pipeline is proven and stable:** parameterized stage path (`scripts/stage.js`,
   `$KC_STAGE`), artwork support reaching both the PDF and the Markdown corpus, tables
   spanning both columns with `{ full: true }`, and single-column mode via `--single`.
-  Fourteen documents build clean and byte-identical across repeated rebuilds.
+  Fifteen documents build clean and byte-identical across repeated rebuilds.
 - Everything else in `scripts/` and `tools/` is the campaign-agnostic pipeline, carried
   over intact from The Qilvayas Symphony.
