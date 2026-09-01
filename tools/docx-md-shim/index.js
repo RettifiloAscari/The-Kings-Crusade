@@ -2,12 +2,14 @@
 const esc = s => String(s == null ? '' : s);
 class TextRun {
   constructor(o){ if (typeof o === 'string') o = { text: o };
-    this.text = esc(o.text); this.bold = !!o.bold; this.italics = !!o.italics; }
-  md(){ let t = this.text; if (!t) return '';
-    if (this.bold && this.italics) return '***'+t.trim()+'*** ';
-    if (this.bold) return '**'+t.trim()+'** ';
-    if (this.italics) return '*'+t.trim()+'* ';
-    return t; }
+    this.text = esc(o.text); this.bold = !!o.bold; this.italics = !!o.italics;
+    this.break = o.break || 0; }
+  md(){ let t = this.text; const br = '\n'.repeat(this.break);
+    if (!t) return br;
+    if (this.bold && this.italics) return br+'***'+t.trim()+'*** ';
+    if (this.bold) return br+'**'+t.trim()+'** ';
+    if (this.italics) return br+'*'+t.trim()+'* ';
+    return br+t; }
 }
 // Images. The real docx ImageRun takes {type, data, transformation}; `data` is a
 // Buffer, from which the source path cannot be recovered. Generators therefore pass
@@ -29,7 +31,8 @@ class Paragraph {
     if (h === 'Heading2') return '## ' + body;
     if (h === 'Heading3') return '### ' + body;
     if (this.o.numbering) return '- ' + body;
-    if (this.o.shading) return '> ' + body;          // BOX read-aloud
+    // BOX read-aloud. Verse keeps its line breaks, so every line needs the marker.
+    if (this.o.shading) return body.split('\n').map(l => '> ' + l).join('\n');
     return body;
   }
 }

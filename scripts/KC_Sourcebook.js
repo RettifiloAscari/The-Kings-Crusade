@@ -48,6 +48,14 @@ const BOX = (text) => new Paragraph({
   children: [new TextRun({ text, italics: true })]
 });
 
+// Verse in a read-aloud box: keeps its line breaks instead of running together.
+const VERSE = (lines) => new Paragraph({
+  spacing: { before: 120, after: 160 },
+  shading: { type: "clear", fill: "F3EFE4" },
+  indent: { left: 220, right: 220 },
+  children: lines.map((l, i) => new TextRun({ text: l, italics: true, ...(i ? { break: 1 } : {}) }))
+});
+
 // Artwork from images/. Width and height are points at 72/inch, so 288 is four
 // inches. `mdPath` is the shim-only field the Markdown corpus links with; it is
 // relative to corpus/, where the generated .md lives. The real docx ignores it.
@@ -192,6 +200,8 @@ c.push(P("Harrowmark is a cold, stony, unmagical realm of hill forts and hard wi
 
 c.push(P("Aldric III is going in person. He is a genuinely excellent field commander and an indifferent king, and he is aware of both facts in a way that makes him better company than it makes him a ruler. Harrowmark will be governed in his absence by people he does not entirely trust, and he has decided that this is a price worth paying, and he is probably wrong."));
 
+c.push(P("He was not always this. At nineteen he made war on his own father alongside his brothers, took three of Harrowmark\u2019s own hill forts, and lost. What is remembered about it in Harrowmark is not the war but the end of it: Aldric knelt in the yard of a castle he had besieged eight weeks earlier and asked mercy of the man inside, and got it, and neither of them ever spoke about it again. He has been an excellent commander and an uneasy king from that day, and he is under no illusion about which of the two he is good at."));
+
 c.push(P("He chose this party himself. He does that sort of thing personally and remembers the names."));
 
 c.push(H2("The Coalition"));
@@ -199,6 +209,16 @@ c.push(H2("The Coalition"));
 c.push(P("Two other powers march under the same call, each with its own reasons and its own idea of what a successful war looks like. A third party \u2014 not a power, not a signatory, and not answerable to the coalition\u2019s councils \u2014 has interests in Elduvaine and will deal with either side."));
 
 c.push(PS([DM("DM Only: "), { t: "the allied powers and the third party are named and detailed in a later pass; they are deliberately generic here rather than invented in passing. Run them by role until then. The third party is the useful one for a party that likes leverage: it can be bargained with, and it will keep a bargain, and it is not on anybody\u2019s side." }]));
+
+c.push(H2("The Promise"));
+
+c.push(P("A crusade is not answered out of sympathy, and Aldric did not ask anyone to answer one. He offered terms. Those who take the call are promised two things: a share in Elduvaine\u2019s magic \u2014 land held inside the Living Realm, where the habits work \u2014 and access to the Ysolde Archive."));
+
+c.push(P("Both are extraordinary offers, and neither is Aldric\u2019s to make. That has not slowed anybody down."));
+
+c.push(P("It is worth being clear about what this means for the war. Nobody marching under the call is doing so to be kind. The two allied powers want land where the roads shorten and stone holds light, because there is no such land anywhere else and there never has been. They want the Archive because it is the largest collection of magical knowledge in the world and it is currently unattended. These are not shameful motives. They are simply not the same motive as deliverance, and they will not survive contact with an Elduvish farmer who wants to know who exactly promised away the river his grandmother is in."));
+
+c.push(PS([DM("DM Only: "), { t: "the promise is the coalition\u2019s engine and its fault line, and it is only payable on a kingdom that is taken and held. Three things follow. Nobody asked Elduvaine, and the party will meet people who have worked that out. The coalition wants precisely what Maedoc Vale wants, for entirely different reasons, which makes some allied conversations very uncomfortable if the party is paying attention. And Vale is spending the exact asset that was promised \u2014 every month he reads, the thing the coalition marched for is worth less. Do not state any of this. Let them assemble it." }]));
 
 c.push(H2("The Two Roads"));
 
@@ -222,6 +242,8 @@ c.push(P("The clock is real: when he has read enough, he no longer needs Elduvai
 
 c.push(P("The occupation\u2019s competence, its officers, and its willingness to negotiate all follow from this. Nothing in Vale\u2019s war is personal, which is exactly what makes him hard to fight and unpleasant to meet."));
 
+c.push(P("One more thing follows, and it is the campaign\u2019s quietest problem. The coalition was promised a share of Elduvaine\u2019s magic and the run of its Archive. Vale is burning the first to open the second. Whatever the crusade arrives to liberate is smaller every month, and the men who marched for a share of it do not yet know that they are racing a subtraction rather than a thief."));
+
 // ------------------------------------------------------------- Running It
 c.push(H1("Running Elduvaine"));
 
@@ -230,6 +252,23 @@ c.push(P("Three things keep this campaign in the register it was built for."));
 c.push(BUL("Describe the habit before you describe the damage.", "A road that shortens is a delight; a road that has stopped shortening is a bereavement, and only if the players felt the first one. Give them at least one working habit before you take any away."));
 c.push(BUL("The villain is a villain.", "There is no argument to be had about whether Vale should be stopped. Put the difficulty somewhere else \u2014 in what the crusade costs, in allies who want their own things, and in what the Elduvish actually want once somebody asks them."));
 c.push(BUL("Plan the relief valves.", "A long grim march needs taverns, absurd logistics, and recurring comic figures by design. Elduvaine\u2019s etiquette of living politely alongside a landscape that eavesdrops is a comedy engine as much as a wonder one; use it as both."));
+
+c.push(H2("The Four Voices"));
+
+c.push(P("The Listening Water is the best exposition device this setting has, and it should be used as a habit rather than as a trick. When the party needs to learn what happened somewhere they were not, sit them on a bank and give them the same events four ways: the account a court would give, the account a farming village would give, the summons that set the whole thing moving, and somebody\u2019s private grief said aloud to running water because there was nobody else to say it to. None of the four is lying. None of them is complete. The party assembles the truth themselves, and they do it by listening rather than by rolling."));
+
+c.push(H2("The Refrain"));
+
+c.push(P("Every session module ends on the same four lines, after the loot, printed identically every time:"));
+
+c.push(VERSE([
+  "By thought, and by word, and by deed,",
+  "the king\u2019s chosen kept the road.",
+  "Far from home, under a borrowed sky,",
+  "they stood against the quiet."
+]));
+
+c.push(PS([DM("DM Only: "), { t: "read it and end the session. Do not vary it, do not trim it to fit, do not remark on it, and do not let anyone at the table treat it as a joke by the fourth session \u2014 it stops being one around the seventh. In the final module of the campaign, and nowhere else, the last line changes to " }, { t: "and the water kept their names.", i: true }, { t: " Nothing else about the verse ever changes, which is the whole reason that lands. Never foreshadow it." }]));
 
 c.push(P("And keep the peril honest. Vale has already won a great deal, and he has three years of practice at holding it. The wonder in this campaign is only worth anything because the danger under it is real."));
 

@@ -108,10 +108,11 @@ authority. What it supplies:
   the promise. **Elduvaine is already equipped for this:** the Listening Water returns
   speech in the speaker's own voice, so a riverbank can give the party the same three years
   in four incompatible registers, none of them lying.
-- **A refrain that changes one word at the end.** The Middle English burden recurs
-  unaltered all through the song — Richard "stod ȝæn helle", stood against hell — until
-  the final repetition, where it becomes "faht for hefen", fought for heaven. One word,
-  held back for the last line of the whole piece.
+- **A refrain that turns in its last line.** The Middle English burden recurs unaltered
+  all through the song — Richard "stod ȝæn helle", stood against hell — until the final
+  repetition, where the closing line becomes "faht for hefen", fought for heaven. The
+  change is held back for the last line of the whole piece, and it converts a defensive
+  framing into a purpose. Everything before it is identical, which is what gives it force.
 - **A hero's song that states the failure plainly.** Immediately after Arsuf, in the
   court's own voice: *mais Richarz n'ad unc mie pris la seinte cité* — but Richard never
   took the holy city. The song does not hide it, does not mourn it, and does not stop.
@@ -155,7 +156,17 @@ written in `scripts/KC_Sourcebook.js`):
 - **Aldric III of Harrowmark** — the calling king. Harrowmark is cold, stony and
   unmagical, which is the point: the party comes from somewhere ordinary. Aldric leads in
   person, is an excellent field commander and an indifferent king, and chose the party
-  himself.
+  himself. **As a young man he made war on his own father**, Aldric II, alongside his
+  brothers; he took three of Harrowmark's own hill forts and lost the war, and had to
+  kneel and ask mercy of the man he had besieged. He got it. He has been an excellent
+  commander and an uneasy king ever since, and he knows which of those he is good at.
+- **The Promise of the Call.** Aldric's summons offers those who answer two things: **a
+  share in Elduvaine's resident magic** — land held in the Living Realm, where the habits
+  work — and **access to the Ysolde Archive**. This is the motive engine for the whole
+  coalition, and it carries four consequences that are canon with it: the promise is only
+  deliverable if Elduvaine is **taken and held**; nobody asked Elduvaine; the coalition
+  therefore wants the same thing Maedoc Vale wants, for different reasons; and Vale is
+  spending the very asset that was promised.
 - **The occupation is three years old** — long enough to have a bureaucracy, permits, a
   grain levy and collaborators; short enough that everyone over ten remembers before.
 - **The ruling family** — one member escaped and runs what resistance survives, and
@@ -191,7 +202,11 @@ not helpfully close:
   establish it.
 - **Whether the party takes Elduvaine and holds it, or turns back within sight of it.**
   Both endings are genuinely supported and neither is a trick. This is decided at the
-  table and lives in the Branch Ledger.
+  table and lives in the Branch Ledger. **Reconsidered and reaffirmed** once all three
+  touchstones turned out to converge on the settlement ending: the campaign still declines
+  to favour either, deliberately, and a later session must not reweight it on the strength
+  of the touchstones alone. Note that the Promise of the Call gives turning back a real
+  price — the coalition is owed something that only a held Elduvaine can pay.
 - **What Elduvaine should be after the war.** The royals disagree; the campaign does not
   adjudicate. A table that ignores it entirely has lost nothing.
 
@@ -317,7 +332,24 @@ wide tables that read badly in the two-column body.
 7. **Optional Content** — standard, not rare; explicitly outside the core session length
 8. **Diverging Paths (DM Only)**
 9. Loot
-10. Closing epigraph
+10. **The Refrain** — see below. Not a fresh epigraph each time; the same one.
+
+**The Refrain.** Every module closes on the same verse, printed identically, after the
+loot. It is never varied, never trimmed to fit, and never commented on — the DM reads it
+and the session ends. In the **final** module of the campaign, and only there, its last
+line changes. Nothing else about it changes, ever, which is the entire reason the change
+lands. Do not foreshadow it, do not hint that the refrain is going to turn, and do not
+let a session-notes section explain the device to the DM twice. The wording is in the
+sourcebook under *Running Elduvaine*.
+
+**The Four Voices.** Elduvaine's Listening Water returns speech in the speaker's own
+voice, which makes a riverbank a delivery mechanism for exposition that needs no briefing
+scene. Where a module must convey what happened somewhere the party was not, prefer
+giving them the same events in several incompatible registers — a court's account, a
+commons' account, the summons that started it, and somebody's private grief — none of them
+lying, none of them complete. Drawn from the Skaldic Bard touchstone; use it as a
+recurring technique rather than a one-off trick, and do not overuse it in modules that
+already have a strong investigation spine.
 
 **Encounter rules:**
 
