@@ -67,7 +67,7 @@ should feel and look — and they do not override anything in *Canon and Sources
   somewhere that has changed him. This campaign's road-heavy structure is the same shape,
   and it is why the march must not be hurried through.
 - **The ordinary man made a champion, who takes the oath seriously when his betters do
-  not.** A strong model for the party. Aldric chose them personally; the film is about
+  not.** A strong model for the party. Xavier chose them personally; the film is about
   what it means to deserve that.
 - **Complexity among the crusaders, not in the cause.** Guy de Lusignan and Reynald de
   Chatillon are the film's real villains, and they are on the protagonist's side. This is
@@ -118,11 +118,11 @@ authority. What it supplies:
   branch can be the triumphant ending and not the sad one.**
 - **A king with a flawed youth.** Richard makes war on his own father alongside his
   brothers, besieges castles across his lands, and then has to beg that father's mercy.
-  He holds his lands *par force e par sens*, by force and by sense. Aldric III has no life
+  He holds his lands *par force e par sens*, by force and by sense. Xavier III has no life
   before the crusade yet, and this is the model to build one from.
 - **The call as an institution, not a person.** The Latin section is the only passage not
   about Richard: it is the summons itself, naming the disaster and promising full remission
-  and eternal life to whoever answers. What Aldric's call actually *promises* those who
+  and eternal life to whoever answers. What Xavier's call actually *promises* those who
   answer it is an open question and a motive engine for every NPC in the coalition.
 
 ## Canon and Sources of Truth
@@ -150,14 +150,16 @@ written in `scripts/KC_Sourcebook.js`):
   fell to a key, not a siege. **His motive: the deepest vaults were closed to the Keeper by
   rule, and he wanted to finish reading.** He is spending the land to open them. He is not
   mad and not tragic; he considers the price proportionate.
-- **Aldric III of Harrowmark** — the calling king. Harrowmark is cold, stony and
-  unmagical, which is the point: the party comes from somewhere ordinary. Aldric leads in
+- **Xavier III of Harrowmark, called the Wyvernheart** — the calling king. Harrowmark is
+  cold, stony and unmagical, which is the point: the party comes from somewhere ordinary.
+  **How he earned the epithet is not yet decided** and must not be invented in passing; it
+  is a set piece waiting to be written. Xavier leads in
   person, is an excellent field commander and an indifferent king, and chose the party
-  himself. **As a young man he made war on his own father**, Aldric II, alongside his
+  himself. **As a young man he made war on his own father**, Xavier II, alongside his
   brothers; he took three of Harrowmark's own hill forts and lost the war, and had to
   kneel and ask mercy of the man he had besieged. He got it. He has been an excellent
   commander and an uneasy king ever since, and he knows which of those he is good at.
-- **The Promise of the Call.** Aldric's summons offers those who answer two things: **a
+- **The Promise of the Call.** Xavier's summons offers those who answer two things: **a
   share in Elduvaine's resident magic** — land held in the Living Realm, where the habits
   work — and **access to the Ysolde Archive**. This is the motive engine for the whole
   coalition, and it carries four consequences that are canon with it: the promise is only
@@ -175,7 +177,8 @@ written in `scripts/KC_Sourcebook.js`):
   road; the other is met later as its aftermath. A second crown marches by the road the
   party does not take, and that king is lost early, in water; his army comes apart behind
   him.
-- **Arc shape** — the march; the siege of the great port; the field battle that proves the
+- **Vindana** — the great Elduvish port, and the campaign's central siege.
+- **Arc shape** — the march; the siege of Vindana; the field battle that proves the
   enemy beatable; the approach; the decision at the gates.
 
 **Not yet decided — needs explicit sign-off before it can be used:**
@@ -184,7 +187,8 @@ written in `scripts/KC_Sourcebook.js`):
 |---|---|
 | The two allied powers and the unaligned third party | Named and detailed in a later pass. Run them by role until then. |
 | The second king and his realm | The crown lost on the road the party does not take. |
-| The great port besieged | The campaign's central siege. |
+| How Xavier earned "the Wyvernheart" | Canon that he is called it; not yet how. |
+| The draconic layer | Dragons and wyverns are to play a large role. Where they sit relative to Elduvaine's resident magic, to unmagical Harrowmark, and to Vale's army needs its own draft before a word of it is written. |
 | Names of the royal family | Including which one is at large. |
 | Region-level geography and a gazetteer | Both realms and what lies between. |
 | What the deepest vaults actually contain | What Vale is reading toward. The sourcebook states his motive; it does not state his destination. |

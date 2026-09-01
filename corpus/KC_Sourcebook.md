@@ -14,7 +14,7 @@
 
 Elduvaine has fallen. Not to an empire, not to a rival crown, but to one man who was already inside it — Maedoc Vale, once Keeper of the Ysolde Archive, who opened the wards he had spent his life maintaining and let his army in through them. The royal house is taken. The capital is his. And the land itself, which in Elduvaine is not scenery but a participant, is being drained of the thing that made it worth living in.
 
-Aldric III of Harrowmark has called a crusade. He is going himself, which is not what kings usually do, and he is taking the better part of his realm with him. Two allied powers march under the same call. A third party has been paid, or has decided, to be interested, and answers to neither.
+Xavier III of Harrowmark, whom men call the Wyvernheart, has called a crusade. He is going himself, which is not what kings usually do, and he is taking the better part of his realm with him. Two allied powers march under the same call. A third party has been paid, or has decided, to be interested, and answers to neither.
 
 You are not the army. You are what the king sends ahead of it — four to six people chosen because a column of eight thousand cannot go where you can, cannot move as quickly as you can, and cannot be denied as plausibly if it is caught somewhere it should not be. The march will take months. Elduvaine is a long way from Harrowmark, and everything between the two has an opinion about armies crossing it.
 
@@ -101,9 +101,9 @@ The rest of the family are held, in two or three separate places, under conditio
 
 Harrowmark is a cold, stony, unmagical realm of hill forts and hard winters, and it is not a place anyone has ever called marvellous. This matters. The party comes from somewhere ordinary, and Elduvaine will not be ordinary to them either.
 
-Aldric III is going in person. He is a genuinely excellent field commander and an indifferent king, and he is aware of both facts in a way that makes him better company than it makes him a ruler. Harrowmark will be governed in his absence by people he does not entirely trust, and he has decided that this is a price worth paying, and he is probably wrong.
+Xavier III is going in person. He is a genuinely excellent field commander and an indifferent king, and he is aware of both facts in a way that makes him better company than it makes him a ruler. Harrowmark will be governed in his absence by people he does not entirely trust, and he has decided that this is a price worth paying, and he is probably wrong.
 
-He was not always this. At nineteen he made war on his own father alongside his brothers, took three of Harrowmark’s own hill forts, and lost. What is remembered about it in Harrowmark is not the war but the end of it: Aldric knelt in the yard of a castle he had besieged eight weeks earlier and asked mercy of the man inside, and got it, and neither of them ever spoke about it again. He has been an excellent commander and an uneasy king from that day, and he is under no illusion about which of the two he is good at.
+He was not always this. At nineteen he made war on his own father alongside his brothers, took three of Harrowmark’s own hill forts, and lost. What is remembered about it in Harrowmark is not the war but the end of it: Xavier knelt in the yard of a castle he had besieged eight weeks earlier and asked mercy of the man inside, and got it, and neither of them ever spoke about it again. He has been an excellent commander and an uneasy king from that day, and he is under no illusion about which of the two he is good at.
 
 He chose this party himself. He does that sort of thing personally and remembers the names.
 
@@ -115,9 +115,9 @@ Two other powers march under the same call, each with its own reasons and its ow
 
 ## The Promise
 
-A crusade is not answered out of sympathy, and Aldric did not ask anyone to answer one. He offered terms. Those who take the call are promised two things: a share in Elduvaine’s magic — land held inside the Living Realm, where the habits work — and access to the Ysolde Archive.
+A crusade is not answered out of sympathy, and Xavier did not ask anyone to answer one. He offered terms. Those who take the call are promised two things: a share in Elduvaine’s magic — land held inside the Living Realm, where the habits work — and access to the Ysolde Archive.
 
-Both are extraordinary offers, and neither is Aldric’s to make. That has not slowed anybody down.
+Both are extraordinary offers, and neither is Xavier’s to make. That has not slowed anybody down.
 
 It is worth being clear about what this means for the war. Nobody marching under the call is doing so to be kind. The two allied powers want land where the roads shorten and stone holds light, because there is no such land anywhere else and there never has been. They want the Archive because it is the largest collection of magical knowledge in the world and it is currently unattended. These are not shameful motives. They are simply not the same motive as deliverance, and they will not survive contact with an Elduvish farmer who wants to know who exactly promised away the river his grandmother is in.
 
