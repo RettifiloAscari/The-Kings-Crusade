@@ -36,7 +36,7 @@ mkdir -p "$STAGE" "$DOCS" "$CORPUS"
 
 # The generators to run, in build order. Add each new document here as it is
 # written: the session modules, the DM Reference Guide, and the Player Guide.
-GENERATORS=(KC_Sourcebook KC_Module01_TheMuster KC_Module02A_TheSeaRoad KC_Module02B_TheMountainRoad KC_Module03_Landfall KC_Module04_TheCoalition)
+GENERATORS=(KC_Sourcebook KC_Module01_TheMuster KC_Module02A_TheSeaRoad KC_Module02B_TheMountainRoad KC_Module03_Landfall KC_Module04_TheCoalition KC_Module05_TheRoadToVindana)
 
 # Substring of the one document that takes --single on the transplant.py step:
 # the DM Reference Guide, whose value is wide scannable tables that read badly in
