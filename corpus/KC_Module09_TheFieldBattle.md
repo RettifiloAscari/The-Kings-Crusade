@@ -1,0 +1,160 @@
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source:     scripts/KC_Module09_TheFieldBattle.js
+     Regenerate: tools/build.sh
+     Hand edits here are overwritten and never reach the published documents.
+-->
+
+**The Field Battle**
+
+*The King’s Crusade — Module Nine*
+
+# Overview
+
+The coalition marches on Caer Ysolde, and Vale’s occupation makes its first attempt to stop that march in the open rather than from behind a wall — a field army under General Ilyana Voss, meaning to catch the coalition’s column strung out and unprepared. It does not work, and this module is the campaign’s proof, stated in blood rather than in a speech, that Vale’s army can be beaten in a fair fight. That proof costs something. Core scenes run four to four and a half hours; Optional Content fills out the rest of a five-hour session and can be cut if the table is short on time.
+
+## A Battle, Not a Massacre
+
+Vindana fell partly through the party’s own cleverness and partly through Xavier’s extraordinary intervention. This battle should not repeat either trick — it is won by discipline, by a column that holds formation under pressure the way Richard’s did at the historical Arsuf, and by the party’s own competence in a fight that is genuinely dangerous rather than pre-decided. Let the danger be real.
+
+| **Scene** | **Target time** | **Notes** |
+| --- | --- | --- |
+| 1. The Column Strung Out | 20–30 min | The ambush begins to reveal itself. |
+| 2. Tam’s Warning | 20–30 min | The module’s cost — or its alternate. Read carefully before running. |
+| 3. Holding the Line | 60–90 min | The battle itself. DC table and stat block below. |
+| 4. The Rout | 30–45 min | General Voss’s line breaks. Proof, not celebration. |
+| Optional Content | 30–45 min | Run if the table has time; cut cleanly if not. |
+
+# What Is Actually Happening (DM Only)
+
+General Voss is a real tactician and her ambush is a genuinely good plan — she has read the coalition’s march discipline correctly and is exploiting the one moment a column is actually vulnerable, the transition from road formation to battle formation. It very nearly works. What defeats her is not a trick or a twist; it is the coalition holding its nerve and its lines exactly long enough for the party, and Tam Ondry’s warning, to buy the time Xavier’s officers need to form up properly.
+
+**DM Only:** this module defaults to Tam Ondry dying in Scene 2, delivering the warning that saves the column. He is not fridged for shock value — his death is the direct, earned cost of a warning that genuinely matters, and it should be played with the same weight Module Five gave his introduction. If your table has grown attached to him and you would rather not lose him, the alternate in Scene 2 below turns his warning into the discovery of a third captive member of the royal house instead, opening a rescue thread rather than closing a life. Choose deliberately, not by default.
+
+## Scene 1: The Column Strung Out
+
+The coalition’s march north from Vindana is disciplined but long, strung across miles of road through country that stopped being safely held the moment it stopped being inside sight of the city’s walls. The first sign of trouble is not an attack — it is an absence.
+
+> *The scouts who should have reported in an hour ago have not, and the ones sent after them have not come back either. Somewhere ahead, past a treeline that should not be able to hide as much as it apparently does, the road goes quiet in a way that has nothing to do with Elduvaine’s habits and everything to do with an army waiting for the right moment.*
+
+Let the party notice the wrongness before the coalition’s officers do — an Investigation or Survival check (DC 13) reads the terrain as a natural ambush site, or Insight (DC 13) reads the missing scouts as deliberate rather than delayed. This scene’s job is dread, not combat; end it on the certainty that something is about to happen, not on contact.
+
+## Scene 2: Tam’s Warning
+
+A rider comes back down the column at a dead run — the same shape of scene as Module Five’s Scene 1, deliberately, because it is the same man doing the same job one more time.
+
+> *Tam Ondry doesn’t bother reining in properly, half-falling out of the saddle in his hurry to reach an officer, anyone, with rank enough to matter. “Ambush — treeline, both sides, more of them than us if they catch us stretched out like this — you have to form up now, not in a minute, now —” An arrow that was aimed at someone else entirely finds him mid-sentence.*
+
+### Running the Default Scene
+
+Tam’s warning reaches the column’s officers in time regardless of what the party does — that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 15 Medicine check, attempted within the first round after he falls, stabilizes him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module’s emotional cost, and it should be allowed to land before Scene 3’s battle begins.
+
+### The Alternate: A Third Thread
+
+If your table would rather not lose Tam, run this instead: his warning is the same, and he survives it, but what he saw scouting ahead of the ambush was not only Voss’s army — it was a supply column flying royal colors, escorting a third member of the captive royal house toward what he assumes is a more secure holding further from the coalition’s reach. This opens a new thread for a later module rather than closing Tam’s. Do not run both versions; pick one before the session and commit to it.
+
+## Scene 3: Holding the Line
+
+The ambush breaks from both treelines at once, and for several very long minutes the outcome is genuinely uncertain. This is the module’s real fight, and it should feel like one.
+
+> *The coalition line buckles and does not break — Oksitan spears on the left, Auberitz heavier foot anchoring the center, Harrowmark’s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss’s attack with the calm of someone who still, even now, believes this is winnable.*
+
+### Running the Scene
+
+Use the Occupation Guard stat block (Module 3) for General Voss’s rank and file — six to eight of them, engaging the party and the coalition line in waves rather than all at once — with General Voss herself (see Stat Block) as the encounter’s real threat, seeking out whoever on the coalition side looks most like a commander to kill or capture. If the party has protected Xavier’s officers or otherwise distinguished themselves, Voss may target them directly, which is a genuine compliment from an enemy tactician and should read as one.
+
+### Scaling the Fight
+
+Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP — eight total monsters, inside the 7–10 band. At party sizes 3–5 the multiplier is ×2.5 (4,875 adjusted); at 6+ it drops to ×2 (3,900 adjusted). Against Deadly thresholds of 4,400 (four characters, at a higher level than Module One’s table — recompute against your table’s actual level) this reads as Hard-to-Deadly rather than the Easy-to-Medium calibration of this campaign’s earlier fights, which is deliberate: this battle is supposed to be dangerous. If it reads as too hard once you have checked it against your own table’s actual level and size, remove one or two Occupation Guards rather than reducing Voss — she is the fight’s whole point.
+
+### Stat Block
+
+**General Ilyana Voss**
+
+*Medium humanoid (human), lawful neutral — SRD Gladiator, renamed*
+
+**Armor Class:** 16 (studded leather armor, shield)
+
+**Hit Points:** 112 (15d8 + 45)
+
+**Speed:** 30 ft.
+
+| **STR** | **DEX** | **CON** | **INT** | **WIS** | **CHA** |
+| --- | --- | --- | --- | --- | --- |
+| 18 (+4) | 15 (+2) | 16 (+3) | 10 (+0) | 12 (+1) | 15 (+2) |
+
+**Saving Throws:** Str +7, Dex +5, Con +6
+
+**Skills:** Athletics +10, Intimidation +5
+
+**Senses:** passive Perception 11
+
+**Languages:** Common
+
+**Challenge:** 5 (1,800 XP)
+
+***Brave.*** Voss has advantage on saving throws against being frightened.
+
+***Brute.*** A melee weapon deals one extra die of its damage when Voss hits with it (included in the attacks below).
+
+**ACTIONS**
+
+***Multiattack.*** Voss makes three melee attacks or two ranged attacks.
+
+***Spear.*** Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack.
+
+***Shield Bash.*** Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) bludgeoning damage. If the target is Medium or smaller, it must succeed on a DC 15 Strength saving throw or be knocked prone.
+
+## Tiered Skill DCs
+
+Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
+
+| **Task** | **Skill** | **DC** | **Tier** |
+| --- | --- | --- | --- |
+| Read the treeline as a prepared ambush site | Investigation / Survival | 13 | Moderate |
+| Recognize the missing scouts as deliberate | Insight | 13 | Moderate |
+| Stabilize Tam Ondry after he falls (default Scene 2) | Medicine | 15 | Hard |
+| Hold a coalition position against Voss’s pressure | Athletics / relevant combat skill | 13 | Moderate |
+| Talk Voss into a battlefield surrender once clearly beaten | Persuasion / Intimidation | 16 | Hard |
+
+## Scene 4: The Rout
+
+Once General Voss falls, is captured, or breaks off — a defeated field commander she genuinely is not the type to flee cleanly, but she will disengage if the fight is unambiguously lost rather than die for nothing — her line comes apart within minutes. This is proof, not celebration.
+
+> *It is not a rout in the way stories tell it — no cheering, no clean lines of fleeing soldiers. It is simply, suddenly, over: Voss’s remaining troops breaking for the treeline they came from, the coalition too battered and too relieved to give proper chase, and a field that will need a great deal of tending before anyone can say anything about who won it that does not sound obscene.*
+
+Let the aftermath be heavy rather than triumphant, especially if Tam died in Scene 2 — the coalition has proven something real about Vale’s army today, and it cost real people to prove it. End the session on that weight rather than on a victory speech. Hand off directly to Module Ten for the approach to Caer Ysolde.
+
+# NPC Profiles
+
+## General Ilyana Voss
+
+A real tactician rather than a fanatic, calm under pressure in a way that reads as competence rather than menace. Speech, in the brief window a table might hear her actually speak (command orders during the fight, or a surrender if the party earns one): direct, economical, entirely without contempt for an enemy who is currently winning.
+
+Open thread: if captured rather than killed, Voss is a genuine long-term asset for the coalition — a professional soldier with real knowledge of Vale’s remaining field strength, who a DM can develop as a reluctant, pragmatic informant in later modules rather than a villain who must be disposed of.
+
+# Optional Content
+
+## What the Column Says About Tam
+
+If Tam died in Scene 2, let the coalition’s reaction be genuine rather than perfunctory — a name added to a growing list, spoken plainly rather than eulogized, echoing exactly the register the Standing Water gave the second king’s death in Module Five. No mechanical stakes; this is the module giving its cost real weight.
+
+## Voss’s Own Papers
+
+If Voss is captured or her body searched, her own field orders reveal real, specific intelligence about the remaining distance to Caer Ysolde and what defends it — useful DM ammunition for Module Ten rather than something that needs to resolve here.
+
+# Diverging Paths (DM Only)
+
+- **Which Scene 2 was run.** Tam’s death or the third-thread alternate — record which, since it changes what Module Ten and beyond can reference.
+- **General Voss’s fate.** Killed, captured, or fled — a captured Voss is a real long-term asset; track it the same way Marshal Drell’s fate was tracked in Module Seven.
+
+# Loot
+
+- **Voss’s field orders.** Real intelligence about Caer Ysolde’s defenses — see Optional Content.
+- **Captured field equipment.** Modest but genuine — weapons, armor, and supply recovered from Voss’s broken column, worth collecting rather than a windfall.
+
+# The Refrain
+
+> *By thought, and by word, and by deed,* 
+> *the king’s own chosen kept their creed.* 
+> *Far from home, where the quiet land lay,* 
+> *they held the line, and would not stray.*

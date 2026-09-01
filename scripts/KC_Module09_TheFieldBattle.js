@@ -1,0 +1,280 @@
+// KC_Module09_TheFieldBattle.js -- Session Module Nine: The Field Battle.
+//
+// Canon lives here. corpus/ and documents/ are generated from this file and are
+// never edited by hand. See CLAUDE.md for the sign-off rules: anything in the
+// "Not yet decided" table must not appear here until it has been approved.
+//
+// ESCAPE CONVENTION: all prose lives as \uXXXX escapes, never as literal
+// typographic characters. tools/build.sh fails the build if that slips. If
+// hand-typing an escape, use ONE backslash -- a doubled backslash compiles
+// clean and passes the non-ASCII scanner but leaks literal text into the PDF.
+// A literal newline inside a double-quoted JS string is invalid syntax -- use
+// two separate BOX() or P() calls instead of embedding a line break.
+//
+// Arsuf-keyed: the open-field battle that proves Vale's army beatable in a
+// fair fight, not just behind a broken siege. Per the module breakdown, this
+// module carries either a third rescue thread or a real loss -- written here
+// as a real loss (Tam Ondry, introduced in Module Five) by default, with an
+// explicit DM-facing alternate for tables that would rather not lose him.
+//
+// Encounter design note: General Ilyana Voss is the SRD Gladiator (CR 5, 1800
+// XP), a deliberate step up from the Veteran used for Thane (2A) and Drell
+// (Module Six/Seven) -- Vale's field army is a different register of threat
+// than an occupation garrison, and the boss-tier block should feel like it.
+
+const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
+const fs = require('fs');
+const path = require('path');
+const { stagePath } = require('./stage');
+
+// ---------- helpers (the portable authoring kit) ----------
+const P = (text, opts = {}) => new Paragraph({
+  spacing: { after: 200 },
+  ...opts,
+  children: [new TextRun({ text, ...(opts.run || {}) })]
+});
+
+const PS = (segs, opts = {}) => new Paragraph({
+  spacing: { after: 200 },
+  ...opts,
+  children: segs.map(s => new TextRun({ text: s.t, bold: !!s.b, italics: !!s.i, color: s.c }))
+});
+
+const DM = (t) => ({ t, b: true, c: "5B1F1F" });
+const H1 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun(t)] });
+const H2 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(t)] });
+const H3 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_3, children: [new TextRun(t)] });
+
+const BULLET = (segs) => new Paragraph({
+  numbering: { reference: "bullets", level: 0 },
+  spacing: { after: 120 },
+  children: segs.map(s => new TextRun({ text: s.t, bold: !!s.b, italics: !!s.i, color: s.c }))
+});
+
+const B = (lead, rest) => PS([{ t: lead + " ", b: true }, { t: rest }]);
+const BUL = (lead, rest) => BULLET(lead ? [{ t: lead + " ", b: true }, { t: rest }] : [{ t: rest }]);
+
+const BOX = (text) => new Paragraph({
+  spacing: { before: 120, after: 160 },
+  shading: { type: "clear", fill: "F3EFE4" },
+  indent: { left: 220, right: 220, firstLine: 0 },   // template default firstLine=180 otherwise leaks in
+  children: [new TextRun({ text, italics: true })]
+});
+
+const VERSE = (lines) => new Paragraph({
+  spacing: { before: 120, after: 160 },
+  shading: { type: "clear", fill: "F3EFE4" },
+  indent: { left: 220, right: 220, firstLine: 0 },   // same fix as BOX -- see its comment
+  children: lines.map((l, i) => new TextRun({ text: l, italics: true, ...(i ? { break: 1 } : {}) }))
+});
+
+const IMG_DIR = path.join(__dirname, '..', 'images');
+const IMG = (file, w, h, alt) => new Paragraph({
+  alignment: AlignmentType.CENTER,
+  spacing: { before: 140, after: 160 },
+  children: [new ImageRun({
+    type: path.extname(file).slice(1).toLowerCase().replace('jpeg', 'jpg'),
+    data: fs.readFileSync(path.join(IMG_DIR, file)),
+    transformation: { width: w, height: h },
+    altText: { name: alt, description: alt, title: alt },
+    mdPath: '../images/' + file
+  })]
+});
+
+const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 50, bottom: 50, left: 45, right: 45 }, children: [new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
+const FULLWIDTH = "KCFullWidth";
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+
+const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
+const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
+const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 } })); out.push(B("Armor Class:", d.ac)); out.push(B("Hit Points:", d.hp)); out.push(B("Speed:", d.speed)); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
+
+
+// ---------- content ----------
+const c = [];
+
+c.push(new Paragraph({
+  alignment: AlignmentType.CENTER,
+  spacing: { after: 120 },
+  children: [new TextRun({ text: "The Field Battle", bold: true, size: 40, color: "5B1F1F" })]
+}));
+c.push(PS([{ t: "The King\u2019s Crusade \u2014 Module Nine", i: true }],
+  { alignment: AlignmentType.CENTER }));
+
+// ---------------------------------------------------------------- Overview
+c.push(H1("Overview"));
+
+c.push(P("The coalition marches on Caer Ysolde, and Vale\u2019s occupation makes its first attempt to stop that march in the open rather than from behind a wall \u2014 a field army under General Ilyana Voss, meaning to catch the coalition\u2019s column strung out and unprepared. It does not work, and this module is the campaign\u2019s proof, stated in blood rather than in a speech, that Vale\u2019s army can be beaten in a fair fight. That proof costs something. Core scenes run four to four and a half hours; Optional Content fills out the rest of a five-hour session and can be cut if the table is short on time."));
+
+c.push(H2("A Battle, Not a Massacre"));
+
+c.push(P("Vindana fell partly through the party\u2019s own cleverness and partly through Xavier\u2019s extraordinary intervention. This battle should not repeat either trick \u2014 it is won by discipline, by a column that holds formation under pressure the way Richard\u2019s did at the historical Arsuf, and by the party\u2019s own competence in a fight that is genuinely dangerous rather than pre-decided. Let the danger be real."));
+
+c.push(table(
+  ["Scene", "Target time", "Notes"],
+  [30, 15, 55],
+  [
+    ["1. The Column Strung Out", "20\u201330 min", "The ambush begins to reveal itself."],
+    ["2. Tam\u2019s Warning", "20\u201330 min", "The module\u2019s cost \u2014 or its alternate. Read carefully before running."],
+    ["3. Holding the Line", "60\u201390 min", "The battle itself. DC table and stat block below."],
+    ["4. The Rout", "30\u201345 min", "General Voss\u2019s line breaks. Proof, not celebration."],
+    ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
+  ],
+  { full: true }
+));
+
+// --------------------------------------------- What Is Actually Happening
+c.push(H1("What Is Actually Happening (DM Only)"));
+
+c.push(P("General Voss is a real tactician and her ambush is a genuinely good plan \u2014 she has read the coalition\u2019s march discipline correctly and is exploiting the one moment a column is actually vulnerable, the transition from road formation to battle formation. It very nearly works. What defeats her is not a trick or a twist; it is the coalition holding its nerve and its lines exactly long enough for the party, and Tam Ondry\u2019s warning, to buy the time Xavier\u2019s officers need to form up properly."));
+
+c.push(PS([DM("DM Only: "), { t: "this module defaults to Tam Ondry dying in Scene 2, delivering the warning that saves the column. He is not fridged for shock value \u2014 his death is the direct, earned cost of a warning that genuinely matters, and it should be played with the same weight Module Five gave his introduction. If your table has grown attached to him and you would rather not lose him, the alternate in Scene 2 below turns his warning into the discovery of a third captive member of the royal house instead, opening a rescue thread rather than closing a life. Choose deliberately, not by default." }]));
+
+// ---------------------------------------------------------------- Scene 1
+c.push(H2("Scene 1: The Column Strung Out"));
+
+c.push(P("The coalition\u2019s march north from Vindana is disciplined but long, strung across miles of road through country that stopped being safely held the moment it stopped being inside sight of the city\u2019s walls. The first sign of trouble is not an attack \u2014 it is an absence."));
+
+c.push(BOX("The scouts who should have reported in an hour ago have not, and the ones sent after them have not come back either. Somewhere ahead, past a treeline that should not be able to hide as much as it apparently does, the road goes quiet in a way that has nothing to do with Elduvaine\u2019s habits and everything to do with an army waiting for the right moment."));
+
+c.push(P("Let the party notice the wrongness before the coalition\u2019s officers do \u2014 an Investigation or Survival check (DC 13) reads the terrain as a natural ambush site, or Insight (DC 13) reads the missing scouts as deliberate rather than delayed. This scene\u2019s job is dread, not combat; end it on the certainty that something is about to happen, not on contact."));
+
+// ---------------------------------------------------------------- Scene 2
+c.push(H2("Scene 2: Tam\u2019s Warning"));
+
+c.push(P("A rider comes back down the column at a dead run \u2014 the same shape of scene as Module Five\u2019s Scene 1, deliberately, because it is the same man doing the same job one more time."));
+
+c.push(BOX("Tam Ondry doesn\u2019t bother reining in properly, half-falling out of the saddle in his hurry to reach an officer, anyone, with rank enough to matter. \u201CAmbush \u2014 treeline, both sides, more of them than us if they catch us stretched out like this \u2014 you have to form up now, not in a minute, now \u2014\u201D An arrow that was aimed at someone else entirely finds him mid-sentence."));
+
+c.push(H3("Running the Default Scene"));
+
+c.push(P("Tam\u2019s warning reaches the column\u2019s officers in time regardless of what the party does \u2014 that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 15 Medicine check, attempted within the first round after he falls, stabilizes him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module\u2019s emotional cost, and it should be allowed to land before Scene 3\u2019s battle begins."));
+
+c.push(H3("The Alternate: A Third Thread"));
+
+c.push(P("If your table would rather not lose Tam, run this instead: his warning is the same, and he survives it, but what he saw scouting ahead of the ambush was not only Voss\u2019s army \u2014 it was a supply column flying royal colors, escorting a third member of the captive royal house toward what he assumes is a more secure holding further from the coalition\u2019s reach. This opens a new thread for a later module rather than closing Tam\u2019s. Do not run both versions; pick one before the session and commit to it."));
+
+// ---------------------------------------------------------------- Scene 3
+c.push(H2("Scene 3: Holding the Line"));
+
+c.push(P("The ambush breaks from both treelines at once, and for several very long minutes the outcome is genuinely uncertain. This is the module\u2019s real fight, and it should feel like one."));
+
+c.push(BOX("The coalition line buckles and does not break \u2014 Oksitan spears on the left, Auberitz heavier foot anchoring the center, Harrowmark\u2019s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss\u2019s attack with the calm of someone who still, even now, believes this is winnable."));
+
+c.push(H3("Running the Scene"));
+
+c.push(P("Use the Occupation Guard stat block (Module 3) for General Voss\u2019s rank and file \u2014 six to eight of them, engaging the party and the coalition line in waves rather than all at once \u2014 with General Voss herself (see Stat Block) as the encounter\u2019s real threat, seeking out whoever on the coalition side looks most like a commander to kill or capture. If the party has protected Xavier\u2019s officers or otherwise distinguished themselves, Voss may target them directly, which is a genuine compliment from an enemy tactician and should read as one."));
+
+c.push(H3("Scaling the Fight"));
+
+c.push(P("Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP \u2014 eight total monsters, inside the 7\u201310 band. At party sizes 3\u20135 the multiplier is \u00D72.5 (4,875 adjusted); at 6+ it drops to \u00D72 (3,900 adjusted). Against Deadly thresholds of 4,400 (four characters, at a higher level than Module One\u2019s table \u2014 recompute against your table\u2019s actual level) this reads as Hard-to-Deadly rather than the Easy-to-Medium calibration of this campaign\u2019s earlier fights, which is deliberate: this battle is supposed to be dangerous. If it reads as too hard once you have checked it against your own table\u2019s actual level and size, remove one or two Occupation Guards rather than reducing Voss \u2014 she is the fight\u2019s whole point."));
+
+c.push(H3("Stat Block"));
+
+c.push(...SB({
+  name: "General Ilyana Voss",
+  meta: "Medium humanoid (human), lawful neutral \u2014 SRD Gladiator, renamed",
+  ac: "16 (studded leather armor, shield)",
+  hp: "112 (15d8 + 45)",
+  speed: "30 ft.",
+  str: 18, dex: 15, con: 16, int: 10, wis: 12, cha: 15,
+  saves: "Str +7, Dex +5, Con +6",
+  skills: "Athletics +10, Intimidation +5",
+  senses: "passive Perception 11",
+  langs: "Common",
+  cr: "5 (1,800 XP)",
+  traits: [
+    { n: "Brave", t: "Voss has advantage on saving throws against being frightened." },
+    { n: "Brute", t: "A melee weapon deals one extra die of its damage when Voss hits with it (included in the attacks below)." }
+  ],
+  actions: [
+    { n: "Multiattack", t: "Voss makes three melee attacks or two ranged attacks." },
+    { n: "Spear", t: "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack." },
+    { n: "Shield Bash", t: "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) bludgeoning damage. If the target is Medium or smaller, it must succeed on a DC 15 Strength saving throw or be knocked prone." }
+  ]
+}));
+
+// -------------------------------------------------------------- Skill DCs
+c.push(H2("Tiered Skill DCs"));
+
+c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign."));
+
+c.push(table(
+  ["Task", "Skill", "DC", "Tier"],
+  [40, 24, 12, 24],
+  [
+    ["Read the treeline as a prepared ambush site", "Investigation / Survival", "13", "Moderate"],
+    ["Recognize the missing scouts as deliberate", "Insight", "13", "Moderate"],
+    ["Stabilize Tam Ondry after he falls (default Scene 2)", "Medicine", "15", "Hard"],
+    ["Hold a coalition position against Voss\u2019s pressure", "Athletics / relevant combat skill", "13", "Moderate"],
+    ["Talk Voss into a battlefield surrender once clearly beaten", "Persuasion / Intimidation", "16", "Hard"]
+  ],
+  { full: true }
+));
+
+// ---------------------------------------------------------------- Scene 4
+c.push(H2("Scene 4: The Rout"));
+
+c.push(P("Once General Voss falls, is captured, or breaks off \u2014 a defeated field commander she genuinely is not the type to flee cleanly, but she will disengage if the fight is unambiguously lost rather than die for nothing \u2014 her line comes apart within minutes. This is proof, not celebration."));
+
+c.push(BOX("It is not a rout in the way stories tell it \u2014 no cheering, no clean lines of fleeing soldiers. It is simply, suddenly, over: Voss\u2019s remaining troops breaking for the treeline they came from, the coalition too battered and too relieved to give proper chase, and a field that will need a great deal of tending before anyone can say anything about who won it that does not sound obscene."));
+
+c.push(P("Let the aftermath be heavy rather than triumphant, especially if Tam died in Scene 2 \u2014 the coalition has proven something real about Vale\u2019s army today, and it cost real people to prove it. End the session on that weight rather than on a victory speech. Hand off directly to Module Ten for the approach to Caer Ysolde."));
+
+// ------------------------------------------------------------ NPC Profiles
+c.push(H1("NPC Profiles"));
+
+c.push(H2("General Ilyana Voss"));
+c.push(P("A real tactician rather than a fanatic, calm under pressure in a way that reads as competence rather than menace. Speech, in the brief window a table might hear her actually speak (command orders during the fight, or a surrender if the party earns one): direct, economical, entirely without contempt for an enemy who is currently winning."));
+c.push(P("Open thread: if captured rather than killed, Voss is a genuine long-term asset for the coalition \u2014 a professional soldier with real knowledge of Vale\u2019s remaining field strength, who a DM can develop as a reluctant, pragmatic informant in later modules rather than a villain who must be disposed of."));
+
+// --------------------------------------------------------------- Optional
+c.push(H1("Optional Content"));
+
+c.push(H2("What the Column Says About Tam"));
+c.push(P("If Tam died in Scene 2, let the coalition\u2019s reaction be genuine rather than perfunctory \u2014 a name added to a growing list, spoken plainly rather than eulogized, echoing exactly the register the Standing Water gave the second king\u2019s death in Module Five. No mechanical stakes; this is the module giving its cost real weight."));
+
+c.push(H2("Voss\u2019s Own Papers"));
+c.push(P("If Voss is captured or her body searched, her own field orders reveal real, specific intelligence about the remaining distance to Caer Ysolde and what defends it \u2014 useful DM ammunition for Module Ten rather than something that needs to resolve here."));
+
+// -------------------------------------------------------------- Diverging
+c.push(H1("Diverging Paths (DM Only)"));
+
+c.push(BUL("Which Scene 2 was run.", "Tam\u2019s death or the third-thread alternate \u2014 record which, since it changes what Module Ten and beyond can reference."));
+c.push(BUL("General Voss\u2019s fate.", "Killed, captured, or fled \u2014 a captured Voss is a real long-term asset; track it the same way Marshal Drell\u2019s fate was tracked in Module Seven."));
+
+// ---------------------------------------------------------------- Loot
+c.push(H1("Loot"));
+
+c.push(BUL("Voss\u2019s field orders.", "Real intelligence about Caer Ysolde\u2019s defenses \u2014 see Optional Content."));
+c.push(BUL("Captured field equipment.", "Modest but genuine \u2014 weapons, armor, and supply recovered from Voss\u2019s broken column, worth collecting rather than a windfall."));
+
+// -------------------------------------------------------------- Refrain
+c.push(H1("The Refrain"));
+
+c.push(VERSE([
+  "By thought, and by word, and by deed,",
+  "the king\u2019s own chosen kept their creed.",
+  "Far from home, where the quiet land lay,",
+  "they held the line, and would not stray."
+]));
+
+const doc = new Document({
+  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] }] },
+  styles: {
+    default: { document: { run: { font: "Georgia", size: 20 } } },
+    paragraphStyles: [
+      { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 30, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 280, after: 140 }, outlineLevel: 0 } },
+      { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 24, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 200, after: 100 }, outlineLevel: 1 } },
+      { id: "Heading3", name: "Heading 3", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 22, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 160, after: 80 }, outlineLevel: 2 } }
+    ]
+  },
+  sections: [{ properties: { page: { size: { width: 12240, height: 15840 }, margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 } } }, children: c }]
+});
+
+Packer.toBuffer(doc).then(buf => {
+  fs.writeFileSync(stagePath("KC_Module09_TheFieldBattle.docx"), buf);
+  console.log("Written.");
+});
