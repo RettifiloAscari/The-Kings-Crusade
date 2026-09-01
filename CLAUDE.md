@@ -215,7 +215,6 @@ written in `scripts/KC_Sourcebook.js`):
 | Whether Vale is still human | Deliberately ambiguous in v1; not yet an answer. |
 | Pantheon, planes, and magical traditions | Beyond "Elduvaine's magic is different in kind." |
 | Module breakdown | How many sessions, and what each covers. |
-| **2014 or 2024 rules** | Never actually decided. The repo is on 2014 by implication only, because the SRD path under *Mechanical Validation* points at `src/2014/en/`. It matters at this table: 2024 moves every subclass to 3rd level, adds weapon mastery, and rewrites exhaustion, and the party starts at 5th. Decide before the first stat block is written. |
 
 **Deliberately open** — questions left unresolved *by design*, which later sessions must
 not helpfully close:
@@ -334,6 +333,11 @@ wide tables that read badly in the two-column body.
 
 ## Table Specifications
 
+- **Ruleset:** **D&D 5e, 2014 rules (SRD 5.1).** Chosen deliberately — it is the version
+  this DM and these players prefer — not inherited from a default. **Do not migrate this
+  campaign to the 2024 rules, and do not offer to.** Write every stat block, spell
+  reference, subclass assumption and rules citation against 2014. Where a source or a
+  dataset offers both, take 2014.
 - **Party:** 4–6 players
 - **Starting level:** 5th — Extra Attack and 3rd-level spells online from session one.
   The party are the king's chosen champions, not raw levies. Build encounters for
@@ -420,8 +424,10 @@ GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 \
 ```
 
 Monsters at `src/2014/en/5e-SRD-Monsters.json`; other types follow
-`src/2014/en/5e-SRD-<Type>.json`. Coverage is **SRD-only** — no Volo's, no Mordenkainen's.
-Flag material drawing on those as unvalidated when precision matters.
+`src/2014/en/5e-SRD-<Type>.json`. **The `2014` in those paths is the campaign's ruleset
+decision, not an accident of the dataset layout** — the repository also ships `src/2024/`,
+and it is not to be used. Coverage is **SRD-only** — no Volo's, no Mordenkainen's. Flag
+material drawing on those as unvalidated when precision matters.
 
 ## Consistency Auditing
 
