@@ -14,8 +14,9 @@ the season they were planted in. Three years ago **Maedoc Vale**, Keeper of the 
 Archive, opened every ward he had spent his life maintaining and let an army through them.
 The kingdom fell to a key, not a siege.
 
-**Xavier III of Harrowmark**, called the Wyvernheart, has called a crusade and is going himself. The party are the
-champions he sends ahead of the army.
+**Xavier III of Harrowmark** has called a crusade and is going himself. The party are the
+champions he sends ahead of the army. He is not yet called the Wyvernheart; he earns that
+name during the war, and the players are meant to be there when he does.
 
 High fantasy, traditionally D&D, on a **Third Crusade** spine — the structure of a distant
 king answering a call, a long march, an occupying power, coalition allies with their own

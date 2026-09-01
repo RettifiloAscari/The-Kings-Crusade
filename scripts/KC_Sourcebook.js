@@ -102,7 +102,7 @@ c.push(BOX("Three years ago the Living Realm went quiet. The couriers stopped. T
 
 c.push(P("Elduvaine has fallen. Not to an empire, not to a rival crown, but to one man who was already inside it \u2014 Maedoc Vale, once Keeper of the Ysolde Archive, who opened the wards he had spent his life maintaining and let his army in through them. The royal house is taken. The capital is his. And the land itself, which in Elduvaine is not scenery but a participant, is being drained of the thing that made it worth living in."));
 
-c.push(P("Xavier III of Harrowmark, whom men call the Wyvernheart, has called a crusade. He is going himself, which is not what kings usually do, and he is taking the better part of his realm with him. Two allied powers march under the same call. A third party has been paid, or has decided, to be interested, and answers to neither."));
+c.push(P("Xavier III of Harrowmark has called a crusade. He is going himself, which is not what kings usually do, and he is taking the better part of his realm with him. Two allied powers march under the same call. A third party has been paid, or has decided, to be interested, and answers to neither."));
 
 c.push(P("You are not the army. You are what the king sends ahead of it \u2014 four to six people chosen because a column of eight thousand cannot go where you can, cannot move as quickly as you can, and cannot be denied as plausibly if it is caught somewhere it should not be. The march will take months. Elduvaine is a long way from Harrowmark, and everything between the two has an opinion about armies crossing it."));
 
@@ -196,7 +196,17 @@ c.push(H1("The Crusade"));
 
 c.push(H2("Harrowmark and Its King"));
 
-c.push(P("Harrowmark is a cold, stony, unmagical realm of hill forts and hard winters, and it is not a place anyone has ever called marvellous. This matters. The party comes from somewhere ordinary, and Elduvaine will not be ordinary to them either."));
+c.push(P("Harrowmark is a cold, stony realm of hill forts and hard winters, and nobody has ever called it marvellous. This matters, because it is where the party comes from, and Elduvaine will not be ordinary to them either."));
+
+c.push(P("Elduvish scholars call Harrowmark unmagical. It is a useful phrase and it is not true, and the difference is worth getting right before the party crosses a border. Harrowmark has wizards. It has priests whose prayers are answered, hedge-witches in the fishing towns, war-mages on the king\u2019s payroll, and a small, cold, well-regarded college that has been teaching evocation for two hundred years. Magic is worked in Harrowmark exactly as it is worked everywhere else in the world: studied, cast, bound and spent, carried in a person and gone when that person stops."));
+
+c.push(P("What Harrowmark does not have is a land that joins in. Its roads are the length they look. Its rivers keep nothing that is said to them. Its stone is dark at night and always has been. A Harrowmark battle-mage can throw fire the length of a hall, and has never in her life walked a road that got shorter because her errand was a kind one, and the first time it happens to her she will stop dead in the mud and refuse to go on until somebody explains."));
+
+c.push(PS([DM("DM Only: "), { t: "keep this distinction crisp, because it is the one that makes the setting legible. Worked magic is normal and portable and belongs to people; a character from Harrowmark can be any caster in the game and should never be told otherwise. Resident magic belongs to Elduvaine and to nowhere else. \u201cUnmagical Harrowmark\u201d is a thing Elduvish characters say, sometimes rudely. It is not narration." }]));
+
+c.push(P("What Harrowmark has instead of wonder is wyverns. They nest in the high crags and have as long as anyone has counted, and dealing with them is not an adventure in Harrowmark but a season of the year, conducted with long pikes and longer ropes and a number of funerals that the rest of the world finds startling. A wyvern is a beast. It is not magic, it cannot be reasoned with, and it can be killed by determined people with the right equipment and an acceptance of losses."));
+
+c.push(P("This produces a particular kind of person. Harrowmark folk are not brave, exactly \u2014 they are unimpressed. Something enormous with wings is a problem their grandmother had. Whatever else the party carries out of their homeland, they carry that, and it will serve them better than they expect and worse than they hope."));
 
 c.push(P("Xavier III is going in person. He is a genuinely excellent field commander and an indifferent king, and he is aware of both facts in a way that makes him better company than it makes him a ruler. Harrowmark will be governed in his absence by people he does not entirely trust, and he has decided that this is a price worth paying, and he is probably wrong."));
 
@@ -204,11 +214,15 @@ c.push(P("He was not always this. At nineteen he made war on his own father alon
 
 c.push(P("He chose this party himself. He does that sort of thing personally and remembers the names."));
 
+c.push(PS([DM("DM Only: "), { t: "he is Xavier III and nothing else yet. Before this war is over he will be Xavier the Wyvernheart, and he will earn it in the air, on the back of one of the things his country has spent nine centuries killing, in a battle that is going badly at the time. Do not use the name in any read-aloud before that scene. Do not let an NPC use it early as a slip. Do not foreshadow it. A campaign in which the players watch a king acquire his title is worth considerably more than one in which he arrives holding it." }]));
+
 c.push(H2("The Coalition"));
 
-c.push(P("Two other powers march under the same call, each with its own reasons and its own idea of what a successful war looks like. A third party \u2014 not a power, not a signatory, and not answerable to the coalition\u2019s councils \u2014 has interests in Elduvaine and will deal with either side."));
+c.push(P("Two other powers have taken the call. The Kingdom of Oksitan marches, and the Grand Duchy of Auberitz marches, each with its own reasons and its own idea of what a finished war looks like. Neither is doing this for Elduvaine\u2019s sake and neither pretends to be."));
 
-c.push(PS([DM("DM Only: "), { t: "the allied powers and the third party are named and detailed in a later pass; they are deliberately generic here rather than invented in passing. Run them by role until then. The third party is the useful one for a party that likes leverage: it can be bargained with, and it will keep a bargain, and it is not on anybody\u2019s side." }]));
+c.push(P("The Kingdom of Norvatch has not taken the call. Norvatch trades with the occupied kingdom, has an understanding of some kind with the men holding it, and has made no promises to anybody marching. It will deal with either side. It is worth saying plainly that Norvatch keeps the bargains it makes, which is more than can be said for one of the powers that did take the call."));
+
+c.push(PS([DM("DM Only: "), { t: "the three realms are named; what each of them actually wants is not decided and must not be invented in passing. Run them by role. Norvatch is the useful one for a party that likes leverage, precisely because it is not on anybody\u2019s side and can be relied on once bought \u2014 and because buying it costs something the coalition would rather not spend." }]));
 
 c.push(H2("The Promise"));
 
@@ -224,7 +238,7 @@ c.push(H2("The Two Roads"));
 
 c.push(P("The coalition could not agree on a route and did not try very hard. The armies split."));
 
-c.push(BUL("The sea road.", "Ship out, coast down, make landfall near the Elduvish ports. Fast, episodic, and dependent on weather, harbours, and whoever currently owns the islands along the way."));
+c.push(BUL("The sea road.", "Ship out, coast down, make landfall within reach of Vindana, the great Elduvish port the war will turn on. Fast, episodic, and dependent on weather, harbours, and whoever currently owns the islands along the way."));
 c.push(BUL("The mountain road.", "Overland, through passes and through realms that are nominally friendly and practically not. Slower, harder, and the reason armies have historically arrived at Elduvaine at half strength or not at all."));
 
 c.push(P("The party chooses. Whichever road they take is written in full; the other is met later, in the form of what became of the people who took it."));

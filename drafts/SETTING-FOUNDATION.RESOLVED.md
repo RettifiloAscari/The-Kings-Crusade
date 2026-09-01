@@ -23,9 +23,11 @@ items that carried no recommendation:
 | 10b | The turn-back ending | **Allowed**, as a genuinely available branch |
 | — | Naming register | **Elduvaine / Caer Ysolde / Maedoc Vale / Aldric III of Harrowmark** |
 
-**Superseded since.** The calling king was renamed **Xavier III of Harrowmark, called the
-Wyvernheart** (and his father accordingly Xavier II), and the great port was named
-**Vindana**. The row above records what was approved at the time and is left unedited.
+**Superseded since.** The calling king was renamed **Xavier III of Harrowmark** (and his
+father accordingly Xavier II); he acquires the epithet **the Wyvernheart** during the
+crusade rather than holding it at the start. The great port was named **Vindana**, and the
+coalition became **Oksitan** and **Auberitz** marching, with **Norvatch** unaligned. The
+row above records what was approved at the time and is left unedited.
 
 ## What changed on contact with the code
 

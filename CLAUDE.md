@@ -118,8 +118,9 @@ authority. What it supplies:
   branch can be the triumphant ending and not the sad one.**
 - **A king with a flawed youth.** Richard makes war on his own father alongside his
   brothers, besieges castles across his lands, and then has to beg that father's mercy.
-  He holds his lands *par force e par sens*, by force and by sense. Xavier III has no life
-  before the crusade yet, and this is the model to build one from.
+  He holds his lands *par force e par sens*, by force and by sense. This was the model for
+  Xavier's own youth, and it has been used: the war on his father, and the mercy asked for
+  afterwards, come from here.
 - **The call as an institution, not a person.** The Latin section is the only passage not
   about Richard: it is the summons itself, naming the disaster and promising full remission
   and eternal life to whoever answers. What Xavier's call actually *promises* those who
@@ -150,15 +151,31 @@ written in `scripts/KC_Sourcebook.js`):
   fell to a key, not a siege. **His motive: the deepest vaults were closed to the Keeper by
   rule, and he wanted to finish reading.** He is spending the land to open them. He is not
   mad and not tragic; he considers the price proportionate.
-- **Xavier III of Harrowmark, called the Wyvernheart** — the calling king. Harrowmark is
-  cold, stony and unmagical, which is the point: the party comes from somewhere ordinary.
-  **How he earned the epithet is not yet decided** and must not be invented in passing; it
-  is a set piece waiting to be written. Xavier leads in
-  person, is an excellent field commander and an indifferent king, and chose the party
-  himself. **As a young man he made war on his own father**, Xavier II, alongside his
+- **Xavier III of Harrowmark** — the calling king. He leads in person, is an excellent
+  field commander and an indifferent king, and chose the party himself.
+- **He is not yet the Wyvernheart.** At the campaign's start he is Xavier III and nothing
+  more. **He earns the name during the crusade**, from the back of a wyvern, in a battle
+  that is going badly — exactly as Richard earned Lionheart on crusade rather than before
+  it. Which battle, and in which module, is not yet decided. Until it is written, no
+  document may call him the Wyvernheart in narration set before that moment, and the
+  Player Guide must not hint that the name is coming. **As a young man he made war on his own father**, Xavier II, alongside his
   brothers; he took three of Harrowmark's own hill forts and lost the war, and had to
   kneel and ask mercy of the man he had besieged. He got it. He has been an excellent
   commander and an uneasy king ever since, and he knows which of those he is good at.
+- **Harrowmark is unmagical in the land, not in its people.** This distinction is
+  load-bearing and must never be blurred. **Worked magic** — studied, cast, bound, spent,
+  carried in a person — works in Harrowmark exactly as it works everywhere in the world.
+  Harrowmark has wizards, priests whose prayers are answered, hedge-witches and war-mages
+  in the king's pay, and a player character from Harrowmark may be any caster in the game.
+  What Harrowmark lacks is **resident** magic: a land that joins in. Its roads are the
+  length they look, its rivers keep nothing, its stone is dark at night. "Unmagical
+  Harrowmark" is an Elduvish figure of speech and it is not quite true; use it in Elduvish
+  mouths, never as narration.
+- **The wyverns of Harrowmark.** The crags are wyvern country, and have always been.
+  Wyverns are beasts, not magic, which is exactly why they fit a mundane land: hunting
+  them is an ordinary and appalling hazard of Harrowmark life, done with ropes and pikes
+  and losses. Harrowmark people are not brave so much as **unimpressed**, and that is the
+  cultural note the party carries out of the country with them.
 - **The Promise of the Call.** Xavier's summons offers those who answer two things: **a
   share in Elduvaine's resident magic** — land held in the Living Realm, where the habits
   work — and **access to the Ysolde Archive**. This is the motive engine for the whole
@@ -171,8 +188,10 @@ written in `scripts/KC_Sourcebook.js`):
 - **The ruling family** — one member escaped and runs what resistance survives, and
   refuses to be evacuated. The rest are held in two or three separate places, unharmed.
   They are united on the war and divided on what should follow it.
-- **The coalition** — Harrowmark plus two allied powers, and one unaligned third party
-  that will deal with either side and answers to nobody.
+- **The coalition** — Harrowmark marches with the **Kingdom of Oksitan** and the **Grand
+  Duchy of Auberitz**. The **Kingdom of Norvatch** has not taken the call: it deals with
+  either side, answers to nobody, and will keep a bargain it has made. **What each of them
+  actually wants, beyond the Promise, is not yet decided** — run them by role until it is.
 - **The two roads** — the coalition split. The party chooses the sea road or the mountain
   road; the other is met later as its aftermath. A second crown marches by the road the
   party does not take, and that king is lost early, in water; his army comes apart behind
@@ -185,10 +204,11 @@ written in `scripts/KC_Sourcebook.js`):
 
 | Open item | Notes |
 |---|---|
-| The two allied powers and the unaligned third party | Named and detailed in a later pass. Run them by role until then. |
-| The second king and his realm | The crown lost on the road the party does not take. |
-| How Xavier earned "the Wyvernheart" | Canon that he is called it; not yet how. |
-| The draconic layer | Dragons and wyverns are to play a large role. Where they sit relative to Elduvaine's resident magic, to unmagical Harrowmark, and to Vale's army needs its own draft before a word of it is written. |
+| What Oksitan, Auberitz and Norvatch each want | The realms are named; their agendas, rulers and grievances are not. |
+| The second king and his realm | The crown lost on the road the party does not take. Auberitz is a grand duchy and Norvatch does not march, so by elimination this is Oksitan's king — but that has not been signed off. |
+| The battle where Xavier becomes the Wyvernheart | Canon that he earns it mid-campaign, airborne, in a battle going badly. Which battle and which module are open. |
+| The draconic layer beyond Harrowmark | Harrowmark's wyverns are canon. Dragons in Elduvaine, their relation to resident magic, and anything draconic in Vale's army still need their own draft. |
+| Whether Harrowmark was ever otherwise | Left open deliberately for now: a Harrowmark that was *drained* long ago would give it a stake in this war and a dread of Vale. Evocative, unapproved, and not to be assumed. |
 | Names of the royal family | Including which one is at large. |
 | Region-level geography and a gazetteer | Both realms and what lies between. |
 | What the deepest vaults actually contain | What Vale is reading toward. The sourcebook states his motive; it does not state his destination. |
