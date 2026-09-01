@@ -59,6 +59,7 @@ const BOX = (text) => new Paragraph({
   spacing: { before: 120, after: 160 },
   shading: { type: "clear", fill: "F3EFE4" },
   indent: { left: 220, right: 220, firstLine: 0 },   // template default firstLine=180 otherwise leaks in
+  keepLines: true,   // never let a boxed passage tear across a page break
   children: [new TextRun({ text, italics: true })]
 });
 
@@ -66,6 +67,7 @@ const VERSE = (lines) => new Paragraph({
   spacing: { before: 120, after: 160 },
   shading: { type: "clear", fill: "F3EFE4" },
   indent: { left: 220, right: 220, firstLine: 0 },   // same fix as BOX -- see its comment
+  keepLines: true,   // the refrain must never split across a page break
   children: lines.map((l, i) => new TextRun({ text: l, italics: true, ...(i ? { break: 1 } : {}) }))
 });
 
