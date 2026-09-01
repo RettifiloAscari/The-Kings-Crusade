@@ -90,9 +90,39 @@ and this campaign replaced Saladin with an evil wizard on purpose. Take the film
 and its moral seriousness about *crusaders*. Do not import its moral ambiguity about the
 *enemy*. The villain is still a villain.
 
-**The Skaldic Bard.** A track named by the DM as a tonal reference. *Not yet described in
-this repository* — the link could not be reached from the build environment, and no
-session should invent what it sounds like. Ask before drawing on it.
+**The Skaldic Bard, *Richard the Lionheart*** (original music and lyrics by the Skaldic
+Bard; performed with Lady Skald). A sung biography of Richard I from his youth in
+Aquitaine to the truce of 1192, written in four historical languages. The DM supplied the
+lyrics; a modern English translation is pending, so readings below are gist, not
+authority. What it supplies:
+
+- **A register for each constituency.** Old Occitan for Aquitaine and Richard's youth,
+  drawn from troubadour sources; Anglo-Norman for the court and its deeds, after Wace and
+  Ambroise; Early Middle English for his subjects, after the *Ormulum*; Latin for the
+  Church's call, embellishing Gregory VIII's *Audita Tremendi*. The same war sounds like a
+  different war depending on who sings it — the youth is lyric, the court is honour and
+  lands, the commons are plain and physical, and the Church speaks only the summons and
+  the promise. **Elduvaine is already equipped for this:** the Listening Water returns
+  speech in the speaker's own voice, so a riverbank can give the party the same three years
+  in four incompatible registers, none of them lying.
+- **A refrain that changes one word at the end.** The Middle English burden recurs
+  unaltered all through the song — Richard "stod ȝæn helle", stood against hell — until
+  the final repetition, where it becomes "faht for hefen", fought for heaven. One word,
+  held back for the last line of the whole piece.
+- **A hero's song that states the failure plainly.** Immediately after Arsuf, in the
+  court's own voice: *mais Richarz n'ad unc mie pris la seinte cité* — but Richard never
+  took the holy city. The song does not hide it, does not mourn it, and does not stop.
+  It goes on to Jaffa and the truce, and frames the achievement as safe passage for
+  pilgrims rather than possession of the city. **This is the proof that the turn-back
+  branch can be the triumphant ending and not the sad one.**
+- **A king with a flawed youth.** Richard makes war on his own father alongside his
+  brothers, besieges castles across his lands, and then has to beg that father's mercy.
+  He holds his lands *par force e par sens*, by force and by sense. Aldric III has no life
+  before the crusade yet, and this is the model to build one from.
+- **The call as an institution, not a person.** The Latin section is the only passage not
+  about Richard: it is the summons itself, naming the disaster and promising full remission
+  and eternal life to whoever answers. What Aldric's call actually *promises* those who
+  answer it is an open question and a motive engine for every NPC in the coalition.
 
 ## Canon and Sources of Truth
 
