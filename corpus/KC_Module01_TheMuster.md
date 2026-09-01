@@ -10,9 +10,15 @@
 
 # Overview
 
-The party is summoned to Duncarrow, seat of Xavier III of Harrowmark, and chosen personally for the crusade he has called. Before the muster can march, Harrowmark asks one more thing of them: help see off a wyvern that has turned on the hold of Greywatch. The session ends with the coalition’s ships or column setting out, and the table making the campaign’s first real choice — the sea road or the mountain road.
+The party is summoned to Duncarrow, seat of Xavier III of Harrowmark, and chosen personally for the crusade he has called. Before the muster can march, Harrowmark asks one more thing of them: help see off a wyvern that has turned on the hold of Greywatch. The session ends with the coalition’s ships or column setting out, and the table making the campaign’s first real choice — the sea road or the mountain road. Core scenes run three and a half to four hours; Optional Content is built to fill out the rest of a five-hour session, not to be squeezed into it, and can be skipped entirely on a slow night without costing the module anything it needs later.
 
-If the party does not already know one another, run the optional gathering in Scene 1 as introductions rather than exposition; if they do, skip straight to the summons.
+If the party does not already know one another, run Scene 1 as their introduction rather than as exposition — they can meet on the road, all answering the same rider. If they do already know each other, skip straight to the summons and let the scene move.
+
+## The Weight of Harrowmark
+
+Play the texture of the place before anything else happens in it. Harrowmark in the last cold weeks before winter is grey stone under a greyer sky, woodsmoke that never quite clears the low valleys, and light that arrives late and leaves early. Nothing glows, nothing hums, nothing remembers a kindness done to it — water is only water here, and a mile is exactly as long as it looks. That flatness is not absence; it is a fact about the place, stated plainly, and it is what will make Elduvaine’s magic land as wonder rather than as a rules explanation when the party finally crosses into it.
+
+What Harrowmark has instead is competence. Doors are barred against weather, not spirits. Watch fires burn all night on every hold’s high ground, not from superstition but because something with wings sometimes comes out of the crags, and has for longer than anyone can date. People here do not gasp at danger; they reach for the nearest rope, or pike, or child, in that order, and get on with it. Voice every NPC in this module — Xavier included — from that same flat, competent register, and save the wonder for later.
 
 | **Scene** | **Target time** | **Notes** |
 | --- | --- | --- |
@@ -22,8 +28,6 @@ If the party does not already know one another, run the optional gathering in Sc
 | 4. The Muster’s End | 30–45 min | Departure, and the road choice — Branch Ledger entry 1. |
 | Optional Content | 30–45 min | Run if the table has time; cut cleanly if not. |
 
-Core scenes run three and a half to four hours. Optional Content is designed to fill the rest of the five-hour session, not to be squeezed in — skip it entirely on a slow night without losing anything the module needs later.
-
 # What Is Actually Happening (DM Only)
 
 Nothing in this module is a trick. The wyvern at Greywatch is exactly what Brenna Vane says it is: a young, hungry animal pushed out of its usual range by a harder winter than most, doing what wyverns do. It has no connection to Vale, to Elduvaine, or to anything the party will learn about later. Its only job is to be the first thing this campaign asks the party to be brave about, and to show them — and the table — what “unimpressed” actually looks like from the inside.
@@ -32,13 +36,17 @@ Nothing in this module is a trick. The wyvern at Greywatch is exactly what Brenn
 
 ## Scene 1: The Summons
 
-> *The rider comes at a hard trot, mud to the knee of his horse, and does not slow at the gate. “Duncarrow,” he says, to whoever is closest. “The king summons you by name. Today, if you can manage it.”*
+Wherever the party is when this begins, make it somewhere ordinary — a roadside inn, a garrison bunkhouse, a farmhold at the edge of the crags. The rider is easy to hear before he is seen: hooves on frozen ruts, faster than anyone rides without a reason, and by the time he is in view his horse is lathered white at the neck despite the cold.
 
-Play this scene short. Its only job is to get the party moving toward Duncarrow with a name attached to the summons — their own. If the party has not met, this is where they cross paths: on the same road, answering the same rider, sizing each other up before they reach the gate.
+> *The rider comes at a hard trot, mud and ice to the knee of his horse, and does not slow at the gate. “Duncarrow,” he says, to whoever is closest, breath fogging between words. “The king summons you by name. Today, if you can manage it.” He says each name once, plainly, the way a man reads a list he has already checked twice, and does not wait to be thanked before he turns his horse back the way he came.*
+
+Play this scene short. Its only job is to get the party moving toward Duncarrow with a name attached to the summons — their own. If the party has not met, this is where they cross paths: on the same road, answering the same rider, sizing each other up over the two or three days’ ride it takes to reach the seat, trading the little each of them knows about why a king would want them by name. Nobody in Harrowmark is summoned by name for a small reason, and the party should arrive at Duncarrow already half-certain of that, before anyone tells them so.
 
 ## Scene 2: Audience with the King
 
-Duncarrow is a working fortress, not a palace — grey stone, low ceilings, a great hall that smells of woodsmoke and wet dog rather than incense. Xavier receives the party there, standing, with a steward’s table of maps at his elbow rather than a throne.
+Duncarrow is a working fortress, not a palace — grey stone, low ceilings, arrow-slit windows that let in more cold than light. The great hall smells of woodsmoke, wet dog, and oiled steel rather than incense; the tapestries on its walls are march-maps and hide charts, not heraldry. Guards at the door look tired rather than ceremonial, and nod the party through without announcing them — Duncarrow has had a great many visitors this season, and does not have the staff to make an occasion of one more.
+
+Xavier receives the party standing, at a steward’s table crowded with maps and weighted at the corners with what look like ordinary stones. He is not what the songs will eventually make of him: greying at the temples earlier than he should be, a soldier’s build going a little soft from a year of councils rather than campaigns, dressed plainly enough that a stranger might take him for one of his own captains. Only when he looks up does the room organize itself around him — not because anyone commands it to, but because everyone in it has clearly done this before.
 
 > *He does not make them kneel. “I know your names,” he says, before anyone has given one, and it is not a boast — he simply has. “A kingdom I have never seen has been taken by a man I have never met, and I am asking you to help me take it back. I will not pretend that is a small thing to ask of anyone.*
 
@@ -48,19 +56,23 @@ Let Xavier speak plainly about the Promise — a share in Elduvaine’s resident
 
 He closes the audience by asking one thing of them before the muster marches: Greywatch, three days out, has sent word that a wyvern has taken to raiding its herds and, twice now, its people. He would rather send the crusade’s own chosen than levy more of Greywatch’s own dead.
 
+He does not walk them out. A steward does that, through a yard full of the ordinary business of a fortress readying for war — barrels counted, horses shod, a smith’s hammer going somewhere out of sight — and the party’s last sight of Xavier, glanced back through the hall door, is of a man already bent over his maps again before they have finished crossing the threshold.
+
 ## Scene 3: The Wyvern at Greywatch
 
-Greywatch is a hold built for exactly this: watchtowers on every high point, hunting horns instead of alarm bells, and a population that has buried people to wyverns before and will again. Huntmaster Brenna Vane meets the party at the gate, sizes them up without much comment, and puts them to work.
+Greywatch announces itself before the road does: watchtowers on every high point, each with a horn-bearer standing a longer shift than seems reasonable, and a palisade studded here and there with a wyvern claw or a length of jaw nailed up as a ward that everyone insists is decoration and no one will take down. It is a hold built for exactly this, by people who have buried others to wyverns before and, without much ceremony about it, expect to again. Huntmaster Brenna Vane meets the party at the gate, sizes them up without much comment, and puts them to work.
 
-> *“It took two lambs and a shepherd’s boy’s arm Tuesday last,” Brenna says, already walking. “Young, hungry, pushed down off the high crags by the cold — not clever, not old enough to be clever. We’ll rope it if we can and put it back where it came from. We’ll kill it if we have to. Either way, nobody’s grandmother is losing a leg on my watch. You keep up or you keep out of the way.”*
+> *“It took two lambs and a shepherd’s boy’s arm Tuesday last,” Brenna says, already walking, not waiting to see if they follow. “Young, hungry, pushed down off the high crags by the cold — not clever, not old enough to be clever. We’ll rope it if we can and put it back where it came from. We’ll kill it if we have to. Either way, nobody’s grandmother is losing a leg on my watch. You keep up or you keep out of the way.”*
+
+Give the party the rest of the daylight to see Greywatch properly before dusk brings the fight: pens reinforced with iron banding rather than wood, a bone yard behind the smithy where old kills are rendered down for nothing gets wasted here, children who know the horn-calls — one long for sighted, three short for struck, one long again for down — the way other children know a nursery rhyme. Nobody here is grim about it. This is simply what a season looks like.
 
 ### Running the Encounter
 
-The wyvern strikes at dusk, from height, going first for whatever looks least defended — a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords.
+The wyvern comes at dusk, out of a sky gone the color of a bruise, and is heard before it is seen — a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practiced shorthand of people who have done this before.
 
-Harrowmark does not fight wyverns the way most parties expect to fight a dragon. A PC adjacent to the wyvern, or within its reach, may spend their action fixing a hunting rope to a wing or leg (Strength (Athletics) or Dexterity (Sleight of Hand), DC 13 — Brenna will call out which, and why, the first time it comes up). Three successful ropes from three different characters ground the wyvern: it loses its fly speed until it breaks free (its action, a DC 13 Athletics contest against the ropes) or the encounter ends. A grounded wyvern fighting on the ground, hemmed in by pikes, is a substantially safer fight than one still in the air, and this is deliberate — it is the module’s built-in partial resolution, not a trick or a trap.
+Harrowmark does not fight wyverns the way most parties expect to fight a dragon. A PC adjacent to the wyvern, or within its reach, may spend their action fixing a hunting rope to a wing or leg (Strength (Athletics) or Dexterity (Sleight of Hand), DC 13 — Brenna will call out which, and why, the first time it comes up). Three successful ropes from three different characters ground the wyvern: it loses its fly speed until it breaks free (its action, a DC 13 Athletics contest against the ropes) or the encounter ends. A grounded wyvern fighting on the ground, hemmed in by pikes, is a substantially safer fight than one still in the air, and this is deliberate — it is the module’s built-in partial resolution, not a trick or a trap. Play the moment it goes down for everything it is worth: the ropes snapping taut, the hold-folk shouting the count, the sudden and enormous silence of something huge no longer in the air.
 
-The wyvern is unaligned and not suicidal. If it drops to 25 hit points or fewer, or is grounded and clearly losing, it breaks off and flees at its next opportunity rather than fighting to the death. A fleeing wyvern that escapes counts as a full success at the table — Greywatch does not expect a corpse, only a hold that is safe again.
+The stinger is the fight’s real danger and should read as one — not a number on a sheet but a visible, spreading wrongness in whoever it hits: the wound going numb, then cold, then someone else shouting for the antitoxin before the poison finishes its work. The wyvern is unaligned and not suicidal. If it drops to 25 hit points or fewer, or is grounded and clearly losing, it breaks off and flees at its next opportunity rather than fighting to the death. A fleeing wyvern that escapes counts as a full success at the table — Greywatch does not expect a corpse, only a hold that is safe again.
 
 ### Scaling the Fight
 
@@ -122,9 +134,11 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 
 ## Scene 4: The Muster’s End
 
-Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move — wagons loaded, Harrowmark levies falling into column, the first coalition banners visible at the edge of camp. Xavier meets them once more, briefly, to say the thing he did not say at the audience.
+Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move. The yard that was ordinary business three days ago is now a camp too large for it — wagons loaded and lashed, Harrowmark levies falling into column by the sound of a horn rather than a shouted order, and, past the edge of the Harrowmark tents, the first coalition banners: colors and cuts of armor the party has not seen before, voices in accents that mark out where in the muster Oksitan and Auberitz have pitched their own camps. Nobody introduces the party to any of it yet — that is a later module’s work — but it should be visibly, unmistakably there, the first sign that this war is bigger than Harrowmark.
 
-> *“Greywatch will remember this longer than I will be able to thank you for it,” he says. “That is worth more than anything I can pin to your coats. But I mean to pin something anyway.”*
+Xavier meets them once more, briefly, in the noise of it rather than the quiet of his hall, to say the thing he did not say at the audience.
+
+> *“Greywatch will remember this longer than I will be able to thank you for it,” he says, close enough to be heard over the camp without raising his voice. “That is worth more than anything I can pin to your coats. But I mean to pin something anyway.”*
 
 This is where the road is chosen — sea or mountain. Let the party decide it in character, weighing whatever they have heard in camp (speed and a side-conquest against the sea, or a longer and harder overland march against the mountains); do not let Xavier decide it for them. Whichever they choose, hand off directly to that module.
 
@@ -166,6 +180,6 @@ If the table wants a prep phase before the wyvern strikes, run a short group eff
 # The Refrain
 
 > *By thought, and by word, and by deed,* 
-> *the king’s chosen kept the road.* 
-> *Far from home, under a borrowed sky,* 
-> *they stood against the quiet.*
+> *the king’s own chosen kept their creed.* 
+> *Far from home, where the quiet land lay,* 
+> *they held the line, and would not stray.*

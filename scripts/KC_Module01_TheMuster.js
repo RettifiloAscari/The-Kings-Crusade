@@ -102,9 +102,15 @@ c.push(PS([{ t: "The King\u2019s Crusade \u2014 Module One", i: true }],
 // ---------------------------------------------------------------- Overview
 c.push(H1("Overview"));
 
-c.push(P("The party is summoned to Duncarrow, seat of Xavier III of Harrowmark, and chosen personally for the crusade he has called. Before the muster can march, Harrowmark asks one more thing of them: help see off a wyvern that has turned on the hold of Greywatch. The session ends with the coalition\u2019s ships or column setting out, and the table making the campaign\u2019s first real choice \u2014 the sea road or the mountain road."));
+c.push(P("The party is summoned to Duncarrow, seat of Xavier III of Harrowmark, and chosen personally for the crusade he has called. Before the muster can march, Harrowmark asks one more thing of them: help see off a wyvern that has turned on the hold of Greywatch. The session ends with the coalition\u2019s ships or column setting out, and the table making the campaign\u2019s first real choice \u2014 the sea road or the mountain road. Core scenes run three and a half to four hours; Optional Content is built to fill out the rest of a five-hour session, not to be squeezed into it, and can be skipped entirely on a slow night without costing the module anything it needs later."));
 
-c.push(P("If the party does not already know one another, run the optional gathering in Scene 1 as introductions rather than exposition; if they do, skip straight to the summons."));
+c.push(P("If the party does not already know one another, run Scene 1 as their introduction rather than as exposition \u2014 they can meet on the road, all answering the same rider. If they do already know each other, skip straight to the summons and let the scene move."));
+
+c.push(H2("The Weight of Harrowmark"));
+
+c.push(P("Play the texture of the place before anything else happens in it. Harrowmark in the last cold weeks before winter is grey stone under a greyer sky, woodsmoke that never quite clears the low valleys, and light that arrives late and leaves early. Nothing glows, nothing hums, nothing remembers a kindness done to it \u2014 water is only water here, and a mile is exactly as long as it looks. That flatness is not absence; it is a fact about the place, stated plainly, and it is what will make Elduvaine\u2019s magic land as wonder rather than as a rules explanation when the party finally crosses into it."));
+
+c.push(P("What Harrowmark has instead is competence. Doors are barred against weather, not spirits. Watch fires burn all night on every hold\u2019s high ground, not from superstition but because something with wings sometimes comes out of the crags, and has for longer than anyone can date. People here do not gasp at danger; they reach for the nearest rope, or pike, or child, in that order, and get on with it. Voice every NPC in this module \u2014 Xavier included \u2014 from that same flat, competent register, and save the wonder for later."));
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
@@ -119,8 +125,6 @@ c.push(table(
   { full: true }
 ));
 
-c.push(P("Core scenes run three and a half to four hours. Optional Content is designed to fill the rest of the five-hour session, not to be squeezed in \u2014 skip it entirely on a slow night without losing anything the module needs later."));
-
 // --------------------------------------------- What Is Actually Happening
 c.push(H1("What Is Actually Happening (DM Only)"));
 
@@ -131,14 +135,18 @@ c.push(PS([DM("DM Only: "), { t: "Xavier is not yet the Wyvernheart, and nothing
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Summons"));
 
-c.push(BOX("The rider comes at a hard trot, mud to the knee of his horse, and does not slow at the gate. \u201CDuncarrow,\u201D he says, to whoever is closest. \u201CThe king summons you by name. Today, if you can manage it.\u201D"));
+c.push(P("Wherever the party is when this begins, make it somewhere ordinary \u2014 a roadside inn, a garrison bunkhouse, a farmhold at the edge of the crags. The rider is easy to hear before he is seen: hooves on frozen ruts, faster than anyone rides without a reason, and by the time he is in view his horse is lathered white at the neck despite the cold."));
 
-c.push(P("Play this scene short. Its only job is to get the party moving toward Duncarrow with a name attached to the summons \u2014 their own. If the party has not met, this is where they cross paths: on the same road, answering the same rider, sizing each other up before they reach the gate."));
+c.push(BOX("The rider comes at a hard trot, mud and ice to the knee of his horse, and does not slow at the gate. \u201CDuncarrow,\u201D he says, to whoever is closest, breath fogging between words. \u201CThe king summons you by name. Today, if you can manage it.\u201D He says each name once, plainly, the way a man reads a list he has already checked twice, and does not wait to be thanked before he turns his horse back the way he came."));
+
+c.push(P("Play this scene short. Its only job is to get the party moving toward Duncarrow with a name attached to the summons \u2014 their own. If the party has not met, this is where they cross paths: on the same road, answering the same rider, sizing each other up over the two or three days\u2019 ride it takes to reach the seat, trading the little each of them knows about why a king would want them by name. Nobody in Harrowmark is summoned by name for a small reason, and the party should arrive at Duncarrow already half-certain of that, before anyone tells them so."));
 
 // ---------------------------------------------------------------- Scene 2
 c.push(H2("Scene 2: Audience with the King"));
 
-c.push(P("Duncarrow is a working fortress, not a palace \u2014 grey stone, low ceilings, a great hall that smells of woodsmoke and wet dog rather than incense. Xavier receives the party there, standing, with a steward\u2019s table of maps at his elbow rather than a throne."));
+c.push(P("Duncarrow is a working fortress, not a palace \u2014 grey stone, low ceilings, arrow-slit windows that let in more cold than light. The great hall smells of woodsmoke, wet dog, and oiled steel rather than incense; the tapestries on its walls are march-maps and hide charts, not heraldry. Guards at the door look tired rather than ceremonial, and nod the party through without announcing them \u2014 Duncarrow has had a great many visitors this season, and does not have the staff to make an occasion of one more."));
+
+c.push(P("Xavier receives the party standing, at a steward\u2019s table crowded with maps and weighted at the corners with what look like ordinary stones. He is not what the songs will eventually make of him: greying at the temples earlier than he should be, a soldier\u2019s build going a little soft from a year of councils rather than campaigns, dressed plainly enough that a stranger might take him for one of his own captains. Only when he looks up does the room organize itself around him \u2014 not because anyone commands it to, but because everyone in it has clearly done this before."));
 
 c.push(BOX("He does not make them kneel. \u201CI know your names,\u201D he says, before anyone has given one, and it is not a boast \u2014 he simply has. \u201CA kingdom I have never seen has been taken by a man I have never met, and I am asking you to help me take it back. I will not pretend that is a small thing to ask of anyone."));
 
@@ -148,20 +156,24 @@ c.push(PS([DM("DM Only: "), { t: "if a player pushes on why he chose them specif
 
 c.push(P("He closes the audience by asking one thing of them before the muster marches: Greywatch, three days out, has sent word that a wyvern has taken to raiding its herds and, twice now, its people. He would rather send the crusade\u2019s own chosen than levy more of Greywatch\u2019s own dead."));
 
+c.push(P("He does not walk them out. A steward does that, through a yard full of the ordinary business of a fortress readying for war \u2014 barrels counted, horses shod, a smith\u2019s hammer going somewhere out of sight \u2014 and the party\u2019s last sight of Xavier, glanced back through the hall door, is of a man already bent over his maps again before they have finished crossing the threshold."));
+
 // ---------------------------------------------------------------- Scene 3
 c.push(H2("Scene 3: The Wyvern at Greywatch"));
 
-c.push(P("Greywatch is a hold built for exactly this: watchtowers on every high point, hunting horns instead of alarm bells, and a population that has buried people to wyverns before and will again. Huntmaster Brenna Vane meets the party at the gate, sizes them up without much comment, and puts them to work."));
+c.push(P("Greywatch announces itself before the road does: watchtowers on every high point, each with a horn-bearer standing a longer shift than seems reasonable, and a palisade studded here and there with a wyvern claw or a length of jaw nailed up as a ward that everyone insists is decoration and no one will take down. It is a hold built for exactly this, by people who have buried others to wyverns before and, without much ceremony about it, expect to again. Huntmaster Brenna Vane meets the party at the gate, sizes them up without much comment, and puts them to work."));
 
-c.push(BOX("\u201CIt took two lambs and a shepherd\u2019s boy\u2019s arm Tuesday last,\u201D Brenna says, already walking. \u201CYoung, hungry, pushed down off the high crags by the cold \u2014 not clever, not old enough to be clever. We\u2019ll rope it if we can and put it back where it came from. We\u2019ll kill it if we have to. Either way, nobody\u2019s grandmother is losing a leg on my watch. You keep up or you keep out of the way.\u201D"));
+c.push(BOX("\u201CIt took two lambs and a shepherd\u2019s boy\u2019s arm Tuesday last,\u201D Brenna says, already walking, not waiting to see if they follow. \u201CYoung, hungry, pushed down off the high crags by the cold \u2014 not clever, not old enough to be clever. We\u2019ll rope it if we can and put it back where it came from. We\u2019ll kill it if we have to. Either way, nobody\u2019s grandmother is losing a leg on my watch. You keep up or you keep out of the way.\u201D"));
+
+c.push(P("Give the party the rest of the daylight to see Greywatch properly before dusk brings the fight: pens reinforced with iron banding rather than wood, a bone yard behind the smithy where old kills are rendered down for nothing gets wasted here, children who know the horn-calls \u2014 one long for sighted, three short for struck, one long again for down \u2014 the way other children know a nursery rhyme. Nobody here is grim about it. This is simply what a season looks like."));
 
 c.push(H3("Running the Encounter"));
 
-c.push(P("The wyvern strikes at dusk, from height, going first for whatever looks least defended \u2014 a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords."));
+c.push(P("The wyvern comes at dusk, out of a sky gone the color of a bruise, and is heard before it is seen \u2014 a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practiced shorthand of people who have done this before."));
 
-c.push(P("Harrowmark does not fight wyverns the way most parties expect to fight a dragon. A PC adjacent to the wyvern, or within its reach, may spend their action fixing a hunting rope to a wing or leg (Strength (Athletics) or Dexterity (Sleight of Hand), DC 13 \u2014 Brenna will call out which, and why, the first time it comes up). Three successful ropes from three different characters ground the wyvern: it loses its fly speed until it breaks free (its action, a DC 13 Athletics contest against the ropes) or the encounter ends. A grounded wyvern fighting on the ground, hemmed in by pikes, is a substantially safer fight than one still in the air, and this is deliberate \u2014 it is the module\u2019s built-in partial resolution, not a trick or a trap."));
+c.push(P("Harrowmark does not fight wyverns the way most parties expect to fight a dragon. A PC adjacent to the wyvern, or within its reach, may spend their action fixing a hunting rope to a wing or leg (Strength (Athletics) or Dexterity (Sleight of Hand), DC 13 \u2014 Brenna will call out which, and why, the first time it comes up). Three successful ropes from three different characters ground the wyvern: it loses its fly speed until it breaks free (its action, a DC 13 Athletics contest against the ropes) or the encounter ends. A grounded wyvern fighting on the ground, hemmed in by pikes, is a substantially safer fight than one still in the air, and this is deliberate \u2014 it is the module\u2019s built-in partial resolution, not a trick or a trap. Play the moment it goes down for everything it is worth: the ropes snapping taut, the hold-folk shouting the count, the sudden and enormous silence of something huge no longer in the air."));
 
-c.push(P("The wyvern is unaligned and not suicidal. If it drops to 25 hit points or fewer, or is grounded and clearly losing, it breaks off and flees at its next opportunity rather than fighting to the death. A fleeing wyvern that escapes counts as a full success at the table \u2014 Greywatch does not expect a corpse, only a hold that is safe again."));
+c.push(P("The stinger is the fight\u2019s real danger and should read as one \u2014 not a number on a sheet but a visible, spreading wrongness in whoever it hits: the wound going numb, then cold, then someone else shouting for the antitoxin before the poison finishes its work. The wyvern is unaligned and not suicidal. If it drops to 25 hit points or fewer, or is grounded and clearly losing, it breaks off and flees at its next opportunity rather than fighting to the death. A fleeing wyvern that escapes counts as a full success at the table \u2014 Greywatch does not expect a corpse, only a hold that is safe again."));
 
 c.push(H3("Scaling the Fight"));
 
@@ -223,9 +235,11 @@ c.push(...SB({
 // ---------------------------------------------------------------- Scene 4
 c.push(H2("Scene 4: The Muster\u2019s End"));
 
-c.push(P("Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move \u2014 wagons loaded, Harrowmark levies falling into column, the first coalition banners visible at the edge of camp. Xavier meets them once more, briefly, to say the thing he did not say at the audience."));
+c.push(P("Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move. The yard that was ordinary business three days ago is now a camp too large for it \u2014 wagons loaded and lashed, Harrowmark levies falling into column by the sound of a horn rather than a shouted order, and, past the edge of the Harrowmark tents, the first coalition banners: colors and cuts of armor the party has not seen before, voices in accents that mark out where in the muster Oksitan and Auberitz have pitched their own camps. Nobody introduces the party to any of it yet \u2014 that is a later module\u2019s work \u2014 but it should be visibly, unmistakably there, the first sign that this war is bigger than Harrowmark."));
 
-c.push(BOX("\u201CGreywatch will remember this longer than I will be able to thank you for it,\u201D he says. \u201CThat is worth more than anything I can pin to your coats. But I mean to pin something anyway.\u201D"));
+c.push(P("Xavier meets them once more, briefly, in the noise of it rather than the quiet of his hall, to say the thing he did not say at the audience."));
+
+c.push(BOX("\u201CGreywatch will remember this longer than I will be able to thank you for it,\u201D he says, close enough to be heard over the camp without raising his voice. \u201CThat is worth more than anything I can pin to your coats. But I mean to pin something anyway.\u201D"));
 
 c.push(P("This is where the road is chosen \u2014 sea or mountain. Let the party decide it in character, weighing whatever they have heard in camp (speed and a side-conquest against the sea, or a longer and harder overland march against the mountains); do not let Xavier decide it for them. Whichever they choose, hand off directly to that module."));
 
@@ -267,9 +281,9 @@ c.push(H1("The Refrain"));
 
 c.push(VERSE([
   "By thought, and by word, and by deed,",
-  "the king\u2019s chosen kept the road.",
-  "Far from home, under a borrowed sky,",
-  "they stood against the quiet."
+  "the king\u2019s own chosen kept their creed.",
+  "Far from home, where the quiet land lay,",
+  "they held the line, and would not stray."
 ]));
 
 const doc = new Document({

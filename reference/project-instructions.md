@@ -129,6 +129,37 @@ authority. What it supplies:
   and eternal life to whoever answers. What Xavier's call actually *promises* those who
   answer it is an open question and a motive engine for every NPC in the coalition.
 
+**A Middle High German lay on Frederick Barbarossa** (title and author unstated; text
+supplied by the DM). A short lay praising Friderîch Rôtbart from his taking the cross
+through his death on crusade, refraining twice on the Kyffhäuser legend that he sleeps
+rather than died and will wake to give the German people courage. No translation was
+supplied; the reading below is an informal gloss of the Middle High German and should be
+treated as gist, not scholarship. What it supplies:
+
+- **The drowned king, independently confirmed.** The poem's own ending — *ëȥ was ein
+  wunder grôȥ daȥ in dës nie verdrôȥ, unz ein mæhtiger fluȥ volendete sîne vârt*, roughly
+  "it was a great wonder that this never wearied him, until a mighty river completed his
+  journey" — describes exactly the beat already locked in this campaign: the second king,
+  lost early, in water, his own crusade unfinished (see *Not yet decided*, below). This
+  campaign did not invent that beat to sound plausible; it is the historical record of the
+  actual Barbarossa, set to verse, arriving in this repository independently of the
+  decision that used his death as a model.
+- **A legend worth stealing for the coalition's grief.** The refrain claims Rôtbart *kan
+  niht dën tôt* — cannot die — and sleeps in a mountain, waiting to wake. A coalition that
+  has just lost its second king to a river does not have to receive that as flat grief:
+  some of its soldiers can believe, or want to believe, that he is sleeping rather than
+  drowned. Free, and a better scene than mourning played straight.
+- **A second Latin acclamation.** The emperor's own rallying line, mid-poem, ends in Latin
+  — *Christus vincit et regnat, Christus Rex imperat* — a real medieval formula (the Laudes
+  Regiae). It echoes the Skaldic Bard's Latin Church-call register from a different angle:
+  not the summons that starts a crusade, but a king steadying his own men mid-disaster
+  with it.
+- **An old king, undeterred by his years.** *Friderîch habete sîniu jâr, alten lîp und
+  grâwe hâr, doch daȥ was niht im swâr* — Frederick was aged, grey-haired, and it was no
+  burden to him. A usable note for how the second king is played in the scene or two he
+  gets before the river takes him: not reluctant, not tragic in advance, just old and
+  going anyway.
+
 ## Canon and Sources of Truth
 
 **The generator scripts in `scripts/` are canon.** Nothing else is. `corpus/` and
@@ -208,7 +239,7 @@ written in `scripts/KC_Sourcebook.js`):
 | Open item | Notes |
 |---|---|
 | What Oksitan, Auberitz and Norvatch each want | The realms are named; their agendas, rulers and grievances are not. |
-| The second king and his realm | The crown lost on the road the party does not take. Auberitz is a grand duchy and Norvatch does not march, so by elimination this is Oksitan's king — but that has not been signed off. |
+| The second king and his realm | The crown lost on the road the party does not take. Auberitz is a grand duchy and Norvatch does not march, so by elimination this is Oksitan's king — but that has not been signed off. The Barbarossa touchstone (above) is supporting material for how he is played and how he dies, not a name. |
 | The battle where Xavier becomes the Wyvernheart | Canon that he earns it mid-campaign, airborne, in a battle going badly. Which battle and which module are open. |
 | The draconic layer beyond Harrowmark | Harrowmark's wyverns are canon. Dragons in Elduvaine, their relation to resident magic, and anything draconic in Vale's army still need their own draft. |
 | Whether Harrowmark was ever otherwise | Left open deliberately for now: a Harrowmark that was *drained* long ago would give it a stake in this war and a dread of Vale. Evocative, unapproved, and not to be assumed. |

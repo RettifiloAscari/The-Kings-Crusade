@@ -177,11 +177,11 @@ The Listening Water is the best exposition device this setting has, and it shoul
 Every session module ends on the same four lines, after the loot, printed identically every time:
 
 > *By thought, and by word, and by deed,* 
-> *the king’s chosen kept the road.* 
-> *Far from home, under a borrowed sky,* 
-> *they stood against the quiet.*
+> *the king’s own chosen kept their creed.* 
+> *Far from home, where the quiet land lay,* 
+> *they held the line, and would not stray.*
 
-**DM Only:** read it and end the session. Do not vary it, do not trim it to fit, do not remark on it, and do not let anyone at the table treat it as a joke by the fourth session — it stops being one around the seventh. In the final module of the campaign, and nowhere else, the last line changes to *and the water kept their names.*  Nothing else about the verse ever changes, which is the whole reason that lands. Never foreshadow it.
+**DM Only:** read it and end the session. Do not vary it, do not trim it to fit, do not remark on it, and do not let anyone at the table treat it as a joke by the fourth session — it stops being one around the seventh. In the final module of the campaign, and nowhere else, the last line changes to *and the water kept their names that day.*  Nothing else about the verse ever changes, which is the whole reason that lands. Never foreshadow it.
 
 And keep the peril honest. Vale has already won a great deal, and he has three years of practice at holding it. The wonder in this campaign is only worth anything because the danger under it is real.
 
