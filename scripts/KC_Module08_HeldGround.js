@@ -1,0 +1,247 @@
+// KC_Module08_HeldGround.js -- Session Module Eight: Held Ground.
+//
+// Canon lives here. corpus/ and documents/ are generated from this file and are
+// never edited by hand. See CLAUDE.md for the sign-off rules: anything in the
+// "Not yet decided" table must not appear here until it has been approved.
+//
+// ESCAPE CONVENTION: all prose lives as \uXXXX escapes, never as literal
+// typographic characters. tools/build.sh fails the build if that slips. If
+// hand-typing an escape, use ONE backslash -- a doubled backslash compiles
+// clean and passes the non-ASCII scanner but leaks literal text into the PDF.
+// A literal newline inside a double-quoted JS string is also invalid syntax --
+// use two separate BOX() or P() calls instead of embedding a line break.
+//
+// This module carries no required plot beat, by design -- CLAUDE.md asks for
+// levity planned in, not accidental, and this is where that design shows up
+// structurally rather than as scattered asides between set pieces. It follows
+// the campaign's largest set piece on purpose. The second rescue thread is
+// real and resolves in this module, but it is written to carry the same comic
+// register as everything around it rather than reading as inserted homework.
+//
+// GATED CONTENT NOTICE: the second captive, "the Magistrate," has no proper
+// name for the same reason the Ward does not -- the royal family's names are
+// still open in CLAUDE.md. Do not name them here or in any future revision
+// without that sign-off.
+
+const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
+const fs = require('fs');
+const path = require('path');
+const { stagePath } = require('./stage');
+
+// ---------- helpers (the portable authoring kit) ----------
+const P = (text, opts = {}) => new Paragraph({
+  spacing: { after: 200 },
+  ...opts,
+  children: [new TextRun({ text, ...(opts.run || {}) })]
+});
+
+const PS = (segs, opts = {}) => new Paragraph({
+  spacing: { after: 200 },
+  ...opts,
+  children: segs.map(s => new TextRun({ text: s.t, bold: !!s.b, italics: !!s.i, color: s.c }))
+});
+
+const DM = (t) => ({ t, b: true, c: "5B1F1F" });
+const H1 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun(t)] });
+const H2 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(t)] });
+const H3 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_3, children: [new TextRun(t)] });
+
+const BULLET = (segs) => new Paragraph({
+  numbering: { reference: "bullets", level: 0 },
+  spacing: { after: 120 },
+  children: segs.map(s => new TextRun({ text: s.t, bold: !!s.b, italics: !!s.i, color: s.c }))
+});
+
+const B = (lead, rest) => PS([{ t: lead + " ", b: true }, { t: rest }]);
+const BUL = (lead, rest) => BULLET(lead ? [{ t: lead + " ", b: true }, { t: rest }] : [{ t: rest }]);
+
+const BOX = (text) => new Paragraph({
+  spacing: { before: 120, after: 160 },
+  shading: { type: "clear", fill: "F3EFE4" },
+  indent: { left: 220, right: 220, firstLine: 0 },   // template default firstLine=180 otherwise leaks in
+  children: [new TextRun({ text, italics: true })]
+});
+
+const VERSE = (lines) => new Paragraph({
+  spacing: { before: 120, after: 160 },
+  shading: { type: "clear", fill: "F3EFE4" },
+  indent: { left: 220, right: 220, firstLine: 0 },   // same fix as BOX -- see its comment
+  children: lines.map((l, i) => new TextRun({ text: l, italics: true, ...(i ? { break: 1 } : {}) }))
+});
+
+const IMG_DIR = path.join(__dirname, '..', 'images');
+const IMG = (file, w, h, alt) => new Paragraph({
+  alignment: AlignmentType.CENTER,
+  spacing: { before: 140, after: 160 },
+  children: [new ImageRun({
+    type: path.extname(file).slice(1).toLowerCase().replace('jpeg', 'jpg'),
+    data: fs.readFileSync(path.join(IMG_DIR, file)),
+    transformation: { width: w, height: h },
+    altText: { name: alt, description: alt, title: alt },
+    mdPath: '../images/' + file
+  })]
+});
+
+const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 50, bottom: 50, left: 45, right: 45 }, children: [new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
+const FULLWIDTH = "KCFullWidth";
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+
+const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
+const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
+const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 } })); out.push(B("Armor Class:", d.ac)); out.push(B("Hit Points:", d.hp)); out.push(B("Speed:", d.speed)); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
+
+
+// ---------- content ----------
+const c = [];
+
+c.push(new Paragraph({
+  alignment: AlignmentType.CENTER,
+  spacing: { after: 120 },
+  children: [new TextRun({ text: "Held Ground", bold: true, size: 40, color: "5B1F1F" })]
+}));
+c.push(PS([{ t: "The King\u2019s Crusade \u2014 Module Eight", i: true }],
+  { alignment: AlignmentType.CENTER }));
+
+// ---------------------------------------------------------------- Overview
+c.push(H1("Overview"));
+
+c.push(P("Vindana is held, the coalition is exhausted in the specific, good way an army gets after a fight it won, and this module\u2019s entire job is to let that feeling breathe before the campaign asks anything hard of the party again. There is no required plot beat here. A second member of the royal house is found and freed along the way, but it happens inside the same relaxed, comic register as everything else in this module rather than as inserted business. Core scenes run three to three and a half hours; this is one of the few modules in the campaign where running short is not a problem \u2014 let the table linger."));
+
+c.push(H2("Levity, Planned In"));
+
+c.push(P("CLAUDE.md is explicit that this campaign\u2019s relief valves are designed, not accidental, and this module is where that design shows up structurally. Play every scene here for warmth first: reunions, absurd logistics, recurring characters getting real room. If a DM feels the urge to raise the stakes, resist it \u2014 Module Nine will do that job. This one\u2019s job is rest."));
+
+c.push(table(
+  ["Scene", "Target time", "Notes"],
+  [30, 15, 55],
+  [
+    ["1. The Long Exhale", "45\u201360 min", "Vindana at rest. Recurring characters welcome."],
+    ["2. The Grain Ledger War", "30\u201345 min", "Absurd logistics. Comedy, not combat."],
+    ["3. The Magistrate", "60\u201375 min", "The second rescue, played as a caper. DC table below."],
+    ["4. What the Name Costs", "20\u201330 min", "A quiet scene with Xavier. Closes the module."],
+    ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
+  ],
+  { full: true }
+));
+
+// --------------------------------------------- What Is Actually Happening
+c.push(H1("What Is Actually Happening (DM Only)"));
+
+c.push(P("Nothing in this module is a trap, a test, or a delayed complication. Vindana is genuinely secure, the coalition is genuinely at ease for the first time since Module One, and the Magistrate\u2019s rescue in Scene 3 is genuinely as easy as it plays \u2014 the occupation\u2019s administration in a freshly-fallen city is in real disarray, and a party willing to use its own paperwork against it will find that disarray works entirely in their favor. If a DM feels this module is too easy, that is correct and intentional."));
+
+c.push(PS([DM("DM Only: "), { t: "Xavier has still not directly addressed being called the Wyvernheart as of this module\u2019s start \u2014 the gap held open in Module Seven continues into Scene 4, which is the one place this module allows real feeling. Do not let the earlier scenes anticipate it." }]));
+
+// ---------------------------------------------------------------- Scene 1
+c.push(H2("Scene 1: The Long Exhale"));
+
+c.push(P("Vindana\u2019s taken harbor district has become, within days, the loudest and most cheerful place the coalition has occupied since Harrowmark. Let the party spend real time here."));
+
+c.push(BOX("Someone has chalked a running tally on the side of a captured warehouse \u2014 days since the siege, casks emptied, and, unofficially, a tally of how many times a passing soldier has tried and failed to get a straight answer out of Huntmaster Brenna Vane about whether she actually rode south for the war or just to see the fuss for herself."));
+
+c.push(P("If Module One was played, Brenna Vane has arrived with a handful of Greywatch hands, drawn south by rumor of the Wyvernheart with an expression that suggests she will never admit that is the reason. If Module 2A or 2B was played, Sera Vosk or Garrick Hollow can likewise turn up here, already embedded in the coalition\u2019s logistics or scouting corps. Use whichever recurring faces the table has earned; this scene\u2019s only job is reunion and warmth."));
+
+// ---------------------------------------------------------------- Scene 2
+c.push(H2("Scene 2: The Grain Ledger War"));
+
+c.push(P("Vindana\u2019s occupation-era grain levy records \u2014 thousands of receipts, quotas, and permits, exactly the bureaucracy Module Three showed the party in miniature \u2014 have fallen into coalition hands whole, and nobody sent to sort them was remotely prepared for the scale of it."));
+
+c.push(BOX("Three different coalition quartermasters are shouting at each other over a single warehouse of requisitioned grain, each one certain their own contingent\u2019s paperwork takes precedence, while an increasingly desperate Elduvish clerk \u2014 pressed into the coalition\u2019s service rather than freed from it, which nobody seems to have noticed yet \u2014 tries to explain that the numbers do not actually add up for anyone."));
+
+c.push(P("Let the party resolve this however they find funniest: mediate, cut through it with authority, or simply steal a wagon of grain themselves while the argument continues. No mechanical stakes and no wrong answer. If a perceptive party notices the pressed clerk\u2019s situation and does something about it \u2014 a small kindness, not a rescue \u2014 let that pay forward into how Elduvaine\u2019s ordinary people regard the coalition later."));
+
+// ---------------------------------------------------------------- Scene 3
+c.push(H2("Scene 3: The Magistrate"));
+
+c.push(P("Among the captured administration\u2019s own records is a name the party will recognize if they have been paying attention: a second member of the royal house, held not in a dungeon but under a kind of house arrest in a minor Vindana townhouse, kept comfortable and thoroughly bored by an occupation too disorganized, post-siege, to know quite what to do with her."));
+
+c.push(BOX("The Magistrate \u2014 nobody has ever heard her called anything else, including, apparently, herself \u2014 receives the party with the weary patience of someone who has spent three years winning arguments with clerks half her age. \u201CYou\u2019ll want papers,\u201D she says, before anyone has explained themselves. \u201CEverybody wants papers. Fortunately, I have spent three years becoming extremely good at papers.\u201D"));
+
+c.push(H3("Running the Scene"));
+
+c.push(P("This is a caper, not a fight. The Magistrate\u2019s household is guarded by a skeleton crew of occupation clerks and one or two soldiers, none of them expecting trouble in a freshly-fallen city, and she herself is entirely capable of walking out the front door if the party can produce (or forge) plausible transfer papers \u2014 Vindana\u2019s administrative chaos, established in Scene 2, means nobody is checking closely. A DC 13 Deception or Forgery-adjacent check (use whatever tool proficiency a character has) produces convincing papers; a DC 10 Persuasion check talks a guard into not looking too hard at them regardless."));
+
+c.push(P("If the party would rather simply walk in and take her by force, that works too and is considerably less interesting \u2014 a DM should let the Magistrate herself gently steer the party toward the caper option if asked, since she has clearly been planning her own exit for some time and has opinions about the tidiest way to manage it."));
+
+// -------------------------------------------------------------- Skill DCs
+c.push(H2("Tiered Skill DCs"));
+
+c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign."));
+
+c.push(table(
+  ["Task", "Skill", "DC", "Tier"],
+  [40, 24, 12, 24],
+  [
+    ["Resolve the quartermasters\u2019 dispute without violence", "Persuasion / Insight", "10", "Easy"],
+    ["Forge or produce convincing transfer papers", "Deception / an appropriate tool proficiency", "13", "Moderate"],
+    ["Talk a guard out of scrutinizing the papers", "Persuasion", "10", "Easy"],
+    ["Notice the pressed Elduvish clerk\u2019s actual situation", "Insight / Perception", "13", "Moderate"]
+  ],
+  { full: true }
+));
+
+// ---------------------------------------------------------------- Scene 4
+c.push(H2("Scene 4: What the Name Costs"));
+
+c.push(P("Late, with the day\u2019s business done, Xavier finds the party somewhere quiet \u2014 away from the harbor\u2019s noise, away from anyone keeping official record of the conversation."));
+
+c.push(BOX("\u201CThey\u2019ve started calling me something,\u201D he says, not quite a question. \u201CI keep waiting for someone to explain it to me properly and nobody will. I remember the dragon. I remember being fairly sure I was about to die. I don\u2019t remember deciding to be brave about it \u2014 I remember being too frightened to think of anything else to do.\u201D He is quiet for a moment. \u201CIs that what the songs are going to say happened? Because I\u2019d rather they didn\u2019t, if it\u2019s all the same.\u201D"));
+
+c.push(P("Let this be a real conversation rather than a scene to resolve. Xavier is not fishing for reassurance and does not need the party to tell him he is a hero; he genuinely does not know yet how he feels about the name, and the party\u2019s honest reaction \u2014 whatever it is \u2014 matters more here than any mechanical outcome. This scene needs no check and produces no loot. It is the module\u2019s actual point, arriving last, exactly where CLAUDE.md\u2019s instruction to plan levity in on purpose has been building since Scene 1."));
+
+// ------------------------------------------------------------ NPC Profiles
+c.push(H1("NPC Profiles"));
+
+c.push(H2("The Magistrate"));
+c.push(P("Elderly, dry, and entirely unbroken by three years of house arrest \u2014 if anything, sharpened by it. Speech: precise, faintly amused, allergic to being underestimated. Where the Ward met her captivity with fury, the Magistrate met hers with bureaucratic warfare, and won more of it than her captors ever noticed."));
+c.push(P("Open thread: freed, she is a formidable and very funny recurring NPC \u2014 a DM can use her as a source of administrative chaos turned against the occupation in any later module, or simply as comic relief who happens to also be dangerous in exactly the way nobody expects from an old woman with a ledger."));
+
+// --------------------------------------------------------------- Optional
+c.push(H1("Optional Content"));
+
+c.push(H2("The Betting Ledger Returns"));
+c.push(P("If Module One was played and Brenna Vane is present per Scene 1, her old betting ledger from Greywatch makes a reappearance, now taking wagers on considerably higher-stakes nonsense \u2014 how long the peace will hold, whether the Magistrate and the Ward will get along, anything the table finds funny. Pure levity, no stakes."));
+
+c.push(H2("A Quiet Word With the Ward"));
+c.push(P("If the Ward was rescued in Module Four, let her and the Magistrate meet for the first time here \u2014 two members of a divided royal house with different ideas about what should follow the war, meeting in a moment that has no pressure on it yet. Play their first exchange for warmth and a little friction, not conflict; save the real disagreement for later in the campaign, per the royal house\u2019s established canon division on the question."));
+
+// -------------------------------------------------------------- Diverging
+c.push(H1("Diverging Paths (DM Only)"));
+
+c.push(BUL("How the Magistrate was freed.", "Caper or force \u2014 track which. A caper leaves the occupation\u2019s administration none the wiser for a while longer, which a DM can use later; a forced rescue is noisier and gives the coalition\u2019s presence in Vindana a slightly harder edge sooner."));
+c.push(BUL("Whether the party noticed the pressed clerk in Scene 2.", "A small thread, but worth tracking \u2014 it is the campaign\u2019s recurring question about the occupation\u2019s ordinary people, in miniature, again."));
+
+// ---------------------------------------------------------------- Loot
+c.push(H1("Loot"));
+
+c.push(BUL("The Magistrate herself.", "As with the Ward in Module Four, the module\u2019s actual reward \u2014 a second freed royal, formidable in her own register, and a second real voice in whatever the royal house eventually decides about Elduvaine\u2019s future."));
+c.push(BUL("A warehouse\u2019s worth of grain.", "However the Grain Ledger War was resolved, the coalition ends this module better supplied than it started it \u2014 modest, practical, not a coin windfall."));
+
+// -------------------------------------------------------------- Refrain
+c.push(H1("The Refrain"));
+
+c.push(VERSE([
+  "By thought, and by word, and by deed,",
+  "the king\u2019s own chosen kept their creed.",
+  "Far from home, where the quiet land lay,",
+  "they held the line, and would not stray."
+]));
+
+const doc = new Document({
+  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] }] },
+  styles: {
+    default: { document: { run: { font: "Georgia", size: 20 } } },
+    paragraphStyles: [
+      { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 30, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 280, after: 140 }, outlineLevel: 0 } },
+      { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 24, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 200, after: 100 }, outlineLevel: 1 } },
+      { id: "Heading3", name: "Heading 3", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 22, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 160, after: 80 }, outlineLevel: 2 } }
+    ]
+  },
+  sections: [{ properties: { page: { size: { width: 12240, height: 15840 }, margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 } } }, children: c }]
+});
+
+Packer.toBuffer(doc).then(buf => {
+  fs.writeFileSync(stagePath("KC_Module08_HeldGround.docx"), buf);
+  console.log("Written.");
+});
