@@ -1,4 +1,43 @@
-# Design Draft — The Draconic Layer
+# Design Draft — The Draconic Layer *(RESOLVED)*
+
+**Status: RESOLVED AND FOLDED INTO CANON.** Superseded by `CLAUDE.md` and
+`scripts/KC_Sourcebook.js`, which are authoritative. Kept as a decision record.
+
+## What was decided
+
+The full recommended set in §7 was approved as written, with no redlines:
+
+| § | Item | Decision |
+|---|---|---|
+| 1 | What a dragon is | **A**, with **B** as a single deep-vault exception |
+| 2 | Vale's dragons | **B** — one bound dragon, used once |
+| 3 | The Wyvernheart battle | **B** — the siege of Vindana |
+| 4 | Wyverns beyond Harrowmark | **A**, kept small — a handful of riders |
+
+## What changed on contact with the code
+
+- **A naming collision, caught late.** `scripts/KC_Module06_VindanaInvestment.js`
+  was already written and pushed before this draft was signed off, and its own
+  cavalry scene was called "The Harrowmark Riders" — ordinary horses. Once this
+  draft locked "Harrowmark wyvern-riders" as the actual canonical phrase for
+  Module Seven, the collision was fixed by renaming Module Six's scene to "The
+  Cavalry Screen," so the original phrase stays free for its real introduction.
+- **Dragons got their own paragraph in the sourcebook**, in *The Living Realm*
+  section rather than tucked elsewhere — placed immediately after the habits
+  table, framed explicitly against Harrowmark's wyverns (same slot, different
+  land) rather than introduced as a free-standing monster entry.
+- Nothing else changed from the proposal; §1–§4 folded in exactly as drafted.
+
+## Sign-off items that produced no canon
+
+§5 (stat blocks, the vaults' contents, any dragon's name or territory) remains
+out of scope, as the draft always said it would.
+
+---
+
+*Original proposal follows, unedited.*
+
+---
 
 **Status: PROPOSAL. NOT CANON. Nothing here is decided.**
 
