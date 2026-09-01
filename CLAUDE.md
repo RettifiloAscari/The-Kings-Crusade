@@ -15,6 +15,20 @@
 
 ---
 
+## The Ruleset — Confirm This First
+
+The Qilvayas Symphony, which this pipeline comes from, is built entirely on the **2014**
+D&D 5th Edition ruleset, and the SRD validation here reads `src/2014/en/...` on purpose.
+"D&D 5e" is ambiguous now that the 2024 revision exists.
+
+**Pin this before writing a single stat block** — it is decision #1 in the handoff's §7.
+If this campaign stays on 2014, replace this section with the standing constraint: *race*
+not *species*, no weapon masteries, Bastions, Epic Boons, Heroic Inspiration, revised
+exhaustion, or reworked grapple rules, and monster math from the 2014 DMG. If it moves to
+2024, that is a different SRD path, a different monster table, and a different vocabulary —
+decide once, up front, because retrofitting is a migration across every stat block and
+every player-facing document.
+
 ## Repository Layout
 
 The generator scripts are the source of truth. Everything else in this repository is
