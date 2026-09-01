@@ -215,6 +215,7 @@ written in `scripts/KC_Sourcebook.js`):
 | Whether Vale is still human | Deliberately ambiguous in v1; not yet an answer. |
 | Pantheon, planes, and magical traditions | Beyond "Elduvaine's magic is different in kind." |
 | Module breakdown | How many sessions, and what each covers. |
+| **2014 or 2024 rules** | Never actually decided. The repo is on 2014 by implication only, because the SRD path under *Mechanical Validation* points at `src/2014/en/`. It matters at this table: 2024 moves every subclass to 3rd level, adds weapon mastery, and rewrites exhaustion, and the party starts at 5th. Decide before the first stat block is written. |
 
 **Deliberately open** — questions left unresolved *by design*, which later sessions must
 not helpfully close:
