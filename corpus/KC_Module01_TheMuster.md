@@ -20,6 +20,8 @@ Play the texture of the place before anything else happens in it. Harrowmark in 
 
 What Harrowmark has instead is competence. Doors are barred against weather, not spirits. Watch fires burn all night on every hold’s high ground, not from superstition but because something with wings sometimes comes out of the crags, and has for longer than anyone can date. People here do not gasp at danger; they reach for the nearest rope, or pike, or child, in that order, and get on with it. Voice every NPC in this module — Xavier included — from that same flat, competent register, and save the wonder for later.
 
+Fill the place out as you go. Duncarrow’s yard is humans and dwarves and orcs and a scatter of everyone else, all of them Harrowmark-born and none of them remarkable to each other: an orc farrier arguing with a dwarf quartermaster about the same sixteen horseshoes for the third day running, a half-elf sergeant reading a duty roster aloud to a queue that is not listening. Nobody in this module comments on any of it, and neither should the narration. The party comes from here. This is simply what home looks like.
+
 | **Scene** | **Target time** | **Notes** |
 | --- | --- | --- |
 | 1. The Summons | 20 min | Optional introductions fold in here if needed. |
@@ -32,7 +34,7 @@ What Harrowmark has instead is competence. Doors are barred against weather, not
 
 Nothing in this module is a trick. The wyvern at Greywatch is exactly what Brenna Vane says it is: a young, hungry animal pushed out of its usual range by a harder winter than most, doing what wyverns do. It has no connection to Vale, to Elduvaine, or to anything the party will learn about later. Its only job is to be the first thing this campaign asks the party to be brave about, and to show them — and the table — what “unimpressed” actually looks like from the inside.
 
-**DM Only:** Xavier is not yet the Wyvernheart, and nothing in this module may suggest that he will be. He does not fly, does not fight the wyvern personally if he is present at Greywatch (he should not be — keep him at Duncarrow), and no NPC may use the name early, even as a joke or a slip. See CLAUDE.md under Canon and Sources of Truth if you are unsure why this matters this much.
+**DM Only:** Xavier is not yet the Wyvernheart, and nothing in this module may suggest that he will be. He does not fly, does not fight the wyvern personally if he is present at Greywatch (he should not be — keep him at Duncarrow), and no NPC may use the name early, even as a joke or a slip. The name has to be earned on the page, in front of the players, or it is only a title he turned up already wearing.
 
 ## Scene 1: The Summons
 
@@ -60,7 +62,7 @@ He does not walk them out. A steward does that, through a yard full of the ordin
 
 ## Scene 3: The Wyvern at Greywatch
 
-Greywatch announces itself before the road does: watchtowers on every high point, each with a horn-bearer standing a longer shift than seems reasonable, and a palisade studded here and there with a wyvern claw or a length of jaw nailed up as a ward that everyone insists is decoration and no one will take down. It is a hold built for exactly this, by people who have buried others to wyverns before and, without much ceremony about it, expect to again. Huntmaster Brenna Vane meets the party at the gate, sizes them up without much comment, and puts them to work.
+Greywatch announces itself before the road does: watchtowers on every high point, each with a horn-bearer standing a longer shift than seems reasonable, and a palisade studded here and there with a wyvern claw or a length of jaw nailed up as a ward that everyone insists is decoration and no one will take down. It is a hold built for exactly this, by people who have buried others to wyverns before and, without much ceremony about it, expect to again. Greywatch is roughly half dwarves and half orcs with everyone else filling the gaps, and its wyvern-watch has been organised the same way for nine centuries: dwarves on the pikes, because a dwarf braced properly does not move, and orcs on the ropes, because somebody has to be strongest at the end of a line with a wyvern on the other end of it. Nobody here regards this as worth explaining, and will be visibly impatient with an outsider who asks. Huntmaster Brenna Vane meets the party at the gate, sizes them up without much comment, and puts them to work.
 
 > *“It took two lambs and a shepherd’s boy’s arm Tuesday last,” Brenna says, already walking, not waiting to see if they follow. “Young, hungry, pushed down off the high crags by the cold — not clever, not old enough to be clever. We’ll rope it if we can and put it back where it came from. We’ll kill it if we have to. Either way, nobody’s grandmother is losing a leg on my watch. You keep up or you keep out of the way.”*
 
@@ -68,7 +70,7 @@ Give the party the rest of the daylight to see Greywatch properly before dusk br
 
 ### Running the Encounter
 
-The wyvern comes at dusk, out of a sky gone the color of a bruise, and is heard before it is seen — a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practiced shorthand of people who have done this before.
+The wyvern comes at dusk, out of a sky gone the color of a bruise, and is heard before it is seen — a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practiced shorthand of people who have done this before — an orc roper with a line already spinning before the thing is in range, two dwarves setting a pike-brace into the frozen ground and swearing at it in the tone of people who do this every winter.
 
 Harrowmark does not fight wyverns the way most parties expect to fight a dragon. A PC adjacent to the wyvern, or within its reach, may spend their action fixing a hunting rope to a wing or leg (Strength (Athletics) or Dexterity (Sleight of Hand), DC 13 — Brenna will call out which, and why, the first time it comes up). Three successful ropes from three different characters ground the wyvern: it loses its fly speed until it breaks free (its action, a DC 13 Athletics contest against the ropes) or the encounter ends. A grounded wyvern fighting on the ground, hemmed in by pikes, is a substantially safer fight than one still in the air, and this is deliberate — it is the module’s built-in partial resolution, not a trick or a trap. Play the moment it goes down for everything it is worth: the ropes snapping taut, the hold-folk shouting the count, the sudden and enormous silence of something huge no longer in the air.
 
@@ -76,7 +78,7 @@ The stinger is the fight’s real danger and should read as one — not a number
 
 ### Scaling the Fight
 
-The wyvern below is the SRD statistics unmodified, run against Dungeon Master’s Guide adjusted-XP thresholds for 5th-level characters (Easy 250 / Medium 500 / Hard 750 / Deadly 1100 per character). A single monster carries a ×1 multiplier at party sizes of 3–5 and ×0.5 at 6 or more — the party-of-six discount CLAUDE.md warns about, and it lands hard here.
+The wyvern below is the SRD statistics unmodified, run against Dungeon Master’s Guide adjusted-XP thresholds for 5th-level characters (Easy 250 / Medium 500 / Hard 750 / Deadly 1100 per character). A single monster carries a ×1 multiplier at party sizes of 3–5 and ×0.5 at 6 or more — the party-of-six discount that quietly softens most encounters for large tables, and it lands hard here.
 
 | **Party size** | **Adjusted XP** | **Deadly threshold** | **Reads as** | **Compensate with** |
 | --- | --- | --- | --- | --- |
@@ -152,7 +154,7 @@ Open thread: he has told no one in this party, and will tell no one for some tim
 
 ## Huntmaster Brenna Vane
 
-Late fifties, missing two fingers on her left hand to a stinger she still calls “a fair trade.” Runs Greywatch’s wyvern-watch and, unofficially, a hold-wide betting ledger on every kill — which limb, which method, how long. Speech: dry, economical, allergic to being thanked directly; deflects gratitude by immediately assigning a chore.
+A dwarf in her second century, Greywatch’s huntmaster for sixty years of it, missing two fingers on her left hand to a stinger she still calls “a fair trade.” Runs Greywatch’s wyvern-watch and, unofficially, a hold-wide betting ledger on every kill — which limb, which method, how long. Speech: dry, economical, allergic to being thanked directly; deflects gratitude by immediately assigning a chore.
 
 Open thread: if the party impresses her, she offers what Greywatch actually has to give — not gold, but competence: a standing invitation to send word if Harrowmark-trained hands are ever needed again, which a DM can call in during Module 8 or later as a recurring, grounded ally rather than a one-scene NPC.
 
@@ -160,7 +162,7 @@ Open thread: if the party impresses her, she offers what Greywatch actually has 
 
 ## The Betting Ledger
 
-Before or after the wyvern, Brenna’s ledger makes the rounds of Greywatch’s hall — a battered book of wagers going back decades, with a fresh page opened the moment the party arrives. Play this for pure levity: hold-folk arguing odds, someone trying to get the party to wager on themselves, an old wound reopened as an anecdote rather than a warning. No mechanical stakes; this is the relief valve CLAUDE.md asks every module to plan for rather than hope for.
+Before or after the wyvern, Brenna’s ledger makes the rounds of Greywatch’s hall — a battered book of wagers going back decades, with a fresh page opened the moment the party arrives. Play this for pure levity: hold-folk arguing odds, someone trying to get the party to wager on themselves, an old wound reopened as an anecdote rather than a warning. No mechanical stakes; this is a relief valve, planned for rather than hoped for.
 
 ## Fortifying Greywatch
 
@@ -175,6 +177,8 @@ If the table wants a prep phase before the wyvern strikes, run a short group eff
 
 - **A Greywatch hunting pike.** Masterwork but not magical — a reach weapon balanced by people who use them for a living. Reflavor as a longspear or glaive per the wielder’s preference; treat as a normal weapon of its type, finely made.
 - **A vial of Greywatch antitoxin.** A single-use draught brewed from the hold’s long experience with stinger wounds. Grants advantage on the next saving throw against poison damage or the poisoned condition within the next 24 hours.
+- **Two potions of healing.** Pressed on the party by Greywatch’s healer with the flat instruction to bring them back empty rather than unused. Standard SRD potions of healing (2d4 + 2).
+- **A blade out of Duncarrow’s armory.** A +1 weapon of the recipient’s type, cut with a dwarven runesmith’s marks along the spine — worked magic, carried in the steel, exactly the kind Harrowmark makes and the only kind it has. Xavier hands it over without ceremony and slightly too fast, in the manner of a man who has decided not to make a speech about it.
 - **Xavier’s token.** A plain iron badge, the king’s own mark, given without ceremony. It carries no mechanical benefit and opens no doors by itself — but it is recognizable to anyone who has served under Xavier, and a DM may let it matter socially wherever that is true.
 
 # The Refrain

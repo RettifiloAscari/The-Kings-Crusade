@@ -176,6 +176,8 @@ c.push(P("A day beyond the ford, the valley narrows to a single defensible road 
 
 c.push(BOX("\u201COksitan\u2019s allies pass free,\u201D Vell says, in the tone of a man who has said it many times and means something different by it each time. \u201CEveryone else pays the Ashgate toll. I\u2019d hate for there to be some confusion about which one you are.\u201D His scouts, unhurried, have already found the high ground on both sides of the road."));
 
+c.push(P("Vell\u2019s scouts are a mixed company of humans, dwarves and one very bored half-orc, all of them local, all of them paid, and none of them under any illusion about what they are guarding. If the party gets one of them talking, the honest complaint is not about the coalition at all \u2014 it is about the kobolds in the old workings above the pass, who have been stealing tools for a year and whom nobody has been paid enough to deal with."));
+
 c.push(H3("Running the Scene"));
 
 c.push(P("Vell will negotiate, and a table that wants to avoid a fight in this narrow, badly-chosen ground should be able to. A successful Charisma (Persuasion) check against DC 16, or convincing proof of a coalition writ of passage the party can produce or talk their way into being believed to have, gets the column through for a token payment. A successful Wisdom (Insight) check against DC 13 reveals that Vell is bluffing about his numbers \u2014 he has enough scouts to make a fight costly, not enough to actually hold the pass against a coalition column, and he knows it."));
@@ -277,7 +279,7 @@ c.push(P("This is where the module ends, and where the DM should let the weight 
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Garrick Hollow"));
-c.push(P("A hired local guide, contracted at the edge of Harrowmark territory and paid to know these mountains better than the coalition\u2019s own maps do. Speech: unbothered, faintly dry, prone to stating bad news as though it were simply weather. Genuinely good at his job, and genuinely indifferent to whether anyone finds that reassuring."));
+c.push(P("A half-elf hired out of the last town before the passes, paid to know these mountains better than the coalition\u2019s own maps do, which he does. Speech: unbothered, faintly dry, prone to stating bad news as though it were simply weather. Genuinely good at his job, and genuinely indifferent to whether anyone finds that reassuring."));
 c.push(P("Open thread: Garrick knows this road and, plausibly, others \u2014 a DM can bring him back as a recurring guide for any later overland stretch of the campaign, or use him as the source of a rumor or shortcut when the party needs one and has no other way to justify finding it."));
 
 c.push(H2("Baron Osgar Vell"));
@@ -286,6 +288,14 @@ c.push(P("Open thread: if he survives \u2014 paid off, talked down, or simply ou
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
+
+c.push(H2("The Old Workings"));
+
+c.push(P("Above the toll-keep, half a day off the road, an abandoned dwarven working has been reoccupied by kobolds \u2014 forty or so, organised, and responsible for most of what the valley has lost to theft in the past year. They are not a threat to a coalition column and know it; what they are is a warren of pit traps, tripped rockfalls and very good tunnel discipline in a space too tight for anyone to bring numbers to bear."));
+
+c.push(P("Run six to ten kobolds (SRD, CR 1/8, 25 XP each) in terrain that does all their work for them: darkvision against a party carrying light, pack tactics wherever two can reach the same target, and a readiness to collapse a passage and leave rather than lose. The honest resolution here is not slaughter \u2014 a party that offers the kobolds the tools instead of taking them back can buy a guide through the workings and out above the toll-keep entirely, which is a third route past Vell that no one in the column has thought of."));
+
+c.push(P("If a table wants something heavier on this road instead, an ogre (SRD, CR 2, 450 XP) has been working the same stretch of scree for a season and is a straightforward, honest, dangerous obstacle for a party of this level \u2014 the mountain road\u2019s equivalent of weather with arms."));
 
 c.push(H2("What the Column Talks About"));
 c.push(P("Before Ashgate, let the party spend some idle marching time among the coalition\u2019s ordinary soldiers \u2014 Harrowmark levies, and the first Oksitan or Auberitz troops the party has walked near long enough to actually talk to. Play this for texture: homesickness, rumors about Elduvaine that are mostly wrong, and the particular, unglamorous humor of people who have been walking together for weeks. No mechanical stakes."));
@@ -303,7 +313,9 @@ c.push(BUL("How Vell\u2019s toll was settled.", "Paid, talked down, bypassed, or
 c.push(H1("Loot"));
 
 c.push(BUL("Vell\u2019s writ.", "A document, genuine as far as it goes, establishing his technicality of allegiance to Oksitan. Not valuable in itself, but a useful thread if a DM wants to raise the coalition\u2019s internal reliability as a question later in the campaign."));
-c.push(BUL("A mountain-forged blade.", "Taken from Vell or purchased from Garrick\u2019s local contacts \u2014 masterwork but not magical, well suited to rough terrain. Treat as a normal weapon of its type, finely made."));
+c.push(BUL("A mountain-forged blade.", "Taken from Vell or bought through Garrick\u2019s local contacts \u2014 a +1 weapon of its type, dwarven work out of the old valley forges, unremarkable to look at and better than anything the party marched in with."));
+
+c.push(BUL("Kobold tunnel-charts.", "If the old workings were dealt with peaceably \u2014 scratched on slate, entirely accurate, and a standing shortcut through the Ashgate range that a DM can honour any time the campaign comes back this way."));
 c.push(BUL("Salvage from the ford.", "Whatever of the lost wagon\u2019s cargo the party recovers or the column can spare from what remains \u2014 modest, practical supplies rather than treasure, playable as a small easing of the crusade\u2019s logistics rather than a coin payout at 5th level.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain

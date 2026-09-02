@@ -14,7 +14,7 @@ Vindana is held, the coalition is exhausted in the specific, good way an army ge
 
 ## Levity, Planned In
 
-CLAUDE.md is explicit that this campaign’s relief valves are designed, not accidental, and this module is where that design shows up structurally. Play every scene here for warmth first: reunions, absurd logistics, recurring characters getting real room. If a DM feels the urge to raise the stakes, resist it — Module Nine will do that job. This one’s job is rest.
+This campaign’s relief valves are designed rather than accidental, and this module is where that design shows up structurally. Play every scene here for warmth first: reunions, absurd logistics, recurring characters getting real room. If a DM feels the urge to raise the stakes, resist it — Module Nine will do that job. This one’s job is rest.
 
 | **Scene** | **Target time** | **Notes** |
 | --- | --- | --- |
@@ -75,17 +75,27 @@ Late, with the day’s business done, Xavier finds the party somewhere quiet —
 
 > *“They’ve started calling me something,” he says, not quite a question. “I keep waiting for someone to explain it to me properly and nobody will. I remember the dragon. I remember being fairly sure I was about to die. I don’t remember deciding to be brave about it — I remember being too frightened to think of anything else to do.” He is quiet for a moment. “Is that what the songs are going to say happened? Because I’d rather they didn’t, if it’s all the same.”*
 
-Let this be a real conversation rather than a scene to resolve. Xavier is not fishing for reassurance and does not need the party to tell him he is a hero; he genuinely does not know yet how he feels about the name, and the party’s honest reaction — whatever it is — matters more here than any mechanical outcome. This scene needs no check and produces no loot. It is the module’s actual point, arriving last, exactly where CLAUDE.md’s instruction to plan levity in on purpose has been building since Scene 1.
+Let this be a real conversation rather than a scene to resolve. Xavier is not fishing for reassurance and does not need the party to tell him he is a hero; he genuinely does not know yet how he feels about the name, and the party’s honest reaction — whatever it is — matters more here than any mechanical outcome. This scene needs no check and produces no loot. It is the module’s actual point, arriving last, exactly where a session built on deliberate levity has been heading since Scene 1.
 
 # NPC Profiles
 
 ## The Magistrate
 
-Elderly, dry, and entirely unbroken by three years of house arrest — if anything, sharpened by it. Speech: precise, faintly amused, allergic to being underestimated. Where the Ward met her captivity with fury, the Magistrate met hers with bureaucratic warfare, and won more of it than her captors ever noticed.
+A gnome somewhere past two hundred, dry as a ledger and entirely unbroken by three years of house arrest — if anything, sharpened by it. She is the Ward’s great-aunt by marriage, which is the sort of thing old Elduvish houses are full of, and she has spent the occupation being underestimated by people who had every opportunity to know better. Speech: precise, faintly amused, allergic to being underestimated. Where the Ward met her captivity with fury, the Magistrate met hers with bureaucratic warfare, and won more of it than her captors ever noticed.
 
 Open thread: freed, she is a formidable and very funny recurring NPC — a DM can use her as a source of administrative chaos turned against the occupation in any later module, or simply as comic relief who happens to also be dangerous in exactly the way nobody expects from an old woman with a ledger.
 
 # Optional Content
+
+## The Counting-House
+
+Vindana is a port, and Norvatch trades through ports. Three streets back from the harbour, a Norvatch counting-house has been open through the entire occupation and is open now, under the coalition, with the shutters down and a clerk at the desk and absolutely nothing to apologise for. This is the one cold scene in an otherwise warm module, and the module can carry it.
+
+> *The factor does not stand up. “We are open,” he says, in the tone of a man confirming the weather. “We were open last month as well. If your king would like to discuss terms, my principals will hear him — and if he would rather not, the arrangement we have runs another nine months and I would ask you not to interfere with lawful carriage.”*
+
+Everything he says is true and none of it is deniable. Norvatch has broken no agreement with the coalition because it never made one. The goods moving through that house are Elduvaine, by weight, sold under a contract with the occupation that predates the crusade’s arrival by three years. A party that wants to seize the ledgers by force can — and will find them impeccably kept, entirely legal, and worth rather less taken than bought, because what they actually need is the house’s cooperation in reading them.
+
+**DM Only:** the ledgers are the campaign’s clock, and this is where the party first sees the physical object. Do not let them buy it here — the factor is not authorised and says so. What he will do is send word to Doria Kell, which is what sets up Module Ten. If the party takes them by force anyway, they get numbers they cannot interpret and a Norvatch house that will deal with them thereafter strictly, correctly, and never generously again. That is a real consequence and not a punishment; play it exactly that flat.
 
 ## The Betting Ledger Returns
 

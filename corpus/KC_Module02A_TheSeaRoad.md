@@ -54,6 +54,8 @@ The hold is less a fortress than a fortified manor — old stone, patched with n
 
 > *“Ah,” says the man in the doorway, unhurried, a ledger genuinely under one arm. “More of the fleet that thought my strait was free water. I’m Ivor Thane, and I’m told this happens to be my island. Your people are safe, fed, and entirely available — for a reasonable consideration. I find negotiations go better before anyone has drawn a sword, so let’s try that first, shall we?”*
 
+Calanthe itself is a fishing island of halflings and humans with a stubborn minority of everyone the sea has ever washed up, and it has been quietly resenting its Warden for a decade without ever being numerous enough to do anything about it. Let the party meet them before they meet Thane: a halfling harbour-wife who counts the coalition’s ships aloud and does not like the number, a human net-mender who will say exactly nothing about the Warden and a great deal about the weather.
+
 ### Running the Scene
 
 Thane will genuinely negotiate, and a table that wants to buy, threaten, or talk their way to the captives’ release without a fight should be able to — he names an absurd price, but he is not attached to getting it, only to being paid something, and a successful Charisma (Persuasion or Intimidation) check against DC 16 gets his price down to something a coalition fleet can actually spare, or gets him to agree to release the captives in exchange for safe passage and a promise to leave his toll uncollected this once. He is not brave and is not interested in dying for a business model.
@@ -70,7 +72,7 @@ Ivor Thane is the SRD Veteran (CR 3, 700 XP) renamed and reflavored, unmodified 
 | 5 | 800 | ×2 | 1,600 | 2,500 | Easy–Medium, softer |
 | 6 | 800 | ×1.5 | 1,200 | 3,000 | below Easy |
 
-This is deliberately not a Hard or Deadly fight, and the table below is not a problem to fix. Historically, Richard’s taking of Cyprus was closer to a rout than a battle — Isaac Komnenos’s forces were simply outmatched — and the module is built the same way on purpose: the real tension is Sera’s crew as captives (see below), not whether the party can win. If a table wants more bite, the cleanest way to add it is to give Thane one Veteran-statted lieutenant instead of two of the Bandits, which raises the ceiling without changing the monster count or crossing a boundary. Do not simply add more Bandits to compensate for a party of six — crossing from 5 to 7 monsters jumps the multiplier band up a full step and can overcorrect badly, exactly the trap CLAUDE.md warns about.
+This is deliberately not a Hard or Deadly fight, and the table below is not a problem to fix. Historically, Richard’s taking of Cyprus was closer to a rout than a battle — Isaac Komnenos’s forces were simply outmatched — and the module is built the same way on purpose: the real tension is Sera’s crew as captives (see below), not whether the party can win. If a table wants more bite, the cleanest way to add it is to give Thane one Veteran-statted lieutenant instead of two of the Bandits, which raises the ceiling without changing the monster count or crossing a boundary. Do not simply add more Bandits to compensate for a party of six — crossing from 5 to 7 monsters jumps the multiplier band up a full step and can overcorrect badly, exactly the trap that scaling an encounter by headcount sets.
 
 If it comes to a fight, the captives are in an outbuilding across the hold’s yard, guarded by one Bandit who will threaten them the moment things turn against Thane — not out of malice, but as a bargaining chip. A PC who breaks off to reach them (a round’s worth of movement and a DC 13 Athletics or Acrobatics check to cross the yard without being cut off) heads that off cleanly. A table that ignores the captives entirely should still free them once the fight ends — this is tension, not a fail state.
 
@@ -91,7 +93,7 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 
 **Warden Ivor Thane**
 
-*Medium humanoid (human), any non-lawful alignment — SRD Veteran, renamed*
+*Medium humanoid (half-orc), any non-lawful alignment — SRD Veteran, renamed*
 
 **Armor Class:** 17 (splint armor)
 
@@ -163,13 +165,13 @@ The fleet resupplies, repairs what the storm damaged, and continues south within
 
 ## Sera Vosk
 
-An Auberitz-born quartermaster, mid-thirties, more practical than the situation strictly allows. Speech: fast, dry, allergic to wasted words — she will assess a room’s exits before its people, and say so if asked. Not a fighter by training, but not helpless either; she has spent a career keeping ships supplied through worse than one bad morning.
+An Auberitz-born rock gnome and a career quartermaster, more practical than the situation strictly allows. Speech: fast, dry, allergic to wasted words — she will assess a room’s exits before its people, and say so if asked. Not a fighter by training, but not helpless either; she has spent a career keeping ships supplied through worse than one bad morning.
 
 Open thread: Sera is a natural recurring contact for logistics and information for the rest of the campaign — a DM can bring her back at Vindana, or later, as the person who always seems to know where the supplies actually are. She has no stake in Calanthe’s fate beyond wanting the crates loaded and the fleet moving, and will say so plainly if the party asks her opinion on the island’s future.
 
 ## Warden Ivor Thane
 
-Middle-aged, comfortable rather than menacing, carries a ledger more often than a weapon. Speech: unhurried, transactional, genuinely puzzled by moral objections to what he considers a straightforward toll on a strait he happens to control. Not cruel for its own sake — captives are an asset, and a damaged asset is worth less.
+A half-orc going comfortably to seed, and comfortable rather than menacing with it; he carries a ledger more often than a weapon. Speech: unhurried, transactional, genuinely puzzled by moral objections to what he considers a straightforward toll on a strait he happens to control. Not cruel for its own sake — captives are an asset, and a damaged asset is worth less.
 
 Open thread: if he survives — captured, exiled, or simply talked out of his hold — Thane is exactly the kind of small, self-interested operator who resurfaces later in a campaign, working for whoever will have him. A DM looking for a low-stakes recurring rogue later in the crusade has him available.
 
@@ -192,6 +194,7 @@ If the table wants more to do before Thane’s hold, a third coalition vessel ca
 
 - **The recovered stores.** Enough of the fleet’s lost supplies, plus a portion of Thane’s accumulated plunder, to be a genuine funding boost for the crusade — play this narratively as the coalition arriving at Vindana somewhat better supplied than it otherwise would have, rather than a large individual coin payout at 5th level.
 - **Thane’s ledger.** A genuinely useful item: years of records of ships, cargoes, and (if he is captured or cooperative) contacts along the southern sea-lanes. A DM can use it to justify a Diverging Paths hook or a piece of information the party needs later without it feeling handed to them.
+- **A bag of holding.** Bottom of Thane’s stores, taken off a wreck years ago, and by a distance the most valuable thing on Calanthe — he has been using it to store rope. Sera Vosk will notice what it is roughly one second before anybody else does and will not pretend otherwise.
 - **A signet ring.** Thane’s own, if he is defeated or surrenders it as part of a bargain. Non-magical, but recognizable to anyone in the region who has dealt with Calanthe’s toll — a DM may let it open doors, or close them, wherever that is true.
 
 # The Refrain

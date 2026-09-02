@@ -130,7 +130,7 @@ c.push(H1("What Is Actually Happening (DM Only)"));
 
 c.push(P("The coalition is exactly as fragile as a coalition built on the Promise should be. Oksitan and Auberitz both marched for their own reasons, which this module does not state, and both are already privately uneasy about how much of Elduvaine\u2019s resident magic will actually be theirs to hold once Vale is gone \u2014 a doubt none of their officers would say aloud to a superior, and several will say plainly to the party, who are outsiders to the coalition\u2019s own politics and therefore safe to be honest with."));
 
-c.push(PS([DM("DM Only: "), { t: "the Ward, held at Sennoch Hall, is a real, specific person with no proper name yet \u2014 this campaign\u2019s royal family is deliberately unnamed pending sign-off (see CLAUDE.md\u2019s open items). Play them fully: young, sharp, has spent the occupation being quietly furious rather than afraid, and deeply unimpressed by the idea that their rescue is a political opportunity for whoever performs it. Do not invent a name for them at the table if it can be avoided; if a player asks directly, have the Ward deflect (\u201Cnames are for people with the leisure to be found by them\u201D) rather than supply one. Once CLAUDE.md\u2019s open item on the royal family\u2019s names is resolved, insert the name here and everywhere else the Ward appears." }]));
+c.push(PS([DM("DM Only: "), { t: "the Ward, held at Sennoch Hall, is a real, specific person with no proper name yet \u2014 this campaign\u2019s royal family is deliberately unnamed. Play them fully: young, sharp, has spent the occupation being quietly furious rather than afraid, and deeply unimpressed by the idea that their rescue is a political opportunity for whoever performs it. Do not invent a name for them at the table if it can be avoided; if a player asks directly, have the Ward deflect (\u201Cnames are for people with the leisure to be found by them\u201D) rather than supply one. Once the royal family\u2019s names are settled, insert the name here and everywhere else the Ward appears." }]));
 
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Muster Camp"));
@@ -153,6 +153,12 @@ c.push(P("Use two or three named minor officers (invent freely \u2014 this campa
 c.push(PS([DM("DM Only: "), { t: "if a player asks a pointed question about what Oksitan or Auberitz officially wants, the honest in-fiction answer is that nobody at this table \u2014 including the officers themselves \u2014 actually knows, or agrees. Let that stand as an answer. It is true, and it is more interesting than a policy statement would be." }]));
 
 // ---------------------------------------------------------------- Scene 3
+c.push(H3("What the Camp Looks Like"));
+
+c.push(P("Three armies, and they do not look alike. Harrowmark\u2019s lines are humans and dwarves and orcs in mixed companies, unglamorous and quiet, cooking badly. Oksitan\u2019s quarter is horse country transplanted \u2014 human riders and a scattering of dragonborn house-knights whose armour is better than anybody else\u2019s and who are perfectly aware of it. Auberitz has pitched furthest from the latrines on purpose and got it right: gnome engineers arguing over a half-assembled hoist, halfling quartermasters running a supply system that visibly works, and a general air of a duchy that considers this whole war a logistics problem being mishandled by people who enjoy shouting."));
+
+c.push(P("Let the party walk through all three. The point is not information; it is that the coalition is a real coalition, with three ideas of how a war should be run and three cuisines, and that the party is about to spend months inside it."));
+
 c.push(H2("Scene 3: Doria Kell\u2019s Offer"));
 
 c.push(P("Away from camp \u2014 at a well, on a supply run, wherever the party can be approached without an audience \u2014 a woman in plain, well-made traveling clothes falls into step beside them, unhurried and entirely unbothered by the coalition\u2019s presence."));
@@ -160,6 +166,16 @@ c.push(P("Away from camp \u2014 at a well, on a supply run, wherever the party c
 c.push(BOX("\u201CDoria Kell, factor of Norvatch,\u201D she says, as though the introduction were a formality rather than an offer. \u201CI don\u2019t march with your coalition and I don\u2019t intend to. I trade with whoever\u2019s buying, on either side of this war, and just now I\u2019m buying goodwill. I know where one of Elduvaine\u2019s royal wards is being kept. I\u2019ll tell you, no charge, no favor owed \u2014 because it costs me nothing and it might cost the man holding her something later, and I find that arrangement agreeable.\u201D"));
 
 c.push(P("Doria is not an ally and does not pretend to be one. She trades information the way she trades goods \u2014 because it is profitable, not because she is choosing a side \u2014 and this scene should make that legible without making her untrustworthy; what she says checks out exactly as she describes it. If the party wants to press her for more (payment for better information, a standing arrangement, anything beyond this one free lead), she will discuss terms plainly, and a DM can use this as a recurring thread: Norvatch as a source the party can return to, always for a price, never as a friend."));
+
+c.push(H3("What She Is, If Anybody Asks"));
+
+c.push(P("A party that asks Doria directly what Norvatch actually does in this war gets a straight answer, delivered without a flicker of embarrassment, because she does not consider it embarrassing. Norvatch buys. It has been buying out of Elduvaine for three years, under a written contract with the occupation, and the goods are the kingdom: light-stone by the cartload, Archive material by the crate, worked timber out of woods that have stopped holding their season. Vale extracts. Norvatch moves it. She will say so in as many words if the question is put plainly."));
+
+c.push(P("She will also point out, if pressed and sometimes if not, that Norvatch did not open the wards, would have advised against it on commercial grounds, and has broken no agreement with anybody. All of which is true, and none of which is a defence, and she knows both of those things and says it anyway."));
+
+c.push(PS([DM("DM Only: "), { t: "this is the campaign\u2019s quietest gut-punch and it should be played completely flat. There is no villainy in the scene. There is a professional explaining her trade to people who had not thought about where a drained kingdom physically goes, and the answer is that somebody has been buying it, promptly, for three years, and filing the paperwork correctly. Do not let any NPC editorialise. Let the party do it." }]));
+
+c.push(PS([DM("DM Only: "), { t: "she does not offer the ledgers here and should not. What this scene plants is that they exist \u2014 three years of purchase records, the only complete account anywhere of how much of Elduvaine has already left it. A sharp party will work out on their own what that would be worth to a coalition that does not know how long it has. When they come back for them, the price is in Module Ten." }]));
 
 // ---------------------------------------------------------------- Scene 4
 c.push(H2("Scene 4: Sennoch Hall"));
@@ -170,7 +186,7 @@ c.push(BOX("The Hall is quiet in the particular way of a place trying not to be 
 
 c.push(H3("Running the Scene"));
 
-c.push(P("This can be played as stealth, as a direct assault, or as a mix of both \u2014 the guard presence is genuinely light, and the module should not force a fight. A DC 13 Stealth (Dexterity) check gets past the gate guards unseen; a DC 13 Investigation or Perception check finds the Ward\u2019s room without alerting the interior guard. If it comes to violence, use the Occupation Guard stat block (as in Module 3) for all three guards \u2014 none of them are heroes, and all three will surrender or flee once it is clear the fight is lost."));
+c.push(P("This can be played as stealth, as a direct assault, or as a mix of both \u2014 the guard presence is genuinely light, and the module should not force a fight. A DC 13 Stealth (Dexterity) check gets past the gate guards unseen; a DC 13 Investigation or Perception check finds the Ward\u2019s room without alerting the interior guard. The three guards are hobgoblin legionaries \u2014 professionals on a wage, bored, and a long way down anybody\u2019s list of priorities. If it comes to violence, use the Occupation Guard stat block (as in Module 3) for all three \u2014 none of them are heroes, and all three will surrender or flee once it is clear the fight is lost."));
 
 c.push(P("The Ward (see NPC Profiles) is sharp, unharmed, and immediately useful rather than a burden once freed \u2014 she knows the Hall\u2019s layout, the guards\u2019 habits, and enough about the wider occupation\u2019s posture in this region to be a genuine asset on the ride back to camp, not just a rescued NPC to be delivered and forgotten."));
 
@@ -178,7 +194,7 @@ c.push(H3("Stat Block"));
 
 c.push(...SB({
   name: "Occupation Guard",
-  meta: "Medium humanoid (human), any alignment \u2014 SRD Guard, unmodified",
+  meta: "Medium humanoid (hobgoblin, or any race), any alignment \u2014 SRD Guard, unmodified",
   ac: "16 (chain shirt, shield)",
   hp: "11 (2d8 + 2)",
   speed: "30 ft.",
@@ -214,11 +230,11 @@ c.push(table(
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Doria Kell"));
-c.push(P("Norvatch factor, ageless in the way of people who have made themselves hard to place, dressed for travel rather than for a court. Speech: unhurried, transactional, entirely without malice \u2014 she genuinely does not care who wins this war, only that she is positioned well when it ends. Not a spy in any dramatic sense; simply a trader whose stock is information."));
+c.push(P("A tiefling of middle years and Norvatch to the bone, dressed for travel rather than for a court, with the unhurried manner of somebody who has never once been the most anxious person in a negotiation. Speech: unhurried, transactional, entirely without malice \u2014 she genuinely does not care who wins this war, only that she is positioned well when it ends. Not a spy in any dramatic sense; simply a trader whose stock is information."));
 c.push(P("Open thread: Doria is a standing resource for the rest of the campaign \u2014 a DM can bring her back whenever the party needs information no ally would risk giving them, always for a price, and her price is never coin alone."));
 
 c.push(H2("The Ward"));
-c.push(P("A young member of Elduvaine\u2019s royal house, no proper name yet assigned (see the DM-Only note in What Is Actually Happening). Speech: quick, dry, allergic to being treated as fragile \u2014 three years of captivity have made her precise rather than broken. Speaks of Vale, when she speaks of him at all, with contempt rather than fear."));
+c.push(P("A young half-elf of Elduvaine\u2019s royal house \u2014 which is, like most old Elduvish families, a mixed one, and does not think of itself as anything else \u2014 with no proper name yet assigned (see the DM-Only note in What Is Actually Happening). Speech: quick, dry, allergic to being treated as fragile \u2014 three years of captivity have made her precise rather than broken. Speaks of Vale, when she speaks of him at all, with contempt rather than fear."));
 c.push(P("Open thread: once freed, the Ward is a genuine resource and a genuine person with her own opinions about what Elduvaine should become after the war \u2014 opinions that may or may not match the rest of her family\u2019s, per the royal house\u2019s canon division on that question. A DM can bring her back throughout the rest of the campaign as a recurring ally with real standing to speak for what the liberated actually want."));
 
 // --------------------------------------------------------------- Optional

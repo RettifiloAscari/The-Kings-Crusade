@@ -56,7 +56,7 @@ If your table would rather not lose Tam, run this instead: his warning is the sa
 
 The ambush breaks from both treelines at once, and for several very long minutes the outcome is genuinely uncertain. This is the module’s real fight, and it should feel like one.
 
-> *The coalition line buckles and does not break — Oksitan spears on the left, Auberitz heavier foot anchoring the center, Harrowmark’s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss’s attack with the calm of someone who still, even now, believes this is winnable.*
+> *The coalition line buckles and does not break — Oksitan spears on the left with a dragonborn house-knight somewhere in the middle of them roaring instructions nobody can hear, Auberitz heavier foot anchoring the center, Harrowmark’s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss’s attack with the calm of someone who still, even now, believes this is winnable.*
 
 ### Running the Scene
 
@@ -70,7 +70,7 @@ Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP — sev
 
 **General Ilyana Voss**
 
-*Medium humanoid (human), lawful neutral — SRD Gladiator, renamed*
+*Medium humanoid (orc), lawful neutral — SRD Gladiator, renamed*
 
 **Armor Class:** 16 (studded leather armor, shield)
 
@@ -132,6 +132,8 @@ Let the aftermath be heavy rather than triumphant, especially if Tam died in Sce
 
 ## General Ilyana Voss
 
+An orc, and a career soldier of the sort every army wants and few can keep. She came up through the same legion Drell did and outgrew it; she commands Vale’s field army because she is the best available person to command it, and she has never in her life been asked to believe in anything. The campaign makes no comment anywhere about the fact that orcs hunt wyverns for Harrowmark at Greywatch and command armies for Vale in the field. Neither should any NPC. Let the players sit with it.
+
 A real tactician rather than a fanatic, calm under pressure in a way that reads as competence rather than menace. Speech, in the brief window a table might hear her actually speak (command orders during the fight, or a surrender if the party earns one): direct, economical, entirely without contempt for an enemy who is currently winning.
 
 Open thread: if captured rather than killed, Voss is a genuine long-term asset for the coalition — a professional soldier with real knowledge of Vale’s remaining field strength, who a DM can develop as a reluctant, pragmatic informant in later modules rather than a villain who must be disposed of.
@@ -154,6 +156,7 @@ If Voss is captured or her body searched, her own field orders reveal real, spec
 # Loot
 
 - **Voss’s field orders.** Real intelligence about Caer Ysolde’s defenses — see Optional Content.
+- **A cloak of elvenkind.** Off one of Voss’s scouts, and Elduvish work — which is to say looted, three years ago, from somebody who is not alive to want it back. A DM who wants that to land can let the party find out whose it was.
 - **Captured field equipment.** Modest but genuine — weapons, armor, and supply recovered from Voss’s broken column, worth collecting rather than a windfall.
 
 # The Refrain

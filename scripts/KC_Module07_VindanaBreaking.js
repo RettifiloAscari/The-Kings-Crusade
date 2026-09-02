@@ -157,7 +157,7 @@ c.push(BOX("The postern door gives on the third strike, and for a long moment no
 
 c.push(H3("Running the Scene"));
 
-c.push(P("Use the Occupation Guard stat block (Module 3) for the garrison response \u2014 four to six of them, reinforced by Marshal Drell himself (see Module 6\u2019s stat block) if the table wants a direct confrontation with him. Per his NPC profile, Drell can be talked into surrender once his position is genuinely lost (Persuasion or Intimidation, DC 16, once he is clearly beaten) rather than killed outright \u2014 both resolutions are equally valid endings for him, and both let the module continue identically into Scene 3."));
+c.push(P("The garrison that meets them in the breach is the legion doing its job: hobgoblin line troops falling back in order, an orc file-closer swearing at them to keep the order, and not one person on that side of the fight who believes in anything except the wage and the drill. Play it as competence under pressure, not as fury. Use the Occupation Guard stat block (Module 3) for the garrison response \u2014 four to six of them, reinforced by Marshal Drell himself (see Module 6\u2019s stat block) if the table wants a direct confrontation with him. Per his NPC profile, Drell can be talked into surrender once his position is genuinely lost (Persuasion or Intimidation, DC 16, once he is clearly beaten) rather than killed outright \u2014 both resolutions are equally valid endings for him, and both let the module continue identically into Scene 3."));
 
 // -------------------------------------------------------------- Skill DCs
 c.push(H2("Tiered Skill DCs"));
@@ -189,7 +189,7 @@ c.push(P("Play this as a hazard the party survives and responds to, not a monste
 
 c.push(BOX("Above the chaos, unmistakably, a single wyvern climbs hard toward the thing crossing the sky, and even at this distance there is no doubt at all whose banner-colors are on its rider."));
 
-c.push(PS([DM("DM Only: "), { t: "if your table specifically wants a direct fight with the dragon instead of this hazard framing, the cleanest fix is not to write one into this module \u2014 reskin a young dragon of appropriate challenge from the SRD (validated per Mechanical Validation against the party\u2019s actual level) as an alternate Scene 3, with Xavier\u2019s freeing of it in Scene 4 becoming the thing that ends that fight rather than a separate beat. This is a real departure from how the scene is designed above, and changes the module\u2019s emotional shape from witnessed legend to shared victory \u2014 make it deliberately, not by default." }]));
+c.push(PS([DM("DM Only: "), { t: "if your table specifically wants a direct fight with the dragon instead of this hazard framing, the cleanest fix is not to write one into this module \u2014 reskin a young dragon of appropriate challenge from the SRD (checked against the party\u2019s actual level) as an alternate Scene 3, with Xavier\u2019s freeing of it in Scene 4 becoming the thing that ends that fight rather than a separate beat. This is a real departure from how the scene is designed above, and changes the module\u2019s emotional shape from witnessed legend to shared victory \u2014 make it deliberately, not by default." }]));
 
 // ---------------------------------------------------------------- Scene 4
 c.push(H2("Scene 4: The Wyvernheart"));
@@ -236,6 +236,10 @@ c.push(BUL("Whether the table ran Scene 3 as written or opted into a direct drag
 c.push(H1("Loot"));
 
 c.push(BUL("Vindana itself.", "Not loot in the ordinary sense, but the module\u2019s actual prize: a major port, secured, with everything that implies for the rest of the campaign\u2019s logistics and momentum."));
+c.push(BUL("Drell\u2019s campaign sword.", "A +1 longsword of legion pattern, plain, superbly maintained, with three years of Vindana service filed into the guard as regulation notches. If Drell surrendered rather than died, he hands it over correctly and asks for a receipt, and means it."));
+
+c.push(BUL("A wand out of the harbour-mage\u2019s quarters.", "A wand of magic missiles (SRD), taken from the rooms of an occupation battle-mage who did not stay for the ending. The first genuinely significant magical reward of the campaign, and the party has earned it."));
+
 c.push(BUL("The garrison\u2019s stores and armory.", "Substantial \u2014 Vindana was well-supplied for a long siege it did not get to fight. The first genuinely significant material reward of the campaign; a DM may introduce one uncommon magic item here without it feeling out of place for the first time."));
 c.push(BUL("The binding-mark.", "What Xavier tore free from the dragon, if he keeps it rather than discarding it \u2014 a small, cold object that means nothing to anyone who examines it and everything to Vale, who will know exactly what its absence means. A DM\u2019s hook for a later module, not something that needs to resolve here.", { keepNext: true }));
 

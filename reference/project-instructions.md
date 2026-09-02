@@ -247,8 +247,41 @@ written in `scripts/KC_Sourcebook.js`):
   They are united on the war and divided on what should follow it.
 - **The coalition** — Harrowmark marches with the **Kingdom of Oksitan** and the **Grand
   Duchy of Auberitz**. The **Kingdom of Norvatch** has not taken the call: it deals with
-  either side, answers to nobody, and will keep a bargain it has made. **What each of them
-  actually wants, beyond the Promise, is not yet decided** — run them by role until it is.
+  either side, answers to nobody, and will keep a bargain it has made. **What Oksitan and
+  Auberitz actually want, beyond the Promise, is still not decided** — run those two by
+  role until it is.
+- **What Norvatch wants — signed off.** Norvatch does not want Elduvaine; it wants to
+  remain **the market for what leaves it**, guaranteed in writing by whoever holds the
+  place when the war ends. It has held exactly that arrangement with the occupation for
+  three years: Vale extracts, Norvatch moves it, and a buyer paying promptly and asking
+  nothing is what makes spending a kingdom by the cartload practical. There is no alliance
+  and no conspiracy — Norvatch priced a situation it did not create and has traded inside
+  that price ever since. Two consequences are canon with it. **Its ledgers are the
+  campaign's clock**: three years of purchase records are the only complete account of how
+  much of Elduvaine is already gone, and Doria Kell will sell them. **Her price is the
+  Promise again** — trading rights in a liberated Elduvaine, signed by a king with no
+  authority to sign it, over a kingdom already promised to two other powers. Whether the
+  arrangement with Vale was ever more than commercial stays deliberately unanswered.
+- **The peoples — signed off.** Every realm is a **mixed polity with a characteristic
+  mix**, never one race per nation. Harrowmark: humans, dwarves in the crag holds, orcs in
+  the high country, and Greywatch's wyvern-watch is dwarves on the pikes and orcs on the
+  ropes. Elduvaine: elves (the Kept Season is their institution), gnomes (Archive clerks
+  and Standing Light masons), halflings (the river parishes), plus resident fey — dryads,
+  sprites, satyrs. Oksitan: humans with a dragonborn landed nobility. Auberitz: humans,
+  gnomes and halflings, and the coalition's siege train is theirs. Norvatch: dwarves and
+  tieflings, guild-law country. **The load-bearing note:** dwarves hunt wyverns in
+  Harrowmark and keep contracts in Norvatch — same people, different institutions — and
+  orcs fight on both sides of this war without a single NPC remarking on it. Named
+  peoples: Brenna Vane (dwarf), Sera Vosk (rock gnome), Garrick Hollow (half-elf), Wyn
+  Alder (gnome), Doria Kell (tiefling), Warden Thane (half-orc), Drell (hobgoblin), Voss
+  (orc), the Ward (half-elf), the Magistrate (gnome), the Regent (human). **Vale stays
+  human** — the open question about him is phrased "whether he is still human" and
+  changing his race would break it.
+- **The occupation is a hired legion, not a horde.** Hobgoblin professionals at the core,
+  with orc, human and goblin auxiliaries and a stratum of Elduvish collaborator clerks.
+  This is what the established bureaucracy — permits, a published grain levy, competent
+  officers, no fanatics — always implied. Vale did not raise a mob; he hired an army that
+  was already good at this. They are employees, and several are very good at their jobs.
 - **The two roads** — the coalition split. The party chooses the sea road or the mountain
   road; the other is met later as its aftermath. A second crown marches by the road the
   party does not take, and that king is lost early, in water; his army comes apart behind
@@ -261,15 +294,15 @@ written in `scripts/KC_Sourcebook.js`):
 
 | Open item | Notes |
 |---|---|
-| What Oksitan, Auberitz and Norvatch each want | The realms are named; their agendas, rulers and grievances are not. |
+| What Oksitan and Auberitz each want | Both realms are named and peopled; their agendas, rulers and grievances are not. **Norvatch is no longer on this list** — its agenda is signed off and written into the sourcebook. |
 | The second king and his realm | The crown lost on the road the party does not take. Auberitz is a grand duchy and Norvatch does not march, so by elimination this is Oksitan's king — but that has not been signed off. The Barbarossa touchstone (above) is supporting material for how he is played and how he dies, not a name. |
 | Whether Harrowmark was ever otherwise | Left open deliberately for now: a Harrowmark that was *drained* long ago would give it a stake in this war and a dread of Vale. Evocative, unapproved, and not to be assumed. |
 | Names of the royal family | Including which one is at large. |
 | Region-level geography and a gazetteer | Both realms and what lies between. |
 | What the deepest vaults actually contain | What Vale is reading toward. The sourcebook states his motive; it does not state his destination. |
 | Whether Vale is still human | Deliberately ambiguous in v1; not yet an answer. |
-| Pantheon, planes, and magical traditions | Beyond "Elduvaine's magic is different in kind." |
-| Module breakdown | How many sessions, and what each covers. |
+
+| Pantheon and planes | Beyond "Elduvaine's magic is different in kind" and the peoples layer below. No gods are named anywhere in the set. |
 
 **Deliberately open** — questions left unresolved *by design*, which later sessions must
 not helpfully close:

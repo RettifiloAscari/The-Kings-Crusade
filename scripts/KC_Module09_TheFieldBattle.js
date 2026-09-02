@@ -164,7 +164,7 @@ c.push(H2("Scene 3: Holding the Line"));
 
 c.push(P("The ambush breaks from both treelines at once, and for several very long minutes the outcome is genuinely uncertain. This is the module\u2019s real fight, and it should feel like one."));
 
-c.push(BOX("The coalition line buckles and does not break \u2014 Oksitan spears on the left, Auberitz heavier foot anchoring the center, Harrowmark\u2019s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss\u2019s attack with the calm of someone who still, even now, believes this is winnable."));
+c.push(BOX("The coalition line buckles and does not break \u2014 Oksitan spears on the left with a dragonborn house-knight somewhere in the middle of them roaring instructions nobody can hear, Auberitz heavier foot anchoring the center, Harrowmark\u2019s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss\u2019s attack with the calm of someone who still, even now, believes this is winnable."));
 
 c.push(H3("Running the Scene"));
 
@@ -178,7 +178,7 @@ c.push(H3("Stat Block"));
 
 c.push(...SB({
   name: "General Ilyana Voss",
-  meta: "Medium humanoid (human), lawful neutral \u2014 SRD Gladiator, renamed",
+  meta: "Medium humanoid (orc), lawful neutral \u2014 SRD Gladiator, renamed",
   ac: "16 (studded leather armor, shield)",
   hp: "112 (15d8 + 45)",
   speed: "30 ft.",
@@ -233,6 +233,8 @@ c.push(P("Let the aftermath be heavy rather than triumphant, especially if Tam d
 c.push(H1("NPC Profiles"));
 
 c.push(H2("General Ilyana Voss"));
+
+c.push(P("An orc, and a career soldier of the sort every army wants and few can keep. She came up through the same legion Drell did and outgrew it; she commands Vale\u2019s field army because she is the best available person to command it, and she has never in her life been asked to believe in anything. The campaign makes no comment anywhere about the fact that orcs hunt wyverns for Harrowmark at Greywatch and command armies for Vale in the field. Neither should any NPC. Let the players sit with it."));
 c.push(P("A real tactician rather than a fanatic, calm under pressure in a way that reads as competence rather than menace. Speech, in the brief window a table might hear her actually speak (command orders during the fight, or a surrender if the party earns one): direct, economical, entirely without contempt for an enemy who is currently winning."));
 c.push(P("Open thread: if captured rather than killed, Voss is a genuine long-term asset for the coalition \u2014 a professional soldier with real knowledge of Vale\u2019s remaining field strength, who a DM can develop as a reluctant, pragmatic informant in later modules rather than a villain who must be disposed of."));
 
@@ -255,6 +257,8 @@ c.push(BUL("General Voss\u2019s fate.", "Killed, captured, or fled \u2014 a capt
 c.push(H1("Loot"));
 
 c.push(BUL("Voss\u2019s field orders.", "Real intelligence about Caer Ysolde\u2019s defenses \u2014 see Optional Content."));
+
+c.push(BUL("A cloak of elvenkind.", "Off one of Voss\u2019s scouts, and Elduvish work \u2014 which is to say looted, three years ago, from somebody who is not alive to want it back. A DM who wants that to land can let the party find out whose it was."));
 c.push(BUL("Captured field equipment.", "Modest but genuine \u2014 weapons, armor, and supply recovered from Voss\u2019s broken column, worth collecting rather than a windfall.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain

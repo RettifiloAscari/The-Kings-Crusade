@@ -61,6 +61,8 @@ A day beyond the ford, the valley narrows to a single defensible road beneath a 
 
 > *“Oksitan’s allies pass free,” Vell says, in the tone of a man who has said it many times and means something different by it each time. “Everyone else pays the Ashgate toll. I’d hate for there to be some confusion about which one you are.” His scouts, unhurried, have already found the high ground on both sides of the road.*
 
+Vell’s scouts are a mixed company of humans, dwarves and one very bored half-orc, all of them local, all of them paid, and none of them under any illusion about what they are guarding. If the party gets one of them talking, the honest complaint is not about the coalition at all — it is about the kobolds in the old workings above the pass, who have been stealing tools for a year and whom nobody has been paid enough to deal with.
+
 ### Running the Scene
 
 Vell will negotiate, and a table that wants to avoid a fight in this narrow, badly-chosen ground should be able to. A successful Charisma (Persuasion) check against DC 16, or convincing proof of a coalition writ of passage the party can produce or talk their way into being believed to have, gets the column through for a token payment. A successful Wisdom (Insight) check against DC 13 reveals that Vell is bluffing about his numbers — he has enough scouts to make a fight costly, not enough to actually hold the pass against a coalition column, and he knows it.
@@ -174,7 +176,7 @@ This is where the module ends, and where the DM should let the weight of the roa
 
 ## Garrick Hollow
 
-A hired local guide, contracted at the edge of Harrowmark territory and paid to know these mountains better than the coalition’s own maps do. Speech: unbothered, faintly dry, prone to stating bad news as though it were simply weather. Genuinely good at his job, and genuinely indifferent to whether anyone finds that reassuring.
+A half-elf hired out of the last town before the passes, paid to know these mountains better than the coalition’s own maps do, which he does. Speech: unbothered, faintly dry, prone to stating bad news as though it were simply weather. Genuinely good at his job, and genuinely indifferent to whether anyone finds that reassuring.
 
 Open thread: Garrick knows this road and, plausibly, others — a DM can bring him back as a recurring guide for any later overland stretch of the campaign, or use him as the source of a rumor or shortcut when the party needs one and has no other way to justify finding it.
 
@@ -185,6 +187,14 @@ Comfortable in bad terrain the way a man is comfortable in a home he built himse
 Open thread: if he survives — paid off, talked down, or simply outmaneuvered — Vell keeps his keep and his technicality of allegiance, and a DM can bring him back later as a minor, recurring complication on any road that passes near Ashgate, or as a source of local intelligence if the party ever needs a favor from someone who owes them one.
 
 # Optional Content
+
+## The Old Workings
+
+Above the toll-keep, half a day off the road, an abandoned dwarven working has been reoccupied by kobolds — forty or so, organised, and responsible for most of what the valley has lost to theft in the past year. They are not a threat to a coalition column and know it; what they are is a warren of pit traps, tripped rockfalls and very good tunnel discipline in a space too tight for anyone to bring numbers to bear.
+
+Run six to ten kobolds (SRD, CR 1/8, 25 XP each) in terrain that does all their work for them: darkvision against a party carrying light, pack tactics wherever two can reach the same target, and a readiness to collapse a passage and leave rather than lose. The honest resolution here is not slaughter — a party that offers the kobolds the tools instead of taking them back can buy a guide through the workings and out above the toll-keep entirely, which is a third route past Vell that no one in the column has thought of.
+
+If a table wants something heavier on this road instead, an ogre (SRD, CR 2, 450 XP) has been working the same stretch of scree for a season and is a straightforward, honest, dangerous obstacle for a party of this level — the mountain road’s equivalent of weather with arms.
 
 ## What the Column Talks About
 
@@ -202,7 +212,8 @@ If the table wants more to do before the ford, a supply wagon has thrown a wheel
 # Loot
 
 - **Vell’s writ.** A document, genuine as far as it goes, establishing his technicality of allegiance to Oksitan. Not valuable in itself, but a useful thread if a DM wants to raise the coalition’s internal reliability as a question later in the campaign.
-- **A mountain-forged blade.** Taken from Vell or purchased from Garrick’s local contacts — masterwork but not magical, well suited to rough terrain. Treat as a normal weapon of its type, finely made.
+- **A mountain-forged blade.** Taken from Vell or bought through Garrick’s local contacts — a +1 weapon of its type, dwarven work out of the old valley forges, unremarkable to look at and better than anything the party marched in with.
+- **Kobold tunnel-charts.** If the old workings were dealt with peaceably — scratched on slate, entirely accurate, and a standing shortcut through the Ashgate range that a DM can honour any time the campaign comes back this way.
 - **Salvage from the ford.** Whatever of the lost wagon’s cargo the party recovers or the column can spare from what remains — modest, practical supplies rather than treasure, playable as a small easing of the crusade’s logistics rather than a coin payout at 5th level.
 
 # The Refrain

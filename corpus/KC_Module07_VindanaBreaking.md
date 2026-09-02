@@ -46,7 +46,7 @@ The party leads, or joins, a strike through the found weakness while the main si
 
 ### Running the Scene
 
-Use the Occupation Guard stat block (Module 3) for the garrison response — four to six of them, reinforced by Marshal Drell himself (see Module 6’s stat block) if the table wants a direct confrontation with him. Per his NPC profile, Drell can be talked into surrender once his position is genuinely lost (Persuasion or Intimidation, DC 16, once he is clearly beaten) rather than killed outright — both resolutions are equally valid endings for him, and both let the module continue identically into Scene 3.
+The garrison that meets them in the breach is the legion doing its job: hobgoblin line troops falling back in order, an orc file-closer swearing at them to keep the order, and not one person on that side of the fight who believes in anything except the wage and the drill. Play it as competence under pressure, not as fury. Use the Occupation Guard stat block (Module 3) for the garrison response — four to six of them, reinforced by Marshal Drell himself (see Module 6’s stat block) if the table wants a direct confrontation with him. Per his NPC profile, Drell can be talked into surrender once his position is genuinely lost (Persuasion or Intimidation, DC 16, once he is clearly beaten) rather than killed outright — both resolutions are equally valid endings for him, and both let the module continue identically into Scene 3.
 
 ## Tiered Skill DCs
 
@@ -71,7 +71,7 @@ Play this as a hazard the party survives and responds to, not a monster they fig
 
 > *Above the chaos, unmistakably, a single wyvern climbs hard toward the thing crossing the sky, and even at this distance there is no doubt at all whose banner-colors are on its rider.*
 
-**DM Only:** if your table specifically wants a direct fight with the dragon instead of this hazard framing, the cleanest fix is not to write one into this module — reskin a young dragon of appropriate challenge from the SRD (validated per Mechanical Validation against the party’s actual level) as an alternate Scene 3, with Xavier’s freeing of it in Scene 4 becoming the thing that ends that fight rather than a separate beat. This is a real departure from how the scene is designed above, and changes the module’s emotional shape from witnessed legend to shared victory — make it deliberately, not by default.
+**DM Only:** if your table specifically wants a direct fight with the dragon instead of this hazard framing, the cleanest fix is not to write one into this module — reskin a young dragon of appropriate challenge from the SRD (checked against the party’s actual level) as an alternate Scene 3, with Xavier’s freeing of it in Scene 4 becoming the thing that ends that fight rather than a separate beat. This is a real departure from how the scene is designed above, and changes the module’s emotional shape from witnessed legend to shared victory — make it deliberately, not by default.
 
 ## Scene 4: The Wyvernheart
 
@@ -115,6 +115,8 @@ If the table has time after Vindana falls, let them walk the city and meet its p
 # Loot
 
 - **Vindana itself.** Not loot in the ordinary sense, but the module’s actual prize: a major port, secured, with everything that implies for the rest of the campaign’s logistics and momentum.
+- **Drell’s campaign sword.** A +1 longsword of legion pattern, plain, superbly maintained, with three years of Vindana service filed into the guard as regulation notches. If Drell surrendered rather than died, he hands it over correctly and asks for a receipt, and means it.
+- **A wand out of the harbour-mage’s quarters.** A wand of magic missiles (SRD), taken from the rooms of an occupation battle-mage who did not stay for the ending. The first genuinely significant magical reward of the campaign, and the party has earned it.
 - **The garrison’s stores and armory.** Substantial — Vindana was well-supplied for a long siege it did not get to fight. The first genuinely significant material reward of the campaign; a DM may introduce one uncommon magic item here without it feeling out of place for the first time.
 - **The binding-mark.** What Xavier tore free from the dragon, if he keeps it rather than discarding it — a small, cold object that means nothing to anyone who examines it and everything to Vale, who will know exactly what its absence means. A DM’s hook for a later module, not something that needs to resolve here.
 

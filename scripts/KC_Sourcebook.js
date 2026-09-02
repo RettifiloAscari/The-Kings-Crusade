@@ -112,6 +112,48 @@ c.push(P("You are not the army. You are what the king sends ahead of it \u2014 f
 c.push(PS([DM("DM Only: "), { t: "the campaign opens on the road, not at the gates. Resist the urge to get the party to Elduvaine quickly. The road is half the campaign and the reason the arrival lands at all \u2014 players who have spent four sessions getting there will care about the place in a way that players who started there will not." }]));
 
 // ------------------------------------------------- Elduvaine Before the Fall
+c.push(H1("The Peoples of the Crusade"));
+
+c.push(P("Before any of the realms below are described, one thing about all of them: none of them belongs to a single people. Every kingdom in this war is a mixed country, and what distinguishes them is not who lives there but what that place has made of them \u2014 its institutions, its trades, and the particular things it asks its people to be good at."));
+
+c.push(P("The clearest way to see it is the dwarves. In Harrowmark they are crag-hold folk who hunt wyverns with pikes and a great deal of rope, and they are famous for it. In Norvatch they are factors and contract-lawyers whose written word is the most trusted instrument in the trading world. Same people. Two institutions. A Harrowmark dwarf and a Norvatch dwarf standing in the same room have markedly less in common with one another than either has with the neighbours they grew up beside \u2014 and both of them will tell you so, at length, if you make the mistake of assuming otherwise."));
+
+c.push(PS([DM("DM Only: "), { t: "this is the note that keeps the setting from collapsing into a race-per-nation chart, and it is worth landing early and once. Every realm is mixed. Nobody in this campaign is their species. When the party meets an orc, the interesting question is never what an orc is like \u2014 it is which country raised this one, and which side of this war is paying them." }]));
+
+c.push(H2("Harrowmark"));
+
+c.push(P("Humans in plurality, farming thin soil behind hill-fort walls. Dwarves in the crag holds, where the stone is worth working and the winters are worth surviving indoors. And orcs in the high country, for as many generations as Harrowmark has bothered counting, which is to say all of them \u2014 the notion that they came from somewhere else is a thing foreigners believe and Harrowmark finds tiresome to correct. Half-orcs and half-elves throughout, unremarked, because Harrowmark does not have the energy to remark on things."));
+
+c.push(P("Greywatch is the picture of it in miniature: a hold that is roughly half dwarves and half orcs with a scatter of everyone else, whose wyvern-watch has worked the same way for nine centuries. Dwarves take the pikes, because a dwarf braced properly does not move. Orcs take the ropes, because when there is a wyvern on the far end of a line somebody has to be strongest and it is usually them. Everyone else does the shouting and the counting. Nobody in Greywatch considers this arrangement remarkable, or has ever explained it to an outsider without visible impatience."));
+
+c.push(P("Because Harrowmark\u2019s land is mundane and its people are not, every caster in the realm is a worked-magic professional: a dwarven runesmith who cuts her spells into a shield because a shield stays where you put it, an orc war-priest whose prayers are answered as reliably as anyone\u2019s anywhere, the king\u2019s own battle-mages drawing pay. What Harrowmark lacks is a land that joins in. It has never lacked people who can do magic."));
+
+c.push(H2("Elduvaine"));
+
+c.push(P("Elves are the oldest inhabitants and the Kept Season is essentially their institution \u2014 a wood planted deliberately into a season and held there, some of them tended by the same family since before the wards existed. An elven orchard-keeper who has stood four days into spring for three centuries has opinions about the calendar that no other people in the world share."));
+
+c.push(P("Gnomes are the Archive\u2019s clerks and the Standing Light\u2019s masons, and the two trades are closer than they look: gnome-cut stone holds poured light longer and more evenly than anything else anyone has managed, which is why Caer Ysolde glowed and why the drainage there shows first. Halflings hold the river parishes, and the entire Elduvish etiquette of living politely beside a landscape that eavesdrops is halfling manners exported upward into a kingdom. Humans throughout, in numbers, doing everything."));
+
+c.push(P("And Elduvaine\u2019s magic is populated as well as ambient. There are dryads in the older Kept Season woods \u2014 a dryad here is not a visitor to the wood, she is the wood, with opinions \u2014 and sprites and satyrs in parishes that have been strange for long enough to be relaxed about it, and things in the deeper Listening Waters that are not fish and do not care to be described. None of this is exotic to an Elduvish farmer. All of it is dying."));
+
+c.push(H2("Oksitan, Auberitz, Norvatch"));
+
+c.push(P("Oksitan is a kingdom of river country and horse country, human in the main, with an old landed nobility that is substantially dragonborn \u2014 houses that have held the same fords and the same crossings since before anyone was writing it down, and that consider a river a thing you are responsible for rather than a thing you cross. Half-elves are common at court and commoner in its diplomacy."));
+
+c.push(P("Auberitz is the grand duchy that builds things: humans, gnomes and halflings, mercantile and engineering rather than martial, and privately of the view that this entire war is a logistics problem being mishandled by people who enjoy shouting. The coalition\u2019s siege train is Auberitz work, gnome-designed and halfling-quartermastered, and its artisans will tell anybody who stands still long enough exactly how it should be used."));
+
+c.push(P("Norvatch is guild-law country \u2014 dwarves and tieflings, humans throughout \u2014 where a bargain is written, witnessed, filed, and binding, and where the realm\u2019s entire standing in the world rests on the fact that it honours the letter of one no matter what the letter turns out to have meant. Norvatch does not break contracts. It writes them very carefully first."));
+
+c.push(H2("The Occupation"));
+
+c.push(P("Vale\u2019s army is a legion, and somebody paid for it."));
+
+c.push(P("Its professional core is hobgoblin: disciplined, literate, drilled, and entirely capable of filing correct paperwork about something terrible. Orc and human companies serve alongside them under the same pay-chest, with goblin auxiliaries doing the work nobody senior wants and a stratum of Elduvish clerks \u2014 collaborators, or simply people with children and a job that still exists \u2014 running the permits and the levies underneath all of it."));
+
+c.push(P("This explains the occupation better than anything else about it. A horde does not issue permits. A horde does not collect a grain levy on a published schedule, or keep officers who negotiate, or contain no fanatics at all. What Vale did three years ago was not raise a mob; he hired a professional army that was already good at exactly this and had been waiting for the work. They are not his believers. They are his employees, and several of them are extremely good at their jobs."));
+
+c.push(PS([DM("DM Only: "), { t: "run the occupation as competent people doing an ugly job for money, and never as a species. The campaign puts orcs on both sides on purpose \u2014 Greywatch\u2019s ropers and Vale\u2019s field general are the same people in different pay \u2014 and it never once remarks on it in narration. Let the players notice. If a player asks an occupation soldier why they are here, the honest answer is a wage and a three-year contract, and it should be delivered without a shred of self-justification." }]));
+
 c.push(H1("Elduvaine Before the Fall"));
 
 c.push(H2("The Living Realm"));
@@ -139,6 +181,8 @@ c.push(table(
 ));
 
 c.push(P("Habits are not the only thing a resident magic produces. Where Harrowmark\u2019s crags breed wyverns \u2014 mundane, appalling, ordinary animals \u2014 Elduvaine\u2019s resident magic breeds something at the same slot in the world that is not an animal at all. A dragon here is not a beast that happens to know magic; it is closer kin to the Willing Road or the Listening Water, a habit that grew teeth and appetite and left the ground. They are rare, and a land in the process of being drained is not a land producing many of anything. What the party is more likely to meet is the damage: a dragon visibly suffering, changed, or grown strange as its home region empties, the same way a wood does in the Held Winter."));
+
+c.push(P("Nor are dragons the only thing living in a country whose magic is resident. Elduvaine has always had fey in it the way other countries have deer \u2014 dryads in the Kept Season woods, sprites in the hedgerows, satyrs in parishes remote enough not to be embarrassed about it. An Elduvish farmer treats a dryad roughly the way a Harrowmark farmer treats a bad-tempered neighbour with a legitimate grievance: carefully, politely, and without any sense that something extraordinary is happening. The draining is killing them too, and a dryad whose wood has gone from spring to a winter it was never planted in is the most direct grief this campaign has available. Use it once, properly, rather than often."));
 
 c.push(H2("Caer Ysolde and the Archive"));
 
@@ -225,9 +269,23 @@ c.push(H2("The Coalition"));
 
 c.push(P("Two other powers have taken the call. The Kingdom of Oksitan marches, and the Grand Duchy of Auberitz marches, each with its own reasons and its own idea of what a finished war looks like. Neither is doing this for Elduvaine\u2019s sake and neither pretends to be."));
 
-c.push(P("The Kingdom of Norvatch has not taken the call. Norvatch trades with the occupied kingdom, has an understanding of some kind with the men holding it, and has made no promises to anybody marching. It will deal with either side. It is worth saying plainly that Norvatch keeps the bargains it makes, which is more than can be said for one of the powers that did take the call."));
+c.push(P("The Kingdom of Norvatch has not taken the call. Norvatch trades with the occupied kingdom, has an understanding with the men holding it, and has made no promises to anybody marching. It will deal with either side. It is worth saying plainly that Norvatch keeps the bargains it makes, which is more than can be said for one of the powers that did take the call."));
 
-c.push(PS([DM("DM Only: "), { t: "the three realms are named; what each of them actually wants is not decided and must not be invented in passing. Run them by role. Norvatch is the useful one for a party that likes leverage, precisely because it is not on anybody\u2019s side and can be relied on once bought \u2014 and because buying it costs something the coalition would rather not spend." }]));
+c.push(PS([DM("DM Only: "), { t: "what Oksitan and Auberitz actually want is still not decided and must not be invented in passing \u2014 run those two by role. Norvatch is different: it has been settled, and it is written below." }]));
+
+c.push(H3("What Norvatch Wants"));
+
+c.push(P("Norvatch does not want Elduvaine. It wants to remain the market for what comes out of it."));
+
+c.push(P("Specifically: the exclusive, standing, written right to purchase whatever leaves the Living Realm \u2014 guaranteed by whoever is holding the place when the war ends. Norvatch has held precisely that arrangement with the occupation for three years. Vale extracts; Norvatch moves it; and the reason a man can spend a kingdom by the cartload without the cartloads simply piling up in a yard somewhere is that there has been a buyer the entire time, paying promptly, asking nothing, and filing the paperwork correctly."));
+
+c.push(P("This is the understanding the crusade has heard rumours of, and it is less sinister and considerably worse than the rumours suggest. There is no alliance. Norvatch did not want the wards opened and would have advised against it on commercial grounds. It simply priced the situation once the situation existed, the way it prices everything, and it has been trading inside that price ever since."));
+
+c.push(P("Two things follow, and the campaign runs on both. The first is that Norvatch will sell to the coalition exactly as readily as it sells to Vale, honour the sale completely, and go on buying from Vale right up until the day the coalition outbids him \u2014 none of which it considers a contradiction, because none of it is. The second is the price. Norvatch wants its trading rights written into whatever settlement follows the war, which is to say it wants a share of the same kingdom the Promise has already sold to Oksitan and to Auberitz. There is not enough Elduvaine to pay everybody, and there never was."));
+
+c.push(PS([DM("DM Only: "), { t: "Norvatch\u2019s ledgers are the single most valuable object in this campaign that is not the Archive, and the party can buy them. Three years of purchase records are the only complete account anywhere of how much of Elduvaine has already left it \u2014 which is to say, the only way to know how much is left, and therefore how close Vale is to finishing. That is the campaign\u2019s clock, for sale, from someone with no reason to lie about it and every reason to charge. What she wants for it is a signature from Xavier guaranteeing Norvatch\u2019s trade in a liberated Elduvaine. He has no authority to give it, over a kingdom that is not his \u2014 exactly as he had no authority to make the Promise, and made it anyway. Whether the party lets him is theirs. Do not put a thumb on it." }]));
+
+c.push(PS([DM("DM Only: "), { t: "one thing about Norvatch stays open and should not be closed at the table: whether the arrangement with Vale was ever more than commercial. Doria Kell will say it was only ever trade. She is almost certainly telling the truth. \u201cAlmost certainly\u201d is the correct amount, and a DM who resolves it in either direction has spent something they cannot get back." }]));
 
 c.push(H2("The Promise"));
 
@@ -271,6 +329,22 @@ c.push(P("Three things keep this campaign in the register it was built for."));
 c.push(BUL("Describe the habit before you describe the damage.", "A road that shortens is a delight; a road that has stopped shortening is a bereavement, and only if the players felt the first one. Give them at least one working habit before you take any away."));
 c.push(BUL("The villain is a villain.", "There is no argument to be had about whether Vale should be stopped. Put the difficulty somewhere else \u2014 in what the crusade costs, in allies who want their own things, and in what the Elduvish actually want once somebody asks them."));
 c.push(BUL("Plan the relief valves.", "A long grim march needs taverns, absurd logistics, and recurring comic figures by design. Elduvaine\u2019s etiquette of living politely alongside a landscape that eavesdrops is a comedy engine as much as a wonder one; use it as both."));
+
+c.push(H2("Wonders Worth Carrying"));
+
+c.push(P("The best treasure in this campaign is not a sword. It is a habit in a container."));
+
+c.push(P("Elduvish craft has spent centuries working out how to make the land\u2019s habits portable, and the results are ordinary inside Elduvaine and astonishing everywhere else. A party that has spent four sessions on the road and finally crosses the border should be able to buy, be given, or take these \u2014 and a Harrowmark character holding one for the first time is one of the better scenes available to a DM who wants the wonder to land on a person rather than on a landscape."));
+
+c.push(BUL("A standing-stone lamp.", "Gnome-cut stone the size of a fist, which holds light poured into it and gives it back. Leave it in daylight and it lights a room for hours. In Caer Ysolde before the fall these were street furniture. They are now, increasingly, the only working ones left, and Elduvish people notice when an outsider carries one carelessly."));
+
+c.push(BUL("A flask of Listening Water.", "Drawn properly from a bank that still remembers. It holds what is said at its mouth and gives it back once, in the speaker\u2019s own voice, and then it is only water. An investigation tool, a courier that cannot be bribed, and the only way in the world to carry a dead friend\u2019s last sentence as an object."));
+
+c.push(BUL("A road-token.", "Cut from a waystone on a Willing Road. It does not explain what the road measures any more than the road does, and a party that tries to work it out by experiment will get exactly as far as nine centuries of Elduvish scholarship has. Keep it that way."));
+
+c.push(BUL("Kept Season seeds.", "Plant them and a small stand holds whatever season they were sown in. Mostly a wonder. Occasionally, in the hands of a party that thinks about it, a tactical problem solved sideways."));
+
+c.push(PS([DM("DM Only: "), { t: "these are also the campaign\u2019s clearest way to make the draining hurt. A standing-stone lamp that has stopped taking light, a flask that gives back a voice nobody recognises, seeds that come up in the wrong season \u2014 each of those is a paragraph of exposition the party feels instead of hearing. Break one at the right moment rather than explaining anything." }]));
 
 c.push(H2("The Four Voices"));
 

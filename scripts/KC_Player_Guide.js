@@ -133,6 +133,8 @@ c.push(BOX("The march to Elduvaine is long, and your DM is not rushing you throu
 // ---------------------------------------------------------------- Where You're From
 c.push(H1("Where You\u2019re From: Harrowmark"));
 
+c.push(P("Assuming you are \u2014 plenty of the party will not be, and the next section covers the rest. But Harrowmark is the crusade\u2019s spine and the king\u2019s own country, and it is worth knowing whether you came from it or merely arrived in it."));
+
 c.push(P("Harrowmark is cold, stony, and has never once been called marvellous by anyone who has actually been there. Grey stone under a greyer sky, hard winters, hill forts, and a people who take a great deal of convincing before they will call anything remarkable."));
 
 c.push(P("Elduvish scholars have a habit of calling Harrowmark \u201cunmagical,\u201d which is a convenient phrase and not an accurate one. Harrowmark has wizards. It has priests whose prayers are answered, hedge-witches along the coast, war-mages in the king\u2019s own pay, and a cold, well-regarded college that has taught evocation for two centuries. Magic in Harrowmark works exactly as it works everywhere else in the world outside Elduvaine: it is studied, cast, carried by a person, and spent. A character from Harrowmark can be any spellcaster in the game, and should never be told they can\u2019t."));
@@ -142,6 +144,27 @@ c.push(P("What Harrowmark genuinely lacks is a land that participates. Its roads
 c.push(P("What Harrowmark has instead of wonder is wyverns. They nest in the high crags and always have, and dealing with them is not an adventure so much as a season of the working year, handled with long pikes, longer ropes, and losses the rest of the world finds alarming and Harrowmark finds ordinary. This produces a particular kind of person: not fearless, exactly, but hard to impress. Something enormous with wings overhead is a problem your grandmother already solved once. Whatever else your character carries out of Harrowmark, they carry that."));
 
 // ---------------------------------------------------------------- The Coalition
+c.push(H1("The Peoples of the Crusade"));
+
+c.push(P("No kingdom in this war belongs to one people. Every realm below is mixed, and what tells them apart is not who lives there but what that place has made of them \u2014 its trades, its institutions, and the things it asks its people to be good at. Play whatever you like from wherever you like; all of it fits."));
+
+c.push(P("The clearest illustration is the dwarves. In Harrowmark they are crag-hold folk who hunt wyverns with long pikes and a great deal of rope, and are famous for it. In Norvatch they are factors and contract-lawyers whose written word is the most trusted instrument in the trading world. Same people, two countries, and a Harrowmark dwarf meeting a Norvatch dwarf will find they have markedly less in common than either has with the neighbours they grew up beside. Both will tell you so at length if you give them the opening."));
+
+c.push(table(
+  ["Where you might be from", "Who you would have grown up among"],
+  [30, 70],
+  [
+    ["Harrowmark", "Humans farming thin soil behind hill-fort walls, dwarves in the crag holds, and orcs in the high country for as many generations as anyone has counted. Half-orcs and half-elves throughout, unremarked \u2014 Harrowmark does not have the energy to remark on things. Every caster here is a trained professional, because the land itself does nothing."],
+    ["Kingdom of Oksitan", "River country and horse country. Humans in the main, with an old landed nobility that is substantially dragonborn \u2014 houses that have held the same fords since before anyone wrote it down. Half-elves common at court and commoner in its diplomacy."],
+    ["Grand Duchy of Auberitz", "The duchy that builds things: humans, gnomes and halflings, mercantile and engineering rather than martial, and privately of the view that this whole war is a logistics problem being mishandled by people who enjoy shouting."],
+    ["Kingdom of Norvatch", "Guild-law country \u2014 dwarves and tieflings, humans throughout \u2014 where a bargain is written, witnessed, filed and binding, and where the realm\u2019s entire standing rests on honouring the letter of one no matter what the letter turns out to have meant."],
+    ["Elduvaine", "You would not be marching, but a character from the occupied kingdom is entirely playable. Elves, whose orchards hold the season they were planted in; gnomes, who keep the ledgers and cut the light-stone; halflings in the river parishes; humans throughout. If you are from here, you have been in exile or hiding for three years."]
+  ],
+  { full: true }
+));
+
+c.push(P("What your character does not know, and cannot, is what Elduvaine looks like now. Everyone above has heard it is bad."));
+
 c.push(H1("Who Marches With You"));
 
 c.push(P("A character need not come from Harrowmark \u2014 Xavier\u2019s call reached every realm marching under it, and a member of the party may just as easily hail from Oksitan, Auberitz, or even Norvatch, arriving at the muster by their own road rather than Harrowmark\u2019s. The table below is what any of them would already know about the others."));
@@ -154,7 +177,8 @@ c.push(table(
     ["Kingdom of Oksitan", "An allied power under the call, marching for reasons of its own that its own court has not fully explained to anyone outside it."],
     ["Grand Duchy of Auberitz", "The second allied power, likewise under the call and likewise not marching purely out of sympathy for Elduvaine."],
     ["Kingdom of Norvatch", "Has taken no side. Trades with, and has some understanding with, whoever currently holds Elduvaine \u2014 and will deal with the coalition just as readily, for a price. Keeps whatever bargains it makes."]
-  ]
+  ],
+  { full: true }
 ));
 
 c.push(P("None of the three visiting powers is marching purely for Elduvaine\u2019s sake, and none of them pretends otherwise to anyone who asks directly. What each of them actually wants out of a won war is not something your character would know yet \u2014 only that they all, plainly, want something."));
@@ -181,7 +205,8 @@ c.push(table(
     ["The Listening Water", "Rivers and standing pools said to keep speech spoken at their edge, and give it back later in the speaker\u2019s own voice."],
     ["The Kept Season", "A wood that holds the season it was planted in, permanently, regardless of the calendar around it."],
     ["The Standing Light", "Worked stone that holds daylight poured into it, so that Elduvish cities are said to need no lamps at night."]
-  ]
+  ],
+  { full: true }
 ));
 
 c.push(P("More recent accounts \u2014 from the handful of people who have actually come out since the wards opened \u2014 say some of this is failing. Roads that no longer shorten. Rivers that answer with voices nobody recognizes, or don\u2019t answer at all. Whether that\u2019s true, and what it would mean if it is, your character will have to find out for themselves."));
@@ -195,11 +220,15 @@ c.push(BULLET([{ t: "\u201cA river between two market towns forgot eleven years 
 c.push(BULLET([{ t: "\u201cThere\u2019s a wood that used to hold spring forever. Somebody who got out says it\u2019s winter there now, and getting colder every season, which shouldn\u2019t be possible for a wood like that at all.\u201d" }]));
 c.push(BULLET([{ t: "\u201cThe man who took the kingdom was one of their own \u2014 kept the Archive for nineteen years, and everyone trusted him. Nobody agrees on why he turned. Nobody who\u2019d actually know is talking.\u201d" }]));
 c.push(BULLET([{ t: "\u201cCaer Ysolde used to glow at night, they say \u2014 stone full of stored daylight, so the city never needed a lamp. Somebody who saw it recently says it\u2019s properly dark now, for the first time anyone can remember.\u201d" }]));
+c.push(BULLET([{ t: "\u201CThey\u2019ve got things living in the hedges over there. Little ones, with opinions. A man I trust swears blind his cousin argued with one about an apple and lost.\u201D" }]));
+c.push(BULLET([{ t: "\u201CNorvatch never took the call, and Norvatch is doing very well out of a war it isn\u2019t in. Draw whatever conclusion you like; they\u2019ll sell you the rope either way, and they\u2019ll deliver on time.\u201D" }]));
 
 // ---------------------------------------------------------------- Building Your Character
 c.push(H1("Building Your Character"));
 
 c.push(P("This campaign runs on the 2014 edition of the fifth-edition rules (SRD 5.1). Characters begin at 5th level \u2014 Extra Attack and 3rd-level spells are already available from the first session, because Xavier did not choose raw recruits, he chose champions. Advancement is by milestone rather than by tallying experience: the party levels up when the story reaches a point that has earned it, not when a spreadsheet says so. The table expects four to six players, and every class, race, and background in the game is available \u2014 including full spellcasters from Harrowmark, whatever its reputation among the Elduvish."));
+
+c.push(P("On race specifically: pick whatever you want to play, then decide which of the realms above raised you. Those are separate questions in this setting and answering them separately will give you a better character than answering them together. An orc from Harrowmark and an orc from anywhere else have almost nothing in common; the interesting part of your character is the country, not the species."));
 
 c.push(H2("Why Were You Chosen?"));
 

@@ -133,7 +133,7 @@ c.push(table(
 // --------------------------------------------- What Is Actually Happening
 c.push(H1("What Is Actually Happening (DM Only)"));
 
-c.push(P("Caerwyn has survived the occupation better than most of Elduvaine, mostly through insignificance \u2014 it is small, it is far from the capital, and its habits are correspondingly slower to drain. Its Standing Light still glows most nights, faintly. That will not last, and nothing in this module should promise the party that it will; the point of showing them a working habit here is to let them feel what is actually being lost everywhere else, not to suggest Caerwyn is safe."));
+c.push(P("Caerwyn is halflings and humans in about equal measure, with a gnome family running the one stone-yard and an elderly elf who keeps the orchard above the town and has kept it, in the same four days of spring, since before anybody now living was born. It has survived the occupation better than most of Elduvaine, mostly through insignificance \u2014 it is small, it is far from the capital, and its habits are correspondingly slower to drain. Its Standing Light still glows most nights, faintly. That will not last, and nothing in this module should promise the party that it will; the point of showing them a working habit here is to let them feel what is actually being lost everywhere else, not to suggest Caerwyn is safe."));
 
 c.push(PS([DM("DM Only: "), { t: "Vale himself never appears in this module and should not be referenced by name at the checkpoint or by any occupation soldier the party meets \u2014 the occupation\u2019s day-to-day machinery runs on permits and levies issued by a distant authority, not on any personal presence, and that facelessness is deliberate. The Four Voices in Scene 4 is where the party first hears his name spoken by people who lived through what he did, and it should land as the first time he becomes real to them." }]));
 
@@ -176,7 +176,7 @@ c.push(H3("Stat Block (If Needed)"));
 
 c.push(...SB({
   name: "Occupation Guard",
-  meta: "Medium humanoid (human), any alignment \u2014 SRD Guard, unmodified",
+  meta: "Medium humanoid (hobgoblin, or any race), any alignment \u2014 SRD Guard, unmodified",
   ac: "16 (chain shirt, shield)",
   hp: "11 (2d8 + 2)",
   speed: "30 ft.",
@@ -191,6 +191,12 @@ c.push(...SB({
 }));
 
 // -------------------------------------------------------------- Skill DCs
+c.push(H3("The First Strange Thing"));
+
+c.push(P("Somewhere in the first hour ashore, before any of the plot happens, let the party see one thing that does not work the way the world works. The strong recommendation is the smallest available: a sprite in the orchard hedge, four inches of extremely rude opinion with wings, entirely uninterested in the war and deeply interested in whether anyone has brought food. The elf who keeps the orchard treats it the way a Harrowmark farmer treats a difficult neighbour \u2014 politely, with a running grievance, and without the faintest suggestion that anything remarkable is occurring."));
+
+c.push(P("That reaction is the point of the scene, not the sprite. The party has just crossed into a country where this is Tuesday, and the fastest way to establish it is to have a local be bored by it."));
+
 c.push(H2("Tiered Skill DCs"));
 
 c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign."));
@@ -237,8 +243,10 @@ c.push(P("Let the party sit with this before moving on. If a player wants to spe
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Wyn Alder"));
-c.push(P("Elduvish, mid-twenties, wearing a coat better made than her posting suggests she can afford. Speech: brisk, professional, and visibly rehearsed \u2014 she has said \u201Cpapers, or a reason\u201D enough times that it no longer costs her anything to say. Not a believer in the occupation; a person with a family in Caerwyn and no illusions about what happens to families of the uncooperative."));
-c.push(P("Open thread: Wyn is this campaign\u2019s first answer to what CLAUDE.md calls the occupation\u2019s ordinary, complicit people \u2014 not a villain, not a secret ally, just someone getting through it. A DM can bring her back later, changed by how the party treated her here: grateful and useful if treated well, gone or worse if not."));
+
+c.push(P("A gnome in her sixties, which for a gnome is a working prime, and a clerk by trade rather than by conviction. Gnomes keep most of Elduvaine\u2019s ledgers \u2014 it is the same profession that staffs the Archive, several rungs down \u2014 and the occupation found the local records already competently kept and simply carried on employing the people keeping them."));
+c.push(P("She wears a coat better made than her posting suggests she can afford. Speech: brisk, professional, and visibly rehearsed \u2014 she has said \u201Cpapers, or a reason\u201D enough times that it no longer costs her anything to say. Not a believer in the occupation; a person with a family in Caerwyn and no illusions about what happens to families of the uncooperative."));
+c.push(P("Open thread: Wyn is this campaign\u2019s first answer to the question of the occupation\u2019s ordinary, complicit people \u2014 not a villain, not a secret ally, just someone getting through it. A DM can bring her back later, changed by how the party treated her here: grateful and useful if treated well, gone or worse if not."));
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
@@ -252,13 +260,15 @@ c.push(P("If the party earns Wyn Alder\u2019s trust in Scene 3 rather than merel
 // -------------------------------------------------------------- Diverging
 c.push(H1("Diverging Paths (DM Only)"));
 
-c.push(BUL("How the party treated Wyn Alder.", "Threatened, ignored, or treated as a person worth understanding \u2014 track which. This is the campaign\u2019s first real answer to the question CLAUDE.md poses about the occupation\u2019s ordinary, complicit people, and it is worth revisiting whenever the party meets another collaborator later in the crusade."));
+c.push(BUL("How the party treated Wyn Alder.", "Threatened, ignored, or treated as a person worth understanding \u2014 track which. This is the campaign\u2019s first real answer to the question it keeps asking about the occupation\u2019s ordinary, complicit people, and it is worth revisiting whenever the party meets another collaborator later in the crusade."));
 c.push(BUL("Whether the checkpoint turned violent.", "If it did, word reaches Caer Ysolde days early \u2014 a DM may pay this off as tightened security, an alerted garrison, or a suspicious captor somewhere the party needed an easier path later."));
 
 // ---------------------------------------------------------------- Loot
 c.push(H1("Loot"));
 
-c.push(BUL("Nothing material.", "This module is deliberately not about treasure. If the party helped the baker or earned Wyn\u2019s trust, the payoff is information and goodwill (see Optional Content and Diverging Paths), not coin or equipment \u2014 keep it that way; Caerwyn has little to spare, and it should not feel plundered by the people meant to be delivering it.", { keepNext: true }));
+c.push(BUL("A standing-stone lamp.", "If the party helped Caerwyn\u2019s baker, she gives them one \u2014 gnome-cut, fist-sized, and full of a morning three weeks ago. Leave it in daylight and it lights a room for hours. It is worth roughly nothing in Caerwyn and will be the strangest object anyone in Harrowmark has ever held."));
+
+c.push(BUL("Otherwise, nothing material.", "This module is deliberately not about treasure. If the party helped the baker or earned Wyn\u2019s trust, the payoff is information and goodwill (see Optional Content and Diverging Paths), not coin or equipment \u2014 keep it that way; Caerwyn has little to spare, and it should not feel plundered by the people meant to be delivering it.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain
 c.push(H1("The Refrain"));

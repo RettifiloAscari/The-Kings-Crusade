@@ -161,6 +161,8 @@ c.push(P("The hold is less a fortress than a fortified manor \u2014 old stone, p
 
 c.push(BOX("\u201CAh,\u201D says the man in the doorway, unhurried, a ledger genuinely under one arm. \u201CMore of the fleet that thought my strait was free water. I\u2019m Ivor Thane, and I\u2019m told this happens to be my island. Your people are safe, fed, and entirely available \u2014 for a reasonable consideration. I find negotiations go better before anyone has drawn a sword, so let\u2019s try that first, shall we?\u201D"));
 
+c.push(P("Calanthe itself is a fishing island of halflings and humans with a stubborn minority of everyone the sea has ever washed up, and it has been quietly resenting its Warden for a decade without ever being numerous enough to do anything about it. Let the party meet them before they meet Thane: a halfling harbour-wife who counts the coalition\u2019s ships aloud and does not like the number, a human net-mender who will say exactly nothing about the Warden and a great deal about the weather."));
+
 c.push(H3("Running the Scene"));
 
 c.push(P("Thane will genuinely negotiate, and a table that wants to buy, threaten, or talk their way to the captives\u2019 release without a fight should be able to \u2014 he names an absurd price, but he is not attached to getting it, only to being paid something, and a successful Charisma (Persuasion or Intimidation) check against DC 16 gets his price down to something a coalition fleet can actually spare, or gets him to agree to release the captives in exchange for safe passage and a promise to leave his toll uncollected this once. He is not brave and is not interested in dying for a business model."));
@@ -182,7 +184,7 @@ c.push(table(
   { full: true }
 ));
 
-c.push(P("This is deliberately not a Hard or Deadly fight, and the table below is not a problem to fix. Historically, Richard\u2019s taking of Cyprus was closer to a rout than a battle \u2014 Isaac Komnenos\u2019s forces were simply outmatched \u2014 and the module is built the same way on purpose: the real tension is Sera\u2019s crew as captives (see below), not whether the party can win. If a table wants more bite, the cleanest way to add it is to give Thane one Veteran-statted lieutenant instead of two of the Bandits, which raises the ceiling without changing the monster count or crossing a boundary. Do not simply add more Bandits to compensate for a party of six \u2014 crossing from 5 to 7 monsters jumps the multiplier band up a full step and can overcorrect badly, exactly the trap CLAUDE.md warns about."));
+c.push(P("This is deliberately not a Hard or Deadly fight, and the table below is not a problem to fix. Historically, Richard\u2019s taking of Cyprus was closer to a rout than a battle \u2014 Isaac Komnenos\u2019s forces were simply outmatched \u2014 and the module is built the same way on purpose: the real tension is Sera\u2019s crew as captives (see below), not whether the party can win. If a table wants more bite, the cleanest way to add it is to give Thane one Veteran-statted lieutenant instead of two of the Bandits, which raises the ceiling without changing the monster count or crossing a boundary. Do not simply add more Bandits to compensate for a party of six \u2014 crossing from 5 to 7 monsters jumps the multiplier band up a full step and can overcorrect badly, exactly the trap that scaling an encounter by headcount sets."));
 
 c.push(P("If it comes to a fight, the captives are in an outbuilding across the hold\u2019s yard, guarded by one Bandit who will threaten them the moment things turn against Thane \u2014 not out of malice, but as a bargaining chip. A PC who breaks off to reach them (a round\u2019s worth of movement and a DC 13 Athletics or Acrobatics check to cross the yard without being cut off) heads that off cleanly. A table that ignores the captives entirely should still free them once the fight ends \u2014 this is tension, not a fail state."));
 
@@ -210,7 +212,7 @@ c.push(H2("Stat Blocks"));
 
 c.push(...SB({
   name: "Warden Ivor Thane",
-  meta: "Medium humanoid (human), any non-lawful alignment \u2014 SRD Veteran, renamed",
+  meta: "Medium humanoid (half-orc), any non-lawful alignment \u2014 SRD Veteran, renamed",
   ac: "17 (splint armor)",
   hp: "58 (9d8 + 18)",
   speed: "30 ft.",
@@ -260,11 +262,11 @@ c.push(P("The fleet resupplies, repairs what the storm damaged, and continues so
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Sera Vosk"));
-c.push(P("An Auberitz-born quartermaster, mid-thirties, more practical than the situation strictly allows. Speech: fast, dry, allergic to wasted words \u2014 she will assess a room\u2019s exits before its people, and say so if asked. Not a fighter by training, but not helpless either; she has spent a career keeping ships supplied through worse than one bad morning."));
+c.push(P("An Auberitz-born rock gnome and a career quartermaster, more practical than the situation strictly allows. Speech: fast, dry, allergic to wasted words \u2014 she will assess a room\u2019s exits before its people, and say so if asked. Not a fighter by training, but not helpless either; she has spent a career keeping ships supplied through worse than one bad morning."));
 c.push(P("Open thread: Sera is a natural recurring contact for logistics and information for the rest of the campaign \u2014 a DM can bring her back at Vindana, or later, as the person who always seems to know where the supplies actually are. She has no stake in Calanthe\u2019s fate beyond wanting the crates loaded and the fleet moving, and will say so plainly if the party asks her opinion on the island\u2019s future."));
 
 c.push(H2("Warden Ivor Thane"));
-c.push(P("Middle-aged, comfortable rather than menacing, carries a ledger more often than a weapon. Speech: unhurried, transactional, genuinely puzzled by moral objections to what he considers a straightforward toll on a strait he happens to control. Not cruel for its own sake \u2014 captives are an asset, and a damaged asset is worth less."));
+c.push(P("A half-orc going comfortably to seed, and comfortable rather than menacing with it; he carries a ledger more often than a weapon. Speech: unhurried, transactional, genuinely puzzled by moral objections to what he considers a straightforward toll on a strait he happens to control. Not cruel for its own sake \u2014 captives are an asset, and a damaged asset is worth less."));
 c.push(P("Open thread: if he survives \u2014 captured, exiled, or simply talked out of his hold \u2014 Thane is exactly the kind of small, self-interested operator who resurfaces later in a campaign, working for whoever will have him. A DM looking for a low-stakes recurring rogue later in the crusade has him available."));
 
 // --------------------------------------------------------------- Optional
@@ -287,6 +289,8 @@ c.push(H1("Loot"));
 
 c.push(BUL("The recovered stores.", "Enough of the fleet\u2019s lost supplies, plus a portion of Thane\u2019s accumulated plunder, to be a genuine funding boost for the crusade \u2014 play this narratively as the coalition arriving at Vindana somewhat better supplied than it otherwise would have, rather than a large individual coin payout at 5th level."));
 c.push(BUL("Thane\u2019s ledger.", "A genuinely useful item: years of records of ships, cargoes, and (if he is captured or cooperative) contacts along the southern sea-lanes. A DM can use it to justify a Diverging Paths hook or a piece of information the party needs later without it feeling handed to them."));
+c.push(BUL("A bag of holding.", "Bottom of Thane\u2019s stores, taken off a wreck years ago, and by a distance the most valuable thing on Calanthe \u2014 he has been using it to store rope. Sera Vosk will notice what it is roughly one second before anybody else does and will not pretend otherwise."));
+
 c.push(BUL("A signet ring.", "Thane\u2019s own, if he is defeated or surrenders it as part of a bargain. Non-magical, but recognizable to anyone in the region who has dealt with Calanthe\u2019s toll \u2014 a DM may let it open doors, or close them, wherever that is true.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain

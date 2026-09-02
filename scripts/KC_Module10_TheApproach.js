@@ -106,7 +106,7 @@ c.push(PS([{ t: "The King\u2019s Crusade \u2014 Module Ten", i: true }],
 // ---------------------------------------------------------------- Overview
 c.push(H1("Overview"));
 
-c.push(P("The coalition\u2019s final march brings it within sight of Caer Ysolde \u2014 and for the first time since Landfall, the party sees what the deepest drainage actually looks like, at the scale of a capital rather than a mile of road. This module also introduces the resistance leader in person: the member of the royal house who escaped the fall of the kingdom and has refused every offer of evacuation since. Nothing here forces the campaign\u2019s central choice. It only makes sure the table has actually sat with it before Module Eleven asks. Core scenes run three to three and a half hours; Optional Content fills out the rest of a five-hour session and can be cut cleanly if the table is short on time."));
+c.push(P("The coalition\u2019s final march brings it within sight of Caer Ysolde \u2014 and for the first time since Landfall, the party sees what the deepest drainage actually looks like, at the scale of a capital rather than a mile of road. This module also introduces the resistance leader in person: the member of the royal house who escaped the fall of the kingdom and has refused every offer of evacuation since. Nothing here forces the campaign\u2019s central choice. It only makes sure the table has actually sat with it before Module Eleven asks. Core scenes run three and a half to four hours; Optional Content fills out the rest of a five-hour session and can be cut cleanly if the table is short on time."));
 
 c.push(H2("A Quiet Module on Purpose"));
 
@@ -119,7 +119,8 @@ c.push(table(
     ["1. The Last Miles", "20\u201330 min", "The march\u2019s final stretch; accumulated weight, not new danger."],
     ["2. Caer Ysolde, Dark", "30\u201340 min", "First sight of the capital. The Standing Light has failed here."],
     ["3. The Regent", "60\u201375 min", "The resistance leader, met in person for the first time."],
-    ["4. What Waits at the Gates", "30\u201345 min", "The turn-back-or-hold question, weighed narratively."],
+    ["4. The Price", "30\u201340 min", "Doria Kell names what Norvatch wants. No combat; the module\u2019s hardest scene."],
+    ["5. What Waits at the Gates", "30\u201345 min", "The turn-back-or-hold question, weighed narratively."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
   ],
   { full: true }
@@ -130,7 +131,7 @@ c.push(H1("What Is Actually Happening (DM Only)"));
 
 c.push(P("The Regent has spent three years running a resistance that could never win, on purpose \u2014 not to defeat the occupation, which was never possible with the forces available, but to make sure Elduvaine never became a place that had simply accepted Vale. They know a great deal about the deepest state of the drainage, about the Archive\u2019s vaults from the outside, and about what the rest of the royal house actually wants for the kingdom afterward, which is not something they all agree on. None of this resolves the campaign\u2019s central open question \u2014 what Elduvaine should become after the war \u2014 and this module should not resolve it either."));
 
-c.push(PS([DM("DM Only: "), { t: "the Regent is a real, developed person, not an exposition device \u2014 give them their own opinions, including ones the party might disagree with. Do not use them to state a \u201Ccorrect\u201D answer to the turn-back-or-hold question; per CLAUDE.md, that question is deliberately left to the table, and a later session must not reweight it, including through this NPC\u2019s own persuasive certainty." }]));
+c.push(PS([DM("DM Only: "), { t: "the Regent is a real, developed person, not an exposition device \u2014 give them their own opinions, including ones the party might disagree with. Do not use them to state a \u201Ccorrect\u201D answer to the turn-back-or-hold question; that question is deliberately left to the table, and a later session must not reweight it, including through this NPC\u2019s own persuasive certainty." }]));
 
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Last Miles"));
@@ -164,7 +165,23 @@ c.push(P("The Regent will speak plainly about what the resistance actually knows
 c.push(PS([DM("DM Only: "), { t: "if the party has freed the Ward and the Magistrate, this is a natural moment for the Regent to ask after them directly and personally rather than as political assets \u2014 let that land as real family feeling, complicated by three years apart and by disagreement about what comes next." }]));
 
 // ---------------------------------------------------------------- Scene 4
-c.push(H2("Scene 4: What Waits at the Gates"));
+c.push(H2("Scene 4: The Price"));
+
+c.push(P("Before the coalition moves on Caer Ysolde, Doria Kell finds the party one more time \u2014 sent for, if they went looking after Vindana; arriving unannounced if they did not. She has brought a folio, a contract, and no small talk."));
+
+c.push(BOX("\u201CThree years of purchase records,\u201D she says, setting the folio down but not letting go of it. \u201cEverything Norvatch has bought out of this kingdom since the night the wards opened, by weight and by date. You want it because it is the only honest answer to the question none of your commanders can answer: how much of Elduvaine is actually left, and therefore how long you have.\u201D"));
+
+c.push(BOX("\u201CThe price is a signature. Norvatch\u2019s trading rights in a liberated Elduvaine, guaranteed, in writing, by your king. He has no authority to give me that \u2014 I am aware. He had no authority to promise the Archive to Oksitan either, and he did it in front of witnesses, and here we all are.\u201D"));
+
+c.push(P("This is the module\u2019s hardest scene and it has no combat in it. The information is real and Doria is not lying about any part of it: the ledgers say what she says they say, the price is exactly what she names, and Norvatch will honour whatever is signed to the letter and forever. Xavier will sign it if the party tells him to, and will look at them while he does it."));
+
+c.push(P("What it costs is not money. It is that the coalition has now promised the same kingdom three times \u2014 land to Oksitan, the Archive to Auberitz, and the standing right to buy the place by the cartload to a realm that never marched a single soldier. Every one of those promises is only payable on an Elduvaine that is taken and held, and the party is one module away from deciding whether it will be."));
+
+c.push(PS([DM("DM Only: "), { t: "refusing is a real option with a real cost, and the module must not tilt it. A party that refuses walks into Module Eleven not knowing how much of the kingdom is left, which is exactly as frightening as it sounds and entirely survivable. A party that signs walks in knowing \u2014 and knowing, too, that they have made the settlement one degree harder for whoever has to write it. Neither is the correct answer. Record which in the Branch Ledger and move on without comment." }]));
+
+c.push(PS([DM("DM Only: "), { t: "if the party asks what the ledgers actually say, give them a real number and let it be worse than they hoped: somewhere near a third of the Living Realm\u2019s resident magic is already gone, the rate has been climbing for a year, and Vale is not slowing down. Do not translate that into a countdown of days. It is a direction of travel, not a timer, and the party should feel hurried rather than scheduled." }]));
+
+c.push(H2("Scene 5: What Waits at the Gates"));
 
 c.push(P("Before the final push, let the coalition\u2019s leadership \u2014 and the party themselves \u2014 sit with the question the whole campaign has been building toward without answering: take Elduvaine, or, having proven it can be done, choose not to hold it."));
 
@@ -176,13 +193,15 @@ c.push(P("Do not resolve this scene with a decision. Its entire purpose is to ma
 c.push(H1("NPC Profiles"));
 
 c.push(H2("The Regent"));
-c.push(P("No proper name yet assigned, for the same reason as the Ward and the Magistrate (see the DM-Only note in What Is Actually Happening). Speech: measured, unsentimental, entirely unbothered by three years of danger that would have broken most people. Has genuinely considered leaving Elduvaine and genuinely chosen not to, more than once."));
+c.push(P("Human, in a family that mostly is not, and the only member of Elduvaine\u2019s royal house who was outside a wall when the wards opened. No proper name yet assigned, for the same reason as the Ward and the Magistrate (see the DM-Only note in What Is Actually Happening). Speech: measured, unsentimental, entirely unbothered by three years of danger that would have broken most people. Has genuinely considered leaving Elduvaine and genuinely chosen not to, more than once."));
 c.push(P("Open thread: the Regent\u2019s own view on Elduvaine\u2019s future is theirs to hold and the campaign\u2019s not to adjudicate \u2014 a DM developing the endgame should treat their opinion as one real voice among several in the royal house, not the deciding one."));
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
 
 c.push(H2("The Resistance, Briefly"));
+
+c.push(P("The Regent\u2019s people are exactly as unglamorous as the kingdom that produced them: a halfling miller who has been miscounting the levy for two years, two elven orchard-keepers who between them have hidden eleven people, a gnome who used to file Archive requisitions and now forges permits with the same handwriting. Nobody here is a soldier. All of them have been committing small, patient, deniable treason since before the coalition sailed."));
 c.push(P("If the table wants more of Elduvaine\u2019s ordinary resistance before the finale, let them meet a handful of the Regent\u2019s people directly \u2014 farmers, former Archive clerks, people who have been doing small, unglamorous sabotage for three years rather than anything a story would call heroic. No mechanical stakes; pure texture, and a chance to make the liberated feel like people rather than a cause."));
 
 c.push(H2("Letters Home"));
@@ -190,6 +209,8 @@ c.push(P("If the table wants a quiet character scene, let each PC write (or dict
 
 // -------------------------------------------------------------- Diverging
 c.push(H1("Diverging Paths (DM Only)"));
+
+c.push(BUL("Whether Xavier signed Norvatch\u2019s contract.", "Signed, refused, or deferred \u2014 track which, and who in the party argued for it. A signed contract means the coalition has promised the same kingdom three times and the party knows how much of Elduvaine is left; a refusal means they walk into the finale without that number. This is the last entry added before the campaign\u2019s final choice and it bears directly on it."));
 
 c.push(BUL("What the party told the Regent, and what the Regent told them.", "Not mechanically trackable in the usual sense, but worth a DM\u2019s private note \u2014 this conversation is the table\u2019s clearest signal yet of which way they are leaning on the campaign\u2019s central question, and it is worth remembering going into Module Eleven."));
 

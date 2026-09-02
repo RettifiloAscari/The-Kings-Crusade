@@ -10,7 +10,7 @@
 
 # Overview
 
-The coalition’s final march brings it within sight of Caer Ysolde — and for the first time since Landfall, the party sees what the deepest drainage actually looks like, at the scale of a capital rather than a mile of road. This module also introduces the resistance leader in person: the member of the royal house who escaped the fall of the kingdom and has refused every offer of evacuation since. Nothing here forces the campaign’s central choice. It only makes sure the table has actually sat with it before Module Eleven asks. Core scenes run three to three and a half hours; Optional Content fills out the rest of a five-hour session and can be cut cleanly if the table is short on time.
+The coalition’s final march brings it within sight of Caer Ysolde — and for the first time since Landfall, the party sees what the deepest drainage actually looks like, at the scale of a capital rather than a mile of road. This module also introduces the resistance leader in person: the member of the royal house who escaped the fall of the kingdom and has refused every offer of evacuation since. Nothing here forces the campaign’s central choice. It only makes sure the table has actually sat with it before Module Eleven asks. Core scenes run three and a half to four hours; Optional Content fills out the rest of a five-hour session and can be cut cleanly if the table is short on time.
 
 ## A Quiet Module on Purpose
 
@@ -21,14 +21,15 @@ Resist adding combat to pad this module’s length. Its entire job is weight and
 | 1. The Last Miles | 20–30 min | The march’s final stretch; accumulated weight, not new danger. |
 | 2. Caer Ysolde, Dark | 30–40 min | First sight of the capital. The Standing Light has failed here. |
 | 3. The Regent | 60–75 min | The resistance leader, met in person for the first time. |
-| 4. What Waits at the Gates | 30–45 min | The turn-back-or-hold question, weighed narratively. |
+| 4. The Price | 30–40 min | Doria Kell names what Norvatch wants. No combat; the module’s hardest scene. |
+| 5. What Waits at the Gates | 30–45 min | The turn-back-or-hold question, weighed narratively. |
 | Optional Content | 30–45 min | Run if the table has time; cut cleanly if not. |
 
 # What Is Actually Happening (DM Only)
 
 The Regent has spent three years running a resistance that could never win, on purpose — not to defeat the occupation, which was never possible with the forces available, but to make sure Elduvaine never became a place that had simply accepted Vale. They know a great deal about the deepest state of the drainage, about the Archive’s vaults from the outside, and about what the rest of the royal house actually wants for the kingdom afterward, which is not something they all agree on. None of this resolves the campaign’s central open question — what Elduvaine should become after the war — and this module should not resolve it either.
 
-**DM Only:** the Regent is a real, developed person, not an exposition device — give them their own opinions, including ones the party might disagree with. Do not use them to state a “correct” answer to the turn-back-or-hold question; per CLAUDE.md, that question is deliberately left to the table, and a later session must not reweight it, including through this NPC’s own persuasive certainty.
+**DM Only:** the Regent is a real, developed person, not an exposition device — give them their own opinions, including ones the party might disagree with. Do not use them to state a “correct” answer to the turn-back-or-hold question; that question is deliberately left to the table, and a later session must not reweight it, including through this NPC’s own persuasive certainty.
 
 ## Scene 1: The Last Miles
 
@@ -58,7 +59,23 @@ The Regent will speak plainly about what the resistance actually knows: the drai
 
 **DM Only:** if the party has freed the Ward and the Magistrate, this is a natural moment for the Regent to ask after them directly and personally rather than as political assets — let that land as real family feeling, complicated by three years apart and by disagreement about what comes next.
 
-## Scene 4: What Waits at the Gates
+## Scene 4: The Price
+
+Before the coalition moves on Caer Ysolde, Doria Kell finds the party one more time — sent for, if they went looking after Vindana; arriving unannounced if they did not. She has brought a folio, a contract, and no small talk.
+
+> *“Three years of purchase records,” she says, setting the folio down but not letting go of it. “Everything Norvatch has bought out of this kingdom since the night the wards opened, by weight and by date. You want it because it is the only honest answer to the question none of your commanders can answer: how much of Elduvaine is actually left, and therefore how long you have.”*
+
+> *“The price is a signature. Norvatch’s trading rights in a liberated Elduvaine, guaranteed, in writing, by your king. He has no authority to give me that — I am aware. He had no authority to promise the Archive to Oksitan either, and he did it in front of witnesses, and here we all are.”*
+
+This is the module’s hardest scene and it has no combat in it. The information is real and Doria is not lying about any part of it: the ledgers say what she says they say, the price is exactly what she names, and Norvatch will honour whatever is signed to the letter and forever. Xavier will sign it if the party tells him to, and will look at them while he does it.
+
+What it costs is not money. It is that the coalition has now promised the same kingdom three times — land to Oksitan, the Archive to Auberitz, and the standing right to buy the place by the cartload to a realm that never marched a single soldier. Every one of those promises is only payable on an Elduvaine that is taken and held, and the party is one module away from deciding whether it will be.
+
+**DM Only:** refusing is a real option with a real cost, and the module must not tilt it. A party that refuses walks into Module Eleven not knowing how much of the kingdom is left, which is exactly as frightening as it sounds and entirely survivable. A party that signs walks in knowing — and knowing, too, that they have made the settlement one degree harder for whoever has to write it. Neither is the correct answer. Record which in the Branch Ledger and move on without comment.
+
+**DM Only:** if the party asks what the ledgers actually say, give them a real number and let it be worse than they hoped: somewhere near a third of the Living Realm’s resident magic is already gone, the rate has been climbing for a year, and Vale is not slowing down. Do not translate that into a countdown of days. It is a direction of travel, not a timer, and the party should feel hurried rather than scheduled.
+
+## Scene 5: What Waits at the Gates
 
 Before the final push, let the coalition’s leadership — and the party themselves — sit with the question the whole campaign has been building toward without answering: take Elduvaine, or, having proven it can be done, choose not to hold it.
 
@@ -70,13 +87,15 @@ Do not resolve this scene with a decision. Its entire purpose is to make sure th
 
 ## The Regent
 
-No proper name yet assigned, for the same reason as the Ward and the Magistrate (see the DM-Only note in What Is Actually Happening). Speech: measured, unsentimental, entirely unbothered by three years of danger that would have broken most people. Has genuinely considered leaving Elduvaine and genuinely chosen not to, more than once.
+Human, in a family that mostly is not, and the only member of Elduvaine’s royal house who was outside a wall when the wards opened. No proper name yet assigned, for the same reason as the Ward and the Magistrate (see the DM-Only note in What Is Actually Happening). Speech: measured, unsentimental, entirely unbothered by three years of danger that would have broken most people. Has genuinely considered leaving Elduvaine and genuinely chosen not to, more than once.
 
 Open thread: the Regent’s own view on Elduvaine’s future is theirs to hold and the campaign’s not to adjudicate — a DM developing the endgame should treat their opinion as one real voice among several in the royal house, not the deciding one.
 
 # Optional Content
 
 ## The Resistance, Briefly
+
+The Regent’s people are exactly as unglamorous as the kingdom that produced them: a halfling miller who has been miscounting the levy for two years, two elven orchard-keepers who between them have hidden eleven people, a gnome who used to file Archive requisitions and now forges permits with the same handwriting. Nobody here is a soldier. All of them have been committing small, patient, deniable treason since before the coalition sailed.
 
 If the table wants more of Elduvaine’s ordinary resistance before the finale, let them meet a handful of the Regent’s people directly — farmers, former Archive clerks, people who have been doing small, unglamorous sabotage for three years rather than anything a story would call heroic. No mechanical stakes; pure texture, and a chance to make the liberated feel like people rather than a cause.
 
@@ -86,6 +105,7 @@ If the table wants a quiet character scene, let each PC write (or dictate, or si
 
 # Diverging Paths (DM Only)
 
+- **Whether Xavier signed Norvatch’s contract.** Signed, refused, or deferred — track which, and who in the party argued for it. A signed contract means the coalition has promised the same kingdom three times and the party knows how much of Elduvaine is left; a refusal means they walk into the finale without that number. This is the last entry added before the campaign’s final choice and it bears directly on it.
 - **What the party told the Regent, and what the Regent told them.** Not mechanically trackable in the usual sense, but worth a DM’s private note — this conversation is the table’s clearest signal yet of which way they are leaning on the campaign’s central question, and it is worth remembering going into Module Eleven.
 
 # Loot

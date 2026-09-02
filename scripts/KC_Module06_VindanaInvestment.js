@@ -146,6 +146,8 @@ c.push(P("Let the party see the siege take shape as a logistics problem as much 
 // ---------------------------------------------------------------- Scene 2
 c.push(H2("Scene 2: Raising the Engines"));
 
+c.push(P("The engines are Auberitz work and the crews raising them are Auberitz too \u2014 gnome engineers who designed the things and halfling quartermasters who move them, all of whom have strong views about how a siege ought to be conducted and none of whom have been asked. The party will get further here by taking the engineers seriously than by outranking them: the chief of the works is a gnome who has built eleven of these, has never once seen one used the way she intended, and will tell the party exactly what will go wrong an hour before it does."));
+
 c.push(P("A siege needs engines, and building them under threat of sortie is its own kind of work. This scene is largely non-combat by design \u2014 a chance for characters who do not want to spend the whole module fighting to matter directly."));
 
 c.push(BOX("Timber comes in faster than the engineers can shape it and slower than the marshals want it. A trebuchet frame goes up crooked twice before a Harrowmark carpenter, cursing fluently in two languages, gets the joint to hold. Nobody has slept properly in three days, and everybody has an opinion about the range on the mangonels."));
@@ -160,6 +162,10 @@ c.push(P("Xavier\u2019s own cavalry \u2014 mounted scouts and raiders, Harrowmar
 c.push(BOX("The riders move like people who trust their horses more than their orders, which is not disrespect so much as long habit \u2014 Harrowmark cavalry has always worked this way, fast and loose and hard to pin down. Their captain, without much ceremony, waves the party into formation as though they had always ridden with the unit."));
 
 c.push(H3("Running the Scene"));
+
+c.push(P("Vindana also has an undercity \u2014 a drain and cistern system older than the walls above it, which the coalition would very much like to use and which the garrison stopped guarding two years ago because something else took it over. Perhaps sixty kobolds (SRD, CR 1/8, 25 XP each) hold the tunnels now, and they have had two years and nothing else to do. Every junction is trapped, every trap is signposted in a language nobody in the coalition reads, and they will trade: the coalition wants a route under the walls, and the kobolds want the garrison\u2019s grain stores and a written promise that nobody comes back down afterwards. Run four to eight of them in any fight, in terrain that lets pack tactics and darkvision do the work, and let the negotiation be the real scene."));
+
+c.push(PS([DM("DM Only: "), { t: "the kobold route is the single best reward available for a party that solves Module Six sideways instead of by force, and it pays off directly in Module Seven \u2014 a party that has the tunnels does not need the postern gate and can open the assault from inside the walls. Do not require it. Do reward it enormously if they find it." }]));
 
 c.push(P("A supply column bound for Vindana \u2014 modest, lightly guarded, moving fast to avoid exactly this \u2014 can be intercepted on the road. This is a fast, mobile engagement; let mounted combat, terrain, and speed matter more than raw numbers. Use the Occupation Guard stat block (Module 3) for the column\u2019s escort, three or four of them, easily overwhelmed by a proper cavalry raid \u2014 the point of this scene is momentum and competence, not danger."));
 
@@ -198,7 +204,7 @@ c.push(H3("Stat Block"));
 
 c.push(...SB({
   name: "Marshal Ossian Drell",
-  meta: "Medium humanoid (human), lawful neutral \u2014 SRD Veteran, renamed",
+  meta: "Medium humanoid (hobgoblin), lawful neutral \u2014 SRD Veteran, renamed",
   ac: "17 (splint armor)",
   hp: "58 (9d8 + 18)",
   speed: "30 ft.",
@@ -221,6 +227,8 @@ c.push(P("Drell does not die or fall back easily in this module \u2014 he is mea
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Marshal Ossian Drell"));
+
+c.push(P("A hobgoblin of perhaps fifty, and a legionary officer of the kind his people produce reliably and other peoples mostly envy: literate, unhurried, personally brave in a way he considers unremarkable, and entirely without any stake in Vale\u2019s war beyond the contract that pays for it. He has held Vindana for three years, competently, and has filed a monthly report about it every one of those months."));
 c.push(P("Vindana\u2019s garrison commander, professional rather than cruel, visibly proud of a defense he has had three years to prepare. Speech: economical, respectful of competence in an enemy, entirely without the theatrical menace a table might expect \u2014 he is fighting a siege, not delivering a villain\u2019s speech."));
 c.push(P("Open thread: Drell is this campaign\u2019s model of the occupation\u2019s real competence, and a DM can use him again in Module Seven as the officer whose actual weakness the party finds \u2014 or, if the table prefers, as an officer who can be talked into surrender once that weakness is found, rather than one who must be killed."));
 
@@ -242,6 +250,8 @@ c.push(BUL("How First Assault was fought.", "Track whether the party\u2019s own 
 
 // ---------------------------------------------------------------- Loot
 c.push(H1("Loot"));
+
+c.push(BUL("Norvatch manifests.", "Found with the intercepted column \u2014 bills of lading, correctly filed, showing that a share of what feeds Vindana comes up through Norvatch bottoms under a standing contract the coalition has no legal instrument to void. Nobody in the column did anything illegal. That is the part that will irritate the party most."));
 
 c.push(BUL("Captured supply.", "Whatever the cavalry took from the intercepted column \u2014 modest, practical, and a genuine (if small) blow to Vindana\u2019s stores rather than treasure."));
 c.push(BUL("A garrison officer\u2019s dispatch.", "Recovered from the supply column or from First Assault\u2019s dead \u2014 real intelligence about Vindana\u2019s internal state, useful DM ammunition for Module Seven rather than something that needs to pay off here.", { keepNext: true }));

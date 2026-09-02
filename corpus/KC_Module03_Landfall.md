@@ -26,7 +26,7 @@ Run Scene 1 before Scene 2, in that order, without exception. The sourcebook’s
 
 # What Is Actually Happening (DM Only)
 
-Caerwyn has survived the occupation better than most of Elduvaine, mostly through insignificance — it is small, it is far from the capital, and its habits are correspondingly slower to drain. Its Standing Light still glows most nights, faintly. That will not last, and nothing in this module should promise the party that it will; the point of showing them a working habit here is to let them feel what is actually being lost everywhere else, not to suggest Caerwyn is safe.
+Caerwyn is halflings and humans in about equal measure, with a gnome family running the one stone-yard and an elderly elf who keeps the orchard above the town and has kept it, in the same four days of spring, since before anybody now living was born. It has survived the occupation better than most of Elduvaine, mostly through insignificance — it is small, it is far from the capital, and its habits are correspondingly slower to drain. Its Standing Light still glows most nights, faintly. That will not last, and nothing in this module should promise the party that it will; the point of showing them a working habit here is to let them feel what is actually being lost everywhere else, not to suggest Caerwyn is safe.
 
 **DM Only:** Vale himself never appears in this module and should not be referenced by name at the checkpoint or by any occupation soldier the party meets — the occupation’s day-to-day machinery runs on permits and levies issued by a distant authority, not on any personal presence, and that facelessness is deliberate. The Four Voices in Scene 4 is where the party first hears his name spoken by people who lived through what he did, and it should land as the first time he becomes real to them.
 
@@ -66,7 +66,7 @@ If the party threatens or attacks the checkpoint, the soldiers (use the Occupati
 
 **Occupation Guard**
 
-*Medium humanoid (human), any alignment — SRD Guard, unmodified*
+*Medium humanoid (hobgoblin, or any race), any alignment — SRD Guard, unmodified*
 
 **Armor Class:** 16 (chain shirt, shield)
 
@@ -89,6 +89,12 @@ If the party threatens or attacks the checkpoint, the soldiers (use the Occupati
 **ACTIONS**
 
 ***Spear.*** Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack.
+
+### The First Strange Thing
+
+Somewhere in the first hour ashore, before any of the plot happens, let the party see one thing that does not work the way the world works. The strong recommendation is the smallest available: a sprite in the orchard hedge, four inches of extremely rude opinion with wings, entirely uninterested in the war and deeply interested in whether anyone has brought food. The elf who keeps the orchard treats it the way a Harrowmark farmer treats a difficult neighbour — politely, with a running grievance, and without the faintest suggestion that anything remarkable is occurring.
+
+That reaction is the point of the scene, not the sprite. The party has just crossed into a country where this is Tuesday, and the fastest way to establish it is to have a local be bored by it.
 
 ## Tiered Skill DCs
 
@@ -134,9 +140,11 @@ Let the party sit with this before moving on. If a player wants to speak at the 
 
 ## Wyn Alder
 
-Elduvish, mid-twenties, wearing a coat better made than her posting suggests she can afford. Speech: brisk, professional, and visibly rehearsed — she has said “papers, or a reason” enough times that it no longer costs her anything to say. Not a believer in the occupation; a person with a family in Caerwyn and no illusions about what happens to families of the uncooperative.
+A gnome in her sixties, which for a gnome is a working prime, and a clerk by trade rather than by conviction. Gnomes keep most of Elduvaine’s ledgers — it is the same profession that staffs the Archive, several rungs down — and the occupation found the local records already competently kept and simply carried on employing the people keeping them.
 
-Open thread: Wyn is this campaign’s first answer to what CLAUDE.md calls the occupation’s ordinary, complicit people — not a villain, not a secret ally, just someone getting through it. A DM can bring her back later, changed by how the party treated her here: grateful and useful if treated well, gone or worse if not.
+She wears a coat better made than her posting suggests she can afford. Speech: brisk, professional, and visibly rehearsed — she has said “papers, or a reason” enough times that it no longer costs her anything to say. Not a believer in the occupation; a person with a family in Caerwyn and no illusions about what happens to families of the uncooperative.
+
+Open thread: Wyn is this campaign’s first answer to the question of the occupation’s ordinary, complicit people — not a villain, not a secret ally, just someone getting through it. A DM can bring her back later, changed by how the party treated her here: grateful and useful if treated well, gone or worse if not.
 
 # Optional Content
 
@@ -150,12 +158,13 @@ If the party earns Wyn Alder’s trust in Scene 3 rather than merely getting pas
 
 # Diverging Paths (DM Only)
 
-- **How the party treated Wyn Alder.** Threatened, ignored, or treated as a person worth understanding — track which. This is the campaign’s first real answer to the question CLAUDE.md poses about the occupation’s ordinary, complicit people, and it is worth revisiting whenever the party meets another collaborator later in the crusade.
+- **How the party treated Wyn Alder.** Threatened, ignored, or treated as a person worth understanding — track which. This is the campaign’s first real answer to the question it keeps asking about the occupation’s ordinary, complicit people, and it is worth revisiting whenever the party meets another collaborator later in the crusade.
 - **Whether the checkpoint turned violent.** If it did, word reaches Caer Ysolde days early — a DM may pay this off as tightened security, an alerted garrison, or a suspicious captor somewhere the party needed an easier path later.
 
 # Loot
 
-- **Nothing material.** This module is deliberately not about treasure. If the party helped the baker or earned Wyn’s trust, the payoff is information and goodwill (see Optional Content and Diverging Paths), not coin or equipment — keep it that way; Caerwyn has little to spare, and it should not feel plundered by the people meant to be delivering it.
+- **A standing-stone lamp.** If the party helped Caerwyn’s baker, she gives them one — gnome-cut, fist-sized, and full of a morning three weeks ago. Leave it in daylight and it lights a room for hours. It is worth roughly nothing in Caerwyn and will be the strangest object anyone in Harrowmark has ever held.
+- **Otherwise, nothing material.** This module is deliberately not about treasure. If the party helped the baker or earned Wyn’s trust, the payoff is information and goodwill (see Optional Content and Diverging Paths), not coin or equipment — keep it that way; Caerwyn has little to spare, and it should not feel plundered by the people meant to be delivering it.
 
 # The Refrain
 

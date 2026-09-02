@@ -28,6 +28,8 @@ You are not part of the army. You are what a king sends ahead of one: four to si
 
 # Where You’re From: Harrowmark
 
+Assuming you are — plenty of the party will not be, and the next section covers the rest. But Harrowmark is the crusade’s spine and the king’s own country, and it is worth knowing whether you came from it or merely arrived in it.
+
 Harrowmark is cold, stony, and has never once been called marvellous by anyone who has actually been there. Grey stone under a greyer sky, hard winters, hill forts, and a people who take a great deal of convincing before they will call anything remarkable.
 
 Elduvish scholars have a habit of calling Harrowmark “unmagical,” which is a convenient phrase and not an accurate one. Harrowmark has wizards. It has priests whose prayers are answered, hedge-witches along the coast, war-mages in the king’s own pay, and a cold, well-regarded college that has taught evocation for two centuries. Magic in Harrowmark works exactly as it works everywhere else in the world outside Elduvaine: it is studied, cast, carried by a person, and spent. A character from Harrowmark can be any spellcaster in the game, and should never be told they can’t.
@@ -35,6 +37,22 @@ Elduvish scholars have a habit of calling Harrowmark “unmagical,” which is a
 What Harrowmark genuinely lacks is a land that participates. Its roads are exactly as long as they look. Its rivers hold nothing that is said to them. Its stone is dark once the sun goes down, and always has been. This is simply a fact about the place, not a flaw in it — and it is worth remembering the first time something in Elduvaine behaves otherwise.
 
 What Harrowmark has instead of wonder is wyverns. They nest in the high crags and always have, and dealing with them is not an adventure so much as a season of the working year, handled with long pikes, longer ropes, and losses the rest of the world finds alarming and Harrowmark finds ordinary. This produces a particular kind of person: not fearless, exactly, but hard to impress. Something enormous with wings overhead is a problem your grandmother already solved once. Whatever else your character carries out of Harrowmark, they carry that.
+
+# The Peoples of the Crusade
+
+No kingdom in this war belongs to one people. Every realm below is mixed, and what tells them apart is not who lives there but what that place has made of them — its trades, its institutions, and the things it asks its people to be good at. Play whatever you like from wherever you like; all of it fits.
+
+The clearest illustration is the dwarves. In Harrowmark they are crag-hold folk who hunt wyverns with long pikes and a great deal of rope, and are famous for it. In Norvatch they are factors and contract-lawyers whose written word is the most trusted instrument in the trading world. Same people, two countries, and a Harrowmark dwarf meeting a Norvatch dwarf will find they have markedly less in common than either has with the neighbours they grew up beside. Both will tell you so at length if you give them the opening.
+
+| **Where you might be from** | **Who you would have grown up among** |
+| --- | --- |
+| Harrowmark | Humans farming thin soil behind hill-fort walls, dwarves in the crag holds, and orcs in the high country for as many generations as anyone has counted. Half-orcs and half-elves throughout, unremarked — Harrowmark does not have the energy to remark on things. Every caster here is a trained professional, because the land itself does nothing. |
+| Kingdom of Oksitan | River country and horse country. Humans in the main, with an old landed nobility that is substantially dragonborn — houses that have held the same fords since before anyone wrote it down. Half-elves common at court and commoner in its diplomacy. |
+| Grand Duchy of Auberitz | The duchy that builds things: humans, gnomes and halflings, mercantile and engineering rather than martial, and privately of the view that this whole war is a logistics problem being mishandled by people who enjoy shouting. |
+| Kingdom of Norvatch | Guild-law country — dwarves and tieflings, humans throughout — where a bargain is written, witnessed, filed and binding, and where the realm’s entire standing rests on honouring the letter of one no matter what the letter turns out to have meant. |
+| Elduvaine | You would not be marching, but a character from the occupied kingdom is entirely playable. Elves, whose orchards hold the season they were planted in; gnomes, who keep the ledgers and cut the light-stone; halflings in the river parishes; humans throughout. If you are from here, you have been in exile or hiding for three years. |
+
+What your character does not know, and cannot, is what Elduvaine looks like now. Everyone above has heard it is bad.
 
 # Who Marches With You
 
@@ -79,10 +97,14 @@ What follows is exactly what it sounds like — things travelers, refugees, and 
 - “There’s a wood that used to hold spring forever. Somebody who got out says it’s winter there now, and getting colder every season, which shouldn’t be possible for a wood like that at all.”
 - “The man who took the kingdom was one of their own — kept the Archive for nineteen years, and everyone trusted him. Nobody agrees on why he turned. Nobody who’d actually know is talking.”
 - “Caer Ysolde used to glow at night, they say — stone full of stored daylight, so the city never needed a lamp. Somebody who saw it recently says it’s properly dark now, for the first time anyone can remember.”
+- “They’ve got things living in the hedges over there. Little ones, with opinions. A man I trust swears blind his cousin argued with one about an apple and lost.”
+- “Norvatch never took the call, and Norvatch is doing very well out of a war it isn’t in. Draw whatever conclusion you like; they’ll sell you the rope either way, and they’ll deliver on time.”
 
 # Building Your Character
 
 This campaign runs on the 2014 edition of the fifth-edition rules (SRD 5.1). Characters begin at 5th level — Extra Attack and 3rd-level spells are already available from the first session, because Xavier did not choose raw recruits, he chose champions. Advancement is by milestone rather than by tallying experience: the party levels up when the story reaches a point that has earned it, not when a spreadsheet says so. The table expects four to six players, and every class, race, and background in the game is available — including full spellcasters from Harrowmark, whatever its reputation among the Elduvish.
+
+On race specifically: pick whatever you want to play, then decide which of the realms above raised you. Those are separate questions in this setting and answering them separately will give you a better character than answering them together. An orc from Harrowmark and an orc from anywhere else have almost nothing in common; the interesting part of your character is the country, not the species.
 
 ## Why Were You Chosen?
 

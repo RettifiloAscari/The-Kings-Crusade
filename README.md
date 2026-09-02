@@ -12,6 +12,13 @@ The kingdom fell to a key, not a siege.
 characters are the champions he sends ahead of the army — down a road long enough to change
 them before they ever reach the kingdom at the end of it.
 
+Every realm in the war is a mixed country. Harrowmark's wyvern-watch is dwarves on the pikes
+and orcs on the ropes; Elduvaine is elves, gnomes and halflings living politely beside a
+landscape that eavesdrops, with dryads in the older woods; and the army occupying it is a
+hired hobgoblin legion that issues permits and files correct paperwork about terrible things.
+A fourth realm never took the call at all, and has been buying the drained kingdom by the
+cartload for three years.
+
 > *A strange and marvellous kingdom worth saving, and a long dangerous road to reach it.*
 
 This repository is the source of truth for the campaign.
@@ -97,7 +104,9 @@ so the Markdown and the published documents cannot drift apart.
 | **Advancement** | Milestone |
 
 Every stat block is drawn unaltered from the SRD and named for the campaign; the Stat Block
-Index in the DM Reference Guide records which SRD creature each one is built from. Every
+Index in the DM Reference Guide records which SRD creature each one is built from, alongside
+the creatures called for by reference — kobolds under Vindana, a troll in the Held Winter, a
+dryad who is the wood — and the four Elduvish wonders. Every
 combat carries adjusted-XP scaling for parties of four, five and six, checked against the
 DMG thresholds at all three sizes rather than only at the endpoints.
 

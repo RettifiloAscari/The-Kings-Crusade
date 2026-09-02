@@ -114,7 +114,7 @@ c.push(P("Vindana is held, the coalition is exhausted in the specific, good way 
 
 c.push(H2("Levity, Planned In"));
 
-c.push(P("CLAUDE.md is explicit that this campaign\u2019s relief valves are designed, not accidental, and this module is where that design shows up structurally. Play every scene here for warmth first: reunions, absurd logistics, recurring characters getting real room. If a DM feels the urge to raise the stakes, resist it \u2014 Module Nine will do that job. This one\u2019s job is rest."));
+c.push(P("This campaign\u2019s relief valves are designed rather than accidental, and this module is where that design shows up structurally. Play every scene here for warmth first: reunions, absurd logistics, recurring characters getting real room. If a DM feels the urge to raise the stakes, resist it \u2014 Module Nine will do that job. This one\u2019s job is rest."));
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
@@ -191,17 +191,27 @@ c.push(P("Late, with the day\u2019s business done, Xavier finds the party somewh
 
 c.push(BOX("\u201CThey\u2019ve started calling me something,\u201D he says, not quite a question. \u201CI keep waiting for someone to explain it to me properly and nobody will. I remember the dragon. I remember being fairly sure I was about to die. I don\u2019t remember deciding to be brave about it \u2014 I remember being too frightened to think of anything else to do.\u201D He is quiet for a moment. \u201CIs that what the songs are going to say happened? Because I\u2019d rather they didn\u2019t, if it\u2019s all the same.\u201D"));
 
-c.push(P("Let this be a real conversation rather than a scene to resolve. Xavier is not fishing for reassurance and does not need the party to tell him he is a hero; he genuinely does not know yet how he feels about the name, and the party\u2019s honest reaction \u2014 whatever it is \u2014 matters more here than any mechanical outcome. This scene needs no check and produces no loot. It is the module\u2019s actual point, arriving last, exactly where CLAUDE.md\u2019s instruction to plan levity in on purpose has been building since Scene 1."));
+c.push(P("Let this be a real conversation rather than a scene to resolve. Xavier is not fishing for reassurance and does not need the party to tell him he is a hero; he genuinely does not know yet how he feels about the name, and the party\u2019s honest reaction \u2014 whatever it is \u2014 matters more here than any mechanical outcome. This scene needs no check and produces no loot. It is the module\u2019s actual point, arriving last, exactly where a session built on deliberate levity has been heading since Scene 1."));
 
 // ------------------------------------------------------------ NPC Profiles
 c.push(H1("NPC Profiles"));
 
 c.push(H2("The Magistrate"));
-c.push(P("Elderly, dry, and entirely unbroken by three years of house arrest \u2014 if anything, sharpened by it. Speech: precise, faintly amused, allergic to being underestimated. Where the Ward met her captivity with fury, the Magistrate met hers with bureaucratic warfare, and won more of it than her captors ever noticed."));
+c.push(P("A gnome somewhere past two hundred, dry as a ledger and entirely unbroken by three years of house arrest \u2014 if anything, sharpened by it. She is the Ward\u2019s great-aunt by marriage, which is the sort of thing old Elduvish houses are full of, and she has spent the occupation being underestimated by people who had every opportunity to know better. Speech: precise, faintly amused, allergic to being underestimated. Where the Ward met her captivity with fury, the Magistrate met hers with bureaucratic warfare, and won more of it than her captors ever noticed."));
 c.push(P("Open thread: freed, she is a formidable and very funny recurring NPC \u2014 a DM can use her as a source of administrative chaos turned against the occupation in any later module, or simply as comic relief who happens to also be dangerous in exactly the way nobody expects from an old woman with a ledger."));
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
+
+c.push(H2("The Counting-House"));
+
+c.push(P("Vindana is a port, and Norvatch trades through ports. Three streets back from the harbour, a Norvatch counting-house has been open through the entire occupation and is open now, under the coalition, with the shutters down and a clerk at the desk and absolutely nothing to apologise for. This is the one cold scene in an otherwise warm module, and the module can carry it."));
+
+c.push(BOX("The factor does not stand up. \u201CWe are open,\u201D he says, in the tone of a man confirming the weather. \u201CWe were open last month as well. If your king would like to discuss terms, my principals will hear him \u2014 and if he would rather not, the arrangement we have runs another nine months and I would ask you not to interfere with lawful carriage.\u201D"));
+
+c.push(P("Everything he says is true and none of it is deniable. Norvatch has broken no agreement with the coalition because it never made one. The goods moving through that house are Elduvaine, by weight, sold under a contract with the occupation that predates the crusade\u2019s arrival by three years. A party that wants to seize the ledgers by force can \u2014 and will find them impeccably kept, entirely legal, and worth rather less taken than bought, because what they actually need is the house\u2019s cooperation in reading them."));
+
+c.push(PS([DM("DM Only: "), { t: "the ledgers are the campaign\u2019s clock, and this is where the party first sees the physical object. Do not let them buy it here \u2014 the factor is not authorised and says so. What he will do is send word to Doria Kell, which is what sets up Module Ten. If the party takes them by force anyway, they get numbers they cannot interpret and a Norvatch house that will deal with them thereafter strictly, correctly, and never generously again. That is a real consequence and not a punishment; play it exactly that flat." }]));
 
 c.push(H2("The Betting Ledger Returns"));
 c.push(P("If Module One was played and Brenna Vane is present per Scene 1, her old betting ledger from Greywatch makes a reappearance, now taking wagers on considerably higher-stakes nonsense \u2014 how long the peace will hold, whether the Magistrate and the Ward will get along, anything the table finds funny. Pure levity, no stakes."));

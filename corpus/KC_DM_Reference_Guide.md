@@ -10,7 +10,7 @@
 
 # Overview
 
-This document is the table’s working reference, not a fifth telling of the setting or the story. It gathers three things a DM needs at hand and does not want to hunt for across twelve other files: a one-page map of the whole campaign’s shape, an index of every stat block already built so a name can be found without a search, and the Branch Ledger — the compiled record of every tracked divergence, module by module, with a blank column for what actually happened at this table. Everything here is drawn from the sourcebook and the eleven module slots; nothing here is new canon, and nothing in the “Not yet decided” table in CLAUDE.md has been resolved to make this document tidier.
+This document is the table’s working reference, not a fifth telling of the setting or the story. It gathers three things a DM needs at hand and does not want to hunt for across twelve other files: a one-page map of the whole campaign’s shape, an index of every stat block already built so a name can be found without a search, and the Branch Ledger — the compiled record of every tracked divergence, module by module, with a blank column for what actually happened at this table. Everything here is drawn from the sourcebook and the eleven module slots; nothing here is new canon, and none of the campaign’s deliberately open questions have been quietly settled to make this document tidier.
 
 Use it during play as a quick-lookup: which module a name belongs to, what CR a recurring stat block sits at, what got decided last session that this session might reference. Use the Branch Ledger after every session, not just at the end of the campaign — an entry filled in while it is fresh is worth more than one reconstructed from memory two modules later.
 
@@ -30,12 +30,25 @@ Eleven module slots (twelve files — Module Two forks by road and only one half
 | 7 | The Siege of Vindana: The Breaking | Marshal Drell’s fate; the city breaks; Xavier becomes the Wyvernheart. |
 | 8 | Held Ground | Securing Vindana; the Magistrate freed. |
 | 9 | The Field Battle | General Voss’s army met in the open and broken; Tam Ondry. |
-| 10 | The Approach | The march on Caer Ysolde; counsel with the Regent. |
+| 10 | The Approach | The march on Caer Ysolde; the Regent; Norvatch names its price. |
 | 11 | The Decision at the Gates (Final) | Caer Ysolde falls; Maedoc Vale confronted; hold or set down. |
+
+# Peoples at a Glance
+
+Every realm is mixed; the table is who a party actually meets there and in what proportion. The load-bearing rule is that nobody in this campaign is their species — dwarves hunt wyverns in Harrowmark and keep contracts in Norvatch, and orcs fight on both sides of this war without a single NPC remarking on it.
+
+| **Realm or faction** | **Who you meet** | **What the place makes of them** |
+| --- | --- | --- |
+| Harrowmark | Humans, dwarves, orcs; half-orcs and half-elves throughout | Wyvern country. Dwarves on the pikes, orcs on the ropes, nine centuries unchanged. All magic is worked, professional and carried in a person, because the land does nothing. |
+| Elduvaine | Elves, gnomes, halflings, humans — plus dryads, sprites and satyrs | Elves keep the Kept Season orchards; gnomes clerk the Archive and cut the light-stone; halflings hold the river parishes and supply the whole kingdom’s manners. |
+| Oksitan | Humans, dragonborn nobility, half-elves at court | River and horse country. Dragonborn houses have held the same fords for longer than the records go back. |
+| Auberitz | Humans, gnomes, halflings | The duchy that builds things. The coalition’s siege train is theirs, gnome-designed and halfling-quartermastered. |
+| Norvatch | Dwarves, tieflings, humans | Guild-law country. A bargain is written, witnessed and binding, and honoured to the letter no matter what the letter turns out to have meant. |
+| The occupation | Hobgoblin core; orc, human, goblin auxiliaries; Elduvish clerks | A hired legion, not a horde. Permits, a published grain levy, competent officers, no fanatics. They are employees. |
 
 # Stat Block Index
 
-Every named stat block built so far, in order of first appearance. “SRD base” names the unmodified SRD creature a block was built from, per CLAUDE.md’s Mechanical Validation rules — renamed blocks keep the base creature’s numbers exactly and change only name, flavor text, and (where noted in the module) minor cosmetic description. The Occupation Guard is defined in Module 3, reprinted in full in Module 4 because that module’s own fight needs it to hand, and pointed at by reference in Modules 6, 7, 9 and 11.
+Every named stat block built so far, in order of first appearance. “SRD base” names the unmodified SRD creature a block was built from — renamed blocks keep the base creature’s numbers exactly and change only name, flavor text, and (where noted in the module) minor cosmetic description. The Occupation Guard is defined in Module 3, reprinted in full in Module 4 because that module’s own fight needs it to hand, and pointed at by reference in Modules 6, 7, 9 and 11.
 
 | **Name** | **SRD Base** | **CR (XP)** | **AC** | **HP** | **Module** |
 | --- | --- | --- | --- | --- | --- |
@@ -51,24 +64,48 @@ Every named stat block built so far, in order of first appearance. “SRD base�
 
 A stat block’s full traits and actions live only in its own module’s script — this index is for finding the right file fast, not for running the creature from this page alone.
 
+## Creatures Called For By Reference
+
+These are used by name in the modules without a reprinted block, because they are unmodified SRD entries a DM can look up in seconds. All are 2014 SRD.
+
+| **Creature** | **CR (XP)** | **Where it is called for** |
+| --- | --- | --- |
+| Kobold | 1/8 (25) | The old workings above Ashgate (2B, optional); Vindana’s undercity (6). Trap-layers and negotiators, not a slaughter. |
+| Winter Wolf | 3 (700) | The Held Winter (5, optional). Hunts the wood’s edges. |
+| Troll | 5 (1,800) | The Held Winter (5, optional). Has taken the orchard-keeper’s cottage. Regeneration is the fight. |
+| Dryad | 1 (200) | The Held Winter (5, optional). Not an encounter — a conversation, and the campaign’s grief in one NPC. |
+| Sprite | 1/4 (50) | Caerwyn’s orchard hedge (3). Four inches of extremely rude opinion. Pure texture. |
+| Ogre | 2 (450) | The mountain road (2B, optional), as an alternative to the kobold workings. |
+
+## The Elduvish Wonders
+
+Four habits made portable, and the campaign’s best treasure. Ordinary inside Elduvaine, astonishing everywhere else.
+
+| **Wonder** | **What it does** | **First available** |
+| --- | --- | --- |
+| Standing-stone lamp | Gnome-cut stone that holds daylight poured into it and gives it back for hours. | Module 3, from Caerwyn’s baker |
+| Flask of Listening Water | Holds what is said at its mouth; gives it back once, in the speaker’s own voice. | Module 5, at the Standing Water |
+| Road-token | Cut from a Willing Road waystone. Explains itself no more than the road does. | DM’s discretion |
+| Kept Season seeds | A small stand holds whatever season the seeds were sown in. | DM’s discretion |
+
 # Recurring NPCs
 
-Named NPCs the campaign’s own modules flag as “open threads” — built to be brought back, not to be used once and discarded. Three (the Ward, the Magistrate, the Regent) are members of Elduvaine’s royal house and deliberately carry no proper name yet; see CLAUDE.md’s “Not yet decided” table before assigning one.
+Named NPCs the campaign’s own modules flag as “open threads” — built to be brought back, not to be used once and discarded. Three (the Ward, the Magistrate, the Regent) are members of Elduvaine’s royal house and deliberately carry no proper name yet, and naming them is a decision this campaign has not yet made.
 
 | **Name** | **Introduced** | **Role** |
 | --- | --- | --- |
 | Xavier III of Harrowmark | 1 | The calling king. Leads in person; not yet the Wyvernheart until Module 7. |
-| Huntmaster Brenna Vane | 1 | Greywatch’s huntmaster; runs the wyvern hunt; a recurring source of camp levity. |
-| Sera Vosk | 2A | Auberitz quartermaster; a standing logistics and information contact. |
-| Garrick Hollow | 2B | Hired mountain guide; a standing source for overland routes and rumor. |
-| Wyn Alder | 3 | An occupation-era collaborator at the Landfall checkpoint; the campaign’s first answer to what an ordinary complicit person looks like. |
-| Doria Kell | 4 | Norvatch factor. Trades information for a price; genuinely takes no side. |
-| The Ward | 4 | Royal house, freed at Sennoch Hall. Precise rather than broken; a standing voice for what the liberated want. |
+| Huntmaster Brenna Vane (dwarf) | 1 | Greywatch’s huntmaster, two centuries old; runs the wyvern hunt; a recurring source of camp levity. |
+| Sera Vosk (rock gnome) | 2A | Auberitz quartermaster; a standing logistics and information contact. |
+| Garrick Hollow (half-elf) | 2B | Hired mountain guide; a standing source for overland routes and rumor. |
+| Wyn Alder (gnome) | 3 | An occupation-era clerk at the Landfall checkpoint; the campaign’s first answer to what an ordinary complicit person looks like. |
+| Doria Kell (tiefling) | 4 | Norvatch factor, and the campaign’s second-largest lever. Her house has been buying Elduvaine by weight for three years; her ledgers are the clock. Names her price in Module 10. |
+| The Ward (half-elf) | 4 | Royal house, freed at Sennoch Hall. Precise rather than broken; a standing voice for what the liberated want. |
 | Tam Ondry | 5 | Harrowmark courier attached to the lost column; a standing source for news arriving from elsewhere. |
-| Marshal Ossian Drell | 6 | Commands Vindana’s garrison; a competent officer, not a fanatic. Fate resolved in Module 7. |
-| The Magistrate | 8 | Royal house, freed in Vindana. Fought her captivity with bureaucratic warfare and won. |
-| General Ilyana Voss | 9 | Commands Vale’s field army. Fate resolved this module; a captured Voss is a real long-term asset. |
-| The Regent | 10 | Royal house, at large; runs what resistance survives and refuses evacuation. See the sourcebook. |
+| Marshal Ossian Drell (hobgoblin) | 6 | Commands Vindana’s garrison; a legionary professional on a contract, not a fanatic. Fate resolved in Module 7. |
+| The Magistrate (gnome) | 8 | Royal house, freed in Vindana; the Ward’s great-aunt by marriage. Fought her captivity with bureaucratic warfare and won. |
+| General Ilyana Voss (orc) | 9 | Commands Vale’s field army; came up through the same legion as Drell. Fate resolved this module; a captured Voss is a real long-term asset. |
+| The Regent (human) | 10 | Royal house, at large; runs what resistance survives and refuses evacuation. See the sourcebook. |
 | Maedoc Vale | 11 | The wizard. Appears in person only here. Whether he is still human is deliberately unresolved. |
 
 # The Branch Ledger
@@ -98,6 +135,7 @@ Every tracked divergence across the campaign, compiled from each module’s own 
 | 8 | Whether the party noticed the pressed clerk | Yes · No |  |
 | 9 | Which Scene 2 was run | Tam’s death · the third-thread alternate |  |
 | 9 | General Voss’s fate | Killed · captured · fled |  |
+| 10 | Whether Xavier signed Norvatch’s contract | Signed · refused · deferred |  |
 | 10 | What the party told the Regent, and what the Regent told them | (Private DM note — not mechanically tracked) |  |
 | 11 | The campaign’s final choice | Held · set down |  |
 | 11 | Vale’s fate | Killed · escaped · captured |  |

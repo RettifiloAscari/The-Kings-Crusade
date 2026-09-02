@@ -130,9 +130,9 @@ c.push(table(
 // --------------------------------------------- What Is Actually Happening
 c.push(H1("What Is Actually Happening (DM Only)"));
 
-c.push(P("The second king\u2019s death was exactly what it appears to be: an accident of weather and bad ground, not an ambush and not Vale\u2019s doing \u2014 he has never heard of this man and would not consider him worth the effort if he had. That plainness is the point. The coalition loses its second crown to a river or a storm, the same way real armies have, and the loss is not made more dramatic than it actually was. What the module is actually about is not the death itself but what the survivors do with it \u2014 and the Kyffh\u00E4user legend (see the Barbarossa touchstone in CLAUDE.md) is offered here as one live option among several for how the coalition receives it, not the only one."));
+c.push(P("The second king\u2019s death was exactly what it appears to be: an accident of weather and bad ground, not an ambush and not Vale\u2019s doing \u2014 he has never heard of this man and would not consider him worth the effort if he had. That plainness is the point. The coalition loses its second crown to a river or a storm, the same way real armies have, and the loss is not made more dramatic than it actually was. What the module is actually about is not the death itself but what the survivors do with it \u2014 and the old soldiers\u2019 belief that a king of that stamp does not die but sleeps in some hill, waiting until he is needed again, is offered here as one live option among several for how the coalition receives it, not the only one."));
 
-c.push(PS([DM("DM Only: "), { t: "the second king\u2019s realm is deliberately not named in this module. CLAUDE.md flags Oksitan as the plausible candidate by elimination \u2014 Auberitz is a grand duchy, Norvatch does not march \u2014 but notes plainly that this has not been signed off, and neither this module nor any NPC in it should confirm it. If a player asks directly which realm lost its king, the honest answer any NPC can give is that word has not settled that far down the column yet, which is true and also convenient." }]));
+c.push(PS([DM("DM Only: "), { t: "the second king\u2019s realm is deliberately not named in this module. Oksitan is the plausible candidate by elimination \u2014 Auberitz is a grand duchy, Norvatch does not march \u2014 but that has never actually been settled, and neither this module nor any NPC in it should confirm it. If a player asks directly which realm lost its king, the honest answer any NPC can give is that word has not settled that far down the column yet, which is true and also convenient." }]));
 
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: Word on the Road"));
@@ -190,6 +190,16 @@ c.push(H1("Optional Content"));
 c.push(H2("What the Coalition Believes Now"));
 c.push(P("If the table wants more of the coalition\u2019s reaction before Vindana, let the party spend time in camp hearing how differently Oksitan, Auberitz, and Harrowmark soldiers are each processing the loss \u2014 without confirming which realm the crown belonged to (see the DM-Only note above). Play this for texture: an argument about what kind of memorial, if any, is appropriate; a quiet, un-discussed uptick in soldiers touching still water on the march since. No mechanical stakes."));
 
+c.push(H2("The Held Winter"));
+
+c.push(P("The road to Vindana runs within half a day of a birch wood that was planted four days into spring three hundred years ago and has been nine weeks into a winter it was never sown in for most of a year. A party that goes to look finds the most legible single image of the draining the campaign has: a wood in the wrong season, dying of it, with an ecology that has moved in behind the change."));
+
+c.push(P("What lives there now came down out of the hills after the cold did. A pair of winter wolves (SRD, CR 3, 700 XP each) hunt the wood\u2019s edges and will shadow a small party for an hour before committing. Deeper in, a troll (SRD, CR 5, 1,800 XP) has taken the old orchard-keeper\u2019s cottage and is the reason the last two woodsmen did not come back \u2014 a straightforward, dangerous fight for a party of this level, and one that rewards anybody who remembers what regeneration does and does not survive. A DM running the wolves and the troll together should check the total against their table before committing; either alone is a full encounter."));
+
+c.push(P("The wood also has a dryad (SRD, CR 1), and she is the actual content of the scene. She is not an encounter. She has been the spirit of a spring wood for three centuries and is now the spirit of a winter one, and she is neither hostile nor grateful nor able to leave. She will talk, at length, and what she wants is for somebody to explain to her what has been done and why, which nobody in the party can do. A table that fights her has misread the scene; a table that sits down with her gets the campaign\u2019s grief in one conversation, from something that is not a person and is nonetheless quite plainly grieving."));
+
+c.push(PS([DM("DM Only: "), { t: "if the party asks whether killing Vale fixes her wood, the honest answer is that nobody knows and she does not expect it to. Do not have her forgive anyone, and do not have her curse anyone. She is a wood in the wrong season, and the wrong season is not going to end because a war did." }]));
+
 c.push(H2("A Skirmish on the Ridge"));
 c.push(P("If the table wants combat before this module ends, a small occupation patrol \u2014 scouting Vindana\u2019s approaches, not expecting a coalition column this size \u2014 can be spotted and engaged on the final ridge before Scene 3. Use the Occupation Guard stat block from Module 3 (three or four is sufficient); they flee to warn the city the moment the fight turns against them, which is itself useful information for Module 6 rather than a failure state."));
 
@@ -202,7 +212,9 @@ c.push(BUL("How the party engaged with the mourning at the Standing Water.", "Wh
 // ---------------------------------------------------------------- Loot
 c.push(H1("Loot"));
 
-c.push(BULLET([{ t: "Nothing material. ", b: true }, { t: "This module is not about treasure any more than Module Three was. Its currency is information and tone \u2014 the Branch Ledger entry above is the actual payoff." }], { keepNext: true }));
+c.push(BUL("A flask of Listening Water.", "Drawn at the Standing Water while the mourning was going on, by whoever thought to. It holds what was said at its mouth and gives it back once, in the speaker\u2019s own voice, and then it is only water. Whatever the party chose to put in it is the point; a DM should ask, and should write down the answer."));
+
+c.push(BULLET([{ t: "Otherwise, nothing material. ", b: true }, { t: "This module is not about treasure any more than Module Three was. Its currency is information and tone \u2014 the Branch Ledger entry above is the actual payoff." }], { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain
 c.push(H1("The Refrain"));

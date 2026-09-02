@@ -40,6 +40,8 @@ Let the party see the siege take shape as a logistics problem as much as a milit
 
 ## Scene 2: Raising the Engines
 
+The engines are Auberitz work and the crews raising them are Auberitz too — gnome engineers who designed the things and halfling quartermasters who move them, all of whom have strong views about how a siege ought to be conducted and none of whom have been asked. The party will get further here by taking the engineers seriously than by outranking them: the chief of the works is a gnome who has built eleven of these, has never once seen one used the way she intended, and will tell the party exactly what will go wrong an hour before it does.
+
 A siege needs engines, and building them under threat of sortie is its own kind of work. This scene is largely non-combat by design — a chance for characters who do not want to spend the whole module fighting to matter directly.
 
 > *Timber comes in faster than the engineers can shape it and slower than the marshals want it. A trebuchet frame goes up crooked twice before a Harrowmark carpenter, cursing fluently in two languages, gets the joint to hold. Nobody has slept properly in three days, and everybody has an opinion about the range on the mangonels.*
@@ -53,6 +55,10 @@ Xavier’s own cavalry — mounted scouts and raiders, Harrowmark-trained — ra
 > *The riders move like people who trust their horses more than their orders, which is not disrespect so much as long habit — Harrowmark cavalry has always worked this way, fast and loose and hard to pin down. Their captain, without much ceremony, waves the party into formation as though they had always ridden with the unit.*
 
 ### Running the Scene
+
+Vindana also has an undercity — a drain and cistern system older than the walls above it, which the coalition would very much like to use and which the garrison stopped guarding two years ago because something else took it over. Perhaps sixty kobolds (SRD, CR 1/8, 25 XP each) hold the tunnels now, and they have had two years and nothing else to do. Every junction is trapped, every trap is signposted in a language nobody in the coalition reads, and they will trade: the coalition wants a route under the walls, and the kobolds want the garrison’s grain stores and a written promise that nobody comes back down afterwards. Run four to eight of them in any fight, in terrain that lets pack tactics and darkvision do the work, and let the negotiation be the real scene.
+
+**DM Only:** the kobold route is the single best reward available for a party that solves Module Six sideways instead of by force, and it pays off directly in Module Seven — a party that has the tunnels does not need the postern gate and can open the assault from inside the walls. Do not require it. Do reward it enormously if they find it.
 
 A supply column bound for Vindana — modest, lightly guarded, moving fast to avoid exactly this — can be intercepted on the road. This is a fast, mobile engagement; let mounted combat, terrain, and speed matter more than raw numbers. Use the Occupation Guard stat block (Module 3) for the column’s escort, three or four of them, easily overwhelmed by a proper cavalry raid — the point of this scene is momentum and competence, not danger.
 
@@ -84,7 +90,7 @@ This can be run as a large-scale combat with the party at its center (use Marsha
 
 **Marshal Ossian Drell**
 
-*Medium humanoid (human), lawful neutral — SRD Veteran, renamed*
+*Medium humanoid (hobgoblin), lawful neutral — SRD Veteran, renamed*
 
 **Armor Class:** 17 (splint armor)
 
@@ -120,6 +126,8 @@ Drell does not die or fall back easily in this module — he is meant to survive
 
 ## Marshal Ossian Drell
 
+A hobgoblin of perhaps fifty, and a legionary officer of the kind his people produce reliably and other peoples mostly envy: literate, unhurried, personally brave in a way he considers unremarkable, and entirely without any stake in Vale’s war beyond the contract that pays for it. He has held Vindana for three years, competently, and has filed a monthly report about it every one of those months.
+
 Vindana’s garrison commander, professional rather than cruel, visibly proud of a defense he has had three years to prepare. Speech: economical, respectful of competence in an enemy, entirely without the theatrical menace a table might expect — he is fighting a siege, not delivering a villain’s speech.
 
 Open thread: Drell is this campaign’s model of the occupation’s real competence, and a DM can use him again in Module Seven as the officer whose actual weakness the party finds — or, if the table prefers, as an officer who can be talked into surrender once that weakness is found, rather than one who must be killed.
@@ -142,6 +150,7 @@ If the Ward was rescued in Module Four, she has real, specific knowledge of Vind
 
 # Loot
 
+- **Norvatch manifests.** Found with the intercepted column — bills of lading, correctly filed, showing that a share of what feeds Vindana comes up through Norvatch bottoms under a standing contract the coalition has no legal instrument to void. Nobody in the column did anything illegal. That is the part that will irritate the party most.
 - **Captured supply.** Whatever the cavalry took from the intercepted column — modest, practical, and a genuine (if small) blow to Vindana’s stores rather than treasure.
 - **A garrison officer’s dispatch.** Recovered from the supply column or from First Assault’s dead — real intelligence about Vindana’s internal state, useful DM ammunition for Module Seven rather than something that needs to pay off here.
 

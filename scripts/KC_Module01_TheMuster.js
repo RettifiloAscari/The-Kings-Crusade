@@ -115,6 +115,8 @@ c.push(P("Play the texture of the place before anything else happens in it. Harr
 
 c.push(P("What Harrowmark has instead is competence. Doors are barred against weather, not spirits. Watch fires burn all night on every hold\u2019s high ground, not from superstition but because something with wings sometimes comes out of the crags, and has for longer than anyone can date. People here do not gasp at danger; they reach for the nearest rope, or pike, or child, in that order, and get on with it. Voice every NPC in this module \u2014 Xavier included \u2014 from that same flat, competent register, and save the wonder for later."));
 
+c.push(P("Fill the place out as you go. Duncarrow\u2019s yard is humans and dwarves and orcs and a scatter of everyone else, all of them Harrowmark-born and none of them remarkable to each other: an orc farrier arguing with a dwarf quartermaster about the same sixteen horseshoes for the third day running, a half-elf sergeant reading a duty roster aloud to a queue that is not listening. Nobody in this module comments on any of it, and neither should the narration. The party comes from here. This is simply what home looks like."));
+
 c.push(table(
   ["Scene", "Target time", "Notes"],
   [30, 15, 55],
@@ -133,7 +135,7 @@ c.push(H1("What Is Actually Happening (DM Only)"));
 
 c.push(P("Nothing in this module is a trick. The wyvern at Greywatch is exactly what Brenna Vane says it is: a young, hungry animal pushed out of its usual range by a harder winter than most, doing what wyverns do. It has no connection to Vale, to Elduvaine, or to anything the party will learn about later. Its only job is to be the first thing this campaign asks the party to be brave about, and to show them \u2014 and the table \u2014 what \u201Cunimpressed\u201D actually looks like from the inside."));
 
-c.push(PS([DM("DM Only: "), { t: "Xavier is not yet the Wyvernheart, and nothing in this module may suggest that he will be. He does not fly, does not fight the wyvern personally if he is present at Greywatch (he should not be \u2014 keep him at Duncarrow), and no NPC may use the name early, even as a joke or a slip. See CLAUDE.md under Canon and Sources of Truth if you are unsure why this matters this much." }]));
+c.push(PS([DM("DM Only: "), { t: "Xavier is not yet the Wyvernheart, and nothing in this module may suggest that he will be. He does not fly, does not fight the wyvern personally if he is present at Greywatch (he should not be \u2014 keep him at Duncarrow), and no NPC may use the name early, even as a joke or a slip. The name has to be earned on the page, in front of the players, or it is only a title he turned up already wearing." }]));
 
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Summons"));
@@ -164,7 +166,7 @@ c.push(P("He does not walk them out. A steward does that, through a yard full of
 // ---------------------------------------------------------------- Scene 3
 c.push(H2("Scene 3: The Wyvern at Greywatch"));
 
-c.push(P("Greywatch announces itself before the road does: watchtowers on every high point, each with a horn-bearer standing a longer shift than seems reasonable, and a palisade studded here and there with a wyvern claw or a length of jaw nailed up as a ward that everyone insists is decoration and no one will take down. It is a hold built for exactly this, by people who have buried others to wyverns before and, without much ceremony about it, expect to again. Huntmaster Brenna Vane meets the party at the gate, sizes them up without much comment, and puts them to work."));
+c.push(P("Greywatch announces itself before the road does: watchtowers on every high point, each with a horn-bearer standing a longer shift than seems reasonable, and a palisade studded here and there with a wyvern claw or a length of jaw nailed up as a ward that everyone insists is decoration and no one will take down. It is a hold built for exactly this, by people who have buried others to wyverns before and, without much ceremony about it, expect to again. Greywatch is roughly half dwarves and half orcs with everyone else filling the gaps, and its wyvern-watch has been organised the same way for nine centuries: dwarves on the pikes, because a dwarf braced properly does not move, and orcs on the ropes, because somebody has to be strongest at the end of a line with a wyvern on the other end of it. Nobody here regards this as worth explaining, and will be visibly impatient with an outsider who asks. Huntmaster Brenna Vane meets the party at the gate, sizes them up without much comment, and puts them to work."));
 
 c.push(BOX("\u201CIt took two lambs and a shepherd\u2019s boy\u2019s arm Tuesday last,\u201D Brenna says, already walking, not waiting to see if they follow. \u201CYoung, hungry, pushed down off the high crags by the cold \u2014 not clever, not old enough to be clever. We\u2019ll rope it if we can and put it back where it came from. We\u2019ll kill it if we have to. Either way, nobody\u2019s grandmother is losing a leg on my watch. You keep up or you keep out of the way.\u201D"));
 
@@ -172,7 +174,7 @@ c.push(P("Give the party the rest of the daylight to see Greywatch properly befo
 
 c.push(H3("Running the Encounter"));
 
-c.push(P("The wyvern comes at dusk, out of a sky gone the color of a bruise, and is heard before it is seen \u2014 a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practiced shorthand of people who have done this before."));
+c.push(P("The wyvern comes at dusk, out of a sky gone the color of a bruise, and is heard before it is seen \u2014 a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practiced shorthand of people who have done this before \u2014 an orc roper with a line already spinning before the thing is in range, two dwarves setting a pike-brace into the frozen ground and swearing at it in the tone of people who do this every winter."));
 
 c.push(P("Harrowmark does not fight wyverns the way most parties expect to fight a dragon. A PC adjacent to the wyvern, or within its reach, may spend their action fixing a hunting rope to a wing or leg (Strength (Athletics) or Dexterity (Sleight of Hand), DC 13 \u2014 Brenna will call out which, and why, the first time it comes up). Three successful ropes from three different characters ground the wyvern: it loses its fly speed until it breaks free (its action, a DC 13 Athletics contest against the ropes) or the encounter ends. A grounded wyvern fighting on the ground, hemmed in by pikes, is a substantially safer fight than one still in the air, and this is deliberate \u2014 it is the module\u2019s built-in partial resolution, not a trick or a trap. Play the moment it goes down for everything it is worth: the ropes snapping taut, the hold-folk shouting the count, the sudden and enormous silence of something huge no longer in the air."));
 
@@ -180,7 +182,7 @@ c.push(P("The stinger is the fight\u2019s real danger and should read as one \u2
 
 c.push(H3("Scaling the Fight"));
 
-c.push(P("The wyvern below is the SRD statistics unmodified, run against Dungeon Master\u2019s Guide adjusted-XP thresholds for 5th-level characters (Easy 250 / Medium 500 / Hard 750 / Deadly 1100 per character). A single monster carries a \u00D71 multiplier at party sizes of 3\u20135 and \u00D70.5 at 6 or more \u2014 the party-of-six discount CLAUDE.md warns about, and it lands hard here."));
+c.push(P("The wyvern below is the SRD statistics unmodified, run against Dungeon Master\u2019s Guide adjusted-XP thresholds for 5th-level characters (Easy 250 / Medium 500 / Hard 750 / Deadly 1100 per character). A single monster carries a \u00D71 multiplier at party sizes of 3\u20135 and \u00D70.5 at 6 or more \u2014 the party-of-six discount that quietly softens most encounters for large tables, and it lands hard here."));
 
 c.push(table(
   ["Party size", "Adjusted XP", "Deadly threshold", "Reads as", "Compensate with"],
@@ -254,14 +256,14 @@ c.push(P("Speech: short sentences, plain words, and a habit of answering the que
 c.push(P("Open thread: he has told no one in this party, and will tell no one for some time, that leaving Harrowmark under a regency he does not fully trust is the decision from this crusade that frightens him most \u2014 not Vale, not the road, that. A DM looking for a private, human moment with him later in the campaign has this to draw on."));
 
 c.push(H2("Huntmaster Brenna Vane"));
-c.push(P("Late fifties, missing two fingers on her left hand to a stinger she still calls \u201Ca fair trade.\u201D Runs Greywatch\u2019s wyvern-watch and, unofficially, a hold-wide betting ledger on every kill \u2014 which limb, which method, how long. Speech: dry, economical, allergic to being thanked directly; deflects gratitude by immediately assigning a chore."));
+c.push(P("A dwarf in her second century, Greywatch\u2019s huntmaster for sixty years of it, missing two fingers on her left hand to a stinger she still calls \u201Ca fair trade.\u201D Runs Greywatch\u2019s wyvern-watch and, unofficially, a hold-wide betting ledger on every kill \u2014 which limb, which method, how long. Speech: dry, economical, allergic to being thanked directly; deflects gratitude by immediately assigning a chore."));
 c.push(P("Open thread: if the party impresses her, she offers what Greywatch actually has to give \u2014 not gold, but competence: a standing invitation to send word if Harrowmark-trained hands are ever needed again, which a DM can call in during Module 8 or later as a recurring, grounded ally rather than a one-scene NPC."));
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
 
 c.push(H2("The Betting Ledger"));
-c.push(P("Before or after the wyvern, Brenna\u2019s ledger makes the rounds of Greywatch\u2019s hall \u2014 a battered book of wagers going back decades, with a fresh page opened the moment the party arrives. Play this for pure levity: hold-folk arguing odds, someone trying to get the party to wager on themselves, an old wound reopened as an anecdote rather than a warning. No mechanical stakes; this is the relief valve CLAUDE.md asks every module to plan for rather than hope for."));
+c.push(P("Before or after the wyvern, Brenna\u2019s ledger makes the rounds of Greywatch\u2019s hall \u2014 a battered book of wagers going back decades, with a fresh page opened the moment the party arrives. Play this for pure levity: hold-folk arguing odds, someone trying to get the party to wager on themselves, an old wound reopened as an anecdote rather than a warning. No mechanical stakes; this is a relief valve, planned for rather than hoped for."));
 
 c.push(H2("Fortifying Greywatch"));
 c.push(P("If the table wants a prep phase before the wyvern strikes, run a short group effort to reinforce the hold\u2019s pens and towers \u2014 two or three successful checks (Athletics, Investigation, or anything else a player can justify) buy the party an advantageous position for the fight: advantage on the first round\u2019s initiative, or the wyvern\u2019s opening attack targeting a decoy instead of a person. Skip this cleanly if the table is eager to get to the fight itself."));
@@ -277,6 +279,10 @@ c.push(H1("Loot"));
 
 c.push(BUL("A Greywatch hunting pike.", "Masterwork but not magical \u2014 a reach weapon balanced by people who use them for a living. Reflavor as a longspear or glaive per the wielder\u2019s preference; treat as a normal weapon of its type, finely made."));
 c.push(BUL("A vial of Greywatch antitoxin.", "A single-use draught brewed from the hold\u2019s long experience with stinger wounds. Grants advantage on the next saving throw against poison damage or the poisoned condition within the next 24 hours."));
+
+c.push(BUL("Two potions of healing.", "Pressed on the party by Greywatch\u2019s healer with the flat instruction to bring them back empty rather than unused. Standard SRD potions of healing (2d4 + 2)."));
+
+c.push(BUL("A blade out of Duncarrow\u2019s armory.", "A +1 weapon of the recipient\u2019s type, cut with a dwarven runesmith\u2019s marks along the spine \u2014 worked magic, carried in the steel, exactly the kind Harrowmark makes and the only kind it has. Xavier hands it over without ceremony and slightly too fast, in the manner of a man who has decided not to make a speech about it."));
 c.push(BUL("Xavier\u2019s token.", "A plain iron badge, the king\u2019s own mark, given without ceremony. It carries no mechanical benefit and opens no doors by itself \u2014 but it is recognizable to anyone who has served under Xavier, and a DM may let it matter socially wherever that is true.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain
