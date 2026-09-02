@@ -390,6 +390,12 @@ wide tables that read badly in the two-column body.
   campaign to the 2024 rules, and do not offer to.** Write every stat block, spell
   reference, subclass assumption and rules citation against 2014. Where a source or a
   dataset offers both, take 2014.
+  **The standing constraint that follows from that:** *race*, not *species*; no weapon
+  masteries, Bastions, Epic Boons, or Heroic Inspiration; the 2014 exhaustion track, not
+  the revised one; the 2014 grapple rules, not the reworked ones; and monster math from
+  the 2014 DMG. This is settled and needs no reconfirming — the question was pinned before
+  the first stat block existed precisely so that no later session has to answer it by
+  accident.
 - **Party:** 4–6 players
 - **Starting level:** 5th — Extra Attack and 3rd-level spells online from session one.
   The party are the king's chosen champions, not raw levies. Build encounters for
