@@ -96,13 +96,15 @@ Let him talk before he fights. He will answer honest questions honestly and with
 
 ***Magic Resistance.*** Vale has advantage on saving throws against spells and other magical effects.
 
-***Spellcasting.*** Vale is an 18th-level spellcaster (spell save DC 17, +9 to hit with spell attacks; Intelligence). At will: disguise self, invisibility. Cantrips: fire bolt, light, mage hand, prestidigitation, shocking grasp. He has spell slots for 1st through 9th level and, before combat, casts mage armor and stoneskin on himself. His prepared spells include detect magic, identify, and magic missile (1st); detect thoughts, mirror image, and misty step (2nd); counterspell, fly, and lightning bolt (3rd); banishment and fire shield (4th); cone of cold, scrying, and wall of force (5th); globe of invulnerability (6th); teleport (7th); mind blank (8th, cast on himself before combat); and time stop (9th). Full spell mechanics follow the SRD Archmage entry exactly; only the name and flavor have changed.
+***Spellcasting.*** Vale is an 18th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). He can cast disguise self and invisibility at will, and has the following wizard spells prepared — Cantrips (at will): fire bolt, light, mage hand, prestidigitation, shocking grasp. 1st level (4 slots): detect magic, identify, mage armor*, magic missile. 2nd level (3 slots): detect thoughts, mirror image, misty step. 3rd level (3 slots): counterspell, fly, lightning bolt. 4th level (3 slots): banishment, fire shield, stoneskin*. 5th level (3 slots): cone of cold, scrying, wall of force. 6th level (1 slot): globe of invulnerability. 7th level (1 slot): teleport. 8th level (1 slot): mind blank*. 9th level (1 slot): time stop. Spells marked * he casts on himself before combat, and the stat block above assumes mage armor is already up.
 
 ***A Warder’s Instinct.*** Vale treats every spell as a rule to be applied rather than a force to be unleashed — flavor his spellcasting as precise and procedural, closer to a lock turning than an explosion, even when the effect is devastating.
 
 **ACTIONS**
 
-***Fire Bolt.*** Ranged Spell Attack: +9 to hit, range 120 ft., one target. Hit: 22 (4d10) fire damage. (Cantrip; his default action when not spending a higher-level slot.)
+***Dagger.*** Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage. He will not reach for it while he has a slot left, which is the point of it being here.
+
+***Fire Bolt.*** Ranged Spell Attack: +9 to hit, range 120 ft., one target. Hit: 22 (4d10) fire damage. Not a separate action in the SRD entry — reproduced here because it is his default turn when he is not spending a slot, and 4d10 is the 18th-level cantrip scaling.
 
 Vale fights to disable and delay, not to kill quickly — counterspell, banishment, and wall of force are all more in character for him than raw damage, and a DM should feel free to lean on control effects over pure lethality. He does not surrender. He also does not fight to the death in the ordinary heroic sense: at the DM’s discretion, a Vale reduced to under 20 hit points may attempt to teleport away rather than be finished off, particularly if the table would prefer the ambiguity of his fate to his confirmed death — either resolution (killed outright, or escaping to an unknown end) is fully compatible with everything else this module does.
 

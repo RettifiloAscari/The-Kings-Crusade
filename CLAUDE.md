@@ -465,6 +465,19 @@ is single-column.
   adversaries are deliberately off-baseline. Identify those as design and leave them alone.
 - **Check the encounter, not only the block.** Blocks can each be correct while the
   encounter they compose is not. This is the step that finds real bugs.
+- **A block that says "unmodified" must be diffed against the SRD entry, name by name.**
+  The first audit of the finished set found four blocks quietly missing a piece of the
+  creature they claimed to reproduce: two Parry reactions, a Keen Hearing and Sight trait,
+  the Archmage's Dagger action, and three Skills lines. Every one of them had correct AC,
+  HP, CR and ability scores, which is exactly why eyeballing them missed it — **the numbers
+  a transcription gets right are not evidence about the traits it dropped.** Enumerate
+  `special_abilities`, `actions`, `reactions`, `legendary_actions` and the skill/save
+  proficiencies from the JSON and assert each name appears in the block. A missing Parry is
+  a boss losing +2 to +3 AC against every melee attack in the fight it was tuned for.
+- **A block may add to the SRD; it may not silently claim it didn't.** Vale carries a
+  flavour trait and a Fire Bolt entry the SRD Archmage has no separate action for, which is
+  fine — but the block also asserted it followed the SRD "exactly" while omitting Dagger.
+  Say what was added and why, in the block.
 
 **SRD data** lives at `5e-bits/5e-database`, behind the proxy — attach it rather than
 fetching directly (`codeload.github.com` returns a 403 JSON error, not a tarball):
@@ -603,6 +616,27 @@ a column or page break, header rows carry `tableHeader` so they repeat when a lo
 does span a break, and the ability-score row in `SB()` uses `keepNext` so the values stay
 with their labels. A stat block whose STR/DEX/CON header lands in one column and its
 numbers in the next is a real bug and this is what prevents it.
+
+**Table cells must kill the inherited first-line indent.** `cell()` and `abCell()` both set
+`indent: { firstLine: 0 }`, for the same reason `BOX` and `VERSE` do — the template's
+default `firstLine=180` otherwise leaks in and every cell that wraps to a second line gets a
+ragged left edge, while centred ability scores are shoved off-centre hard enough to wrap
+"19 (+4)" onto two lines. Cell padding lives in `margins` (110 twips left/right), *not* in an
+indent; the two are easy to confuse because the leaked indent looks like padding until a
+cell wraps.
+
+**Every helper forwards its `opts`.** `P`, `PS`, `BULLET` and `BUL` all spread an options
+object into the paragraph. `BULLET` silently ignored its second argument for the whole first
+build-out, which meant a `keepNext` passed to it did nothing and looked like a LibreOffice
+bug. If a helper takes options, it must actually use them.
+
+**Headings carry `keepNext`, and so does the last item before the Refrain.** All three
+heading styles set `keepNext` so a heading can never sit alone at the foot of a column, and
+each module binds its final Loot bullet to the Refrain that follows. Without that binding the
+closing verse strands itself alone on an otherwise blank last page whenever a module's body
+happens to fill its pages exactly — which three of the eleven did. `keepNext` is inert
+wherever the content already fits, so the binding costs nothing in the modules that never
+had the problem.
 
 ## Current State
 

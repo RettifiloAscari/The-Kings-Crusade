@@ -46,14 +46,15 @@ const H1 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_1, children: [ne
 const H2 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(t)] });
 const H3 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_3, children: [new TextRun(t)] });
 
-const BULLET = (segs) => new Paragraph({
+const BULLET = (segs, opts = {}) => new Paragraph({
   numbering: { reference: "bullets", level: 0 },
   spacing: { after: 120 },
+  ...opts,
   children: segs.map(s => new TextRun({ text: s.t, bold: !!s.b, italics: !!s.i, color: s.c }))
 });
 
 const B = (lead, rest) => PS([{ t: lead + " ", b: true }, { t: rest }]);
-const BUL = (lead, rest) => BULLET(lead ? [{ t: lead + " ", b: true }, { t: rest }] : [{ t: rest }]);
+const BUL = (lead, rest, opts = {}) => BULLET(lead ? [{ t: lead + " ", b: true }, { t: rest }] : [{ t: rest }], opts);
 
 const BOX = (text) => new Paragraph({
   spacing: { before: 120, after: 160 },
@@ -85,14 +86,14 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 50, bottom: 50, left: 45, right: 45 }, children: [new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
 const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
-const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
-const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 } })); out.push(B("Armor Class:", d.ac)); out.push(B("Hit Points:", d.hp)); out.push(B("Speed:", d.speed)); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
+const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
+const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 } })); out.push(B("Armor Class:", d.ac)); out.push(B("Hit Points:", d.hp)); out.push(B("Speed:", d.speed)); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } if (d.reactions && d.reactions.length) { out.push(PS([{ t: "REACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.reactions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
 
 
 // ---------- content ----------
@@ -158,7 +159,7 @@ c.push(H3("The Ford: Tiered Skill DCs"));
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [40, 24, 12, 24],
+  [46, 26, 8, 20],
   [
     ["Read the ford and find the safest line across", "Survival / Nature", "13", "Moderate"],
     ["Steady a wagon or animal mid-crossing", "Athletics / Animal Handling", "13", "Moderate"],
@@ -177,7 +178,7 @@ c.push(BOX("\u201COksitan\u2019s allies pass free,\u201D Vell says, in the tone 
 
 c.push(H3("Running the Scene"));
 
-c.push(P("Vell will negotiate, and a table that wants to avoid a fight in this narrow, badly-chosen ground should be able to. A successful Charisma (Persuasion) check against DC 15, or convincing proof of a coalition writ of passage the party can produce or talk their way into being believed to have, gets the column through for a token payment. A successful Wisdom (Insight) check against DC 13 reveals that Vell is bluffing about his numbers \u2014 he has enough scouts to make a fight costly, not enough to actually hold the pass against a coalition column, and he knows it."));
+c.push(P("Vell will negotiate, and a table that wants to avoid a fight in this narrow, badly-chosen ground should be able to. A successful Charisma (Persuasion) check against DC 16, or convincing proof of a coalition writ of passage the party can produce or talk their way into being believed to have, gets the column through for a token payment. A successful Wisdom (Insight) check against DC 13 reveals that Vell is bluffing about his numbers \u2014 he has enough scouts to make a fight costly, not enough to actually hold the pass against a coalition column, and he knows it."));
 
 c.push(P("If the party wants to avoid Vell entirely rather than pay or fight him, a DC 16 Survival check (working from a scout\u2019s report or the party\u2019s own reconnaissance) finds a longer goat-track around the toll-keep that costs the column an extra half-day but avoids the confrontation altogether \u2014 a different flavor of nonviolent resolution than talking Vell down, and one some tables will prefer."));
 
@@ -185,11 +186,11 @@ c.push(P("If it comes to violence \u2014 Vell refuses reasonable terms, the part
 
 c.push(H3("Scaling the Fight"));
 
-c.push(P("Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both pulled from 5e-bits/5e-database, unmodified. Run with Vell plus three Scouts \u2014 four total monsters, inside the 3\u20136 monster band, so no table\u2019s party size crosses a multiplier boundary on its own."));
+c.push(P("Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts \u2014 four total monsters, inside the 3\u20136 monster band, so no table\u2019s party size crosses a multiplier boundary on its own."));
 
 c.push(table(
   ["Party size", "Base XP", "Multiplier", "Adjusted XP", "Medium threshold", "Reads as"],
-  [12, 12, 14, 14, 16, 22],
+  [9, 12, 13, 14, 20, 32],
   [
     ["4", "750", "\u00D72", "1,500", "2,000", "Easy\u2013Medium"],
     ["5", "750", "\u00D72", "1,500", "2,500", "Easy\u2013Medium, softer"],
@@ -211,12 +212,17 @@ c.push(...SB({
   speed: "30 ft.",
   str: 15, dex: 16, con: 14, int: 14, wis: 11, cha: 14,
   senses: "passive Perception 10",
+  saves: "Str +4, Dex +5, Wis +2",
+  skills: "Athletics +4, Deception +4",
   langs: "Common",
   cr: "2 (450 XP)",
   actions: [
     { n: "Multiattack", t: "Vell makes three melee attacks: two with his scimitar and one with his dagger. Or he makes two ranged attacks with his daggers." },
     { n: "Scimitar", t: "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage." },
     { n: "Dagger", t: "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage." }
+  ],
+  reactions: [
+    { n: "Parry", t: "Vell adds 2 to his AC against one melee attack that would hit him. To do so, he must see the attacker and be wielding a melee weapon." }
   ]
 }));
 
@@ -227,9 +233,13 @@ c.push(...SB({
   hp: "16 (3d8 + 3)",
   speed: "30 ft.",
   str: 11, dex: 14, con: 12, int: 11, wis: 13, cha: 11,
+  skills: "Nature +4, Perception +5, Stealth +6, Survival +5",
   senses: "passive Perception 15",
   langs: "Common",
   cr: "1/2 (100 XP)",
+  traits: [
+    { n: "Keen Hearing and Sight", t: "The scout has advantage on Wisdom (Perception) checks that rely on hearing or sight." }
+  ],
   actions: [
     { n: "Multiattack", t: "The scout makes two melee attacks or two ranged attacks." },
     { n: "Shortsword", t: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage." },
@@ -244,9 +254,9 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [40, 24, 12, 24],
+  [46, 26, 8, 20],
   [
-    ["Talk Vell down to a token toll", "Persuasion", "15", "Hard"],
+    ["Talk Vell down to a token toll", "Persuasion", "16", "Hard"],
     ["Read that Vell\u2019s numbers are a bluff", "Insight", "13", "Moderate"],
     ["Find a way around the toll-keep entirely", "Survival", "16", "Hard"],
     ["Spot the scouts on the ridgeline before they act", "Perception", "16", "Hard (their passive Perception is 15)"]
@@ -294,7 +304,7 @@ c.push(H1("Loot"));
 
 c.push(BUL("Vell\u2019s writ.", "A document, genuine as far as it goes, establishing his technicality of allegiance to Oksitan. Not valuable in itself, but a useful thread if a DM wants to raise the coalition\u2019s internal reliability as a question later in the campaign."));
 c.push(BUL("A mountain-forged blade.", "Taken from Vell or purchased from Garrick\u2019s local contacts \u2014 masterwork but not magical, well suited to rough terrain. Treat as a normal weapon of its type, finely made."));
-c.push(BUL("Salvage from the ford.", "Whatever of the lost wagon\u2019s cargo the party recovers or the column can spare from what remains \u2014 modest, practical supplies rather than treasure, playable as a small easing of the crusade\u2019s logistics rather than a coin payout at 5th level."));
+c.push(BUL("Salvage from the ford.", "Whatever of the lost wagon\u2019s cargo the party recovers or the column can spare from what remains \u2014 modest, practical supplies rather than treasure, playable as a small easing of the crusade\u2019s logistics rather than a coin payout at 5th level.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain
 c.push(H1("The Refrain"));
@@ -311,9 +321,9 @@ const doc = new Document({
   styles: {
     default: { document: { run: { font: "Georgia", size: 20 } } },
     paragraphStyles: [
-      { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 30, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 280, after: 140 }, outlineLevel: 0 } },
-      { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 24, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 200, after: 100 }, outlineLevel: 1 } },
-      { id: "Heading3", name: "Heading 3", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 22, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 160, after: 80 }, outlineLevel: 2 } }
+      { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 30, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 280, after: 140 }, outlineLevel: 0, keepNext: true } },
+      { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 24, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 200, after: 100 }, outlineLevel: 1, keepNext: true } },
+      { id: "Heading3", name: "Heading 3", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 22, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 160, after: 80 }, outlineLevel: 2, keepNext: true } }
     ]
   },
   sections: [{ properties: { page: { size: { width: 12240, height: 15840 }, margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 } } }, children: c }]

@@ -36,7 +36,7 @@ The camp above Caerwyn is the first time the party has seen the coalition as a w
 
 > *The camp smells of a dozen different cooking fires and sounds like three armies that have not yet decided how loudly they are allowed to dislike each other. An Oksitan sergeant argues good-naturedly with a Harrowmark quartermaster over a supply wagon; an Auberitz officer watches both of them with the particular patience of someone counting days until the argument becomes his problem.*
 
-Let the party walk the camp and meet it at their own pace. If Module 2A was played, Sera Vosk (see NPC Profiles, KC_Module02A_TheSeaRoad.js) is a natural, familiar face to have turn up here, now properly attached to the Auberitz contingent’s logistics; if Module 2B was played, use a new, unnamed Auberitz quartermaster instead, or introduce Garrick Hollow’s opposite number for texture. Either way, someone in camp should treat the party as already known — the story of whichever Module Two variant they played has traveled ahead of them.
+Let the party walk the camp and meet it at their own pace. If Module 2A was played, Sera Vosk (see her NPC profile in Module 2A) is a natural, familiar face to have turn up here, now properly attached to the Auberitz contingent’s logistics; if Module 2B was played, use a new, unnamed Auberitz quartermaster instead, or introduce Garrick Hollow’s opposite number for texture. Either way, someone in camp should treat the party as already known — the story of whichever Module Two variant they played has traveled ahead of them.
 
 ## Scene 2: What the Promise Is Worth
 
@@ -83,6 +83,8 @@ The Ward (see NPC Profiles) is sharp, unharmed, and immediately useful rather th
 | **STR** | **DEX** | **CON** | **INT** | **WIS** | **CHA** |
 | --- | --- | --- | --- | --- | --- |
 | 13 (+1) | 12 (+1) | 12 (+1) | 10 (+0) | 11 (+0) | 10 (+0) |
+
+**Skills:** Perception +2
 
 **Senses:** passive Perception 10
 

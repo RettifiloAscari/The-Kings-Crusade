@@ -35,7 +35,7 @@ Eleven module slots (twelve files — Module Two forks by road and only one half
 
 # Stat Block Index
 
-Every named stat block built so far, in order of first appearance. “SRD base” names the unmodified SRD creature a block was built from, per CLAUDE.md’s Mechanical Validation rules — renamed blocks keep the base creature’s numbers exactly and change only name, flavor text, and (where noted in the module) minor cosmetic description. The Occupation Guard reappears by direct reference in Modules 4, 6, 7, 9, and 11 rather than being redefined each time; look for it under Module 3.
+Every named stat block built so far, in order of first appearance. “SRD base” names the unmodified SRD creature a block was built from, per CLAUDE.md’s Mechanical Validation rules — renamed blocks keep the base creature’s numbers exactly and change only name, flavor text, and (where noted in the module) minor cosmetic description. The Occupation Guard is defined in Module 3, reprinted in full in Module 4 because that module’s own fight needs it to hand, and pointed at by reference in Modules 6, 7, 9 and 11.
 
 | **Name** | **SRD Base** | **CR (XP)** | **AC** | **HP** | **Module** |
 | --- | --- | --- | --- | --- | --- |

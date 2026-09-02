@@ -78,6 +78,8 @@ If the party threatens or attacks the checkpoint, the soldiers (use the Occupati
 | --- | --- | --- | --- | --- | --- |
 | 13 (+1) | 12 (+1) | 12 (+1) | 10 (+0) | 11 (+0) | 10 (+0) |
 
+**Skills:** Perception +2
+
 **Senses:** passive Perception 10
 
 **Languages:** Common

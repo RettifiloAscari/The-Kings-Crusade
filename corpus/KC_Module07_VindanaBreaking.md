@@ -71,7 +71,7 @@ Play this as a hazard the party survives and responds to, not a monster they fig
 
 > *Above the chaos, unmistakably, a single wyvern climbs hard toward the thing crossing the sky, and even at this distance there is no doubt at all whose banner-colors are on its rider.*
 
-**DM Only:** if your table specifically wants a direct fight with the dragon instead of this hazard framing, the cleanest fix is not to write one into this module — reskin a young dragon of appropriate challenge from the SRD (validated per Mechanical Validation against the party’s actual level) as a alternate Scene 3, with Xavier’s freeing of it in Scene 4 becoming the thing that ends that fight rather than a separate beat. This is a real departure from how the scene is designed above, and changes the module’s emotional shape from witnessed legend to shared victory — make it deliberately, not by default.
+**DM Only:** if your table specifically wants a direct fight with the dragon instead of this hazard framing, the cleanest fix is not to write one into this module — reskin a young dragon of appropriate challenge from the SRD (validated per Mechanical Validation against the party’s actual level) as an alternate Scene 3, with Xavier’s freeing of it in Scene 4 becoming the thing that ends that fight rather than a separate beat. This is a real departure from how the scene is designed above, and changes the module’s emotional shape from witnessed legend to shared victory — make it deliberately, not by default.
 
 ## Scene 4: The Wyvernheart
 

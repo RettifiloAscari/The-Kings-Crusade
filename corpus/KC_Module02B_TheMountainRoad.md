@@ -63,7 +63,7 @@ A day beyond the ford, the valley narrows to a single defensible road beneath a 
 
 ### Running the Scene
 
-Vell will negotiate, and a table that wants to avoid a fight in this narrow, badly-chosen ground should be able to. A successful Charisma (Persuasion) check against DC 15, or convincing proof of a coalition writ of passage the party can produce or talk their way into being believed to have, gets the column through for a token payment. A successful Wisdom (Insight) check against DC 13 reveals that Vell is bluffing about his numbers — he has enough scouts to make a fight costly, not enough to actually hold the pass against a coalition column, and he knows it.
+Vell will negotiate, and a table that wants to avoid a fight in this narrow, badly-chosen ground should be able to. A successful Charisma (Persuasion) check against DC 16, or convincing proof of a coalition writ of passage the party can produce or talk their way into being believed to have, gets the column through for a token payment. A successful Wisdom (Insight) check against DC 13 reveals that Vell is bluffing about his numbers — he has enough scouts to make a fight costly, not enough to actually hold the pass against a coalition column, and he knows it.
 
 If the party wants to avoid Vell entirely rather than pay or fight him, a DC 16 Survival check (working from a scout’s report or the party’s own reconnaissance) finds a longer goat-track around the toll-keep that costs the column an extra half-day but avoids the confrontation altogether — a different flavor of nonviolent resolution than talking Vell down, and one some tables will prefer.
 
@@ -71,7 +71,7 @@ If it comes to violence — Vell refuses reasonable terms, the party attacks, or
 
 ### Scaling the Fight
 
-Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both pulled from 5e-bits/5e-database, unmodified. Run with Vell plus three Scouts — four total monsters, inside the 3–6 monster band, so no table’s party size crosses a multiplier boundary on its own.
+Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts — four total monsters, inside the 3–6 monster band, so no table’s party size crosses a multiplier boundary on its own.
 
 | **Party size** | **Base XP** | **Multiplier** | **Adjusted XP** | **Medium threshold** | **Reads as** |
 | --- | --- | --- | --- | --- | --- |
@@ -97,6 +97,10 @@ As with the wyvern in Module One and Thane in Module 2A, this is not meant to be
 | --- | --- | --- | --- | --- | --- |
 | 15 (+2) | 16 (+3) | 14 (+2) | 14 (+2) | 11 (+0) | 14 (+2) |
 
+**Saving Throws:** Str +4, Dex +5, Wis +2
+
+**Skills:** Athletics +4, Deception +4
+
 **Senses:** passive Perception 10
 
 **Languages:** Common
@@ -110,6 +114,10 @@ As with the wyvern in Module One and Thane in Module 2A, this is not meant to be
 ***Scimitar.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage.
 
 ***Dagger.*** Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage.
+
+**REACTIONS**
+
+***Parry.*** Vell adds 2 to his AC against one melee attack that would hit him. To do so, he must see the attacker and be wielding a melee weapon.
 
 **Ashgate Scout**
 
@@ -125,11 +133,15 @@ As with the wyvern in Module One and Thane in Module 2A, this is not meant to be
 | --- | --- | --- | --- | --- | --- |
 | 11 (+0) | 14 (+2) | 12 (+1) | 11 (+0) | 13 (+1) | 11 (+0) |
 
+**Skills:** Nature +4, Perception +5, Stealth +6, Survival +5
+
 **Senses:** passive Perception 15
 
 **Languages:** Common
 
 **Challenge:** 1/2 (100 XP)
+
+***Keen Hearing and Sight.*** The scout has advantage on Wisdom (Perception) checks that rely on hearing or sight.
 
 **ACTIONS**
 
@@ -145,7 +157,7 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 
 | **Task** | **Skill** | **DC** | **Tier** |
 | --- | --- | --- | --- |
-| Talk Vell down to a token toll | Persuasion | 15 | Hard |
+| Talk Vell down to a token toll | Persuasion | 16 | Hard |
 | Read that Vell’s numbers are a bluff | Insight | 13 | Moderate |
 | Find a way around the toll-keep entirely | Survival | 16 | Hard |
 | Spot the scouts on the ridgeline before they act | Perception | 16 | Hard (their passive Perception is 15) |

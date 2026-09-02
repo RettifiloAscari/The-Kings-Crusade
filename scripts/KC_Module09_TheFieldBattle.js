@@ -45,14 +45,15 @@ const H1 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_1, children: [ne
 const H2 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun(t)] });
 const H3 = (t) => new Paragraph({ heading: HeadingLevel.HEADING_3, children: [new TextRun(t)] });
 
-const BULLET = (segs) => new Paragraph({
+const BULLET = (segs, opts = {}) => new Paragraph({
   numbering: { reference: "bullets", level: 0 },
   spacing: { after: 120 },
+  ...opts,
   children: segs.map(s => new TextRun({ text: s.t, bold: !!s.b, italics: !!s.i, color: s.c }))
 });
 
 const B = (lead, rest) => PS([{ t: lead + " ", b: true }, { t: rest }]);
-const BUL = (lead, rest) => BULLET(lead ? [{ t: lead + " ", b: true }, { t: rest }] : [{ t: rest }]);
+const BUL = (lead, rest, opts = {}) => BULLET(lead ? [{ t: lead + " ", b: true }, { t: rest }] : [{ t: rest }], opts);
 
 const BOX = (text) => new Paragraph({
   spacing: { before: 120, after: 160 },
@@ -84,14 +85,14 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 50, bottom: 50, left: 45, right: 45 }, children: [new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
 const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
-const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
-const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 } })); out.push(B("Armor Class:", d.ac)); out.push(B("Hit Points:", d.hp)); out.push(B("Speed:", d.speed)); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
+const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
+const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 } })); out.push(B("Armor Class:", d.ac)); out.push(B("Hit Points:", d.hp)); out.push(B("Speed:", d.speed)); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } if (d.reactions && d.reactions.length) { out.push(PS([{ t: "REACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.reactions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
 
 
 // ---------- content ----------
@@ -152,7 +153,7 @@ c.push(BOX("Tam Ondry doesn\u2019t bother reining in properly, half-falling out 
 
 c.push(H3("Running the Default Scene"));
 
-c.push(P("Tam\u2019s warning reaches the column\u2019s officers in time regardless of what the party does \u2014 that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 15 Medicine check, attempted within the first round after he falls, stabilizes him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module\u2019s emotional cost, and it should be allowed to land before Scene 3\u2019s battle begins."));
+c.push(P("Tam\u2019s warning reaches the column\u2019s officers in time regardless of what the party does \u2014 that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 16 Medicine check, attempted within the first round after he falls, stabilizes him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module\u2019s emotional cost, and it should be allowed to land before Scene 3\u2019s battle begins."));
 
 c.push(H3("The Alternate: A Third Thread"));
 
@@ -171,7 +172,7 @@ c.push(P("Use the Occupation Guard stat block (Module 3) for General Voss\u2019s
 
 c.push(H3("Scaling the Fight"));
 
-c.push(P("Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP \u2014 eight total monsters, inside the 7\u201310 band. At party sizes 3\u20135 the multiplier is \u00D72.5 (4,875 adjusted); at 6+ it drops to \u00D72 (3,900 adjusted). Against Deadly thresholds of 4,400 (four characters, at a higher level than Module One\u2019s table \u2014 recompute against your table\u2019s actual level) this reads as Hard-to-Deadly rather than the Easy-to-Medium calibration of this campaign\u2019s earlier fights, which is deliberate: this battle is supposed to be dangerous. If it reads as too hard once you have checked it against your own table\u2019s actual level and size, remove one or two Occupation Guards rather than reducing Voss \u2014 she is the fight\u2019s whole point."));
+c.push(P("Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP \u2014 seven total monsters, inside the 7\u201310 band. At party sizes 3\u20135 the multiplier is \u00D72.5 (4,875 adjusted); at 6+ it drops to \u00D72 (3,900 adjusted). Against a Deadly threshold of 4,400 \u2014 four characters at 5th level, which by this point in the campaign your table will have outgrown, so recompute against their actual level before you run it \u2014 this reads as Hard-to-Deadly rather than the Easy-to-Medium calibration of this campaign\u2019s earlier fights, which is deliberate: this battle is supposed to be dangerous. If it reads as too hard once you have checked it against your own table\u2019s actual level and size, remove one or two Occupation Guards rather than reducing Voss \u2014 she is the fight\u2019s whole point."));
 
 c.push(H3("Stat Block"));
 
@@ -195,6 +196,9 @@ c.push(...SB({
     { n: "Multiattack", t: "Voss makes three melee attacks or two ranged attacks." },
     { n: "Spear", t: "Melee or Ranged Weapon Attack: +7 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack." },
     { n: "Shield Bash", t: "Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) bludgeoning damage. If the target is Medium or smaller, it must succeed on a DC 15 Strength saving throw or be knocked prone." }
+  ],
+  reactions: [
+    { n: "Parry", t: "Voss adds 3 to her AC against one melee attack that would hit her. To do so, she must see the attacker and be wielding a melee weapon." }
   ]
 }));
 
@@ -205,11 +209,11 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [40, 24, 12, 24],
+  [46, 26, 8, 20],
   [
     ["Read the treeline as a prepared ambush site", "Investigation / Survival", "13", "Moderate"],
     ["Recognize the missing scouts as deliberate", "Insight", "13", "Moderate"],
-    ["Stabilize Tam Ondry after he falls (default Scene 2)", "Medicine", "15", "Hard"],
+    ["Stabilize Tam Ondry after he falls (default Scene 2)", "Medicine", "16", "Hard"],
     ["Hold a coalition position against Voss\u2019s pressure", "Athletics / relevant combat skill", "13", "Moderate"],
     ["Talk Voss into a battlefield surrender once clearly beaten", "Persuasion / Intimidation", "16", "Hard"]
   ],
@@ -251,7 +255,7 @@ c.push(BUL("General Voss\u2019s fate.", "Killed, captured, or fled \u2014 a capt
 c.push(H1("Loot"));
 
 c.push(BUL("Voss\u2019s field orders.", "Real intelligence about Caer Ysolde\u2019s defenses \u2014 see Optional Content."));
-c.push(BUL("Captured field equipment.", "Modest but genuine \u2014 weapons, armor, and supply recovered from Voss\u2019s broken column, worth collecting rather than a windfall."));
+c.push(BUL("Captured field equipment.", "Modest but genuine \u2014 weapons, armor, and supply recovered from Voss\u2019s broken column, worth collecting rather than a windfall.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain
 c.push(H1("The Refrain"));
@@ -268,9 +272,9 @@ const doc = new Document({
   styles: {
     default: { document: { run: { font: "Georgia", size: 20 } } },
     paragraphStyles: [
-      { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 30, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 280, after: 140 }, outlineLevel: 0 } },
-      { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 24, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 200, after: 100 }, outlineLevel: 1 } },
-      { id: "Heading3", name: "Heading 3", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 22, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 160, after: 80 }, outlineLevel: 2 } }
+      { id: "Heading1", name: "Heading 1", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 30, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 280, after: 140 }, outlineLevel: 0, keepNext: true } },
+      { id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 24, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 200, after: 100 }, outlineLevel: 1, keepNext: true } },
+      { id: "Heading3", name: "Heading 3", basedOn: "Normal", next: "Normal", quickFormat: true, run: { size: 22, bold: true, font: "Georgia", color: "3B2F2F" }, paragraph: { spacing: { before: 160, after: 80 }, outlineLevel: 2, keepNext: true } }
     ]
   },
   sections: [{ properties: { page: { size: { width: 12240, height: 15840 }, margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 } } }, children: c }]

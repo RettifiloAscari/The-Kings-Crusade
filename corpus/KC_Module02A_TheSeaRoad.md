@@ -56,13 +56,13 @@ The hold is less a fortress than a fortified manor — old stone, patched with n
 
 ### Running the Scene
 
-Thane will genuinely negotiate, and a table that wants to buy, threaten, or talk their way to the captives’ release without a fight should be able to — he names an absurd price, but he is not attached to getting it, only to being paid something, and a successful Charisma (Persuasion or Intimidation) check against DC 15 gets his price down to something a coalition fleet can actually spare, or gets him to agree to release the captives in exchange for safe passage and a promise to leave his toll uncollected this once. He is not brave and is not interested in dying for a business model.
+Thane will genuinely negotiate, and a table that wants to buy, threaten, or talk their way to the captives’ release without a fight should be able to — he names an absurd price, but he is not attached to getting it, only to being paid something, and a successful Charisma (Persuasion or Intimidation) check against DC 16 gets his price down to something a coalition fleet can actually spare, or gets him to agree to release the captives in exchange for safe passage and a promise to leave his toll uncollected this once. He is not brave and is not interested in dying for a business model.
 
 If the party refuses to pay, threatens him convincingly, is caught trying to free the captives by force, or simply attacks, it goes to violence — Thane’s guards (use the Bandit stat block) fight to protect the hold and its stores, but break and flee the moment Thane himself surrenders, is captured, or is reduced to half his hit points and makes his own morale call to cut losses. This should read as a real fight, not a formality, but it is not meant to be this module’s hardest moment; see Scaling the Fight, below, for why.
 
 ### Scaling the Fight
 
-Ivor Thane is the SRD Veteran (CR 3, 700 XP) renamed and reflavored, unmodified otherwise; his guards are SRD Bandits (CR 1/8, 25 XP each), both pulled from 5e-bits/5e-database. Run with Thane plus four Bandits — five total monsters, comfortably inside the 3–6 monster band, so no table’s party size pushes the count across a multiplier boundary on its own.
+Ivor Thane is the SRD Veteran (CR 3, 700 XP) renamed and reflavored, unmodified otherwise; his guards are SRD Bandits (CR 1/8, 25 XP each), both taken from the SRD unaltered. Run with Thane plus four Bandits — five total monsters, comfortably inside the 3–6 monster band, so no table’s party size pushes the count across a multiplier boundary on its own.
 
 | **Party size** | **Base XP** | **Multiplier** | **Adjusted XP** | **Medium threshold** | **Reads as** |
 | --- | --- | --- | --- | --- | --- |
@@ -83,7 +83,7 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 | Help the crew through the worst of the storm | Athletics / Survival / relevant spell | 13 | Moderate |
 | Recognize Calanthe’s coastline before making landfall | Survival / Nature | 13 | Moderate |
 | Get Calanthe’s frightened locals talking about Thane | Persuasion / Insight | 10 | Easy |
-| Talk Thane’s price down without a fight | Persuasion / Intimidation | 15 | Hard |
+| Talk Thane’s price down without a fight | Persuasion / Intimidation | 16 | Hard |
 | Cross the yard to reach the captives once a fight starts | Athletics / Acrobatics | 13 | Moderate |
 | Read that Thane is bluffing about a price he won’t die for | Insight | 13 | Moderate |
 

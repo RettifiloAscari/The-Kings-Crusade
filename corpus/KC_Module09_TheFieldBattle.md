@@ -46,7 +46,7 @@ A rider comes back down the column at a dead run — the same shape of scene as 
 
 ### Running the Default Scene
 
-Tam’s warning reaches the column’s officers in time regardless of what the party does — that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 15 Medicine check, attempted within the first round after he falls, stabilizes him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module’s emotional cost, and it should be allowed to land before Scene 3’s battle begins.
+Tam’s warning reaches the column’s officers in time regardless of what the party does — that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 16 Medicine check, attempted within the first round after he falls, stabilizes him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module’s emotional cost, and it should be allowed to land before Scene 3’s battle begins.
 
 ### The Alternate: A Third Thread
 
@@ -64,7 +64,7 @@ Use the Occupation Guard stat block (Module 3) for General Voss’s rank and fil
 
 ### Scaling the Fight
 
-Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP — eight total monsters, inside the 7–10 band. At party sizes 3–5 the multiplier is ×2.5 (4,875 adjusted); at 6+ it drops to ×2 (3,900 adjusted). Against Deadly thresholds of 4,400 (four characters, at a higher level than Module One’s table — recompute against your table’s actual level) this reads as Hard-to-Deadly rather than the Easy-to-Medium calibration of this campaign’s earlier fights, which is deliberate: this battle is supposed to be dangerous. If it reads as too hard once you have checked it against your own table’s actual level and size, remove one or two Occupation Guards rather than reducing Voss — she is the fight’s whole point.
+Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP — seven total monsters, inside the 7–10 band. At party sizes 3–5 the multiplier is ×2.5 (4,875 adjusted); at 6+ it drops to ×2 (3,900 adjusted). Against a Deadly threshold of 4,400 — four characters at 5th level, which by this point in the campaign your table will have outgrown, so recompute against their actual level before you run it — this reads as Hard-to-Deadly rather than the Easy-to-Medium calibration of this campaign’s earlier fights, which is deliberate: this battle is supposed to be dangerous. If it reads as too hard once you have checked it against your own table’s actual level and size, remove one or two Occupation Guards rather than reducing Voss — she is the fight’s whole point.
 
 ### Stat Block
 
@@ -104,6 +104,10 @@ Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP — eig
 
 ***Shield Bash.*** Melee Weapon Attack: +7 to hit, reach 5 ft., one creature. Hit: 9 (2d4 + 4) bludgeoning damage. If the target is Medium or smaller, it must succeed on a DC 15 Strength saving throw or be knocked prone.
 
+**REACTIONS**
+
+***Parry.*** Voss adds 3 to her AC against one melee attack that would hit her. To do so, she must see the attacker and be wielding a melee weapon.
+
 ## Tiered Skill DCs
 
 Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
@@ -112,7 +116,7 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 | --- | --- | --- | --- |
 | Read the treeline as a prepared ambush site | Investigation / Survival | 13 | Moderate |
 | Recognize the missing scouts as deliberate | Insight | 13 | Moderate |
-| Stabilize Tam Ondry after he falls (default Scene 2) | Medicine | 15 | Hard |
+| Stabilize Tam Ondry after he falls (default Scene 2) | Medicine | 16 | Hard |
 | Hold a coalition position against Voss’s pressure | Athletics / relevant combat skill | 13 | Moderate |
 | Talk Voss into a battlefield surrender once clearly beaten | Persuasion / Intimidation | 16 | Hard |
 
