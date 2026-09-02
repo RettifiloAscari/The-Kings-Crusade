@@ -17,7 +17,7 @@
 // leader (the royal house member who escaped and refuses evacuation, per
 // CLAUDE.md) appears in person for the first time here, referred to as "the
 // Regent" for the same reason the Ward and the Magistrate have no proper
-// names -- the royal family's names are still open in CLAUDE.md.
+// names -- the royal family\u2019s names are still open in CLAUDE.md.
 
 const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
 const fs = require('fs');
@@ -81,11 +81,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -190,6 +194,48 @@ c.push(BOX("Nobody puts it that bluntly. It comes out instead as smaller questio
 c.push(P("Do not resolve this scene with a decision. Its entire purpose is to make sure the table has heard the question asked seriously, by people with real stakes in the answer, before Module Eleven makes them answer it. End the module on the coalition making final preparations \u2014 supply, formation, the ordinary business of an army about to do something enormous \u2014 and hand off directly to Module Eleven."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("Reading the Ledgers follows the price scene and adds twenty minutes, and only happens at all if the party bought the folio. The Regent\u2019s Council is the counsel scene, with the question turned around and put to the party instead."));
+
+c.push(H2("The Puzzle: Reading the Ledgers"));
+
+c.push(P("If the party bought Doria Kell\u2019s folio, they now hold three years of purchase records and no idea what they mean. The arithmetic is the puzzle, the answer is a single number, and the number is worse than anybody hoped."));
+
+c.push(P("Norvatch records by weight and by date, not by kind, because Norvatch is buying tonnage and does not care what the tonnage was. Four columns and nothing else:"));
+
+c.push(table(
+  ["Year", "Cut light-stone, tons", "Other cargo, tons", "What the party can work out"],
+  [12, 26, 24, 38],
+  [
+    ["One", "1,400", "9,100", "Ordinary trade, plus a little. This is close to a normal year for Vindana."],
+    ["Two", "6,800", "8,900", "The other cargo has not moved. The light-stone has gone up nearly fivefold."],
+    ["Three", "19,200", "8,400", "And again. The curve is not linear and has not flattened."]
+  ], { full: true }
+));
+
+c.push(P("The insight is that the ordinary cargo is flat, which means Elduvaine\u2019s actual economy is unchanged and everything in the increase is the draining. And cut light-stone is not building stone: it is the medium, drained and packaged, and every ton of it is a piece of the Living Realm in a cart."));
+
+c.push(P("A character with the Archive Clerk or Season-Keeper background, or a DC 16 Intelligence check by anyone, converts it. Cairn Ithel\u2019s masons can say how much resident magic a ton of cut stone will hold. The Season-Keepers at Nantcorrow have the map of which woods have turned and in what order. Put the two together and the number comes out."));
+
+c.push(BOX("\u201CSomething near a third of it. A third of the Living Realm, gone through Vindana in three years, and the rate has been climbing every quarter and has not once slowed. That is what you have bought. I did tell you it was not good news. I only ever said it was true.\u201D"));
+
+c.push(PS([DM("DM Only: "), { t: "give them the number and do not turn it into a countdown of days. It is a direction of travel, not a timer, and the party should feel hurried rather than scheduled. Two things follow that the DM should let land on their own: the curve is accelerating, which means the fourth year is worse than the first three combined; and a party that refused the folio walks into Module Eleven without any of this, which is exactly as frightening as it sounds and is entirely survivable. Neither is the correct answer and the module must not tilt it." }]));
+
+c.push(H2("Set Piece: The Regent\u2019s Council"));
+
+c.push(P("A miller, two orchard-keepers, a forger who used to file requisitions, and the last free member of the royal house of Elduvaine, in the back of a lock-house eleven miles from the capital, deciding what to ask the coalition for."));
+
+c.push(BOX("\u201CThere are seven of us and a table. Aveline Ysolde is at the head of it because somebody has to be, not because anyone here would call her that out loud, and she has a list in front of her in a hand so small it is almost a cipher. She does not stand up when you come in. She says: sit down, we have four hours, and I would like to know what your king thinks he has promised, because we have heard three versions and none of them can all be true.\u201D"));
+
+c.push(P("She is right. The party has watched Xavier promise land to Oksitan, the Archive to Auberitz, and \u2014 if they signed in this module \u2014 the standing right to buy the kingdom by the cartload to a realm that never marched a soldier. Every one of those is only payable on an Elduvaine that is taken and held. Nobody asked Elduvaine."));
+
+c.push(B("What the resistance wants to know, in order:", "what the coalition has been promised. Who is expected to pay it. Whether the Concord\u2019s Tenth Work is going to be permitted to do what it has been openly saying it will do. And whether the party will tell them the truth about any of it."));
+
+c.push(P("The party can lie. It works. Aveline is not a lie detector and the meeting ends warmly and the resistance opens every door in the Braid for them. It also means the first time an Elduvish parish watches a Tenth Work chapter house go up on ground that had an Observance on it, somebody in that room will remember who said it would not happen."));
+
+c.push(PS([DM("DM Only: "), { t: "there is no check to pass here and nothing to win. This is the campaign asking the party, once, directly, what they actually think the crusade is for, in front of the people it is nominally being fought for. Whatever they say goes in the Branch Ledger verbatim. Do not editorialise, do not have Aveline approve or disapprove, and do not resolve it in this module or the next one." }]));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("The Regent"));

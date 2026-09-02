@@ -13,12 +13,12 @@
 // which variant of Module Two the table played: the second king, lost on
 // whichever road the party did not take, reaches them here as news, via the
 // Listening Water -- the second consecutive module to use the Four Voices
-// device, deliberately, per CLAUDE.md's instruction to use it as a recurring
+// device, deliberately, per CLAUDE.md\u2019s instruction to use it as a recurring
 // technique. The Kyffh\u00E4user refrain from the Barbarossa touchstone (see
-// CLAUDE.md's Touchstones) pays off directly in one of the four voices here.
+// CLAUDE.md\u2019s Touchstones) pays off directly in one of the four voices here.
 //
-// GATED CONTENT NOTICE: the second king's realm is NOT named or confirmed as
-// Oksitan's here, even though CLAUDE.md notes that inference as plausible --
+// GATED CONTENT NOTICE: the second king\u2019s realm is NOT named or confirmed as
+// Oksitan\u2019s here, even though CLAUDE.md notes that inference as plausible --
 // it is explicitly flagged there as not signed off, and this module does not
 // invent past that gate. He is referred to only as "the second king."
 
@@ -84,11 +84,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -178,6 +182,42 @@ c.push(BOX("The city sits where the coast folds around a natural harbor, walls p
 c.push(P("End the session here, on the sight of the city rather than on grief \u2014 the tone should turn forward, not linger. Hand off directly to Module 6 for the investment of Vindana."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("Who Is Speaking is the Standing Water, performed rather than summarised. Nine Weeks Into a Winter is the Held Winter under Optional Content, and it is a full ninety minutes with the wolves and the troll, or forty without them."));
+
+c.push(H2("The Puzzle: Who Is Speaking"));
+
+c.push(P("The Standing Water gives back the same three months in four registers and none of them are lying. The puzzle is not what happened; the puzzle is working out which voice to believe about which part, and the module should never resolve it."));
+
+c.push(P("Play all four. Do not label them. The players work out who is who, and then work out that the disagreement is the information."));
+
+c.push(BOX("\u201CAnd on the ninth day the King crossed at the ford in the sight of his whole army, and the water took him, and there was no enemy within forty miles, and God\u2019s judgement upon it is not for us to say.\u201D"));
+
+c.push(BOX("\u201CHe went in first. That is all. He always went in first, he was seventy-one and he always went in first, and the water was not even deep, and I want somebody to write down that it was not deep.\u201D"));
+
+c.push(BOX("\u201CBy order of the Marshal, the crossing is closed and the column will re-form on the near bank. Companies will draw three days' ration. There will be no further movement until the succession is settled.\u201D"));
+
+c.push(BOX("\u201CHe is under it. Threnn keeps what the water takes and gives it back when there is need, and he is under it sleeping, and I will thank you not to say otherwise in front of the boy.\u201D"));
+
+c.push(P("What each voice is reliable about: the court\u2019s account has the date and the place right and the judgement wrong. The soldier has the truth and no perspective. The proclamation has the consequences and no cause. The last one has nothing right at all and is the only one that tells the party what the coalition is going to be like for the next four modules."));
+
+c.push(PS([DM("DM Only: "), { t: "the fourth voice is the one that matters and it is not a puzzle to be solved. A broken column would very much rather believe its king is kept than drowned, and a party that goes around correcting people is arguing with grief rather than with a claim. Let them try. Let it go badly. This is also, quietly, the module where the campaign teaches that the Four Voices technique does not converge on a truth, which is the whole reason it is worth using." }]));
+
+c.push(H2("Set Piece: Nine Weeks Into a Winter"));
+
+c.push(P("Bryn Aeling was planted four days into spring seven hundred years ago and generations were married under it on that basis. It has been nine weeks into a winter it was never sown in for most of a year, and it is the most legible image of the draining in the campaign."));
+
+c.push(BOX("\u201CYou cross the hedge and the temperature drops eleven degrees in a single step and the sound goes. Behind you it is a warm afternoon in the Marches. In front of you there is forty acres of birch and apple standing in nine weeks of snow that has never once thawed, and every tree in it is in full blossom, and the blossom is frozen, and it has been frozen since it opened. Nothing has fallen. Nothing can fall. It is going to be like this until the trees die, and they are dying, slowly, and in the wrong order.\u201D"));
+
+c.push(B("What is in it.", "Two winter wolves working the edges, who will shadow the party for an hour before committing. A troll in the orchard-keeper\u2019s cottage, which is the reason the last two woodsmen did not come back. And the dryad, who is the actual content of the scene and is not an encounter."));
+
+c.push(B("Running the wolves and the troll together.", "Check it against your table before you commit. Two winter wolves is 1,400 XP and a troll is 1,800; at four monsters the multiplier is 2, which makes the adjusted total 6,400 and is a deadly encounter for five characters at 5th level and an extremely dangerous one for six. Either group alone is a full encounter and the module assumes they are met separately."));
+
+c.push(P("The dryad has been the spirit of a spring wood for three centuries and is now the spirit of a winter one, and she is neither hostile nor grateful nor able to leave. Use the Withering block in the bestiary if it comes to violence, and understand that a table which fights her has misread the scene. What she wants is for somebody to explain to her what has been done and why, and nobody in the party can, and that is the point."));
+
+c.push(PS([DM("DM Only: "), { t: "if the party asks whether killing Vale fixes her wood, the honest answer is that nobody knows and she does not expect it to. Do not have her forgive anyone. Do not have her curse anyone. She is a wood in the wrong season and the wrong season is not going to end because a war did." }]));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Tam Ondry"));

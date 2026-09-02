@@ -10,7 +10,7 @@
 
 # Overview
 
-This document is the table’s working reference, not a fifth telling of the setting or the story. It gathers three things a DM needs at hand and does not want to hunt for across twelve other files: a one-page map of the whole campaign’s shape, an index of every stat block already built so a name can be found without a search, and the Branch Ledger — the compiled record of every tracked divergence, module by module, with a blank column for what actually happened at this table. Everything here is drawn from the sourcebook and the eleven module slots; nothing here is new canon, and none of the campaign’s deliberately open questions have been quietly settled to make this document tidier.
+This document is the table’s working reference, not a fifth telling of the setting or the story. It gathers three things a DM needs at hand and does not want to hunt for across seventeen other files: a one-page map of the whole campaign’s shape, an index of every stat block already built so a name can be found without a search, a table of where every puzzle in the campaign is and what solves it, and the Branch Ledger — the compiled record of every tracked divergence, module by module, with a blank column for what actually happened at this table. Everything here is drawn from the sourcebook, the gazetteer, the bestiary and the eleven module slots; nothing here is new canon, and none of the campaign’s deliberately open questions have been quietly settled to make this document tidier.
 
 Use it during play as a quick-lookup: which module a name belongs to, what CR a recurring stat block sits at, what got decided last session that this session might reference. Use the Branch Ledger after every session, not just at the end of the campaign — an entry filled in while it is fresh is worth more than one reconstructed from memory two modules later.
 
@@ -105,8 +105,61 @@ Named NPCs the campaign’s own modules flag as “open threads” — built to 
 | Marshal Ossian Drell (hobgoblin) | 6 | Commands Vindana’s garrison; a legionary professional on a contract, not a fanatic. Fate resolved in Module 7. |
 | The Magistrate (gnome) | 8 | Royal house, freed in Vindana; the Ward’s great-aunt by marriage. Fought her captivity with bureaucratic warfare and won. |
 | General Ilyana Voss (orc) | 9 | Commands Vale’s field army; came up through the same legion as Drell. Fate resolved this module; a captured Voss is a real long-term asset. |
-| The Regent (human) | 10 | Royal house, at large; runs what resistance survives and refuses evacuation. See the sourcebook. |
+| Aveline Ysolde, the Regent (human) | 10 | Royal house, at large; runs what resistance survives and refuses evacuation. Has refused it in writing, twice. Stat block in the bestiary. |
+| Maelis Ysolde, the Veiled Sovereign (elf) | 11 | Held in Caer Ysolde. Dying at the same rate as the land, because a sovereign is bound to the habits. The campaign’s second clock, and the one that cannot be bought. No stat block, deliberately. |
+| Ninian Ysolde, the Ward (half-elf) | 4 | Freed at Sennoch Hall. Heir presumptive, and the one who has done the arithmetic on the Promise. |
+| Ottoline Vahn, the Magistrate (gnome) | 8 | Freed in Vindana. Fought three years of captivity by filing, and won. Holds the only complete record of the occupation. |
+| Emrys Ysolde, the Envoy (elf) | — | Held separately, and not entirely as a prisoner. Has been talking to Vale for three years. Complexity in the cost, not the cause; there is no reveal and no resolution. |
+| Raimon V of Oksitan (human) | 5 | The second crown, seventy-one and undeterred. Takes the road the party does not and drowns fording the Vaskren. Reaches the party as rumour, then refugees, then a problem. |
+| Serjeant Hoth (hobgoblin) | 4 | Held Sennoch Hall correctly for three years and would like that written down. Surrenders on terms, with the file. |
 | Maedoc Vale | 11 | The wizard. Appears in person only here. Whether he is still human is deliberately unresolved. |
+
+# Faith and Factions at a Glance
+
+The Concord holds that the Works made the world and withdrew while it was unfinished. Nine of them, worshipped across Harrowmark, Oksitan, Auberitz and Norvatch. Elduvaine never built a church at all, because you do not raise a temple to ask for an answer in a country where the river answers directly.
+
+| **The Work** | **Sphere** | **Domains** |
+| --- | --- | --- |
+| Ashet the Anvil | Craft, making, the honest tool | Knowledge, War |
+| Voran of the Long Road | Travel, messengers, guest-right | Life, Trickery |
+| Sennet the Witness | Oath, contract, law, testimony | Knowledge, Trickery |
+| Halevin the Hearth-Kept | Home, harvest, healing | Life, Nature |
+| Aurine the Unshuttered | Light, truth, dawn, courage | Light |
+| Duran Ninefold | War as discipline; the held line | War |
+| Threnn Greywater | Sea, storm, river, the drowned | Tempest |
+| Ossuar the Quiet Warden | Death, the grave, remembrance | Death |
+| Saveth of the Green Verge | Wilds, beasts, the seasons | Nature |
+| **Faction** | **Standing, in three steps** | **What the top step gets you** |
+| --- | --- | --- |
+| The Crusade | Sworn · Lance · Banner of the Call | Xavier without an appointment, and the standing to ask the coalition for something it does not want to give. |
+| The Order of the Tenth Work | Postulant · Hand · Warden of the Work | Disciplined troops, healing without price, and an expectation you will not like. |
+| The Ysolde Remnant | Known · Trusted · Named | Safe houses across the Braid, forged permits, and Aveline answering the same day. |
+| The Sixth Free Legion | Noted · Respected · Owed | Parley honoured, prisoners exchanged, and an officer who stays bought. |
+| House Kell of Norvatch | Client · Factor’s Guest · Signatory | Anything buyable, on time, plus three years of ledgers. |
+| The Unbound Clerks | Enquirer · Reader · Keeper’s Friend | The only people alive who can say what Vale has already read. |
+
+**DM Only:** the Tenth Work is where this campaign keeps its complexity, and it is on the party’s own side of the line. They are allies, they will die holding a wall for the party, and they intend to do something to the liberated kingdom that a great many Elduvish would call a second occupation with better manners. Do not make them hypocrites and do not give them a secret plan.
+
+# The Puzzle Index
+
+Every puzzle in the campaign, where it sits, and what solves it. Solutions are listed so a DM can recognise a good answer arriving from an unexpected direction, not so that only these answers count.
+
+| **Module** | **Puzzle** | **What solves it** |
+| --- | --- | --- |
+| 1 | The Muster Roll | Count the billets, walk the range at dawn, or ask a Stannock pikeman how many of his village came. |
+| 1 | The Ledge | Rope from above, bait it off, take the shepherds first, or bring the overhang down. No preferred answer. |
+| 2A | The Moved Light | Four pieces of evidence. Nobody moved a light; the harbour light was two hours late and Thane’s boats were already crewed. |
+| 2B | The Back of the Charter | Notice that a framed document has a reverse. Best outcome is Vell reading it himself. |
+| 2B | The Signposted Corridor | Read Draconic, or work out that the marks are honest warnings by watching what the kobolds do. |
+| 3 | Getting Past Wyn Alder | Be boring, be somebody else, split up to defeat the head count, or go round by the creeks. |
+| 4 | What the Water Heard | Ten minutes at the ornamental canal. Three watches, not two; the bell rope is frayed. |
+| 5 | Who Is Speaking | Four voices, none lying, none complete. Not meant to converge. |
+| 6 | What the Kobolds Want | Grain from the undercroft, a written promise that will actually hold, and both before the route. |
+| 7 | The Terms of the Binding | It must be commanded aloud. Silence the relay officer, the sound, or take the horn yourself. |
+| 8 | Three Years of Filing | Filed by issuing office, not subject. The fourth office has no docket mark, which is itself the mark. |
+| 9 | Voss’s Field Orders | Company, hour, bearing. Doubled numerals are feints; no bearing at all means reserve. |
+| 10 | Reading the Ledgers | Ordinary cargo is flat. All the increase is light-stone, and light-stone is the medium. About a third is gone. |
+| 11 | Access by Rule | The rule has no exception and never had one. Vale was never close. |
 
 # The Branch Ledger
 
@@ -139,5 +192,23 @@ Every tracked divergence across the campaign, compiled from each module’s own 
 | 10 | What the party told the Regent, and what the Regent told them | (Private DM note — not mechanically tracked) |  |
 | 11 | The campaign’s final choice | Held · set down |  |
 | 11 | Vale’s fate | Killed · escaped · captured |  |
+| 1 | What the party did about the muster roll | Reported it · buried it · never found it |  |
+| 1 | How the ledge was solved | Rope · baited off · shepherds first · overhang brought down |  |
+| 2A | Whether the coalition was told the truth about Thane | Told · withheld · never established |  |
+| 2A | Whether the draught team came off the ship | Saved · hatch closed |  |
+| 2B | How Vell came to honour the charter | He read it himself · shown it · taken from him · never found |  |
+| 2B | How the Old Workings went | Read the marks · fought through · not entered |  |
+| 3 | How the party passed the Caerwyn checkpoint | Boring · forged · split up · went round · caught |  |
+| 4 | What the water at Sennoch Hall gave them | Used it · never tried it |  |
+| 4 | Hoth’s surrender, and the file | Terms accepted · fought, file burned |  |
+| 6 | Whether the party opened the under-wall route | Negotiated · fought for it · never found it |  |
+| 6 | Whether the kobolds got their written promise | Signed and holds · signed and worthless · refused |  |
+| 7 | The bound dragon | Grounded · killed · neither |  |
+| 7 | Whether the binding instrument was recovered | Yes — names the office · No |  |
+| 8 | Whether the Keeper’s Office drawer was found | Found · missed |  |
+| 9 | Whether Voss’s reserve was located before it committed | Found · not found |  |
+| 10 | Whether the party worked out the number | Yes — about a third · No · refused the folio |  |
+| 11 | Whether the party established what the rule permits | Established · forced the doors · never reached them |  |
+| 11 | Whether the Sixth was bought out at term | Withdrew · declined to sortie · fought · never approached |  |
 
 The final choice draws on everything above it — before running Module 11’s Scene 4, a DM may find it worth reading back across this whole ledger with the table.

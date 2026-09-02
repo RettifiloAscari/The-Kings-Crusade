@@ -142,6 +142,49 @@ This costs something real, and the module should let it. The Promise goes unpaid
 
 Whichever member of the royal house the party has come to know best has their own reaction to this, and it should not be uncomplicated gratitude — someone who wanted to hold and someone who wanted to give have both had a say in what almost happened, and not everyone in that divided house will agree the party chose correctly. Xavier’s own place in this ending is quieter than in the other one; the songs about him will still be written, but they will have to reckon with a king who marched an army to the gates of a kingdom and then, deliberately, did not take it. That is a harder story to tell well, and this campaign trusts its table to have earned the right to tell it anyway.
 
+# Puzzles and Set Pieces
+
+A City That Is Not Lit opens the module and is worth five uninterrupted minutes with no dice in them. Access by Rule sits inside the Archive, is the last puzzle in the campaign, and is available on both branches.
+
+## Set Piece: A City That Is Not Lit
+
+Everyone in the coalition has heard about Caer Ysolde since childhood. Nine islands, sixty-one bridges, and a whole city built of stone that held the afternoon and gave it back from the ground up on any clear night, bright enough to read by on the bridges and dim enough to see stars through. It is the thing a Fenmarrow levyman has been walking toward for eight months.
+
+> *“You come over the last rise an hour before dawn and the valley is black. Not dark — black, the specific complete black of a landscape with nothing in it, and for about four seconds the whole column assumes there has been some mistake about the road. Then somebody finds the shape of it against the sky, and it is enormous, and it is right there, and there is not one light in it except the lamps on the walls, which are lamps, which are the ordinary kind, which are burning oil like anywhere else in the world.”*
+
+Let the column stop. Nobody orders it; it simply stops, over about a minute, all along its length. There is no speech and Xavier does not make one. Somewhere back in the line a Harrowmark sergeant says something short and obscene and it carries a very long way in the quiet.
+
+**DM Only:** this is the payoff for eight months of march and it is worth an entire uninterrupted five minutes of table time with no dice, no initiative, and no NPC explaining what anyone should feel about it. Every scene in this campaign that described light-stone — Caerwyn’s doorsteps, Vindana’s inner wall, the eleven feet they lit by hand in Module Eight — was building this shot. Do not add anything to it. Describe the black valley, let them look at it, and cut.
+
+## The Puzzle: Access by Rule
+
+The deepest vaults of the Ysolde Archive are behind doors that are not locked in any sense a thief would recognise. They are governed, the way the whole Archive has been governed for four hundred and eighty years, by rule rather than by power: a reader is admitted to what their rule permits and is not admitted past it, and there is no mechanism anywhere in the building for making an exception.
+
+This is the campaign’s last puzzle and it is the same puzzle Maedoc Vale spent nineteen years failing to solve. The party will have most of the pieces by now if they have been paying attention.
+
+- **The instrument that bound the dragon named an office, not a man.** Recovered in Module Seven. It compels obedience to the Keeper of the Ysolde Archive, whoever that is, which is how Vale did it without owning the thing.
+- **The Keeper is appointed by the Sovereign.** Any Archive Clerk knows this. Ottoline Vahn can produce the statute. It has never mattered to anybody because no Sovereign has ever needed to use it.
+- **Maelis Ysolde is alive, is here, and has never been deposed.** Vale kept her in her own apartments, considerately, with a skilled physician, for three years — because killing her would have raised questions about a great many instruments, his own appointment among them.
+- **The reading-glass shows nothing you are not entitled to read.** So it is also a test. Hand it to somebody and you can establish, in one second and with no argument, exactly what their rule permits.
+
+The rule permits the Keeper a great deal and the deepest vaults not at all. It permits the Sovereign the same. It has no exception, has never had one, and was written that way on purpose by people who had thought carefully about exactly this situation four hundred and eighty years before it happened.
+
+Which means Maedoc Vale opened a kingdom, hired an army, spent a third of the Living Realm, and held the building for three years, in pursuit of a permission that does not exist and cannot be created. He is not close. He was never close. Everything he has done was to buy time to look for a door that the people who built the place made sure was not there.
+
+**DM Only:** what is behind those doors has not been decided and this book is not going to decide it. That is deliberate and it is the single most important restraint in the whole campaign: the party can establish, completely, what the rule says and what it does not permit, and they can establish what that means about Vale, and the question of what is actually in there is left to your table because your table will answer it better than a printed page can. Describe the doors. Describe the rule. Let the players do the rest, and if they force them open anyway, decide it yourself, that night, and never tell them it was not written down.
+
+**DM Only:** note also what this puzzle does not do. It does not tell the party whether to hold Elduvaine or turn back, it does not make either ending correct, and it is available in both.
+
+## The Third Way In: The Sixth’s Contract
+
+Caer Ysolde is held by an army of employees, and a party that captured General Voss in Module Nine, or that has stood well with the Legion since Vindana, knows the two facts that follow from that. The Sixth Free Legion is on a written contract with a stated term. That term has fourteen weeks left on it.
+
+The Legion has never broken a contract in a hundred and forty years, which is the only reason anybody hires it, and it is not going to break this one. But the contract does not require the Sixth to die for Maedoc Vale, it does not renew itself, and it is payable in coin out of a kingdom that the party can now demonstrate is a third gone and accelerating. A professional army will do arithmetic that its employer would rather it did not.
+
+**What this opens.** Not a betrayal and not a mutiny — nothing so dramatic, and any party that pitches it that way will be refused flatly and shown out. What it opens is a negotiated withdrawal at term, or a garrison that declines to sortie, or a gate that is held by exactly as many people as the contract specifies and not one more. The Sixth will listen to a proposal delivered in writing, by somebody with standing, that does not ask it to be dishonourable. A Norvatch factor can draft one. So can Ottoline Vahn, and she would enjoy it.
+
+**DM Only:** this is the campaign’s reward for four modules of treating the occupation as an institution rather than a monster, and it should pay out enormously — up to and including a Caer Ysolde that changes hands with a fraction of the killing either ending would otherwise cost. It does not resolve the final choice. A party that walks the Legion out still has to decide whether to hold the place or set it down, and the decision is harder rather than easier for having been handed the city cheaply. Vale, notably, does not have a contract with anybody. He is the only one left in the building who cannot be bought out, which is worth saying out loud at the table exactly once. A party that walks away from the gates having learned this is carrying something heavier than a party that took the city, and the campaign does not have an opinion about which of them was right.
+
 # NPC Profiles
 
 ## Maedoc Vale

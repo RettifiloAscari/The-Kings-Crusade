@@ -124,6 +124,47 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 | Find the Ward’s room without alerting the interior guard | Investigation / Perception | 13 | Moderate |
 | Negotiate an ongoing arrangement with Doria Kell | Persuasion | 16 | Hard |
 
+# Puzzles and Set Pieces
+
+All three of these are the Sennoch Hall rescue, given a map, a way in and a way out. They replace describing the Hall freehand and add no time to the module; the keyed table is there so the DM is not inventing the building while the party is inside it.
+
+## Sennoch Hall, Keyed
+
+The Hall is the campaign’s first proper dungeon and it is a country house, which means the map is the puzzle. It was never built to hold anybody and the occupation has adapted it badly: a garrison of eighteen in a building with eleven exterior doors, four of which are glazed.
+
+| **Area** | **What is there** | **What a party can use** |
+| --- | --- | --- |
+| 1. The ornamental water | A shallow formal canal round three sides. Elduvish. Listening. | It has heard three years of guard-changes. See the puzzle below. |
+| 2. The south front | Four tall glazed doors onto the terrace. Shuttered at dusk, latched from inside. | Silent entry, DC 14 Sleight of Hand. Loud entry, no check at all. |
+| 3. The kitchen court | Staff who are not permitted to leave. Six of them, none guarded. | Every one of them knows the rotation and four will say so. |
+| 4. The long library | Ninian’s days are spent here. One guard at the door, bored. | The party’s likely first contact. Also: eleven years of estate maps. |
+| 5. The garrison range | Converted stables. Twelve off-duty legionaries, unarmoured. | Taking this room ends the fight before it starts, and is loud. |
+| 6. The commander’s study | Serjeant Hoth, and three years of correct paperwork. | He would like somebody to notice he has been decent. See below. |
+| 7. The north tower | Ninian’s rooms. One door, one window, forty feet up. | The window is the extraction route and it needs rope. |
+| 8. The gate range | Six on watch, alert, with a bell. | The bell is the whole problem. Cutting its rope is a 20-ft. climb. |
+
+## The Puzzle: What the Water Heard
+
+The ornamental canal at Sennoch Hall is Elduvish water, and Elduvish water listens. Three years of guards have walked its edge four times a day saying the same twelve words to each other, and it has all of it.
+
+A character who spends ten minutes at the water’s edge — with the listening water spell, the Listening-Trained feat, a flask, or simply by knowing the trick and asking, which any Elduvish NPC can teach in one sentence — gets this, in four different voices, none of them lying:
+
+> *“Second watch, all quiet.” — “Second watch relieved, the tower door is fast.” — “Gate to tower, gate to tower, and the bell rope wants seeing to.” — “Third watch, and if that dog is out again I am shooting it.”*
+
+Four true facts fall out of it, and a party should have to assemble them rather than be handed them. The watch changes three times a night, not two. The tower door is checked at every change, so the extraction window is the twenty minutes between. The gate range and the tower speak to each other by shouted call-and-response, so an unanswered call is an alarm. And the bell rope has wanted seeing to for some time, which means it is frayed, which means it can be cut from below with a thrown weapon at DC 16.
+
+**DM Only:** this is the first time the party gets to use Elduvaine’s magic as a tool rather than admire it as scenery, and it should land that way. Do not summarise the four voices — perform them, in four different registers, and let the players do the assembling. If nobody thinks to try the water, Ninian mentions it afterward, drily, and the party feels the loss without being punished for it.
+
+## Set Piece: Serjeant Hoth’s Surrender
+
+The garrison commander at Sennoch Hall is a hobgoblin of the Sixth who has held a royal hostage in comfortable confinement for three years, has not once permitted a hand to be laid on her, has filed a monthly report every one of those months, and is entirely aware of how this ends for him.
+
+> *“I have eighteen. You have got past the water and the bell and I have not heard from the tower in some time, so let us both save an hour. My terms are these: my people walk out with their arms and their wounded, and I will give you the last three years of the file, which is complete, and which is the only account anybody has of who came here and what was asked. You will want it. I would like it written down that the Hall was kept correctly.”*
+
+He means every word and there is no trick in it. The file is real and is genuinely valuable — it names the collaborator clerks in the Braid, it establishes what the occupation asked the royal house and when, and it is the campaign’s first hard evidence that Emrys Ysolde has been talking to Vale.
+
+A party that fights him instead wins. Eighteen legionaries and an optio against five characters at 5th level is a real fight and not a close one if the party has taken the range or the gate. They also lose the file, which Hoth burns, correctly, per his standing orders, in the four minutes it takes them to reach the study.
+
 # NPC Profiles
 
 ## Doria Kell

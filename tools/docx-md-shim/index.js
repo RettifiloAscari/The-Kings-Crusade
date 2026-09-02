@@ -69,6 +69,7 @@ module.exports = { Document, Packer, Paragraph, TextRun, ImageRun, Table, TableR
   AlignmentType: { CENTER:'center', LEFT:'left', RIGHT:'right', JUSTIFIED:'both' },
   WidthType: { PERCENTAGE:'pct', DXA:'dxa', AUTO:'auto' },
   ShadingType: { CLEAR:'clear', SOLID:'solid' },
+  TableLayoutType: { FIXED:'fixed', AUTOFIT:'autofit' },
   LevelFormat: { BULLET:'bullet', DECIMAL:'decimal' },
   BorderStyle:{SINGLE:'single',NONE:'none'}, VerticalAlign:{CENTER:'center'},
   PageNumber:{CURRENT:'cur'}, Footer:class{constructor(){}}, Header:class{constructor(){}},

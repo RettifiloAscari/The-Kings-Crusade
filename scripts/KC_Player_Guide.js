@@ -10,8 +10,8 @@
 // SPOILER-SAFE BY DESIGN, AND AUTHORED INDEPENDENTLY -- per CLAUDE.md, this
 // document is never produced by deleting paragraphs from the sourcebook.
 // Every section below is written fresh, in a player-facing register, and
-// checked against the sourcebook's own DM Only notes for what must stay out:
-//   - Vale's actual motive (the closed vaults, the reading privilege). The
+// checked against the sourcebook\u2019s own DM Only notes for what must stay out:
+//   - Vale\u2019s actual motive (the closed vaults, the reading privilege). The
 //     sourcebook is explicit that a table which works this out for itself
 //     has had a better evening than one that was told. Players may know his
 //     name and that he opened the wards himself; nothing more.
@@ -19,13 +19,13 @@
 //   - That Xavier will earn "the Wyvernheart" mid-campaign. Never named,
 //     never hinted, in any read-aloud or player-facing text before it
 //     happens at the table.
-//   - Any Diverging Paths content, any NPC's eventual fate, any stat block,
-//     the Branch Ledger, and the royal house's internal disagreement about
+//   - Any Diverging Paths content, any NPC\u2019s eventual fate, any stat block,
+//     the Branch Ledger, and the royal house\u2019s internal disagreement about
 //     what Elduvaine should become -- all DM Only.
 //   - The two-ending structure (hold Elduvaine or turn back) is never
 //     described as a designed campaign fork here; it does not exist for the
 //     players until it is a real choice at the table.
-// Two-column layout (the document set's default); no change needed to
+// Two-column layout (the document set\u2019s default); no change needed to
 // tools/build.sh -- SINGLE_COL_MATCH only ever pointed at the Reference Guide.
 
 const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
@@ -88,11 +88,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -130,7 +134,7 @@ c.push(P("You are not part of the army. You are what a king sends ahead of one: 
 
 c.push(BOX("The march to Elduvaine is long, and your DM is not rushing you through it. Expect the road itself \u2014 the realms you cross, the people you meet on the way, the ordinary difficulty of moving anywhere with an army behind you \u2014 to be as much a part of this campaign as anything you eventually find at the other end of it."));
 
-// ---------------------------------------------------------------- Where You're From
+// ---------------------------------------------------------------- Where You\u2019re From
 c.push(H1("Where You\u2019re From: Harrowmark"));
 
 c.push(P("Assuming you are \u2014 plenty of the party will not be, and the next section covers the rest. But Harrowmark is the crusade\u2019s spine and the king\u2019s own country, and it is worth knowing whether you came from it or merely arrived in it."));
@@ -165,6 +169,42 @@ c.push(table(
 
 c.push(P("What your character does not know, and cannot, is what Elduvaine looks like now. Everyone above has heard it is bad."));
 
+c.push(H1("What People Believe"));
+
+c.push(P("The Concord is the established faith of all four coalition realms and it teaches that the powers who made the world worked, and then withdrew \u2014 deliberately, while the work was still unfinished, so that there would be something left for hands to do. They are not called gods. They are called the Works, there are nine of them, and a priest will correct you on the word once, politely, and thereafter by simply not using it."));
+
+c.push(P("If your character is a cleric or a paladin from Harrowmark, Oksitan, Auberitz or Norvatch, one of these is yours. Take its domains."));
+
+c.push(table(
+  ["The Work", "Sphere", "Domains"],
+  [26, 46, 28],
+  [
+    ["Ashet the Anvil", "Craft, making, the honest tool", "Knowledge, War"],
+    ["Voran of the Long Road", "Travel, messengers, guest-right", "Life, Trickery"],
+    ["Sennet the Witness", "Oath, contract, law, testimony", "Knowledge, Trickery"],
+    ["Halevin the Hearth-Kept", "Home, harvest, healing", "Life, Nature"],
+    ["Aurine the Unshuttered", "Light, truth, dawn, courage", "Light"],
+    ["Duran Ninefold", "War as discipline, not glory", "War"],
+    ["Threnn Greywater", "Sea, storm, river, the drowned", "Tempest"],
+    ["Ossuar the Quiet Warden", "Death, the grave, remembrance", "Death"],
+    ["Saveth of the Green Verge", "Wilds, beasts, the seasons", "Nature"]
+  ], { full: true }
+));
+
+c.push(P("A Concord priest does not ask a Work for anything. A Concord priest reports \u2014 here is what was built this season, here is what failed, here is what we intend next \u2014 and a miracle, when it comes, is understood as a tool handed down rather than a favour granted. It is why Harrowmark\u2019s clergy are so hard to impress and so hard to frighten."));
+
+c.push(H2("Elduvaine Has No Church"));
+
+c.push(P("This is the part everyone in the coalition finds strange and nobody in Elduvaine finds worth discussing. They have never built one. The story goes that you do not raise a temple to ask for an answer in a country where the river answers you directly, and whether or not that is true, the fact is: no Ninefold Houses, no clergy in the Concord sense, and no gods addressed by name."));
+
+c.push(P("What they have instead are the Observances \u2014 local, seasonal, unwritten, different in every parish, and closer to very good manners practised at enormous scale than to worship. Their religious professionals are called Keepers, and a Keeper tends a thing rather than a congregation. If your character is Elduvish and casts divine magic, you are a Keeper of some habit, and you will spend this entire campaign answering awkward questions about it from people who mean well."));
+
+c.push(H2("The Order of the Tenth Work"));
+
+c.push(P("You will be marching with these people, so you should know what they say, because they say it openly and often. The Order holds that Elduvaine\u2019s strangeness is not heresy but an unfinished divine work \u2014 the tenth and last, left for hands to complete \u2014 and that completing it is the real purpose of this crusade."));
+
+c.push(P("They came at their own expense, in disciplined numbers, well supplied. They are personally brave and generous to the poor of any kingdom, they will hold a wall beside you, and they have never once lied about what they intend to do when the kingdom is taken. What you make of that is entirely yours."));
+
 c.push(H1("Who Marches With You"));
 
 c.push(P("A character need not come from Harrowmark \u2014 Xavier\u2019s call reached every realm marching under it, and a member of the party may just as easily hail from Oksitan, Auberitz, or even Norvatch, arriving at the muster by their own road rather than Harrowmark\u2019s. The table below is what any of them would already know about the others."));
@@ -190,7 +230,7 @@ c.push(P("A crusade this size is not raised on sympathy alone, and Xavier did no
 
 c.push(P("Both promises depend on one thing neither Xavier nor anyone else can currently guarantee: that Elduvaine is actually taken, and actually held, by the time the war ends. Your character may be marching for the promise itself, for reasons that have nothing to do with it, or for some mixture the player hasn\u2019t fully worked out yet \u2014 all three are equally valid places to start."));
 
-// ---------------------------------------------------------------- Elduvaine, As It's Told
+// ---------------------------------------------------------------- Elduvaine, As It\u2019s Told
 c.push(H1("Elduvaine, As It\u2019s Told"));
 
 c.push(P("Almost nothing below comes from a firsthand source. Elduvaine has been closed for three years, and what travels out of a closed country is rumor, old memory, and the occasional survivor\u2019s account, filtered through however many tellings it took to reach a Harrowmark tavern. Treat it as the stories your character grew up hearing, not as a briefing."));
@@ -224,9 +264,29 @@ c.push(BULLET([{ t: "\u201CThey\u2019ve got things living in the hedges over the
 c.push(BULLET([{ t: "\u201CNorvatch never took the call, and Norvatch is doing very well out of a war it isn\u2019t in. Draw whatever conclusion you like; they\u2019ll sell you the rope either way, and they\u2019ll deliver on time.\u201D" }]));
 
 // ---------------------------------------------------------------- Building Your Character
+c.push(H2("The House of Ysolde"));
+
+c.push(P("Elduvaine\u2019s royal house is elven, has held the Braid since before anyone was counting, and gave its name to the capital rather than taking one from it. Two centuries of marrying whoever it liked means it now contains a half-elf, a gnome and a human, and no Elduvish person considers that worth a remark."));
+
+c.push(P("They were taken on the night the wards opened. Five of them are known by name across four kingdoms, and what has become of them is the subject of a great deal of rumour and very little information."));
+
+c.push(table(
+  ["Name", "Style", "What is known"],
+  [30, 24, 46],
+  [
+    ["Maelis Ysolde", "The Veiled Sovereign", "Gravely ill for years, and not seen unveiled since well before the fall. Held in Caer Ysolde."],
+    ["Aveline Ysolde", "The Regent", "The only one who was outside a wall that night. Somewhere in Elduvaine, and has refused to be brought out."],
+    ["Ninian Ysolde", "The Ward", "Heir presumptive. Held under house arrest at a country seat, in reported comfort."],
+    ["Ottoline Vahn", "The Magistrate", "A magistrate of the Braid for a hundred and sixty years. Held in Vindana, and reportedly still working."],
+    ["Emrys Ysolde", "The Envoy", "Held separately from the rest. Beyond that, nobody in the coalition can tell you anything at all."]
+  ], { full: true }
+));
+
 c.push(H1("Building Your Character"));
 
 c.push(P("This campaign runs on the 2014 edition of the fifth-edition rules (SRD 5.1). Characters begin at 5th level \u2014 Extra Attack and 3rd-level spells are already available from the first session, because Xavier did not choose raw recruits, he chose champions. Advancement is by milestone rather than by tallying experience: the party levels up when the story reaches a point that has earned it, not when a spreadsheet says so. The table expects four to six players, and every class, race, and background in the game is available \u2014 including full spellcasters from Harrowmark, whatever its reputation among the Elduvish."));
+
+c.push(P("There is a separate book of character options for this campaign \u2014 backgrounds for the wyvern-watch, the Archive, a Norvatch counting-house, the orchards, the levy, a Ninefold House and three years under the occupation, plus feats, subclasses, spells and the wonders of Elduvaine as magic items. None of it is required and a party built straight from the rulebook plays this campaign perfectly well."));
 
 c.push(P("On race specifically: pick whatever you want to play, then decide which of the realms above raised you. Those are separate questions in this setting and answering them separately will give you a better character than answering them together. An orc from Harrowmark and an orc from anywhere else have almost nothing in common; the interesting part of your character is the country, not the species."));
 

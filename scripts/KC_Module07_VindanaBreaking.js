@@ -9,16 +9,16 @@
 // hand-typing an escape, use ONE backslash -- a doubled backslash compiles
 // clean and passes the non-ASCII scanner but leaks literal text into the PDF.
 //
-// This is the campaign's structural centre: the siege breaks, Vale's one
+// This is the campaign\u2019s structural centre: the siege breaks, Vale\u2019s one
 // bound dragon is deployed, and Xavier earns "the Wyvernheart" -- all now
 // signed off in CLAUDE.md and drafts/DRACONIC-LAYER.RESOLVED.md.
 //
 // DESIGN NOTE ON THE DRAGON: it is not statted as a monster the party fights
 // directly, on purpose. Canon says Vale does not tame, he coerces -- the
 // dragon is a hostage, not a pet -- and a straightforward kill would betray
-// that. Xavier's actual heroism in Scene 3 is freeing it, not defeating it;
-// the party's own combat in this module is the ground assault through
-// Vindana's found weakness, run in parallel to Xavier's airborne arc rather
+// that. Xavier\u2019s actual heroism in Scene 3 is freeing it, not defeating it;
+// the party\u2019s own combat in this module is the ground assault through
+// Vindana\u2019s found weakness, run in parallel to Xavier\u2019s airborne arc rather
 // than against the dragon directly. A DM whose table wants a direct dragon
 // fight instead has an explicit, lightweight opt-in in Scene 3 rather than a
 // full stat block -- see the note there.
@@ -88,11 +88,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -214,6 +218,42 @@ c.push(BOX("Xavier finds the party before the day is out, still faintly singed, 
 c.push(P("Do not have Xavier react to the new name in this scene \u2014 per the DM-Only note above, let it exist in the ranks before it ever reaches him directly; that gap is worth preserving into Module Eight. End the session on Vindana secured and hand off directly to Module Eight, the campaign\u2019s deliberate relief-valve module after its largest set piece."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("Neither of these adds time. They are how the breach and the dragon are run \u2014 the first as a sequence with a decision at each transition, the second as a problem with three solutions instead of a very large hit point total."));
+
+c.push(H2("The Puzzle: The Terms of the Binding"));
+
+c.push(P("Vale does not tame. He finds the rule that makes refusal impossible, and the dragon over Vindana is bound by an instrument rather than by a will. Everything about how it is fighting says so: it is pained, it is diminished, and it is doing the minimum the wording requires."));
+
+c.push(P("A party that watches it for two rounds instead of shooting at it can see the shape of the compulsion. Three observations, each a DC 14 Wisdom (Perception) or Intelligence (Arcana) check, or simply a player saying what they notice:"));
+
+c.push(BUL("It never attacks first.", "Every pass it makes follows a signal from the ground. It is not hunting. It is being told, each time, and it waits to be told."));
+c.push(BUL("The signals come from one man.", "Not Vale, who is not here. An officer on the Ward Gate with a horn and a banner, relaying, and the dragon\u2019s head turns to him before every pass."));
+c.push(BUL("It obeys the words, not the intent.", "Told to burn the traverse, it burns the traverse and precisely nothing else, and it flies over four exposed companies to do it."));
+
+c.push(P("The conclusion the party is meant to reach: the dragon must be commanded aloud, and if it cannot hear the command, the instrument has nothing to compel it with. It does not become free. It becomes idle, and lands, and waits, and that is enough."));
+
+c.push(B("Three ways to do it, all of them valid:", "silence the relay officer, which is a hard climb and a harder fight on a wall under bombardment. Silence the sound, which any caster with the silence spell can do to the Ward Gate parapet from cover. Or take the horn and banner and give the signals yourself, which requires reading them first and is worth a DC 17 Intelligence (Investigation) check and considerable nerve."));
+
+c.push(PS([DM("DM Only: "), { t: "the dragon is a hostage, not a monster, and a party that kills it has done something the campaign will not punish and will also not forget. It is a habit with teeth, the same kind of thing as the Willing Road, and it is being spent like everything else in this kingdom. If the party grounds it instead, it does not thank them, does not ally with them, and does not appear again in this module. It puts its head down in the harbour mud and stays there for two days. What the instrument actually is, where it is kept and whose office it names is the thread that runs to Module Eleven; the party can find the document in the garrison quarter afterward and should be allowed to, and it names the Keeper of the Ysolde Archive by office rather than Maedoc Vale by name." }]));
+
+c.push(H2("Set Piece: The Breach, in Four Phases"));
+
+c.push(P("The campaign\u2019s largest action sequence. Run it in phases with the whole battlefield moving, and give the party a real decision at each transition rather than a corridor."));
+
+c.push(B("Phase One: The Stone Comes Down.", "Nine months of Auberitz engineering resolves in about ninety seconds. Forty feet of the inner wall \u2014 Standing Light stone, six centuries old, dark now \u2014 goes over outward, and the noise arrives after the sight of it, and for a moment nobody on either side does anything at all."));
+
+c.push(BOX("\u201CIt does not crack. It leans, the way a man leans who has decided to sit down, and then the whole forty feet of it goes at once and the dust comes out sideways across the ditch faster than a horse can run. And when the dust clears there is a hole in Vindana with the sea behind it, and every single person on both sides of that ditch understands that the next four minutes decide the war.\u201D"));
+
+c.push(B("Phase Two: The Race.", "The coalition storming party and the garrison\u2019s reserve are both running for the breach and the garrison is closer. Unless the party opened the under-wall route in Module Six, in which case they are already inside and behind the reserve, and this phase is theirs to wreck."));
+
+c.push(B("Phase Three: The Fight in the Gap.", "Four to six legionaries and an ironshank holding rubble against a party at 5th level. Terrain is the whole encounter: broken stone, three levels of it, and a twenty-foot drop into the ditch on the wrong side. Morale breaks when the ironshank goes down, and the Sixth withdraws in good order and takes its wounded."));
+
+c.push(B("Phase Four: The Dragon.", "Overhead, on the third pass, and the module\u2019s other set piece begins. See the puzzle above."));
+
+c.push(PS([DM("DM Only: "), { t: "Xavier earns the name airborne, mid-siege, in a battle that is going badly, and it must be visibly going badly first. Let the coalition lose Phase Two. Let a company break. Then put him over the breach on the back of a Greywatch wyvern with the whole army watching, and let the name arrive from the ranks rather than from a herald. His stat block does not change. That is the point: nothing about him is different afterwards except what he is called." }]));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Xavier III of Harrowmark, called the Wyvernheart (as of this module)"));

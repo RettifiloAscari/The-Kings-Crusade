@@ -93,6 +93,42 @@ The city’s defense comes apart within the hour. This scene is aftermath, not m
 
 Do not have Xavier react to the new name in this scene — per the DM-Only note above, let it exist in the ranks before it ever reaches him directly; that gap is worth preserving into Module Eight. End the session on Vindana secured and hand off directly to Module Eight, the campaign’s deliberate relief-valve module after its largest set piece.
 
+# Puzzles and Set Pieces
+
+Neither of these adds time. They are how the breach and the dragon are run — the first as a sequence with a decision at each transition, the second as a problem with three solutions instead of a very large hit point total.
+
+## The Puzzle: The Terms of the Binding
+
+Vale does not tame. He finds the rule that makes refusal impossible, and the dragon over Vindana is bound by an instrument rather than by a will. Everything about how it is fighting says so: it is pained, it is diminished, and it is doing the minimum the wording requires.
+
+A party that watches it for two rounds instead of shooting at it can see the shape of the compulsion. Three observations, each a DC 14 Wisdom (Perception) or Intelligence (Arcana) check, or simply a player saying what they notice:
+
+- **It never attacks first.** Every pass it makes follows a signal from the ground. It is not hunting. It is being told, each time, and it waits to be told.
+- **The signals come from one man.** Not Vale, who is not here. An officer on the Ward Gate with a horn and a banner, relaying, and the dragon’s head turns to him before every pass.
+- **It obeys the words, not the intent.** Told to burn the traverse, it burns the traverse and precisely nothing else, and it flies over four exposed companies to do it.
+
+The conclusion the party is meant to reach: the dragon must be commanded aloud, and if it cannot hear the command, the instrument has nothing to compel it with. It does not become free. It becomes idle, and lands, and waits, and that is enough.
+
+**Three ways to do it, all of them valid:** silence the relay officer, which is a hard climb and a harder fight on a wall under bombardment. Silence the sound, which any caster with the silence spell can do to the Ward Gate parapet from cover. Or take the horn and banner and give the signals yourself, which requires reading them first and is worth a DC 17 Intelligence (Investigation) check and considerable nerve.
+
+**DM Only:** the dragon is a hostage, not a monster, and a party that kills it has done something the campaign will not punish and will also not forget. It is a habit with teeth, the same kind of thing as the Willing Road, and it is being spent like everything else in this kingdom. If the party grounds it instead, it does not thank them, does not ally with them, and does not appear again in this module. It puts its head down in the harbour mud and stays there for two days. What the instrument actually is, where it is kept and whose office it names is the thread that runs to Module Eleven; the party can find the document in the garrison quarter afterward and should be allowed to, and it names the Keeper of the Ysolde Archive by office rather than Maedoc Vale by name.
+
+## Set Piece: The Breach, in Four Phases
+
+The campaign’s largest action sequence. Run it in phases with the whole battlefield moving, and give the party a real decision at each transition rather than a corridor.
+
+**Phase One: The Stone Comes Down.** Nine months of Auberitz engineering resolves in about ninety seconds. Forty feet of the inner wall — Standing Light stone, six centuries old, dark now — goes over outward, and the noise arrives after the sight of it, and for a moment nobody on either side does anything at all.
+
+> *“It does not crack. It leans, the way a man leans who has decided to sit down, and then the whole forty feet of it goes at once and the dust comes out sideways across the ditch faster than a horse can run. And when the dust clears there is a hole in Vindana with the sea behind it, and every single person on both sides of that ditch understands that the next four minutes decide the war.”*
+
+**Phase Two: The Race.** The coalition storming party and the garrison’s reserve are both running for the breach and the garrison is closer. Unless the party opened the under-wall route in Module Six, in which case they are already inside and behind the reserve, and this phase is theirs to wreck.
+
+**Phase Three: The Fight in the Gap.** Four to six legionaries and an ironshank holding rubble against a party at 5th level. Terrain is the whole encounter: broken stone, three levels of it, and a twenty-foot drop into the ditch on the wrong side. Morale breaks when the ironshank goes down, and the Sixth withdraws in good order and takes its wounded.
+
+**Phase Four: The Dragon.** Overhead, on the third pass, and the module’s other set piece begins. See the puzzle above.
+
+**DM Only:** Xavier earns the name airborne, mid-siege, in a battle that is going badly, and it must be visibly going badly first. Let the coalition lose Phase Two. Let a company break. Then put him over the breach on the back of a Greywatch wyvern with the whole army watching, and let the name arrive from the ranks rather than from a herald. His stat block does not change. That is the point: nothing about him is different afterwards except what he is called.
+
 # NPC Profiles
 
 ## Xavier III of Harrowmark, called the Wyvernheart (as of this module)

@@ -122,6 +122,46 @@ This can be run as a large-scale combat with the party at its center (use Marsha
 
 Drell does not die or fall back easily in this module — he is meant to survive Scene 4 regardless of how the fight at the point of contact goes, withdrawing his forces in good order once the breach fails rather than pressing an advantage he does not need. Save a real, decisive confrontation with him for Module Seven if the table wants one.
 
+# Puzzles and Set Pieces
+
+Raising the Engines is how that scene is run. The undercity is additive and substantial — sixty to ninety minutes, and a table that wants a proper dungeon crawl can take considerably longer. It is the best thing in the module and it is optional, which is deliberate: it pays out in Module Seven for the parties that go looking.
+
+## The Undercity, Keyed
+
+A drain and cistern system older than the walls above it, which the coalition would very much like to use and which the garrison stopped patrolling two years ago. It is the single best reward available to a party that solves this module sideways, and it pays out directly in Module Seven.
+
+| **Area** | **What is there** | **Notes** |
+| --- | --- | --- |
+| A. The seaward outfall | Entry. Six feet of water at high tide, none at low. | Timing is the whole approach. Tide tables are buyable in any harbour tavern. |
+| B. The signposted run | 300 ft. of trapped corridor, every trap marked in Draconic. | Same principle as the Old Workings. The marks are honest. |
+| C. The cistern hall | A vaulted chamber, forty feet across, waist deep. | Sound carries perfectly. Anything said here is heard at D. |
+| D. The warren | Sixty kobolds. Larders, nests, two generations of improvement. | Run four to eight in any fight. The negotiation is the real scene. |
+| E. The old sluice | A gate mechanism, seized, that once drained the cistern. | Freeing it is DC 16 Strength or an hour with tools. It matters in Module Seven. |
+| F. The under-wall | Where the drain passes beneath the inner wall. | This is the prize. A route under the walls, into the garrison quarter. |
+| G. The grain undercroft | The garrison’s reserve store, reachable only from F. | What the kobolds want. They cannot reach it and the party can. |
+
+## The Puzzle: What the Kobolds Want
+
+They have had two years and nothing else to do, and they have prepared a speech. The negotiation is a three-part problem and every part has a real solution.
+
+- **They want the grain undercroft (G).** They cannot get into it, because the only route runs under the wall past a garrison post. The party can. This is a straight trade and it is the easy part.
+- **They want a written promise that nobody comes back down.** In writing, signed, by somebody with a name. This is harder than it sounds, because the party cannot bind the coalition and the kobolds know what a worthless signature looks like. A Norvatch factor can draft one that will actually hold, which is a genuinely good reason to have kept Doria Kell’s goodwill.
+- **They will not hand over the route until both are done.** No amount of Persuasion moves this. They have been lied to before, by the garrison, in year one, and they will tell the party about it at length.
+
+**DM Only:** do not require this. Do reward it enormously. A party that has the under-wall route does not need the postern gate in Module Seven and can open the assault from inside the walls, which changes that module’s opening from a wall problem into a street fight and saves a great many coalition lives the DM should mention afterward. A party that simply kills sixty kobolds gets the route as well, and gets it four hours later, and gets no help with the sluice at E, which they will want.
+
+## Set Piece: Raising the Engines
+
+Nine months of work at Krenholt, four hundred miles of road, and one afternoon of getting them up onto the platform in range of a wall whose garrison would very much prefer they were not. Auberitz has done this before. Auberitz is still going to lose an engine.
+
+> *“The chief of the works is four feet tall, has built eleven of these, has never once seen one used the way she intended, and is currently standing on a barrel telling a Harrowmark knight exactly what will happen if he moves his horses across the traverse. He moves his horses across the traverse. Ninety seconds later a stone comes off the Ward Gate and takes the traverse, the horses, and an argument nobody is going to finish.”*
+
+**Three problems, running simultaneously.** The platform is short of fascines and the nearest brushwood is inside bowshot. The counterweight for the second engine is still two miles back on a wagon with a broken axle. And the garrison’s own engines have the range and are ranging in, three stones at a time, adjusting.
+
+**What the party can do.** Any of it. Fetch the counterweight, screen the fascine parties, or — the answer the engineers are hoping somebody thinks of — go and do something about the garrison’s ranging shots, which are being directed by an observer on the Ward Gate who can be reached, with difficulty, from the seaward side.
+
+The chief of the works will tell the party exactly what will go wrong an hour before it does, and will be right, and will not say so afterward. She is the module’s best NPC and she has eleven lines in her, all of them dry.
+
 # NPC Profiles
 
 ## Marshal Ossian Drell

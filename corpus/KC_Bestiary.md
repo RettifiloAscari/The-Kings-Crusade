@@ -10,7 +10,7 @@
 
 # Using This Bestiary
 
-Every block here was built against real SRD creatures at the same and neighbouring challenge ratings, not against the DMG's Monster Statistics by Challenge Rating table. Measured against that table every humanoid in this book looks badly under-tuned, and so does every humanoid in the SRD: a CR 3 Veteran has 58 hit points where the table asks for 101 to 115. The table describes monsters. These are mostly people, and people are squishier than the arithmetic wants them to be.
+Every block here was built against real SRD creatures at the same and neighbouring challenge ratings, not against the DMG’s Monster Statistics by Challenge Rating table. Measured against that table every humanoid in this book looks badly under-tuned, and so does every humanoid in the SRD: a CR 3 Veteran has 58 hit points where the table asks for 101 to 115. The table describes monsters. These are mostly people, and people are squishier than the arithmetic wants them to be.
 
 Where a creature is deliberately off-baseline it says so in its own entry. Support casters, pack fighters and control-focused adversaries are meant to be individually weak and collectively appalling, and correcting them toward the curve would break the encounters they were built for.
 
@@ -118,9 +118,9 @@ The creatures in the first section are not monsters that happen to know magic. T
 
 **Challenge:** 4 (1,100 XP)
 
-***Emptied Stone.*** A Light-Hollow is a piece of Standing Light masonry that was drained past what it could survive. Six centuries of held afternoons came out of it in an afternoon, and what was left got up. There are perhaps forty of them in Elduvaine and every one was somebody's doorstep, lintel or garden wall.
+***Emptied Stone.*** A Light-Hollow is a piece of Standing Light masonry that was drained past what it could survive. Six centuries of held afternoons came out of it in an afternoon, and what was left got up. There are perhaps forty of them in Elduvaine and every one was somebody’s doorstep, lintel or garden wall.
 
-***Thirst.*** Any nonmagical light source within 30 feet of the Light-Hollow is extinguished at the start of the creature's turn. A magical light of 3rd level or lower is suppressed while it remains in range; the caster may make a DC 15 Constitution check at the end of each of their turns to restore it.
+***Thirst.*** Any nonmagical light source within 30 feet of the Light-Hollow is extinguished at the start of the creature’s turn. A magical light of 3rd level or lower is suppressed while it remains in range; the caster may make a DC 15 Constitution check at the end of each of their turns to restore it.
 
 ***Immutable Form.*** The Light-Hollow is immune to any spell or effect that would alter its form.
 
@@ -130,9 +130,9 @@ The creatures in the first section are not monsters that happen to know magic. T
 
 ***Slam.*** Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d8 + 3) bludgeoning damage.
 
-***Draw Down (Recharge 6).*** The Light-Hollow pulls at every light in a 30-foot radius, its own included. Each creature in the area must succeed on a DC 15 Constitution saving throw or take 18 (4d8) necrotic damage and be blinded until the end of its next turn. The area is plunged into magical darkness until the start of the Light-Hollow's next turn.
+***Draw Down (Recharge 6).*** The Light-Hollow pulls at every light in a 30-foot radius, its own included. Each creature in the area must succeed on a DC 15 Constitution saving throw or take 18 (4d8) necrotic damage and be blinded until the end of its next turn. The area is plunged into magical darkness until the start of the Light-Hollow’s next turn.
 
-**DM Only:** fight this in the dark. That is the entire design: Thirst removes the party's torches on round one, Draw Down removes everything else on round three or four, and the encounter becomes a problem about position and memory rather than about damage. A party that thinks to bring a light-stone lamp — which holds daylight rather than making it — finds it works, once, and is worth every copper they paid for it.
+**DM Only:** fight this in the dark. That is the entire design: Thirst removes the party’s torches on round one, Draw Down removes everything else on round three or four, and the encounter becomes a problem about position and memory rather than about damage. A party that thinks to bring a light-stone lamp — which holds daylight rather than making it — finds it works, once, and is worth every copper they paid for it.
 
 **Season-Bound Stag**
 
@@ -158,7 +158,7 @@ The creatures in the first section are not monsters that happen to know magic. T
 
 ***Of Its Wood.*** The stag carries the season of the Kept Season wood that bore it, visibly, wherever it goes — frost on its flanks in high summer, or blossom caught in its antlers in the depth of winter, always the wrong one, always four days or nine weeks into it. It is the most photographed thing in Elduvaine, in the sense that every visiting scholar for four centuries has tried to draw one.
 
-***Season's Passage.*** The stag ignores difficult terrain and cannot be tracked by nonmagical means.
+***Season’s Passage.*** The stag ignores difficult terrain and cannot be tracked by nonmagical means.
 
 ***Skittish.*** The stag will not initiate combat and flees at the first opportunity. It has no morale to break; it simply leaves.
 
@@ -188,19 +188,19 @@ The creatures in the first section are not monsters that happen to know magic. T
 
 **Challenge:** 1 (200 XP)
 
-***Not a Monster.*** An Echo forms where a great deal was said at a water's edge over a long time and the water has more of it than it can hold. It has no hostility and no plan. It surfaces, it repeats, and it goes.
+***Not a Monster.*** An Echo forms where a great deal was said at a water’s edge over a long time and the water has more of it than it can hold. It has no hostility and no plan. It surfaces, it repeats, and it goes.
 
-***In the Speaker's Voice.*** Everything the Echo says is something a real person said at that water, in that person's own voice, exactly as they said it. It does not paraphrase, cannot lie, and has no idea what any of it means.
+***In the Speaker’s Voice.*** Everything the Echo says is something a real person said at that water, in that person’s own voice, exactly as they said it. It does not paraphrase, cannot lie, and has no idea what any of it means.
 
 ***Watery Form.*** The Echo can move through a space as narrow as one inch wide without squeezing, and has resistance to bludgeoning, piercing and slashing damage from nonmagical attacks.
 
 **ACTIONS**
 
-***Drench.*** Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) cold damage. The Echo does this only if struck first, and does it apologetically, in somebody else's voice.
+***Drench.*** Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) cold damage. The Echo does this only if struck first, and does it apologetically, in somebody else’s voice.
 
 ***Give Back.*** The Echo repeats up to a minute of speech spoken at its water at any point in the last thirty years, chosen by the DM. This is the reason the creature is in this book.
 
-**DM Only:** the Echo is the Four Voices technique with a stat block attached, for tables that want the delivery mechanism to be a thing in the room rather than a riverbank. Use it when the party needs to hear something that happened somewhere they were not, and give them the court's version, the commons' version, the proclamation and the private grief, in four different voices, none of them lying and none of them complete. Do not let anybody fight it. If they attack it, it leaves.
+**DM Only:** the Echo is the Four Voices technique with a stat block attached, for tables that want the delivery mechanism to be a thing in the room rather than a riverbank. Use it when the party needs to hear something that happened somewhere they were not, and give them the court’s version, the commons' version, the proclamation and the private grief, in four different voices, none of them lying and none of them complete. Do not let anybody fight it. If they attack it, it leaves.
 
 **Draining Engine**
 
@@ -234,7 +234,7 @@ The creatures in the first section are not monsters that happen to know magic. T
 
 ***Vent (Recharge 5-6).*** The Engine dumps what it has taken in a 30-foot radius. Each creature in the area must make a DC 16 Constitution saving throw, taking 27 (6d8) force damage on a failure, or half as much on a success. Every plant in the area dies. This is what it looks like when Elduvaine is spent, and it should be described that way.
 
-**DM Only:** an Engine is an objective, not an opponent, and the encounter around it should be built that way: Legion troops defending it while a clock runs, and the Engine itself as terrain that hurts. Breaking one is a real and permanent win — there are only about thirty — and the party should be told the number so that they can feel the arithmetic. It is also the campaign's cleanest answer to a table that wants to hurt Vale before Module Eleven.
+**DM Only:** an Engine is an objective, not an opponent, and the encounter around it should be built that way: Legion troops defending it while a clock runs, and the Engine itself as terrain that hurts. Breaking one is a real and permanent win — there are only about thirty — and the party should be told the number so that they can feel the arithmetic. It is also the campaign’s cleanest answer to a table that wants to hurt Vale before Module Eleven.
 
 # The Sixth Free Legion
 
@@ -392,7 +392,7 @@ The blocks below are the Legion as an institution: drilled, disciplined, and ind
 
 # Named Figures
 
-Blocks for people the party is likely to fight beside rather than against. All of them are built as people rather than as monsters, which means they sit below the DMG's curve in exactly the way the SRD's own humanoids do.
+Blocks for people the party is likely to fight beside rather than against. All of them are built as people rather than as monsters, which means they sit below the DMG’s curve in exactly the way the SRD’s own humanoids do.
 
 **Xavier III of Harrowmark**
 
@@ -502,7 +502,7 @@ Blocks for people the party is likely to fight beside rather than against. All o
 
 **Challenge:** 3 (700 XP)
 
-***Two Centuries of This.*** Brenna has advantage on attack rolls against any creature with a flying speed, and on saving throws against being frightened by one. She has been killing wyverns since before Xavier's grandfather was born and finds the whole business tedious rather than heroic.
+***Two Centuries of This.*** Brenna has advantage on attack rolls against any creature with a flying speed, and on saving throws against being frightened by one. She has been killing wyverns since before Xavier’s grandfather was born and finds the whole business tedious rather than heroic.
 
 ***Pike Drill.*** Brenna and any friendly creature within 5 feet of her have advantage on attack rolls of opportunity, and their reach weapons deal an extra 3 damage against a creature that entered their reach this turn.
 
@@ -571,9 +571,9 @@ SRD creatures used by name in the modules and the gazetteer, without a reprinted
 | The Braid | Will-o'-wisp (CR 2), spy (CR 1), veteran (CR 3), mage (CR 6) |
 | The Orchard Marches | Dryad (CR 1), winter wolf (CR 3), troll (CR 5), satyr (CR 1/2), awakened tree (CR 2) |
 | The Standing Marches | Gargoyle (CR 2), earth elemental (CR 5), stone giant (CR 7) |
-| Vindana's undercity | Kobold (CR 1/8), giant rat (CR 1/8), grey ooze (CR 1/2), otyugh (CR 5) |
+| Vindana’s undercity | Kobold (CR 1/8), giant rat (CR 1/8), grey ooze (CR 1/2), otyugh (CR 5) |
 
-Coverage here is SRD-only. There is no Volo's and no Mordenkainen's in this book, and anything a DM imports from those is unvalidated against the encounter maths the modules were built with.
+Coverage here is SRD-only. There is no Volo’s and no Mordenkainen’s in this book, and anything a DM imports from those is unvalidated against the encounter maths the modules were built with.
 
 ~
 

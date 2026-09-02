@@ -6,8 +6,9 @@
 A Dungeons & Dragons 5th Edition campaign. High fantasy, traditionally D&D, built on a
 Third Crusade spine.
 
-> **STATUS: THE FULL DOCUMENT SET IS BUILT.** Sourcebook, all eleven session module
-> slots, the DM Reference Guide, and the Player Guide.
+> **STATUS: THE FULL DOCUMENT SET IS BUILT AND HAS HAD ITS FIRST MAJOR EXPANSION.**
+> Sourcebook, Gazetteer, Bestiary, Character Options, all eleven session module slots,
+> the DM Reference Guide, and the Player Guide — eighteen documents.
 > The pipeline is proven and the setting's foundation is canon: the kingdom, the wizard,
 > the king, the occupation, the coalition's named members, and the shape of the war
 > across a signed-off eleven-module arc. Detail below that — what Oksitan and Auberitz
@@ -240,6 +241,42 @@ written in `scripts/KC_Sourcebook.js`):
   deliverable if Elduvaine is **taken and held**; nobody asked Elduvaine; the coalition
   therefore wants the same thing Maedoc Vale wants, for different reasons; and Vale is
   spending the very asset that was promised.
+- **Faith: the Nine Works, and the schism.** The Concord is the established faith of
+  Harrowmark, Oksitan, Auberitz and Norvatch, and it teaches that the powers who made the
+  world **worked and then withdrew**, deliberately leaving it unfinished so hands would have
+  something to do. They are not called gods; they are called **the Works**, and there are
+  nine: Ashet the Anvil, Voran of the Long Road, Sennet the Witness, Halevin the Hearth-Kept,
+  Aurine the Unshuttered, Duran Ninefold, Threnn Greywater, Ossuar the Quiet Warden, and
+  Saveth of the Green Verge. A religion of the made thing, for a land that does nothing.
+  **Elduvaine never built a church** — it has the **Observances** instead, local and
+  unwritten, and religious professionals called **Keepers**, which is what makes Vale's title
+  considerably darker. **Divine magic works on both sides and neither has ever won the
+  argument;** the campaign asserts nothing further about whether the Works exist.
+- **The Order of the Tenth Work.** A militant Concord order holding that Elduvaine's habits
+  are an unfinished divine work — the tenth and last — and that completing it is the
+  crusade's real purpose. They march at their own expense, are personally brave and generous,
+  and are entirely prepared to consecrate a Kept Season orchard by burning it. **This is where
+  the campaign keeps its complexity: on the party's own side of the line.** They are not
+  hypocrites and have no secret plan. That is the problem.
+- **House Ysolde**, named and peopled. An elven house, mixed by two centuries of marriage.
+  **Maelis Ysolde**, the Veiled Sovereign, elf, held in Caer Ysolde: ill for eleven years from
+  an ordinary cause, and since the draining began **declining at the same rate as the land**,
+  because a sovereign of Elduvaine is bound into the habits at accession. She is the campaign's
+  second clock and cannot be bought, read faster, or evacuated. **She has no stat block, and
+  that omission is canon.** **Aveline Ysolde**, human, the Regent, at large, refuses evacuation
+  in writing. **Ninian Ysolde**, half-elf, the Ward, heir presumptive, has done the arithmetic
+  on the Promise. **Ottoline Vahn**, gnome, the Magistrate, fought three years of captivity by
+  filing and won. **Emrys Ysolde**, elf, the Envoy, has been talking to Vale for three years
+  — not treachery, and there is no reveal: he took the job nobody else would and cannot
+  produce a clean accounting of whether it helped. United on the war, divided on what follows,
+  and **the campaign still does not adjudicate that argument.**
+- **Raimon V of Oksitan**, and what Oksitan wants. Human, seventy-one, grey and undeterred;
+  he takes the road the party does not and drowns fording the **Vaskren**, and his army comes
+  apart behind him. **Oksitan wants the Willing Road** — it is ford country and its whole
+  economy is the control of movement — and it is structurally guaranteed never to have it,
+  because nobody has ever established what the road measures and nobody ever will. This gives
+  the open question a price; it does not close it. Some of the coalition will insist he is
+  sleeping under the river rather than drowned, and arguing with them is arguing with grief.
 - **The occupation is three years old** — long enough to have a bureaucracy, permits, a
   grain levy and collaborators; short enough that everyone over ten remembers before.
 - **The ruling family** — one member escaped and runs what resistance survives, and
@@ -294,15 +331,11 @@ written in `scripts/KC_Sourcebook.js`):
 
 | Open item | Notes |
 |---|---|
-| What Oksitan and Auberitz each want | Both realms are named and peopled; their agendas, rulers and grievances are not. **Norvatch is no longer on this list** — its agenda is signed off and written into the sourcebook. |
-| The second king and his realm | The crown lost on the road the party does not take. Auberitz is a grand duchy and Norvatch does not march, so by elimination this is Oksitan's king — but that has not been signed off. The Barbarossa touchstone (above) is supporting material for how he is played and how he dies, not a name. |
+| What Auberitz wants | Its role — the siege train, the engineers, the quartermasters, the politics of logistics — is canon and built out. Its agenda is not, and was deliberately not invented during the expansion pass. **Oksitan and Norvatch are no longer on this list.** Run Auberitz by role until this is settled. |
 | Whether Harrowmark was ever otherwise | Left open deliberately for now: a Harrowmark that was *drained* long ago would give it a stake in this war and a dread of Vale. Evocative, unapproved, and not to be assumed. |
-| Names of the royal family | Including which one is at large. |
-| Region-level geography and a gazetteer | Both realms and what lies between. |
 | What the deepest vaults actually contain | What Vale is reading toward. The sourcebook states his motive; it does not state his destination. |
 | Whether Vale is still human | Deliberately ambiguous in v1; not yet an answer. |
-
-| Pantheon and planes | Beyond "Elduvaine's magic is different in kind" and the peoples layer below. No gods are named anywhere in the set. |
+| Cosmology and the planes | The pantheon is settled (the Nine Works, above); planes, afterlives and what the Concord actually teaches about any of it are not, and no document names a plane. |
 
 **Deliberately open** — questions left unresolved *by design*, which later sessions must
 not helpfully close:
@@ -407,7 +440,10 @@ Four documents, filename-prefixed `KC_`:
 
 | Document | Role | Column layout |
 |---|---|---|
-| **Sourcebook** | Setting canon: the realms, the occupation, factions, magic, history. | Two-column |
+| **Sourcebook** | Setting canon: the realms, faith, the occupation, factions, magic, history, the timeline. | Two-column |
+| **Gazetteer** | Geography region by region: ~30 keyed places, travel times, regional encounter tables. | Two-column |
+| **Bestiary** | Resident-magic creatures, the Sixth Free Legion, named-NPC blocks. | Two-column |
+| **Character Options** | Backgrounds, feats, subclasses, spells, magic items. Player-facing. | Two-column |
 | **Session modules** | One per session arc. Runnable at the table. | Two-column |
 | **DM Reference Guide** | Wide scannable tables, stat block index, the Branch Ledger. | **Single-column** |
 | **Player Guide** | The sanitized handout. | Two-column |
@@ -596,6 +632,21 @@ page count, and fonts. When a rebuilt PDF differs unexpectedly, compare
 characters. Normalize immediately after inserting new text, then re-run the greps —
 inserting prose is exactly when literal characters sneak in.
 
+**The practical workflow is write-then-normalize, not write-escaped.** Hand-escaping prose
+as it is composed is slow and is where the doubled-backslash bug comes from. Write the new
+text with literal characters, then run a normalizer over the file that (a) converts every
+non-ASCII character to `\uXXXX` and (b) collapses any `\\uXXXX` back to `\uXXXX`. The
+second half is not optional: a doubled escape compiles clean, passes the non-ASCII scanner,
+and leaks the literal text `\u2019` into the PDF. During the expansion pass the collapse
+step caught seventeen of them across four files.
+
+**Straight apostrophes are a real defect, and greps for them must be narrow.** House style
+is `\u2019` in all prose; `don't` and `Vale's` render as a different glyph and look wrong
+next to the surrounding text. The safe pattern is **apostrophe between two word characters**
+(`(\w)'(\w)`). Do not widen it to allow a non-word character on either side: that matches
+`require('docx')` and `path.join(__dirname, '..', 'images')` and will corrupt the generator.
+176 of these were converted in one pass; the narrow pattern left every `require` intact.
+
 **`node --check` is not sufficient.** It validates syntax, not identifiers — a call to a
 helper that file does not define passes `--check` and throws at build time. Helper sets
 genuinely differ between generators. Grep for the definition, and actually run the script.
@@ -653,6 +704,17 @@ table with a marker style that `transplant.py` finds, wraps in a pair of continu
 section breaks, and strips. Use it for any table with a prose column; leave narrow
 numeric tables in the column flow. In a `--single` document the marker is simply removed.
 
+**Column widths need a `tblGrid`, or LibreOffice ignores them.** `table()` passes
+`columnWidths` (in twips, derived from the percentage `widths` against a 9360 nominal) and
+`layout: TableLayoutType.FIXED`. This is not decoration. docx-js emits per-cell `tcW`
+percentages but **no `<w:tblGrid>` unless `columnWidths` is given**, and without a grid
+LibreOffice discards the percentages and distributes every column evenly — so a `d6` column
+holding a single digit took a third of the table and every prose cell wrapped a line early.
+Supplying the grid tightened the whole set by two pages and is the single largest legibility
+win the pipeline has had. `TableLayoutType` had to be added to `tools/docx-md-shim/` at the
+same time: **the shim must export everything the generators destructure from `docx`**, or the
+Markdown half of the build throws while the PDF half succeeds.
+
 **Tables must not tear.** `row()` sets `cantSplit` so a row's cells cannot be torn across
 a column or page break, header rows carry `tableHeader` so they repeat when a long table
 does span a break, and the ability-score row in `SB()` uses `keepNext` so the values stay
@@ -682,42 +744,51 @@ had the problem.
 
 ## Current State
 
-- `scripts/KC_Sourcebook.js` — the sourcebook: the call, Elduvaine before the fall, the
-  fall, the occupation, the crusade (incl. the Promise), *What Is Actually Happening
-  (DM Only)*, and running guidance (the Four Voices, the Refrain).
-- `scripts/KC_Module01_TheMuster.js` through `KC_Module11_TheDecisionAtTheGates.js`
-  (twelve files — Module Two forks into `02A_TheSeaRoad` and `02B_TheMountainRoad`,
-  and only one half is played at a given table) — **all eleven module slots are
-  written**, each carrying the full skeleton: pacing overview, *What Is Actually
-  Happening (DM Only)*, numbered scenes with boxed read-aloud, tiered DCs, SRD-sourced
-  stat blocks, NPC profiles, Optional Content, *Diverging Paths (DM Only)*, Loot, and
-  the Refrain. Draws on the approved Draconic Layer (`drafts/DRACONIC-LAYER.RESOLVED.md`)
-  for Module 7's dragon and Xavier's earned "Wyvernheart" epithet. The Refrain's rhymed
-  wording, set once in the sourcebook, is repeated verbatim in every module and turns
-  only in its last line, only in Module 11.
-- `scripts/KC_DM_Reference_Guide.js` — **written**, the first and only document in
-  single-column layout (`SINGLE_COL_MATCH` in `tools/build.sh` already pointed at it).
-  Campaign at a Glance, a Stat Block Index of all nine unique SRD-sourced stat blocks
-  across the modules, a Recurring NPCs quick-reference, and the compiled Branch Ledger
-  — all twenty-four tracked divergences from every module's Diverging Paths section,
-  with a blank column for what actually happens at the table. Invents nothing; every
-  fact is drawn from the sourcebook and the module scripts already written.
-- `scripts/KC_Player_Guide.js` — **written**, two-column, authored as its own
-  independent document rather than by deleting paragraphs from the sourcebook, per
-  *The Document Set* above. Covers the Call, Harrowmark and the coalition realms (by
-  role only — none of their undecided agendas), the Promise, Elduvaine's four habits
-  as secondhand rumor rather than confirmed fact, a Rumors from the Road list, chargen
-  guidance (2014 SRD 5.1, level 5, milestone), and the Refrain printed as an in-world
-  marching verse. Deliberately withholds Vale's actual motive, whether he is human, the
-  Wyvernheart reveal, and the hold-or-turn-back ending structure — checked section by
-  section against the sourcebook's own DM Only notes for what must stay out.
-- **All four documents in the set are now written.** `images/` is still empty, so
-  `IMG()` remains unexercised until real artwork arrives — the helper and the
-  transplant path are built and were verified against a test card early in the
-  build-out.
-- **The pipeline is proven and stable:** parameterized stage path (`scripts/stage.js`,
-  `$KC_STAGE`), artwork support reaching both the PDF and the Markdown corpus, tables
-  spanning both columns with `{ full: true }`, and single-column mode via `--single`.
-  Fifteen documents build clean and byte-identical across repeated rebuilds.
-- Everything else in `scripts/` and `tools/` is the campaign-agnostic pipeline, carried
-  over intact from The Qilvayas Symphony.
+**Eighteen documents, 105 pages, all verified clean and byte-reproducible.**
+
+- `scripts/KC_Sourcebook.js` — the call, the peoples, **faith in the Nine Works** (the
+  Concord, Elduvaine's Observances, the Order of the Tenth Work), Elduvaine before the fall,
+  **the reckoning of years** (a relative timeline keyed to the night the wards opened), the
+  fall, the occupation, **the House of Ysolde**, the crusade (the Promise, Norvatch, and
+  **Oksitan and Raimon V**), **powers and factions** with three-step standing, **tongues,
+  years and names**, and running guidance including **travelling the Willing Road** and
+  **downtime on a march**.
+- `scripts/KC_Gazetteer.js` — Harrowmark, the sea road, the mountain road, and Elduvaine as
+  four regions (the Vaunt, the Braid, the Orchard Marches, the Standing Marches), plus the
+  Willing Road and the coalition realms in brief. Roughly thirty keyed entries, a table of
+  travel times for every leg of the march, and a d10/d12 encounter table per region.
+- `scripts/KC_Bestiary.js` — six resident-magic creatures built to suffer as the land is
+  drained (Waystone Warden, the Withering, Light-Hollow, Season-Bound Stag, Echo of the
+  Listening Water, Draining Engine); the Sixth Free Legion in four ranks; and named figures.
+  **Every block calibrated against real SRD creatures at the same and neighbouring CR**, never
+  against the DMG table. Maelis has no block, deliberately, and the entry says why.
+- `scripts/KC_Character_Options.js` — seven backgrounds with d6 bond tables, six feats, three
+  subclasses (Domain of the Kept, Pikewatch, the Sleeping Archive), six spells, and the
+  Elduvish wonders as a tiered magic item list. 2014 rules throughout.
+- `scripts/KC_Module01_TheMuster.js` through `KC_Module11_TheDecisionAtTheGates.js` (twelve
+  files) — every module now also carries **Puzzles and Set Pieces**: a puzzle with several
+  real solutions and no preferred one, and a set piece run in phases, each with a pacing note
+  saying whether it expands an existing scene or is additive. Sennoch Hall and Vindana's
+  undercity are keyed as dungeons. The capstone puzzle in Module 11, *Access by Rule*,
+  establishes that the rule has no exception and never had one — **which means Vale was never
+  close** — while deliberately leaving what is behind the doors unanswered.
+- `scripts/KC_DM_Reference_Guide.js` — single-column. Campaign at a Glance, Peoples at a
+  Glance, the Stat Block Index, **faith and factions at a glance**, **a puzzle index naming
+  what solves each one**, twenty recurring NPCs, and a Branch Ledger now carrying **43**
+  tracked divergences.
+- `scripts/KC_Player_Guide.js` — gained **what people believe** (the Nine Works, Elduvaine's
+  lack of a church, and the Tenth Work as an ally that says openly what it intends) and **the
+  House of Ysolde** by name and public reputation only. Still withholds Vale's motive, whether
+  he is human, the Wyvernheart, and the ending structure.
+- **`images/` is still empty**, so `IMG()` remains unexercised. It is the largest remaining
+  gap in the set: eighteen documents of prose and not one map or illustration.
+- **The pipeline is unchanged and still proven.** Three new generators registered in
+  `tools/build.sh`; `SINGLE_COL_MATCH` still names only the DM Reference Guide.
+
+**What the expansion deliberately did not do.** Auberitz still has no agenda, the deepest
+vaults still have no contents, Vale's humanity is still open, and whether Harrowmark was ever
+otherwise is still open. None of those were asked about and none were invented. The two
+*Deliberately open* questions — what the Willing Road measures, and hold-or-turn-back — were
+reinforced rather than eroded: the Willing Road gained an explicit DM instruction not to
+invent a criterion even privately, and the Module 11 capstone is available on both branches
+and favours neither.

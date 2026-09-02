@@ -144,6 +144,48 @@ Xavier meets them once more, briefly, in the noise of it rather than the quiet o
 
 This is where the road is chosen — sea or mountain. Let the party decide it in character, weighing whatever they have heard in camp (speed and a side-conquest against the sea, or a longer and harder overland march against the mountains); do not let Xavier decide it for them. Whichever they choose, hand off directly to that module.
 
+# Puzzles and Set Pieces
+
+The Ledge is the wyvern hunt, restated as a problem rather than a fight, and fits inside the time that scene already has. The Muster Roll is additive: budget twenty-five minutes for it at Duncarrow, or move it into Optional Content on a short night.
+
+## The Puzzle: The Muster Roll
+
+Give this to the players on paper if you can. It is the campaign’s first puzzle, it is solvable at the table with no dice at all, and it teaches the thing the whole campaign runs on: in this war, the person holding the ledger is holding a weapon.
+
+> *“Somebody is drawing bread for men who are not there. Eight thousand came in and I am feeding eight thousand four hundred, and every roll adds up, and I have had four clerks over it and they all say the same thing, which is that the arithmetic is perfect. It is perfect. That is what is bothering me.”*
+
+The quartermaster hands over four company rolls. The party may read them, walk the camp, and count anything they like.
+
+| **Company** | **On the roll** | **Rations drawn** | **Billeted at** |
+| --- | --- | --- | --- |
+| Fenmarrow Third | 210 | 210 | The east field, in tents |
+| Corrieholt Horse | 160 | 184 | The east field, in tents |
+| Stannock Pike | 240 | 240 | The stable range |
+| Greywatch Watch | 90 | 90 | Billeted in the town |
+
+The Corrieholt discrepancy is a decoy and is entirely honest: light horse draw a fodder allowance that is docketed as rations, which any Auberitz quartermaster will confirm on request. The actual fraud is that the Stannock Pike company is billeted in the stable range, and the stable range holds one hundred and eighty men. Sixty of that company are on the roll, drawing bread, and are not in the camp at all.
+
+Three routes to it, and a party should be allowed any of them. Count the billets — the stable range is a fixed building and its capacity is a matter of public record. Walk the range at dawn and count bodies. Or ask a Stannock pikeman how many of his village came, and get an answer that is sixty short of the roll.
+
+**DM Only:** there is no villain here and the party should be braced for one. Stannock sent four hundred people out of sixteen hundred and sixty of them were promised to a hold that then could not spare them, so a clerk carried them on the roll and sent the bread money home. It is embezzlement, it is feeding a village that gave a quarter of its people to this war, and the clerk will not deny a word of it. What the party does with that is the scene. Xavier, if asked, will decide in about four seconds and will not enjoy it.
+
+## Set Piece: The Ledge
+
+The wyvern at Greywatch is the module’s action centrepiece and it should be run as a problem rather than as a slugging match. Brenna Vane will state the constraints flatly and then get out of the way, because that is what a huntmaster does.
+
+> *“It is on the Nether Ledge, ninety feet up, under an overhang that runs forty feet out. That means no bows worth anything, no spells you have to see it to throw, and nothing coming at it from above. There are two of Ellis Marrow’s people alive on the shelf below it, and they have been there since yesterday, and they will not be there tomorrow. Pikes are in the rack. I will hold whichever rope you tell me to hold.”*
+
+**The constraints, stated plainly:** the overhang denies line of sight from above and from the valley floor. The ledge is reachable by a forty-minute climb from the north, or by rope from the clifftop, or not at all. The two shepherds are on a shelf twenty feet below the wyvern and cannot climb. The wyvern will not leave a kill and has one.
+
+Four solutions work, and there are certainly more. Any of these should land, and the DM should not have a preferred one.
+
+- **Rope from above.** Two characters go over on lines while the rest hold. The wyvern gets a surprise round on whoever lands first. This is how Greywatch does it and it costs people, which is the point.
+- **Bait it off.** A goat, a corpse, or anything that smells like food, dropped in the valley. The wyvern is a beast, not a schemer, and a DC 14 Wisdom (Animal Handling) check with a real lure moves it. The fight then happens in the open, on the party’s terms, and Brenna will say so out loud so a table that missed it hears the option.
+- **Take the shepherds first.** Ignore the wyvern entirely. A slow, quiet, forty-minute climb from the north, two people carried out, and nobody fights anything. Brenna will approve of this more than any other answer and will not say so.
+- **Bring the overhang down.** It is undercut rock and it is not sound. This kills the wyvern, kills the shepherds, and is a real option a party may reach for under time pressure. Let them. Do not warn them twice.
+
+**DM Only:** the wyvern is a CR 6 creature and a party of five at 5th level will beat it in the open and will struggle badly on the ledge, which is exactly the lesson. Greywatch has been doing this for nine centuries and still loses people every year, and the party discovering that the clever answer is available and unglamorous is the whole scene. Do not reward the direct assault with an easy fight to make it feel good. Brenna will not comment either way, and will drink with them afterward regardless.
+
 # NPC Profiles
 
 ## Xavier III of Harrowmark

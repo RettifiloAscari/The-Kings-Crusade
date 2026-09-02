@@ -83,6 +83,44 @@ Before the final push, let the coalition’s leadership — and the party themse
 
 Do not resolve this scene with a decision. Its entire purpose is to make sure the table has heard the question asked seriously, by people with real stakes in the answer, before Module Eleven makes them answer it. End the module on the coalition making final preparations — supply, formation, the ordinary business of an army about to do something enormous — and hand off directly to Module Eleven.
 
+# Puzzles and Set Pieces
+
+Reading the Ledgers follows the price scene and adds twenty minutes, and only happens at all if the party bought the folio. The Regent’s Council is the counsel scene, with the question turned around and put to the party instead.
+
+## The Puzzle: Reading the Ledgers
+
+If the party bought Doria Kell’s folio, they now hold three years of purchase records and no idea what they mean. The arithmetic is the puzzle, the answer is a single number, and the number is worse than anybody hoped.
+
+Norvatch records by weight and by date, not by kind, because Norvatch is buying tonnage and does not care what the tonnage was. Four columns and nothing else:
+
+| **Year** | **Cut light-stone, tons** | **Other cargo, tons** | **What the party can work out** |
+| --- | --- | --- | --- |
+| One | 1,400 | 9,100 | Ordinary trade, plus a little. This is close to a normal year for Vindana. |
+| Two | 6,800 | 8,900 | The other cargo has not moved. The light-stone has gone up nearly fivefold. |
+| Three | 19,200 | 8,400 | And again. The curve is not linear and has not flattened. |
+
+The insight is that the ordinary cargo is flat, which means Elduvaine’s actual economy is unchanged and everything in the increase is the draining. And cut light-stone is not building stone: it is the medium, drained and packaged, and every ton of it is a piece of the Living Realm in a cart.
+
+A character with the Archive Clerk or Season-Keeper background, or a DC 16 Intelligence check by anyone, converts it. Cairn Ithel’s masons can say how much resident magic a ton of cut stone will hold. The Season-Keepers at Nantcorrow have the map of which woods have turned and in what order. Put the two together and the number comes out.
+
+> *“Something near a third of it. A third of the Living Realm, gone through Vindana in three years, and the rate has been climbing every quarter and has not once slowed. That is what you have bought. I did tell you it was not good news. I only ever said it was true.”*
+
+**DM Only:** give them the number and do not turn it into a countdown of days. It is a direction of travel, not a timer, and the party should feel hurried rather than scheduled. Two things follow that the DM should let land on their own: the curve is accelerating, which means the fourth year is worse than the first three combined; and a party that refused the folio walks into Module Eleven without any of this, which is exactly as frightening as it sounds and is entirely survivable. Neither is the correct answer and the module must not tilt it.
+
+## Set Piece: The Regent’s Council
+
+A miller, two orchard-keepers, a forger who used to file requisitions, and the last free member of the royal house of Elduvaine, in the back of a lock-house eleven miles from the capital, deciding what to ask the coalition for.
+
+> *“There are seven of us and a table. Aveline Ysolde is at the head of it because somebody has to be, not because anyone here would call her that out loud, and she has a list in front of her in a hand so small it is almost a cipher. She does not stand up when you come in. She says: sit down, we have four hours, and I would like to know what your king thinks he has promised, because we have heard three versions and none of them can all be true.”*
+
+She is right. The party has watched Xavier promise land to Oksitan, the Archive to Auberitz, and — if they signed in this module — the standing right to buy the kingdom by the cartload to a realm that never marched a soldier. Every one of those is only payable on an Elduvaine that is taken and held. Nobody asked Elduvaine.
+
+**What the resistance wants to know, in order:** what the coalition has been promised. Who is expected to pay it. Whether the Concord’s Tenth Work is going to be permitted to do what it has been openly saying it will do. And whether the party will tell them the truth about any of it.
+
+The party can lie. It works. Aveline is not a lie detector and the meeting ends warmly and the resistance opens every door in the Braid for them. It also means the first time an Elduvish parish watches a Tenth Work chapter house go up on ground that had an Observance on it, somebody in that room will remember who said it would not happen.
+
+**DM Only:** there is no check to pass here and nothing to win. This is the campaign asking the party, once, directly, what they actually think the crusade is for, in front of the people it is nominally being fought for. Whatever they say goes in the Branch Ledger verbatim. Do not editorialise, do not have Aveline approve or disapprove, and do not resolve it in this module or the next one.
+
 # NPC Profiles
 
 ## The Regent

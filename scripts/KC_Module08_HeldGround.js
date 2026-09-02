@@ -14,12 +14,12 @@
 // This module carries no required plot beat, by design -- CLAUDE.md asks for
 // levity planned in, not accidental, and this is where that design shows up
 // structurally rather than as scattered asides between set pieces. It follows
-// the campaign's largest set piece on purpose. The second rescue thread is
+// the campaign\u2019s largest set piece on purpose. The second rescue thread is
 // real and resolves in this module, but it is written to carry the same comic
 // register as everything around it rather than reading as inserted homework.
 //
 // GATED CONTENT NOTICE: the second captive, "the Magistrate," has no proper
-// name for the same reason the Ward does not -- the royal family's names are
+// name for the same reason the Ward does not -- the royal family\u2019s names are
 // still open in CLAUDE.md. Do not name them here or in any future revision
 // without that sign-off.
 
@@ -85,11 +85,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -194,6 +198,45 @@ c.push(BOX("\u201CThey\u2019ve started calling me something,\u201D he says, not 
 c.push(P("Let this be a real conversation rather than a scene to resolve. Xavier is not fishing for reassurance and does not need the party to tell him he is a hero; he genuinely does not know yet how he feels about the name, and the party\u2019s honest reaction \u2014 whatever it is \u2014 matters more here than any mechanical outcome. This scene needs no check and produces no loot. It is the module\u2019s actual point, arriving last, exactly where a session built on deliberate levity has been heading since Scene 1."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("Three Years of Filing expands the ledger war and adds twenty minutes. Putting the Light Back is additive, takes ten, and should not be cut \u2014 it is the beat the whole module is built around."));
+
+c.push(H2("The Puzzle: Three Years of Filing"));
+
+c.push(P("Ottoline Vahn fought her captivity by filing, and won, and the consequence is that the occupation of Vindana produced the most complete administrative record in Elduvaine and then had to rely on it. The party needs one document out of it. She will help, at her own pace, and her pace is the puzzle."));
+
+c.push(BOX("\u201CYou want the carriage authorisations. Everybody wants the carriage authorisations. They are not filed under carriage, they are not filed under authorisation, and they are not filed under Norvatch, and if you tell me why you want them I will tell you where they are, and if you do not, we can spend a pleasant afternoon and you can find them yourself.\u201D"));
+
+c.push(P("The registry is filed by the issuing office, not by subject, which is standard Elduvish practice and is baffling to everyone else. Four offices issued paper in Vindana and the party can work out which from any docket they already hold:"));
+
+c.push(table(
+  ["Office", "Issued", "Docket mark"],
+  [26, 44, 30],
+  [
+    ["The Levy", "Grain, fodder, and the published quarterly rate", "A single stroke, top right"],
+    ["The Harbour", "Everything that moved by water, in or out", "Two strokes and a date"],
+    ["The Garrison", "Permits for persons, and passes", "A stamp, always smudged"],
+    ["The Keeper\u2019s Office", "Anything touching the Archive or the quarries", "No mark at all, which is itself the mark"]
+  ], { full: true }
+));
+
+c.push(P("The carriage authorisations went out by water, so they are Harbour, and they are filed by date, and the date the party wants is the week Norvatch\u2019s volume tripled \u2014 which they can get from Morgarth\u2019s harbourmaster, or from the counting-house manifests in this module, or by asking Ottoline the question she is waiting to be asked."));
+
+c.push(PS([DM("DM Only: "), { t: "the unmarked fourth office is the real find and the party should stumble on it while looking for something else. Anything issued by the Keeper\u2019s Office carries no docket mark, because the Keeper\u2019s Office was never part of the civil registry and never needed one \u2014 which means every quarry order, every Archive requisition and every light-stone consignment for three years is sitting in a drawer that nobody has thought to look in, unmarked, because it always was. Ottoline knows. She has been waiting three years for somebody to notice, and she will not point at it, because pointing at it is not how a magistrate establishes anything." }]));
+
+c.push(H2("Set Piece: Putting the Light Back"));
+
+c.push(P("The city has been dark for fourteen months and the coalition holds it, and on the fourth night somebody works out that the wall will still take a charge."));
+
+c.push(BOX("\u201CIt is a gnome from Cairn Ithel and two Auberitz sappers and a Concord priest of Aurine who has no business being on that scaffold, and between them they pour about four hours of lamplight into eleven feet of the inner wall. It holds. It comes up slow, the colour of late afternoon, and it spreads maybe thirty feet along the course and stops. Eleven feet of a city that used to do this from the ground up on every clear night. Somebody on the harbour steps starts crying and does not stop and nobody says anything about it.\u201D"));
+
+c.push(P("It is not a victory and everyone present knows the arithmetic: four hours of lamp for eleven feet of wall, against a city that held six centuries of afternoons for free. The stone is not repaired. The stone is being manually filled, one small stretch at a time, by people who will be dead long before the second street is done."));
+
+c.push(P("They do it anyway. They do it every night for the rest of the occupation of the city, and by the time the party leaves Vindana about two hundred feet of the inner wall is lit, and the party will be able to see it from the road."));
+
+c.push(PS([DM("DM Only: "), { t: "this is the levity module and this is not a levity scene, and it should sit in the middle of an evening that is otherwise warm and loud and full of terrible singing. Do not build to it. Let somebody mention it in passing, let the party wander over, and let them stand there. Then go back to the singing. The contrast is the whole design of the module and this is the beat it is built around." }]));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("The Magistrate"));

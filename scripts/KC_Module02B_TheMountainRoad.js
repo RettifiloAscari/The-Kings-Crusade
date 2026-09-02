@@ -19,8 +19,8 @@
 // Encounter design note: Baron Osgar Vell is the SRD Bandit Captain (CR 2, 450
 // XP) renamed and reflavored, backed by SRD Scouts (CR 1/2, 100 XP each) as
 // mountain skirmishers -- both pulled from 5e-bits/5e-database rather than
-// from memory. As in 2A, the DMG math reads Easy-to-Medium; this road's real
-// danger is attrition and terrain, not a single fight, and Scene 2's river
+// from memory. As in 2A, the DMG math reads Easy-to-Medium; this road\u2019s real
+// danger is attrition and terrain, not a single fight, and Scene 2\u2019s river
 // crossing is written to foreshadow the drowned king without naming him.
 
 const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
@@ -85,11 +85,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -276,6 +280,56 @@ c.push(BOX("Garrick Hollow, the column\u2019s hired guide, falls into step besid
 c.push(P("This is where the module ends, and where the DM should let the weight of the road actually register \u2014 a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module 5 for the approach to Vindana, where the sea road\u2019s own losses \u2014 including the second king\u2019s \u2014 catch up with the party as news from the road not taken."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("The Back of the Charter expands the toll negotiation and adds ten minutes. The Cold Stair is how the march is run. The Signposted Corridor belongs to the Old Workings and stays in Optional Content, where it is worth sixty minutes to a table that wants a dungeon."));
+
+c.push(H2("The Puzzle: The Back of the Charter"));
+
+c.push(P("Baron Vell\u2019s toll is legal, and that is the whole difficulty with Baron Vell. The charter is real, it is four generations old, it hangs framed in the keep\u2019s hall, and it says what he may charge. He will show it to anybody. He is proud of it."));
+
+c.push(P("He has never read the back."));
+
+c.push(B("What the front says:", "the holder of Ashgate keep may levy a toll on the ford, at rates set out in a schedule, per head and per axle, in perpetuity."));
+
+c.push(B("What the back says:", "the charter is granted in exchange for the keep maintaining the ford, the causeway and the winter marks, and for the keep passing free of toll any body of men raised under a summons of the Crown."));
+
+c.push(P("Getting to it requires noticing that a document hanging in a frame has a reverse, which is a DC 12 Intelligence (Investigation) check or simply a player asking. Getting it out of the frame without Vell\u2019s permission is a DC 15 Dexterity (Sleight of Hand) check. Getting Vell to take it out himself is a DC 16 Charisma (Persuasion) check and is much the better scene, because he will do it, and he will read it, and the party will watch him work out what it says."));
+
+c.push(PS([DM("DM Only: "), { t: "Vell is not a fraud and has not been cheating anybody. His great-grandfather knew about the clause; his grandfather did not; the family has collected in good faith for two generations on a document nobody had turned over. When he reads it he goes quiet, and then he honours it, because he is a man whose entire identity is that his charter is legitimate and he has just found out what legitimate costs. Let the party win this without humiliating him. If they humiliate him anyway, he still honours it, and the column still crosses, and something has been broken that did not need to be." }]));
+
+c.push(H2("The Puzzle: The Signposted Corridor"));
+
+c.push(P("The kobolds of the Old Workings have had two generations and nothing else to do. Every junction in the upper gallery is trapped, and every trap is signposted \u2014 carefully, legibly, and in Draconic, which they do not consider a trick and which everyone who has died here has considered one."));
+
+c.push(P("The signs are honest. That is the puzzle. A party that can read Draconic walks through the entire complex unharmed; a party that cannot must work out that the marks are warnings rather than decoration, and then work out which is which by watching what the kobolds themselves do."));
+
+c.push(table(
+  ["The mark", "What it says", "What is actually there"],
+  [22, 30, 48],
+  [
+    ["Three scratches, descending", "Falling", "A covered pit, 20 ft. DC 13 Dexterity save or 2d6 damage and prone."],
+    ["A circle with a line through", "Do not stand", "Pressure plate. DC 14 Dexterity save or a rock fall for 3d6 bludgeoning in a 10-ft. square."],
+    ["A wave", "Water", "The flooded lower gallery. Not a trap. A genuine warning, and the thing they want help with."],
+    ["Two dots and a stroke", "Ours, do not touch", "A larder. It is a larder. There is nothing else to it and a paranoid party will spend twenty minutes on it."],
+    ["A hand, open", "Come in, talk", "The negotiating chamber. They have prepared a speech and are hurt if nobody hears it."]
+  ], { full: true }
+));
+
+c.push(PS([DM("DM Only: "), { t: "the whole encounter tips on whether a party assumes signposting is malice. If they blunder through, they take real damage from traps that told them, in writing, what they were. If they stop and think, they get sixty kobolds who would very much like to be left alone, will pay in silver they have no use for, and want somebody to do something about what is in the flooded lower gallery. Reward the reading. Do not punish the fighting, but do not soften it either." }]));
+
+c.push(H2("Set Piece: The Cold Stair in Weather"));
+
+c.push(P("Eleven miles of switchback cut into the eastern face, wind coming across rather than along, no water for the middle four miles and no shelter for the last three. Run it as an environment that is trying to kill the column, because it is."));
+
+c.push(BOX("\u201CThe wind does not gust here. It leans. It has been leaning against your left shoulder for six hours and you have been walking with your body at an angle for so long that when the road turns and it stops, you stagger, and the man behind you laughs, and then it turns again and he stops laughing.\u201D"));
+
+c.push(B("The hazard.", "Each of the three days on the Stair, every character makes a DC 12 Constitution saving throw at nightfall. On a failure they gain one level of exhaustion. Characters who reach an intact refuge hut, or who are sheltered by somebody who plans, make the save with advantage; characters who pushed on past the last hut make it with disadvantage."));
+
+c.push(B("The problem.", "Somebody has been stripping the refuge huts for roofing timber. Two of the four are open to the sky. This is a small crime at sea level and a lethal one at five thousand feet, and the party can find out who is doing it in an afternoon: it is the Kir Halloway carters, who are cold, who are also right that nobody has repaired the huts in nine years, and who are entirely prepared to be shouted at."));
+
+c.push(B("The set piece.", "On the second night, a section of the column ahead does not make the hut. Forty people, in the open, in the dark, three quarters of a mile up the road. The party can go back for them. Every hour they spend doing it is an hour they are also in the open, and the DM should track their own exhaustion honestly and out loud."));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Garrick Hollow"));

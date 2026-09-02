@@ -1,3 +1,28 @@
+<!-- RESOLVED. All four gated questions were put to the DM as multiple choice and all
+     four came back on the recommended option. Folded into canon in one pass.
+
+     What changed on contact with the code:
+
+     - The Nine Works needed a theology, not just a name list. "The Works made the world
+       and withdrew while it was unfinished, so that hands would have something to do"
+       was derived from the established fact that Harrowmark's land does nothing — which
+       makes the religion follow from the setting instead of sitting on top of it.
+     - The Tenth Work was not in the original proposal. It emerged while writing the
+       Concord section, as the answer to where the coalition's complexity lives, and it
+       turned out to be the single most useful thing in this draft.
+     - Maelis needed two illnesses, not one. "Dying for eleven years" and "dying at the
+       land's rate" contradict each other unless an ordinary wasting began first and the
+       draining then changed its character. The timeline states both.
+     - Auberitz was NOT settled. It was not among the four questions and was deliberately
+       left open; its role is built out and its agenda is not.
+     - The Legion's contract became an endgame route. Module 9 promised that a captured
+       Voss would explain the contract "which matters enormously in Module Eleven", and
+       Module 11 did not use it. Rather than soften the promise, Module 11 gained a third
+       way into Caer Ysolde that is neither force nor the final choice.
+     - 176 straight apostrophes were normalised repo-wide, and the grep that finds them
+       has to be narrow: a pattern allowing non-word characters matches require('docx').
+-->
+
 # Design Draft: The Expansion Layer
 
 Bringing the set from a proven skeleton (63 pages) toward the scale and feature

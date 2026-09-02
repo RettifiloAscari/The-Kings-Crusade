@@ -161,6 +161,39 @@ Let the party decide Calanthe’s fate. A coalition garrison secures the strait 
 
 The fleet resupplies, repairs what the storm damaged, and continues south within the day. Hand off directly to Module 5 for the approach to Vindana, where the mountain road’s own losses — including the second king’s — catch up with the party as news from the road not taken.
 
+# Puzzles and Set Pieces
+
+The Breaking Ship is how the storm is run rather than more of it. The Moved Light expands the business at Thane’s hold and adds perhaps twenty minutes, most of which the party will spend arguing with each other.
+
+## The Puzzle: The Moved Light
+
+Every sailor in the coalition fleet believes Ivor Thane moved a light and wrecked them deliberately. Half of Calanthe believes it too. The party can settle it, and the answer is more interesting than either side wants.
+
+Four pieces of evidence, available to anyone who looks:
+
+- **The Ossary light.** A stone tower on the headland, lit nightly, and it was lit that night — six people will swear to it. Its lamp burns four pints of oil in a night. The night of the storm it burned four pints. It was not moved and it was not doused.
+- **The sightline.** From the deck of a ship on the approach, the Ossary light and the harbour light line up when you are safely in the channel. A DC 13 Intelligence (Investigation) check standing on the headland, or any sailor asked the right question, establishes this.
+- **The harbour light.** Lit late that night. Two hours late. The keeper says he was ill; his neighbour says he was drinking; both are true and neither is the point.
+- **The salvage log.** Thane’s boats were in the water within forty minutes of the first ship striking. Forty minutes, at night, in that weather, is not a response. It is a readiness.
+
+Put together: nobody moved a light. The harbour light was late, the sightline therefore did not exist, and three ships ran onto the shoals in the dark because of a lamp-keeper’s bad night. Thane did not cause the wreck. Thane knew the harbour light was unreliable, had known for years, had never once fixed it or reported it, and had his boats crewed and waiting before the first hull touched.
+
+**DM Only:** this is the module’s best scene and it depends on the party being allowed to reach a conclusion the fleet will not like. Thane is not a wrecker and cannot be hanged as one; the evidence exonerates him of the thing everybody wants him hanged for and convicts him of something with no name and no penalty. If the party takes the truth to the coalition, they are taking away a justification eight thousand angry sailors were relying on. If they sit on it, they are letting a man hang for the wrong crime. Both are real. Neither is correct.
+
+## Set Piece: The Breaking Ship
+
+Run the storm as a sequence of concrete problems on a deck that is coming apart, not as a montage. Three rounds per phase, real initiative, and the ship losing something in each one.
+
+> *“The mast goes first, and it does not fall — it folds, forward and down, and takes the forestay and eleven feet of rail with it, and the noise it makes is not a crack but a long tearing groan you feel in your teeth. Then the ship comes off the top of a wave and does not come down where the sea is.”*
+
+**Phase One: The Rigging.** The mainmast is down across the deck and the shrouds are still attached, which means the wreckage is being dragged and is pulling the bow round into the sea. Cutting it free is DC 15 Strength (Athletics) with an axe, three successes needed, and anyone working the rail makes a DC 13 Dexterity saving throw each round or goes over.
+
+**Phase Two: The Hold.** Four feet of water and climbing, and the siege train’s draught horses are down there. A character who goes below is in the dark, in water, with panicking animals. Getting them up is DC 14 Wisdom (Animal Handling); the alternative is closing the hatch, which everybody aboard will understand and nobody will forget.
+
+**Phase Three: The Shoals.** The ship strikes. Everyone aboard makes a DC 12 Strength saving throw or is thrown twenty feet and takes 2d6 bludgeoning damage. From here it is swimming, and the swim is DC 13 Athletics, three successes, with Thane’s boats arriving somewhere in the middle of it and the party watching them choose who to pick up first.
+
+**DM Only:** nobody in the party should die here and the scene should feel like they might. Use the horses. A party that saves the draught team keeps the siege train on schedule and will find out in Module Six exactly what that was worth, and a party that closes the hatch will find that out too, from an Auberitz engineer who is not accusing them of anything.
+
 # NPC Profiles
 
 ## Sera Vosk

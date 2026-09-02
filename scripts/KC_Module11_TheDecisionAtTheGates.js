@@ -15,7 +15,7 @@
 // in the whole campaign -- every prior module kept him deliberately absent.
 // Both endings (hold Elduvaine, or turn back within sight of it) are written
 // in full; CLAUDE.md is explicit that neither is favored and a table decides
-// at the table. The Refrain's last line changes here, and only here -- see
+// at the table. The Refrain\u2019s last line changes here, and only here -- see
 // the very end of this file, and do not let it change anywhere else.
 //
 // PRESERVED AMBIGUITIES -- do not resolve these, here or in any future
@@ -87,11 +87,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -250,6 +254,49 @@ c.push(P("This costs something real, and the module should let it. The Promise g
 c.push(P("Whichever member of the royal house the party has come to know best has their own reaction to this, and it should not be uncomplicated gratitude \u2014 someone who wanted to hold and someone who wanted to give have both had a say in what almost happened, and not everyone in that divided house will agree the party chose correctly. Xavier\u2019s own place in this ending is quieter than in the other one; the songs about him will still be written, but they will have to reckon with a king who marched an army to the gates of a kingdom and then, deliberately, did not take it. That is a harder story to tell well, and this campaign trusts its table to have earned the right to tell it anyway."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("A City That Is Not Lit opens the module and is worth five uninterrupted minutes with no dice in them. Access by Rule sits inside the Archive, is the last puzzle in the campaign, and is available on both branches."));
+
+c.push(H2("Set Piece: A City That Is Not Lit"));
+
+c.push(P("Everyone in the coalition has heard about Caer Ysolde since childhood. Nine islands, sixty-one bridges, and a whole city built of stone that held the afternoon and gave it back from the ground up on any clear night, bright enough to read by on the bridges and dim enough to see stars through. It is the thing a Fenmarrow levyman has been walking toward for eight months."));
+
+c.push(BOX("\u201CYou come over the last rise an hour before dawn and the valley is black. Not dark \u2014 black, the specific complete black of a landscape with nothing in it, and for about four seconds the whole column assumes there has been some mistake about the road. Then somebody finds the shape of it against the sky, and it is enormous, and it is right there, and there is not one light in it except the lamps on the walls, which are lamps, which are the ordinary kind, which are burning oil like anywhere else in the world.\u201D"));
+
+c.push(P("Let the column stop. Nobody orders it; it simply stops, over about a minute, all along its length. There is no speech and Xavier does not make one. Somewhere back in the line a Harrowmark sergeant says something short and obscene and it carries a very long way in the quiet."));
+
+c.push(PS([DM("DM Only: "), { t: "this is the payoff for eight months of march and it is worth an entire uninterrupted five minutes of table time with no dice, no initiative, and no NPC explaining what anyone should feel about it. Every scene in this campaign that described light-stone \u2014 Caerwyn\u2019s doorsteps, Vindana\u2019s inner wall, the eleven feet they lit by hand in Module Eight \u2014 was building this shot. Do not add anything to it. Describe the black valley, let them look at it, and cut." }]));
+
+c.push(H2("The Puzzle: Access by Rule"));
+
+c.push(P("The deepest vaults of the Ysolde Archive are behind doors that are not locked in any sense a thief would recognise. They are governed, the way the whole Archive has been governed for four hundred and eighty years, by rule rather than by power: a reader is admitted to what their rule permits and is not admitted past it, and there is no mechanism anywhere in the building for making an exception."));
+
+c.push(P("This is the campaign\u2019s last puzzle and it is the same puzzle Maedoc Vale spent nineteen years failing to solve. The party will have most of the pieces by now if they have been paying attention."));
+
+c.push(BUL("The instrument that bound the dragon named an office, not a man.", "Recovered in Module Seven. It compels obedience to the Keeper of the Ysolde Archive, whoever that is, which is how Vale did it without owning the thing."));
+c.push(BUL("The Keeper is appointed by the Sovereign.", "Any Archive Clerk knows this. Ottoline Vahn can produce the statute. It has never mattered to anybody because no Sovereign has ever needed to use it."));
+c.push(BUL("Maelis Ysolde is alive, is here, and has never been deposed.", "Vale kept her in her own apartments, considerately, with a skilled physician, for three years \u2014 because killing her would have raised questions about a great many instruments, his own appointment among them."));
+c.push(BUL("The reading-glass shows nothing you are not entitled to read.", "So it is also a test. Hand it to somebody and you can establish, in one second and with no argument, exactly what their rule permits."));
+
+c.push(P("The rule permits the Keeper a great deal and the deepest vaults not at all. It permits the Sovereign the same. It has no exception, has never had one, and was written that way on purpose by people who had thought carefully about exactly this situation four hundred and eighty years before it happened."));
+
+c.push(P("Which means Maedoc Vale opened a kingdom, hired an army, spent a third of the Living Realm, and held the building for three years, in pursuit of a permission that does not exist and cannot be created. He is not close. He was never close. Everything he has done was to buy time to look for a door that the people who built the place made sure was not there."));
+
+c.push(PS([DM("DM Only: "), { t: "what is behind those doors has not been decided and this book is not going to decide it. That is deliberate and it is the single most important restraint in the whole campaign: the party can establish, completely, what the rule says and what it does not permit, and they can establish what that means about Vale, and the question of what is actually in there is left to your table because your table will answer it better than a printed page can. Describe the doors. Describe the rule. Let the players do the rest, and if they force them open anyway, decide it yourself, that night, and never tell them it was not written down." }]));
+
+c.push(PS([DM("DM Only: "), { t: "note also what this puzzle does not do. It does not tell the party whether to hold Elduvaine or turn back, it does not make either ending correct, and it is available in both." }]));
+
+c.push(H2("The Third Way In: The Sixth\u2019s Contract"));
+
+c.push(P("Caer Ysolde is held by an army of employees, and a party that captured General Voss in Module Nine, or that has stood well with the Legion since Vindana, knows the two facts that follow from that. The Sixth Free Legion is on a written contract with a stated term. That term has fourteen weeks left on it."));
+
+c.push(P("The Legion has never broken a contract in a hundred and forty years, which is the only reason anybody hires it, and it is not going to break this one. But the contract does not require the Sixth to die for Maedoc Vale, it does not renew itself, and it is payable in coin out of a kingdom that the party can now demonstrate is a third gone and accelerating. A professional army will do arithmetic that its employer would rather it did not."));
+
+c.push(B("What this opens.", "Not a betrayal and not a mutiny \u2014 nothing so dramatic, and any party that pitches it that way will be refused flatly and shown out. What it opens is a negotiated withdrawal at term, or a garrison that declines to sortie, or a gate that is held by exactly as many people as the contract specifies and not one more. The Sixth will listen to a proposal delivered in writing, by somebody with standing, that does not ask it to be dishonourable. A Norvatch factor can draft one. So can Ottoline Vahn, and she would enjoy it."));
+
+c.push(PS([DM("DM Only: "), { t: "this is the campaign\u2019s reward for four modules of treating the occupation as an institution rather than a monster, and it should pay out enormously \u2014 up to and including a Caer Ysolde that changes hands with a fraction of the killing either ending would otherwise cost. It does not resolve the final choice. A party that walks the Legion out still has to decide whether to hold the place or set it down, and the decision is harder rather than easier for having been handed the city cheaply. Vale, notably, does not have a contract with anybody. He is the only one left in the building who cannot be bought out, which is worth saying out loud at the table exactly once. A party that walks away from the gates having learned this is carrying something heavier than a party that took the city, and the campaign does not have an opinion about which of them was right." }]));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Maedoc Vale"));

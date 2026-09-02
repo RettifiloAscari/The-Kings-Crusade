@@ -9,13 +9,13 @@
 // hand-typing an escape, use ONE backslash -- a doubled backslash compiles
 // clean and passes the non-ASCII scanner but leaks literal text into the PDF.
 //
-// This is the campaign's tonal pivot: the party's first landfall in Elduvaine.
-// CLAUDE.md's own instruction for Running Elduvaine is followed directly here
+// This is the campaign\u2019s tonal pivot: the party\u2019s first landfall in Elduvaine.
+// CLAUDE.md\u2019s own instruction for Running Elduvaine is followed directly here
 // -- "describe the habit before you describe the damage" -- so this module
 // shows a working Standing Light before it shows the Dead Mile, and closes
 // with the Four Voices device (also specified in CLAUDE.md) delivering the
 // last three years in four registers: a court account, a commons account, the
-// occupation's own proclamation, and a private grief. None of the four lies;
+// occupation\u2019s own proclamation, and a private grief. None of the four lies;
 // none is complete.
 //
 // Encounter design note: this module does not require combat. The checkpoint
@@ -86,11 +86,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -240,6 +244,48 @@ c.push(BOX("\u201C...I know you can\u2019t give him back to me, I\u2019m not sim
 c.push(P("Let the party sit with this before moving on. If a player wants to speak at the water themselves \u2014 a question, a message, simply their own name \u2014 let the water take it and give it back once, faithfully, in their own voice, and then let the scene end there. Nothing further needs to happen; the module\u2019s job is complete the moment the party has heard all four voices."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("Getting Past Wyn Alder is the checkpoint scene, restated as a problem with four solutions. Four in the Morning at the Ovens is the baker under Optional Content \u2014 and it is the module\u2019s best scene, so if the session is running long, cut something else."));
+
+c.push(H2("The Puzzle: Getting Past Wyn Alder"));
+
+c.push(P("The Caerwyn checkpoint is a table, a ledger, a bored gnome and eight guards, and it is the first genuine obstacle in Elduvaine. It cannot be fought \u2014 the garrison is eight and the town is a hundred yards away and there are four hundred more within a day \u2014 and it should not be, because Wyn Alder is the point of the scene."));
+
+c.push(P("The permit system is real, published, and has three parts. A party that works out the structure can defeat it four different ways."));
+
+c.push(table(
+  ["What is checked", "How", "The weakness"],
+  [26, 32, 42],
+  [
+    ["The permit itself", "Stamp, date, and the issuing district", "Wyn has never seen a permit from the northern districts and cannot tell a good forgery from a bad one."],
+    ["The name against the ledger", "Read aloud, entered by hand", "The ledger is alphabetical by given name, and there are four pages of Tegans."],
+    ["The stated business", "Asked, and written down", "Anything dull is waved through. Anything interesting is escalated, and escalation takes four days."],
+    ["The count", "Heads, against the permit", "A permit for four and a party of six fails here and nowhere else, and this is the check people forget."]
+  ], { full: true }
+));
+
+c.push(P("Four routes through, all of them good:"));
+
+c.push(BUL("Be boring.", "A stated business so tedious that writing it down is a chore. DC 13 Charisma (Deception). Wyn will not check a story about drainage."));
+c.push(BUL("Be somebody else.", "Forgery, DC 15, or the Occupation Survivor background\u2019s papers. Wyn cannot catch a northern forgery and knows she cannot, which is a different thing from not caring."));
+c.push(BUL("Split up.", "Two parties of three, an hour apart, with different business. Defeats the count entirely and no check is needed. This is the answer the module hopes for and never signals."));
+c.push(BUL("Go round.", "The creek paths. A halfling family will take them through for nothing, and the trip takes six hours and costs the party the Wyn Alder scene, which is a genuine loss and should be allowed to be one."));
+
+c.push(PS([DM("DM Only: "), { t: "do not let this become a fight, and do not let it become a wall. Wyn is a clerk with a bad job who has decided the paperwork is the whole of her responsibility, and she is neither brave nor cruel. If the party is caught she does not raise the alarm immediately \u2014 she looks at them for a moment, and asks a second question, and the module\u2019s real content is what she does with the answer. The first honest look this campaign gives the party at an ordinary complicit person is a gnome deciding, in about four seconds, how much she is prepared to notice." }]));
+
+c.push(H2("Set Piece: Four in the Morning at the Ovens"));
+
+c.push(P("The campaign\u2019s thesis, delivered without a word of argument, in a scene with no dice in it at all. Run it. If the session is running long, cut something else."));
+
+c.push(BOX("\u201CThe street is grey-gold stone and it is four in the morning and it is not dark. The doorsteps are holding yesterday afternoon \u2014 not brightly, the way a lamp does, but the way a wall holds heat, so the whole street is the colour of about five o\u2019clock in June and it is February. Ahead of you a door is open and there is a smell coming out of it that stops the argument you were having. The ovens at Caerwyn have not gone out in two hundred and nine years. Not banked. Not relit. Not out.\u201D"));
+
+c.push(P("The baker is up because the baker is always up. She will give the party bread because that is what she does with bread at four in the morning, and she will not take money for it, and if pressed she will become genuinely irritated about it. She has been doing this through three years of occupation. The garrison eat here. She feeds them too, and does not regard that as a position."));
+
+c.push(P("Somewhere in this she gives somebody a light-stone off the shelf by the door, because they looked at it, and because in Caerwyn it is a doorstep. It is the party\u2019s first magic item out of Elduvaine and it cost nothing and she will be baffled by any attempt to thank her for it."));
+
+c.push(PS([DM("DM Only: "), { t: "this is the wonder the whole campaign is built to make the players sorry to lose, and it works precisely because nothing is at stake in it. Do not put a threat in this scene. Do not have the garrison arrive. Do not foreshadow. Let it be four in the morning in a street that is the colour of five o\u2019clock, and let the party eat bread, and end the scene before anything happens." }]));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Wyn Alder"));

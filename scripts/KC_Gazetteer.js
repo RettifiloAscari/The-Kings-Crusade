@@ -75,13 +75,17 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
-// cantSplit keeps a row's cells from being torn across a column or page break;
+// cantSplit keeps a row\u2019s cells from being torn across a column or page break;
 // tableHeader repeats the header row when a long table does span a break.
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";   // marker only; transplant.py acts on it and strips it
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -128,7 +132,7 @@ c.push(P("Hill country, thin soil, and stone that will take a wall better than i
 
 c.push(P("It is wyvern country. It has always been wyvern country. Every hold above the eight-hundred-foot line keeps a watch, every watch keeps a pike-rack, and every year some number of people do not come back down. Harrowmark has arranged its architecture, its livestock, its calendar and a good deal of its humour around this, and considers the arrangement normal."));
 
-c.push(P("A visitor's first impression is grey \u2014 grey stone, grey weather, grey wool \u2014 and the second impression, arriving about four days later, is that everything in it is built extremely well. Nothing here is decorative. Everything here is still standing."));
+c.push(P("A visitor\u2019s first impression is grey \u2014 grey stone, grey weather, grey wool \u2014 and the second impression, arriving about four days later, is that everything in it is built extremely well. Nothing here is decorative. Everything here is still standing."));
 
 c.push(...SITE("Duncarrow", "Population 14,000 \u00B7 Seat of Xavier III \u00B7 The muster ground of the crusade"));
 
@@ -170,13 +174,13 @@ c.push(P("The high pasture north of Greywatch, held by orc families who have gra
 
 c.push(P("It also supplies a fighting tradition: fast, dispersed, and built entirely around not being where the enemy expected. Auberitz officers find it undisciplined. Auberitz officers have also stopped saying so out loud since the second week of the march."));
 
-c.push(BUL("Hook.", "A Corrieholt rider in the coalition has family in the Sixth Free Legion. This is true, it is known, and nobody in the column has made anything of it, which is exactly the campaign's position on the matter."));
+c.push(BUL("Hook.", "A Corrieholt rider in the coalition has family in the Sixth Free Legion. This is true, it is known, and nobody in the column has made anything of it, which is exactly the campaign\u2019s position on the matter."));
 
 c.push(...SITE("Fenmarrow", "Population 3,100 across a dozen villages \u00B7 Thin farm country \u00B7 Where the levy comes from"));
 
 c.push(P("The low ground south of Duncarrow, and the only part of Harrowmark that grows enough of anything to matter. It is not good land. It is worked land, in narrow strips, by families who have improved it inch by inch for three centuries and will tell you the history of a particular hedge if you give them any opening at all."));
 
-c.push(P("Most of the crusade's infantry is from here. Not the knights and not the professionals \u2014 the eight thousand. They answered a summons read in a language they did not speak, promising a place in a country they could not find on a map, and they are marching to it, and the DM should remember that every time the coalition is discussed as a political object."));
+c.push(P("Most of the crusade\u2019s infantry is from here. Not the knights and not the professionals \u2014 the eight thousand. They answered a summons read in a language they did not speak, promising a place in a country they could not find on a map, and they are marching to it, and the DM should remember that every time the coalition is discussed as a political object."));
 
 c.push(BUL("Hook.", "Somebody\u2019s mother in Fenmarrow gave the party a letter for her son in the column. He is in the lost column on the other road. This costs nothing to set up in Module One and pays for the rest of the campaign."));
 
@@ -253,7 +257,7 @@ c.push(...SITE("Ashgate Ford", "Population 700 \u00B7 Baron Vell\u2019s toll-kee
 
 c.push(P("The river is wide, shallow, fast and cold, and there has been a toll on it since somebody first noticed that the alternative is eleven days upstream. The keep is squat, competently sited, and older than the barony it now supports; the village below it exists to feed the keep and to sell rope, boots and hot food to people who have just discovered how cold the water is."));
 
-c.push(P("Vell's toll is legal. That is the difficulty with Vell. He holds the ford by a charter four generations old, the charter says what he may charge, and what he has done is notice that the charter never contemplated eight thousand people and a war."));
+c.push(P("Vell\u2019s toll is legal. That is the difficulty with Vell. He holds the ford by a charter four generations old, the charter says what he may charge, and what he has done is notice that the charter never contemplated eight thousand people and a war."));
 
 c.push(BUL("Hook.", "Module 2B. Also: the charter is in the keep, it is genuine, and there is a clause in it that Vell has never read because it is on the back."));
 
@@ -307,7 +311,7 @@ c.push(table(
 // ================================================================= THE VAUNT
 c.push(H1("Elduvaine: The Vaunt"));
 
-c.push(P("The coastal province, and the first Elduvaine anyone in this campaign sees. The Vaunt is low, green, wet in the good way, and threaded with tidal creeks that the halfling parishes have been navigating in flat-bottomed boats since before there were roads to prefer. It holds the kingdom's great port, its landing beaches, and about a fifth of its people."));
+c.push(P("The coastal province, and the first Elduvaine anyone in this campaign sees. The Vaunt is low, green, wet in the good way, and threaded with tidal creeks that the halfling parishes have been navigating in flat-bottomed boats since before there were roads to prefer. It holds the kingdom\u2019s great port, its landing beaches, and about a fifth of its people."));
 
 c.push(P("It is also where the occupation is heaviest, because it is where the goods leave from. A party arriving in the Vaunt is arriving in the most administered part of Elduvaine: permits, checkpoints, published levies, and a Norvatch counting-house three streets back from every quay."));
 
@@ -325,7 +329,7 @@ c.push(...SITE("Caerwyn", "Population 1,600 \u00B7 The landing town \u00B7 Occup
 
 c.push(P("A small coastal town of grey-gold stone and slate, eleven miles of orchard behind it, and a hedge at the top of the town that has sprites in it and always has. Caerwyn is far enough from both Vindana and the capital that the occupation posted a checkpoint, a clerk and eight guards and considered the matter closed, which is why the coalition chose it."));
 
-c.push(P("It is the first wonder the party gets and it should be run as one. The light-stone in the doorsteps still holds a little of the afternoon. The baker's ovens have not gone out in two hundred years and the whole street smells of it at four in the morning. This is a place worth saving, and the module says so by showing rather than arguing."));
+c.push(P("It is the first wonder the party gets and it should be run as one. The light-stone in the doorsteps still holds a little of the afternoon. The baker\u2019s ovens have not gone out in two hundred years and the whole street smells of it at four in the morning. This is a place worth saving, and the module says so by showing rather than arguing."));
 
 c.push(BUL("Hook.", "Module 3. Wyn Alder clerks the checkpoint and is the campaign\u2019s first honest look at what an ordinary complicit person is actually like."));
 
@@ -337,7 +341,7 @@ c.push(P("Wagons go through it at a trot. Nobody camps in it. There is no monste
 
 c.push(...SITE("Morgarth", "Population 2,900, now 800 \u00B7 A fishing town, emptied \u00B7 Two days south of Vindana"));
 
-c.push(P("The Vaunt's second port, and the place the occupation made an example of in the first year \u2014 not by massacre, which would have been off-pattern, but by levy. Morgarth's boats were requisitioned, its catch was docketed, and its people were charged for the privilege of the arrangement until two thirds of them walked inland. It was entirely lawful. Every step of it is in the register."));
+c.push(P("The Vaunt\u2019s second port, and the place the occupation made an example of in the first year \u2014 not by massacre, which would have been off-pattern, but by levy. Morgarth\u2019s boats were requisitioned, its catch was docketed, and its people were charged for the privilege of the arrangement until two thirds of them walked inland. It was entirely lawful. Every step of it is in the register."));
 
 c.push(P("What remains is eight hundred people in a town built for three thousand, working the boats that were left, and a harbourmaster who has kept every single piece of paper."));
 
@@ -400,7 +404,7 @@ c.push(...SITE("Lisswater", "Population 2,100 \u00B7 A river parish \u00B7 Halfl
 
 c.push(P("Where the middle river runs slow for nine miles, there are eleven villages that consider themselves one place, and Lisswater is the name of all of them and none of them. It is halfling country: locks, weirs, eel traps, orchards on the levee, and the single best food in Elduvaine by a margin that the rest of the kingdom concedes without argument."));
 
-c.push(P("The Listening Water is at its strongest along this stretch, and Lisswater has spent nine hundred years developing an etiquette around it so thorough that outsiders find it incomprehensible. You do not speak at the water's edge about anything you would not repeat. You do not stand at the edge when angry. Children are taught the rule before they are taught to swim, and adults who break it are not scolded but quietly and permanently regarded as unserious."));
+c.push(P("The Listening Water is at its strongest along this stretch, and Lisswater has spent nine hundred years developing an etiquette around it so thorough that outsiders find it incomprehensible. You do not speak at the water\u2019s edge about anything you would not repeat. You do not stand at the edge when angry. Children are taught the rule before they are taught to swim, and adults who break it are not scolded but quietly and permanently regarded as unserious."));
 
 c.push(BUL("Hook.", "The whole of the Four Voices technique works best here. So does the miller who has been miscounting the levy for two years and would like to stop being the only person doing it."));
 
@@ -441,7 +445,7 @@ c.push(...SITE("Bryn Aeling", "The oldest orchard \u00B7 Planted four days into 
 
 c.push(P("The first Kept Season planting and the greatest of them, forty acres of birch and apple that has been four days into spring since before Harrowmark had a king. Generations of Elduvish came here to be married under it, because a wood four days into spring is four days into spring on the morning of your wedding regardless of what the calendar says, and that was the whole point."));
 
-c.push(P("It is nine weeks into a winter it was never sown in, and has been for most of a year. The trees are dying \u2014 not dead, dying, slowly and in the wrong order \u2014 and an ecology has moved in behind the change: winter wolves along the edges, and a troll in the orchard-keeper's cottage, and the dryad who has been the spirit of this wood for three centuries and is now the spirit of a winter one and cannot leave."));
+c.push(P("It is nine weeks into a winter it was never sown in, and has been for most of a year. The trees are dying \u2014 not dead, dying, slowly and in the wrong order \u2014 and an ecology has moved in behind the change: winter wolves along the edges, and a troll in the orchard-keeper\u2019s cottage, and the dryad who has been the spirit of this wood for three centuries and is now the spirit of a winter one and cannot leave."));
 
 c.push(BUL("Hook.", "Module 5\u2019s Held Winter. The single most legible image of the draining in the campaign, and the one scene where a party can simply sit down and talk to the grief."));
 
@@ -456,11 +460,11 @@ c.push(BUL("Hook.", "The Keepers know exactly which woods have turned and in wha
 // ===================================================== THE STANDING MARCHES
 c.push(H1("Elduvaine: The Standing Marches"));
 
-c.push(P("Hill country west of the Braid, and the source of the other thing Elduvaine is famous for. Worked stone from these quarries holds light poured into it \u2014 an afternoon's sun, a lamp, a spell \u2014 and gives it back for hours or days depending on the cut. The whole of Caer Ysolde is built of it, and so is every doorstep in Caerwyn, and so is the inner wall of Vindana."));
+c.push(P("Hill country west of the Braid, and the source of the other thing Elduvaine is famous for. Worked stone from these quarries holds light poured into it \u2014 an afternoon\u2019s sun, a lamp, a spell \u2014 and gives it back for hours or days depending on the cut. The whole of Caer Ysolde is built of it, and so is every doorstep in Caerwyn, and so is the inner wall of Vindana."));
 
 c.push(...SITE("Cairn Ithel", "Population 3,400 \u00B7 The light-stone quarries \u00B7 Gnome country"));
 
-c.push(P("Six working quarries and a town wedged between them, gnome-run for six hundred years, with a mason's guild whose apprenticeship is eleven years and whose masters can look at a face of rock and tell you how long a block cut from it will hold an evening. The cut is everything. The same stone cut two ways holds light for a day or for a week, and the difference is a craft secret that has never been written down."));
+c.push(P("Six working quarries and a town wedged between them, gnome-run for six hundred years, with a mason\u2019s guild whose apprenticeship is eleven years and whose masters can look at a face of rock and tell you how long a block cut from it will hold an evening. The cut is everything. The same stone cut two ways holds light for a day or for a week, and the difference is a craft secret that has never been written down."));
 
 c.push(P("The occupation has the quarries working double. What it is producing is not building stone."));
 

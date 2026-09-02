@@ -77,6 +77,41 @@ Late, with the day’s business done, Xavier finds the party somewhere quiet —
 
 Let this be a real conversation rather than a scene to resolve. Xavier is not fishing for reassurance and does not need the party to tell him he is a hero; he genuinely does not know yet how he feels about the name, and the party’s honest reaction — whatever it is — matters more here than any mechanical outcome. This scene needs no check and produces no loot. It is the module’s actual point, arriving last, exactly where a session built on deliberate levity has been heading since Scene 1.
 
+# Puzzles and Set Pieces
+
+Three Years of Filing expands the ledger war and adds twenty minutes. Putting the Light Back is additive, takes ten, and should not be cut — it is the beat the whole module is built around.
+
+## The Puzzle: Three Years of Filing
+
+Ottoline Vahn fought her captivity by filing, and won, and the consequence is that the occupation of Vindana produced the most complete administrative record in Elduvaine and then had to rely on it. The party needs one document out of it. She will help, at her own pace, and her pace is the puzzle.
+
+> *“You want the carriage authorisations. Everybody wants the carriage authorisations. They are not filed under carriage, they are not filed under authorisation, and they are not filed under Norvatch, and if you tell me why you want them I will tell you where they are, and if you do not, we can spend a pleasant afternoon and you can find them yourself.”*
+
+The registry is filed by the issuing office, not by subject, which is standard Elduvish practice and is baffling to everyone else. Four offices issued paper in Vindana and the party can work out which from any docket they already hold:
+
+| **Office** | **Issued** | **Docket mark** |
+| --- | --- | --- |
+| The Levy | Grain, fodder, and the published quarterly rate | A single stroke, top right |
+| The Harbour | Everything that moved by water, in or out | Two strokes and a date |
+| The Garrison | Permits for persons, and passes | A stamp, always smudged |
+| The Keeper’s Office | Anything touching the Archive or the quarries | No mark at all, which is itself the mark |
+
+The carriage authorisations went out by water, so they are Harbour, and they are filed by date, and the date the party wants is the week Norvatch’s volume tripled — which they can get from Morgarth’s harbourmaster, or from the counting-house manifests in this module, or by asking Ottoline the question she is waiting to be asked.
+
+**DM Only:** the unmarked fourth office is the real find and the party should stumble on it while looking for something else. Anything issued by the Keeper’s Office carries no docket mark, because the Keeper’s Office was never part of the civil registry and never needed one — which means every quarry order, every Archive requisition and every light-stone consignment for three years is sitting in a drawer that nobody has thought to look in, unmarked, because it always was. Ottoline knows. She has been waiting three years for somebody to notice, and she will not point at it, because pointing at it is not how a magistrate establishes anything.
+
+## Set Piece: Putting the Light Back
+
+The city has been dark for fourteen months and the coalition holds it, and on the fourth night somebody works out that the wall will still take a charge.
+
+> *“It is a gnome from Cairn Ithel and two Auberitz sappers and a Concord priest of Aurine who has no business being on that scaffold, and between them they pour about four hours of lamplight into eleven feet of the inner wall. It holds. It comes up slow, the colour of late afternoon, and it spreads maybe thirty feet along the course and stops. Eleven feet of a city that used to do this from the ground up on every clear night. Somebody on the harbour steps starts crying and does not stop and nobody says anything about it.”*
+
+It is not a victory and everyone present knows the arithmetic: four hours of lamp for eleven feet of wall, against a city that held six centuries of afternoons for free. The stone is not repaired. The stone is being manually filled, one small stretch at a time, by people who will be dead long before the second street is done.
+
+They do it anyway. They do it every night for the rest of the occupation of the city, and by the time the party leaves Vindana about two hundred feet of the inner wall is lit, and the party will be able to see it from the road.
+
+**DM Only:** this is the levity module and this is not a levity scene, and it should sit in the middle of an evening that is otherwise warm and loud and full of terrible singing. Do not build to it. Let somebody mention it in passing, let the party wander over, and let them stand there. Then go back to the singing. The contrast is the whole design of the module and this is the beat it is built around.
+
 # NPC Profiles
 
 ## The Magistrate

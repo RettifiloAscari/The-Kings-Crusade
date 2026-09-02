@@ -128,6 +128,43 @@ Once General Voss falls, is captured, or breaks off — a defeated field command
 
 Let the aftermath be heavy rather than triumphant, especially if Tam died in Scene 2 — the coalition has proven something real about Vale’s army today, and it cost real people to prove it. End the session on that weight rather than on a victory speech. Hand off directly to Module Ten for the approach to Caer Ysolde.
 
+# Puzzles and Set Pieces
+
+The five movements are the module’s existing scenes, sequenced, with the party put at the hinge of each. Voss’s Field Orders is additive: fifteen minutes, and it changes the casualty list rather than the outcome.
+
+## The Puzzle: Voss’s Field Orders
+
+General Ilyana Voss writes her orders in the Legion’s working cipher, which is not a cipher so much as a professional shorthand a hundred and forty years old. Any captured dispatch is readable and the reading is a genuine puzzle rather than a check.
+
+The Sixth writes movement as three elements: the company number, the hour on a twelve-mark day, and a bearing given as a clock face from the standard. Nothing is written in words, because words can be read by anybody and numbers can be read by a professional.
+
+| **What is written** | **What it means** | **How a party can establish it** |
+| --- | --- | --- |
+| IV · iii · x | Fourth company, third hour, bearing ten o’clock | Compare any two dispatches against movements the party watched happen. |
+| A doubled numeral | The order is a feint and is to be seen | The only dispatches ever sent uncovered are doubled. Two examples is enough. |
+| A struck-through hour | Hold until countermanded | A prisoner will confirm this without considering it a betrayal, because it is drill, not intelligence. |
+| No bearing at all | Reserve. Committed at the commander’s word only | This is the one that matters and it is the one the party will find last. |
+
+Put together, three captured dispatches tell the party where Voss’s reserve is and that she has not yet committed it — which is the single most valuable piece of information available on the field, and which the coalition’s own scouts have failed to get for two days.
+
+**DM Only:** give them a real advantage for solving it. A party that finds the reserve and tells Xavier changes the shape of the battle, and the DM should say so in narration: the coalition’s left does not break, and about four hundred people who would have died do not. Do not make this the difference between victory and defeat — the field battle is won either way, because the campaign needs it won — make it the difference in the casualty list, and read part of the casualty list out.
+
+## Set Piece: The Battle, in Five Movements
+
+Eight thousand people on each side and five characters somewhere in the middle of it. The party cannot win a field battle and should never be asked to; what they can do is be the hinge at five specific moments, and the module is built to put them at each one.
+
+**First: The Approach.** Two hours of standing in a line while the enemy does the same thing four hundred yards away. Nothing happens. This is deliberate and should be played straight — the fear in a set battle is almost all in the waiting, and a DM who skips it has thrown away the only chance to make the rest of it land.
+
+**Second: The Left Gives.** Oksitan spears, already shaken by what happened to their king, bend and do not break. The party is behind them and can see it happening before anyone in command can. A dragonborn house-knight is somewhere in the middle of that line roaring instructions nobody can hear.
+
+**Third: The Ironshanks.** The Sixth’s heavy foot come through the gap in a shield wall and the party is what is in front of them. Four ironshanks and an optio, in the open, with the battle noise making every command a shouted argument. This is the module’s real fight and it should be genuinely frightening.
+
+**Fourth: The Reserve.** Voss commits, or does not, depending on the puzzle above. If the party found it, the coalition meets it ready. If not, it arrives on the flank and the module gets a sixth movement nobody wanted.
+
+**Fifth: Voss.** She does not flee and she does not die swinging. When the field is lost she stops, puts her sword point down in the mud, and waits, because she is a professional on a contract and the contract does not require this. What the party does about that is the end of the session.
+
+**DM Only:** a captured Voss is worth more to this campaign than a dead one by a wide margin and the module should not tip the scale. She will not be turned, will not inform, and will not apologise for any of it — and she will, if asked correctly, explain exactly what the Sixth’s contract says and when it expires, which is information nobody else in Elduvaine will give the party and which matters enormously in Module Eleven.
+
 # NPC Profiles
 
 ## General Ilyana Voss

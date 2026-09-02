@@ -25,7 +25,7 @@ This repository is the source of truth for the campaign.
 
 ## Contents
 
-- [The documents](#the-documents) — [Sourcebook](#sourcebook) · [Session modules](#session-modules) · [Guides](#guides)
+- [The documents](#the-documents) — [Sourcebook](#sourcebook) · [Core volumes](#core-volumes) · [Session modules](#session-modules) · [Guides](#guides)
 - [How this repository works](#how-this-repository-works)
 - [Table specifications](#table-specifications)
 - [Rebuilding](#rebuilding)
@@ -33,7 +33,7 @@ This repository is the source of truth for the campaign.
 
 ## The documents
 
-Four documents, all generated. Read the Markdown on any device; the PDF is the styled,
+Eighteen documents, all generated. Read the Markdown on any device; the PDF is the styled,
 font-embedded edition meant for the table.
 
 ### Sourcebook
@@ -42,12 +42,29 @@ font-embedded edition meant for the table.
   Elduvaine before the fall, the fall, the occupation, the crusade and its Promise, and the
   guidance for running the Living Realm · [PDF](documents/KC_Sourcebook.pdf)
 
+### Core volumes
+
+- **[Gazetteer](corpus/KC_Gazetteer.md)** — the geography of the crusade: Harrowmark, both
+  roads, and Elduvaine region by region, with roughly thirty keyed places, travel times
+  between every leg of the march, and regional encounter tables · [PDF](documents/KC_Gazetteer.pdf)
+- **[Bestiary](corpus/KC_Bestiary.md)** — what resident magic produces and what happens to it
+  when the land is drained; the Sixth Free Legion as an institution with a contract; and stat
+  blocks for the people worth statting. Every block calibrated against real SRD creatures at
+  the same CR, never against the DMG table · [PDF](documents/KC_Bestiary.pdf)
+- **[Character Options](corpus/KC_Character_Options.md)** — seven backgrounds, six feats,
+  three subclasses, six spells and the wonders of Elduvaine as magic items. Player-facing,
+  and none of it required · [PDF](documents/KC_Character_Options.pdf)
+
 ### Session modules
 
 Eleven session slots across twelve files — Module Two forks by road, and only one half is
 played at a given table. Each carries a pacing budget, a *What Is Actually Happening
 (DM Only)* section, numbered scenes with boxed read-aloud, tiered skill DCs, SRD stat
 blocks, NPC profiles, Optional Content, *Diverging Paths (DM Only)*, loot, and the Refrain.
+
+Every module also carries **Puzzles and Set Pieces** — a puzzle with several real solutions
+and none of them preferred, and a set piece run in phases rather than described. Sennoch
+Hall and Vindana's undercity are keyed as dungeons.
 
 | # | Title | Markdown | Document |
 |---|---|---|---|
@@ -67,8 +84,9 @@ blocks, NPC profiles, Optional Content, *Diverging Paths (DM Only)*, loot, and t
 ### Guides
 
 - **[DM Reference Guide](corpus/KC_DM_Reference_Guide.md)** — single-column: Campaign at a
-  Glance, the Stat Block Index, recurring NPCs, and the Branch Ledger with a blank column
-  for what actually happened at your table · [PDF](documents/KC_DM_Reference_Guide.pdf)
+  Glance, the Stat Block Index, faith and factions, recurring NPCs, a puzzle index naming
+  what solves each one, and the Branch Ledger with a blank column for what actually happened
+  at your table · [PDF](documents/KC_DM_Reference_Guide.pdf)
 - **[Player Guide](corpus/KC_Player_Guide.md)** — the sanitized, shareable edition. Authored
   as its own document rather than by trimming the sourcebook, so nothing a player should
   discover at the table is in it · [PDF](documents/KC_Player_Guide.pdf)

@@ -73,6 +73,42 @@ The column crests a final ridge the following day, subdued in a way it was not b
 
 End the session here, on the sight of the city rather than on grief — the tone should turn forward, not linger. Hand off directly to Module 6 for the investment of Vindana.
 
+# Puzzles and Set Pieces
+
+Who Is Speaking is the Standing Water, performed rather than summarised. Nine Weeks Into a Winter is the Held Winter under Optional Content, and it is a full ninety minutes with the wolves and the troll, or forty without them.
+
+## The Puzzle: Who Is Speaking
+
+The Standing Water gives back the same three months in four registers and none of them are lying. The puzzle is not what happened; the puzzle is working out which voice to believe about which part, and the module should never resolve it.
+
+Play all four. Do not label them. The players work out who is who, and then work out that the disagreement is the information.
+
+> *“And on the ninth day the King crossed at the ford in the sight of his whole army, and the water took him, and there was no enemy within forty miles, and God’s judgement upon it is not for us to say.”*
+
+> *“He went in first. That is all. He always went in first, he was seventy-one and he always went in first, and the water was not even deep, and I want somebody to write down that it was not deep.”*
+
+> *“By order of the Marshal, the crossing is closed and the column will re-form on the near bank. Companies will draw three days' ration. There will be no further movement until the succession is settled.”*
+
+> *“He is under it. Threnn keeps what the water takes and gives it back when there is need, and he is under it sleeping, and I will thank you not to say otherwise in front of the boy.”*
+
+What each voice is reliable about: the court’s account has the date and the place right and the judgement wrong. The soldier has the truth and no perspective. The proclamation has the consequences and no cause. The last one has nothing right at all and is the only one that tells the party what the coalition is going to be like for the next four modules.
+
+**DM Only:** the fourth voice is the one that matters and it is not a puzzle to be solved. A broken column would very much rather believe its king is kept than drowned, and a party that goes around correcting people is arguing with grief rather than with a claim. Let them try. Let it go badly. This is also, quietly, the module where the campaign teaches that the Four Voices technique does not converge on a truth, which is the whole reason it is worth using.
+
+## Set Piece: Nine Weeks Into a Winter
+
+Bryn Aeling was planted four days into spring seven hundred years ago and generations were married under it on that basis. It has been nine weeks into a winter it was never sown in for most of a year, and it is the most legible image of the draining in the campaign.
+
+> *“You cross the hedge and the temperature drops eleven degrees in a single step and the sound goes. Behind you it is a warm afternoon in the Marches. In front of you there is forty acres of birch and apple standing in nine weeks of snow that has never once thawed, and every tree in it is in full blossom, and the blossom is frozen, and it has been frozen since it opened. Nothing has fallen. Nothing can fall. It is going to be like this until the trees die, and they are dying, slowly, and in the wrong order.”*
+
+**What is in it.** Two winter wolves working the edges, who will shadow the party for an hour before committing. A troll in the orchard-keeper’s cottage, which is the reason the last two woodsmen did not come back. And the dryad, who is the actual content of the scene and is not an encounter.
+
+**Running the wolves and the troll together.** Check it against your table before you commit. Two winter wolves is 1,400 XP and a troll is 1,800; at four monsters the multiplier is 2, which makes the adjusted total 6,400 and is a deadly encounter for five characters at 5th level and an extremely dangerous one for six. Either group alone is a full encounter and the module assumes they are met separately.
+
+The dryad has been the spirit of a spring wood for three centuries and is now the spirit of a winter one, and she is neither hostile nor grateful nor able to leave. Use the Withering block in the bestiary if it comes to violence, and understand that a table which fights her has misread the scene. What she wants is for somebody to explain to her what has been done and why, and nobody in the party can, and that is the point.
+
+**DM Only:** if the party asks whether killing Vale fixes her wood, the honest answer is that nobody knows and she does not expect it to. Do not have her forgive anyone. Do not have her curse anyone. She is a wood in the wrong season and the wrong season is not going to end because a war did.
+
 # NPC Profiles
 
 ## Tam Ondry

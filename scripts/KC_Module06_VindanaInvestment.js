@@ -9,17 +9,17 @@
 // hand-typing an escape, use ONE backslash -- a doubled backslash compiles
 // clean and passes the non-ASCII scanner but leaks literal text into the PDF.
 //
-// NOTE: "The Cavalry Screen" (Scene 3) is Harrowmark's ordinary mounted
+// NOTE: "The Cavalry Screen" (Scene 3) is Harrowmark\u2019s ordinary mounted
 // scouts -- horses. The draconic layer is now signed off and canon (see
-// CLAUDE.md), and the campaign's actual wyvern-riders belong to Module Seven,
+// CLAUDE.md), and the campaign\u2019s actual wyvern-riders belong to Module Seven,
 // where Xavier earns "the Wyvernheart" -- they are deliberately absent here so
 // that introduction lands with its own weight. Vale does not appear in this
 // module either, continuing the pattern from Module Three: his officers run
 // this war, and his own first appearance is saved for later, larger weight.
 //
 // This module is written to end on a setback -- the first assault fails or
-// costs more than it should -- so that Module Seven can be the siege's actual
-// turning point, per the module breakdown's own shape.
+// costs more than it should -- so that Module Seven can be the siege\u2019s actual
+// turning point, per the module breakdown\u2019s own shape.
 
 const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
 const fs = require('fs');
@@ -83,11 +83,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -224,6 +228,50 @@ c.push(...SB({
 c.push(P("Drell does not die or fall back easily in this module \u2014 he is meant to survive Scene 4 regardless of how the fight at the point of contact goes, withdrawing his forces in good order once the breach fails rather than pressing an advantage he does not need. Save a real, decisive confrontation with him for Module Seven if the table wants one."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("Raising the Engines is how that scene is run. The undercity is additive and substantial \u2014 sixty to ninety minutes, and a table that wants a proper dungeon crawl can take considerably longer. It is the best thing in the module and it is optional, which is deliberate: it pays out in Module Seven for the parties that go looking."));
+
+c.push(H2("The Undercity, Keyed"));
+
+c.push(P("A drain and cistern system older than the walls above it, which the coalition would very much like to use and which the garrison stopped patrolling two years ago. It is the single best reward available to a party that solves this module sideways, and it pays out directly in Module Seven."));
+
+c.push(table(
+  ["Area", "What is there", "Notes"],
+  [22, 40, 38],
+  [
+    ["A. The seaward outfall", "Entry. Six feet of water at high tide, none at low.", "Timing is the whole approach. Tide tables are buyable in any harbour tavern."],
+    ["B. The signposted run", "300 ft. of trapped corridor, every trap marked in Draconic.", "Same principle as the Old Workings. The marks are honest."],
+    ["C. The cistern hall", "A vaulted chamber, forty feet across, waist deep.", "Sound carries perfectly. Anything said here is heard at D."],
+    ["D. The warren", "Sixty kobolds. Larders, nests, two generations of improvement.", "Run four to eight in any fight. The negotiation is the real scene."],
+    ["E. The old sluice", "A gate mechanism, seized, that once drained the cistern.", "Freeing it is DC 16 Strength or an hour with tools. It matters in Module Seven."],
+    ["F. The under-wall", "Where the drain passes beneath the inner wall.", "This is the prize. A route under the walls, into the garrison quarter."],
+    ["G. The grain undercroft", "The garrison\u2019s reserve store, reachable only from F.", "What the kobolds want. They cannot reach it and the party can."]
+  ], { full: true }
+));
+
+c.push(H2("The Puzzle: What the Kobolds Want"));
+
+c.push(P("They have had two years and nothing else to do, and they have prepared a speech. The negotiation is a three-part problem and every part has a real solution."));
+
+c.push(BUL("They want the grain undercroft (G).", "They cannot get into it, because the only route runs under the wall past a garrison post. The party can. This is a straight trade and it is the easy part."));
+c.push(BUL("They want a written promise that nobody comes back down.", "In writing, signed, by somebody with a name. This is harder than it sounds, because the party cannot bind the coalition and the kobolds know what a worthless signature looks like. A Norvatch factor can draft one that will actually hold, which is a genuinely good reason to have kept Doria Kell\u2019s goodwill."));
+c.push(BUL("They will not hand over the route until both are done.", "No amount of Persuasion moves this. They have been lied to before, by the garrison, in year one, and they will tell the party about it at length."));
+
+c.push(PS([DM("DM Only: "), { t: "do not require this. Do reward it enormously. A party that has the under-wall route does not need the postern gate in Module Seven and can open the assault from inside the walls, which changes that module\u2019s opening from a wall problem into a street fight and saves a great many coalition lives the DM should mention afterward. A party that simply kills sixty kobolds gets the route as well, and gets it four hours later, and gets no help with the sluice at E, which they will want." }]));
+
+c.push(H2("Set Piece: Raising the Engines"));
+
+c.push(P("Nine months of work at Krenholt, four hundred miles of road, and one afternoon of getting them up onto the platform in range of a wall whose garrison would very much prefer they were not. Auberitz has done this before. Auberitz is still going to lose an engine."));
+
+c.push(BOX("\u201CThe chief of the works is four feet tall, has built eleven of these, has never once seen one used the way she intended, and is currently standing on a barrel telling a Harrowmark knight exactly what will happen if he moves his horses across the traverse. He moves his horses across the traverse. Ninety seconds later a stone comes off the Ward Gate and takes the traverse, the horses, and an argument nobody is going to finish.\u201D"));
+
+c.push(B("Three problems, running simultaneously.", "The platform is short of fascines and the nearest brushwood is inside bowshot. The counterweight for the second engine is still two miles back on a wagon with a broken axle. And the garrison\u2019s own engines have the range and are ranging in, three stones at a time, adjusting."));
+
+c.push(B("What the party can do.", "Any of it. Fetch the counterweight, screen the fascine parties, or \u2014 the answer the engineers are hoping somebody thinks of \u2014 go and do something about the garrison\u2019s ranging shots, which are being directed by an observer on the Ward Gate who can be reached, with difficulty, from the seaward side."));
+
+c.push(P("The chief of the works will tell the party exactly what will go wrong an hour before it does, and will be right, and will not say so afterward. She is the module\u2019s best NPC and she has eleven lines in her, all of them dry."));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Marshal Ossian Drell"));

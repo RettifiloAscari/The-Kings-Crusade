@@ -54,6 +54,38 @@ The clearest illustration is the dwarves. In Harrowmark they are crag-hold folk 
 
 What your character does not know, and cannot, is what Elduvaine looks like now. Everyone above has heard it is bad.
 
+# What People Believe
+
+The Concord is the established faith of all four coalition realms and it teaches that the powers who made the world worked, and then withdrew — deliberately, while the work was still unfinished, so that there would be something left for hands to do. They are not called gods. They are called the Works, there are nine of them, and a priest will correct you on the word once, politely, and thereafter by simply not using it.
+
+If your character is a cleric or a paladin from Harrowmark, Oksitan, Auberitz or Norvatch, one of these is yours. Take its domains.
+
+| **The Work** | **Sphere** | **Domains** |
+| --- | --- | --- |
+| Ashet the Anvil | Craft, making, the honest tool | Knowledge, War |
+| Voran of the Long Road | Travel, messengers, guest-right | Life, Trickery |
+| Sennet the Witness | Oath, contract, law, testimony | Knowledge, Trickery |
+| Halevin the Hearth-Kept | Home, harvest, healing | Life, Nature |
+| Aurine the Unshuttered | Light, truth, dawn, courage | Light |
+| Duran Ninefold | War as discipline, not glory | War |
+| Threnn Greywater | Sea, storm, river, the drowned | Tempest |
+| Ossuar the Quiet Warden | Death, the grave, remembrance | Death |
+| Saveth of the Green Verge | Wilds, beasts, the seasons | Nature |
+
+A Concord priest does not ask a Work for anything. A Concord priest reports — here is what was built this season, here is what failed, here is what we intend next — and a miracle, when it comes, is understood as a tool handed down rather than a favour granted. It is why Harrowmark’s clergy are so hard to impress and so hard to frighten.
+
+## Elduvaine Has No Church
+
+This is the part everyone in the coalition finds strange and nobody in Elduvaine finds worth discussing. They have never built one. The story goes that you do not raise a temple to ask for an answer in a country where the river answers you directly, and whether or not that is true, the fact is: no Ninefold Houses, no clergy in the Concord sense, and no gods addressed by name.
+
+What they have instead are the Observances — local, seasonal, unwritten, different in every parish, and closer to very good manners practised at enormous scale than to worship. Their religious professionals are called Keepers, and a Keeper tends a thing rather than a congregation. If your character is Elduvish and casts divine magic, you are a Keeper of some habit, and you will spend this entire campaign answering awkward questions about it from people who mean well.
+
+## The Order of the Tenth Work
+
+You will be marching with these people, so you should know what they say, because they say it openly and often. The Order holds that Elduvaine’s strangeness is not heresy but an unfinished divine work — the tenth and last, left for hands to complete — and that completing it is the real purpose of this crusade.
+
+They came at their own expense, in disciplined numbers, well supplied. They are personally brave and generous to the poor of any kingdom, they will hold a wall beside you, and they have never once lied about what they intend to do when the kingdom is taken. What you make of that is entirely yours.
+
 # Who Marches With You
 
 A character need not come from Harrowmark — Xavier’s call reached every realm marching under it, and a member of the party may just as easily hail from Oksitan, Auberitz, or even Norvatch, arriving at the muster by their own road rather than Harrowmark’s. The table below is what any of them would already know about the others.
@@ -100,9 +132,25 @@ What follows is exactly what it sounds like — things travelers, refugees, and 
 - “They’ve got things living in the hedges over there. Little ones, with opinions. A man I trust swears blind his cousin argued with one about an apple and lost.”
 - “Norvatch never took the call, and Norvatch is doing very well out of a war it isn’t in. Draw whatever conclusion you like; they’ll sell you the rope either way, and they’ll deliver on time.”
 
+## The House of Ysolde
+
+Elduvaine’s royal house is elven, has held the Braid since before anyone was counting, and gave its name to the capital rather than taking one from it. Two centuries of marrying whoever it liked means it now contains a half-elf, a gnome and a human, and no Elduvish person considers that worth a remark.
+
+They were taken on the night the wards opened. Five of them are known by name across four kingdoms, and what has become of them is the subject of a great deal of rumour and very little information.
+
+| **Name** | **Style** | **What is known** |
+| --- | --- | --- |
+| Maelis Ysolde | The Veiled Sovereign | Gravely ill for years, and not seen unveiled since well before the fall. Held in Caer Ysolde. |
+| Aveline Ysolde | The Regent | The only one who was outside a wall that night. Somewhere in Elduvaine, and has refused to be brought out. |
+| Ninian Ysolde | The Ward | Heir presumptive. Held under house arrest at a country seat, in reported comfort. |
+| Ottoline Vahn | The Magistrate | A magistrate of the Braid for a hundred and sixty years. Held in Vindana, and reportedly still working. |
+| Emrys Ysolde | The Envoy | Held separately from the rest. Beyond that, nobody in the coalition can tell you anything at all. |
+
 # Building Your Character
 
 This campaign runs on the 2014 edition of the fifth-edition rules (SRD 5.1). Characters begin at 5th level — Extra Attack and 3rd-level spells are already available from the first session, because Xavier did not choose raw recruits, he chose champions. Advancement is by milestone rather than by tallying experience: the party levels up when the story reaches a point that has earned it, not when a spreadsheet says so. The table expects four to six players, and every class, race, and background in the game is available — including full spellcasters from Harrowmark, whatever its reputation among the Elduvish.
+
+There is a separate book of character options for this campaign — backgrounds for the wyvern-watch, the Archive, a Norvatch counting-house, the orchards, the levy, a Ninefold House and three years under the occupation, plus feats, subclasses, spells and the wonders of Elduvaine as magic items. None of it is required and a party built straight from the rulebook plays this campaign perfectly well.
 
 On race specifically: pick whatever you want to play, then decide which of the realms above raised you. Those are separate questions in this setting and answering them separately will give you a better character than answering them together. An orc from Harrowmark and an orc from anywhere else have almost nothing in common; the interesting part of your character is the country, not the species.
 

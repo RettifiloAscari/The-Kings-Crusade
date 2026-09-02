@@ -13,10 +13,10 @@
 // CLAUDE.md and are deliberately NOT invented here. First, what Oksitan and
 // Auberitz each actually want beyond the Promise -- this module gives named,
 // individual officers personal opinions and friction, never a stated national
-// policy for either realm. Second, the royal family's names -- the captive
+// policy for either realm. Second, the royal family\u2019s names -- the captive
 // rescued in Scene 4 is written as a full, usable NPC with no proper name,
 // referred to as "the Ward" throughout, with a DM-only note on where to drop
-// a name in once CLAUDE.md's open item is signed off. Do not fill either gap
+// a name in once CLAUDE.md\u2019s open item is signed off. Do not fill either gap
 // in without sign-off, including in future revisions of this file.
 
 const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
@@ -81,11 +81,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -227,6 +231,51 @@ c.push(table(
 ));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("All three of these are the Sennoch Hall rescue, given a map, a way in and a way out. They replace describing the Hall freehand and add no time to the module; the keyed table is there so the DM is not inventing the building while the party is inside it."));
+
+c.push(H2("Sennoch Hall, Keyed"));
+
+c.push(P("The Hall is the campaign\u2019s first proper dungeon and it is a country house, which means the map is the puzzle. It was never built to hold anybody and the occupation has adapted it badly: a garrison of eighteen in a building with eleven exterior doors, four of which are glazed."));
+
+c.push(table(
+  ["Area", "What is there", "What a party can use"],
+  [22, 40, 38],
+  [
+    ["1. The ornamental water", "A shallow formal canal round three sides. Elduvish. Listening.", "It has heard three years of guard-changes. See the puzzle below."],
+    ["2. The south front", "Four tall glazed doors onto the terrace. Shuttered at dusk, latched from inside.", "Silent entry, DC 14 Sleight of Hand. Loud entry, no check at all."],
+    ["3. The kitchen court", "Staff who are not permitted to leave. Six of them, none guarded.", "Every one of them knows the rotation and four will say so."],
+    ["4. The long library", "Ninian\u2019s days are spent here. One guard at the door, bored.", "The party\u2019s likely first contact. Also: eleven years of estate maps."],
+    ["5. The garrison range", "Converted stables. Twelve off-duty legionaries, unarmoured.", "Taking this room ends the fight before it starts, and is loud."],
+    ["6. The commander\u2019s study", "Serjeant Hoth, and three years of correct paperwork.", "He would like somebody to notice he has been decent. See below."],
+    ["7. The north tower", "Ninian\u2019s rooms. One door, one window, forty feet up.", "The window is the extraction route and it needs rope."],
+    ["8. The gate range", "Six on watch, alert, with a bell.", "The bell is the whole problem. Cutting its rope is a 20-ft. climb."]
+  ], { full: true }
+));
+
+c.push(H2("The Puzzle: What the Water Heard"));
+
+c.push(P("The ornamental canal at Sennoch Hall is Elduvish water, and Elduvish water listens. Three years of guards have walked its edge four times a day saying the same twelve words to each other, and it has all of it."));
+
+c.push(P("A character who spends ten minutes at the water\u2019s edge \u2014 with the listening water spell, the Listening-Trained feat, a flask, or simply by knowing the trick and asking, which any Elduvish NPC can teach in one sentence \u2014 gets this, in four different voices, none of them lying:"));
+
+c.push(BOX("\u201CSecond watch, all quiet.\u201D \u2014 \u201CSecond watch relieved, the tower door is fast.\u201D \u2014 \u201CGate to tower, gate to tower, and the bell rope wants seeing to.\u201D \u2014 \u201CThird watch, and if that dog is out again I am shooting it.\u201D"));
+
+c.push(P("Four true facts fall out of it, and a party should have to assemble them rather than be handed them. The watch changes three times a night, not two. The tower door is checked at every change, so the extraction window is the twenty minutes between. The gate range and the tower speak to each other by shouted call-and-response, so an unanswered call is an alarm. And the bell rope has wanted seeing to for some time, which means it is frayed, which means it can be cut from below with a thrown weapon at DC 16."));
+
+c.push(PS([DM("DM Only: "), { t: "this is the first time the party gets to use Elduvaine\u2019s magic as a tool rather than admire it as scenery, and it should land that way. Do not summarise the four voices \u2014 perform them, in four different registers, and let the players do the assembling. If nobody thinks to try the water, Ninian mentions it afterward, drily, and the party feels the loss without being punished for it." }]));
+
+c.push(H2("Set Piece: Serjeant Hoth\u2019s Surrender"));
+
+c.push(P("The garrison commander at Sennoch Hall is a hobgoblin of the Sixth who has held a royal hostage in comfortable confinement for three years, has not once permitted a hand to be laid on her, has filed a monthly report every one of those months, and is entirely aware of how this ends for him."));
+
+c.push(BOX("\u201CI have eighteen. You have got past the water and the bell and I have not heard from the tower in some time, so let us both save an hour. My terms are these: my people walk out with their arms and their wounded, and I will give you the last three years of the file, which is complete, and which is the only account anybody has of who came here and what was asked. You will want it. I would like it written down that the Hall was kept correctly.\u201D"));
+
+c.push(P("He means every word and there is no trick in it. The file is real and is genuinely valuable \u2014 it names the collaborator clerks in the Braid, it establishes what the occupation asked the royal house and when, and it is the campaign\u2019s first hard evidence that Emrys Ysolde has been talking to Vale."));
+
+c.push(P("A party that fights him instead wins. Eighteen legionaries and an optio against five characters at 5th level is a real fight and not a close one if the party has taken the range or the gate. They also lose the file, which Hoth burns, correctly, per his standing orders, in the four minutes it takes them to reach the study."));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("Doria Kell"));

@@ -78,13 +78,14 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
-// cantSplit keeps a row's cells from being torn across a column or page break;
+// cantSplit keeps a row\u2019s cells from being torn across a column or page break;
 // tableHeader repeats the header row when a long table does span a break.
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";   // marker only; transplant.py acts on it and strips it
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+const GRID = 9360;   // text width in twips; only the ratios matter
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -104,7 +105,7 @@ c.push(H1("Using These Options"));
 
 c.push(P("Everything in this book is written for the 2014 rules, SRD 5.1. That is a deliberate choice for this campaign and not a default: race rather than species, no weapon masteries, the 2014 exhaustion track, and monster maths from the 2014 DMG. If your table plays the 2024 rules, most of what follows will convert, and none of it has been tested that way."));
 
-c.push(P("The campaign starts at 5th level, so a background's feature matters less than usual and its bonds matter more. Take one anyway. Every background here is a claim about where you stood on the night the wards opened, and the campaign will ask about it."));
+c.push(P("The campaign starts at 5th level, so a background\u2019s feature matters less than usual and its bonds matter more. Take one anyway. Every background here is a claim about where you stood on the night the wards opened, and the campaign will ask about it."));
 
 c.push(P("Nothing in this chapter is required. A party built entirely from the SRD will play this campaign perfectly well, and the setting guidance in the Player Guide covers how to reskin standard options into Elduvaine and Harrowmark without touching a single mechanic."));
 
@@ -115,8 +116,8 @@ c.push(H2("Wyvern-Watch"));
 c.push(P("You stood on a pike line eleven hundred feet up, or you went over the edge on a rope, and you did it more than once. Harrowmark has kept the watch for nine centuries and it has never had to conscript for it, which outsiders find baffling and nobody from Greywatch finds worth explaining."));
 
 c.push(B("Skill Proficiencies:", "Animal Handling, Athletics"));
-c.push(B("Tool Proficiencies:", "One type of artisan's tools of your choice, usually rope-work or leatherworking"));
-c.push(B("Equipment:", "A wyvern pike or a fifty-foot coil of hempen rope, a set of climber's tools, a hooked knife, traveller's clothes, and a belt pouch containing 10 gp"));
+c.push(B("Tool Proficiencies:", "One type of artisan\u2019s tools of your choice, usually rope-work or leatherworking"));
+c.push(B("Equipment:", "A wyvern pike or a fifty-foot coil of hempen rope, a set of climber\u2019s tools, a hooked knife, traveller\u2019s clothes, and a belt pouch containing 10 gp"));
 
 c.push(PS([{ t: "Feature: Names on the Wall. ", b: true }, { t: "Every wyvern-watch in Harrowmark keeps a roster of its dead and does not cross them off. You can read those rosters, and any watch in the kingdom will house, feed and equip you on the strength of yours \u2014 and will expect you to take a shift while you are there. Watches talk to each other. Word of what you did at one will reach the next before you do." }]));
 
@@ -141,7 +142,7 @@ c.push(P("You worked in the largest collection of magical knowledge in the world
 
 c.push(B("Skill Proficiencies:", "Arcana, History"));
 c.push(B("Languages:", "Two of your choice, one of which is Elduvish or Ninefold Cant"));
-c.push(B("Equipment:", "A set of calligrapher's supplies, a requisition seal that is no longer valid, a book of hands and ciphers, common clothes, and a belt pouch containing 15 gp"));
+c.push(B("Equipment:", "A set of calligrapher\u2019s supplies, a requisition seal that is no longer valid, a book of hands and ciphers, common clothes, and a belt pouch containing 15 gp"));
 
 c.push(PS([{ t: "Feature: Access by Rule. ", b: true }, { t: "You know how the Archive is organised, which is a rarer skill than it sounds and does not stop being useful because the Archive is in enemy hands. Given an hour in any substantial collection of books or records, you can determine whether it contains what you are looking for and roughly where, without reading it. You also know, precisely, what a person of any given station was and was not permitted to read \u2014 and you know that the Keeper was permitted less than most people assume." }]));
 
@@ -189,7 +190,7 @@ c.push(P("You tended a wood that holds the season it was planted in. It is not f
 c.push(B("Skill Proficiencies:", "Nature, Survival"));
 c.push(B("Tool Proficiencies:", "Herbalism kit"));
 c.push(B("Languages:", "Sylvan"));
-c.push(B("Equipment:", "A herbalism kit, a pruning hook, a sealed packet of seeds from a wood you tended, traveller's clothes, and a belt pouch containing 10 gp"));
+c.push(B("Equipment:", "A herbalism kit, a pruning hook, a sealed packet of seeds from a wood you tended, traveller\u2019s clothes, and a belt pouch containing 10 gp"));
 
 c.push(PS([{ t: "Feature: Read the Wood. ", b: true }, { t: "You can tell at a glance what season a stand of trees is holding, how long it has held it, and \u2014 the part that matters in this campaign \u2014 whether it is failing and roughly how fast. Any Elduvish rural community will shelter you on that skill alone. Fey in Elduvaine will generally hear you out before deciding anything, which is not the same as helping and is a great deal better than nothing." }]));
 
@@ -211,8 +212,8 @@ c.push(H2("Crusade Levy"));
 c.push(P("You are one of the eight thousand. You answered a summons read in a language you do not speak, promising a place in a country you could not find on a map, and you are walking to it. This is the most common background in the entire coalition and the campaign takes it seriously."));
 
 c.push(B("Skill Proficiencies:", "Athletics, and either Insight or Survival"));
-c.push(B("Tool Proficiencies:", "One type of artisan's tools from whatever you did before"));
-c.push(B("Equipment:", "A soldier's kit, a token from home, a Concord medal of the Call in cheap tin, common clothes, and a belt pouch containing 8 gp"));
+c.push(B("Tool Proficiencies:", "One type of artisan\u2019s tools from whatever you did before"));
+c.push(B("Equipment:", "A soldier\u2019s kit, a token from home, a Concord medal of the Call in cheap tin, common clothes, and a belt pouch containing 8 gp"));
 
 c.push(PS([{ t: "Feature: One of Eight Thousand. ", b: true }, { t: "You can find a bed, a meal and an honest answer anywhere in the coalition camp, from anybody, at any hour. Levymen know each other across companies, kingdoms and languages, and they will cover for you with an officer without being asked and without expecting anything. It also means you cannot move through the camp unnoticed. Somebody always knows where you went." }]));
 
@@ -235,9 +236,9 @@ c.push(P("You were raised, taught, or taken in by a Ninefold House \u2014 chapte
 
 c.push(B("Skill Proficiencies:", "Religion, and either Medicine or History"));
 c.push(B("Languages:", "Ninefold Cant"));
-c.push(B("Equipment:", "A Ninefold token of your Work, a book of the liturgy, vestments or a scholar's robe, common clothes, and a belt pouch containing 12 gp"));
+c.push(B("Equipment:", "A Ninefold token of your Work, a book of the liturgy, vestments or a scholar\u2019s robe, common clothes, and a belt pouch containing 12 gp"));
 
-c.push(PS([{ t: "Feature: The House Will Take You In. ", b: true }, { t: "Any Ninefold House in four kingdoms will give you shelter, food and care, and will treat your word about what you have seen as evidence. The Concord's houses keep the best records outside Elduvaine and will let you read them. This works in every realm that took the Call and does not work in Elduvaine, where there are no Ninefold Houses at all \u2014 except the new ones the Tenth Work is building, which will also take you in, and will want to talk." }]));
+c.push(PS([{ t: "Feature: The House Will Take You In. ", b: true }, { t: "Any Ninefold House in four kingdoms will give you shelter, food and care, and will treat your word about what you have seen as evidence. The Concord\u2019s houses keep the best records outside Elduvaine and will let you read them. This works in every realm that took the Call and does not work in Elduvaine, where there are no Ninefold Houses at all \u2014 except the new ones the Tenth Work is building, which will also take you in, and will want to talk." }]));
 
 c.push(table(
   ["d6", "Bond"],
@@ -261,7 +262,7 @@ c.push(B("Tool Proficiencies:", "Forgery kit"));
 c.push(B("Languages:", "Elduvish"));
 c.push(B("Equipment:", "A forgery kit, three permits in three different names of which one is genuine, worn common clothes, a light-stone pebble that no longer holds anything, and a belt pouch containing 5 gp"));
 
-c.push(PS([{ t: "Feature: Paper and Patience. ", b: true }, { t: "You know how the occupation's bureaucracy actually functions \u2014 which permits are checked, which are waved through, which clerk to approach and at what hour, and what a levy docket is supposed to look like. You can usually get one other person through a routine checkpoint alongside you. You also know, by name or by face, a startling number of the Elduvish clerks working for the administration, and about a third of them will not raise the alarm." }]));
+c.push(PS([{ t: "Feature: Paper and Patience. ", b: true }, { t: "You know how the occupation\u2019s bureaucracy actually functions \u2014 which permits are checked, which are waved through, which clerk to approach and at what hour, and what a levy docket is supposed to look like. You can usually get one other person through a routine checkpoint alongside you. You also know, by name or by face, a startling number of the Elduvish clerks working for the administration, and about a third of them will not raise the alarm." }]));
 
 c.push(table(
   ["d6", "Bond"],
@@ -309,19 +310,19 @@ c.push(BULLET([{ t: "You may use your reaction to move up to half your speed tow
 c.push(H2("Listening-Trained"));
 c.push(BULLET([{ t: "Increase your Wisdom score by 1, to a maximum of 20." }]));
 c.push(BULLET([{ t: "You have advantage on Wisdom (Insight) checks made to determine whether somebody is repeating words they do not understand." }]));
-c.push(BULLET([{ t: "Once per long rest, you can spend ten minutes at the edge of any Elduvish water and hear up to one minute of what was spoken there, in the speaker's own voice, chosen by the DM. You do not get to choose. Nobody has ever got to choose." }]));
+c.push(BULLET([{ t: "Once per long rest, you can spend ten minutes at the edge of any Elduvish water and hear up to one minute of what was spoken there, in the speaker\u2019s own voice, chosen by the DM. You do not get to choose. Nobody has ever got to choose." }]));
 
 c.push(H1("Subclasses"));
 
 c.push(H2("Cleric: Domain of the Kept"));
 
-c.push(P("Elduvaine has no church, so it has no clerics in the Concord's sense. What it has are Keepers, who tend a habit the way a Concord priest tends a congregation \u2014 and a few of whom, over four hundred years, have found that the habit tends them back. This is the one Elduvish divine tradition, it is not organised, and it has no doctrine to speak of."));
+c.push(P("Elduvaine has no church, so it has no clerics in the Concord\u2019s sense. What it has are Keepers, who tend a habit the way a Concord priest tends a congregation \u2014 and a few of whom, over four hundred years, have found that the habit tends them back. This is the one Elduvish divine tradition, it is not organised, and it has no doctrine to speak of."));
 
 c.push(B("Domain Spells.", "1st: goodberry, sanctuary. 3rd: pass without trace, warding bond. 5th: plant growth, sending. 7th: guardian of faith, stone shape. 9th: commune with nature, hallow."));
 
-c.push(PS([{ t: "Keeper's Tending (1st level). ", b: true }, { t: "You gain proficiency with herbalism kits and mason's tools, and in the Nature skill. When you finish a long rest in a place that holds a habit \u2014 a Kept Season wood, a Willing Road waystone, a Listening Water, or Standing Light stone \u2014 you regain one expended spell slot of 3rd level or lower." }]));
+c.push(PS([{ t: "Keeper\u2019s Tending (1st level). ", b: true }, { t: "You gain proficiency with herbalism kits and mason\u2019s tools, and in the Nature skill. When you finish a long rest in a place that holds a habit \u2014 a Kept Season wood, a Willing Road waystone, a Listening Water, or Standing Light stone \u2014 you regain one expended spell slot of 3rd level or lower." }]));
 
-c.push(PS([{ t: "Channel Divinity: Hold the Season (2nd level). ", b: true }, { t: "As an action, you fix a 30-foot radius in the state it is currently in for one minute. Within the area, no creature's hit point maximum can be reduced, no ongoing damage or condition worsens, burning fires do not spread, and no plant dies. Creatures may still be damaged, healed and killed normally; what stops is deterioration. Concentration is not required." }]));
+c.push(PS([{ t: "Channel Divinity: Hold the Season (2nd level). ", b: true }, { t: "As an action, you fix a 30-foot radius in the state it is currently in for one minute. Within the area, no creature\u2019s hit point maximum can be reduced, no ongoing damage or condition worsens, burning fires do not spread, and no plant dies. Creatures may still be damaged, healed and killed normally; what stops is deterioration. Concentration is not required." }]));
 
 c.push(PS([{ t: "Bound to the Place (6th level). ", b: true }, { t: "Choose one location no larger than a village, a wood, or a mile of road. While within it, you have advantage on saving throws against being charmed or frightened, and you cannot be surprised. You may change the location by tending a new one for a month, and most Keepers never do." }]));
 
@@ -333,7 +334,7 @@ c.push(H2("Fighter: Pikewatch"));
 
 c.push(P("Nine centuries of killing things that fly, reduced to a drill any competent person can be taught in a season and nobody masters in less than twenty years. It is not a chivalric tradition. There is no code, no oath and no title \u2014 just a rope, a very long stick, and an institution that has never had to conscript."));
 
-c.push(PS([{ t: "Bracing Set (3rd level). ", b: true }, { t: "You gain proficiency with rope-work and climber's tools. When you take the Ready action to attack a creature that enters your reach, and you are wielding a weapon with the reach or heavy property, the attack deals an extra 1d8 damage and the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked prone." }]));
+c.push(PS([{ t: "Bracing Set (3rd level). ", b: true }, { t: "You gain proficiency with rope-work and climber\u2019s tools. When you take the Ready action to attack a creature that enters your reach, and you are wielding a weapon with the reach or heavy property, the attack deals an extra 1d8 damage and the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + your Strength modifier) or be knocked prone." }]));
 
 c.push(PS([{ t: "Rope and Pike (3rd level). ", b: true }, { t: "You can use a bonus action to make a special attack with a rope, hook or net against a Large or smaller creature within 20 feet. The target must succeed on a Dexterity saving throw against the same DC or have its speed reduced to 0 until the end of its next turn. Against a flying creature, a failure means it falls." }]));
 
@@ -341,7 +342,7 @@ c.push(PS([{ t: "Reach of the Watch (7th level). ", b: true }, { t: "Your reach 
 
 c.push(PS([{ t: "Bring It Down (10th level). ", b: true }, { t: "When you hit a creature with a flying speed with a melee weapon attack, its flying speed is reduced by 20 feet until the end of its next turn. If this reduces it to 0, it falls." }]));
 
-c.push(PS([{ t: "Unimpressed (15th level). ", b: true }, { t: "You are immune to being frightened. If an effect would frighten you, you may instead impose disadvantage on the source's next attack roll against you, because you looked at it and it noticed." }]));
+c.push(PS([{ t: "Unimpressed (15th level). ", b: true }, { t: "You are immune to being frightened. If an effect would frighten you, you may instead impose disadvantage on the source\u2019s next attack roll against you, because you looked at it and it noticed." }]));
 
 c.push(PS([{ t: "Nine Centuries of Practice (18th level). ", b: true }, { t: "Once per turn, when a Large or larger creature within your reach is prone or has a speed of 0, your first attack against it is an automatic critical hit." }]));
 
@@ -349,15 +350,15 @@ c.push(H2("Warlock: The Sleeping Archive"));
 
 c.push(P("Something older than the wards sleeps near or under the Ysolde Archive. It answers to neither Maedoc Vale nor anybody else, it has not woken in living memory, and it has, on a very small number of occasions across four centuries, made an arrangement with a reader."));
 
-c.push(PS([DM("DM Only: "), { t: "this patron does not answer what is in the deepest vaults, and a DM should be careful not to let a player conclude that it does. The dragon is a single approved exception that sleeps under the building. It is not a key to the building's contents, it does not know what is on the sealed shelves, and its interest in the campaign is entirely its own. If a player asks, the honest answer is that it has never said." }]));
+c.push(PS([DM("DM Only: "), { t: "this patron does not answer what is in the deepest vaults, and a DM should be careful not to let a player conclude that it does. The dragon is a single approved exception that sleeps under the building. It is not a key to the building\u2019s contents, it does not know what is on the sealed shelves, and its interest in the campaign is entirely its own. If a player asks, the honest answer is that it has never said." }]));
 
 c.push(B("Expanded Spell List.", "1st: comprehend languages, sleep. 2nd: detect thoughts, locate object. 3rd: clairvoyance, tongues. 4th: divination, arcane eye. 5th: legend lore, dream."));
 
-c.push(PS([{ t: "Reader's Privilege (1st level). ", b: true }, { t: "You can read any written language, though not necessarily understand what is being discussed. Additionally, when you spend at least an hour with a written work, you learn one true and specific fact about the person who wrote it that they did not intend to record." }]));
+c.push(PS([{ t: "Reader\u2019s Privilege (1st level). ", b: true }, { t: "You can read any written language, though not necessarily understand what is being discussed. Additionally, when you spend at least an hour with a written work, you learn one true and specific fact about the person who wrote it that they did not intend to record." }]));
 
 c.push(PS([{ t: "What the Vaults Hold Back (6th level). ", b: true }, { t: "As a reaction when you fail a saving throw against a spell of 5th level or lower, you may succeed instead. Something enormous shifts in its sleep and the spell simply does not apply to you. You cannot use this feature again until you finish a long rest, and you dream about it." }]));
 
-c.push(PS([{ t: "Deep Sleeper's Ward (10th level). ", b: true }, { t: "You have resistance to psychic damage, and you cannot be put to sleep by magic. You do sleep. You sleep extremely well, and for slightly longer than you intend, and this has never once been convenient." }]));
+c.push(PS([{ t: "Deep Sleeper\u2019s Ward (10th level). ", b: true }, { t: "You have resistance to psychic damage, and you cannot be put to sleep by magic. You do sleep. You sleep extremely well, and for slightly longer than you intend, and this has never once been convenient." }]));
 
 c.push(PS([{ t: "It Turns Over (14th level). ", b: true }, { t: "As an action, choose a creature you can see within 60 feet. It must succeed on a Wisdom saving throw against your warlock spell save DC or be frightened of you and incapacitated for 1 minute, repeating the save at the end of each of its turns. Nothing visible happens. Everyone present, including your allies, is briefly and privately certain that something very large has just noticed them. Once per long rest." }]));
 c.push(H1("Spells"));
@@ -379,7 +380,7 @@ c.push(B("Casting Time:", "10 minutes"));
 c.push(B("Range:", "Touch"));
 c.push(B("Components:", "V, S, M (a mouthful of water from the place you are asking about)"));
 c.push(B("Duration:", "Instantaneous"));
-c.push(P("You touch a body of standing or slow-moving water and it gives back up to one minute of speech that was spoken at its edge within the last thirty days, in the speaker's own voice. You do not choose which minute. The DM does, and should choose what is most interesting rather than what is most useful."));
+c.push(P("You touch a body of standing or slow-moving water and it gives back up to one minute of speech that was spoken at its edge within the last thirty days, in the speaker\u2019s own voice. You do not choose which minute. The DM does, and should choose what is most interesting rather than what is most useful."));
 c.push(P("In Elduvaine, where the water does this anyway, the spell reaches back thirty years rather than thirty days. Outside Elduvaine it works on any water at all, which is the only reason it was ever written down, and Elduvish casters regard using it at home as roughly equivalent to shouting at somebody who was going to answer you anyway."));
 c.push(B("Available to:", "Bard, cleric, druid, warlock, wizard"));
 
@@ -403,7 +404,7 @@ c.push(P("Choose a point within range. A 40-foot-radius sphere centred there tak
 c.push(P("Cast at 5th level or higher, the duration becomes seven days. Cast at 7th level, it becomes a year and a day, and a wood so treated will occasionally simply keep it, which is how the Orchard Marches began and is not repeatable on purpose."));
 c.push(B("Available to:", "Druid, ranger, warlock, wizard"));
 
-c.push(H2("Waystone's Refusal"));
+c.push(H2("Waystone\u2019s Refusal"));
 c.push(PS([{ t: "4th-level abjuration", i: true }]));
 c.push(B("Casting Time:", "1 action"));
 c.push(B("Range:", "30 feet"));
@@ -420,27 +421,27 @@ c.push(B("Range:", "60 feet"));
 c.push(B("Components:", "V, S, M (a piece of cut light-stone, which is consumed)"));
 c.push(B("Duration:", "Instantaneous"));
 c.push(P("You pull the life out of a 30-foot-radius sphere. Each creature in the area must make a Constitution saving throw, taking 8d8 necrotic damage on a failed save, or half as much on a success. Every ordinary plant in the area dies, the ground is barren for a year, and any resident-magic effect in the area is suppressed for 24 hours."));
-c.push(PS([DM("DM Only: "), { t: "this is what the occupation's battle-mages use and it is on the list so that a party can recognise it when it is cast at them, and can understand exactly what they are looking at the first time somebody does it to a field. A player character can learn it. Nothing in the rules prevents that and nothing in this book will stop them. What will happen is that an Elduvish NPC will see them cast it, and the campaign should absolutely make that a scene." }]));
+c.push(PS([DM("DM Only: "), { t: "this is what the occupation\u2019s battle-mages use and it is on the list so that a party can recognise it when it is cast at them, and can understand exactly what they are looking at the first time somebody does it to a field. A player character can learn it. Nothing in the rules prevents that and nothing in this book will stop them. What will happen is that an Elduvish NPC will see them cast it, and the campaign should absolutely make that a scene." }]));
 c.push(B("Available to:", "Sorcerer, warlock, wizard"));
 
 c.push(H1("Magic Items"));
 
-c.push(P("Elduvaine's great treasures are habits made portable, and their defining quality is that they are ordinary at home and astonishing anywhere else. A light-stone lamp is a doorstep in Caer Ysolde and a wonder in Duncarrow, and the campaign gets a great deal of mileage out of party members from different countries disagreeing about whether something is remarkable."));
+c.push(P("Elduvaine\u2019s great treasures are habits made portable, and their defining quality is that they are ordinary at home and astonishing anywhere else. A light-stone lamp is a doorstep in Caer Ysolde and a wonder in Duncarrow, and the campaign gets a great deal of mileage out of party members from different countries disagreeing about whether something is remarkable."));
 
 c.push(table(
   ["Item", "Rarity", "Attunement", "Where it first appears"],
   [30, 18, 18, 34],
   [
-    ["Standing-stone lamp", "Common", "No", "Module 3, from Caerwyn's baker"],
+    ["Standing-stone lamp", "Common", "No", "Module 3, from Caerwyn\u2019s baker"],
     ["Flask of Listening Water", "Uncommon", "No", "Module 5, at the Standing Water"],
-    ["Road-token", "Uncommon", "Yes", "DM's discretion"],
-    ["Kept Season seeds", "Uncommon", "No", "DM's discretion"],
-    ["Legion pattern blade (+1)", "Uncommon", "No", "Module 7, Drell's campaign sword"],
-    ["Wand of magic missiles", "Uncommon", "No", "Module 7, the harbour-mage's quarters"],
-    ["Cloak of elvenkind", "Uncommon", "Yes", "Module 9, off one of Voss's scouts"],
-    ["Keeper's pruning hook", "Rare", "Yes", "The Orchard Marches"],
+    ["Road-token", "Uncommon", "Yes", "DM\u2019s discretion"],
+    ["Kept Season seeds", "Uncommon", "No", "DM\u2019s discretion"],
+    ["Legion pattern blade (+1)", "Uncommon", "No", "Module 7, Drell\u2019s campaign sword"],
+    ["Wand of magic missiles", "Uncommon", "No", "Module 7, the harbour-mage\u2019s quarters"],
+    ["Cloak of elvenkind", "Uncommon", "Yes", "Module 9, off one of Voss\u2019s scouts"],
+    ["Keeper\u2019s pruning hook", "Rare", "Yes", "The Orchard Marches"],
     ["Ysolde reading-glass", "Rare", "Yes", "The Archive, and not easily"],
-    ["Sovereign's veil", "Very rare", "Yes", "Not lootable. See its entry."]
+    ["Sovereign\u2019s veil", "Very rare", "Yes", "Not lootable. See its entry."]
   ], { full: true }
 ));
 
@@ -451,8 +452,8 @@ c.push(P("It holds daylight rather than making it, which is a distinction that m
 
 c.push(H2("Flask of Listening Water"));
 c.push(PS([{ t: "Wondrous item, uncommon", i: true }]));
-c.push(P("A stoppered flask of water drawn from an Elduvish river while something was being said over it. Unstopper it and it gives back what was spoken at its mouth, once, in the speaker's own voice, for up to one minute. Then it is only water."));
-c.push(P("A flask can be filled again at any Listening Water in Elduvaine. The campaign's better use is the other one: a party can deliberately speak into it and carry the words somewhere. What they choose to put in it is the point, and a DM should ask, and should write the answer down."));
+c.push(P("A stoppered flask of water drawn from an Elduvish river while something was being said over it. Unstopper it and it gives back what was spoken at its mouth, once, in the speaker\u2019s own voice, for up to one minute. Then it is only water."));
+c.push(P("A flask can be filled again at any Listening Water in Elduvaine. The campaign\u2019s better use is the other one: a party can deliberately speak into it and carry the words somewhere. What they choose to put in it is the point, and a DM should ask, and should write the answer down."));
 
 c.push(H2("Road-Token"));
 c.push(PS([{ t: "Wondrous item, uncommon (requires attunement)", i: true }]));
@@ -464,7 +465,7 @@ c.push(PS([{ t: "Wondrous item, uncommon", i: true }]));
 c.push(P("A sealed packet of a dozen seeds taken from a Kept Season wood. Sown together in a plot of at least twenty feet square and left for a year, they produce a stand that holds the season they were sown in, permanently, in the way the Orchard Marches do."));
 c.push(P("This is not an adventuring item and is very deliberately not one. It is a thing a party can plant, somewhere they choose, and come back to in an epilogue. Give it to them early. Say nothing about it afterward."));
 
-c.push(H2("Keeper's Pruning Hook"));
+c.push(H2("Keeper\u2019s Pruning Hook"));
 c.push(PS([{ t: "Weapon (sickle), rare (requires attunement by a druid, ranger, or cleric)", i: true }]));
 c.push(P("You gain a +1 bonus to attack and damage rolls with this weapon. While holding it, you can cast the kept season spell once per long rest without expending a spell slot or material components, at 3rd level."));
 c.push(P("In addition, as an action you can touch a dying plant, tree or wood and stop it dying for one week. This does not heal it, cure it, or address whatever is killing it. It simply stops, for a week, and then resumes. Six of these were made and four are accounted for."));
@@ -474,9 +475,9 @@ c.push(PS([{ t: "Wondrous item, rare (requires attunement)", i: true }]));
 c.push(P("A hand lens in a plain gnome-cut frame, issued to Archive clerks of the fourth grade and above. Looking through it, you can read any written language, and you can tell at a glance whether a document is a forgery, a copy, or an original, and roughly how old it is."));
 c.push(P("It also does the thing it was actually made for, which is that it will not let you read anything you are not entitled to read. Text beyond your permission is simply blank through the glass. Nobody has ever worked out how it decides, the Archive did not consider this a problem, and Maedoc Vale used one for nineteen years."));
 
-c.push(H2("Sovereign's Veil"));
+c.push(H2("Sovereign\u2019s Veil"));
 c.push(PS([{ t: "Wondrous item, very rare (requires attunement by the reigning sovereign of Elduvaine)", i: true }]));
-c.push(P("Grey silk, unremarkable, and the reason nobody has seen Maelis Ysolde's face in four years. While attuned and worn, the wearer cannot be scried, read, charmed or compelled, cannot be lied to about the state of Elduvaine's habits, and knows at all times, precisely, how much of the Living Realm remains."));
+c.push(P("Grey silk, unremarkable, and the reason nobody has seen Maelis Ysolde\u2019s face in four years. While attuned and worn, the wearer cannot be scried, read, charmed or compelled, cannot be lied to about the state of Elduvaine\u2019s habits, and knows at all times, precisely, how much of the Living Realm remains."));
 c.push(P("The last of those is not a benefit and was never intended as one. It was made so that a sovereign would always know the condition of the thing they were bound to, in a kingdom where that binding was a nine-hundred-year source of long life and good weather. She has worn it through three years of the draining."));
 
 c.push(PS([DM("DM Only: "), { t: "the veil is in this book so that a DM knows it exists and knows exactly what it has been doing to her, and not because it is loot. It cannot be taken, attunes to nobody else, and does nothing for anyone who is not bound to the habits. If a party asks her what the number is, she will tell them, and it is the single most demoralising piece of information available anywhere in the campaign, and she will give it to them without softening it because she has never once softened anything." }]));

@@ -172,6 +172,52 @@ However the ford and the toll-keep were settled, the column presses on beyond As
 
 This is where the module ends, and where the DM should let the weight of the road actually register — a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module 5 for the approach to Vindana, where the sea road’s own losses — including the second king’s — catch up with the party as news from the road not taken.
 
+# Puzzles and Set Pieces
+
+The Back of the Charter expands the toll negotiation and adds ten minutes. The Cold Stair is how the march is run. The Signposted Corridor belongs to the Old Workings and stays in Optional Content, where it is worth sixty minutes to a table that wants a dungeon.
+
+## The Puzzle: The Back of the Charter
+
+Baron Vell’s toll is legal, and that is the whole difficulty with Baron Vell. The charter is real, it is four generations old, it hangs framed in the keep’s hall, and it says what he may charge. He will show it to anybody. He is proud of it.
+
+He has never read the back.
+
+**What the front says:** the holder of Ashgate keep may levy a toll on the ford, at rates set out in a schedule, per head and per axle, in perpetuity.
+
+**What the back says:** the charter is granted in exchange for the keep maintaining the ford, the causeway and the winter marks, and for the keep passing free of toll any body of men raised under a summons of the Crown.
+
+Getting to it requires noticing that a document hanging in a frame has a reverse, which is a DC 12 Intelligence (Investigation) check or simply a player asking. Getting it out of the frame without Vell’s permission is a DC 15 Dexterity (Sleight of Hand) check. Getting Vell to take it out himself is a DC 16 Charisma (Persuasion) check and is much the better scene, because he will do it, and he will read it, and the party will watch him work out what it says.
+
+**DM Only:** Vell is not a fraud and has not been cheating anybody. His great-grandfather knew about the clause; his grandfather did not; the family has collected in good faith for two generations on a document nobody had turned over. When he reads it he goes quiet, and then he honours it, because he is a man whose entire identity is that his charter is legitimate and he has just found out what legitimate costs. Let the party win this without humiliating him. If they humiliate him anyway, he still honours it, and the column still crosses, and something has been broken that did not need to be.
+
+## The Puzzle: The Signposted Corridor
+
+The kobolds of the Old Workings have had two generations and nothing else to do. Every junction in the upper gallery is trapped, and every trap is signposted — carefully, legibly, and in Draconic, which they do not consider a trick and which everyone who has died here has considered one.
+
+The signs are honest. That is the puzzle. A party that can read Draconic walks through the entire complex unharmed; a party that cannot must work out that the marks are warnings rather than decoration, and then work out which is which by watching what the kobolds themselves do.
+
+| **The mark** | **What it says** | **What is actually there** |
+| --- | --- | --- |
+| Three scratches, descending | Falling | A covered pit, 20 ft. DC 13 Dexterity save or 2d6 damage and prone. |
+| A circle with a line through | Do not stand | Pressure plate. DC 14 Dexterity save or a rock fall for 3d6 bludgeoning in a 10-ft. square. |
+| A wave | Water | The flooded lower gallery. Not a trap. A genuine warning, and the thing they want help with. |
+| Two dots and a stroke | Ours, do not touch | A larder. It is a larder. There is nothing else to it and a paranoid party will spend twenty minutes on it. |
+| A hand, open | Come in, talk | The negotiating chamber. They have prepared a speech and are hurt if nobody hears it. |
+
+**DM Only:** the whole encounter tips on whether a party assumes signposting is malice. If they blunder through, they take real damage from traps that told them, in writing, what they were. If they stop and think, they get sixty kobolds who would very much like to be left alone, will pay in silver they have no use for, and want somebody to do something about what is in the flooded lower gallery. Reward the reading. Do not punish the fighting, but do not soften it either.
+
+## Set Piece: The Cold Stair in Weather
+
+Eleven miles of switchback cut into the eastern face, wind coming across rather than along, no water for the middle four miles and no shelter for the last three. Run it as an environment that is trying to kill the column, because it is.
+
+> *“The wind does not gust here. It leans. It has been leaning against your left shoulder for six hours and you have been walking with your body at an angle for so long that when the road turns and it stops, you stagger, and the man behind you laughs, and then it turns again and he stops laughing.”*
+
+**The hazard.** Each of the three days on the Stair, every character makes a DC 12 Constitution saving throw at nightfall. On a failure they gain one level of exhaustion. Characters who reach an intact refuge hut, or who are sheltered by somebody who plans, make the save with advantage; characters who pushed on past the last hut make it with disadvantage.
+
+**The problem.** Somebody has been stripping the refuge huts for roofing timber. Two of the four are open to the sky. This is a small crime at sea level and a lethal one at five thousand feet, and the party can find out who is doing it in an afternoon: it is the Kir Halloway carters, who are cold, who are also right that nobody has repaired the huts in nine years, and who are entirely prepared to be shouted at.
+
+**The set piece.** On the second night, a section of the column ahead does not make the hut. Forty people, in the open, in the dark, three quarters of a mile up the road. The party can go back for them. Every hour they spend doing it is an hour they are also in the open, and the DM should track their own exhaustion honestly and out loud.
+
 # NPC Profiles
 
 ## Garrick Hollow

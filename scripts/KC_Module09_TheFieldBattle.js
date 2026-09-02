@@ -11,7 +11,7 @@
 // A literal newline inside a double-quoted JS string is invalid syntax -- use
 // two separate BOX() or P() calls instead of embedding a line break.
 //
-// Arsuf-keyed: the open-field battle that proves Vale's army beatable in a
+// Arsuf-keyed: the open-field battle that proves Vale\u2019s army beatable in a
 // fair fight, not just behind a broken siege. Per the module breakdown, this
 // module carries either a third rescue thread or a real loss -- written here
 // as a real loss (Tam Ondry, introduced in Module Five) by default, with an
@@ -19,7 +19,7 @@
 //
 // Encounter design note: General Ilyana Voss is the SRD Gladiator (CR 5, 1800
 // XP), a deliberate step up from the Veteran used for Thane (2A) and Drell
-// (Module Six/Seven) -- Vale's field army is a different register of threat
+// (Module Six/Seven) -- Vale\u2019s field army is a different register of threat
 // than an occupation garrison, and the boss-tier block should feel like it.
 
 const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
@@ -84,11 +84,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -230,6 +234,47 @@ c.push(BOX("It is not a rout in the way stories tell it \u2014 no cheering, no c
 c.push(P("Let the aftermath be heavy rather than triumphant, especially if Tam died in Scene 2 \u2014 the coalition has proven something real about Vale\u2019s army today, and it cost real people to prove it. End the session on that weight rather than on a victory speech. Hand off directly to Module Ten for the approach to Caer Ysolde."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H1("Puzzles and Set Pieces"));
+
+c.push(P("The five movements are the module\u2019s existing scenes, sequenced, with the party put at the hinge of each. Voss\u2019s Field Orders is additive: fifteen minutes, and it changes the casualty list rather than the outcome."));
+
+c.push(H2("The Puzzle: Voss\u2019s Field Orders"));
+
+c.push(P("General Ilyana Voss writes her orders in the Legion\u2019s working cipher, which is not a cipher so much as a professional shorthand a hundred and forty years old. Any captured dispatch is readable and the reading is a genuine puzzle rather than a check."));
+
+c.push(P("The Sixth writes movement as three elements: the company number, the hour on a twelve-mark day, and a bearing given as a clock face from the standard. Nothing is written in words, because words can be read by anybody and numbers can be read by a professional."));
+
+c.push(table(
+  ["What is written", "What it means", "How a party can establish it"],
+  [22, 38, 40],
+  [
+    ["IV \u00b7 iii \u00b7 x", "Fourth company, third hour, bearing ten o\u2019clock", "Compare any two dispatches against movements the party watched happen."],
+    ["A doubled numeral", "The order is a feint and is to be seen", "The only dispatches ever sent uncovered are doubled. Two examples is enough."],
+    ["A struck-through hour", "Hold until countermanded", "A prisoner will confirm this without considering it a betrayal, because it is drill, not intelligence."],
+    ["No bearing at all", "Reserve. Committed at the commander\u2019s word only", "This is the one that matters and it is the one the party will find last."]
+  ], { full: true }
+));
+
+c.push(P("Put together, three captured dispatches tell the party where Voss\u2019s reserve is and that she has not yet committed it \u2014 which is the single most valuable piece of information available on the field, and which the coalition\u2019s own scouts have failed to get for two days."));
+
+c.push(PS([DM("DM Only: "), { t: "give them a real advantage for solving it. A party that finds the reserve and tells Xavier changes the shape of the battle, and the DM should say so in narration: the coalition\u2019s left does not break, and about four hundred people who would have died do not. Do not make this the difference between victory and defeat \u2014 the field battle is won either way, because the campaign needs it won \u2014 make it the difference in the casualty list, and read part of the casualty list out." }]));
+
+c.push(H2("Set Piece: The Battle, in Five Movements"));
+
+c.push(P("Eight thousand people on each side and five characters somewhere in the middle of it. The party cannot win a field battle and should never be asked to; what they can do is be the hinge at five specific moments, and the module is built to put them at each one."));
+
+c.push(B("First: The Approach.", "Two hours of standing in a line while the enemy does the same thing four hundred yards away. Nothing happens. This is deliberate and should be played straight \u2014 the fear in a set battle is almost all in the waiting, and a DM who skips it has thrown away the only chance to make the rest of it land."));
+
+c.push(B("Second: The Left Gives.", "Oksitan spears, already shaken by what happened to their king, bend and do not break. The party is behind them and can see it happening before anyone in command can. A dragonborn house-knight is somewhere in the middle of that line roaring instructions nobody can hear."));
+
+c.push(B("Third: The Ironshanks.", "The Sixth\u2019s heavy foot come through the gap in a shield wall and the party is what is in front of them. Four ironshanks and an optio, in the open, with the battle noise making every command a shouted argument. This is the module\u2019s real fight and it should be genuinely frightening."));
+
+c.push(B("Fourth: The Reserve.", "Voss commits, or does not, depending on the puzzle above. If the party found it, the coalition meets it ready. If not, it arrives on the flank and the module gets a sixth movement nobody wanted."));
+
+c.push(B("Fifth: Voss.", "She does not flee and she does not die swinging. When the field is lost she stops, puts her sword point down in the mud, and waits, because she is a professional on a contract and the contract does not require this. What the party does about that is the end of the session."));
+
+c.push(PS([DM("DM Only: "), { t: "a captured Voss is worth more to this campaign than a dead one by a wide margin and the module should not tip the scale. She will not be turned, will not inform, and will not apologise for any of it \u2014 and she will, if asked correctly, explain exactly what the Sixth\u2019s contract says and when it expires, which is information nobody else in Elduvaine will give the party and which matters enormously in Module Eleven." }]));
+
 c.push(H1("NPC Profiles"));
 
 c.push(H2("General Ilyana Voss"));

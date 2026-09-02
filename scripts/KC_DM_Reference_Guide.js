@@ -10,7 +10,7 @@
 // clean and passes the non-ASCII scanner but leaks literal text into the PDF.
 //
 // SINGLE-COLUMN by design (SINGLE_COL_MATCH in tools/build.sh already points
-// at this document's basename): wide scannable tables, a stat block index,
+// at this document\u2019s basename): wide scannable tables, a stat block index,
 // and the Branch Ledger -- every Diverging Paths entry from all eleven module
 // slots, compiled here with a blank column for what actually happened at a
 // given table. Regenerate this file whenever a new module adds its own
@@ -77,11 +77,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
   })]
 });
 
-const { Table, TableRow, TableCell, WidthType, ShadingType } = require('docx');
+const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
 const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
 const FULLWIDTH = "KCFullWidth";
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
+// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
+// d6 column holding one digit took a third of the table. Only the ratios matter.
+const GRID = 9360;
+const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -102,7 +106,7 @@ c.push(PS([{ t: "The King\u2019s Crusade", i: true }],
 // ---------------------------------------------------------------- Overview
 c.push(H1("Overview"));
 
-c.push(P("This document is the table\u2019s working reference, not a fifth telling of the setting or the story. It gathers three things a DM needs at hand and does not want to hunt for across twelve other files: a one-page map of the whole campaign\u2019s shape, an index of every stat block already built so a name can be found without a search, and the Branch Ledger \u2014 the compiled record of every tracked divergence, module by module, with a blank column for what actually happened at this table. Everything here is drawn from the sourcebook and the eleven module slots; nothing here is new canon, and none of the campaign\u2019s deliberately open questions have been quietly settled to make this document tidier."));
+c.push(P("This document is the table\u2019s working reference, not a fifth telling of the setting or the story. It gathers three things a DM needs at hand and does not want to hunt for across seventeen other files: a one-page map of the whole campaign\u2019s shape, an index of every stat block already built so a name can be found without a search, a table of where every puzzle in the campaign is and what solves it, and the Branch Ledger \u2014 the compiled record of every tracked divergence, module by module, with a blank column for what actually happened at this table. Everything here is drawn from the sourcebook, the gazetteer, the bestiary and the eleven module slots; nothing here is new canon, and none of the campaign\u2019s deliberately open questions have been quietly settled to make this document tidier."));
 
 c.push(P("Use it during play as a quick-lookup: which module a name belongs to, what CR a recurring stat block sits at, what got decided last session that this session might reference. Use the Branch Ledger after every session, not just at the end of the campaign \u2014 an entry filled in while it is fresh is worth more than one reconstructed from memory two modules later."));
 
@@ -222,12 +226,78 @@ c.push(table(
     ["Marshal Ossian Drell (hobgoblin)", "6", "Commands Vindana\u2019s garrison; a legionary professional on a contract, not a fanatic. Fate resolved in Module 7."],
     ["The Magistrate (gnome)", "8", "Royal house, freed in Vindana; the Ward\u2019s great-aunt by marriage. Fought her captivity with bureaucratic warfare and won."],
     ["General Ilyana Voss (orc)", "9", "Commands Vale\u2019s field army; came up through the same legion as Drell. Fate resolved this module; a captured Voss is a real long-term asset."],
-    ["The Regent (human)", "10", "Royal house, at large; runs what resistance survives and refuses evacuation. See the sourcebook."],
+    ["Aveline Ysolde, the Regent (human)", "10", "Royal house, at large; runs what resistance survives and refuses evacuation. Has refused it in writing, twice. Stat block in the bestiary."],
+    ["Maelis Ysolde, the Veiled Sovereign (elf)", "11", "Held in Caer Ysolde. Dying at the same rate as the land, because a sovereign is bound to the habits. The campaign\u2019s second clock, and the one that cannot be bought. No stat block, deliberately."],
+    ["Ninian Ysolde, the Ward (half-elf)", "4", "Freed at Sennoch Hall. Heir presumptive, and the one who has done the arithmetic on the Promise."],
+    ["Ottoline Vahn, the Magistrate (gnome)", "8", "Freed in Vindana. Fought three years of captivity by filing, and won. Holds the only complete record of the occupation."],
+    ["Emrys Ysolde, the Envoy (elf)", "\u2014", "Held separately, and not entirely as a prisoner. Has been talking to Vale for three years. Complexity in the cost, not the cause; there is no reveal and no resolution."],
+    ["Raimon V of Oksitan (human)", "5", "The second crown, seventy-one and undeterred. Takes the road the party does not and drowns fording the Vaskren. Reaches the party as rumour, then refugees, then a problem."],
+    ["Serjeant Hoth (hobgoblin)", "4", "Held Sennoch Hall correctly for three years and would like that written down. Surrenders on terms, with the file."],
     ["Maedoc Vale", "11", "The wizard. Appears in person only here. Whether he is still human is deliberately unresolved."]
   ]
 ));
 
 // ---------------------------------------------------------------- Branch Ledger
+c.push(H1("Faith and Factions at a Glance"));
+
+c.push(P("The Concord holds that the Works made the world and withdrew while it was unfinished. Nine of them, worshipped across Harrowmark, Oksitan, Auberitz and Norvatch. Elduvaine never built a church at all, because you do not raise a temple to ask for an answer in a country where the river answers directly."));
+
+c.push(table(
+  ["The Work", "Sphere", "Domains"],
+  [26, 46, 28],
+  [
+    ["Ashet the Anvil", "Craft, making, the honest tool", "Knowledge, War"],
+    ["Voran of the Long Road", "Travel, messengers, guest-right", "Life, Trickery"],
+    ["Sennet the Witness", "Oath, contract, law, testimony", "Knowledge, Trickery"],
+    ["Halevin the Hearth-Kept", "Home, harvest, healing", "Life, Nature"],
+    ["Aurine the Unshuttered", "Light, truth, dawn, courage", "Light"],
+    ["Duran Ninefold", "War as discipline; the held line", "War"],
+    ["Threnn Greywater", "Sea, storm, river, the drowned", "Tempest"],
+    ["Ossuar the Quiet Warden", "Death, the grave, remembrance", "Death"],
+    ["Saveth of the Green Verge", "Wilds, beasts, the seasons", "Nature"]
+  ]
+));
+
+c.push(table(
+  ["Faction", "Standing, in three steps", "What the top step gets you"],
+  [22, 36, 42],
+  [
+    ["The Crusade", "Sworn \u00b7 Lance \u00b7 Banner of the Call", "Xavier without an appointment, and the standing to ask the coalition for something it does not want to give."],
+    ["The Order of the Tenth Work", "Postulant \u00b7 Hand \u00b7 Warden of the Work", "Disciplined troops, healing without price, and an expectation you will not like."],
+    ["The Ysolde Remnant", "Known \u00b7 Trusted \u00b7 Named", "Safe houses across the Braid, forged permits, and Aveline answering the same day."],
+    ["The Sixth Free Legion", "Noted \u00b7 Respected \u00b7 Owed", "Parley honoured, prisoners exchanged, and an officer who stays bought."],
+    ["House Kell of Norvatch", "Client \u00b7 Factor\u2019s Guest \u00b7 Signatory", "Anything buyable, on time, plus three years of ledgers."],
+    ["The Unbound Clerks", "Enquirer \u00b7 Reader \u00b7 Keeper\u2019s Friend", "The only people alive who can say what Vale has already read."]
+  ]
+));
+
+c.push(PS([DM("DM Only: "), { t: "the Tenth Work is where this campaign keeps its complexity, and it is on the party\u2019s own side of the line. They are allies, they will die holding a wall for the party, and they intend to do something to the liberated kingdom that a great many Elduvish would call a second occupation with better manners. Do not make them hypocrites and do not give them a secret plan." }]));
+
+c.push(H1("The Puzzle Index"));
+
+c.push(P("Every puzzle in the campaign, where it sits, and what solves it. Solutions are listed so a DM can recognise a good answer arriving from an unexpected direction, not so that only these answers count."));
+
+c.push(table(
+  ["Module", "Puzzle", "What solves it"],
+  [12, 30, 58],
+  [
+    ["1", "The Muster Roll", "Count the billets, walk the range at dawn, or ask a Stannock pikeman how many of his village came."],
+    ["1", "The Ledge", "Rope from above, bait it off, take the shepherds first, or bring the overhang down. No preferred answer."],
+    ["2A", "The Moved Light", "Four pieces of evidence. Nobody moved a light; the harbour light was two hours late and Thane\u2019s boats were already crewed."],
+    ["2B", "The Back of the Charter", "Notice that a framed document has a reverse. Best outcome is Vell reading it himself."],
+    ["2B", "The Signposted Corridor", "Read Draconic, or work out that the marks are honest warnings by watching what the kobolds do."],
+    ["3", "Getting Past Wyn Alder", "Be boring, be somebody else, split up to defeat the head count, or go round by the creeks."],
+    ["4", "What the Water Heard", "Ten minutes at the ornamental canal. Three watches, not two; the bell rope is frayed."],
+    ["5", "Who Is Speaking", "Four voices, none lying, none complete. Not meant to converge."],
+    ["6", "What the Kobolds Want", "Grain from the undercroft, a written promise that will actually hold, and both before the route."],
+    ["7", "The Terms of the Binding", "It must be commanded aloud. Silence the relay officer, the sound, or take the horn yourself."],
+    ["8", "Three Years of Filing", "Filed by issuing office, not subject. The fourth office has no docket mark, which is itself the mark."],
+    ["9", "Voss\u2019s Field Orders", "Company, hour, bearing. Doubled numerals are feints; no bearing at all means reserve."],
+    ["10", "Reading the Ledgers", "Ordinary cargo is flat. All the increase is light-stone, and light-stone is the medium. About a third is gone."],
+    ["11", "Access by Rule", "The rule has no exception and never had one. Vale was never close."]
+  ]
+));
+
 c.push(H1("The Branch Ledger"));
 
 c.push(P("Every tracked divergence across the campaign, compiled from each module\u2019s own Diverging Paths (DM Only) section. Fill in the last column at the table, as it happens \u2014 this is the record that makes the campaign replayable rather than a railroad with scenery, and it is the reason this document is single-column: these rows need the width."));
@@ -260,7 +330,25 @@ c.push(table(
     ["10", "Whether Xavier signed Norvatch\u2019s contract", "Signed \u00b7 refused \u00b7 deferred", ""],
     ["10", "What the party told the Regent, and what the Regent told them", "(Private DM note \u2014 not mechanically tracked)", ""],
     ["11", "The campaign\u2019s final choice", "Held \u00b7 set down", ""],
-    ["11", "Vale\u2019s fate", "Killed \u00b7 escaped \u00b7 captured", ""]
+    ["11", "Vale\u2019s fate", "Killed \u00b7 escaped \u00b7 captured", ""],
+    ["1", "What the party did about the muster roll", "Reported it \u00b7 buried it \u00b7 never found it", ""],
+    ["1", "How the ledge was solved", "Rope \u00b7 baited off \u00b7 shepherds first \u00b7 overhang brought down", ""],
+    ["2A", "Whether the coalition was told the truth about Thane", "Told \u00b7 withheld \u00b7 never established", ""],
+    ["2A", "Whether the draught team came off the ship", "Saved \u00b7 hatch closed", ""],
+    ["2B", "How Vell came to honour the charter", "He read it himself \u00b7 shown it \u00b7 taken from him \u00b7 never found", ""],
+    ["2B", "How the Old Workings went", "Read the marks \u00b7 fought through \u00b7 not entered", ""],
+    ["3", "How the party passed the Caerwyn checkpoint", "Boring \u00b7 forged \u00b7 split up \u00b7 went round \u00b7 caught", ""],
+    ["4", "What the water at Sennoch Hall gave them", "Used it \u00b7 never tried it", ""],
+    ["4", "Hoth\u2019s surrender, and the file", "Terms accepted \u00b7 fought, file burned", ""],
+    ["6", "Whether the party opened the under-wall route", "Negotiated \u00b7 fought for it \u00b7 never found it", ""],
+    ["6", "Whether the kobolds got their written promise", "Signed and holds \u00b7 signed and worthless \u00b7 refused", ""],
+    ["7", "The bound dragon", "Grounded \u00b7 killed \u00b7 neither", ""],
+    ["7", "Whether the binding instrument was recovered", "Yes \u2014 names the office \u00b7 No", ""],
+    ["8", "Whether the Keeper\u2019s Office drawer was found", "Found \u00b7 missed", ""],
+    ["9", "Whether Voss\u2019s reserve was located before it committed", "Found \u00b7 not found", ""],
+    ["10", "Whether the party worked out the number", "Yes \u2014 about a third \u00b7 No \u00b7 refused the folio", ""],
+    ["11", "Whether the party established what the rule permits", "Established \u00b7 forced the doors \u00b7 never reached them", ""],
+    ["11", "Whether the Sixth was bought out at term", "Withdrew \u00b7 declined to sortie \u00b7 fought \u00b7 never approached", ""]
   ]
 ));
 
