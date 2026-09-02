@@ -62,6 +62,56 @@ This explains the occupation better than anything else about it. A horde does no
 
 **DM Only:** run the occupation as competent people doing an ugly job for money, and never as a species. The campaign puts orcs on both sides on purpose — Greywatch’s ropers and Vale’s field general are the same people in different pay — and it never once remarks on it in narration. Let the players notice. If a player asks an occupation soldier why they are here, the honest answer is a wage and a three-year contract, and it should be delivered without a shred of self-justification.
 
+# Faith in the Nine Works
+
+Harrowmark’s land does nothing. Its roads are the length they look, its rivers keep nothing, its stone is dark at night, and nine centuries of people have lived there anyway by building every single thing they needed with their hands. The religion that grew out of that country is a religion of the made thing, and it is now the established faith of four kingdoms.
+
+The Concord teaches that the powers who made the world worked, and then withdrew — deliberately, and while the work was still unfinished, so that there would be something left for hands to do. They are not called gods. Calling them gods is a provincialism the Concord’s clergy will correct you on once, politely, and thereafter by simply not using the word. They are called the Works, there are nine of them, and every one is a thing being done rather than a person doing it.
+
+| **The Work** | **Sphere** | **Domains** |
+| --- | --- | --- |
+| Ashet the Anvil | Craft, making, the honest tool, the thing built well enough to outlive its builder | Knowledge, War |
+| Voran of the Long Road | Travel, messengers, guest-right, the stranger fed without question | Life, Trickery |
+| Sennet the Witness | Oath, contract, law, testimony, the word that holds | Knowledge, Trickery |
+| Halevin the Hearth-Kept | Home, harvest, healing, the household that eats | Life, Nature |
+| Aurine the Unshuttered | Light, truth, dawn, courage of the ordinary kind | Light |
+| Duran Ninefold | War as discipline rather than glory; the line that holds | War |
+| Threnn Greywater | Sea, storm, river, and everyone the water keeps | Tempest |
+| Ossuar the Quiet Warden | Death, the grave, remembrance, endings done properly | Death |
+| Saveth of the Green Verge | Wilds, beasts, the turning of the seasons | Nature |
+
+A Concord priest does not ask a Work for anything. A Concord priest reports. The liturgy is closer to a guild inspection than a prayer — here is what was built this season, here is what failed, here is what we intend next — and the answering miracle, when it comes, is understood as a tool handed down rather than a favour granted. This is why Harrowmark’s clergy are so difficult to impress and so hard to frighten. They were never in the business of being awed.
+
+## The Concord
+
+The institution that carries all this is old, wealthy, literate, and spread across Harrowmark, Oksitan, Auberitz and Norvatch without belonging to any of them. It keeps the only archive in the mundane world that rivals Elduvaine’s, teaches most of the letters anybody in those kingdoms can read, and holds land in every one of the four. Its Ninefold Houses are chapter, school, hospital and court of appeal at once, and in a bad year they are also the granary.
+
+It was the Concord that put the Call into words. Xavier called the crusade; the Concord published it, in the old liturgical tongue, in every Ninefold House in four kingdoms on the same morning — and it was the Concord, not the king, that attached the promise of remission and the promise of a place at the end. A great many people marching in this army answered a summons that arrived in a priest’s voice.
+
+## Elduvaine Has No Church
+
+You do not build a temple to ask for an answer in a country where the river gives you one directly. Elduvaine acknowledges the Works — it is not ignorant, and it trades with four kingdoms that hold them — but it has never addressed them, because it has never needed an intermediary and does not entirely understand why anyone else does.
+
+What Elduvaine has instead are the Observances: local, seasonal, unwritten, and different in every parish. An Observance is not worship. It is closer to good manners practised at enormous scale — the things you do so that a road stays willing, a wood stays kept, and water that has heard you does not have cause to repeat the worst of it. Nobody supervises this. Nobody collects from it. Two river parishes eleven miles apart will observe entirely different things and each will find the other slightly eccentric.
+
+Elduvaine’s religious professionals are called Keepers, and a Keeper tends a habit the way a Concord priest tends a congregation — a Road-keeper, a Water-keeper, a Season-keeper, a Light-keeper. The office is practical, hereditary as often as not, and carries no authority whatsoever outside the thing kept.
+
+**DM Only:** the title Keeper of the Ysolde Archive means exactly what it sounds like it means, and the campaign has been using it in plain sight since the first page. Maedoc Vale was a religious officer of a faith with no gods, charged with tending the largest single accumulation of Elduvaine’s magic in the world. Do not underline this. Let a player notice it.
+
+## The Tenth Work
+
+Not every Concord theologian was content to file Elduvaine under folk custom. Roughly two centuries ago a reading of the doctrine emerged which took the founding claim entirely seriously and followed it one step further: if the Works withdrew leaving the world unfinished, and if there is a country where something clearly unfinished is still lying about in the open, then that country is not a heresy. It is the remainder. It is the tenth and last Work, left undone, and completing it is the highest act available to hands.
+
+The Order of the Tenth Work has marched with this crusade from the day it was called, at its own expense, in disciplined and well-supplied numbers. Its people are personally brave, scrupulously honest, generous to the poor of any kingdom, and entirely prepared to consecrate a Kept Season orchard by burning it to the roots and raising a Ninefold House on the ash. They do not consider this a contradiction. They consider it the job.
+
+**DM Only:** the Tenth Work is the campaign’s answer to the question of where its complexity lives, and the answer is: on the party’s own side of the line. They are allies. They will hold a wall for the party and lose people doing it. They also intend to do something to the liberated kingdom that a great many Elduvish would consider a second occupation with better manners, and they will do it lawfully, at the Concord’s direction, with the Promise as their instrument. Do not make them hypocrites and do not give them a secret evil plan. They are exactly what they say they are, and that is the problem.
+
+## Clerics, Paladins, and Everyone Else
+
+Divine magic works. That is the entire extent of what this campaign asserts about the question. A Concord cleric channels the Works and a Keeper channels an Observance, and both of them heal the same wound at the same speed, and neither side’s spells have ever once failed in a way that settled the argument. Players should be allowed to hold any position on this they like, including the position that the whole business is obviously one thing wearing two hats, which is a respectable and entirely unprovable view held by most Norvatch dwarves.
+
+A player character cleric or paladin from Harrowmark, Oksitan, Auberitz or Norvatch takes a Work and its domains from the table above. One from Elduvaine takes a habit instead — the Kept Season maps to Nature or Life, the Standing Light to Light, the Willing Road to Trickery or Life, and the Listening Water to Knowledge — and answers awkward questions about it for the entire march.
+
 # Elduvaine Before the Fall
 
 ## The Living Realm
@@ -96,6 +146,28 @@ The vaults are the point. The Ysolde Archive is not a library in the ordinary se
 Access to it was governed by rule rather than by power. A Keeper of the Archive could read almost anything. Almost.
 
 **DM Only:** the word “almost” is the whole campaign. Do not explain it early. A party that works out on their own why a man with everything would burn a kingdom over a reading privilege has had a better evening than one that was told.
+
+# The Reckoning of Years
+
+Elduvaine dates nothing consistently, for reasons covered under Tongues and Years below, so the table is given the way the coalition’s own clerks now give it: relative to the night the wards opened. Everyone in four kingdoms knows which night that was.
+
+| **When** | **What happened** |
+| --- | --- |
+| c. 900 years before | The Braid is settled where three rivers meet. House Ysolde is already the name of the family doing the settling; the city takes its name from them and not the other way about. |
+| c. 700 years before | The first Kept Season orchards are planted at Bryn Aeling, four days into a spring that has not ended there since. |
+| c. 600 years before | Light-stone is first quarried at Cairn Ithel. Caer Ysolde is lit, and stops needing lamps. |
+| c. 480 years before | The Ysolde Archive is founded, and — the decision that matters — its access is governed by rule rather than by power. Anyone may read what their rule permits. Nobody may read past it, including the person holding the keys. |
+| c. 400 years before | The wards are raised over the kingdom, in layers, by many hands across three generations. |
+| c. 200 years before | The doctrine of the Tenth Work is first argued in the Concord and is not condemned, which its opponents have been complaining about ever since. |
+| c. 60 years before | Norvatch codifies guild-law and signs its first carriage compact with Elduvaine. The arrangement outlives the kingdom that signed it. |
+| 22 years before | Xavier of Harrowmark, then a young man, makes war on his father alongside his brothers. He takes three of Harrowmark’s own hill forts, loses the war, and kneels for a mercy he is given. |
+| 19 years before | Maedoc Vale is appointed Keeper of the Ysolde Archive. |
+| 11 years before | Maelis Ysolde falls ill. It is nobody’s fault and nobody’s doing, and her physicians expect another century out of her. |
+| 5 years before | Vale petitions, correctly and in writing, for access to the deepest vaults. He is refused, correctly and in writing, by the rule he is himself charged with enforcing. He does not appeal. |
+| The night itself | Vale opens every ward in Elduvaine from the inside, in one night, because he is the person entitled to. An army walks in. The kingdom falls to a key rather than a siege. |
+| Year One | Vindana falls in eleven days. The grain levy is published. Permits are issued. A bureaucracy assembles itself out of Elduvish clerks who would like to keep eating. |
+| Year Two | The draining becomes measurable to people who are not looking for it. Roads lengthen. Woods go wrong. Norvatch’s carriage contract triples in volume. |
+| Year Three | The Call. Four kingdoms hear it read aloud on the same morning. Harrowmark musters at Duncarrow, and the campaign begins. |
 
 # The Fall
 
@@ -140,6 +212,64 @@ A resistance exists. It is not large, it is not well armed, and it is run — to
 The rest of the family are held, in two or three separate places, under conditions that vary from comfortable to markedly less so. Vale has been careful with them. He has not harmed them, has never threatened to, and appears to regard the question of what to do with them as somebody else’s administrative problem that he will get to eventually.
 
 **DM Only:** the royals are united on the war and divided on what follows it. Every one of them wants Vale gone. What they do not agree on is what Elduvaine should be afterwards — the one at large has spent three years watching the country survive without a court, and has come to conclusions about that which the ones in captivity have not. Play this as colour that a table can ignore entirely. It becomes an endgame decision only if the players reach for it.
+
+# The House of Ysolde
+
+An elven house, and after two centuries of marrying whoever it liked, an elven house containing a half-elf, a gnome and a human without anybody in Elduvaine finding that worth a remark. It has held the Braid since before the wards, it gave its name to the capital rather than taking one from it, and it governed the way Elduvaine does everything else: by long custom, minimal machinery, and the assumption that people will mostly behave.
+
+That assumption is what Maedoc Vale spent nineteen years standing inside.
+
+| **Name** | **Style** | **Where they are** |
+| --- | --- | --- |
+| Maelis Ysolde (elf) | The Veiled Sovereign | Held in Caer Ysolde, in her own apartments, under guard |
+| Aveline Ysolde (human) | The Regent | At large. Runs what resistance survives and refuses evacuation |
+| Ninian Ysolde (half-elf) | The Ward | Held at Sennoch Hall until the party reach it |
+| Ottoline Vahn (gnome) | The Magistrate | Held in Vindana, in what she insists on calling her chambers |
+| Emrys Ysolde (elf) | The Envoy | Held separately, and not entirely as a prisoner |
+
+## Maelis Ysolde, the Veiled Sovereign
+
+She has been dying for eleven years, and she was dying before any of this started, which is the only mercy in it. A sovereign of Elduvaine is bound into the habits at accession — not ceremonially, actually — and what the habits have, the sovereign has. For nine hundred years that arrangement ran the other way and every monarch of the Braid was uncommonly long-lived, uncommonly hard to poison, and uncommonly aware of what the weather was going to do.
+
+What began eleven years ago was ordinary, personal and slow, and her physicians expected another century out of her. Three years ago it changed character. The draining started, the binding held, and a wasting that had been hers alone became a second thing wearing the first one’s symptoms. She is going the way the land is going, at the same rate, for the same reason. She wears a veil because the wasting reached her face four years ago and she declines to have it discussed. She has not stood unaided since the second winter of the occupation. She is, without any competition at all, the most intelligent person in this campaign, and three years of confinement have given her nothing whatsoever to do except think about the man holding her.
+
+> *“He has not been cruel to me. He has been considerate, and prompt, and he sends a physician who is genuinely skilled, and none of it costs him anything, and all of it is true. I want you to understand that before you meet him. He is not pretending. That is the difficulty.”*
+
+**DM Only:** Maelis is the campaign’s second clock, and unlike Norvatch’s ledgers she cannot be bought, bargained with, or read faster. Anyone who has seen her can tell how far the draining has gone by looking at her, which makes her the only honest instrument in the setting — and it means every scene she is in is a status report on the entire war. Use her sparingly and never for exposition she would find beneath her. She will not be evacuated either, for the same reason her cousin will not: the habits are bound to her and she is not certain what leaving would do to them. Nobody knows. That is the whole problem with Elduvaine.
+
+## Aveline Ysolde, the Regent
+
+Human, forty-one, and the only member of the house who was outside a wall on the night the wards opened — a fact she has never once described as luck. Her great-grandmother married into the Braid from a Harrowmark trading family, which makes her the closest thing Elduvaine’s royal house has to a foreigner, and which is precisely why three years of occupation have not caught her: she knows how to be unremarkable in a country where everyone else is known.
+
+She runs the resistance, such as it is, and she is clear-eyed about what it is: a miller who miscounts, two orchard-keepers who hide people, a clerk who forges permits in the same hand she once used to file requisitions. Not an army. A conspiracy of small, patient, deniable treason. She refuses evacuation and has refused it in writing, twice, to two different coalition commanders who put it to her as a kindness.
+
+## Ninian Ysolde, the Ward
+
+Half-elf, twenty-six, heir presumptive, and precise rather than broken — three years of house arrest at Sennoch Hall have produced somebody who keeps lists, notices things, and has thought very carefully about the difference between being rescued and being useful. Of the whole house, Ninian is the one who has done the arithmetic on the Promise, and the conclusion is not comfortable: a coalition owed a kingdom will collect, and an Elduvaine that cannot pay has simply bought itself a second war with better-armed creditors.
+
+## Ottoline Vahn, the Magistrate
+
+A gnome somewhere past two hundred, the Ward’s great-aunt by a marriage nobody now living attended, and a magistrate of the Braid for a hundred and sixty years of it. She fought her captivity with the only weapon she had ever needed and won: she filed. Three years of correctly formatted objections, appeals, and requests for clarification, every one of them lawful under the occupation’s own published code, have cost the administration of Vindana an estimated four hundred clerk-days and produced a written record of the occupation so complete that the occupation itself now relies on it.
+
+## Emrys Ysolde, the Envoy
+
+Elf, Maelis’s younger brother, and the member of the family the other four do not discuss with strangers. He has been talking to Maedoc Vale for three years. Not under duress and not for advantage — he simply concluded, in the first week, that somebody in the house had to be in the room with the man, and that nobody else would do it.
+
+What that has bought is real: his sister’s physician, the hostages held unharmed rather than usefully, the grain levy published rather than arbitrary, and at least two mass reprisals that were proposed and did not happen. What it has cost is also real, and he will tell you it without being asked, because he has had three years to arrive at the wording. He has answered questions. Some of them were about the wards. He does not know which of his answers mattered and he has stopped pretending the not-knowing is a defence.
+
+**DM Only:** Emrys is complexity in the cost, not in the cause, and the distinction is the whole campaign. He is not a traitor and he is not secretly the villain and there is no reveal. He is a man who took the only job nobody else would take, did it for three years, and cannot now produce a clean accounting of whether it helped. Do not let the party resolve him. If they forgive him he will decline the forgiveness on procedural grounds, and if they condemn him he will agree with them and continue doing exactly what he has been doing.
+
+## What They Cannot Agree On
+
+They are united on the war. Every one of the five wants Vale stopped, wants the occupation ended, and has been prepared to be personally spent to get it. They are divided — privately, bitterly, and along lines that have nothing to do with the fighting — on what Elduvaine should be afterward.
+
+- **Maelis.** The habits are restored first and everything else is arranged around that. She is aware this may not be survivable for her and considers the point irrelevant.
+- **Aveline.** Elduvaine free, and the Ysolde Archive closed. Permanently, and by law. A kingdom that can be opened with a key should not keep the key.
+- **Ninian.** The coalition is paid what it was promised, in full and quickly, because the alternative is a second war against the people who won the first one.
+- **Ottoline.** The courts sit again within the month. Institutions first; everything anyone else on this list wants is downstream of a functioning registry.
+- **Emrys.** Whatever keeps the most people alive. He has stopped having opinions with more content than that and does not expect to get them back.
+
+**DM Only:** the campaign does not adjudicate this and neither should the table. There is no correct position among the five and no mechanism anywhere in the eleven modules for settling which one wins — that is deliberate, and a table that never engages with the argument at all has lost nothing. What the party can do is be present for it, and be asked, and discover that being asked is worse than not being asked.
 
 # The Crusade
 
@@ -187,6 +317,24 @@ Two things follow, and the campaign runs on both. The first is that Norvatch wil
 
 **DM Only:** one thing about Norvatch stays open and should not be closed at the table: whether the arrangement with Vale was ever more than commercial. Doria Kell will say it was only ever trade. She is almost certainly telling the truth. “Almost certainly” is the correct amount, and a DM who resolves it in either direction has spent something they cannot get back.
 
+### What Oksitan Wants
+
+Oksitan is ford country. Every one of its great houses holds a crossing, most of them have held the same crossing since before there were records to hold it in, and the whole political economy of the kingdom is the control of movement — who may pass, at what price, and how fast. An Oksitan lord does not think about land the way an Auberitz one does. He thinks about the distance between two places and who sets it.
+
+Which is why Oksitan does not primarily want an estate in Elduvaine and does not much care about the Archive. Oksitan wants the Willing Road. A road that shortens itself for travellers who mean well is, to the people who have spent nine centuries taxing the alternative, the single most valuable object in the world, and Oksitan intends to claim its waystones and learn to cut more of them.
+
+**DM Only:** they cannot. Nobody has ever established what the Willing Road measures, the campaign never establishes it, and no amount of Oksitan surveying, purchase or scholarship is going to change that — which means the second-largest crown in this coalition is spending its army on a thing it is structurally guaranteed never to have. Do not tip this to the players as futility. Play the Oksitan officers as competent, confident and entirely sincere. The tragedy only works if it is not signposted.
+
+### Raimon V of Oksitan
+
+Seventy-one years old, grey, small, and in the saddle before most of his staff are awake. He came to the throne at nineteen, spent four decades making Oksitan the arbiter of every crossing between three kingdoms, and answered the Call within eleven days of it reaching him — not because a priest asked him to, and not for the remission, but because he intends to walk the Willing Road himself before he dies and can think of no other way to arrange it.
+
+Nobody has been able to talk him out of going in person. It has been tried by his marshals, his heir, his physicians and the Concord, and his answer to all four was the same and is now quoted across the coalition with a good deal of affection: that he has been old for twenty years and it has not inconvenienced him yet.
+
+**DM Only:** Raimon takes the road the party does not take, and a river kills him early. Not a battle — a ford, in armour, at the head of his own column, in water that was not even particularly deep. The king of the ford-holders, drowned on his way to claim a road. Play him warm and play him competent in whatever scene or two he gets before the crossing, and do not foreshadow the water. His army comes apart behind him and the survivors reach the party later as a rumour, then as refugees, then as a problem.
+
+A detail worth keeping. Some part of the coalition will refuse to believe he drowned. Threnn Greywater keeps what the water takes, and the men of a broken column would very much rather believe their king is kept than dead — so the story that goes around the camps is that Raimon is sleeping under the Vaskren and will come up when Oksitan needs him. It is not true. It is also not worth arguing with, and a party that tries will find they are arguing with grief rather than with a claim.
+
 ## The Promise
 
 A crusade is not answered out of sympathy, and Xavier did not ask anyone to answer one. He offered terms. Those who take the call are promised two things: a share in Elduvaine’s magic — land held inside the Living Realm, where the habits work — and access to the Ysolde Archive.
@@ -207,6 +355,55 @@ The coalition could not agree on a route and did not try very hard. The armies s
 The party chooses. Whichever road they take is written in full; the other is met later, in the form of what became of the people who took it.
 
 **DM Only:** this is the campaign’s first Branch Ledger entry, and it is a genuine fork rather than a cosmetic one. A second crown marches by the road the party does not take, and that king does not arrive — he is lost early, in water, and his army comes apart on the road behind him. Whether the party witnesses that or walks into its aftermath months later is the whole difference between the two routes, and both versions are worth running.
+
+# Powers and Factions
+
+Six bodies in this war will notice a party that deals with them repeatedly, and all six keep some kind of account. The standing given below is not a mechanic the players should be shown as a bar to fill; it is a reminder that these organisations remember, and a rough guide to what remembering buys.
+
+| **Faction** | **Standing, in three steps** | **What the top step actually gets you** |
+| --- | --- | --- |
+| The Crusade | Sworn · Lance · Banner of the Call | A hearing with Xavier without an appointment, and the standing to ask the coalition for something it does not want to give. |
+| The Order of the Tenth Work | Postulant · Hand · Warden of the Work | Disciplined troops who will die where you put them, healing without price, and an expectation you will not like. |
+| The Ysolde Remnant | Known · Trusted · Named | Safe houses across the Braid, forged permits in a magistrate’s own hand, and Aveline Ysolde answering a message the same day. |
+| The Sixth Free Legion | Noted · Respected · Owed | Professionals do not hate you. Parley honoured, prisoners exchanged, and at the very top, an officer who will take a bribe and stay bought. |
+| House Kell of Norvatch | Client · Factor’s Guest · Signatory | Anything that can be bought, delivered on time, plus three years of ledgers and the truth about the war’s arithmetic. |
+| The Unbound Clerks | Enquirer · Reader · Keeper’s Friend | Archive scholars in hiding who know what is on which shelf, and are the only people alive who can tell you what Vale has already read. |
+
+**DM Only:** the Legion is the one on this list players will assume is not available to them, and it is the most interesting. The Sixth is a hired professional army with a contract, a pay schedule and a reputation to protect, and none of that is compatible with atrocity or with fighting to the last man for an employer whose kingdom is visibly running out. A party that treats the Legion as an institution rather than a monster gets an enormous amount out of it, and the campaign is built to reward exactly that.
+
+# Tongues, Years, and Names
+
+## Languages
+
+| **Tongue** | **Who speaks it** | **Notes** |
+| --- | --- | --- |
+| Common | Everyone, everywhere | The trade tongue of four kingdoms and the reason this war can be argued about at all. |
+| Marchspeak | Harrowmark | A blunt dialect of Common with a small vocabulary and a large number of words for weather. Mutually intelligible with Common if both parties are patient. |
+| Elduvish | All of Elduvaine | A dialect of Elvish spoken by every race in the kingdom, dwarves and halflings included. Being unable to speak it marks you as foreign far more reliably than your face does. |
+| Ninefold Cant | The Concord’s clergy | Dead, written, and identical in every Ninefold House in four kingdoms. The Call was published in it. Counts as an exotic language. |
+| Writ-tongue | Norvatch | A deliberately impoverished contract dialect with no idioms, no metaphors and one meaning per word. Ugly to hear and impossible to misread, which is the point. |
+| Goblin | The Sixth Free Legion | The Legion’s working language of command, whatever a given company’s people happen to be. Orders, drill, and a very large body of extremely obscene marching song. |
+| Draconic | Oksitan’s houses | Court and heraldic use among the dragonborn nobility. An Oksitan commoner knows perhaps thirty words of it, all of them titles. |
+| Sylvan | Elduvaine’s fey | Dryads, sprites and satyrs. A great many Elduvish farmers have functional kitchen Sylvan and no idea it is a separate language. |
+
+## The Year, and Why Elduvaine Cannot Agree On It
+
+The Concord keeps a Ninefold calendar of nine months named for the nine Works, and it is used without argument in Harrowmark, Oksitan, Auberitz and Norvatch, because those are countries where a season is a season.
+
+Elduvaine cannot do this. A Kept Season wood holds the season it was planted in, and there are hundreds of them, and a parish that lies between a wood nine weeks into spring and a wood four days into autumn does not experience a year in any sense the Concord’s calendar would recognise. So Elduvish parishes date by local observance instead — the year the near orchard flowered late, the third cutting after the water went quiet — and two villages an hour apart routinely disagree about what month it is by a margin of weeks, without either of them being wrong or finding the situation remarkable.
+
+This is very funny to everyone in the coalition for approximately two weeks, and then becomes a serious logistical problem for the quartermasters, and Auberitz has been quietly imposing the Ninefold calendar on every district it supplies since the landing. Nobody asked Elduvaine about that either.
+
+## Names
+
+| **People or place** | **Sample names** |
+| --- | --- |
+| Harrowmark | Brenna, Duncan, Hald, Ivor, Maud, Osric, Ren, Tam, Wat · Vane, Ondry, Thane, Marrow, Kettle, Stannock, Crowe |
+| Elduvaine | Aveline, Caerwyn, Emrys, Maelis, Ninian, Ottoline, Rhosyn, Tegan, Wyn · Ysolde, Alder, Vahn, Sennoch, Nantcorrow, Aeling |
+| Oksitan | Aimeric, Bertran, Guilhem, Peire, Raimon, Sicart · and among the dragonborn houses: Vashkar, Ourrez, Sarrelan, Kaldiss |
+| Auberitz | Anneke, Corvin, Hessel, Maartje, Sera, Wilm · Vosk, Brandhoek, Kreyn, Aalder |
+| Norvatch | Doria, Halvard, Karessa, Morvyn, Torvald, Zeruth · Kell, Ashvane, Grimmond, Sallow |
+| The Sixth Free Legion | Drell, Voss, Grask, Hoth, Nazira, Ruk, Ossian, Sekh · companies are numbered, never named |
 
 # What Is Actually Happening (DM Only)
 
@@ -240,6 +437,27 @@ Elduvish craft has spent centuries working out how to make the land’s habits p
 - **Kept Season seeds.** Plant them and a small stand holds whatever season they were sown in. Mostly a wonder. Occasionally, in the hands of a party that thinks about it, a tactical problem solved sideways.
 
 **DM Only:** these are also the campaign’s clearest way to make the draining hurt. A standing-stone lamp that has stopped taking light, a flask that gives back a voice nobody recognises, seeds that come up in the wrong season — each of those is a paragraph of exposition the party feels instead of hearing. Break one at the right moment rather than explaining anything.
+
+## Travelling the Willing Road
+
+The road shortens for travellers who mean well. That is the whole of what is known, it has been the whole of what is known for four hundred years, and Elduvaine finds the question of why roughly as interesting as being asked why water is wet.
+
+At the table, run it like this. When the party travels a stretch of Willing Road, decide privately how much of the expected time it takes — anywhere from all of it to a little under half — and then narrate the arrival rather than the arithmetic. They set out at dawn expecting to camp on the road, and the towers are in sight before the light goes. Never announce a percentage. Never roll where they can see it.
+
+**DM Only:** the essential rule, and the one this campaign will hold to the last page: do not invent a criterion. Not privately, not in your notes, not as a rule of thumb you apply consistently. The moment the road is measuring something the DM can name, it stops being the Willing Road and becomes an alignment detector with a travel-time output, and the single strangest thing in the setting is gone. Vary it. Contradict yourself. Let it shorten spectacularly for a party that has just done something appalling and not at all for one that has just been heroic, and never explain either. Players will build elaborate theories. Every one of them should be wrong, including the flattering ones.
+
+Off the Willing Road, travel in Elduvaine is ordinary and increasingly bad. The occupation’s permits apply on every metalled road. The draining has made some stretches longer than the map says, which is the Willing Road running in reverse and is the most frightening thing most Elduvish have ever experienced. Assume standard travel pace, and apply the Dead Mile and its cousins as fixed hazards rather than as random encounters — they are places, not events.
+
+## Downtime on a March
+
+An army moves for months and then sits for weeks, and the sitting is where a campaign like this either builds its characters or wastes the time. Between modules, each character may take one of these. All of them are meant to produce a scene, not a die roll.
+
+- **Stand a watch.** Four hours on a picket line with one other person, chosen by the player. The DM asks what they talked about. This is the single most productive downtime action in the campaign and it costs nothing.
+- **Work the column.** Smithing, mending, driving, doctoring, or hauling for the quartermasters. Earns the goodwill of Auberitz’s people, which converts directly into supply, information and being told things early.
+- **Drink with the levy.** One rumour from the module’s table, one piece of camp gossip that is true, and one that is not. The DM should not indicate which is which.
+- **Keep the observance.** Report to a Ninefold House, or tend a habit at a wayside shrine — and be seen doing it. In this coalition that is a political act whichever one you choose, and somebody will comment.
+- **Train with the watch.** Harrowmark’s wyvern-hunters will teach anyone who asks and mock anyone who does not last. Grants advantage on the next check made to handle, drive off, or avoid a large flying predator.
+- **Copy.** Available only to a character with Archive training or an Unbound Clerk contact. Produces one page of something Vale would rather nobody had, chosen by the DM, at a rate of roughly one page per week of downtime.
 
 ## The Four Voices
 

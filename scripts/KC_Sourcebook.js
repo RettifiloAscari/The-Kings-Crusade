@@ -154,6 +154,60 @@ c.push(P("This explains the occupation better than anything else about it. A hor
 
 c.push(PS([DM("DM Only: "), { t: "run the occupation as competent people doing an ugly job for money, and never as a species. The campaign puts orcs on both sides on purpose \u2014 Greywatch\u2019s ropers and Vale\u2019s field general are the same people in different pay \u2014 and it never once remarks on it in narration. Let the players notice. If a player asks an occupation soldier why they are here, the honest answer is a wage and a three-year contract, and it should be delivered without a shred of self-justification." }]));
 
+c.push(H1("Faith in the Nine Works"));
+
+c.push(P("Harrowmark\u2019s land does nothing. Its roads are the length they look, its rivers keep nothing, its stone is dark at night, and nine centuries of people have lived there anyway by building every single thing they needed with their hands. The religion that grew out of that country is a religion of the made thing, and it is now the established faith of four kingdoms."));
+
+c.push(P("The Concord teaches that the powers who made the world worked, and then withdrew \u2014 deliberately, and while the work was still unfinished, so that there would be something left for hands to do. They are not called gods. Calling them gods is a provincialism the Concord\u2019s clergy will correct you on once, politely, and thereafter by simply not using the word. They are called the Works, there are nine of them, and every one is a thing being done rather than a person doing it."));
+
+c.push(table(
+  ["The Work", "Sphere", "Domains"],
+  [26, 46, 28],
+  [
+    ["Ashet the Anvil", "Craft, making, the honest tool, the thing built well enough to outlive its builder", "Knowledge, War"],
+    ["Voran of the Long Road", "Travel, messengers, guest-right, the stranger fed without question", "Life, Trickery"],
+    ["Sennet the Witness", "Oath, contract, law, testimony, the word that holds", "Knowledge, Trickery"],
+    ["Halevin the Hearth-Kept", "Home, harvest, healing, the household that eats", "Life, Nature"],
+    ["Aurine the Unshuttered", "Light, truth, dawn, courage of the ordinary kind", "Light"],
+    ["Duran Ninefold", "War as discipline rather than glory; the line that holds", "War"],
+    ["Threnn Greywater", "Sea, storm, river, and everyone the water keeps", "Tempest"],
+    ["Ossuar the Quiet Warden", "Death, the grave, remembrance, endings done properly", "Death"],
+    ["Saveth of the Green Verge", "Wilds, beasts, the turning of the seasons", "Nature"]
+  ], { full: true }
+));
+
+c.push(P("A Concord priest does not ask a Work for anything. A Concord priest reports. The liturgy is closer to a guild inspection than a prayer \u2014 here is what was built this season, here is what failed, here is what we intend next \u2014 and the answering miracle, when it comes, is understood as a tool handed down rather than a favour granted. This is why Harrowmark\u2019s clergy are so difficult to impress and so hard to frighten. They were never in the business of being awed."));
+
+c.push(H2("The Concord"));
+
+c.push(P("The institution that carries all this is old, wealthy, literate, and spread across Harrowmark, Oksitan, Auberitz and Norvatch without belonging to any of them. It keeps the only archive in the mundane world that rivals Elduvaine\u2019s, teaches most of the letters anybody in those kingdoms can read, and holds land in every one of the four. Its Ninefold Houses are chapter, school, hospital and court of appeal at once, and in a bad year they are also the granary."));
+
+c.push(P("It was the Concord that put the Call into words. Xavier called the crusade; the Concord published it, in the old liturgical tongue, in every Ninefold House in four kingdoms on the same morning \u2014 and it was the Concord, not the king, that attached the promise of remission and the promise of a place at the end. A great many people marching in this army answered a summons that arrived in a priest\u2019s voice."));
+
+c.push(H2("Elduvaine Has No Church"));
+
+c.push(P("You do not build a temple to ask for an answer in a country where the river gives you one directly. Elduvaine acknowledges the Works \u2014 it is not ignorant, and it trades with four kingdoms that hold them \u2014 but it has never addressed them, because it has never needed an intermediary and does not entirely understand why anyone else does."));
+
+c.push(P("What Elduvaine has instead are the Observances: local, seasonal, unwritten, and different in every parish. An Observance is not worship. It is closer to good manners practised at enormous scale \u2014 the things you do so that a road stays willing, a wood stays kept, and water that has heard you does not have cause to repeat the worst of it. Nobody supervises this. Nobody collects from it. Two river parishes eleven miles apart will observe entirely different things and each will find the other slightly eccentric."));
+
+c.push(P("Elduvaine\u2019s religious professionals are called Keepers, and a Keeper tends a habit the way a Concord priest tends a congregation \u2014 a Road-keeper, a Water-keeper, a Season-keeper, a Light-keeper. The office is practical, hereditary as often as not, and carries no authority whatsoever outside the thing kept."));
+
+c.push(PS([DM("DM Only: "), { t: "the title Keeper of the Ysolde Archive means exactly what it sounds like it means, and the campaign has been using it in plain sight since the first page. Maedoc Vale was a religious officer of a faith with no gods, charged with tending the largest single accumulation of Elduvaine\u2019s magic in the world. Do not underline this. Let a player notice it." }]));
+
+c.push(H2("The Tenth Work"));
+
+c.push(P("Not every Concord theologian was content to file Elduvaine under folk custom. Roughly two centuries ago a reading of the doctrine emerged which took the founding claim entirely seriously and followed it one step further: if the Works withdrew leaving the world unfinished, and if there is a country where something clearly unfinished is still lying about in the open, then that country is not a heresy. It is the remainder. It is the tenth and last Work, left undone, and completing it is the highest act available to hands."));
+
+c.push(P("The Order of the Tenth Work has marched with this crusade from the day it was called, at its own expense, in disciplined and well-supplied numbers. Its people are personally brave, scrupulously honest, generous to the poor of any kingdom, and entirely prepared to consecrate a Kept Season orchard by burning it to the roots and raising a Ninefold House on the ash. They do not consider this a contradiction. They consider it the job."));
+
+c.push(PS([DM("DM Only: "), { t: "the Tenth Work is the campaign\u2019s answer to the question of where its complexity lives, and the answer is: on the party\u2019s own side of the line. They are allies. They will hold a wall for the party and lose people doing it. They also intend to do something to the liberated kingdom that a great many Elduvish would consider a second occupation with better manners, and they will do it lawfully, at the Concord\u2019s direction, with the Promise as their instrument. Do not make them hypocrites and do not give them a secret evil plan. They are exactly what they say they are, and that is the problem." }]));
+
+c.push(H2("Clerics, Paladins, and Everyone Else"));
+
+c.push(P("Divine magic works. That is the entire extent of what this campaign asserts about the question. A Concord cleric channels the Works and a Keeper channels an Observance, and both of them heal the same wound at the same speed, and neither side\u2019s spells have ever once failed in a way that settled the argument. Players should be allowed to hold any position on this they like, including the position that the whole business is obviously one thing wearing two hats, which is a respectable and entirely unprovable view held by most Norvatch dwarves."));
+
+c.push(P("A player character cleric or paladin from Harrowmark, Oksitan, Auberitz or Norvatch takes a Work and its domains from the table above. One from Elduvaine takes a habit instead \u2014 the Kept Season maps to Nature or Life, the Standing Light to Light, the Willing Road to Trickery or Life, and the Listening Water to Knowledge \u2014 and answers awkward questions about it for the entire march."));
+
 c.push(H1("Elduvaine Before the Fall"));
 
 c.push(H2("The Living Realm"));
@@ -193,6 +247,32 @@ c.push(P("The vaults are the point. The Ysolde Archive is not a library in the o
 c.push(P("Access to it was governed by rule rather than by power. A Keeper of the Archive could read almost anything. Almost."));
 
 c.push(PS([DM("DM Only: "), { t: "the word \u201Calmost\u201D is the whole campaign. Do not explain it early. A party that works out on their own why a man with everything would burn a kingdom over a reading privilege has had a better evening than one that was told." }]));
+
+c.push(H1("The Reckoning of Years"));
+
+c.push(P("Elduvaine dates nothing consistently, for reasons covered under Tongues and Years below, so the table is given the way the coalition\u2019s own clerks now give it: relative to the night the wards opened. Everyone in four kingdoms knows which night that was."));
+
+c.push(table(
+  ["When", "What happened"],
+  [22, 78],
+  [
+    ["c. 900 years before", "The Braid is settled where three rivers meet. House Ysolde is already the name of the family doing the settling; the city takes its name from them and not the other way about."],
+    ["c. 700 years before", "The first Kept Season orchards are planted at Bryn Aeling, four days into a spring that has not ended there since."],
+    ["c. 600 years before", "Light-stone is first quarried at Cairn Ithel. Caer Ysolde is lit, and stops needing lamps."],
+    ["c. 480 years before", "The Ysolde Archive is founded, and \u2014 the decision that matters \u2014 its access is governed by rule rather than by power. Anyone may read what their rule permits. Nobody may read past it, including the person holding the keys."],
+    ["c. 400 years before", "The wards are raised over the kingdom, in layers, by many hands across three generations."],
+    ["c. 200 years before", "The doctrine of the Tenth Work is first argued in the Concord and is not condemned, which its opponents have been complaining about ever since."],
+    ["c. 60 years before", "Norvatch codifies guild-law and signs its first carriage compact with Elduvaine. The arrangement outlives the kingdom that signed it."],
+    ["22 years before", "Xavier of Harrowmark, then a young man, makes war on his father alongside his brothers. He takes three of Harrowmark\u2019s own hill forts, loses the war, and kneels for a mercy he is given."],
+    ["19 years before", "Maedoc Vale is appointed Keeper of the Ysolde Archive."],
+    ["11 years before", "Maelis Ysolde falls ill. It is nobody\u2019s fault and nobody\u2019s doing, and her physicians expect another century out of her."],
+    ["5 years before", "Vale petitions, correctly and in writing, for access to the deepest vaults. He is refused, correctly and in writing, by the rule he is himself charged with enforcing. He does not appeal."],
+    ["The night itself", "Vale opens every ward in Elduvaine from the inside, in one night, because he is the person entitled to. An army walks in. The kingdom falls to a key rather than a siege."],
+    ["Year One", "Vindana falls in eleven days. The grain levy is published. Permits are issued. A bureaucracy assembles itself out of Elduvish clerks who would like to keep eating."],
+    ["Year Two", "The draining becomes measurable to people who are not looking for it. Roads lengthen. Woods go wrong. Norvatch\u2019s carriage contract triples in volume."],
+    ["Year Three", "The Call. Four kingdoms hear it read aloud on the same morning. Harrowmark musters at Duncarrow, and the campaign begins."]
+  ], { full: true }
+));
 
 // ---------------------------------------------------------------- The Fall
 c.push(H1("The Fall"));
@@ -239,6 +319,68 @@ c.push(P("A resistance exists. It is not large, it is not well armed, and it is 
 c.push(P("The rest of the family are held, in two or three separate places, under conditions that vary from comfortable to markedly less so. Vale has been careful with them. He has not harmed them, has never threatened to, and appears to regard the question of what to do with them as somebody else\u2019s administrative problem that he will get to eventually."));
 
 c.push(PS([DM("DM Only: "), { t: "the royals are united on the war and divided on what follows it. Every one of them wants Vale gone. What they do not agree on is what Elduvaine should be afterwards \u2014 the one at large has spent three years watching the country survive without a court, and has come to conclusions about that which the ones in captivity have not. Play this as colour that a table can ignore entirely. It becomes an endgame decision only if the players reach for it." }]));
+
+c.push(H1("The House of Ysolde"));
+
+c.push(P("An elven house, and after two centuries of marrying whoever it liked, an elven house containing a half-elf, a gnome and a human without anybody in Elduvaine finding that worth a remark. It has held the Braid since before the wards, it gave its name to the capital rather than taking one from it, and it governed the way Elduvaine does everything else: by long custom, minimal machinery, and the assumption that people will mostly behave."));
+
+c.push(P("That assumption is what Maedoc Vale spent nineteen years standing inside."));
+
+c.push(table(
+  ["Name", "Style", "Where they are"],
+  [30, 26, 44],
+  [
+    ["Maelis Ysolde (elf)", "The Veiled Sovereign", "Held in Caer Ysolde, in her own apartments, under guard"],
+    ["Aveline Ysolde (human)", "The Regent", "At large. Runs what resistance survives and refuses evacuation"],
+    ["Ninian Ysolde (half-elf)", "The Ward", "Held at Sennoch Hall until the party reach it"],
+    ["Ottoline Vahn (gnome)", "The Magistrate", "Held in Vindana, in what she insists on calling her chambers"],
+    ["Emrys Ysolde (elf)", "The Envoy", "Held separately, and not entirely as a prisoner"]
+  ], { full: true }
+));
+
+c.push(H2("Maelis Ysolde, the Veiled Sovereign"));
+
+c.push(P("She has been dying for eleven years, and she was dying before any of this started, which is the only mercy in it. A sovereign of Elduvaine is bound into the habits at accession \u2014 not ceremonially, actually \u2014 and what the habits have, the sovereign has. For nine hundred years that arrangement ran the other way and every monarch of the Braid was uncommonly long-lived, uncommonly hard to poison, and uncommonly aware of what the weather was going to do."));
+
+c.push(P("What began eleven years ago was ordinary, personal and slow, and her physicians expected another century out of her. Three years ago it changed character. The draining started, the binding held, and a wasting that had been hers alone became a second thing wearing the first one\u2019s symptoms. She is going the way the land is going, at the same rate, for the same reason. She wears a veil because the wasting reached her face four years ago and she declines to have it discussed. She has not stood unaided since the second winter of the occupation. She is, without any competition at all, the most intelligent person in this campaign, and three years of confinement have given her nothing whatsoever to do except think about the man holding her."));
+
+c.push(BOX("\u201CHe has not been cruel to me. He has been considerate, and prompt, and he sends a physician who is genuinely skilled, and none of it costs him anything, and all of it is true. I want you to understand that before you meet him. He is not pretending. That is the difficulty.\u201D"));
+
+c.push(PS([DM("DM Only: "), { t: "Maelis is the campaign\u2019s second clock, and unlike Norvatch\u2019s ledgers she cannot be bought, bargained with, or read faster. Anyone who has seen her can tell how far the draining has gone by looking at her, which makes her the only honest instrument in the setting \u2014 and it means every scene she is in is a status report on the entire war. Use her sparingly and never for exposition she would find beneath her. She will not be evacuated either, for the same reason her cousin will not: the habits are bound to her and she is not certain what leaving would do to them. Nobody knows. That is the whole problem with Elduvaine." }]));
+
+c.push(H2("Aveline Ysolde, the Regent"));
+
+c.push(P("Human, forty-one, and the only member of the house who was outside a wall on the night the wards opened \u2014 a fact she has never once described as luck. Her great-grandmother married into the Braid from a Harrowmark trading family, which makes her the closest thing Elduvaine\u2019s royal house has to a foreigner, and which is precisely why three years of occupation have not caught her: she knows how to be unremarkable in a country where everyone else is known."));
+
+c.push(P("She runs the resistance, such as it is, and she is clear-eyed about what it is: a miller who miscounts, two orchard-keepers who hide people, a clerk who forges permits in the same hand she once used to file requisitions. Not an army. A conspiracy of small, patient, deniable treason. She refuses evacuation and has refused it in writing, twice, to two different coalition commanders who put it to her as a kindness."));
+
+c.push(H2("Ninian Ysolde, the Ward"));
+
+c.push(P("Half-elf, twenty-six, heir presumptive, and precise rather than broken \u2014 three years of house arrest at Sennoch Hall have produced somebody who keeps lists, notices things, and has thought very carefully about the difference between being rescued and being useful. Of the whole house, Ninian is the one who has done the arithmetic on the Promise, and the conclusion is not comfortable: a coalition owed a kingdom will collect, and an Elduvaine that cannot pay has simply bought itself a second war with better-armed creditors."));
+
+c.push(H2("Ottoline Vahn, the Magistrate"));
+
+c.push(P("A gnome somewhere past two hundred, the Ward\u2019s great-aunt by a marriage nobody now living attended, and a magistrate of the Braid for a hundred and sixty years of it. She fought her captivity with the only weapon she had ever needed and won: she filed. Three years of correctly formatted objections, appeals, and requests for clarification, every one of them lawful under the occupation\u2019s own published code, have cost the administration of Vindana an estimated four hundred clerk-days and produced a written record of the occupation so complete that the occupation itself now relies on it."));
+
+c.push(H2("Emrys Ysolde, the Envoy"));
+
+c.push(P("Elf, Maelis\u2019s younger brother, and the member of the family the other four do not discuss with strangers. He has been talking to Maedoc Vale for three years. Not under duress and not for advantage \u2014 he simply concluded, in the first week, that somebody in the house had to be in the room with the man, and that nobody else would do it."));
+
+c.push(P("What that has bought is real: his sister\u2019s physician, the hostages held unharmed rather than usefully, the grain levy published rather than arbitrary, and at least two mass reprisals that were proposed and did not happen. What it has cost is also real, and he will tell you it without being asked, because he has had three years to arrive at the wording. He has answered questions. Some of them were about the wards. He does not know which of his answers mattered and he has stopped pretending the not-knowing is a defence."));
+
+c.push(PS([DM("DM Only: "), { t: "Emrys is complexity in the cost, not in the cause, and the distinction is the whole campaign. He is not a traitor and he is not secretly the villain and there is no reveal. He is a man who took the only job nobody else would take, did it for three years, and cannot now produce a clean accounting of whether it helped. Do not let the party resolve him. If they forgive him he will decline the forgiveness on procedural grounds, and if they condemn him he will agree with them and continue doing exactly what he has been doing." }]));
+
+c.push(H2("What They Cannot Agree On"));
+
+c.push(P("They are united on the war. Every one of the five wants Vale stopped, wants the occupation ended, and has been prepared to be personally spent to get it. They are divided \u2014 privately, bitterly, and along lines that have nothing to do with the fighting \u2014 on what Elduvaine should be afterward."));
+
+c.push(BUL("Maelis.", "The habits are restored first and everything else is arranged around that. She is aware this may not be survivable for her and considers the point irrelevant."));
+c.push(BUL("Aveline.", "Elduvaine free, and the Ysolde Archive closed. Permanently, and by law. A kingdom that can be opened with a key should not keep the key."));
+c.push(BUL("Ninian.", "The coalition is paid what it was promised, in full and quickly, because the alternative is a second war against the people who won the first one."));
+c.push(BUL("Ottoline.", "The courts sit again within the month. Institutions first; everything anyone else on this list wants is downstream of a functioning registry."));
+c.push(BUL("Emrys.", "Whatever keeps the most people alive. He has stopped having opinions with more content than that and does not expect to get them back."));
+
+c.push(PS([DM("DM Only: "), { t: "the campaign does not adjudicate this and neither should the table. There is no correct position among the five and no mechanism anywhere in the eleven modules for settling which one wins \u2014 that is deliberate, and a table that never engages with the argument at all has lost nothing. What the party can do is be present for it, and be asked, and discover that being asked is worse than not being asked." }]));
 
 // ---------------------------------------------------------------- The Crusade
 c.push(H1("The Crusade"));
@@ -287,6 +429,24 @@ c.push(PS([DM("DM Only: "), { t: "Norvatch\u2019s ledgers are the single most va
 
 c.push(PS([DM("DM Only: "), { t: "one thing about Norvatch stays open and should not be closed at the table: whether the arrangement with Vale was ever more than commercial. Doria Kell will say it was only ever trade. She is almost certainly telling the truth. \u201cAlmost certainly\u201d is the correct amount, and a DM who resolves it in either direction has spent something they cannot get back." }]));
 
+c.push(H3("What Oksitan Wants"));
+
+c.push(P("Oksitan is ford country. Every one of its great houses holds a crossing, most of them have held the same crossing since before there were records to hold it in, and the whole political economy of the kingdom is the control of movement \u2014 who may pass, at what price, and how fast. An Oksitan lord does not think about land the way an Auberitz one does. He thinks about the distance between two places and who sets it."));
+
+c.push(P("Which is why Oksitan does not primarily want an estate in Elduvaine and does not much care about the Archive. Oksitan wants the Willing Road. A road that shortens itself for travellers who mean well is, to the people who have spent nine centuries taxing the alternative, the single most valuable object in the world, and Oksitan intends to claim its waystones and learn to cut more of them."));
+
+c.push(PS([DM("DM Only: "), { t: "they cannot. Nobody has ever established what the Willing Road measures, the campaign never establishes it, and no amount of Oksitan surveying, purchase or scholarship is going to change that \u2014 which means the second-largest crown in this coalition is spending its army on a thing it is structurally guaranteed never to have. Do not tip this to the players as futility. Play the Oksitan officers as competent, confident and entirely sincere. The tragedy only works if it is not signposted." }]));
+
+c.push(H3("Raimon V of Oksitan"));
+
+c.push(P("Seventy-one years old, grey, small, and in the saddle before most of his staff are awake. He came to the throne at nineteen, spent four decades making Oksitan the arbiter of every crossing between three kingdoms, and answered the Call within eleven days of it reaching him \u2014 not because a priest asked him to, and not for the remission, but because he intends to walk the Willing Road himself before he dies and can think of no other way to arrange it."));
+
+c.push(P("Nobody has been able to talk him out of going in person. It has been tried by his marshals, his heir, his physicians and the Concord, and his answer to all four was the same and is now quoted across the coalition with a good deal of affection: that he has been old for twenty years and it has not inconvenienced him yet."));
+
+c.push(PS([DM("DM Only: "), { t: "Raimon takes the road the party does not take, and a river kills him early. Not a battle \u2014 a ford, in armour, at the head of his own column, in water that was not even particularly deep. The king of the ford-holders, drowned on his way to claim a road. Play him warm and play him competent in whatever scene or two he gets before the crossing, and do not foreshadow the water. His army comes apart behind him and the survivors reach the party later as a rumour, then as refugees, then as a problem." }]));
+
+c.push(P("A detail worth keeping. Some part of the coalition will refuse to believe he drowned. Threnn Greywater keeps what the water takes, and the men of a broken column would very much rather believe their king is kept than dead \u2014 so the story that goes around the camps is that Raimon is sleeping under the Vaskren and will come up when Oksitan needs him. It is not true. It is also not worth arguing with, and a party that tries will find they are arguing with grief rather than with a claim."));
+
 c.push(H2("The Promise"));
 
 c.push(P("A crusade is not answered out of sympathy, and Xavier did not ask anyone to answer one. He offered terms. Those who take the call are promised two things: a share in Elduvaine\u2019s magic \u2014 land held inside the Living Realm, where the habits work \u2014 and access to the Ysolde Archive."));
@@ -307,6 +467,67 @@ c.push(BUL("The mountain road.", "Overland, through passes and through realms th
 c.push(P("The party chooses. Whichever road they take is written in full; the other is met later, in the form of what became of the people who took it."));
 
 c.push(PS([DM("DM Only: "), { t: "this is the campaign\u2019s first Branch Ledger entry, and it is a genuine fork rather than a cosmetic one. A second crown marches by the road the party does not take, and that king does not arrive \u2014 he is lost early, in water, and his army comes apart on the road behind him. Whether the party witnesses that or walks into its aftermath months later is the whole difference between the two routes, and both versions are worth running." }]));
+
+c.push(H1("Powers and Factions"));
+
+c.push(P("Six bodies in this war will notice a party that deals with them repeatedly, and all six keep some kind of account. The standing given below is not a mechanic the players should be shown as a bar to fill; it is a reminder that these organisations remember, and a rough guide to what remembering buys."));
+
+c.push(table(
+  ["Faction", "Standing, in three steps", "What the top step actually gets you"],
+  [22, 40, 38],
+  [
+    ["The Crusade", "Sworn \u00b7 Lance \u00b7 Banner of the Call", "A hearing with Xavier without an appointment, and the standing to ask the coalition for something it does not want to give."],
+    ["The Order of the Tenth Work", "Postulant \u00b7 Hand \u00b7 Warden of the Work", "Disciplined troops who will die where you put them, healing without price, and an expectation you will not like."],
+    ["The Ysolde Remnant", "Known \u00b7 Trusted \u00b7 Named", "Safe houses across the Braid, forged permits in a magistrate\u2019s own hand, and Aveline Ysolde answering a message the same day."],
+    ["The Sixth Free Legion", "Noted \u00b7 Respected \u00b7 Owed", "Professionals do not hate you. Parley honoured, prisoners exchanged, and at the very top, an officer who will take a bribe and stay bought."],
+    ["House Kell of Norvatch", "Client \u00b7 Factor\u2019s Guest \u00b7 Signatory", "Anything that can be bought, delivered on time, plus three years of ledgers and the truth about the war\u2019s arithmetic."],
+    ["The Unbound Clerks", "Enquirer \u00b7 Reader \u00b7 Keeper\u2019s Friend", "Archive scholars in hiding who know what is on which shelf, and are the only people alive who can tell you what Vale has already read."]
+  ], { full: true }
+));
+
+c.push(PS([DM("DM Only: "), { t: "the Legion is the one on this list players will assume is not available to them, and it is the most interesting. The Sixth is a hired professional army with a contract, a pay schedule and a reputation to protect, and none of that is compatible with atrocity or with fighting to the last man for an employer whose kingdom is visibly running out. A party that treats the Legion as an institution rather than a monster gets an enormous amount out of it, and the campaign is built to reward exactly that." }]));
+
+c.push(H1("Tongues, Years, and Names"));
+
+c.push(H2("Languages"));
+
+c.push(table(
+  ["Tongue", "Who speaks it", "Notes"],
+  [22, 30, 48],
+  [
+    ["Common", "Everyone, everywhere", "The trade tongue of four kingdoms and the reason this war can be argued about at all."],
+    ["Marchspeak", "Harrowmark", "A blunt dialect of Common with a small vocabulary and a large number of words for weather. Mutually intelligible with Common if both parties are patient."],
+    ["Elduvish", "All of Elduvaine", "A dialect of Elvish spoken by every race in the kingdom, dwarves and halflings included. Being unable to speak it marks you as foreign far more reliably than your face does."],
+    ["Ninefold Cant", "The Concord\u2019s clergy", "Dead, written, and identical in every Ninefold House in four kingdoms. The Call was published in it. Counts as an exotic language."],
+    ["Writ-tongue", "Norvatch", "A deliberately impoverished contract dialect with no idioms, no metaphors and one meaning per word. Ugly to hear and impossible to misread, which is the point."],
+    ["Goblin", "The Sixth Free Legion", "The Legion\u2019s working language of command, whatever a given company\u2019s people happen to be. Orders, drill, and a very large body of extremely obscene marching song."],
+    ["Draconic", "Oksitan\u2019s houses", "Court and heraldic use among the dragonborn nobility. An Oksitan commoner knows perhaps thirty words of it, all of them titles."],
+    ["Sylvan", "Elduvaine\u2019s fey", "Dryads, sprites and satyrs. A great many Elduvish farmers have functional kitchen Sylvan and no idea it is a separate language."]
+  ], { full: true }
+));
+
+c.push(H2("The Year, and Why Elduvaine Cannot Agree On It"));
+
+c.push(P("The Concord keeps a Ninefold calendar of nine months named for the nine Works, and it is used without argument in Harrowmark, Oksitan, Auberitz and Norvatch, because those are countries where a season is a season."));
+
+c.push(P("Elduvaine cannot do this. A Kept Season wood holds the season it was planted in, and there are hundreds of them, and a parish that lies between a wood nine weeks into spring and a wood four days into autumn does not experience a year in any sense the Concord\u2019s calendar would recognise. So Elduvish parishes date by local observance instead \u2014 the year the near orchard flowered late, the third cutting after the water went quiet \u2014 and two villages an hour apart routinely disagree about what month it is by a margin of weeks, without either of them being wrong or finding the situation remarkable."));
+
+c.push(P("This is very funny to everyone in the coalition for approximately two weeks, and then becomes a serious logistical problem for the quartermasters, and Auberitz has been quietly imposing the Ninefold calendar on every district it supplies since the landing. Nobody asked Elduvaine about that either."));
+
+c.push(H2("Names"));
+
+c.push(table(
+  ["People or place", "Sample names"],
+  [24, 76],
+  [
+    ["Harrowmark", "Brenna, Duncan, Hald, Ivor, Maud, Osric, Ren, Tam, Wat \u00b7 Vane, Ondry, Thane, Marrow, Kettle, Stannock, Crowe"],
+    ["Elduvaine", "Aveline, Caerwyn, Emrys, Maelis, Ninian, Ottoline, Rhosyn, Tegan, Wyn \u00b7 Ysolde, Alder, Vahn, Sennoch, Nantcorrow, Aeling"],
+    ["Oksitan", "Aimeric, Bertran, Guilhem, Peire, Raimon, Sicart \u00b7 and among the dragonborn houses: Vashkar, Ourrez, Sarrelan, Kaldiss"],
+    ["Auberitz", "Anneke, Corvin, Hessel, Maartje, Sera, Wilm \u00b7 Vosk, Brandhoek, Kreyn, Aalder"],
+    ["Norvatch", "Doria, Halvard, Karessa, Morvyn, Torvald, Zeruth \u00b7 Kell, Ashvane, Grimmond, Sallow"],
+    ["The Sixth Free Legion", "Drell, Voss, Grask, Hoth, Nazira, Ruk, Ossian, Sekh \u00b7 companies are numbered, never named"]
+  ], { full: true }
+));
 
 // ------------------------------------------ What Is Actually Happening (DM Only)
 c.push(H1("What Is Actually Happening (DM Only)"));
@@ -345,6 +566,27 @@ c.push(BUL("A road-token.", "Cut from a waystone on a Willing Road. It does not 
 c.push(BUL("Kept Season seeds.", "Plant them and a small stand holds whatever season they were sown in. Mostly a wonder. Occasionally, in the hands of a party that thinks about it, a tactical problem solved sideways."));
 
 c.push(PS([DM("DM Only: "), { t: "these are also the campaign\u2019s clearest way to make the draining hurt. A standing-stone lamp that has stopped taking light, a flask that gives back a voice nobody recognises, seeds that come up in the wrong season \u2014 each of those is a paragraph of exposition the party feels instead of hearing. Break one at the right moment rather than explaining anything." }]));
+
+c.push(H2("Travelling the Willing Road"));
+
+c.push(P("The road shortens for travellers who mean well. That is the whole of what is known, it has been the whole of what is known for four hundred years, and Elduvaine finds the question of why roughly as interesting as being asked why water is wet."));
+
+c.push(P("At the table, run it like this. When the party travels a stretch of Willing Road, decide privately how much of the expected time it takes \u2014 anywhere from all of it to a little under half \u2014 and then narrate the arrival rather than the arithmetic. They set out at dawn expecting to camp on the road, and the towers are in sight before the light goes. Never announce a percentage. Never roll where they can see it."));
+
+c.push(PS([DM("DM Only: "), { t: "the essential rule, and the one this campaign will hold to the last page: do not invent a criterion. Not privately, not in your notes, not as a rule of thumb you apply consistently. The moment the road is measuring something the DM can name, it stops being the Willing Road and becomes an alignment detector with a travel-time output, and the single strangest thing in the setting is gone. Vary it. Contradict yourself. Let it shorten spectacularly for a party that has just done something appalling and not at all for one that has just been heroic, and never explain either. Players will build elaborate theories. Every one of them should be wrong, including the flattering ones." }]));
+
+c.push(P("Off the Willing Road, travel in Elduvaine is ordinary and increasingly bad. The occupation\u2019s permits apply on every metalled road. The draining has made some stretches longer than the map says, which is the Willing Road running in reverse and is the most frightening thing most Elduvish have ever experienced. Assume standard travel pace, and apply the Dead Mile and its cousins as fixed hazards rather than as random encounters \u2014 they are places, not events."));
+
+c.push(H2("Downtime on a March"));
+
+c.push(P("An army moves for months and then sits for weeks, and the sitting is where a campaign like this either builds its characters or wastes the time. Between modules, each character may take one of these. All of them are meant to produce a scene, not a die roll."));
+
+c.push(BUL("Stand a watch.", "Four hours on a picket line with one other person, chosen by the player. The DM asks what they talked about. This is the single most productive downtime action in the campaign and it costs nothing."));
+c.push(BUL("Work the column.", "Smithing, mending, driving, doctoring, or hauling for the quartermasters. Earns the goodwill of Auberitz\u2019s people, which converts directly into supply, information and being told things early."));
+c.push(BUL("Drink with the levy.", "One rumour from the module\u2019s table, one piece of camp gossip that is true, and one that is not. The DM should not indicate which is which."));
+c.push(BUL("Keep the observance.", "Report to a Ninefold House, or tend a habit at a wayside shrine \u2014 and be seen doing it. In this coalition that is a political act whichever one you choose, and somebody will comment."));
+c.push(BUL("Train with the watch.", "Harrowmark\u2019s wyvern-hunters will teach anyone who asks and mock anyone who does not last. Grants advantage on the next check made to handle, drive off, or avoid a large flying predator."));
+c.push(BUL("Copy.", "Available only to a character with Archive training or an Unbound Clerk contact. Produces one page of something Vale would rather nobody had, chosen by the DM, at a rate of roughly one page per week of downtime."));
 
 c.push(H2("The Four Voices"));
 
