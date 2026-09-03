@@ -197,5 +197,6 @@ than a re-derivation.
 - `tools/normalize_escapes.py` — real characters in, `\uXXXX` out; `--check` to report
 - `tools/check_columns.py` — starved table columns, banded by confidence; `-v` for marginals
 - `tools/find_page.py` — which PDF page a string is on
+- `tools/check_tearing.py` — stat-block ability rows torn from their header
 - `tools/verify.sh` — everything in one call; `--full` adds reproducibility
 - `tools/build.sh` — the build; `--no-verify` only when the render toolchain is unavailable
