@@ -518,7 +518,7 @@ c.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 300, 
 c.push(PS([{ t: "\u201CThere are sixty-one bridges in Caer Ysolde. There have been sixty-one bridges in Caer Ysolde for two hundred years. We have built nine in that time and lost none, and it is still sixty-one, and we would all be grateful if you did not raise it again.\u201D", i: true }], { alignment: AlignmentType.CENTER }));
 c.push(PS([{ t: "\u2014 the Bridgewarden of Caer Ysolde, to a visiting Auberitz surveyor", i: true }], { alignment: AlignmentType.CENTER }));
 const doc = new Document({
-  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] }] },
+  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 260, hanging: 260 } } } }] }] },
   styles: {
     default: { document: { run: { font: "Georgia", size: 20 } } },
     paragraphStyles: [

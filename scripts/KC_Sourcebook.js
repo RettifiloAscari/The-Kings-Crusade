@@ -616,7 +616,7 @@ c.push(PS([{ t: "\u201CIt was nine days to the coast. It had never once been nin
 c.push(PS([{ t: "\u2014 a courier of Caer Ysolde, on the first morning", i: true }], { alignment: AlignmentType.CENTER }));
 
 const doc = new Document({
-  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] }] },
+  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 260, hanging: 260 } } } }] }] },
   styles: {
     default: { document: { run: { font: "Georgia", size: 20 } } },
     paragraphStyles: [

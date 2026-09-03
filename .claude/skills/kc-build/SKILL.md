@@ -109,6 +109,28 @@ every generator.** `tools/verify.sh` does.
   in and every wrapped cell gets a ragged left edge. Padding lives in `margins`, *not* in
   an indent; the leaked indent looks like padding until a cell wraps.
 
+### Bullets hang at 260 twips, not Word's 720
+
+The numbering config's `indent: { left, hanging }` governs every bullet in the set, and the
+docx-js default of `left: 720, hanging: 360` is sized for a 6.5in page. In this repository's
+**3.28in column** that spends half an inch — about 15% of the measure — on indent, on every
+line of every bullet, wrapped lines included. Bullet blocks visibly floated in a well beside
+body paragraphs that used the full column.
+
+`left: 260, hanging: 260` puts the glyph at the text margin and the text about one em in
+(body text is 10pt, so an em is 200 twips). The five-entry block under *What They Cannot
+Agree On* went from four rendered lines per entry to three.
+
+One value is correct everywhere, because **every bullet in the set is in a two-column
+document**: the DM Reference Guide, the only single-column one, is entirely tables and
+contains no bullets at all. Check that before assuming a per-document value is needed.
+
+**This is the third full-page default found applied to a narrow column**, after
+`columnWidths` and cell padding. When something looks loose or cramped in a two-column
+document, suspect a measurement inherited from a 6.5in page before suspecting the content.
+The sister repository carries the identical 720/360 config at the same column measure, so
+the same fix applies there and has not been made.
+
 ### DM markers are bold book-red, never italic
 
 `const DM = (t) => ({ t, b: true, c: "5B1F1F" })`, used as

@@ -444,7 +444,7 @@ c.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 300, 
 c.push(PS([{ t: "\u201CIt set me down in the road. Twice. Very carefully, like a man moving a chair. And then it went back and stood by the stone, and it did not look at me again, and I have thought about it every day since.\u201D", i: true }], { alignment: AlignmentType.CENTER }));
 c.push(PS([{ t: "\u2014 a carter of Lisswater, deposition to the Magistrate", i: true }], { alignment: AlignmentType.CENTER }));
 const doc = new Document({
-  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] }] },
+  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 260, hanging: 260 } } } }] }] },
   styles: {
     default: { document: { run: { font: "Georgia", size: 20 } } },
     paragraphStyles: [

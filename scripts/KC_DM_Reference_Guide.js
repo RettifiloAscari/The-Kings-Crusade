@@ -382,7 +382,7 @@ c.push(table(
 c.push(P("The final choice draws on everything above it \u2014 before running Module 11\u2019s Scene 4, a DM may find it worth reading back across this whole ledger with the table."));
 
 const doc = new Document({
-  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] }] },
+  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 260, hanging: 260 } } } }] }] },
   styles: {
     default: { document: { run: { font: "Georgia", size: 20 } } },
     paragraphStyles: [

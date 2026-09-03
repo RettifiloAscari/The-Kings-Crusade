@@ -320,7 +320,7 @@ c.push(H1("What You Carry"));
 c.push(P("You are leaving a cold, ordinary, thoroughly explicable kingdom to march toward one that, by every account, is neither cold nor ordinary nor explicable \u2014 and that is currently being taken apart by a man nobody can adequately explain either. The road between the two is long enough that you will be a different person by the time you reach the end of it. That is not a warning. It is the whole point of going."));
 
 const doc = new Document({
-  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] }] },
+  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 260, hanging: 260 } } } }] }] },
   styles: {
     default: { document: { run: { font: "Georgia", size: 20 } } },
     paragraphStyles: [

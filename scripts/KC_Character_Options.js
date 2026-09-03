@@ -480,7 +480,7 @@ c.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 300, 
 c.push(PS([{ t: "\u201CIn Caer Ysolde it is a doorstep. Here it is the most remarkable thing anyone in this village has ever seen. Both of those are correct and I have stopped trying to reconcile them.\u201D", i: true }], { alignment: AlignmentType.CENTER }));
 c.push(PS([{ t: "\u2014 a Harrowmark levyman, on being given a light-stone", i: true }], { alignment: AlignmentType.CENTER }));
 const doc = new Document({
-  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 720, hanging: 360 } } } }] }] },
+  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 260, hanging: 260 } } } }] }] },
   styles: {
     default: { document: { run: { font: "Georgia", size: 20 } } },
     paragraphStyles: [
