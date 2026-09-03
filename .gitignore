@@ -26,3 +26,7 @@ scripts/_template_decoded.docx
 
 # Build intermediates: the generators stage their .docx here.
 /.stage/
+
+# Python bytecode from the tools/
+__pycache__/
+*.pyc

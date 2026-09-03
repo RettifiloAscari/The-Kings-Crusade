@@ -418,9 +418,15 @@ output from them.
 - `documents/` — **generated PDF**, styled and ready to read. Committed deliberately,
   against the usual rule about build output, so the corpus opens on any device without a
   build step. PDF embeds its fonts, so it renders identically everywhere.
-- `tools/` — `build.sh` (regenerates everything and verifies it), `docx-md-shim/`
-  (a stub of the `docx` package that emits Markdown instead of OOXML), and
-  `normalize_pdf.py` (makes the rendered PDF byte-reproducible).
+- `tools/` — `build.sh` (regenerates everything and verifies it), `verify.sh` (every
+  pre-commit check in one call), `docx-md-shim/` (a stub of the `docx` package that emits
+  Markdown instead of OOXML), `normalize_pdf.py` (makes the rendered PDF
+  byte-reproducible), and the authoring tools: `anchor.py`, `normalize_escapes.py`,
+  `check_columns.py`, `find_page.py`. Those five are byte-identical to their copies in
+  The Qilvayas Symphony; everything repository-specific lives in `pipeline.conf`, so a
+  fix to a tool is a copy rather than a re-derivation.
+- `.claude/skills/kc-build/` — the production mechanics, as a skill loaded on demand.
+  It is the single copy of those rules; do not restate them in this file.
 - `drafts/` — design drafts awaiting sign-off. Not canon; never read as canon.
 - `reference/` — mirrored instructions, if a Claude Chat project reads this repo.
   `reference/project-instructions.md` mirrors this file and **must be updated in the same
@@ -585,185 +591,27 @@ recommended fixes; do not regenerate without sign-off.
 
 ## Production Practice
 
-**One command rebuilds everything: `tools/build.sh`.** It regenerates `corpus/` and
-`documents/`, applies the template, renders each document to PDF, and **fails the build on
-escape leaks or font substitution** — the two errors that are invisible in source.
+**The mechanics live in the `kc-build` skill** — invoke it before touching anything in
+`scripts/`, running a build, adding a document, or debugging a rendering problem. It
+carries the prerequisites, the escape convention, the table and `columnWidths` rules, the
+authoring kit, the DM-marker convention, the anchored-edit discipline, and the
+verification loop. It is loaded on demand, so this file does not pay for it in every
+conversation that only discusses canon. **It is the single copy of those rules: do not
+restate them here.**
 
-Prerequisites, all checked by the build:
+Three things belong here because they are project rules rather than mechanics:
 
-| Requirement | Install | Why |
-|---|---|---|
-| Node + `docx` | `npm install docx` | The generators |
-| Python 3 | stdlib only | `transplant.py`, `normalize_pdf.py` |
-| LibreOffice **Writer** | `apt-get install libreoffice-writer` | `libreoffice-core` alone loads *nothing* and every document fails with "source file could not be loaded" — a content-shaped error with an environment cause. **This container shipped with core only; it has bitten this project already.** |
-| Ghostscript | `apt-get install ghostscript` | Reproducible PDF |
-| poppler-utils | `apt-get install poppler-utils` | `pdftotext`, `pdffonts`, `pdftoppm` for verification |
-| Alegreya SC, Alegreya Sans SC, Lato | Google Fonts TTFs into `~/.local/share/fonts`, then `fc-cache -f` | Missing fonts **substitute silently and change pagination**; verifying layout without them is meaningless. `fonts.google.com/download` is blocked here — pull the static TTFs from `raw.githubusercontent.com/google/fonts/main/ofl/{alegreyasc,alegreyasanssc,lato}/`. |
+- **Generation scripts are the source of truth.** Never hand-edit a published document;
+  edit the script. `corpus/` and `documents/` are output.
+- **Regenerate in the same commit as the script change.** Run `tools/build.sh` and commit
+  `scripts/`, `corpus/`, and `documents/` together. A corpus that disagrees with its
+  generator is worse than no corpus.
+- **One command rebuilds everything: `tools/build.sh`.** Verify with `tools/verify.sh
+  --full` before committing. The deliverable is the PDF; the `.docx` is a build
+  intermediate in `.stage/` and is never committed.
 
-**Verification, every time:**
-
-```bash
-grep -Pl '[^\x00-\x7F]' scripts/*.js                  # MUST print nothing — no literal non-ASCII
-pdftotext documents/<doc>.pdf - | grep -c '\\u'       # MUST be 0 — no escape leaks
-pdffonts documents/<doc>.pdf | grep -c DejaVu         # MUST be 0 — no font substitution
-```
-
-`tools/build.sh` now runs the source check itself and fails the build on a literal
-typographic character in any generator, so this is a spot-check rather than the guard.
-Use `-Pl` (list offending files) rather than `-Pc`: with more than one generator, `-Pc`
-prints a `file:count` line per script and there is no single number to read.
-
-**Note the doubled backslash** in the escape check. Single-quoted `'\u'` matches the plain
-letter *u* and reports every ordinary word containing one, so it can never return 0 on real
-prose. Then build **three times** and `cmp` — an unchanged document must rebuild
-byte-identical, and the Ghostscript trailer-`/ID` failure mode this guards against is
-intermittent, so one comparison is not enough.
-
-**Reproducibility is within an environment, not across them.** `normalize_pdf.py` strips
-per-run randomness (timestamps, trailer `/ID`, XMP UUIDs, font-subset tags); it does not
-strip LibreOffice or Ghostscript *version* differences. A rebuild on a different toolchain
-can produce a different byte stream from identical sources with identical text, layout,
-page count, and fonts. When a rebuilt PDF differs unexpectedly, compare
-`pdftotext -layout` output and `pdfinfo` before assuming a content bug.
-
-**All prose lives in the generators as `\uXXXX` escapes**, never as literal typographic
-characters. Normalize immediately after inserting new text, then re-run the greps —
-inserting prose is exactly when literal characters sneak in.
-
-**The practical workflow is write-then-normalize, not write-escaped.** Hand-escaping prose
-as it is composed is slow and is where the doubled-backslash bug comes from. Write the new
-text with literal characters, then run a normalizer over the file that (a) converts every
-non-ASCII character to `\uXXXX` and (b) collapses any `\\uXXXX` back to `\uXXXX`. The
-second half is not optional: a doubled escape compiles clean, passes the non-ASCII scanner,
-and leaks the literal text `\u2019` into the PDF. During the expansion pass the collapse
-step caught seventeen of them across four files.
-
-**Straight apostrophes are a real defect, and greps for them must be narrow.** House style
-is `\u2019` in all prose; `don't` and `Vale's` render as a different glyph and look wrong
-next to the surrounding text. The safe pattern is **apostrophe between two word characters**
-(`(\w)'(\w)`). Do not widen it to allow a non-word character on either side: that matches
-`require('docx')` and `path.join(__dirname, '..', 'images')` and will corrupt the generator.
-176 of these were converted in one pass; the narrow pattern left every `require` intact.
-
-**`node --check` is not sufficient.** It validates syntax, not identifiers — a call to a
-helper that file does not define passes `--check` and throws at build time. Helper sets
-genuinely differ between generators. Grep for the definition, and actually run the script.
-
-**DM-only markers are bold book-red, never italic:** `const DM = (t) => ({ t, b: true,
-c: "5B1F1F" })`, used as `PS([DM("DM Only: "), { t: "the note." }])`. Colour is
-preattentive — a DM spots red without reading — and it leaves the body roman, which matters
-because these notes run 100–200 words. **Colour the marker, not the prose.** Italic is
-reserved for read-aloud, quotations, and epigraphs; overloading it makes both signals
-ambiguous. Two rules follow from the Markdown shim appending a space after every bold run:
-the marker carries its own trailing space, and the following segment never begins with one.
-Sections already titled `(DM Only)` need no inline marker.
-
-**Verify by looking.** Rendering bugs are invisible in source, and so are some content
-bugs. Render a page to PNG with `pdftoppm` and read it — in the first campaign that caught
-a factually wrong rules claim after every grep-based check had passed clean.
-
-## Visual Template
-
-Reused unchanged from The Qilvayas Symphony: the /u/YaAlex-derived 5e style — Alegreya SC
-Medium headings in deep book-red `5B1F1F`, Alegreya Sans SC and Lato body, A4, page-number
-footers. The book-red is load-bearing in **both** `scripts/style_template_encoded.md` and
-every generator's `DM` constant; changing it means changing both together.
-
-`transplant.py` carries **four** filename references to the encoded template. Renaming the
-template means updating all four.
-
-## The Authoring Kit
-
-The helper preamble at the top of each generator is the portable authoring kit: `P`, `PS`,
-`DM`, `H1/H2/H3`, `BULLET`, `B`, `BUL`, `BOX`, `cell/row/table`, `mod/abCell/SB`. Copy it
-into each new generator. Three conventions are specific to this repository:
-
-**Output path.** Never hardcode a stage directory. Generators write with:
-
-```js
-const { stagePath } = require('./stage');
-fs.writeFileSync(stagePath("KC_Sourcebook.docx"), buf);
-```
-
-`stagePath` resolves `$KC_STAGE` (set by `tools/build.sh`) and falls back to `<repo>/.stage`
-so a generator also runs standalone. `.stage/` is gitignored build scratch.
-
-**Artwork.** `IMG(file, widthPt, heightPt, alt)` places an image from `images/`. Width and
-height are points at 72/inch, so 288 is four inches. The helper passes an extra `mdPath`
-field that the real `docx` ignores and the Markdown shim uses to write the corpus link —
-it is relative to `corpus/`, where the generated `.md` lives, so it reads as
-`../images/<file>`. `transplant.py` carries the image bytes and relationships into the
-template package, remapping relationship ids so they cannot collide with the template's
-own. **Keep images to PNG or JPEG**, and give every one real alt text.
-
-**Every table sits in the column flow. There are no full-width tables, deliberately.**
-`transplant.py` still carries the machinery for them — a `KCFullWidth` marker style, wrapped
-in a pair of continuous section breaks and stripped — and **nothing uses it, on purpose.**
-Do not reach for it. A table that breaks out of the column interrupts the text either side
-of it, strands short lines above and below, and disjoints a page far worse than a narrow
-column ever does. The Qilvayas generators have no such mechanism at all and their d12
-encounter tables, prose column and all, read perfectly well in-column; this repository now
-matches them.
-
-The full-width mechanism was originally added because tables "wrapped to three or four words
-a line" — but that was the missing `tblGrid` below, not the column width. Once the grid was
-supplied the symptom went away, and the workaround with it. **If a table looks cramped, the
-fix is the widths, the header wording, or fewer columns — never breaking the column.**
-
-**Keep tables to three columns, four at the outside.** Six-column encounter-scaling tables
-were the worst offenders in the set: `Party size / Base XP / Multiplier / Adjusted XP /
-Medium threshold / Reads as` cannot fit a two-column measure and broke headers mid-word as
-`Multiplie`/`r`. Dropping a constant column and shortening every header to `PCs / Mult. /
-Adj. XP / Medium / Reads as` fixed it without losing a thing. The one six-column table left
-is in the DM Reference Guide, which is single-column and has the whole page.
-
-**A column must be wide enough for its longest header word, and the arithmetic is not
-obvious.** The two-column measure is about 4860 twips, each cell loses 120 to padding, and a
-9pt glyph averages ~90 twips, so usable characters run about `w * 0.44 - 2.0` for a width
-given in percent. A column at 8% holds two characters, not three — `PCs` broke there. When
-in doubt, widen it and render the page; the estimate is a guide and the render is the truth.
-
-**Column widths need a `tblGrid`, or LibreOffice ignores them.** `table()` passes
-`columnWidths` (in twips, derived from the percentage `widths` against a 9360 nominal) and
-`layout: TableLayoutType.FIXED`. This is not decoration. docx-js emits per-cell `tcW`
-percentages but **no `<w:tblGrid>` unless `columnWidths` is given**, and without a grid
-LibreOffice discards the percentages and distributes every column evenly — so a `d6` column
-holding a single digit took a third of the table and every prose cell wrapped a line early.
-Supplying the grid tightened the whole set by two pages and is the single largest legibility
-win the pipeline has had. `TableLayoutType` had to be added to `tools/docx-md-shim/` at the
-same time: **the shim must export everything the generators destructure from `docx`**, or the
-Markdown half of the build throws while the PDF half succeeds.
-
-**Tables must not tear.** `row()` sets `cantSplit` so a row's cells cannot be torn across
-a column or page break, header rows carry `tableHeader` so they repeat when a long table
-does span a break, and the ability-score row in `SB()` uses `keepNext` so the values stay
-with their labels. A stat block whose STR/DEX/CON header lands in one column and its
-numbers in the next is a real bug and this is what prevents it.
-
-**Cell padding is 60 twips, not 110.** It was widened to 110 when tables spanned both
-columns; at half that measure the same padding ate twice the proportion and cramped every
-cell. Qilvayas uses 45. 60 is the compromise that survived a render check.
-
-**Table cells must kill the inherited first-line indent.** `cell()` and `abCell()` both set
-`indent: { firstLine: 0 }`, for the same reason `BOX` and `VERSE` do — the template's
-default `firstLine=180` otherwise leaks in and every cell that wraps to a second line gets a
-ragged left edge, while centred ability scores are shoved off-centre hard enough to wrap
-"19 (+4)" onto two lines. Cell padding lives in `margins` (110 twips left/right), *not* in an
-indent; the two are easy to confuse because the leaked indent looks like padding until a
-cell wraps.
-
-**Every helper forwards its `opts`.** `P`, `PS`, `BULLET` and `BUL` all spread an options
-object into the paragraph. `BULLET` silently ignored its second argument for the whole first
-build-out, which meant a `keepNext` passed to it did nothing and looked like a LibreOffice
-bug. If a helper takes options, it must actually use them.
-
-**Headings carry `keepNext`, and so does the last item before the Refrain.** All three
-heading styles set `keepNext` so a heading can never sit alone at the foot of a column, and
-each module binds its final Loot bullet to the Refrain that follows. Without that binding the
-closing verse strands itself alone on an otherwise blank last page whenever a module's body
-happens to fill its pages exactly — which three of the eleven did. `keepNext` is inert
-wherever the content already fits, so the binding costs nothing in the modules that never
-had the problem.
+Repository-specific settings for the shared tools — the single-column document, the column
+measure, and which documents are player-facing — live in `tools/pipeline.conf`.
 
 ## Current State
 
