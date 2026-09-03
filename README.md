@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/title-banner.png"
+  <img src="images/title-banner.jpg"
        alt="The King&#39;s Crusade &mdash; a Dungeons &amp; Dragons 5th Edition campaign setting. A crowned king in battered plate and a fur mantle stands before a dark city of spires, a coil of rope at his hand; beside him a stone mosaic shows pikemen bringing down a dragon with ropes and long spears."
        width="1024">
 </p>
