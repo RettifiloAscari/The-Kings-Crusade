@@ -89,14 +89,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -125,15 +126,14 @@ c.push(P("Run this module as two threads happening at once: the party\u2019s own
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
-  [30, 15, 55],
+  [30, 19, 51],
   [
     ["1. Finding the Weakness", "45\u201360 min", "Investigation and payoff from Module Six\u2019s threads."],
     ["2. The Breach", "60\u201375 min", "The party\u2019s own fight. DC table and stat blocks below."],
     ["3. The Dragon", "20\u201330 min", "A hazard, not a monster fight. Read carefully before running."],
     ["4. The Wyvernheart", "20\u201330 min", "Read-aloud. Do not let the party resolve this scene mechanically."],
     ["5. Vindana Falls", "30\u201345 min", "The city secured; the legend begins; hand off to Module Eight."]
-  ],
-  { full: true }
+  ]
 ));
 
 // --------------------------------------------- What Is Actually Happening
@@ -170,14 +170,13 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [46, 26, 8, 20],
+  [44, 26, 10, 20],
   [
     ["Locate Vindana\u2019s weakness without the Ward\u2019s knowledge", "Investigation / Survival", "13", "Moderate"],
     ["Force the postern door quietly", "Athletics / Thieves\u2019 Tools", "13", "Moderate"],
     ["Talk Marshal Drell into surrender once beaten", "Persuasion / Intimidation", "16", "Hard"],
     ["Keep a routing ally from panicking during Scene 3", "Persuasion / Animal Handling", "13", "Moderate"]
-  ],
-  { full: true }
+  ]
 ));
 
 // ---------------------------------------------------------------- Scene 3

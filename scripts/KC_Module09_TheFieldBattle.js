@@ -85,14 +85,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -121,15 +122,14 @@ c.push(P("Vindana fell partly through the party\u2019s own cleverness and partly
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
-  [30, 15, 55],
+  [30, 19, 51],
   [
     ["1. The Column Strung Out", "20\u201330 min", "The ambush begins to reveal itself."],
     ["2. Tam\u2019s Warning", "20\u201330 min", "The module\u2019s cost \u2014 or its alternate. Read carefully before running."],
     ["3. Holding the Line", "60\u201390 min", "The battle itself. DC table and stat block below."],
     ["4. The Rout", "30\u201345 min", "General Voss\u2019s line breaks. Proof, not celebration."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
-  ],
-  { full: true }
+  ]
 ));
 
 // --------------------------------------------- What Is Actually Happening
@@ -213,15 +213,14 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [46, 26, 8, 20],
+  [44, 26, 10, 20],
   [
     ["Read the treeline as a prepared ambush site", "Investigation / Survival", "13", "Moderate"],
     ["Recognize the missing scouts as deliberate", "Insight", "13", "Moderate"],
     ["Stabilize Tam Ondry after he falls (default Scene 2)", "Medicine", "16", "Hard"],
     ["Hold a coalition position against Voss\u2019s pressure", "Athletics / relevant combat skill", "13", "Moderate"],
     ["Talk Voss into a battlefield surrender once clearly beaten", "Persuasion / Intimidation", "16", "Hard"]
-  ],
-  { full: true }
+  ]
 ));
 
 // ---------------------------------------------------------------- Scene 4
@@ -252,7 +251,7 @@ c.push(table(
     ["A doubled numeral", "The order is a feint and is to be seen", "The only dispatches ever sent uncovered are doubled. Two examples is enough."],
     ["A struck-through hour", "Hold until countermanded", "A prisoner will confirm this without considering it a betrayal, because it is drill, not intelligence."],
     ["No bearing at all", "Reserve. Committed at the commander\u2019s word only", "This is the one that matters and it is the one the party will find last."]
-  ], { full: true }
+  ]
 ));
 
 c.push(P("Put together, three captured dispatches tell the party where Voss\u2019s reserve is and that she has not yet committed it \u2014 which is the single most valuable piece of information available on the field, and which the coalition\u2019s own scouts have failed to get for two days."));

@@ -84,14 +84,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -120,15 +121,14 @@ c.push(P("Play Calanthe as ordinary and opportunistic, not sinister. Warden Than
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
-  [30, 15, 55],
+  [30, 19, 51],
   [
     ["1. The Storm", "15\u201320 min", "Fast and mostly narrative; ends with the party ashore on Calanthe."],
     ["2. Landfall", "30\u201345 min", "Wreckage, frightened survivors, and Thane\u2019s reputation, secondhand."],
     ["3. Thane\u2019s Hold", "90\u2013120 min", "Negotiation, and combat if it comes to that. DC table and stat blocks below."],
     ["4. Calanthe\u2019s Fate", "30\u201345 min", "Loot, the island\u2019s future, and the road onward \u2014 Branch Ledger entry."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
-  ],
-  { full: true }
+  ]
 ));
 
 // --------------------------------------------- What Is Actually Happening
@@ -178,14 +178,13 @@ c.push(H3("Scaling the Fight"));
 c.push(P("Ivor Thane is the SRD Veteran (CR 3, 700 XP) renamed and reflavored, unmodified otherwise; his guards are SRD Bandits (CR 1/8, 25 XP each), both taken from the SRD unaltered. Run with Thane plus four Bandits \u2014 five total monsters, comfortably inside the 3\u20136 monster band, so no table\u2019s party size pushes the count across a multiplier boundary on its own."));
 
 c.push(table(
-  ["Party size", "Base XP", "Multiplier", "Adjusted XP", "Medium threshold", "Reads as"],
-  [9, 12, 13, 14, 20, 32],
+  ["PCs", "Mult.", "Adj. XP", "Medium", "Reads as"],
+  [12, 16, 16, 19, 37],
   [
-    ["4", "800", "\u00D72", "1,600", "2,000", "Easy\u2013Medium"],
-    ["5", "800", "\u00D72", "1,600", "2,500", "Easy\u2013Medium, softer"],
-    ["6", "800", "\u00D71.5", "1,200", "3,000", "below Easy"]
-  ],
-  { full: true }
+    ["4", "\u00D72", "1,600", "2,000", "Easy\u2013Medium"],
+    ["5", "\u00D72", "1,600", "2,500", "Easy\u2013Medium, softer"],
+    ["6", "\u00D71.5", "1,200", "3,000", "below Easy"]
+  ]
 ));
 
 c.push(P("This is deliberately not a Hard or Deadly fight, and the table below is not a problem to fix. Historically, Richard\u2019s taking of Cyprus was closer to a rout than a battle \u2014 Isaac Komnenos\u2019s forces were simply outmatched \u2014 and the module is built the same way on purpose: the real tension is Sera\u2019s crew as captives (see below), not whether the party can win. If a table wants more bite, the cleanest way to add it is to give Thane one Veteran-statted lieutenant instead of two of the Bandits, which raises the ceiling without changing the monster count or crossing a boundary. Do not simply add more Bandits to compensate for a party of six \u2014 crossing from 5 to 7 monsters jumps the multiplier band up a full step and can overcorrect badly, exactly the trap that scaling an encounter by headcount sets."));
@@ -199,7 +198,7 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [46, 26, 8, 20],
+  [44, 26, 10, 20],
   [
     ["Help the crew through the worst of the storm", "Athletics / Survival / relevant spell", "13", "Moderate"],
     ["Recognize Calanthe\u2019s coastline before making landfall", "Survival / Nature", "13", "Moderate"],
@@ -207,8 +206,7 @@ c.push(table(
     ["Talk Thane\u2019s price down without a fight", "Persuasion / Intimidation", "16", "Hard"],
     ["Cross the yard to reach the captives once a fight starts", "Athletics / Acrobatics", "13", "Moderate"],
     ["Read that Thane is bluffing about a price he won\u2019t die for", "Insight", "13", "Moderate"]
-  ],
-  { full: true }
+  ]
 ));
 
 // ---------------------------------------------------------------- Stat Blocks

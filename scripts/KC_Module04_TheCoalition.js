@@ -82,14 +82,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -118,15 +119,14 @@ c.push(P("Play Oksitan and Auberitz as genuinely allied and genuinely self-inter
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
-  [30, 15, 55],
+  [30, 19, 51],
   [
     ["1. The Muster Camp", "30\u201340 min", "First real look at Oksitan and Auberitz, in numbers."],
     ["2. What the Promise Is Worth", "45\u201360 min", "The coalition\u2019s tension, in individual voices, not policy."],
     ["3. Doria Kell\u2019s Offer", "30\u201345 min", "Norvatch approaches privately. Leverage, not alliance."],
     ["4. Sennoch Hall", "75\u201390 min", "The first rescue. DC table and stat block below."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
-  ],
-  { full: true }
+  ]
 ));
 
 // --------------------------------------------- What Is Actually Happening
@@ -219,15 +219,14 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [46, 26, 8, 20],
+  [44, 26, 10, 20],
   [
     ["Get camp officers talking honestly rather than diplomatically", "Persuasion / Insight", "13", "Moderate"],
     ["Verify Doria Kell\u2019s information is genuine before acting on it", "Insight / Investigation", "13", "Moderate"],
     ["Slip past Sennoch Hall\u2019s gate guards unseen", "Stealth", "13", "Moderate"],
     ["Find the Ward\u2019s room without alerting the interior guard", "Investigation / Perception", "13", "Moderate"],
     ["Negotiate an ongoing arrangement with Doria Kell", "Persuasion", "16", "Hard"]
-  ],
-  { full: true }
+  ]
 ));
 
 // ------------------------------------------------------------ NPC Profiles
@@ -251,7 +250,7 @@ c.push(table(
     ["6. The commander\u2019s study", "Serjeant Hoth, and three years of correct paperwork.", "He would like somebody to notice he has been decent. See below."],
     ["7. The north tower", "Ninian\u2019s rooms. One door, one window, forty feet up.", "The window is the extraction route and it needs rope."],
     ["8. The gate range", "Six on watch, alert, with a bell.", "The bell is the whole problem. Cutting its rope is a 20-ft. climb."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("The Puzzle: What the Water Heard"));

@@ -89,14 +89,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -163,8 +164,7 @@ c.push(table(
     ["Grand Duchy of Auberitz", "The duchy that builds things: humans, gnomes and halflings, mercantile and engineering rather than martial, and privately of the view that this whole war is a logistics problem being mishandled by people who enjoy shouting."],
     ["Kingdom of Norvatch", "Guild-law country \u2014 dwarves and tieflings, humans throughout \u2014 where a bargain is written, witnessed, filed and binding, and where the realm\u2019s entire standing rests on honouring the letter of one no matter what the letter turns out to have meant."],
     ["Elduvaine", "You would not be marching, but a character from the occupied kingdom is entirely playable. Elves, whose orchards hold the season they were planted in; gnomes, who keep the ledgers and cut the light-stone; halflings in the river parishes; humans throughout. If you are from here, you have been in exile or hiding for three years."]
-  ],
-  { full: true }
+  ]
 ));
 
 c.push(P("What your character does not know, and cannot, is what Elduvaine looks like now. Everyone above has heard it is bad."));
@@ -188,7 +188,7 @@ c.push(table(
     ["Threnn Greywater", "Sea, storm, river, the drowned", "Tempest"],
     ["Ossuar the Quiet Warden", "Death, the grave, remembrance", "Death"],
     ["Saveth of the Green Verge", "Wilds, beasts, the seasons", "Nature"]
-  ], { full: true }
+  ]
 ));
 
 c.push(P("A Concord priest does not ask a Work for anything. A Concord priest reports \u2014 here is what was built this season, here is what failed, here is what we intend next \u2014 and a miracle, when it comes, is understood as a tool handed down rather than a favour granted. It is why Harrowmark\u2019s clergy are so hard to impress and so hard to frighten."));
@@ -217,8 +217,7 @@ c.push(table(
     ["Kingdom of Oksitan", "An allied power under the call, marching for reasons of its own that its own court has not fully explained to anyone outside it."],
     ["Grand Duchy of Auberitz", "The second allied power, likewise under the call and likewise not marching purely out of sympathy for Elduvaine."],
     ["Kingdom of Norvatch", "Has taken no side. Trades with, and has some understanding with, whoever currently holds Elduvaine \u2014 and will deal with the coalition just as readily, for a price. Keeps whatever bargains it makes."]
-  ],
-  { full: true }
+  ]
 ));
 
 c.push(P("None of the three visiting powers is marching purely for Elduvaine\u2019s sake, and none of them pretends otherwise to anyone who asks directly. What each of them actually wants out of a won war is not something your character would know yet \u2014 only that they all, plainly, want something."));
@@ -245,8 +244,7 @@ c.push(table(
     ["The Listening Water", "Rivers and standing pools said to keep speech spoken at their edge, and give it back later in the speaker\u2019s own voice."],
     ["The Kept Season", "A wood that holds the season it was planted in, permanently, regardless of the calendar around it."],
     ["The Standing Light", "Worked stone that holds daylight poured into it, so that Elduvish cities are said to need no lamps at night."]
-  ],
-  { full: true }
+  ]
 ));
 
 c.push(P("More recent accounts \u2014 from the handful of people who have actually come out since the wards opened \u2014 say some of this is failing. Roads that no longer shorten. Rivers that answer with voices nobody recognizes, or don\u2019t answer at all. Whether that\u2019s true, and what it would mean if it is, your character will have to find out for themselves."));
@@ -279,7 +277,7 @@ c.push(table(
     ["Ninian Ysolde", "The Ward", "Heir presumptive. Held under house arrest at a country seat, in reported comfort."],
     ["Ottoline Vahn", "The Magistrate", "A magistrate of the Braid for a hundred and sixty years. Held in Vindana, and reportedly still working."],
     ["Emrys Ysolde", "The Envoy", "Held separately from the rest. Beyond that, nobody in the coalition can tell you anything at all."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H1("Building Your Character"));

@@ -379,18 +379,18 @@ You pull the life out of a 30-foot-radius sphere. Each creature in the area must
 
 Elduvaine’s great treasures are habits made portable, and their defining quality is that they are ordinary at home and astonishing anywhere else. A light-stone lamp is a doorstep in Caer Ysolde and a wonder in Duncarrow, and the campaign gets a great deal of mileage out of party members from different countries disagreeing about whether something is remarkable.
 
-| **Item** | **Rarity** | **Attunement** | **Where it first appears** |
-| --- | --- | --- | --- |
-| Standing-stone lamp | Common | No | Module 3, from Caerwyn’s baker |
-| Flask of Listening Water | Uncommon | No | Module 5, at the Standing Water |
-| Road-token | Uncommon | Yes | DM’s discretion |
-| Kept Season seeds | Uncommon | No | DM’s discretion |
-| Legion pattern blade (+1) | Uncommon | No | Module 7, Drell’s campaign sword |
-| Wand of magic missiles | Uncommon | No | Module 7, the harbour-mage’s quarters |
-| Cloak of elvenkind | Uncommon | Yes | Module 9, off one of Voss’s scouts |
-| Keeper’s pruning hook | Rare | Yes | The Orchard Marches |
-| Ysolde reading-glass | Rare | Yes | The Archive, and not easily |
-| Sovereign’s veil | Very rare | Yes | Not lootable. See its entry. |
+| **Item** | **Rarity** | **Where it first appears** |
+| --- | --- | --- |
+| Standing-stone lamp | Common | Module 3, from Caerwyn’s baker |
+| Flask of Listening Water | Uncommon | Module 5, at the Standing Water |
+| Road-token | Uncommon, attuned | DM’s discretion |
+| Kept Season seeds | Uncommon | DM’s discretion |
+| Legion pattern blade (+1) | Uncommon | Module 7, Drell’s campaign sword |
+| Wand of magic missiles | Uncommon | Module 7, the harbour-mage’s quarters |
+| Cloak of elvenkind | Uncommon, attuned | Module 9, off one of Voss’s scouts |
+| Keeper’s pruning hook | Rare, attuned | The Orchard Marches |
+| Ysolde reading-glass | Rare, attuned | The Archive, and not easily |
+| Sovereign’s veil | Very rare, attuned | Not lootable. See its entry. |
 
 ## Standing-Stone Lamp
 

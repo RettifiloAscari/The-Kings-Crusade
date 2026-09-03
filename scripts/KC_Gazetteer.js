@@ -76,16 +76,17 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 // cantSplit keeps a row\u2019s cells from being torn across a column or page break;
 // tableHeader repeats the header row when a long table does span a break.
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";   // marker only; transplant.py acts on it and strips it
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -122,7 +123,7 @@ c.push(table(
     ["Caerwyn to Vindana", "9 days", "Four, on the days the Willing Road agrees to it. Nobody can arrange those days."],
     ["Vindana to Caer Ysolde", "11 days", "Upriver along the Braid. The last three days are inside Vale\u2019s reach and everybody knows it."],
     ["Caerwyn to Caer Ysolde, direct", "16 days", "Through the Orchard Marches. Beautiful, and in year three, wrong."]
-  ], { full: true }
+  ]
 ));
 
 // ================================================================ HARROWMARK
@@ -196,7 +197,7 @@ c.push(P("Roll d12 once per day of travel, or when the pace wants breaking. Harr
 
 c.push(table(
   ["d12", "Encounter"],
-  [10, 90],
+  [12, 88],
   [
     ["1", "A wyvern (SRD, CR 6), hunting, and not remotely interested in a fair fight. It will take a pack animal and leave if allowed to."],
     ["2\u20133", "A levy company of forty walking to Duncarrow, badly, singing. Their sergeant is nineteen and terrified and hiding it well."],
@@ -209,7 +210,7 @@ c.push(table(
     ["10", "A pack of six wolves (SRD, CR 1/4) working the road because the flocks moved with the muster."],
     ["11", "A hill giant (SRD, CR 5) down out of the crags in a bad year, more hungry than hostile, and negotiable if anyone thinks to try."],
     ["12", "Riders of the Tenth Work, courteous, well-supplied, and extremely interested in where the party is going and why."]
-  ], { full: true }
+  ]
 ));
 // ================================================================ THE SEA ROAD
 c.push(H1("The Sea Road"));
@@ -234,7 +235,7 @@ c.push(H2("Encounters at Sea"));
 
 c.push(table(
   ["d10", "Encounter"],
-  [10, 90],
+  [12, 88],
   [
     ["1\u20132", "Weather, worsening. A day of it, and a real chance of separation from the fleet."],
     ["3", "A hull in trouble \u2014 sprung seams, and forty people on deck doing arithmetic about the boats."],
@@ -245,7 +246,7 @@ c.push(table(
     ["8", "A giant octopus (SRD, CR 1) on a small boat, which is far worse than it sounds if the small boat is yours."],
     ["9", "Wreckage from the other road, which is impossible, and is not."],
     ["10", "A young kraken\u2019s wake \u2014 no encounter, just a mile of flat water and every sailor aboard gone very quiet."]
-  ], { full: true }
+  ]
 ));
 
 // ============================================================ THE MOUNTAIN ROAD
@@ -293,7 +294,7 @@ c.push(H2("Encounters on the Mountain Road"));
 
 c.push(table(
   ["d12", "Encounter"],
-  [10, 90],
+  [12, 88],
   [
     ["1", "Weather at altitude, which is a hazard rather than an encounter: exhaustion, lost days, and a real question about the refuge huts."],
     ["2\u20133", "A goat-track. It is shorter. It is also not what it looks like, and the party will be committed before they know."],
@@ -306,7 +307,7 @@ c.push(table(
     ["10", "A troll (SRD, CR 5) under a bridge, doing the traditional thing, and genuinely open to the traditional solutions."],
     ["11", "Cold. Simple, unglamorous cold \u2014 a night that costs the party a level of exhaustion apiece unless somebody plans."],
     ["12", "The lost column\u2019s first courier, coming the wrong way, with news he does not want to be carrying."]
-  ], { full: true }
+  ]
 ));
 // ================================================================= THE VAUNT
 c.push(H1("Elduvaine: The Vaunt"));
@@ -351,7 +352,7 @@ c.push(H2("Encounters in the Vaunt"));
 
 c.push(table(
   ["d12", "Encounter"],
-  [10, 90],
+  [12, 88],
   [
     ["1\u20132", "A checkpoint. Permits, a bored clerk, four guards, and the entire scene turning on whether anyone in the party can be boring convincingly."],
     ["3", "A Legion patrol of six, professional, uninterested, and willing to be talked past."],
@@ -364,7 +365,7 @@ c.push(table(
     ["10", "A Tenth Work chapter house going up on ground that had an Observance on it last year."],
     ["11", "An Unbound Clerk, hiding, half-starved, carrying four pages he will die rather than hand over."],
     ["12", "A drained dryad \u2014 see the Bestiary \u2014 no longer able to leave a wood that no longer exists."]
-  ], { full: true }
+  ]
 ));
 
 // ================================================================== THE BRAID
@@ -418,7 +419,7 @@ c.push(H2("Encounters in the Braid"));
 
 c.push(table(
   ["d12", "Encounter"],
-  [10, 90],
+  [12, 88],
   [
     ["1", "A Legion officer of rank, escorted, on the road with a clear purpose and an interest in who else is."],
     ["2\u20133", "A permit inspection at a bridgehead \u2014 and there are sixty-one bridges, so this is the Braid\u2019s weather."],
@@ -431,7 +432,7 @@ c.push(table(
     ["10", "An Unbound Clerk\u2019s dead drop, still stocked, its owner three weeks gone."],
     ["11", "The Tenth Work, consecrating ground, entirely lawfully, while the parish stands and watches."],
     ["12", "One of Vale\u2019s own \u2014 a battle-mage on the road, alone, unhurried, and not looking for a fight but entirely equal to one."]
-  ], { full: true }
+  ]
 ));
 
 // ====================================================== THE ORCHARD MARCHES

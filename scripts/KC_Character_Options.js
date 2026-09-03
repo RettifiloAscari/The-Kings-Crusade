@@ -79,13 +79,17 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 // cantSplit keeps a row\u2019s cells from being torn across a column or page break;
 // tableHeader repeats the header row when a long table does span a break.
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";   // marker only; transplant.py acts on it and strips it
-const GRID = 9360;   // text width in twips; only the ratios matter
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -125,7 +129,7 @@ c.push(P("The wyvern-watch also produces a specific personality, which is not co
 
 c.push(table(
   ["d6", "Bond"],
-  [8, 92],
+  [10, 90],
   [
     ["1", "Somebody went over the edge on my rope. I was holding it. I would like to be sure that never happens again."],
     ["2", "My name is already on a wall. There was a mistake about a body. I have never asked them to correct it."],
@@ -133,7 +137,7 @@ c.push(table(
     ["4", "The huntmaster vouched for me when nobody else would. That debt is not settled and will not be."],
     ["5", "I have killed nine wyverns and I remember all of them, and I did not enjoy any of it."],
     ["6", "There is a village that has livestock because of me. They do not know my name. That is correct."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("Archive Clerk"));
@@ -148,7 +152,7 @@ c.push(PS([{ t: "Feature: Access by Rule. ", b: true }, { t: "You know how the A
 
 c.push(table(
   ["d6", "Bond"],
-  [8, 92],
+  [10, 90],
   [
     ["1", "I filed requisitions for Maedoc Vale for four years. He was unfailingly courteous and I liked him."],
     ["2", "There is a shelf I was never cleared for and I have thought about it every day for three years."],
@@ -156,7 +160,7 @@ c.push(table(
     ["4", "The clerk at the next desk stayed on and is being paid. I have not decided what I think about that."],
     ["5", "Somebody has to be able to put it back in order afterward. It might as well be me."],
     ["6", "I refused an order to burn a catalogue. It is the only brave thing I have ever done."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("Norvatch Factor"));
@@ -172,7 +176,7 @@ c.push(PS([{ t: "Feature: The House Stands Behind It. ", b: true }, { t: "Any No
 
 c.push(table(
   ["d6", "Bond"],
-  [8, 92],
+  [10, 90],
   [
     ["1", "I signed something three years ago that is still being honoured and should not be."],
     ["2", "The house made me. Everything I am is theirs and I have never once resented it, which worries me."],
@@ -180,7 +184,7 @@ c.push(table(
     ["4", "I have never broken a written word and I intend to die with that intact."],
     ["5", "A contract I drafted killed people. Every clause in it was correct."],
     ["6", "Somebody is going to have to write the settlement at the end of this. It should be somebody competent."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("Season-Keeper"));
@@ -196,7 +200,7 @@ c.push(PS([{ t: "Feature: Read the Wood. ", b: true }, { t: "You can tell at a g
 
 c.push(table(
   ["d6", "Bond"],
-  [8, 92],
+  [10, 90],
   [
     ["1", "My wood turned last spring. I was there. I could not do anything and I did not leave."],
     ["2", "The dryad of my orchard knew my name and used it."],
@@ -204,7 +208,7 @@ c.push(table(
     ["4", "I have seeds in my pack that have not been sown. I am waiting to know they will hold."],
     ["5", "The Keepers went on working for the man killing the orchards. I was one of them."],
     ["6", "Somebody married under my wood every spring for sixty years."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("Crusade Levy"));
@@ -219,7 +223,7 @@ c.push(PS([{ t: "Feature: One of Eight Thousand. ", b: true }, { t: "You can fin
 
 c.push(table(
   ["d6", "Bond"],
-  [8, 92],
+  [10, 90],
   [
     ["1", "I am carrying a letter for somebody in the other column. I have not been able to deliver it."],
     ["2", "The priest promised me a place at the end of this. I have started wondering what that means in practice."],
@@ -227,7 +231,7 @@ c.push(table(
     ["4", "I have never in my life been chosen for anything before the king chose me."],
     ["5", "There is a farm and it is thirty acres and it is not going to work itself."],
     ["6", "I do not care about Elduvaine. I care about the eleven people in my file."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("Concord Devotee"));
@@ -242,7 +246,7 @@ c.push(PS([{ t: "Feature: The House Will Take You In. ", b: true }, { t: "Any Ni
 
 c.push(table(
   ["d6", "Bond"],
-  [8, 92],
+  [10, 90],
   [
     ["1", "The House fed me for nine years and never once mentioned it. I mention it constantly."],
     ["2", "I read the Call aloud in a town square. I have wondered ever since how many of them died on the strength of it."],
@@ -250,7 +254,7 @@ c.push(table(
     ["4", "Sennet is a Work of the written word and I have never broken one."],
     ["5", "I want to see Elduvaine because I do not believe a word of what we teach about it."],
     ["6", "Ossuar keeps the dead properly. Somebody has to do that out here and it is going to be me."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("Occupation Survivor"));
@@ -266,7 +270,7 @@ c.push(PS([{ t: "Feature: Paper and Patience. ", b: true }, { t: "You know how t
 
 c.push(table(
   ["d6", "Bond"],
-  [8, 92],
+  [10, 90],
   [
     ["1", "I hid four people for a winter and one of them informed on the other three."],
     ["2", "I paid the levy every quarter, on time, for three years. Nobody made me."],
@@ -274,7 +278,7 @@ c.push(table(
     ["4", "I have a child who does not remember the light being on."],
     ["5", "The garrison sergeant on my street was decent to me for two years. I do not know what to want for him."],
     ["6", "Somebody has to tell the coalition what it was actually like, because they have got it wrong in both directions."]
-  ], { full: true }
+  ]
 ));
 c.push(H1("Feats"));
 
@@ -429,20 +433,20 @@ c.push(H1("Magic Items"));
 c.push(P("Elduvaine\u2019s great treasures are habits made portable, and their defining quality is that they are ordinary at home and astonishing anywhere else. A light-stone lamp is a doorstep in Caer Ysolde and a wonder in Duncarrow, and the campaign gets a great deal of mileage out of party members from different countries disagreeing about whether something is remarkable."));
 
 c.push(table(
-  ["Item", "Rarity", "Attunement", "Where it first appears"],
-  [30, 18, 18, 34],
+  ["Item", "Rarity", "Where it first appears"],
+  [30, 26, 44],
   [
-    ["Standing-stone lamp", "Common", "No", "Module 3, from Caerwyn\u2019s baker"],
-    ["Flask of Listening Water", "Uncommon", "No", "Module 5, at the Standing Water"],
-    ["Road-token", "Uncommon", "Yes", "DM\u2019s discretion"],
-    ["Kept Season seeds", "Uncommon", "No", "DM\u2019s discretion"],
-    ["Legion pattern blade (+1)", "Uncommon", "No", "Module 7, Drell\u2019s campaign sword"],
-    ["Wand of magic missiles", "Uncommon", "No", "Module 7, the harbour-mage\u2019s quarters"],
-    ["Cloak of elvenkind", "Uncommon", "Yes", "Module 9, off one of Voss\u2019s scouts"],
-    ["Keeper\u2019s pruning hook", "Rare", "Yes", "The Orchard Marches"],
-    ["Ysolde reading-glass", "Rare", "Yes", "The Archive, and not easily"],
-    ["Sovereign\u2019s veil", "Very rare", "Yes", "Not lootable. See its entry."]
-  ], { full: true }
+    ["Standing-stone lamp", "Common", "Module 3, from Caerwyn\u2019s baker"],
+    ["Flask of Listening Water", "Uncommon", "Module 5, at the Standing Water"],
+    ["Road-token", "Uncommon, attuned", "DM\u2019s discretion"],
+    ["Kept Season seeds", "Uncommon", "DM\u2019s discretion"],
+    ["Legion pattern blade (+1)", "Uncommon", "Module 7, Drell\u2019s campaign sword"],
+    ["Wand of magic missiles", "Uncommon", "Module 7, the harbour-mage\u2019s quarters"],
+    ["Cloak of elvenkind", "Uncommon, attuned", "Module 9, off one of Voss\u2019s scouts"],
+    ["Keeper\u2019s pruning hook", "Rare, attuned", "The Orchard Marches"],
+    ["Ysolde reading-glass", "Rare, attuned", "The Archive, and not easily"],
+    ["Sovereign\u2019s veil", "Very rare, attuned", "Not lootable. See its entry."]
+  ]
 ));
 
 c.push(H2("Standing-Stone Lamp"));

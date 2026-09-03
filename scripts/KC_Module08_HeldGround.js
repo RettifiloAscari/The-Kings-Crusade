@@ -86,14 +86,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -122,15 +123,14 @@ c.push(P("This campaign\u2019s relief valves are designed rather than accidental
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
-  [30, 15, 55],
+  [30, 19, 51],
   [
     ["1. The Long Exhale", "45\u201360 min", "Vindana at rest. Recurring characters welcome."],
     ["2. The Grain Ledger War", "30\u201345 min", "Absurd logistics. Comedy, not combat."],
     ["3. The Magistrate", "60\u201375 min", "The second rescue, played as a caper. DC table below."],
     ["4. What the Name Costs", "20\u201330 min", "A quiet scene with Xavier. Closes the module."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
-  ],
-  { full: true }
+  ]
 ));
 
 // --------------------------------------------- What Is Actually Happening
@@ -178,14 +178,13 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [46, 26, 8, 20],
+  [44, 26, 10, 20],
   [
     ["Resolve the quartermasters\u2019 dispute without violence", "Persuasion / Insight", "10", "Easy"],
     ["Forge or produce convincing transfer papers", "Deception / an appropriate tool proficiency", "13", "Moderate"],
     ["Talk a guard out of scrutinizing the papers", "Persuasion", "10", "Easy"],
     ["Notice the pressed Elduvish clerk\u2019s actual situation", "Insight / Perception", "13", "Moderate"]
-  ],
-  { full: true }
+  ]
 ));
 
 // ---------------------------------------------------------------- Scene 4
@@ -218,7 +217,7 @@ c.push(table(
     ["The Harbour", "Everything that moved by water, in or out", "Two strokes and a date"],
     ["The Garrison", "Permits for persons, and passes", "A stamp, always smudged"],
     ["The Keeper\u2019s Office", "Anything touching the Archive or the quarries", "No mark at all, which is itself the mark"]
-  ], { full: true }
+  ]
 ));
 
 c.push(P("The carriage authorisations went out by water, so they are Harbour, and they are filed by date, and the date the party wants is the week Norvatch\u2019s volume tripled \u2014 which they can get from Morgarth\u2019s harbourmaster, or from the counting-house manifests in this module, or by asking Ottoline the question she is waiting to be asked."));

@@ -66,11 +66,11 @@ If the party refuses to pay, threatens him convincingly, is caught trying to fre
 
 Ivor Thane is the SRD Veteran (CR 3, 700 XP) renamed and reflavored, unmodified otherwise; his guards are SRD Bandits (CR 1/8, 25 XP each), both taken from the SRD unaltered. Run with Thane plus four Bandits — five total monsters, comfortably inside the 3–6 monster band, so no table’s party size pushes the count across a multiplier boundary on its own.
 
-| **Party size** | **Base XP** | **Multiplier** | **Adjusted XP** | **Medium threshold** | **Reads as** |
-| --- | --- | --- | --- | --- | --- |
-| 4 | 800 | ×2 | 1,600 | 2,000 | Easy–Medium |
-| 5 | 800 | ×2 | 1,600 | 2,500 | Easy–Medium, softer |
-| 6 | 800 | ×1.5 | 1,200 | 3,000 | below Easy |
+| **PCs** | **Mult.** | **Adj. XP** | **Medium** | **Reads as** |
+| --- | --- | --- | --- | --- |
+| 4 | ×2 | 1,600 | 2,000 | Easy–Medium |
+| 5 | ×2 | 1,600 | 2,500 | Easy–Medium, softer |
+| 6 | ×1.5 | 1,200 | 3,000 | below Easy |
 
 This is deliberately not a Hard or Deadly fight, and the table below is not a problem to fix. Historically, Richard’s taking of Cyprus was closer to a rout than a battle — Isaac Komnenos’s forces were simply outmatched — and the module is built the same way on purpose: the real tension is Sera’s crew as captives (see below), not whether the party can win. If a table wants more bite, the cleanest way to add it is to give Thane one Veteran-statted lieutenant instead of two of the Bandits, which raises the ceiling without changing the monster count or crossing a boundary. Do not simply add more Bandits to compensate for a party of six — crossing from 5 to 7 monsters jumps the multiplier band up a full step and can overcorrect badly, exactly the trap that scaling an encounter by headcount sets.
 

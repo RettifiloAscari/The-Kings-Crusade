@@ -76,16 +76,17 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 // cantSplit keeps a row\u2019s cells from being torn across a column or page break;
 // tableHeader repeats the header row when a long table does span a break.
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";   // marker only; transplant.py acts on it and strips it
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -177,7 +178,7 @@ c.push(table(
     ["Threnn Greywater", "Sea, storm, river, and everyone the water keeps", "Tempest"],
     ["Ossuar the Quiet Warden", "Death, the grave, remembrance, endings done properly", "Death"],
     ["Saveth of the Green Verge", "Wilds, beasts, the turning of the seasons", "Nature"]
-  ], { full: true }
+  ]
 ));
 
 c.push(P("A Concord priest does not ask a Work for anything. A Concord priest reports. The liturgy is closer to a guild inspection than a prayer \u2014 here is what was built this season, here is what failed, here is what we intend next \u2014 and the answering miracle, when it comes, is understood as a tool handed down rather than a favour granted. This is why Harrowmark\u2019s clergy are so difficult to impress and so hard to frighten. They were never in the business of being awed."));
@@ -234,8 +235,7 @@ c.push(table(
     ["The Listening Water", "Rivers, wells and standing pools keep speech spoken at their edge and return it in the original voice.", "Some waters have forgotten entirely. Others return speech that nobody in living memory said."],
     ["The Kept Season", "A wood holds the season it was planted in, permanently and regardless of the calendar.", "Woods are slipping. A spring stand has gone to a winter it was never sown in and cannot leave."],
     ["The Standing Light", "Worked stone in Elduvaine holds light poured into it, so cities need no lamps and cellars are never dark.", "Draining first and fastest. Caer Ysolde is dark at night for the first time in its history."]
-  ],
-  { full: true }
+  ]
 ));
 
 c.push(P("Habits are not the only thing a resident magic produces. Where Harrowmark\u2019s crags breed wyverns \u2014 mundane, appalling, ordinary animals \u2014 Elduvaine\u2019s resident magic breeds something at the same slot in the world that is not an animal at all. A dragon here is not a beast that happens to know magic; it is closer kin to the Willing Road or the Listening Water, a habit that grew teeth and appetite and left the ground. They are rare, and a land in the process of being drained is not a land producing many of anything. What the party is more likely to meet is the damage: a dragon visibly suffering, changed, or grown strange as its home region empties, the same way a wood does in the Held Winter."));
@@ -275,7 +275,7 @@ c.push(table(
     ["Year One", "Vindana falls in eleven days. The grain levy is published. Permits are issued. A bureaucracy assembles itself out of Elduvish clerks who would like to keep eating."],
     ["Year Two", "The draining becomes measurable to people who are not looking for it. Roads lengthen. Woods go wrong. Norvatch\u2019s carriage contract triples in volume."],
     ["Year Three", "The Call. Four kingdoms hear it read aloud on the same morning. Harrowmark musters at Duncarrow, and the campaign begins."]
-  ], { full: true }
+  ]
 ));
 
 // ---------------------------------------------------------------- The Fall
@@ -339,7 +339,7 @@ c.push(table(
     ["Ninian Ysolde (half-elf)", "The Ward", "Held at Sennoch Hall until the party reach it"],
     ["Ottoline Vahn (gnome)", "The Magistrate", "Held in Vindana, in what she insists on calling her chambers"],
     ["Emrys Ysolde (elf)", "The Envoy", "Held separately, and not entirely as a prisoner"]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("Maelis Ysolde, the Veiled Sovereign"));
@@ -486,7 +486,7 @@ c.push(table(
     ["The Sixth Free Legion", "Noted \u00b7 Respected \u00b7 Owed", "Professionals do not hate you. Parley honoured, prisoners exchanged, and at the very top, an officer who will take a bribe and stay bought."],
     ["House Kell of Norvatch", "Client \u00b7 Factor\u2019s Guest \u00b7 Signatory", "Anything that can be bought, delivered on time, plus three years of ledgers and the truth about the war\u2019s arithmetic."],
     ["The Unbound Clerks", "Enquirer \u00b7 Reader \u00b7 Keeper\u2019s Friend", "Archive scholars in hiding who know what is on which shelf, and are the only people alive who can tell you what Vale has already read."]
-  ], { full: true }
+  ]
 ));
 
 c.push(PS([DM("DM Only: "), { t: "the Legion is the one on this list players will assume is not available to them, and it is the most interesting. The Sixth is a hired professional army with a contract, a pay schedule and a reputation to protect, and none of that is compatible with atrocity or with fighting to the last man for an employer whose kingdom is visibly running out. A party that treats the Legion as an institution rather than a monster gets an enormous amount out of it, and the campaign is built to reward exactly that." }]));
@@ -507,7 +507,7 @@ c.push(table(
     ["Goblin", "The Sixth Free Legion", "The Legion\u2019s working language of command, whatever a given company\u2019s people happen to be. Orders, drill, and a very large body of extremely obscene marching song."],
     ["Draconic", "Oksitan\u2019s houses", "Court and heraldic use among the dragonborn nobility. An Oksitan commoner knows perhaps thirty words of it, all of them titles."],
     ["Sylvan", "Elduvaine\u2019s fey", "Dryads, sprites and satyrs. A great many Elduvish farmers have functional kitchen Sylvan and no idea it is a separate language."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("The Year, and Why Elduvaine Cannot Agree On It"));
@@ -530,7 +530,7 @@ c.push(table(
     ["Auberitz", "Anneke, Corvin, Hessel, Maartje, Sera, Wilm \u00b7 Vosk, Brandhoek, Kreyn, Aalder"],
     ["Norvatch", "Doria, Halvard, Karessa, Morvyn, Torvald, Zeruth \u00b7 Kell, Ashvane, Grimmond, Sallow"],
     ["The Sixth Free Legion", "Drell, Voss, Grask, Hoth, Nazira, Ruk, Ossian, Sekh \u00b7 companies are numbered, never named"]
-  ], { full: true }
+  ]
 ));
 
 // ------------------------------------------ What Is Actually Happening (DM Only)

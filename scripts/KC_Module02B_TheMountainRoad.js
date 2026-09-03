@@ -86,14 +86,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -122,15 +123,14 @@ c.push(P("Play the march as a slow accumulation of small costs rather than one l
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
-  [30, 15, 55],
+  [30, 19, 51],
   [
     ["1. The Long Column", "20\u201330 min", "Establishes the grind of the march before anything goes wrong."],
     ["2. The Ashgate Ford", "30\u201345 min", "A hazard scene, not a fight. See Tiered Skill DCs below."],
     ["3. Baron Vell\u2019s Toll", "90\u2013120 min", "Negotiation, and combat if it comes to that. DC table and stat blocks below."],
     ["4. The Cost of the Road", "30\u201345 min", "What the march has spent, and the road onward \u2014 Branch Ledger entry."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
-  ],
-  { full: true }
+  ]
 ));
 
 // --------------------------------------------- What Is Actually Happening
@@ -163,14 +163,13 @@ c.push(H3("The Ford: Tiered Skill DCs"));
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [46, 26, 8, 20],
+  [44, 26, 10, 20],
   [
     ["Read the ford and find the safest line across", "Survival / Nature", "13", "Moderate"],
     ["Steady a wagon or animal mid-crossing", "Athletics / Animal Handling", "13", "Moderate"],
     ["Anchor a rope line the column can cross on", "Athletics", "10", "Easy"],
     ["Rescue someone the current has taken", "Athletics (Strength save DC 13 for the one swept)", "16", "Hard"]
-  ],
-  { full: true }
+  ]
 ));
 
 // ---------------------------------------------------------------- Scene 3
@@ -195,14 +194,13 @@ c.push(H3("Scaling the Fight"));
 c.push(P("Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts \u2014 four total monsters, inside the 3\u20136 monster band, so no table\u2019s party size crosses a multiplier boundary on its own."));
 
 c.push(table(
-  ["Party size", "Base XP", "Multiplier", "Adjusted XP", "Medium threshold", "Reads as"],
-  [9, 12, 13, 14, 20, 32],
+  ["PCs", "Mult.", "Adj. XP", "Medium", "Reads as"],
+  [12, 16, 16, 19, 37],
   [
     ["4", "750", "\u00D72", "1,500", "2,000", "Easy\u2013Medium"],
     ["5", "750", "\u00D72", "1,500", "2,500", "Easy\u2013Medium, softer"],
     ["6", "750", "\u00D71.5", "1,125", "3,000", "below Easy"]
-  ],
-  { full: true }
+  ]
 ));
 
 c.push(P("As with the wyvern in Module One and Thane in Module 2A, this is not meant to be a Hard or Deadly encounter, and the six-player row is not a problem to fix by adding a fourth Scout \u2014 crossing from 4 to 5 monsters is safe, but a table that keeps adding bodies for a larger party risks crossing into the 7\u201310 monster band, which jumps the multiplier up a full step and can overcorrect badly. If a table of six wants more bite, the terrain itself is the honest lever: Vell\u2019s scouts firing from height and cover, forcing difficult ground or cover checks to close the distance, does more to raise the real difficulty than another body would."));
@@ -260,14 +258,13 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [46, 26, 8, 20],
+  [44, 26, 10, 20],
   [
     ["Talk Vell down to a token toll", "Persuasion", "16", "Hard"],
     ["Read that Vell\u2019s numbers are a bluff", "Insight", "13", "Moderate"],
     ["Find a way around the toll-keep entirely", "Survival", "16", "Hard"],
     ["Spot the scouts on the ridgeline before they act", "Perception", "16", "Hard (their passive Perception is 15)"]
-  ],
-  { full: true }
+  ]
 ));
 
 // ---------------------------------------------------------------- Scene 4
@@ -313,7 +310,7 @@ c.push(table(
     ["A wave", "Water", "The flooded lower gallery. Not a trap. A genuine warning, and the thing they want help with."],
     ["Two dots and a stroke", "Ours, do not touch", "A larder. It is a larder. There is nothing else to it and a paranoid party will spend twenty minutes on it."],
     ["A hand, open", "Come in, talk", "The negotiating chamber. They have prepared a speech and are hurt if nobody hears it."]
-  ], { full: true }
+  ]
 ));
 
 c.push(PS([DM("DM Only: "), { t: "the whole encounter tips on whether a party assumes signposting is malice. If they blunder through, they take real damage from traps that told them, in writing, what they were. If they stop and think, they get sixty kobolds who would very much like to be left alone, will pay in silver they have no use for, and want somebody to do something about what is in the flooded lower gallery. Reward the reading. Do not punish the fighting, but do not soften it either." }]));

@@ -82,14 +82,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -123,15 +124,14 @@ c.push(P("Fill the place out as you go. Duncarrow\u2019s yard is humans and dwar
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
-  [30, 15, 55],
+  [30, 19, 51],
   [
     ["1. The Summons", "20 min", "Optional introductions fold in here if needed."],
     ["2. Audience with the King", "45\u201360 min", "The Promise, the crusade, and the party\u2019s place in it."],
     ["3. The Wyvern at Greywatch", "90\u2013120 min", "The session\u2019s combat. See DC table and stat block below."],
     ["4. The Muster\u2019s End", "30\u201345 min", "Departure, and the road choice \u2014 Branch Ledger entry 1."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
-  ],
-  { full: true }
+  ]
 ));
 
 // --------------------------------------------- What Is Actually Happening
@@ -189,14 +189,13 @@ c.push(H3("Scaling the Fight"));
 c.push(P("The wyvern below is the SRD statistics unmodified, run against Dungeon Master\u2019s Guide adjusted-XP thresholds for 5th-level characters (Easy 250 / Medium 500 / Hard 750 / Deadly 1100 per character). A single monster carries a \u00D71 multiplier at party sizes of 3\u20135 and \u00D70.5 at 6 or more \u2014 the party-of-six discount that quietly softens most encounters for large tables, and it lands hard here."));
 
 c.push(table(
-  ["Party size", "Adjusted XP", "Deadly threshold", "Reads as", "Compensate with"],
-  [10, 13, 15, 16, 46],
+  ["PCs", "Adj. XP", "Deadly", "Reads as", "Compensate with"],
+  [12, 14, 19, 24, 31],
   [
     ["4", "2,300", "4,400", "Medium\u2013Hard", "Run as written."],
     ["5", "2,300", "5,500", "just under Medium", "Run as written; the rope tactic and morale give it teeth the raw math understates."],
     ["6", "1,150", "6,600", "below Easy", "Do not add a second wyvern \u2014 crossing the 1\u21922 monster boundary roughly doubles the multiplier and overcorrects badly. Instead add one complication: a burning hayrick blocking the herd pens, or a trapped child in the loft, that raises the practical stakes without touching the monster count."]
-  ],
-  { full: true }
+  ]
 ));
 
 // -------------------------------------------------------------- Skill DCs
@@ -206,7 +205,7 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [46, 26, 8, 20],
+  [44, 26, 10, 20],
   [
     ["Notice the summons rider is telling the truth about Duncarrow", "Insight", "10", "Easy"],
     ["Read that Xavier is uncomfortable with pageantry, not with them", "Insight", "13", "Moderate"],
@@ -215,8 +214,7 @@ c.push(table(
     ["Steady panicking livestock or hold-folk mid-attack", "Animal Handling / Persuasion", "13", "Moderate"],
     ["Spot the stinger wind-up in time to call a warning", "Perception", "16", "Hard"],
     ["Earn Brenna\u2019s open respect rather than her polite tolerance", "Persuasion (or demonstrated competence)", "16", "Hard"]
-  ],
-  { full: true }
+  ]
 ));
 
 // ---------------------------------------------------------------- Stat Block
@@ -267,13 +265,13 @@ c.push(P("The quartermaster hands over four company rolls. The party may read th
 
 c.push(table(
   ["Company", "On the roll", "Rations drawn", "Billeted at"],
-  [26, 20, 20, 34],
+  [26, 20, 21, 33],
   [
     ["Fenmarrow Third", "210", "210", "The east field, in tents"],
     ["Corrieholt Horse", "160", "184", "The east field, in tents"],
     ["Stannock Pike", "240", "240", "The stable range"],
     ["Greywatch Watch", "90", "90", "Billeted in the town"]
-  ], { full: true }
+  ]
 ));
 
 c.push(P("The Corrieholt discrepancy is a decoy and is entirely honest: light horse draw a fodder allowance that is docketed as rations, which any Auberitz quartermaster will confirm on request. The actual fraud is that the Stannock Pike company is billeted in the stable range, and the stable range holds one hundred and eighty men. Sixty of that company are on the roll, drawing bread, and are not in the camp at all."));

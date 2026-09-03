@@ -84,14 +84,15 @@ const IMG = (file, w, h, alt) => new Paragraph({
 });
 
 const { Table, TableRow, TableCell, WidthType, ShadingType, TableLayoutType } = require('docx');
-const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 60, bottom: 60, left: 110, right: 110 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
+const cell = (text, opts = {}) => new TableCell({ width: { size: opts.w || 20, type: WidthType.PERCENTAGE }, shading: opts.head ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, margins: { top: 55, bottom: 55, left: 60, right: 60 }, children: [new Paragraph({ spacing: { after: 0 }, indent: { firstLine: 0 }, children: [new TextRun({ text, bold: !!opts.head, size: 18 })] })] });
 const row = (cells, opts = {}) => new TableRow({ children: cells, cantSplit: true, ...opts });
-const FULLWIDTH = "KCFullWidth";
-// docx-js emits <w:tblGrid> only when given columnWidths in DXA. Without a grid
-// LibreOffice ignores the per-cell percentages and distributes columns evenly, so a
-// d6 column holding one digit took a third of the table. Only the ratios matter.
-const GRID = 9360;
-const table = (headers, widths, rows, opts = {}) => new Table({ ...(opts.full ? { style: FULLWIDTH } : {}), layout: TableLayoutType.FIXED, columnWidths: widths.map(w => Math.round(w / 100 * GRID)), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
+// Column widths, normalised to the text width in twips. Passing columnWidths is what
+// makes docx-js emit a <w:tblGrid>; without one LibreOffice discards the per-cell
+// percentages and distributes every column evenly. Normalising by the sum rather than
+// assuming the widths total 100 is what the Qilvayas generators do, and it means a
+// widths array never has to be arithmetic-checked by hand.
+const CW = (w) => { const t = w.reduce((a, b) => a + b, 0); return w.map((x) => Math.round(9026 * x / t)); };
+const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIXED, columnWidths: CW(widths), width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ row(headers.map((h, i) => cell(h, { head: true, w: widths[i] })), { tableHeader: true }), ...rows.map(r => row(r.map((v, i) => cell(v, { w: widths[i] })))) ] });
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
@@ -120,15 +121,14 @@ c.push(P("Play Vindana as a place with its own life going on behind its walls, n
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
-  [30, 15, 55],
+  [30, 19, 51],
   [
     ["1. The Lines Close", "30\u201340 min", "First sight of Vindana up close; the siege lines form."],
     ["2. Raising the Engines", "45\u201360 min", "A practical, largely non-combat scene. See Tiered Skill DCs."],
     ["3. The Cavalry Screen", "45\u201360 min", "A horse-raid on Vindana\u2019s supply. DC table and stat blocks below."],
     ["4. First Assault", "60\u201390 min", "A probing attack that does not take the city. The module\u2019s setback."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
-  ],
-  { full: true }
+  ]
 ));
 
 // --------------------------------------------- What Is Actually Happening
@@ -182,15 +182,14 @@ c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this
 
 c.push(table(
   ["Task", "Skill", "DC", "Tier"],
-  [46, 26, 8, 20],
+  [44, 26, 10, 20],
   [
     ["Correct a flawed siege engine joint before it fails", "Investigation / a relevant craft", "13", "Moderate"],
     ["Haul and position engine timber efficiently", "Athletics", "10", "Easy"],
     ["Defend an engine work party from a probing sortie", "Combat or relevant skill, DM\u2019s judgment", "13", "Moderate"],
     ["Track and intercept the supply column before it reaches Vindana", "Survival", "13", "Moderate"],
     ["Read Marshal Drell\u2019s dispositions during First Assault", "Investigation / Perception", "16", "Hard"]
-  ],
-  { full: true }
+  ]
 ));
 
 // ---------------------------------------------------------------- Scene 4
@@ -247,7 +246,7 @@ c.push(table(
     ["E. The old sluice", "A gate mechanism, seized, that once drained the cistern.", "Freeing it is DC 16 Strength or an hour with tools. It matters in Module Seven."],
     ["F. The under-wall", "Where the drain passes beneath the inner wall.", "This is the prize. A route under the walls, into the garrison quarter."],
     ["G. The grain undercroft", "The garrison\u2019s reserve store, reachable only from F.", "What the kobolds want. They cannot reach it and the party can."]
-  ], { full: true }
+  ]
 ));
 
 c.push(H2("The Puzzle: What the Kobolds Want"));

@@ -696,11 +696,32 @@ it is relative to `corpus/`, where the generated `.md` lives, so it reads as
 template package, remapping relationship ids so they cannot collide with the template's
 own. **Keep images to PNG or JPEG**, and give every one real alt text.
 
-**Full-width tables.** `table(headers, widths, rows, { full: true })` makes a table span
-both columns instead of wrapping to three or four words a line. It works by tagging the
-table with a marker style that `transplant.py` finds, wraps in a pair of continuous
-section breaks, and strips. Use it for any table with a prose column; leave narrow
-numeric tables in the column flow. In a `--single` document the marker is simply removed.
+**Every table sits in the column flow. There are no full-width tables, deliberately.**
+`transplant.py` still carries the machinery for them — a `KCFullWidth` marker style, wrapped
+in a pair of continuous section breaks and stripped — and **nothing uses it, on purpose.**
+Do not reach for it. A table that breaks out of the column interrupts the text either side
+of it, strands short lines above and below, and disjoints a page far worse than a narrow
+column ever does. The Qilvayas generators have no such mechanism at all and their d12
+encounter tables, prose column and all, read perfectly well in-column; this repository now
+matches them.
+
+The full-width mechanism was originally added because tables "wrapped to three or four words
+a line" — but that was the missing `tblGrid` below, not the column width. Once the grid was
+supplied the symptom went away, and the workaround with it. **If a table looks cramped, the
+fix is the widths, the header wording, or fewer columns — never breaking the column.**
+
+**Keep tables to three columns, four at the outside.** Six-column encounter-scaling tables
+were the worst offenders in the set: `Party size / Base XP / Multiplier / Adjusted XP /
+Medium threshold / Reads as` cannot fit a two-column measure and broke headers mid-word as
+`Multiplie`/`r`. Dropping a constant column and shortening every header to `PCs / Mult. /
+Adj. XP / Medium / Reads as` fixed it without losing a thing. The one six-column table left
+is in the DM Reference Guide, which is single-column and has the whole page.
+
+**A column must be wide enough for its longest header word, and the arithmetic is not
+obvious.** The two-column measure is about 4860 twips, each cell loses 120 to padding, and a
+9pt glyph averages ~90 twips, so usable characters run about `w * 0.44 - 2.0` for a width
+given in percent. A column at 8% holds two characters, not three — `PCs` broke there. When
+in doubt, widen it and render the page; the estimate is a guide and the render is the truth.
 
 **Column widths need a `tblGrid`, or LibreOffice ignores them.** `table()` passes
 `columnWidths` (in twips, derived from the percentage `widths` against a 9360 nominal) and
@@ -718,6 +739,10 @@ a column or page break, header rows carry `tableHeader` so they repeat when a lo
 does span a break, and the ability-score row in `SB()` uses `keepNext` so the values stay
 with their labels. A stat block whose STR/DEX/CON header lands in one column and its
 numbers in the next is a real bug and this is what prevents it.
+
+**Cell padding is 60 twips, not 110.** It was widened to 110 when tables spanned both
+columns; at half that measure the same padding ate twice the proportion and cramped every
+cell. Qilvayas uses 45. 60 is the compromise that survived a render check.
 
 **Table cells must kill the inherited first-line indent.** `cell()` and `abCell()` both set
 `indent: { firstLine: 0 }`, for the same reason `BOX` and `VERSE` do — the template's
@@ -742,7 +767,7 @@ had the problem.
 
 ## Current State
 
-**Eighteen documents, 105 pages, all verified clean and byte-reproducible.**
+**Eighteen documents, 100 pages, all verified clean and byte-reproducible.**
 
 - `scripts/KC_Sourcebook.js` — the call, the peoples, **faith in the Nine Works** (the
   Concord, Elduvaine's Observances, the Order of the Tenth Work), Elduvaine before the fall,

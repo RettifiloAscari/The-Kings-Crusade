@@ -75,8 +75,8 @@ If it comes to violence — Vell refuses reasonable terms, the party attacks, or
 
 Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts — four total monsters, inside the 3–6 monster band, so no table’s party size crosses a multiplier boundary on its own.
 
-| **Party size** | **Base XP** | **Multiplier** | **Adjusted XP** | **Medium threshold** | **Reads as** |
-| --- | --- | --- | --- | --- | --- |
+| **PCs** | **Mult.** | **Adj. XP** | **Medium** | **Reads as** |
+| --- | --- | --- | --- | --- |
 | 4 | 750 | ×2 | 1,500 | 2,000 | Easy–Medium |
 | 5 | 750 | ×2 | 1,500 | 2,500 | Easy–Medium, softer |
 | 6 | 750 | ×1.5 | 1,125 | 3,000 | below Easy |

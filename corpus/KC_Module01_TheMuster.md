@@ -80,7 +80,7 @@ The stinger is the fight’s real danger and should read as one — not a number
 
 The wyvern below is the SRD statistics unmodified, run against Dungeon Master’s Guide adjusted-XP thresholds for 5th-level characters (Easy 250 / Medium 500 / Hard 750 / Deadly 1100 per character). A single monster carries a ×1 multiplier at party sizes of 3–5 and ×0.5 at 6 or more — the party-of-six discount that quietly softens most encounters for large tables, and it lands hard here.
 
-| **Party size** | **Adjusted XP** | **Deadly threshold** | **Reads as** | **Compensate with** |
+| **PCs** | **Adj. XP** | **Deadly** | **Reads as** | **Compensate with** |
 | --- | --- | --- | --- | --- |
 | 4 | 2,300 | 4,400 | Medium–Hard | Run as written. |
 | 5 | 2,300 | 5,500 | just under Medium | Run as written; the rope tactic and morale give it teeth the raw math understates. |
