@@ -95,6 +95,15 @@ every generator.** `tools/verify.sh` does.
 - **Tables must not tear.** `row()` sets `cantSplit`, header rows carry `tableHeader` so
   they repeat across a break, and the ability-score row in `SB()` uses `keepNext` so values
   stay with their labels.
+- **Prose after a table gets its gap from `transplant.py`, not the generator.** A table
+  carries no space-after in OOXML, so prose immediately following one sat flush against its
+  bottom border; headings always looked right because their style supplies
+  `spacing.before`. `gap_after_tables()` gives the first paragraph after each table a
+  180-twip before-gap, skipping headings, any paragraph whose author set a `before`
+  deliberately, and blank spacer paragraphs — an empty paragraph is already the gap, and
+  that test must be on the text content, since docx-js emits an empty run as `<w:t></w:t>`
+  rather than omitting it. Fixed in `transplant.py` because `table()` returns a single
+  Table, so a per-call fix would mean touching all seventy-one call sites forever after.
 - **Cell padding is 60 twips** (left/right), and cells kill the inherited first-line indent
   with `indent: { firstLine: 0 }` — the template's default `firstLine=180` otherwise leaks
   in and every wrapped cell gets a ragged left edge. Padding lives in `margins`, *not* in
