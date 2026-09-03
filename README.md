@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="images/title-banner.png"
+       alt="The King&#39;s Crusade &mdash; a Dungeons &amp; Dragons 5th Edition campaign setting. A crowned king in battered plate and a fur mantle stands before a dark city of spires, a coil of rope at his hand; beside him a stone mosaic shows pikemen bringing down a dragon with ropes and long spears."
+       width="1024">
+</p>
+
 # The King's Crusade
 
 A Dungeons & Dragons 5th Edition campaign, high fantasy and traditionally D&D, built on a
@@ -106,7 +112,7 @@ discards those edits.
 | `tools/` | `build.sh` regenerates and verifies everything; `docx-md-shim/` emits the Markdown; `normalize_pdf.py` makes the PDF reproducible. |
 | `reference/` | Mirrored instructions — `project-instructions.md` mirrors `CLAUDE.md`; update both together. |
 | `drafts/` | Design drafts. `*.RESOLVED.md` have been signed off and folded into canon; the rest are proposals. **Not canon.** |
-| `images/` | Artwork, named for what it depicts. **Input to the build** — generators place it with `IMG()`. Currently empty. |
+| `images/` | Artwork, named for what it depicts. **Input to the build** — generators place it with `IMG()`. Holds the README title banner; no document carries an illustration yet. |
 
 `corpus/` and `documents/` are produced from the same untouched scripts in the same build,
 so the Markdown and the published documents cannot drift apart.

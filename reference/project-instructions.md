@@ -336,7 +336,7 @@ written in `scripts/KC_Sourcebook.js`):
 | What the deepest vaults actually contain | What Vale is reading toward. The sourcebook states his motive; it does not state his destination. |
 | Whether Vale is still human | Deliberately ambiguous in v1; not yet an answer. |
 | Cosmology and the planes | The pantheon is settled (the Nine Works, above); planes, afterlives and what the Concord actually teaches about any of it are not, and no document names a plane. |
-| Maps and artwork | **`images/` is empty and eighteen documents carry no illustration of any kind.** This is the largest remaining gap in the set and it is a canon question, not only a production one: a drawn map commits to coastline, adjacency, scale and what lies between in ways prose has so far avoided, and the gazetteer's travel times are the only spatial facts currently binding. Needs sign-off on the geography before anything is drawn. `IMG()` and the transplant path are built and were verified against a test card early on, so the pipeline is waiting on the decision rather than the other way round. |
+| Maps and artwork | **No document carries an illustration of any kind.** (`images/` holds a README title banner, which commits to nothing.) This is the largest remaining gap in the set and it is a canon question, not only a production one: a drawn map commits to coastline, adjacency, scale and what lies between in ways prose has so far avoided, and the gazetteer's travel times are the only spatial facts currently binding. Needs sign-off on the geography before anything is drawn. `IMG()` and the transplant path are built and were verified against a test card early on, so the pipeline is waiting on the decision rather than the other way round. |
 
 **Deliberately open** — questions left unresolved *by design*, which later sessions must
 not helpfully close:
@@ -654,9 +654,11 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
   lack of a church, and the Tenth Work as an ally that says openly what it intends) and **the
   House of Ysolde** by name and public reputation only. Still withholds Vale's motive, whether
   he is human, the Wyvernheart, and the ending structure.
-- **`images/` is still empty**, so `IMG()` remains unexercised: eighteen documents of prose
-  and not one map or illustration. **This is now a tracked open item** (see *Not yet
-  decided*), because a map fixes geography in ways the prose has deliberately not.
+- **`images/` holds one file — the README title banner — and `IMG()` remains unexercised**:
+  eighteen documents of prose and not one map or illustration inside any of them. The banner
+  is repository furniture and commits to nothing; **the artwork question is still a tracked
+  open item** (see *Not yet decided*), because a map fixes geography in ways the prose has
+  deliberately not.
 - **The pipeline is unchanged and still proven.** Three new generators registered in
   `tools/build.sh`; `SINGLE_COL_MATCH` still names only the DM Reference Guide.
 
