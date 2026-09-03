@@ -354,13 +354,11 @@ c.push(H2("Warlock: The Sleeping Archive"));
 
 c.push(P("Something older than the wards sleeps near or under the Ysolde Archive. It answers to neither Maedoc Vale nor anybody else, it has not woken in living memory, and it has, on a very small number of occasions across four centuries, made an arrangement with a reader."));
 
-c.push(PS([DM("DM Only: "), { t: "this patron does not answer what is in the deepest vaults, and a DM should be careful not to let a player conclude that it does. The dragon is a single approved exception that sleeps under the building. It is not a key to the building\u2019s contents, it does not know what is on the sealed shelves, and its interest in the campaign is entirely its own. If a player asks, the honest answer is that it has never said." }]));
-
 c.push(B("Expanded Spell List.", "1st: comprehend languages, sleep. 2nd: detect thoughts, locate object. 3rd: clairvoyance, tongues. 4th: divination, arcane eye. 5th: legend lore, dream."));
 
 c.push(PS([{ t: "Reader\u2019s Privilege (1st level). ", b: true }, { t: "You can read any written language, though not necessarily understand what is being discussed. Additionally, when you spend at least an hour with a written work, you learn one true and specific fact about the person who wrote it that they did not intend to record." }]));
 
-c.push(PS([{ t: "What the Vaults Hold Back (6th level). ", b: true }, { t: "As a reaction when you fail a saving throw against a spell of 5th level or lower, you may succeed instead. Something enormous shifts in its sleep and the spell simply does not apply to you. You cannot use this feature again until you finish a long rest, and you dream about it." }]));
+c.push(PS([{ t: "The Sleeper Refuses (6th level). ", b: true }, { t: "As a reaction when you fail a saving throw against a spell of 5th level or lower, you may succeed instead. Something enormous shifts in its sleep and the spell simply does not apply to you. You cannot use this feature again until you finish a long rest, and you dream about it." }]));
 
 c.push(PS([{ t: "Deep Sleeper\u2019s Ward (10th level). ", b: true }, { t: "You have resistance to psychic damage, and you cannot be put to sleep by magic. You do sleep. You sleep extremely well, and for slightly longer than you intend, and this has never once been convenient." }]));
 
@@ -425,7 +423,7 @@ c.push(B("Range:", "60 feet"));
 c.push(B("Components:", "V, S, M (a piece of cut light-stone, which is consumed)"));
 c.push(B("Duration:", "Instantaneous"));
 c.push(P("You pull the life out of a 30-foot-radius sphere. Each creature in the area must make a Constitution saving throw, taking 8d8 necrotic damage on a failed save, or half as much on a success. Every ordinary plant in the area dies, the ground is barren for a year, and any resident-magic effect in the area is suppressed for 24 hours."));
-c.push(PS([DM("DM Only: "), { t: "this is what the occupation\u2019s battle-mages use and it is on the list so that a party can recognise it when it is cast at them, and can understand exactly what they are looking at the first time somebody does it to a field. A player character can learn it. Nothing in the rules prevents that and nothing in this book will stop them. What will happen is that an Elduvish NPC will see them cast it, and the campaign should absolutely make that a scene." }]));
+c.push(P("This is what the occupation\u2019s battle-mages use, and it is in this book so that you can recognise it the first time it is cast at you. Nothing in the rules prevents a player character learning it, and nothing in this book will stop you \u2014 but an Elduvish farmer who watches you cast it will know exactly what you have just done to their field, and will not be interested in whether you meant well."));
 c.push(B("Available to:", "Sorcerer, warlock, wizard"));
 
 c.push(H1("Magic Items"));
@@ -444,8 +442,7 @@ c.push(table(
     ["Wand of magic missiles", "Uncommon", "Module 7, the harbour-mage\u2019s quarters"],
     ["Cloak of elvenkind", "Uncommon, attuned", "Module 9, off one of Voss\u2019s scouts"],
     ["Keeper\u2019s pruning hook", "Rare, attuned", "The Orchard Marches"],
-    ["Ysolde reading-glass", "Rare, attuned", "The Archive, and not easily"],
-    ["Sovereign\u2019s veil", "Very rare, attuned", "Not lootable. See its entry."]
+    ["Ysolde reading-glass", "Rare, attuned", "The Archive, and not easily"]
   ]
 ));
 
@@ -457,7 +454,7 @@ c.push(P("It holds daylight rather than making it, which is a distinction that m
 c.push(H2("Flask of Listening Water"));
 c.push(PS([{ t: "Wondrous item, uncommon", i: true }]));
 c.push(P("A stoppered flask of water drawn from an Elduvish river while something was being said over it. Unstopper it and it gives back what was spoken at its mouth, once, in the speaker\u2019s own voice, for up to one minute. Then it is only water."));
-c.push(P("A flask can be filled again at any Listening Water in Elduvaine. The campaign\u2019s better use is the other one: a party can deliberately speak into it and carry the words somewhere. What they choose to put in it is the point, and a DM should ask, and should write the answer down."));
+c.push(P("A flask can be filled again at any Listening Water in Elduvaine. Its better use is the other one: you can deliberately speak into it and carry the words somewhere. What you choose to put in it is the whole point of owning one."));
 
 c.push(H2("Road-Token"));
 c.push(PS([{ t: "Wondrous item, uncommon (requires attunement)", i: true }]));
@@ -467,7 +464,7 @@ c.push(P("The token explains itself no more than the road does. It works less we
 c.push(H2("Kept Season Seeds"));
 c.push(PS([{ t: "Wondrous item, uncommon", i: true }]));
 c.push(P("A sealed packet of a dozen seeds taken from a Kept Season wood. Sown together in a plot of at least twenty feet square and left for a year, they produce a stand that holds the season they were sown in, permanently, in the way the Orchard Marches do."));
-c.push(P("This is not an adventuring item and is very deliberately not one. It is a thing a party can plant, somewhere they choose, and come back to in an epilogue. Give it to them early. Say nothing about it afterward."));
+c.push(P("This is not an adventuring item and is very deliberately not one. It is a thing you can plant, somewhere you choose, and come back to when the war is over. Nothing in this book will remind you about it again."));
 
 c.push(H2("Keeper\u2019s Pruning Hook"));
 c.push(PS([{ t: "Weapon (sickle), rare (requires attunement by a druid, ranger, or cleric)", i: true }]));
@@ -478,13 +475,6 @@ c.push(H2("Ysolde Reading-Glass"));
 c.push(PS([{ t: "Wondrous item, rare (requires attunement)", i: true }]));
 c.push(P("A hand lens in a plain gnome-cut frame, issued to Archive clerks of the fourth grade and above. Looking through it, you can read any written language, and you can tell at a glance whether a document is a forgery, a copy, or an original, and roughly how old it is."));
 c.push(P("It also does the thing it was actually made for, which is that it will not let you read anything you are not entitled to read. Text beyond your permission is simply blank through the glass. Nobody has ever worked out how it decides, the Archive did not consider this a problem, and Maedoc Vale used one for nineteen years."));
-
-c.push(H2("Sovereign\u2019s Veil"));
-c.push(PS([{ t: "Wondrous item, very rare (requires attunement by the reigning sovereign of Elduvaine)", i: true }]));
-c.push(P("Grey silk, unremarkable, and the reason nobody has seen Maelis Ysolde\u2019s face in four years. While attuned and worn, the wearer cannot be scried, read, charmed or compelled, cannot be lied to about the state of Elduvaine\u2019s habits, and knows at all times, precisely, how much of the Living Realm remains."));
-c.push(P("The last of those is not a benefit and was never intended as one. It was made so that a sovereign would always know the condition of the thing they were bound to, in a kingdom where that binding was a nine-hundred-year source of long life and good weather. She has worn it through three years of the draining."));
-
-c.push(PS([DM("DM Only: "), { t: "the veil is in this book so that a DM knows it exists and knows exactly what it has been doing to her, and not because it is loot. It cannot be taken, attunes to nobody else, and does nothing for anyone who is not bound to the habits. If a party asks her what the number is, she will tell them, and it is the single most demoralising piece of information available anywhere in the campaign, and she will give it to them without softening it because she has never once softened anything." }]));
 
 c.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 300, after: 100 }, children: [new TextRun({ text: "~", size: 24 })] }));
 c.push(PS([{ t: "\u201CIn Caer Ysolde it is a doorstep. Here it is the most remarkable thing anyone in this village has ever seen. Both of those are correct and I have stopped trying to reconcile them.\u201D", i: true }], { alignment: AlignmentType.CENTER }));

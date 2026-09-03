@@ -207,10 +207,36 @@ c.push(table(
   ]
 ));
 
+c.push(H2("Kept Out of the Player-Facing Book"));
+
+c.push(P("Three pieces of DM material used to sit in Character Options, which is a book a player is handed. They live here now. The first two are guidance; the third is an item no player character can ever attune, whose description gives away one of the campaign\u2019s two clocks."));
+
+c.push(H3("The Sleeping Archive"));
+
+c.push(PS([DM("DM Only: "), { t: "the warlock patron does not answer what is in the deepest vaults, and a DM should be careful not to let a player conclude that it does. The dragon sleeps under the building. It is not a key to the building\u2019s contents, it does not know what is on the sealed shelves, and its interest in the campaign is entirely its own. If a player asks, the honest answer is that it has never said. The patron\u2019s entry in Character Options says only that something older than the wards sleeps near or under the Archive, which is all a warlock\u2019s player needs and all they should get." }]));
+
+c.push(H3("Draw Down"));
+
+c.push(PS([DM("DM Only: "), { t: "a player character can learn the occupation\u2019s draining spell. Nothing in the rules prevents it and nothing in the books will stop them. What should happen is that an Elduvish NPC sees them cast it, and the campaign should absolutely make that a scene. Character Options says as much to the player, in the player\u2019s own terms, and stops there." }]));
+
+c.push(H3("Kept Season Seeds"));
+
+c.push(PS([DM("DM Only: "), { t: "give the seeds to the party early and then never mention them again. The item\u2019s whole value is that it is not an adventuring item: it is a thing they can plant somewhere they choose and come back to in an epilogue, and it only lands if nobody has been nudging them toward it for nine modules. Character Options tells the player what it does and says nothing about when they will get it." }]));
+
+c.push(H3("Sovereign\u2019s Veil"));
+
+c.push(PS([{ t: "Wondrous item, very rare (requires attunement by the reigning sovereign of Elduvaine)", i: true }]));
+
+c.push(P("Grey silk, unremarkable, and the reason nobody has seen Maelis Ysolde\u2019s face in four years. While attuned and worn, the wearer cannot be scried, read, charmed or compelled, cannot be lied to about the state of Elduvaine\u2019s habits, and knows at all times, precisely, how much of the Living Realm remains."));
+
+c.push(P("The last of those is not a benefit and was never intended as one. It was made so that a sovereign would always know the condition of the thing they were bound to, in a kingdom where that binding was a nine-hundred-year source of long life and good weather. She has worn it through three years of the draining."));
+
+c.push(PS([DM("DM Only: "), { t: "the veil is here so that a DM knows it exists and knows exactly what it has been doing to her, and not because it is loot. It cannot be taken, attunes to nobody else, and does nothing for anyone not bound to the habits. If a party asks her what the number is, she will tell them, and it is the single most demoralising piece of information available anywhere in the campaign, and she will give it without softening it because she has never once softened anything. It was in the player-facing options book by mistake: the attunement line alone tells a player that Elduvaine\u2019s sovereign is bound to the land, which is a Module Eleven reveal." }]));
+
 // ---------------------------------------------------------------- Recurring NPCs
 c.push(H1("Recurring NPCs"));
 
-c.push(P("Named NPCs the campaign\u2019s own modules flag as \u201copen threads\u201d \u2014 built to be brought back, not to be used once and discarded. Three (the Ward, the Magistrate, the Regent) are members of Elduvaine\u2019s royal house and deliberately carry no proper name yet, and naming them is a decision this campaign has not yet made."));
+c.push(P("Named NPCs the campaign\u2019s own modules flag as \u201copen threads\u201d \u2014 built to be brought back, not to be used once and discarded. The royal house is named in the sourcebook: Maelis, Aveline, Ninian, Ottoline and Emrys. The titles below are how the modules refer to them at the table, because that is how the party meets them."));
 
 c.push(table(
   ["Name", "Introduced", "Role"],

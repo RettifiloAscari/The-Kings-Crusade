@@ -88,9 +88,35 @@ Four habits made portable, and the campaign’s best treasure. Ordinary inside E
 | Road-token | Cut from a Willing Road waystone. Explains itself no more than the road does. | DM’s discretion |
 | Kept Season seeds | A small stand holds whatever season the seeds were sown in. | DM’s discretion |
 
+## Kept Out of the Player-Facing Book
+
+Three pieces of DM material used to sit in Character Options, which is a book a player is handed. They live here now. The first two are guidance; the third is an item no player character can ever attune, whose description gives away one of the campaign’s two clocks.
+
+### The Sleeping Archive
+
+**DM Only:** the warlock patron does not answer what is in the deepest vaults, and a DM should be careful not to let a player conclude that it does. The dragon sleeps under the building. It is not a key to the building’s contents, it does not know what is on the sealed shelves, and its interest in the campaign is entirely its own. If a player asks, the honest answer is that it has never said. The patron’s entry in Character Options says only that something older than the wards sleeps near or under the Archive, which is all a warlock’s player needs and all they should get.
+
+### Draw Down
+
+**DM Only:** a player character can learn the occupation’s draining spell. Nothing in the rules prevents it and nothing in the books will stop them. What should happen is that an Elduvish NPC sees them cast it, and the campaign should absolutely make that a scene. Character Options says as much to the player, in the player’s own terms, and stops there.
+
+### Kept Season Seeds
+
+**DM Only:** give the seeds to the party early and then never mention them again. The item’s whole value is that it is not an adventuring item: it is a thing they can plant somewhere they choose and come back to in an epilogue, and it only lands if nobody has been nudging them toward it for nine modules. Character Options tells the player what it does and says nothing about when they will get it.
+
+### Sovereign’s Veil
+
+*Wondrous item, very rare (requires attunement by the reigning sovereign of Elduvaine)*
+
+Grey silk, unremarkable, and the reason nobody has seen Maelis Ysolde’s face in four years. While attuned and worn, the wearer cannot be scried, read, charmed or compelled, cannot be lied to about the state of Elduvaine’s habits, and knows at all times, precisely, how much of the Living Realm remains.
+
+The last of those is not a benefit and was never intended as one. It was made so that a sovereign would always know the condition of the thing they were bound to, in a kingdom where that binding was a nine-hundred-year source of long life and good weather. She has worn it through three years of the draining.
+
+**DM Only:** the veil is here so that a DM knows it exists and knows exactly what it has been doing to her, and not because it is loot. It cannot be taken, attunes to nobody else, and does nothing for anyone not bound to the habits. If a party asks her what the number is, she will tell them, and it is the single most demoralising piece of information available anywhere in the campaign, and she will give it without softening it because she has never once softened anything. It was in the player-facing options book by mistake: the attunement line alone tells a player that Elduvaine’s sovereign is bound to the land, which is a Module Eleven reveal.
+
 # Recurring NPCs
 
-Named NPCs the campaign’s own modules flag as “open threads” — built to be brought back, not to be used once and discarded. Three (the Ward, the Magistrate, the Regent) are members of Elduvaine’s royal house and deliberately carry no proper name yet, and naming them is a decision this campaign has not yet made.
+Named NPCs the campaign’s own modules flag as “open threads” — built to be brought back, not to be used once and discarded. The royal house is named in the sourcebook: Maelis, Aveline, Ninian, Ottoline and Emrys. The titles below are how the modules refer to them at the table, because that is how the party meets them.
 
 | **Name** | **Introduced** | **Role** |
 | --- | --- | --- |

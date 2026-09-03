@@ -615,7 +615,7 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
 
 ## Current State
 
-**Eighteen documents, 100 pages, all verified clean and byte-reproducible.**
+**Eighteen documents, 101 pages, all verified clean and byte-reproducible.**
 
 - `scripts/KC_Sourcebook.js` — the call, the peoples, **faith in the Nine Works** (the
   Concord, Elduvaine's Observances, the Order of the Tenth Work), Elduvaine before the fall,
