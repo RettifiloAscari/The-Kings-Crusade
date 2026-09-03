@@ -164,6 +164,13 @@ Read [`CLAUDE.md`](CLAUDE.md) — it carries the premise, the tone, what is cano
 those last two is load-bearing: some questions are gaps waiting to be filled, and others are
 finished as they stand and must not be helpfully closed.
 
-Then [`drafts/NEW-CAMPAIGN-HANDOFF.md`](drafts/NEW-CAMPAIGN-HANDOFF.md), which carries the
-method and the environment gotchas from the first campaign built on this pipeline
+**Picking this campaign up to continue it?** Read
+[`drafts/CONTINUATION-HANDOFF.md`](drafts/CONTINUATION-HANDOFF.md) next. It carries what is
+written down nowhere else: where the work actually stands against published scale, what the
+next pass should be and why, which questions are gaps and which are finished, and the
+specific ways a well-meaning session can damage this set while trying to help.
+
+[`drafts/NEW-CAMPAIGN-HANDOFF.md`](drafts/NEW-CAMPAIGN-HANDOFF.md) is a different document:
+the method and environment gotchas for bootstrapping a *new* campaign on this pipeline,
+written from the first one built on it
 ([The Qilvayas Symphony](https://github.com/RettifiloAscari/The-Qilvayas-Symphony)).
