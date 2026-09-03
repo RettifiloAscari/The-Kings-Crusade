@@ -648,7 +648,7 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
   close** — while deliberately leaving what is behind the doors unanswered.
 - `scripts/KC_DM_Reference_Guide.js` — single-column. Campaign at a Glance, Peoples at a
   Glance, the Stat Block Index, **faith and factions at a glance**, **a puzzle index naming
-  what solves each one**, twenty recurring NPCs, and a Branch Ledger now carrying **43**
+  what solves each one**, nineteen recurring NPCs, and a Branch Ledger now carrying **43**
   tracked divergences.
 - `scripts/KC_Player_Guide.js` — gained **what people believe** (the Nine Works, Elduvaine's
   lack of a church, and the Tenth Work as an ally that says openly what it intends) and **the

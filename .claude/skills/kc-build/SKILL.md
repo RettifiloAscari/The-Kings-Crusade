@@ -158,6 +158,18 @@ generator.
   at 72/inch, so 288 is four inches. PNG or JPEG only, and real alt text on every one.
 - **Every helper forwards its `opts`.** `BULLET` silently ignored its second argument for
   a whole build-out, which made a `keepNext` do nothing and look like a LibreOffice bug.
+  **`B()` had the same defect** and was found by a later audit: it took `(lead, rest)` and
+  dropped anything else, so `SB()` could not bind its own header lines even by asking. Both
+  forward now. When you add a helper, give it `opts` and spread it, whether or not a caller
+  needs it yet.
+- **`SB()` binds its head: name, meta, AC, HP and Speed all carry `keepNext`** through to
+  the ability-score table. Without it a stat block's name is a heading in every respect
+  except style, and nothing stopped it stranding alone at the foot of a column with its
+  block on the next page — which is exactly what *Warden Ivor Thane* did in Module 2A. The
+  rule below says headings carry `keepNext`; `SB()`'s name paragraph is a heading and was
+  not covered by it. **A sweep is worth re-running after any layout change:** extract every
+  heading and stat-block name from `corpus/`, then for each PDF page compare the bottom-most
+  line of each column against that set.
 - **Headings carry `keepNext`**, so a heading can never sit alone at the foot of a column,
   and each module binds its final Loot bullet to the Refrain that follows — without it the
   closing verse strands itself on a blank last page, which three of eleven modules did.

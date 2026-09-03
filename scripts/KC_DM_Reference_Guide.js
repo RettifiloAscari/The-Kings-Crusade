@@ -47,7 +47,7 @@ const BULLET = (segs, opts = {}) => new Paragraph({
   children: segs.map(s => new TextRun({ text: s.t, bold: !!s.b, italics: !!s.i, color: s.c }))
 });
 
-const B = (lead, rest) => PS([{ t: lead + " ", b: true }, { t: rest }]);
+const B = (lead, rest, opts = {}) => PS([{ t: lead + " ", b: true }, { t: rest }], opts);
 const BUL = (lead, rest, opts = {}) => BULLET(lead ? [{ t: lead + " ", b: true }, { t: rest }] : [{ t: rest }], opts);
 
 const BOX = (text) => new Paragraph({
@@ -90,7 +90,7 @@ const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIX
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
-const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 } })); out.push(B("Armor Class:", d.ac)); out.push(B("Hit Points:", d.hp)); out.push(B("Speed:", d.speed)); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } if (d.reactions && d.reactions.length) { out.push(PS([{ t: "REACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.reactions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
+const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, keepNext: true, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 }, keepNext: true })); out.push(B("Armor Class:", d.ac, { keepNext: true })); out.push(B("Hit Points:", d.hp, { keepNext: true })); out.push(B("Speed:", d.speed, { keepNext: true })); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } if (d.reactions && d.reactions.length) { out.push(PS([{ t: "REACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.reactions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
 
 
 // ---------- content ----------
@@ -207,23 +207,23 @@ c.push(table(
   ]
 ));
 
-c.push(H2("Kept Out of the Player-Facing Book"));
+c.push(H1("Kept Out of the Player-Facing Book"));
 
 c.push(P("Three pieces of DM material used to sit in Character Options, which is a book a player is handed. They live here now. The first two are guidance; the third is an item no player character can ever attune, whose description gives away one of the campaign\u2019s two clocks."));
 
-c.push(H3("The Sleeping Archive"));
+c.push(H2("The Sleeping Archive"));
 
 c.push(PS([DM("DM Only: "), { t: "the warlock patron does not answer what is in the deepest vaults, and a DM should be careful not to let a player conclude that it does. The dragon sleeps under the building. It is not a key to the building\u2019s contents, it does not know what is on the sealed shelves, and its interest in the campaign is entirely its own. If a player asks, the honest answer is that it has never said. The patron\u2019s entry in Character Options says only that something older than the wards sleeps near or under the Archive, which is all a warlock\u2019s player needs and all they should get." }]));
 
-c.push(H3("Draw Down"));
+c.push(H2("Draw Down"));
 
 c.push(PS([DM("DM Only: "), { t: "a player character can learn the occupation\u2019s draining spell. Nothing in the rules prevents it and nothing in the books will stop them. What should happen is that an Elduvish NPC sees them cast it, and the campaign should absolutely make that a scene. Character Options says as much to the player, in the player\u2019s own terms, and stops there." }]));
 
-c.push(H3("Kept Season Seeds"));
+c.push(H2("Kept Season Seeds"));
 
 c.push(PS([DM("DM Only: "), { t: "give the seeds to the party early and then never mention them again. The item\u2019s whole value is that it is not an adventuring item: it is a thing they can plant somewhere they choose and come back to in an epilogue, and it only lands if nobody has been nudging them toward it for nine modules. Character Options tells the player what it does and says nothing about when they will get it." }]));
 
-c.push(H3("Sovereign\u2019s Veil"));
+c.push(H2("Sovereign\u2019s Veil"));
 
 c.push(PS([{ t: "Wondrous item, very rare (requires attunement by the reigning sovereign of Elduvaine)", i: true }]));
 
