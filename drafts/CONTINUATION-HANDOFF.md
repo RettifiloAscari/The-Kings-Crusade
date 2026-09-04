@@ -118,6 +118,13 @@ Keep them apart.
   `normalize_pdf.py`. The claim in `pipeline.conf` is currently aspirational.
 - **Qilvayas has the same bullet-indent defect** fixed here, at the same column measure.
   Its equivalent value differs because its body type is 11pt rather than 10pt.
+- **Qilvayas has not had the readability pass either.** Its `transplant.py` has no
+  `bind_headings`, so a heading there can still take a one-line lead-in to the foot of a
+  column and leave the table that is the section on the next page; it has no `check_widows.py`
+  to measure that; and it has no ordered-list idiom, so any enumerated sequence in it is
+  bold-led prose sitting beside real bullets. The fixes port over as they stand, except the
+  110/220-character "short opener" thresholds, which are two rendered lines at *this*
+  repository's 10pt body and want re-measuring at 11pt.
 
 ## Three things learned the hard way
 

@@ -38,8 +38,21 @@ const BULLET = (segs, opts = {}) => new Paragraph({
   children: segs.map(s => new TextRun({ text: s.t, bold: !!s.b, italics: !!s.i, color: s.c }))
 });
 
+// An ordered sequence -- the phases of a set piece, the movements of a battle -- is a
+// list, and printing it as unmarked bold-led prose beside a real bulleted list is
+// what made those pages read as two idioms doing one job. ORDERED marks it as what
+// it is. A document with a second ordered list passes { instance: 1 }, because one
+// numbering reference is one running counter.
+const ORDERED = (segs, opts = {}) => new Paragraph({
+  numbering: { reference: "steps", level: 0 },
+  spacing: { after: 120 },
+  ...opts,
+  children: segs.map(s => new TextRun({ text: s.t, bold: !!s.b, italics: !!s.i, color: s.c }))
+});
+
 const B = (lead, rest, opts = {}) => PS([{ t: lead + " ", b: true }, { t: rest }], opts);
 const BUL = (lead, rest, opts = {}) => BULLET(lead ? [{ t: lead + " ", b: true }, { t: rest }] : [{ t: rest }], opts);
+const ORD = (lead, rest, opts = {}) => ORDERED(lead ? [{ t: lead + " ", b: true }, { t: rest }] : [{ t: rest }], opts);
 
 // boxed read-aloud text
 const BOX = (text) => new Paragraph({
@@ -90,7 +103,7 @@ const table = (headers, widths, rows) => new Table({ layout: TableLayoutType.FIX
 
 const mod = (v) => { const m = Math.floor((v - 10) / 2); return (m >= 0 ? "+" : "\u2212") + Math.abs(m); };
 const abCell = (text, bold) => new TableCell({ width: { size: 16.6, type: WidthType.PERCENTAGE }, shading: bold ? { type: ShadingType.CLEAR, fill: "E4DCCB" } : undefined, children: [new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40, before: 40 }, indent: { firstLine: 0 }, keepNext: !!bold, children: [new TextRun({ text, bold: !!bold, size: 20 })] })] });
-const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, keepNext: true, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 }, keepNext: true })); out.push(B("Armor Class:", d.ac, { keepNext: true })); out.push(B("Hit Points:", d.hp, { keepNext: true })); out.push(B("Speed:", d.speed, { keepNext: true })); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } if (d.reactions && d.reactions.length) { out.push(PS([{ t: "REACTIONS", b: true }], { spacing: { before: 80, after: 80 } })); d.reactions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
+const SB = (d) => { const out = []; out.push(new Paragraph({ spacing: { before: 240, after: 40 }, keepNext: true, children: [new TextRun({ text: d.name, bold: true, size: 26, color: "5B1F1F" })] })); out.push(PS([{ t: d.meta, i: true }], { spacing: { after: 120 }, keepNext: true })); out.push(B("Armor Class:", d.ac, { keepNext: true })); out.push(B("Hit Points:", d.hp, { keepNext: true })); out.push(B("Speed:", d.speed, { keepNext: true })); out.push(new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, rows: [ new TableRow({ cantSplit: true, tableHeader: true, children: ["STR","DEX","CON","INT","WIS","CHA"].map(h => abCell(h, true)) }), new TableRow({ cantSplit: true, children: [d.str,d.dex,d.con,d.int,d.wis,d.cha].map(v => abCell(v + " (" + mod(v) + ")")) }) ] })); out.push(P("", { spacing: { after: 60 } })); if (d.saves) out.push(B("Saving Throws:", d.saves)); if (d.skills) out.push(B("Skills:", d.skills)); if (d.senses) out.push(B("Senses:", d.senses)); if (d.langs) out.push(B("Languages:", d.langs)); out.push(B("Challenge:", d.cr)); (d.traits||[]).forEach(t => out.push(PS([{ t: t.n + ". ", b: true, i: true }, { t: t.t }]))); if (d.actions && d.actions.length) { out.push(PS([{ t: "ACTIONS", b: true }], { spacing: { before: 80, after: 80 }, keepNext: true })); d.actions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } if (d.reactions && d.reactions.length) { out.push(PS([{ t: "REACTIONS", b: true }], { spacing: { before: 80, after: 80 }, keepNext: true })); d.reactions.forEach(a => out.push(PS([{ t: a.n + ". ", b: true, i: true }, { t: a.t }]))); } return out; };
 
 // ---------- content ----------
 const c = [];
@@ -143,7 +156,7 @@ c.push(P("The Long Stair climbs from the river gate to the Marchhold in four hun
 
 c.push(P("The Ninefold House of Duncarrow is the largest Concord chapter in the kingdom and the place the Call was read from, in Ninefold Cant, on a wet morning to a crowd that mostly could not understand a word of it and understood the whole thing perfectly."));
 
-c.push(BUL("Hook.", "Module One happens here. Beyond that: the Marchhold\u2019s lower vaults hold two centuries of Harrowmark\u2019s correspondence with Elduvaine, unread, and somebody in the Archive at Caer Ysolde wrote back."));
+c.push(B("Hook.", "Module One happens here. Beyond that: the Marchhold\u2019s lower vaults hold two centuries of Harrowmark\u2019s correspondence with Elduvaine, unread, and somebody in the Archive at Caer Ysolde wrote back."));
 
 c.push(...SITE("Greywatch", "Population 900 \u00B7 The high wyvern-watch \u00B7 Huntmaster Brenna Vane"));
 
@@ -151,7 +164,7 @@ c.push(P("Eleven hundred feet up, four days from Duncarrow, and the reason the e
 
 c.push(P("The hold itself is one long hall dug back into the cliff with a stone yard in front of it, and the yard is where the hunt assembles, the dead are laid out, and the drinking happens, in that order and often on the same night. There is a wall inside the hall with names on it. It is not a memorial. It is a roster, and the dead are simply not crossed off."));
 
-c.push(BUL("Hook.", "Brenna Vane will take anyone up who asks and is the campaign\u2019s best source of Harrowmark texture, camp levity, and blunt opinion. The wyvern-riders who go to Vindana with the army are hers, and she has views about lending them."));
+c.push(B("Hook.", "Brenna Vane will take anyone up who asks and is the campaign\u2019s best source of Harrowmark texture, camp levity, and blunt opinion. The wyvern-riders who go to Vindana with the army are hers, and she has views about lending them."));
 
 c.push(...SITE("Ellendrake", "Population 6,000 \u00B7 Harrowmark\u2019s only true port \u00B7 The fleet sails from here"));
 
@@ -159,7 +172,7 @@ c.push(P("A working harbour town on a coast that does not want one, kept open by
 
 c.push(P("Since the Call it has been the most crowded place in Harrowmark. Ninety-one hulls of wildly varying quality, requisitioned from four owners who are still arguing about compensation, and an Auberitz harbourmaster who arrived uninvited, took one look, and began reorganising the entire anchorage with the calm of a woman who has done this before."));
 
-c.push(BUL("Hook.", "Module 2A sails from here. Before that: something in the requisitioned tonnage is not seaworthy, the owner knows, and the manifest says otherwise."));
+c.push(B("Hook.", "Module 2A sails from here. Before that: something in the requisitioned tonnage is not seaworthy, the owner knows, and the manifest says otherwise."));
 
 c.push(...SITE("Stannock", "Population 2,400 \u00B7 Dwarf crag hold \u00B7 The armouries"));
 
@@ -167,7 +180,7 @@ c.push(P("Cut back into the western crags and reached by a road that switches ba
 
 c.push(P("The crusade emptied the place. Stannock worked through two winters to arm the muster and then sent four hundred of its own with the result, which is a quarter of everyone it had. The forges are banked, the halls are quiet, and the people left are mostly over ninety or under twenty and all of them are waiting."));
 
-c.push(BUL("Hook.", "The armourers kept the pattern-book. Anything the party needs made to Harrowmark standard can be made here \u2014 slowly, correctly, and with a great deal of comment about how it will be misused."));
+c.push(B("Hook.", "The armourers kept the pattern-book. Anything the party needs made to Harrowmark standard can be made here \u2014 slowly, correctly, and with a great deal of comment about how it will be misused."));
 
 c.push(...SITE("Corrieholt", "Population 1,800 \u00B7 Orc high country \u00B7 Horses, and the hill-fighting tradition"));
 
@@ -175,7 +188,7 @@ c.push(P("The high pasture north of Greywatch, held by orc families who have gra
 
 c.push(P("It also supplies a fighting tradition: fast, dispersed, and built entirely around not being where the enemy expected. Auberitz officers find it undisciplined. Auberitz officers have also stopped saying so out loud since the second week of the march."));
 
-c.push(BUL("Hook.", "A Corrieholt rider in the coalition has family in the Sixth Free Legion. This is true, it is known, and nobody in the column has made anything of it, which is exactly the campaign\u2019s position on the matter."));
+c.push(B("Hook.", "A Corrieholt rider in the coalition has family in the Sixth Free Legion. This is true, it is known, and nobody in the column has made anything of it, which is exactly the campaign\u2019s position on the matter."));
 
 c.push(...SITE("Fenmarrow", "Population 3,100 across a dozen villages \u00B7 Thin farm country \u00B7 Where the levy comes from"));
 
@@ -183,13 +196,13 @@ c.push(P("The low ground south of Duncarrow, and the only part of Harrowmark tha
 
 c.push(P("Most of the crusade\u2019s infantry is from here. Not the knights and not the professionals \u2014 the eight thousand. They answered a summons read in a language they did not speak, promising a place in a country they could not find on a map, and they are marching to it, and the DM should remember that every time the coalition is discussed as a political object."));
 
-c.push(BUL("Hook.", "Somebody\u2019s mother in Fenmarrow gave the party a letter for her son in the column. He is in the lost column on the other road. This costs nothing to set up in Module One and pays for the rest of the campaign."));
+c.push(B("Hook.", "Somebody\u2019s mother in Fenmarrow gave the party a letter for her son in the column. He is in the lost column on the other road. This costs nothing to set up in Module One and pays for the rest of the campaign."));
 
 c.push(...SITE("Kettleburn", "Population 400 \u00B7 A village with a scar \u00B7 Two days off the Duncarrow road"));
 
 c.push(P("Eleven years ago a wyvern nested above Kettleburn and stayed for a season before Greywatch could bring it down, and the village has been the standing Harrowmark illustration of what that costs ever since. Half the houses were rebuilt. The rebuilt half is better than the original. The people are neither traumatised nor especially interested in discussing it, and a visitor who tries for pathos will be given a very dry account of roof repairs."));
 
-c.push(BUL("Hook.", "The best low-stakes scene in Harrowmark for establishing what these people are like before the party leaves. They are not brave. They are unimpressed, and it is not the same thing."));
+c.push(B("Hook.", "The best low-stakes scene in Harrowmark for establishing what these people are like before the party leaves. They are not brave. They are unimpressed, and it is not the same thing."));
 
 c.push(H2("Encounters in Harrowmark"));
 
@@ -223,7 +236,7 @@ c.push(P("A hook of rock and gorse eleven miles long, lying inconveniently acros
 
 c.push(P("Ivor Thane holds it from a hall above the harbour and calls himself Warden, which is a title Calanthe invented for him and Calanthe can uninvent. He is not a pirate \u2014 he is careful about this \u2014 he is a man who charges for rescue, keeps what washes up, and has never once been proved to have moved a light. The distinction has kept him alive for nineteen years and will not survive contact with a coalition that needs its supplies back."));
 
-c.push(BUL("Hook.", "Module 2A. Beyond it: Thane\u2019s cellar holds four hundred years of salvaged cargo manifests, and three of them are Elduvish, and one of them is from a ship that sailed after the wards opened."));
+c.push(B("Hook.", "Module 2A. Beyond it: Thane\u2019s cellar holds four hundred years of salvaged cargo manifests, and three of them are Elduvish, and one of them is from a ship that sailed after the wards opened."));
 
 c.push(...SITE("The Ossary Shoals", "A wrecking coast \u00B7 Nine miles of it \u00B7 No population, by design"));
 
@@ -260,7 +273,7 @@ c.push(P("The river is wide, shallow, fast and cold, and there has been a toll o
 
 c.push(P("Vell\u2019s toll is legal. That is the difficulty with Vell. He holds the ford by a charter four generations old, the charter says what he may charge, and what he has done is notice that the charter never contemplated eight thousand people and a war."));
 
-c.push(BUL("Hook.", "Module 2B. Also: the charter is in the keep, it is genuine, and there is a clause in it that Vell has never read because it is on the back."));
+c.push(B("Hook.", "Module 2B. Also: the charter is in the keep, it is genuine, and there is a clause in it that Vell has never read because it is on the back."));
 
 c.push(...SITE("Kir Halloway", "Population 1,100 \u00B7 A mountain trade town \u00B7 Nobody\u2019s, officially"));
 
@@ -268,7 +281,7 @@ c.push(P("Two days above Ashgate, wedged into a valley that gets four hours of d
 
 c.push(P("It is also the last place on the mountain road where a party can buy anything at all. The next four hundred miles are the pass, and then Elduvaine, and Elduvaine has permits."));
 
-c.push(BUL("Hook.", "A Norvatch house factor keeps a permanent office here and has done for sixty years. She knows what has been going up the road and, more usefully, what has been coming down it out of Elduvaine."));
+c.push(B("Hook.", "A Norvatch house factor keeps a permanent office here and has done for sixty years. She knows what has been going up the road and, more usefully, what has been coming down it out of Elduvaine."));
 
 c.push(...SITE("The Cold Stair", "The pass \u00B7 5,100 feet \u00B7 Open perhaps five months a year"));
 
@@ -276,13 +289,13 @@ c.push(P("A stair in name and nearly in fact: eleven miles of switchbacks cut in
 
 c.push(P("At the summit there is a cairn. Travellers add a stone. It has been there long enough to be twenty feet across and it is the only thing anyone has ever built on the Cold Stair that the mountain has not taken back."));
 
-c.push(BUL("Hook.", "Somebody has been robbing the refuge huts of their roofing timber, which is a small crime and, at five thousand feet in the wrong month, a lethal one."));
+c.push(B("Hook.", "Somebody has been robbing the refuge huts of their roofing timber, which is a small crime and, at five thousand feet in the wrong month, a lethal one."));
 
 c.push(...SITE("The Old Workings", "Abandoned mines above Ashgate \u00B7 Kobold-held \u00B7 Older than the barony"));
 
 c.push(P("Silver, four hundred years ago, and not enough of it. The workings run further into the hill than any surviving map shows and have been held for two generations by a kobold warren that arrived when the last human left and has been improving the place ever since \u2014 which is to say, trapping it comprehensively, signposting every trap in Draconic, and being extremely reasonable with anyone who reads Draconic."));
 
-c.push(BUL("Hook.", "They want three things: to be left alone, a written guarantee of it, and somebody to do something about what is in the flooded lower gallery. They will pay for the third in silver they have no use for."));
+c.push(B("Hook.", "They want three things: to be left alone, a written guarantee of it, and somebody to do something about what is in the flooded lower gallery. They will pay for the third in silver they have no use for."));
 
 c.push(...SITE("Barrowfell", "An upland of graves \u00B7 No living population \u00B7 Two days off the road"));
 
@@ -324,7 +337,7 @@ c.push(P("The harbour front is warehouses, rope-walks, and the smell of a workin
 
 c.push(P("Under the occupation Vindana has become the machine that empties Elduvaine. Everything that leaves the kingdom leaves through here, weighed, docketed, and carried in Norvatch bottoms under a standing contract. The people who load it are Elduvish and are paid."));
 
-c.push(BUL("Hook.", "Modules 6, 7 and 8. Before and around them: the undercity, the counting-house, and Ottoline Vahn filing objections from what she insists on calling her chambers."));
+c.push(B("Hook.", "Modules 6, 7 and 8. Before and around them: the undercity, the counting-house, and Ottoline Vahn filing objections from what she insists on calling her chambers."));
 
 c.push(...SITE("Caerwyn", "Population 1,600 \u00B7 The landing town \u00B7 Occupation grip: thin"));
 
@@ -332,7 +345,7 @@ c.push(P("A small coastal town of grey-gold stone and slate, eleven miles of orc
 
 c.push(P("It is the first wonder the party gets and it should be run as one. The light-stone in the doorsteps still holds a little of the afternoon. The baker\u2019s ovens have not gone out in two hundred years and the whole street smells of it at four in the morning. This is a place worth saving, and the module says so by showing rather than arguing."));
 
-c.push(BUL("Hook.", "Module 3. Wyn Alder clerks the checkpoint and is the campaign\u2019s first honest look at what an ordinary complicit person is actually like."));
+c.push(B("Hook.", "Module 3. Wyn Alder clerks the checkpoint and is the campaign\u2019s first honest look at what an ordinary complicit person is actually like."));
 
 c.push(...SITE("The Dead Mile", "A mile of road \u00B7 Nothing lives on it \u00B7 Between Caerwyn and the interior"));
 
@@ -346,7 +359,7 @@ c.push(P("The Vaunt\u2019s second port, and the place the occupation made an exa
 
 c.push(P("What remains is eight hundred people in a town built for three thousand, working the boats that were left, and a harbourmaster who has kept every single piece of paper."));
 
-c.push(BUL("Hook.", "Those papers are the second-best account of the occupation\u2019s arithmetic in Elduvaine, after Norvatch\u2019s. Unlike Norvatch\u2019s, they are free, and the harbourmaster has been waiting three years for somebody to ask."));
+c.push(B("Hook.", "Those papers are the second-best account of the occupation\u2019s arithmetic in Elduvaine, after Norvatch\u2019s. Unlike Norvatch\u2019s, they are free, and the harbourmaster has been waiting three years for somebody to ask."));
 
 c.push(H2("Encounters in the Vaunt"));
 
@@ -383,7 +396,7 @@ c.push(P("Caer Ysolde is built of light-stone almost entirely. On a clear night 
 
 c.push(P("It is dark now. Not lightless \u2014 the occupation burns lamps like anybody else \u2014 but the stone is out, and it went out over about fourteen months, quarter by quarter, in a way the people who live there could watch happening."));
 
-c.push(BUL("Hook.", "Module 11, and the whole campaign points here. Maelis Ysolde is held in her own apartments in the Ysolde Keep on the middle island."));
+c.push(B("Hook.", "Module 11, and the whole campaign points here. Maelis Ysolde is held in her own apartments in the Ysolde Keep on the middle island."));
 
 c.push(...SITE("The Ysolde Archive", "The largest collection of magical knowledge in the world \u00B7 Vale\u2019s, now"));
 
@@ -399,7 +412,7 @@ c.push(...SITE("Sennoch Hall", "A great house of the Braid \u00B7 Two days downr
 
 c.push(P("A country seat of the house, walled, moated in the ornamental sense, and entirely unsuited to being a place of detention \u2014 which is exactly why the occupation chose it. Ninian Ysolde has been held here for three years in considerable comfort, with a library, a garden, a staff who are not permitted to leave, and a garrison that is embarrassed about the whole arrangement."));
 
-c.push(BUL("Hook.", "Module 4. The garrison commander here has been correct, courteous and humane for three years and would very much like somebody to notice that before this ends badly for him."));
+c.push(B("Hook.", "Module 4. The garrison commander here has been correct, courteous and humane for three years and would very much like somebody to notice that before this ends badly for him."));
 
 c.push(...SITE("Lisswater", "Population 2,100 \u00B7 A river parish \u00B7 Halfling country, and the kingdom\u2019s manners"));
 
@@ -407,7 +420,7 @@ c.push(P("Where the middle river runs slow for nine miles, there are eleven vill
 
 c.push(P("The Listening Water is at its strongest along this stretch, and Lisswater has spent nine hundred years developing an etiquette around it so thorough that outsiders find it incomprehensible. You do not speak at the water\u2019s edge about anything you would not repeat. You do not stand at the edge when angry. Children are taught the rule before they are taught to swim, and adults who break it are not scolded but quietly and permanently regarded as unserious."));
 
-c.push(BUL("Hook.", "The whole of the Four Voices technique works best here. So does the miller who has been miscounting the levy for two years and would like to stop being the only person doing it."));
+c.push(B("Hook.", "The whole of the Four Voices technique works best here. So does the miller who has been miscounting the levy for two years and would like to stop being the only person doing it."));
 
 c.push(...SITE("The Threefold Stair", "Where the rivers meet \u00B7 A mile below the capital \u00B7 An engineering work and a shrine"));
 
@@ -448,7 +461,7 @@ c.push(P("The first Kept Season planting and the greatest of them, forty acres o
 
 c.push(P("It is nine weeks into a winter it was never sown in, and has been for most of a year. The trees are dying \u2014 not dead, dying, slowly and in the wrong order \u2014 and an ecology has moved in behind the change: winter wolves along the edges, and a troll in the orchard-keeper\u2019s cottage, and the dryad who has been the spirit of this wood for three centuries and is now the spirit of a winter one and cannot leave."));
 
-c.push(BUL("Hook.", "Module 5\u2019s Held Winter. The single most legible image of the draining in the campaign, and the one scene where a party can simply sit down and talk to the grief."));
+c.push(B("Hook.", "Module 5\u2019s Held Winter. The single most legible image of the draining in the campaign, and the one scene where a party can simply sit down and talk to the grief."));
 
 c.push(...SITE("Nantcorrow", "Population 1,900 \u00B7 An orchard town \u00B7 The Season-keepers\u2019 seat"));
 
@@ -456,7 +469,7 @@ c.push(P("Where the Marches are administered from, insofar as they are administe
 
 c.push(P("The Season-keepers are still here. They have not been arrested, because arresting them would stop the orchards producing, and the occupation would like the orchards to keep producing. They have therefore spent three years administering an institution on behalf of a man who is killing it, which is a position several of them can no longer live with."));
 
-c.push(BUL("Hook.", "The Keepers know exactly which woods have turned and in what order. That map is the best measurement of the draining that exists outside Norvatch\u2019s ledgers, and it is not for sale, and they will give it to the right people."));
+c.push(B("Hook.", "The Keepers know exactly which woods have turned and in what order. That map is the best measurement of the draining that exists outside Norvatch\u2019s ledgers, and it is not for sale, and they will give it to the right people."));
 
 // ===================================================== THE STANDING MARCHES
 c.push(H1("Elduvaine: The Standing Marches"));
@@ -471,13 +484,13 @@ c.push(P("The occupation has the quarries working double. What it is producing i
 
 c.push(PS([DM("DM Only: "), { t: "the party can work out what the quarries are producing for, and it is one of the campaign\u2019s better mid-game discoveries: light-stone cut to hold, then drained, is the most efficient way anyone has found to move Elduvaine\u2019s resident magic in a cart. Cairn Ithel is not being worked. It is being packaged." }]));
 
-c.push(BUL("Hook.", "A master mason at Cairn Ithel has been deliberately cutting badly for two years \u2014 stone that holds for an hour instead of a week \u2014 and has cost the occupation a great deal, and knows exactly how long she has."));
+c.push(B("Hook.", "A master mason at Cairn Ithel has been deliberately cutting badly for two years \u2014 stone that holds for an hour instead of a week \u2014 and has cost the occupation a great deal, and knows exactly how long she has."));
 
 c.push(...SITE("Ysgaron", "Population 1,200 \u00B7 A mason town \u00B7 Where the Standing Light was learned"));
 
 c.push(P("Smaller, older, and higher than Cairn Ithel, and the place the craft was worked out, six centuries ago, by people whose names are on a wall in the guild hall. Ysgaron does the fine work: the cut faces, the inlays, the lamps that are not lamps. Most of what makes Caer Ysolde beautiful was made here by about nine hundred people over six hundred years."));
 
-c.push(BUL("Hook.", "The guild hall\u2019s wall of names is also, unintentionally, a four-hundred-year technical record. Anyone who can read it can work out how the cut is done. Vale has not been here yet."));
+c.push(B("Hook.", "The guild hall\u2019s wall of names is also, unintentionally, a four-hundred-year technical record. Anyone who can read it can work out how the cut is done. Vale has not been here yet."));
 
 c.push(H1("The Willing Road"));
 
@@ -512,13 +525,20 @@ c.push(P("Guild-law country: dwarves and tieflings, humans throughout, and an en
 
 c.push(P("Its great counting-city is Torvhal, where the Writ House sits \u2014 a court that has never in two centuries ruled on whether an agreement was fair, only on what it said. Norvatch does not want Elduvaine. Norvatch wants to remain the market for what leaves it, guaranteed in writing by whoever holds the place when the war ends, and it has held exactly that arrangement with the occupation for three years."));
 
-c.push(BUL("Hook.", "House Kell\u2019s ledgers are the campaign\u2019s clock. Doria Kell will sell them. Her price is in Module 10 and it is worse than money."));
+c.push(B("Hook.", "House Kell\u2019s ledgers are the campaign\u2019s clock. Doria Kell will sell them. Her price is in Module 10 and it is worse than money."));
 
 c.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 300, after: 100 }, children: [new TextRun({ text: "~", size: 24 })] }));
 c.push(PS([{ t: "\u201CThere are sixty-one bridges in Caer Ysolde. There have been sixty-one bridges in Caer Ysolde for two hundred years. We have built nine in that time and lost none, and it is still sixty-one, and we would all be grateful if you did not raise it again.\u201D", i: true }], { alignment: AlignmentType.CENTER }));
 c.push(PS([{ t: "\u2014 the Bridgewarden of Caer Ysolde, to a visiting Auberitz surveyor", i: true }], { alignment: AlignmentType.CENTER }));
 const doc = new Document({
-  numbering: { config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 260, hanging: 260 } } } }] }] },
+  numbering: { config: [
+    { reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "\u2022", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 260, hanging: 260 } } } }] },
+    // The same measure as the bullets, deliberately: a numbered list and a bulleted
+    // one appear on the same page often enough that their text has to hang off one
+    // left edge, and "1." is near enough the width of a dot for the gap to match. It
+    // holds to "99."; nothing in this campaign counts past five.
+    { reference: "steps", levels: [{ level: 0, format: LevelFormat.DECIMAL, text: "%1.", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 260, hanging: 260 } } } }] }
+  ] },
   styles: {
     default: { document: { run: { font: "Georgia", size: 20 } } },
     paragraphStyles: [

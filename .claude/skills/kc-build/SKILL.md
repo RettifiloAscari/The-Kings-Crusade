@@ -173,6 +173,41 @@ generator.
 - **Headings carry `keepNext`**, so a heading can never sit alone at the foot of a column,
   and each module binds its final Loot bullet to the Refrain that follows — without it the
   closing verse strands itself on a blank last page, which three of eleven modules did.
+  That is the style's own `keepNext`, from the **template**, not from the generator: the
+  transplant keeps the template's `styles.xml` on purpose, so a `keepNext` written into a
+  generator's `paragraphStyles` is discarded before it reaches the page. Set it on the
+  paragraph, or set it in `bind_headings`.
+- **`ORDERED`/`ORD` is the numbered list; `BULLET`/`BUL` is the bulleted one.** An ordered
+  sequence — the phases of a set piece, the movements of a battle — is a list, and it was
+  being printed as unmarked bold-led prose *beside* real bulleted lists, which is what made
+  those pages read as two idioms doing one job. Both hang at the same 260 twips so their
+  text sits on one left edge and only the mark differs. One numbering reference is one
+  running counter, so a second ordered list in the same document passes `{ instance: 1 }`.
+- **A one-item bulleted list is not a list.** Twenty-five of them were in the set — every
+  Gazetteer *Hook*, and a Loot line in two modules — each a lone glyph promising a list and
+  delivering one item. A single emphasised note is `B("Hook.", "…")`, a bold run-in, which
+  is what the rest of the book already uses. `BUL` is for two items or more.
+
+### A heading must not announce nothing
+
+`transplant.py`'s **`bind_headings`** adds two bindings that `keepNext` on the heading alone
+cannot express, because `keepNext` binds *one* block and one block is often not enough:
+
+- **A paragraph immediately followed by a table keeps with it**, so a lead-in can never be
+  separated from the table that is the section. *Tiered Skill DCs*, its two-line preamble,
+  and then the table over the break was the shape this kills.
+- **A short paragraph immediately after a heading keeps with what follows** — under 110
+  characters in a two-column document, 220 in the single-column one, both about two rendered
+  lines. This is what drags a gazetteer entry's italic stat rule *and* the body under it.
+
+Both are cheap: `keepNext` binds the last line of a block to the first line of the next, so
+a long paragraph still splits normally and only its tail travels. It lives in `transplant.py`
+for the same reason `gap_after_tables` does — `table()` returns a single Table and headings
+are helpers, so a per-call fix would mean touching every call site in eighteen generators.
+
+**Widow and orphan control is already on** and does not need setting: it was probed by
+forcing `<w:widowControl w:val="1"/>` into the template's Normal style and rebuilding, and
+every word box came back identical. Do not re-derive that.
 
 ### Edit with an anchor and an assertion
 
@@ -241,5 +276,7 @@ than a re-derivation.
 - `tools/check_columns.py` — starved table columns, banded by confidence; `-v` for marginals
 - `tools/find_page.py` — which PDF page a string is on
 - `tools/check_tearing.py` — stat-block ability rows torn from their header
+- `tools/check_widows.py` — headings stranded at the foot of a column, banded STRANDED /
+  tight; repo-specific, not shared with the sister repository
 - `tools/verify.sh` — everything in one call; `--full` adds reproducibility
 - `tools/build.sh` — the build; `--no-verify` only when the render toolchain is unavailable

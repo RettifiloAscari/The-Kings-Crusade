@@ -43,7 +43,7 @@ The Long Stair climbs from the river gate to the Marchhold in four hundred and t
 
 The Ninefold House of Duncarrow is the largest Concord chapter in the kingdom and the place the Call was read from, in Ninefold Cant, on a wet morning to a crowd that mostly could not understand a word of it and understood the whole thing perfectly.
 
-- **Hook.** Module One happens here. Beyond that: the Marchhold’s lower vaults hold two centuries of Harrowmark’s correspondence with Elduvaine, unread, and somebody in the Archive at Caer Ysolde wrote back.
+**Hook.** Module One happens here. Beyond that: the Marchhold’s lower vaults hold two centuries of Harrowmark’s correspondence with Elduvaine, unread, and somebody in the Archive at Caer Ysolde wrote back.
 
 ## Greywatch
 
@@ -53,7 +53,7 @@ Eleven hundred feet up, four days from Duncarrow, and the reason the eastern val
 
 The hold itself is one long hall dug back into the cliff with a stone yard in front of it, and the yard is where the hunt assembles, the dead are laid out, and the drinking happens, in that order and often on the same night. There is a wall inside the hall with names on it. It is not a memorial. It is a roster, and the dead are simply not crossed off.
 
-- **Hook.** Brenna Vane will take anyone up who asks and is the campaign’s best source of Harrowmark texture, camp levity, and blunt opinion. The wyvern-riders who go to Vindana with the army are hers, and she has views about lending them.
+**Hook.** Brenna Vane will take anyone up who asks and is the campaign’s best source of Harrowmark texture, camp levity, and blunt opinion. The wyvern-riders who go to Vindana with the army are hers, and she has views about lending them.
 
 ## Ellendrake
 
@@ -63,7 +63,7 @@ A working harbour town on a coast that does not want one, kept open by a mole th
 
 Since the Call it has been the most crowded place in Harrowmark. Ninety-one hulls of wildly varying quality, requisitioned from four owners who are still arguing about compensation, and an Auberitz harbourmaster who arrived uninvited, took one look, and began reorganising the entire anchorage with the calm of a woman who has done this before.
 
-- **Hook.** Module 2A sails from here. Before that: something in the requisitioned tonnage is not seaworthy, the owner knows, and the manifest says otherwise.
+**Hook.** Module 2A sails from here. Before that: something in the requisitioned tonnage is not seaworthy, the owner knows, and the manifest says otherwise.
 
 ## Stannock
 
@@ -73,7 +73,7 @@ Cut back into the western crags and reached by a road that switches back on itse
 
 The crusade emptied the place. Stannock worked through two winters to arm the muster and then sent four hundred of its own with the result, which is a quarter of everyone it had. The forges are banked, the halls are quiet, and the people left are mostly over ninety or under twenty and all of them are waiting.
 
-- **Hook.** The armourers kept the pattern-book. Anything the party needs made to Harrowmark standard can be made here — slowly, correctly, and with a great deal of comment about how it will be misused.
+**Hook.** The armourers kept the pattern-book. Anything the party needs made to Harrowmark standard can be made here — slowly, correctly, and with a great deal of comment about how it will be misused.
 
 ## Corrieholt
 
@@ -83,7 +83,7 @@ The high pasture north of Greywatch, held by orc families who have grazed it for
 
 It also supplies a fighting tradition: fast, dispersed, and built entirely around not being where the enemy expected. Auberitz officers find it undisciplined. Auberitz officers have also stopped saying so out loud since the second week of the march.
 
-- **Hook.** A Corrieholt rider in the coalition has family in the Sixth Free Legion. This is true, it is known, and nobody in the column has made anything of it, which is exactly the campaign’s position on the matter.
+**Hook.** A Corrieholt rider in the coalition has family in the Sixth Free Legion. This is true, it is known, and nobody in the column has made anything of it, which is exactly the campaign’s position on the matter.
 
 ## Fenmarrow
 
@@ -93,7 +93,7 @@ The low ground south of Duncarrow, and the only part of Harrowmark that grows en
 
 Most of the crusade’s infantry is from here. Not the knights and not the professionals — the eight thousand. They answered a summons read in a language they did not speak, promising a place in a country they could not find on a map, and they are marching to it, and the DM should remember that every time the coalition is discussed as a political object.
 
-- **Hook.** Somebody’s mother in Fenmarrow gave the party a letter for her son in the column. He is in the lost column on the other road. This costs nothing to set up in Module One and pays for the rest of the campaign.
+**Hook.** Somebody’s mother in Fenmarrow gave the party a letter for her son in the column. He is in the lost column on the other road. This costs nothing to set up in Module One and pays for the rest of the campaign.
 
 ## Kettleburn
 
@@ -101,7 +101,7 @@ Most of the crusade’s infantry is from here. Not the knights and not the profe
 
 Eleven years ago a wyvern nested above Kettleburn and stayed for a season before Greywatch could bring it down, and the village has been the standing Harrowmark illustration of what that costs ever since. Half the houses were rebuilt. The rebuilt half is better than the original. The people are neither traumatised nor especially interested in discussing it, and a visitor who tries for pathos will be given a very dry account of roof repairs.
 
-- **Hook.** The best low-stakes scene in Harrowmark for establishing what these people are like before the party leaves. They are not brave. They are unimpressed, and it is not the same thing.
+**Hook.** The best low-stakes scene in Harrowmark for establishing what these people are like before the party leaves. They are not brave. They are unimpressed, and it is not the same thing.
 
 ## Encounters in Harrowmark
 
@@ -133,7 +133,7 @@ A hook of rock and gorse eleven miles long, lying inconveniently across the ship
 
 Ivor Thane holds it from a hall above the harbour and calls himself Warden, which is a title Calanthe invented for him and Calanthe can uninvent. He is not a pirate — he is careful about this — he is a man who charges for rescue, keeps what washes up, and has never once been proved to have moved a light. The distinction has kept him alive for nineteen years and will not survive contact with a coalition that needs its supplies back.
 
-- **Hook.** Module 2A. Beyond it: Thane’s cellar holds four hundred years of salvaged cargo manifests, and three of them are Elduvish, and one of them is from a ship that sailed after the wards opened.
+**Hook.** Module 2A. Beyond it: Thane’s cellar holds four hundred years of salvaged cargo manifests, and three of them are Elduvish, and one of them is from a ship that sailed after the wards opened.
 
 ## The Ossary Shoals
 
@@ -169,7 +169,7 @@ The river is wide, shallow, fast and cold, and there has been a toll on it since
 
 Vell’s toll is legal. That is the difficulty with Vell. He holds the ford by a charter four generations old, the charter says what he may charge, and what he has done is notice that the charter never contemplated eight thousand people and a war.
 
-- **Hook.** Module 2B. Also: the charter is in the keep, it is genuine, and there is a clause in it that Vell has never read because it is on the back.
+**Hook.** Module 2B. Also: the charter is in the keep, it is genuine, and there is a clause in it that Vell has never read because it is on the back.
 
 ## Kir Halloway
 
@@ -179,7 +179,7 @@ Two days above Ashgate, wedged into a valley that gets four hours of direct sun 
 
 It is also the last place on the mountain road where a party can buy anything at all. The next four hundred miles are the pass, and then Elduvaine, and Elduvaine has permits.
 
-- **Hook.** A Norvatch house factor keeps a permanent office here and has done for sixty years. She knows what has been going up the road and, more usefully, what has been coming down it out of Elduvaine.
+**Hook.** A Norvatch house factor keeps a permanent office here and has done for sixty years. She knows what has been going up the road and, more usefully, what has been coming down it out of Elduvaine.
 
 ## The Cold Stair
 
@@ -189,7 +189,7 @@ A stair in name and nearly in fact: eleven miles of switchbacks cut into the eas
 
 At the summit there is a cairn. Travellers add a stone. It has been there long enough to be twenty feet across and it is the only thing anyone has ever built on the Cold Stair that the mountain has not taken back.
 
-- **Hook.** Somebody has been robbing the refuge huts of their roofing timber, which is a small crime and, at five thousand feet in the wrong month, a lethal one.
+**Hook.** Somebody has been robbing the refuge huts of their roofing timber, which is a small crime and, at five thousand feet in the wrong month, a lethal one.
 
 ## The Old Workings
 
@@ -197,7 +197,7 @@ At the summit there is a cairn. Travellers add a stone. It has been there long e
 
 Silver, four hundred years ago, and not enough of it. The workings run further into the hill than any surviving map shows and have been held for two generations by a kobold warren that arrived when the last human left and has been improving the place ever since — which is to say, trapping it comprehensively, signposting every trap in Draconic, and being extremely reasonable with anyone who reads Draconic.
 
-- **Hook.** They want three things: to be left alone, a written guarantee of it, and somebody to do something about what is in the flooded lower gallery. They will pay for the third in silver they have no use for.
+**Hook.** They want three things: to be left alone, a written guarantee of it, and somebody to do something about what is in the flooded lower gallery. They will pay for the third in silver they have no use for.
 
 ## Barrowfell
 
@@ -239,7 +239,7 @@ The harbour front is warehouses, rope-walks, and the smell of a working port. Be
 
 Under the occupation Vindana has become the machine that empties Elduvaine. Everything that leaves the kingdom leaves through here, weighed, docketed, and carried in Norvatch bottoms under a standing contract. The people who load it are Elduvish and are paid.
 
-- **Hook.** Modules 6, 7 and 8. Before and around them: the undercity, the counting-house, and Ottoline Vahn filing objections from what she insists on calling her chambers.
+**Hook.** Modules 6, 7 and 8. Before and around them: the undercity, the counting-house, and Ottoline Vahn filing objections from what she insists on calling her chambers.
 
 ## Caerwyn
 
@@ -249,7 +249,7 @@ A small coastal town of grey-gold stone and slate, eleven miles of orchard behin
 
 It is the first wonder the party gets and it should be run as one. The light-stone in the doorsteps still holds a little of the afternoon. The baker’s ovens have not gone out in two hundred years and the whole street smells of it at four in the morning. This is a place worth saving, and the module says so by showing rather than arguing.
 
-- **Hook.** Module 3. Wyn Alder clerks the checkpoint and is the campaign’s first honest look at what an ordinary complicit person is actually like.
+**Hook.** Module 3. Wyn Alder clerks the checkpoint and is the campaign’s first honest look at what an ordinary complicit person is actually like.
 
 ## The Dead Mile
 
@@ -267,7 +267,7 @@ The Vaunt’s second port, and the place the occupation made an example of in th
 
 What remains is eight hundred people in a town built for three thousand, working the boats that were left, and a harbourmaster who has kept every single piece of paper.
 
-- **Hook.** Those papers are the second-best account of the occupation’s arithmetic in Elduvaine, after Norvatch’s. Unlike Norvatch’s, they are free, and the harbourmaster has been waiting three years for somebody to ask.
+**Hook.** Those papers are the second-best account of the occupation’s arithmetic in Elduvaine, after Norvatch’s. Unlike Norvatch’s, they are free, and the harbourmaster has been waiting three years for somebody to ask.
 
 ## Encounters in the Vaunt
 
@@ -301,7 +301,7 @@ Caer Ysolde is built of light-stone almost entirely. On a clear night before the
 
 It is dark now. Not lightless — the occupation burns lamps like anybody else — but the stone is out, and it went out over about fourteen months, quarter by quarter, in a way the people who live there could watch happening.
 
-- **Hook.** Module 11, and the whole campaign points here. Maelis Ysolde is held in her own apartments in the Ysolde Keep on the middle island.
+**Hook.** Module 11, and the whole campaign points here. Maelis Ysolde is held in her own apartments in the Ysolde Keep on the middle island.
 
 ## The Ysolde Archive
 
@@ -321,7 +321,7 @@ The reading rooms are still open. That is the detail that unsettles people most.
 
 A country seat of the house, walled, moated in the ornamental sense, and entirely unsuited to being a place of detention — which is exactly why the occupation chose it. Ninian Ysolde has been held here for three years in considerable comfort, with a library, a garden, a staff who are not permitted to leave, and a garrison that is embarrassed about the whole arrangement.
 
-- **Hook.** Module 4. The garrison commander here has been correct, courteous and humane for three years and would very much like somebody to notice that before this ends badly for him.
+**Hook.** Module 4. The garrison commander here has been correct, courteous and humane for three years and would very much like somebody to notice that before this ends badly for him.
 
 ## Lisswater
 
@@ -331,7 +331,7 @@ Where the middle river runs slow for nine miles, there are eleven villages that 
 
 The Listening Water is at its strongest along this stretch, and Lisswater has spent nine hundred years developing an etiquette around it so thorough that outsiders find it incomprehensible. You do not speak at the water’s edge about anything you would not repeat. You do not stand at the edge when angry. Children are taught the rule before they are taught to swim, and adults who break it are not scolded but quietly and permanently regarded as unserious.
 
-- **Hook.** The whole of the Four Voices technique works best here. So does the miller who has been miscounting the levy for two years and would like to stop being the only person doing it.
+**Hook.** The whole of the Four Voices technique works best here. So does the miller who has been miscounting the levy for two years and would like to stop being the only person doing it.
 
 ## The Threefold Stair
 
@@ -371,7 +371,7 @@ The first Kept Season planting and the greatest of them, forty acres of birch an
 
 It is nine weeks into a winter it was never sown in, and has been for most of a year. The trees are dying — not dead, dying, slowly and in the wrong order — and an ecology has moved in behind the change: winter wolves along the edges, and a troll in the orchard-keeper’s cottage, and the dryad who has been the spirit of this wood for three centuries and is now the spirit of a winter one and cannot leave.
 
-- **Hook.** Module 5’s Held Winter. The single most legible image of the draining in the campaign, and the one scene where a party can simply sit down and talk to the grief.
+**Hook.** Module 5’s Held Winter. The single most legible image of the draining in the campaign, and the one scene where a party can simply sit down and talk to the grief.
 
 ## Nantcorrow
 
@@ -381,7 +381,7 @@ Where the Marches are administered from, insofar as they are administered at all
 
 The Season-keepers are still here. They have not been arrested, because arresting them would stop the orchards producing, and the occupation would like the orchards to keep producing. They have therefore spent three years administering an institution on behalf of a man who is killing it, which is a position several of them can no longer live with.
 
-- **Hook.** The Keepers know exactly which woods have turned and in what order. That map is the best measurement of the draining that exists outside Norvatch’s ledgers, and it is not for sale, and they will give it to the right people.
+**Hook.** The Keepers know exactly which woods have turned and in what order. That map is the best measurement of the draining that exists outside Norvatch’s ledgers, and it is not for sale, and they will give it to the right people.
 
 # Elduvaine: The Standing Marches
 
@@ -397,7 +397,7 @@ The occupation has the quarries working double. What it is producing is not buil
 
 **DM Only:** the party can work out what the quarries are producing for, and it is one of the campaign’s better mid-game discoveries: light-stone cut to hold, then drained, is the most efficient way anyone has found to move Elduvaine’s resident magic in a cart. Cairn Ithel is not being worked. It is being packaged.
 
-- **Hook.** A master mason at Cairn Ithel has been deliberately cutting badly for two years — stone that holds for an hour instead of a week — and has cost the occupation a great deal, and knows exactly how long she has.
+**Hook.** A master mason at Cairn Ithel has been deliberately cutting badly for two years — stone that holds for an hour instead of a week — and has cost the occupation a great deal, and knows exactly how long she has.
 
 ## Ysgaron
 
@@ -405,7 +405,7 @@ The occupation has the quarries working double. What it is producing is not buil
 
 Smaller, older, and higher than Cairn Ithel, and the place the craft was worked out, six centuries ago, by people whose names are on a wall in the guild hall. Ysgaron does the fine work: the cut faces, the inlays, the lamps that are not lamps. Most of what makes Caer Ysolde beautiful was made here by about nine hundred people over six hundred years.
 
-- **Hook.** The guild hall’s wall of names is also, unintentionally, a four-hundred-year technical record. Anyone who can read it can work out how the cut is done. Vale has not been here yet.
+**Hook.** The guild hall’s wall of names is also, unintentionally, a four-hundred-year technical record. Anyone who can read it can work out how the cut is done. Vale has not been here yet.
 
 # The Willing Road
 
@@ -439,7 +439,7 @@ Guild-law country: dwarves and tieflings, humans throughout, and an entire realm
 
 Its great counting-city is Torvhal, where the Writ House sits — a court that has never in two centuries ruled on whether an agreement was fair, only on what it said. Norvatch does not want Elduvaine. Norvatch wants to remain the market for what leaves it, guaranteed in writing by whoever holds the place when the war ends, and it has held exactly that arrangement with the occupation for three years.
 
-- **Hook.** House Kell’s ledgers are the campaign’s clock. Doria Kell will sell them. Her price is in Module 10 and it is worse than money.
+**Hook.** House Kell’s ledgers are the campaign’s clock. Doria Kell will sell them. Her price is in Module 10 and it is worse than money.
 
 ~
 

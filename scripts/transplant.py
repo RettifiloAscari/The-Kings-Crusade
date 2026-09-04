@@ -272,6 +272,87 @@ def gap_after_tables(doc):
         return head + para
     return _PARA_AFTER_TBL.sub(fix, doc)
 
+# --- a heading must not be left at the foot of a column ---
+# The template's Heading styles carry keepNext, which stops a heading being the very
+# last line in a column -- but keepNext binds one block, and one block is often not
+# enough. Two shapes kept slipping through:
+#
+#   * "Tiered Skill DCs", a two-line lead-in, and then the table that IS the section,
+#     which went over the break on its own;
+#   * a gazetteer entry -- "Cairn Ithel" plus its one-line italic stat rule -- sitting
+#     at the foot of the last column on a page with every word of the place on the next.
+#
+# Both read as a title announcing nothing. The fix is two more bindings, applied here
+# for the same reason gap_after_tables is: table() returns a single Table and headings
+# are helpers, so a per-call fix would mean touching every call site in eighteen
+# generators and remembering it forever after.
+#
+#   A. A paragraph immediately followed by a table keeps with it, so a lead-in can
+#      never be separated from the table it introduces.
+#   B. A short paragraph immediately after a heading keeps with what follows, so the
+#      heading drags a stat rule or a one-line preamble AND the body under it.
+#
+# Both are cheap. keepNext binds the last line of a block to the first line of the
+# next, so a long paragraph still splits normally and only its tail travels; the
+# whitespace cost is bounded by the short paragraph in rule B.
+SHORT_LEAD_2COL = 110   # characters; about two lines in the 3.28in column
+SHORT_LEAD_1COL = 220   # ... and about two lines across the single-column page
+
+_KEEP_NEXT = '<w:keepNext w:val="1"/>'
+_BLOCK = re.compile(r'<w:p\b(?:(?!</w:p>).)*?</w:p>|<w:p\b[^>]*/>|\x00TBL\d+\x00', re.S)
+_PPR_HEAD = re.compile(r'<w:pPr>(<w:pStyle [^>]*/>)?')
+
+
+def _with_keep_next(para):
+    """Add keepNext to a paragraph, in the one place the schema allows it."""
+    if 'w:keepNext' in para:
+        return para
+    m = _PPR_HEAD.search(para)
+    if m:
+        # CT_PPr is a sequence: pStyle, then keepNext, then everything else.
+        return para[:m.end()] + _KEEP_NEXT + para[m.end():]
+    m = re.match(r'<w:p\b[^>]*>', para)
+    if not m:
+        return para
+    return para[:m.end()] + '<w:pPr>' + _KEEP_NEXT + '</w:pPr>' + para[m.end():]
+
+
+def bind_headings(doc, two_col=True):
+    """Keep a heading with enough of its section to be worth reading."""
+    short = SHORT_LEAD_2COL if two_col else SHORT_LEAD_1COL
+
+    # Mask the tables first. Their cells are full of paragraphs, and a keepNext on a
+    # paragraph inside a cell binds nothing and confuses the block walk.
+    tbls = []
+
+    def stash(m):
+        tbls.append(m.group(0))
+        return "\x00TBL%d\x00" % (len(tbls) - 1)
+
+    masked = re.sub(r'<w:tbl>.*?</w:tbl>', stash, doc, flags=re.S)
+
+    blocks = list(_BLOCK.finditer(masked))
+    edits = []
+    for i, b in enumerate(blocks):
+        cur = b.group(0)
+        if cur.startswith('\x00') or _IS_HEADING.search(cur):
+            continue                     # a table, or a heading whose style already binds
+        if not ''.join(_TEXT.findall(cur)).strip():
+            continue                     # a spacer paragraph binds nothing worth keeping
+        nxt = blocks[i + 1].group(0) if i + 1 < len(blocks) else ''
+        prev = blocks[i - 1].group(0) if i else ''
+        lead_in_to_table = nxt.startswith('\x00')
+        opens_a_section = (_IS_HEADING.search(prev)
+                           and len(''.join(_TEXT.findall(cur)).strip()) <= short)
+        if lead_in_to_table or opens_a_section:
+            edits.append(b)
+
+    for b in reversed(edits):            # from the end, so earlier spans stay valid
+        masked = masked[:b.start()] + _with_keep_next(b.group(0)) + masked[b.end():]
+
+    return re.sub(r'\x00TBL(\d+)\x00', lambda m: tbls[int(m.group(1))], masked)
+
+
 def convert(src, dst, two_col=True):
     work = os.path.join(_HERE, "work_tpl")
     shutil.rmtree(work, ignore_errors=True)
@@ -314,6 +395,7 @@ def convert(src, dst, two_col=True):
 
     # ability-table cells: sz 20 -> 17 so headers fit two-column width
     doc = gap_after_tables(doc)
+    doc = bind_headings(doc, two_col)
 
     doc = doc.replace('<w:sz w:val="20"/>', '<w:sz w:val="17"/>')
 

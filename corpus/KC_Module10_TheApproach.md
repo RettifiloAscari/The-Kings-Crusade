@@ -148,7 +148,7 @@ If the table wants a quiet character scene, let each PC write (or dictate, or si
 
 # Loot
 
-- **Nothing material.** This module, like Module Three and Module Five before it, is not about treasure. Its currency is entirely the conversation in Scenes 3 and 4.
+**Nothing material.** This module, like Module Three and Module Five before it, is not about treasure. Its currency is entirely the conversation in Scenes 3 and 4.
 
 # The Refrain
 

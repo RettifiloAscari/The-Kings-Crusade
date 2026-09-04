@@ -153,15 +153,11 @@ Put together, three captured dispatches tell the party where Voss’s reserve is
 
 Eight thousand people on each side and five characters somewhere in the middle of it. The party cannot win a field battle and should never be asked to; what they can do is be the hinge at five specific moments, and the module is built to put them at each one.
 
-**First: The Approach.** Two hours of standing in a line while the enemy does the same thing four hundred yards away. Nothing happens. This is deliberate and should be played straight — the fear in a set battle is almost all in the waiting, and a DM who skips it has thrown away the only chance to make the rest of it land.
-
-**Second: The Left Gives.** Oksitan spears, already shaken by what happened to their king, bend and do not break. The party is behind them and can see it happening before anyone in command can. A dragonborn house-knight is somewhere in the middle of that line roaring instructions nobody can hear.
-
-**Third: The Ironshanks.** The Sixth’s heavy foot come through the gap in a shield wall and the party is what is in front of them. Four ironshanks and an optio, in the open, with the battle noise making every command a shouted argument. This is the module’s real fight and it should be genuinely frightening.
-
-**Fourth: The Reserve.** Voss commits, or does not, depending on the puzzle above. If the party found it, the coalition meets it ready. If not, it arrives on the flank and the module gets a sixth movement nobody wanted.
-
-**Fifth: Voss.** She does not flee and she does not die swinging. When the field is lost she stops, puts her sword point down in the mud, and waits, because she is a professional on a contract and the contract does not require this. What the party does about that is the end of the session.
+1. **The Approach.** Two hours of standing in a line while the enemy does the same thing four hundred yards away. Nothing happens. This is deliberate and should be played straight — the fear in a set battle is almost all in the waiting, and a DM who skips it has thrown away the only chance to make the rest of it land.
+2. **The Left Gives.** Oksitan spears, already shaken by what happened to their king, bend and do not break. The party is behind them and can see it happening before anyone in command can. A dragonborn house-knight is somewhere in the middle of that line roaring instructions nobody can hear.
+3. **The Ironshanks.** The Sixth’s heavy foot come through the gap in a shield wall and the party is what is in front of them. Four ironshanks and an optio, in the open, with the battle noise making every command a shouted argument. This is the module’s real fight and it should be genuinely frightening.
+4. **The Reserve.** Voss commits, or does not, depending on the puzzle above. If the party found it, the coalition meets it ready. If not, it arrives on the flank and the module gets a sixth movement nobody wanted.
+5. **Voss.** She does not flee and she does not die swinging. When the field is lost she stops, puts her sword point down in the mud, and waits, because she is a professional on a contract and the contract does not require this. What the party does about that is the end of the session.
 
 **DM Only:** a captured Voss is worth more to this campaign than a dead one by a wide margin and the module should not tip the scale. She will not be turned, will not inform, and will not apologise for any of it — and she will, if asked correctly, explain exactly what the Sixth’s contract says and when it expires, which is information nobody else in Elduvaine will give the party and which matters enormously in Module Eleven.
 

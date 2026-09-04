@@ -200,7 +200,7 @@ Open thread: whether he dies, escapes, or is captured is this module’s to deci
 
 # Loot
 
-- **Whatever the Archive itself now represents.** Not itemized loot — the campaign’s actual final reward is the ending the table chose, and this module does not attach a treasure list to that choice on purpose.
+**Whatever the Archive itself now represents.** Not itemized loot — the campaign’s actual final reward is the ending the table chose, and this module does not attach a treasure list to that choice on purpose.
 
 # The Refrain
 

@@ -117,17 +117,15 @@ The conclusion the party is meant to reach: the dragon must be commanded aloud, 
 
 The campaign’s largest action sequence. Run it in phases with the whole battlefield moving, and give the party a real decision at each transition rather than a corridor.
 
-**Phase One: The Stone Comes Down.** Nine months of Auberitz engineering resolves in about ninety seconds. Forty feet of the inner wall — Standing Light stone, six centuries old, dark now — goes over outward, and the noise arrives after the sight of it, and for a moment nobody on either side does anything at all.
+1. **The Stone Comes Down.** Nine months of Auberitz engineering resolves in about ninety seconds. Forty feet of the inner wall — Standing Light stone, six centuries old, dark now — goes over outward, and the noise arrives after the sight of it, and for a moment nobody on either side does anything at all.
 
 > *“It does not crack. It leans, the way a man leans who has decided to sit down, and then the whole forty feet of it goes at once and the dust comes out sideways across the ditch faster than a horse can run. And when the dust clears there is a hole in Vindana with the sea behind it, and every single person on both sides of that ditch understands that the next four minutes decide the war.”*
 
-**Phase Two: The Race.** The coalition storming party and the garrison’s reserve are both running for the breach and the garrison is closer. Unless the party opened the under-wall route in Module Six, in which case they are already inside and behind the reserve, and this phase is theirs to wreck.
+2. **The Race.** The coalition storming party and the garrison’s reserve are both running for the breach and the garrison is closer. Unless the party opened the under-wall route in Module Six, in which case they are already inside and behind the reserve, and this phase is theirs to wreck.
+3. **The Fight in the Gap.** Four to six legionaries and an ironshank holding rubble against a party at 5th level. Terrain is the whole encounter: broken stone, three levels of it, and a twenty-foot drop into the ditch on the wrong side. Morale breaks when the ironshank goes down, and the Sixth withdraws in good order and takes its wounded.
+4. **The Dragon.** Overhead, on the third pass, and the module’s other set piece begins. See the puzzle above.
 
-**Phase Three: The Fight in the Gap.** Four to six legionaries and an ironshank holding rubble against a party at 5th level. Terrain is the whole encounter: broken stone, three levels of it, and a twenty-foot drop into the ditch on the wrong side. Morale breaks when the ironshank goes down, and the Sixth withdraws in good order and takes its wounded.
-
-**Phase Four: The Dragon.** Overhead, on the third pass, and the module’s other set piece begins. See the puzzle above.
-
-**DM Only:** Xavier earns the name airborne, mid-siege, in a battle that is going badly, and it must be visibly going badly first. Let the coalition lose Phase Two. Let a company break. Then put him over the breach on the back of a Greywatch wyvern with the whole army watching, and let the name arrive from the ranks rather than from a herald. His stat block does not change. That is the point: nothing about him is different afterwards except what he is called.
+**DM Only:** Xavier earns the name airborne, mid-siege, in a battle that is going badly, and it must be visibly going badly first. Let the coalition lose the race for the breach. Let a company break. Then put him over the breach on the back of a Greywatch wyvern with the whole army watching, and let the name arrive from the ranks rather than from a herald. His stat block does not change. That is the point: nothing about him is different afterwards except what he is called.
 
 # NPC Profiles
 

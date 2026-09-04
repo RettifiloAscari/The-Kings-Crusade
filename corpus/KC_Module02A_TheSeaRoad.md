@@ -186,11 +186,9 @@ Run the storm as a sequence of concrete problems on a deck that is coming apart,
 
 > *“The mast goes first, and it does not fall — it folds, forward and down, and takes the forestay and eleven feet of rail with it, and the noise it makes is not a crack but a long tearing groan you feel in your teeth. Then the ship comes off the top of a wave and does not come down where the sea is.”*
 
-**Phase One: The Rigging.** The mainmast is down across the deck and the shrouds are still attached, which means the wreckage is being dragged and is pulling the bow round into the sea. Cutting it free is DC 15 Strength (Athletics) with an axe, three successes needed, and anyone working the rail makes a DC 13 Dexterity saving throw each round or goes over.
-
-**Phase Two: The Hold.** Four feet of water and climbing, and the siege train’s draught horses are down there. A character who goes below is in the dark, in water, with panicking animals. Getting them up is DC 14 Wisdom (Animal Handling); the alternative is closing the hatch, which everybody aboard will understand and nobody will forget.
-
-**Phase Three: The Shoals.** The ship strikes. Everyone aboard makes a DC 12 Strength saving throw or is thrown twenty feet and takes 2d6 bludgeoning damage. From here it is swimming, and the swim is DC 13 Athletics, three successes, with Thane’s boats arriving somewhere in the middle of it and the party watching them choose who to pick up first.
+1. **The Rigging.** The mainmast is down across the deck and the shrouds are still attached, which means the wreckage is being dragged and is pulling the bow round into the sea. Cutting it free is DC 15 Strength (Athletics) with an axe, three successes needed, and anyone working the rail makes a DC 13 Dexterity saving throw each round or goes over.
+2. **The Hold.** Four feet of water and climbing, and the siege train’s draught horses are down there. A character who goes below is in the dark, in water, with panicking animals. Getting them up is DC 14 Wisdom (Animal Handling); the alternative is closing the hatch, which everybody aboard will understand and nobody will forget.
+3. **The Shoals.** The ship strikes. Everyone aboard makes a DC 12 Strength saving throw or is thrown twenty feet and takes 2d6 bludgeoning damage. From here it is swimming, and the swim is DC 13 Athletics, three successes, with Thane’s boats arriving somewhere in the middle of it and the party watching them choose who to pick up first.
 
 **DM Only:** nobody in the party should die here and the scene should feel like they might. Use the horses. A party that saves the draught team keeps the siege train on schedule and will find out in Module Six exactly what that was worth, and a party that closes the hatch will find that out too, from an Auberitz engineer who is not accusing them of anything.
 

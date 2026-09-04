@@ -427,7 +427,10 @@ output from them.
   byte-reproducible), and the authoring tools: `anchor.py`, `normalize_escapes.py`,
   `check_columns.py`, `find_page.py`. Those five are byte-identical to their copies in
   The Qilvayas Symphony; everything repository-specific lives in `pipeline.conf`, so a
-  fix to a tool is a copy rather than a re-derivation.
+  fix to a tool is a copy rather than a re-derivation. Two further checks are this
+  repository's own — `check_tearing.py` (a stat block's ability row torn from its header)
+  and `check_widows.py` (a section heading stranded at the foot of a column) — and both
+  run inside `verify.sh`.
 - `.claude/skills/kc-build/` — the production mechanics, as a skill loaded on demand.
   It is the single copy of those rules; do not restate them in this file.
 - `drafts/` — design drafts awaiting sign-off. Not canon; never read as canon.
@@ -661,6 +664,15 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
   deliberately not.
 - **The pipeline is unchanged and still proven.** Three new generators registered in
   `tools/build.sh`; `SINGLE_COL_MATCH` still names only the DM Reference Guide.
+- **A readability pass has been through the whole set**, changing how it reads and not what
+  it says. Section headings now carry enough of their section across a column break that a
+  title can no longer announce nothing — `transplant.py` binds a lead-in to the table that
+  follows it and a short opener to the body under it, and `tools/check_widows.py` measures
+  it on every build. Ordered sequences — a set piece's phases, a battle's movements — are
+  real numbered lists rather than unmarked bold-led prose printed beside real bulleted ones,
+  both hanging at the same measure. And twenty-five one-item bulleted lists, chiefly the
+  Gazetteer's *Hooks*, became bold run-in notes, because a list of one is not a list. Page
+  count is unchanged at 101.
 
 **What the expansion deliberately did not do.** Auberitz still has no agenda, the deepest
 vaults still have no contents, Vale's humanity is still open, and whether Harrowmark was ever

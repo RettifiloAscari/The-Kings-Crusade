@@ -65,6 +65,15 @@ out="$(python3 tools/check_tearing.py 2>&1)"; rc=$?
 if [[ $rc -eq 0 ]]; then ok "every ability row sits under its own header"
 else printf '%s\n' "$out" | sed 's/^/   /'; bad "torn stat block(s) above"; fi
 
+note "no section heading is stranded at the foot of a column"
+out="$(python3 tools/check_widows.py 2>&1)"; rc=$?
+if [[ $rc -ne 0 ]]; then printf '%s\n' "$out" | sed 's/^/   /'; bad "a heading announces nothing above"
+elif grep -q '^tight' <<<"$out"; then
+  printf '%s\n' "$out" | grep '^tight' | sed 's/^/   /'
+  printf '   note  a tight finding above: two lines under a heading at a column break\n'
+  printf '         is ordinary. Render that page and look before changing anything.\n'
+else ok "every heading carries its section with it"; fi
+
 note "corpus and documents match scripts"
 md=$(git status --porcelain corpus | wc -l)
 pdf=$(git status --porcelain documents | wc -l)

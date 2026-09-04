@@ -22,15 +22,19 @@ class ImageRun {
   md(){ return this.path ? '!['+this.alt+']('+this.path+')' : ''; }
 }
 class Paragraph {
-  constructor(o){ o = o || {}; this.o = o; this.children = o.children || []; }
-  md(){
+  // Ordered and unordered lists are different marks on the page and different marks in
+  // Markdown, and the numbering reference is the only thing the shim can tell them
+  // apart by -- the real docx resolves it through numbering.xml, which never gets here.
+  constructor(o){ o = o || {}; this.o = o; this.children = o.children || [];
+    this.list = o.numbering ? (o.numbering.reference === 'steps' ? 'ol' : 'ul') : null; }
+  md(n){
     const body = this.children.map(c => (c.md ? c.md() : '')).join('').replace(/\s+$/,'');
     if (!body) return '';
     const h = this.o.heading;
     if (h === 'Heading1') return '# ' + body;
     if (h === 'Heading2') return '## ' + body;
     if (h === 'Heading3') return '### ' + body;
-    if (this.o.numbering) return '- ' + body;
+    if (this.list) return (this.list === 'ol' ? (n || 1) + '. ' : '- ') + body;
     // BOX read-aloud. Verse keeps its line breaks, so every line needs the marker.
     if (this.o.shading) return body.split('\n').map(l => '> ' + l).join('\n');
     return body;
@@ -51,13 +55,27 @@ class Table {
 let CAPTURED = null;
 class Document { constructor(o){ CAPTURED = o; } }
 const Packer = { toBuffer: () => Promise.resolve(Buffer.from(render(), 'utf8')) };
+const listKind = s => s.startsWith('- ') ? 'ul' : (/^\d+\. /.test(s) ? 'ol' : null);
+
 function render(){
   const secs = (CAPTURED && CAPTURED.sections) || [];
   const blocks = [];
-  secs.forEach(s => (s.children||[]).forEach(n => { const m = n.md ? n.md() : ''; if (m) blocks.push(m); }));
+  // Ordered items number themselves as they are walked. The counter restarts at a
+  // heading or a bulleted list, which is where a new sequence can begin, and NOT at
+  // anything else -- a read-aloud box printed between two phases of a set piece must
+  // not restart it, because the OOXML counter does not restart either and the two
+  // halves of the build have to agree about what the reader sees.
+  let ord = 0;
+  secs.forEach(s => (s.children||[]).forEach(n => {
+    if (n && n.list === 'ol') ord += 1;
+    const m = n.md ? n.md(ord) : '';
+    if (!m) return;
+    if (m.startsWith('#') || (n && n.list === 'ul')) ord = 0;
+    blocks.push(m);
+  }));
   const out = []; let prev = '';
   blocks.forEach(b => {
-    if (prev.startsWith('- ') && b.startsWith('- ')) out.push(b);
+    if (listKind(prev) && listKind(prev) === listKind(b)) out.push(b);
     else if (prev.startsWith('|') && b.startsWith('|')) out.push(b);
     else out.push((out.length ? '\n' : '') + b);
     prev = b;
