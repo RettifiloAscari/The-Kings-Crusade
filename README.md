@@ -39,7 +39,7 @@ This repository is the source of truth for the campaign.
 
 ## The documents
 
-Eighteen documents, all generated. Read the Markdown on any device; the PDF is the styled,
+Nineteen documents, all generated. Read the Markdown on any device; the PDF is the styled,
 font-embedded edition meant for the table.
 
 ### Sourcebook
@@ -60,6 +60,13 @@ font-embedded edition meant for the table.
 - **[Character Options](corpus/KC_Character_Options.md)** — seven backgrounds, six feats,
   three subclasses, six spells and the wonders of Elduvaine as magic items. Player-facing,
   and none of it required · [PDF](documents/KC_Character_Options.pdf)
+
+### At the table
+
+- **[Session Zero: Foundations](corpus/KC_Session_Zero_Primer.md)** — the table-setting
+  primer, run before Module One: character creation, why the king knows your name, the
+  tone conversation, and a two-hour plan for the session. DM-facing, and the one document
+  here that is neither a module nor a handout · [PDF](documents/KC_Session_Zero_Primer.pdf)
 
 ### Session modules
 

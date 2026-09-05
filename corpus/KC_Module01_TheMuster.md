@@ -12,7 +12,7 @@
 
 The party is summoned to Duncarrow, seat of Xavier III of Harrowmark, and chosen personally for the crusade he has called. Before the muster can march, Harrowmark asks one more thing of them: help see off a wyvern that has turned on the hold of Greywatch. The session ends with the coalition’s ships or column setting out, and the table making the campaign’s first real choice — the sea road or the mountain road. Core scenes run three and a half to four hours; Optional Content is built to fill out the rest of a five-hour session, not to be squeezed into it, and can be skipped entirely on a slow night without costing the module anything it needs later.
 
-If the party does not already know one another, run Scene 1 as their introduction rather than as exposition — they can meet on the road, all answering the same rider. If they do already know each other, skip straight to the summons and let the scene move.
+If the party does not already know one another, run Scene 1 as their introduction rather than as exposition — they can meet on the road, all answering the same rider. If they do already know each other, skip straight to the summons and let the scene move. Which of the two it is should have been settled at Session Zero rather than discovered here; the primer puts that question to the table first, ahead of everything else it asks.
 
 ## The Weight of Harrowmark
 

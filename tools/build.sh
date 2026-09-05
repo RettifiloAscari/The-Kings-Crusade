@@ -35,9 +35,9 @@ export KC_STAGE="$STAGE"
 mkdir -p "$STAGE" "$DOCS" "$CORPUS"
 
 # The generators to run, in build order. Add each new document here as it is
-# written: the core setting volumes, the session modules, the DM Reference Guide,
-# and the Player Guide.
-GENERATORS=(KC_Sourcebook KC_Gazetteer KC_Bestiary KC_Character_Options KC_Module01_TheMuster KC_Module02A_TheSeaRoad KC_Module02B_TheMountainRoad KC_Module03_Landfall KC_Module04_TheCoalition KC_Module05_TheRoadToVindana KC_Module06_VindanaInvestment KC_Module07_VindanaBreaking KC_Module08_HeldGround KC_Module09_TheFieldBattle KC_Module10_TheApproach KC_Module11_TheDecisionAtTheGates KC_DM_Reference_Guide KC_Player_Guide)
+# written: the core setting volumes, the Session Zero primer, the session modules,
+# the DM Reference Guide, and the Player Guide.
+GENERATORS=(KC_Sourcebook KC_Gazetteer KC_Bestiary KC_Character_Options KC_Session_Zero_Primer KC_Module01_TheMuster KC_Module02A_TheSeaRoad KC_Module02B_TheMountainRoad KC_Module03_Landfall KC_Module04_TheCoalition KC_Module05_TheRoadToVindana KC_Module06_VindanaInvestment KC_Module07_VindanaBreaking KC_Module08_HeldGround KC_Module09_TheFieldBattle KC_Module10_TheApproach KC_Module11_TheDecisionAtTheGates KC_DM_Reference_Guide KC_Player_Guide)
 
 # Substring of the one document that takes --single on the transplant.py step:
 # the DM Reference Guide, whose value is wide scannable tables that read badly in

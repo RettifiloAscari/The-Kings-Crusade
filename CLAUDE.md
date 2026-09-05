@@ -4,8 +4,8 @@ A Dungeons & Dragons 5th Edition campaign. High fantasy, traditionally D&D, buil
 Third Crusade spine.
 
 > **STATUS: THE FULL DOCUMENT SET IS BUILT AND HAS HAD ITS FIRST MAJOR EXPANSION.**
-> Sourcebook, Gazetteer, Bestiary, Character Options, all eleven session module slots,
-> the DM Reference Guide, and the Player Guide — eighteen documents.
+> Sourcebook, Gazetteer, Bestiary, Character Options, the Session Zero primer, all eleven
+> session module slots, the DM Reference Guide, and the Player Guide — nineteen documents.
 > The pipeline is proven and the setting's foundation is canon: the kingdom, the wizard,
 > the king, the occupation, the coalition's named members, and the shape of the war
 > across a signed-off eleven-module arc. Detail below that — what Oksitan and Auberitz
@@ -443,7 +443,7 @@ cannot drift apart. The `.docx` is a build intermediate and is never committed.
 
 ## The Document Set
 
-Four documents, filename-prefixed `KC_`:
+Every document is filename-prefixed `KC_`. Roles, and the layout each takes:
 
 | Document | Role | Column layout |
 |---|---|---|
@@ -451,6 +451,7 @@ Four documents, filename-prefixed `KC_`:
 | **Gazetteer** | Geography region by region: ~30 keyed places, travel times, regional encounter tables. | Two-column |
 | **Bestiary** | Resident-magic creatures, the Sixth Free Legion, named-NPC blocks. | Two-column |
 | **Character Options** | Backgrounds, feats, subclasses, spells, magic items. Player-facing. | Two-column |
+| **Session Zero: Foundations** | The table-setting primer run before Module One. DM-facing, and neither a module nor a handout. | Two-column |
 | **Session modules** | One per session arc. Runnable at the table. | Two-column |
 | **DM Reference Guide** | Wide scannable tables, stat block index, the Branch Ledger. | **Single-column** |
 | **Player Guide** | The sanitized handout. | Two-column |
@@ -618,7 +619,7 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
 
 ## Current State
 
-**Eighteen documents, 101 pages, all verified clean and byte-reproducible.**
+**Nineteen documents, 104 pages, all verified clean and byte-reproducible.**
 
 - `scripts/KC_Sourcebook.js` — the call, the peoples, **faith in the Nine Works** (the
   Concord, Elduvaine's Observances, the Order of the Tenth Work), Elduvaine before the fall,
@@ -650,12 +651,24 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
   Glance, the Stat Block Index, **faith and factions at a glance**, **a puzzle index naming
   what solves each one**, nineteen recurring NPCs, and a Branch Ledger now carrying **43**
   tracked divergences.
+- `scripts/KC_Session_Zero_Primer.js` — the table-setting primer, run before Module One and
+  read by nobody but the DM. Five outputs (whether the party already knows itself, why the king
+  knew each name, a country decided separately from a race, what each character wants out of the
+  Promise, and the tone conversation), character creation rules, a two-hour block plan, the
+  lines-and-veils conversation, a know/do-not-know split, a d12 of things to carry out of
+  Harrowmark, and the opening of Module One described so nobody arrives cold. **It invents no
+  canon** — every claim traces to the Player Guide, the sourcebook, Character Options or Module
+  One — and it withholds two things deliberately: no milestone schedule (the modules compute
+  their encounter arithmetic at 5th level and Module Nine says the table will have outgrown it)
+  and no starting magic item (Module One's loot hands over the first, and that only lands once).
+  **Not player-facing, and deliberately absent from `PLAYER_FACING`:** it is the one page in the
+  set that names every guarded fact at once.
 - `scripts/KC_Player_Guide.js` — gained **what people believe** (the Nine Works, Elduvaine's
   lack of a church, and the Tenth Work as an ally that says openly what it intends) and **the
   House of Ysolde** by name and public reputation only. Still withholds Vale's motive, whether
   he is human, the Wyvernheart, and the ending structure.
 - **`images/` holds one file — the README title banner — and `IMG()` remains unexercised**:
-  eighteen documents of prose and not one map or illustration inside any of them. The banner
+  nineteen documents of prose and not one map or illustration inside any of them. The banner
   is repository furniture and commits to nothing; **the artwork question is still a tracked
   open item** (see *Not yet decided*), because a map fixes geography in ways the prose has
   deliberately not.

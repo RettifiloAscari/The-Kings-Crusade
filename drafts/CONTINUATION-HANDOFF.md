@@ -26,9 +26,9 @@ and it tells you the set is intact and the toolchain works.
 
 ## What you inherit
 
-**Eighteen documents, 101 pages, ~84,000 words**, all verified clean and byte-reproducible.
+**Nineteen documents, 104 pages, ~88,500 words**, all verified clean and byte-reproducible.
 Six core volumes (Sourcebook, Gazetteer, Bestiary, Character Options, DM Reference Guide,
-Player Guide) plus twelve module files covering eleven session slots.
+Player Guide), the Session Zero primer, and twelve module files covering eleven session slots.
 
 The setting's foundation is signed off and binding: the kingdom, the wizard and his motive,
 the calling king, the occupation as a hired legion, the Nine Works and the schism, House
@@ -38,7 +38,7 @@ eleven-module arc. `CLAUDE.md` states all of it precisely.
 ## The scale question, honestly
 
 The DM asked for something at published scale — 224–320 pages for a setting book, 50–100
-for an adventure module. **We are at 101 pages total.** That gap is real and it should be
+for an adventure module. **We are at 104 pages total.** That gap is real and it should be
 stated plainly rather than quietly ignored.
 
 The arithmetic, at this template's density of roughly 830 words per page:
@@ -125,6 +125,15 @@ Keep them apart.
   bold-led prose sitting beside real bullets. The fixes port over as they stand, except the
   110/220-character "short opener" thresholds, which are two rendered lines at *this*
   repository's 10pt body and want re-measuring at 11pt.
+- **Qilvayas's own Session Zero primer has two stranded duplicate sections**, found while
+  building this repository's equivalent and deliberately not copied. `QS_Session_0_Primer`
+  closes on *The First Five Minutes of Session One*, and then carries two more headings after
+  it: *Tone Check*, which restates *Tone, Lines, and the Conversation Before the Campaign*,
+  and *What the Players Should Not Know*, which restates the second half of *What the Players
+  Should Know, and What They Should Not*. They read as leftovers from an earlier draft that a
+  later expansion superseded without deleting. The fix is to cut both from `scripts/sessions.js`
+  and fold anything they say that the earlier sections do not — the paladin/cleric
+  foreshadowing note in particular — into those sections. Not this repository's call to make.
 
 ## Three things learned the hard way
 
