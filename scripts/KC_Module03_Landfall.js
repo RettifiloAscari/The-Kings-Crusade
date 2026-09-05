@@ -177,7 +177,7 @@ c.push(P("Play this scene short and quiet. There is nothing to fight and nothing
 // ---------------------------------------------------------------- Scene 3
 c.push(H2("Scene 3: The Caerwyn Checkpoint"));
 
-c.push(P("Past the Dead Mile, the road reaches a checkpoint \u2014 a barrier, a brazier, and a folding table with a ledger, staffed by two or three occupation soldiers and one Elduvish clerk who does the actual talking. This is Vale\u2019s war in its least dramatic and most revealing form: permits, a grain levy receipt, a question about where the party is bound and why."));
+c.push(P("Past the Dead Mile, the road reaches a checkpoint \u2014 a barrier, a brazier, and a folding table with a ledger, staffed by eight occupation soldiers \u2014 a clerk, a barrier and eight bored men is exactly what the occupation thought Caerwyn was worth \u2014 and one Elduvish clerk who does the actual talking. This is Vale\u2019s war in its least dramatic and most revealing form: permits, a grain levy receipt, a question about where the party is bound and why."));
 
 c.push(BOX("The clerk \u2014 a woman in a coat too well-made for the checkpoint she is standing at \u2014 does not look up immediately. \u201CPapers, or a reason,\u201D she says, pen already uncapped. \u201CI don\u2019t enjoy this part any more than you will. Let\u2019s get through it quickly.\u201D"));
 
@@ -309,8 +309,18 @@ c.push(P("Open thread: Wyn is this campaign\u2019s first answer to the question 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
 
-c.push(H2("The Baker\u2019s Ovens"));
-c.push(P("If the table wants more of Caerwyn before moving on, its baker \u2014 matter-of-fact about her never-cooling ovens, per Scene 1 \u2014 is a good source of purely human texture: gossip, a minor local favor asked of the party, or simply an excuse to let the table enjoy the town a while longer before the checkpoint\u2019s tension arrives. No mechanical stakes."));
+c.push(H2("Nobody Here Speaks Marchspeak"));
+c.push(P("Elduvish is a dialect of Elvish spoken by every race in the kingdom \u2014 dwarves, halflings and humans included \u2014 and being unable to speak it marks a traveller as foreign far more reliably than a face does. Caerwyn is the first place that costs the party anything. Run one scene where the language is the obstacle rather than the occupation: a price quoted twice and differently, a warning nobody manages to translate in time, a joke at the party\u2019s expense that the whole room enjoys and then kindly explains."));
+c.push(P("If exactly one character speaks Elduvish, they have just acquired a job for the rest of the campaign and everybody in every market will look at them first. If nobody does, that is the intended experience and the friction is a feature of the whole middle third. If the entire party speaks it, the arrival has been flattened and a DM should say so at the table rather than quietly resent it."));
+c.push(PS([DM("DM Only: "), { t: "the campaign gets a great deal out of the party being visibly foreign in a country they have come to liberate, and gets it for free. Do not solve it with a spell, a helpful NPC translator, or a ruling that everyone here speaks Common anyway. Caerwyn speaks Common perfectly well. Caerwyn simply does not, among itself, and the party will hear the difference." }]));
+
+c.push(H2("An Observance, and Nobody in Charge of It"));
+
+c.push(P("Somewhere in the party\u2019s first evening ashore, about twenty people gather at a wayside above the orchard, do something for a quarter of an hour, and disperse. There is no priest. There is no building. Nobody collects anything, nobody preaches, and nobody explains, and if the party asks what it was for they will get four different answers from four different people, all of them local, none of them authoritative, and one of them frankly eccentric."));
+
+c.push(P("This is an Observance: not worship, but good manners practised at enormous scale \u2014 the things you do so that a road stays willing, a wood stays kept, and water that has heard you has no cause to repeat the worst of it. Every parish has its own and no two agree. A Concord character from Harrowmark, Oksitan, Auberitz or Norvatch will find this either charming or alarming, and a Concord cleric will find it genuinely difficult, because Elduvaine never built a church and does not understand why anybody else needed one."));
+
+c.push(PS([DM("DM Only: "), { t: "run this once, early, with no stakes on it at all, because it is the setup for the single ugliest thing the party\u2019s own side does in this campaign. The Order of the Tenth Work intends to consecrate ground exactly like this \u2014 lawfully, generously, and by burning what is on it \u2014 and the party should have stood in a field at dusk with twenty ordinary people before they ever watch that happen. Do not connect the two here. Do not let a Tenth Work rider appear in this scene." }]));
 
 c.push(H2("What Wyn Knows"));
 c.push(P("If the party earns Wyn Alder\u2019s trust in Scene 3 rather than merely getting past her, she has real, specific intelligence about patrol schedules and levy routes inland \u2014 useful DM ammunition for a later module rather than anything this one needs. Do not have her volunteer this unprompted; it should feel earned."));

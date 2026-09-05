@@ -27,9 +27,11 @@ Resist adding combat to pad this module’s length. Its entire job is weight and
 
 # What Is Actually Happening (DM Only)
 
-The Regent has spent three years running a resistance that could never win, on purpose — not to defeat the occupation, which was never possible with the forces available, but to make sure Elduvaine never became a place that had simply accepted Vale. They know a great deal about the deepest state of the drainage, about the Archive’s vaults from the outside, and about what the rest of the royal house actually wants for the kingdom afterward, which is not something they all agree on. None of this resolves the campaign’s central open question — what Elduvaine should become after the war — and this module should not resolve it either.
+Aveline Ysolde has spent three years running a resistance that could never win, on purpose — not to defeat the occupation, which was never possible with the forces available, but to make sure Elduvaine never became a place that had simply accepted Vale. She knows a great deal about the deepest state of the drainage, about the Archive’s vaults from the outside, and about what the rest of her house actually wants for the kingdom afterward, which is not something they all agree on. None of this resolves the campaign’s central open question — what Elduvaine should become after the war — and this module should not resolve it either.
 
-**DM Only:** the Regent is a real, developed person, not an exposition device — give them their own opinions, including ones the party might disagree with. Do not use them to state a “correct” answer to the turn-back-or-hold question; that question is deliberately left to the table, and a later session must not reweight it, including through this NPC’s own persuasive certainty.
+**DM Only:** she is a real, developed person and not an exposition device, and the sourcebook gives her a position: Elduvaine free, and the Ysolde Archive closed. Permanently, and by law. A kingdom that can be opened with a key should not keep the key. Let her hold that opinion in front of a party who have marched here under a Promise that includes the run of that Archive, and let her be entirely aware of what she is saying to them. Do not use her to state a correct answer to the turn-back-or-hold question — that is the table’s, and a later session must not reweight it, including through this NPC’s own considerable certainty.
+
+**DM Only:** three years of occupation have not caught her, and the reason is worth knowing before you play her. Her great-grandmother married into the Braid out of a Harrowmark trading family, which makes Aveline the closest thing this royal house has to a foreigner — and in a country where everybody is known, she is the one Ysolde who knows how to be unremarkable. She has refused evacuation in writing, twice, to two different coalition commanders who put it to her as a kindness.
 
 ## Scene 1: The Last Miles
 
@@ -49,15 +51,15 @@ Let this land as the wonder-into-grief beat it is meant to be, deliberately pair
 
 ## Scene 3: The Regent
 
-A resistance contact — cautious, testing the party before committing to anything — leads them to a meeting the coalition’s own officers have been trying to arrange for weeks: the Regent, in person, for the first time.
+A resistance contact — cautious, testing the party before committing to anything — leads them to a meeting the coalition’s own officers have been trying and failing to arrange for weeks: Aveline Ysolde, Regent of Elduvaine, in person, for the first time.
 
-> *They are older than the party expects, and plainer — no crown, no court dress, a coat as travel-worn as anything Doria Kell wears. “Three years I’ve been told, by people who mean well, that I should let myself be taken somewhere safe,” they say, by way of greeting. “I have found that ‘safe’ and ‘useful’ are very rarely the same offer. You, I take it, are neither.”*
+> *She is younger than the party expects and very much plainer — forty-one, no crown, no court dress, a coat as travel-worn as anything Doria Kell wears, and the specific unremarkableness of somebody who has spent three years being looked past in her own country. “Three years I have been told, by people who mean well, that I should let myself be taken somewhere safe,” she says, by way of greeting. “I have found that safe and useful are very rarely the same offer. You, I take it, are neither.”*
 
 ### Running the Scene
 
-The Regent will speak plainly about what the resistance actually knows: the drainage’s current state, Vale’s general pattern of movement within the city (he is rarely seen, and never predictably), and, if asked directly, their own view on what should happen to Elduvaine after the war — a view the sourcebook establishes the royal house does not universally share. Let this be a real conversation with a real person who has earned the right to an opinion, not a briefing. No skill check gates any of this information; the Regent gives it freely to people they have decided, correctly, are worth trusting.
+Aveline will speak plainly about what the resistance actually knows: the drainage’s current state, Vale’s pattern of movement within the city (he is rarely seen and never predictably), and, if asked directly, her own view on what should happen to Elduvaine afterward — a view the sourcebook establishes her own house does not share. Let this be a real conversation with a real person who has earned the right to an opinion, not a briefing. No skill check gates any of it; she gives it freely to people she has decided, correctly, are worth trusting. She is also clear-eyed about what her resistance actually is, and will describe it in exactly those terms: a miller who miscounts, two orchard-keepers who hide people, a clerk who forges permits in the same hand she once used to file requisitions. Not an army. A conspiracy of small, patient, deniable treason.
 
-**DM Only:** if the party has freed the Ward and the Magistrate, this is a natural moment for the Regent to ask after them directly and personally rather than as political assets — let that land as real family feeling, complicated by three years apart and by disagreement about what comes next.
+**DM Only:** if the party freed Ninian at Sennoch Hall and Ottoline at Vindana, this is where Aveline asks after her cousins by name and as people rather than as political assets — and where she finds out, probably from the party rather than from them, that Ninian has been telling coalition officers the Promise cannot be paid. Let that land as real family feeling complicated by three years apart and by a disagreement none of them has had the chance to have out loud yet. She will not have it out here either. She will note it, and change the subject, and the party will notice her doing it.
 
 ## Scene 4: The Price
 
@@ -69,7 +71,7 @@ Before the coalition moves on Caer Ysolde, Doria Kell finds the party one more t
 
 This is the module’s hardest scene and it has no combat in it. The information is real and Doria is not lying about any part of it: the ledgers say what she says they say, the price is exactly what she names, and Norvatch will honour whatever is signed to the letter and forever. Xavier will sign it if the party tells him to, and will look at them while he does it.
 
-What it costs is not money. It is that the coalition has now promised the same kingdom three times — land to Oksitan, the Archive to Auberitz, and the standing right to buy the place by the cartload to a realm that never marched a single soldier. Every one of those promises is only payable on an Elduvaine that is taken and held, and the party is one module away from deciding whether it will be.
+What it costs is not money. It is that the same kingdom has now been promised three times over. The Call offered land inside the Living Realm and the run of the Ysolde Archive to everybody who answered it — not one thing each to two powers, the same two things to both, which nobody in the coalition has yet said out loud. And now the standing right to buy the place by the cartload, to a realm that never marched a soldier. Every one of those is payable only on an Elduvaine that is taken and held, and the party is one module away from deciding whether it will be.
 
 **DM Only:** refusing is a real option with a real cost, and the module must not tilt it. A party that refuses walks into Module Eleven not knowing how much of the kingdom is left, which is exactly as frightening as it sounds and entirely survivable. A party that signs walks in knowing — and knowing, too, that they have made the settlement one degree harder for whoever has to write it. Neither is the correct answer. Record which in the Branch Ledger and move on without comment.
 
@@ -113,7 +115,9 @@ A miller, two orchard-keepers, a forger who used to file requisitions, and the l
 
 > *“There are seven of us and a table. Aveline Ysolde is at the head of it because somebody has to be, not because anyone here would call her that out loud, and she has a list in front of her in a hand so small it is almost a cipher. She does not stand up when you come in. She says: sit down, we have four hours, and I would like to know what your king thinks he has promised, because we have heard three versions and none of them can all be true.”*
 
-She is right. The party has watched Xavier promise land to Oksitan, the Archive to Auberitz, and — if they signed in this module — the standing right to buy the kingdom by the cartload to a realm that never marched a soldier. Every one of those is only payable on an Elduvaine that is taken and held. Nobody asked Elduvaine.
+She is right, and the three versions are not three different promises. They are the same one, made to everybody at once: land where the habits work, and the run of the Archive, to whoever answered. Two powers have been marching eight months on the assumption that there is enough of it to go round. And if the party signed in this module, there is now a third instrument on top, guaranteeing a realm that never marched a soldier the right to buy the place by the cartload. Every one of them is payable only on an Elduvaine that is taken and held. Nobody asked Elduvaine.
+
+**DM Only:** there is a fourth thing in the pile and Aveline does not know about it, because Oksitan has never said it plainly to anybody outside its own court. Oksitan does not primarily want an estate and does not much care about the Archive. Oksitan wants the Willing Road — the waystones, and the craft of cutting more — which is not on offer, has never been on offer, and cannot be given by anybody. If the party has worked that out by now, this is the room to say it in, and it makes the arithmetic worse rather than better: one of the two powers owed a share is owed something that does not exist.
 
 **What the resistance wants to know, in order:** what the coalition has been promised. Who is expected to pay it. Whether the Concord’s Tenth Work is going to be permitted to do what it has been openly saying it will do. And whether the party will tell them the truth about any of it.
 
@@ -123,9 +127,9 @@ The party can lie. It works. Aveline is not a lie detector and the meeting ends 
 
 # NPC Profiles
 
-## The Regent
+## Aveline Ysolde, the Regent
 
-Human, in a family that mostly is not, and the only member of Elduvaine’s royal house who was outside a wall when the wards opened. No proper name yet assigned, for the same reason as the Ward and the Magistrate (see the DM-Only note in What Is Actually Happening). Speech: measured, unsentimental, entirely unbothered by three years of danger that would have broken most people. Has genuinely considered leaving Elduvaine and genuinely chosen not to, more than once.
+Human, forty-one, in a family that mostly is not, and the only member of Elduvaine’s royal house who was outside a wall on the night the wards opened — a fact she has never once described as luck. Speech: measured, unsentimental, entirely unbothered by three years of danger that would have broken most people. She has genuinely considered leaving and genuinely chosen not to, more than once, and has put the refusal in writing twice. She has a stat block in the Bestiary, which she will not need and which is there because a DM should know what happens to anybody who corners her.
 
 Open thread: the Regent’s own view on Elduvaine’s future is theirs to hold and the campaign’s not to adjudicate — a DM developing the endgame should treat their opinion as one real voice among several in the royal house, not the deciding one.
 

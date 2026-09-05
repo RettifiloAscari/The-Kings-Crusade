@@ -142,7 +142,7 @@ c.push(table(
     ["1. The Summons", "20 min", "Optional introductions fold in here if needed."],
     ["2. Audience with the King", "45\u201360 min", "The Promise, the crusade, and the party\u2019s place in it."],
     ["3. The Wyvern at Greywatch", "90\u2013120 min", "The session\u2019s combat. See DC table and stat block below."],
-    ["4. The Muster\u2019s End", "30\u201345 min", "Departure, and the road choice \u2014 Branch Ledger entry 1."],
+    ["4. The Muster\u2019s End", "40\u201355 min", "Three things in the yard, departure, and the road choice \u2014 Branch Ledger entry 1."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
   ]
 ));
@@ -166,6 +166,8 @@ c.push(P("Play this scene short. Its only job is to get the party moving toward 
 // ---------------------------------------------------------------- Scene 2
 c.push(H2("Scene 2: Audience with the King"));
 
+c.push(P("The party comes up the Long Stair to reach him \u2014 four hundred and ten steps from the river gate to the Marchhold, which a king of Harrowmark walks rather than rides by a custom nobody can date. Xavier has walked it three times a week for eleven years and can tell you what each landing smells like. Partway up, the Ninefold House of Duncarrow stands open, and it is worth one line: this is where the Call was read aloud, in Ninefold Cant, on a wet morning, to a crowd that could not understand a word of it and understood the whole thing perfectly. The Concord put the crusade into words. The king only asked for it."));
+
 c.push(P("Duncarrow is a working fortress, not a palace \u2014 grey stone, low ceilings, arrow-slit windows that let in more cold than light. The great hall smells of woodsmoke, wet dog, and oiled steel rather than incense; the tapestries on its walls are march-maps and hide charts, not heraldry. Guards at the door look tired rather than ceremonial, and nod the party through without announcing them \u2014 Duncarrow has had a great many visitors this season, and does not have the staff to make an occasion of one more."));
 
 c.push(P("Xavier receives the party standing, at a steward\u2019s table crowded with maps and weighted at the corners with what look like ordinary stones. He is not what the songs will eventually make of him: greying at the temples earlier than he should be, a soldier\u2019s build going a little soft from a year of councils rather than campaigns, dressed plainly enough that a stranger might take him for one of his own captains. Only when he looks up does the room organize itself around him \u2014 not because anyone commands it to, but because everyone in it has clearly done this before."));
@@ -177,6 +179,8 @@ c.push(P("Let Xavier speak plainly about the Promise \u2014 a share in Elduvaine
 c.push(PS([DM("DM Only: "), { t: "if a player pushes on why he chose them specifically, he has a real answer, not a flattering one: he asked his officers for the people other people trusted under pressure, not the people other people were impressed by. He believes this is the same thing Harrowmark has always valued in its own wyvern-hunters, and it is not a coincidence that Greywatch is where he is about to send them next." }]));
 
 c.push(P("He closes the audience by asking one thing of them before the muster marches: Greywatch, three days out, has sent word that a wyvern has taken to raiding its herds and, twice now, its people. He would rather send the crusade\u2019s own chosen than levy more of Greywatch\u2019s own dead."));
+
+c.push(PS([DM("DM Only: "), { t: "if a player asks what the Call actually promised, Xavier tells them straight and without enthusiasm: a share of Elduvaine\u2019s own magic, meaning land held inside the Living Realm where the habits work, and the run of the Ysolde Archive, to everybody who answers. He is aware that neither is his to give. He is not aware \u2014 nobody is yet \u2014 that the same two things were offered to two powers at once, out of a country that is being spent while they march. Do not have him defend the Promise. Have him state it, and change the subject to march order, which is the subject he is actually good at." }]));
 
 c.push(P("He does not walk them out. A steward does that, through a yard full of the ordinary business of a fortress readying for war \u2014 barrels counted, horses shod, a smith\u2019s hammer going somewhere out of sight \u2014 and the party\u2019s last sight of Xavier, glanced back through the hall door, is of a man already bent over his maps again before they have finished crossing the threshold."));
 
@@ -257,6 +261,18 @@ c.push(H2("Scene 4: The Muster\u2019s End"));
 
 c.push(P("Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move. The yard that was ordinary business three days ago is now a camp too large for it \u2014 wagons loaded and lashed, Harrowmark levies falling into column by the sound of a horn rather than a shouted order, and, past the edge of the Harrowmark tents, the first coalition banners: colors and cuts of armor the party has not seen before, voices in accents that mark out where in the muster Oksitan and Auberitz have pitched their own camps. Nobody introduces the party to any of it yet \u2014 that is a later module\u2019s work \u2014 but it should be visibly, unmistakably there, the first sign that this war is bigger than Harrowmark."));
 
+c.push(H3("Three Things in the Yard"));
+
+c.push(P("Give the party the muster camp for ten minutes before Xavier finds them, and put three specific things in it. None of them is a hook that has to be taken. All three pay off later, and the first one pays off for the rest of the campaign."));
+
+c.push(BUL("A letter from Fenmarrow.", "A farming woman out of the low ground south of Duncarrow has walked two days to find somebody going where her son went, and the party will do. The letter is sealed with candle-wax and addressed in a careful, unpractised hand. She does not so much ask them to carry it as assume they will, thanks them before they have agreed, describes him at some length, and goes. Write the name down. Her son is in the column that takes the road the party does not, and from this moment the letter is the campaign\u2019s cheapest recurring ache: it cannot be delivered in Module Two, it cannot be delivered in Module Five, and a DM should let the party carry it exactly as far as they are willing to."));
+
+c.push(BUL("The Order of the Tenth Work, encamped and immaculate.", "A Concord order marching at its own expense, in disciplined numbers, with a hospital tent already open to anybody\u2019s wounded and a chapter-house frame going up on ground it does not own. Courteous, generous, well-supplied, and entirely open about the doctrine: Elduvaine\u2019s habits are the tenth and last Work, left unfinished, and completing it is the crusade\u2019s real purpose. Let a Warden of the Order say exactly that over good food, and let them be among the most likeable people in the camp. Do not comment on it, in narration or through any other NPC."));
+
+c.push(BUL("Wyvern-riders, four of them, and nobody making anything of it.", "Greywatch hands with four wyverns on long lines at the far edge of the camp, going south with the army because Harrowmark has always solved certain problems that way. Brenna Vane has views about lending them and will share those views at length if anybody asks. Mention it once, in passing, in the same tone as the horseshoes and the duty roster, and then never again."));
+
+c.push(PS([DM("DM Only: "), { t: "the riders are here so that Module Seven has something to reach for, and the entire value of putting them in Module One is that nobody remarks on them. Do not give them a scene, a name, or a line of dialogue. Do not have Xavier look at them thoughtfully. Four animals on lines at the edge of a camp, one sentence, and then eight months of nothing." }]));
+
 c.push(P("Xavier meets them once more, briefly, in the noise of it rather than the quiet of his hall, to say the thing he did not say at the audience."));
 
 c.push(BOX("\u201CGreywatch will remember this longer than I will be able to thank you for it,\u201D he says, close enough to be heard over the camp without raising his voice. \u201CThat is worth more than anything I can pin to your coats. But I mean to pin something anyway.\u201D"));
@@ -322,6 +338,14 @@ c.push(P("Open thread: if the party impresses her, she offers what Greywatch act
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
+
+c.push(H2("Two Centuries of Unanswered Letters"));
+
+c.push(P("The Marchhold\u2019s lower vaults hold Harrowmark\u2019s correspondence with Elduvaine going back two hundred years: trade enquiries, boundary courtesies, three separate attempts to establish what the Willing Road measures, and a standing invitation to the Ysolde Archive that Harrowmark never once took up because the journey was long and the kingdom was busy. A steward will let the party in if they ask politely. Nobody has been down there in a generation and nobody thinks it is a secret."));
+
+c.push(P("Two things are worth finding. Somebody in the Archive at Caer Ysolde wrote back every single time \u2014 clearly, at length, and with obvious pleasure at being asked \u2014 and for the last nineteen years of it the replies are signed by the Keeper. And the final letter in the sequence is dated eleven days before the wards opened, concerns a shipment of light-stone, and is entirely ordinary."));
+
+c.push(PS([DM("DM Only: "), { t: "the party is reading Maedoc Vale\u2019s handwriting before anybody has told them his name, in a scene with nothing dangerous in it. Do not point at it. Do not have the steward say anything. If somebody at the table works out later whose letters those were, that is worth more than any amount of foreshadowing \u2014 and if nobody ever does, the scene cost twenty minutes and gave them a warm room and an old kingdom being unfailingly polite to a cold one." }]));
 
 c.push(H2("The Betting Ledger"));
 c.push(P("Before or after the wyvern, Brenna\u2019s ledger makes the rounds of Greywatch\u2019s hall \u2014 a battered book of wagers going back decades, with a fresh page opened the moment the party arrives. Play this for pure levity: hold-folk arguing odds, someone trying to get the party to wager on themselves, an old wound reopened as an anecdote rather than a warning. No mechanical stakes; this is a relief valve, planned for rather than hoped for."));

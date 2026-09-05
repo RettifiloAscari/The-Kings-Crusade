@@ -33,7 +33,7 @@ Likewise, whatever the party glimpses of the vaults he has been reading toward �
 
 ## Scene 1: The Gates of Caer Ysolde
 
-Caer Ysolde’s garrison, already thin after Vindana and the field battle, does not mount a real defense — this is not another Module Six or Module Seven, and should not be run at that length or intensity. A short, sharp engagement at the outer gate (use the Occupation Guard stat block, Module 3, four to six of them) is enough; let the capital fall quickly, because the module’s actual content is what waits underneath it, not another wall to break.
+Caer Ysolde’s garrison, already thin after Vindana and the field battle, does not mount a real defense — this is not another Module Six or Module Seven, and should not be run at that length or intensity. A short, sharp engagement at the outer gate — four to six Legionaries of the Sixth (Bestiary), holding it exactly as long as a contract requires and not one minute longer — is enough; let the capital fall quickly, because the module’s actual content is what waits underneath it, not another wall to break.
 
 > *The city opens ahead of the coalition almost too easily, streets emptying rather than resisting, until it becomes clear this is not fear of the coalition — it is the particular quiet of a place whose attention has been somewhere else entirely for three years. Nobody in Caer Ysolde seems especially surprised that today is the day it ends.*
 

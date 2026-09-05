@@ -50,7 +50,11 @@ Tam’s warning reaches the column’s officers in time regardless of what the p
 
 ### The Alternate: A Third Thread
 
-If your table would rather not lose Tam, run this instead: his warning is the same, and he survives it, but what he saw scouting ahead of the ambush was not only Voss’s army — it was a supply column flying royal colors, escorting a third member of the captive royal house toward what he assumes is a more secure holding further from the coalition’s reach. This opens a new thread for a later module rather than closing Tam’s. Do not run both versions; pick one before the session and commit to it.
+If your table would rather not lose Tam, run this instead: his warning is the same and he survives it, but what he saw scouting ahead of the ambush was not only Voss’s army. It was a small column under Elduvish colours moving the other way, unhurried, barely escorted, with a grey-haired elf riding in the middle of it who was not tied to anything and did not look like a prisoner. That is Emrys Ysolde, the Envoy, being moved somewhere quieter — and the reason Tam mentions the detail at all is that nobody in the column was guarding him so much as accompanying him.
+
+**DM Only:** if the party pulled Serjeant Hoth’s file out of Sennoch Hall in Module Four, they already have the first hard evidence that Emrys has spent three years talking to Vale. This is where that stops being a document and becomes a man on a road. He is not a traitor, there is no reveal, and he will not defend himself: he took the only job nobody else in his house would take, and he cannot produce a clean accounting of whether it helped. What his sister’s physician, the published levy and two mass reprisals that did not happen actually cost is a question he has had three years to word and still cannot answer. Open the thread here and let it stay open.
+
+Do not run both versions of this scene. Pick one before the session and commit to it.
 
 ## Scene 3: Holding the Line
 
@@ -60,11 +64,20 @@ The ambush breaks from both treelines at once, and for several very long minutes
 
 ### Running the Scene
 
-Use the Occupation Guard stat block (Module 3) for General Voss’s rank and file — six to eight of them, engaging the party and the coalition line in waves rather than all at once — with General Voss herself (see Stat Block) as the encounter’s real threat, seeking out whoever on the coalition side looks most like a commander to kill or capture. If the party has protected Xavier’s officers or otherwise distinguished themselves, Voss may target them directly, which is a genuine compliment from an enemy tactician and should read as one.
+Use Legionaries of the Sixth (Bestiary, CR 1/2) for General Voss’s rank and file — six of them, engaging the party and the coalition line in waves rather than all at once, with Formation working every time two of them reach the same target — and General Voss herself (see Stat Block) as the encounter’s real threat, seeking out whoever on the coalition side looks most like a commander to kill or capture. If the party has protected Xavier’s officers or otherwise distinguished themselves, Voss may target them directly, which is a genuine compliment from an enemy tactician and should read as one.
 
 ### Scaling the Fight
 
-Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP — seven total monsters, inside the 7–10 band. At party sizes 3–5 the multiplier is ×2.5 (4,875 adjusted); at 6+ it drops to ×2 (3,900 adjusted). Against a Deadly threshold of 4,400 — four characters at 5th level, which by this point in the campaign your table will have outgrown, so recompute against their actual level before you run it — this reads as Hard-to-Deadly rather than the Easy-to-Medium calibration of this campaign’s earlier fights, which is deliberate: this battle is supposed to be dangerous. If it reads as too hard once you have checked it against your own table’s actual level and size, remove one or two Occupation Guards rather than reducing Voss — she is the fight’s whole point.
+Voss (1,800 XP) plus six Legionaries of the Sixth (100 XP each, 600) totals 2,400 base XP across seven monsters, which sits in the 7–10 band: ×2.5 at party sizes three to five, for 6,000 adjusted, and ×2 at six or more, for 4,800. The table below is computed at 7th level, because that is where most tables will actually be by Module Nine — but this campaign prescribes no milestone schedule, so check it against your own party’s real level before you run it.
+
+| **PCs** | **Adj. XP** | **Hard** | **Deadly** | **Reads as** |
+| --- | --- | --- | --- | --- |
+| 4 at 7th | 6,000 | 4,200 | 6,800 | Hard, close to Deadly. Run as written. |
+| 5 at 7th | 6,000 | 5,250 | 8,500 | Hard. This is the calibration the module wants. |
+| 6 at 7th | 4,800 | 6,300 | 10,200 | Medium. Add two more legionaries, not a second officer. |
+| 4 at 5th | 6,000 | 3,000 | 4,400 | Well past Deadly. Cut to four legionaries. |
+
+This is deliberately the most dangerous fight in the campaign so far, and unlike every earlier encounter it is meant to read Hard rather than Easy-to-Medium. If it comes out too heavy against your own table, remove legionaries rather than reducing Voss — she is the fight’s whole point, and a Voss who is not frightening has cost the module its subject.
 
 ### Stat Block
 

@@ -26,7 +26,7 @@ Play Calanthe as ordinary and opportunistic, not sinister. Warden Thane is not a
 
 # What Is Actually Happening (DM Only)
 
-Ivor Thane is exactly what he appears to be: a minor lord who inherited a rock in the strait, worked out early that wrecked ships are worth more than the fishing rights ever were, and has spent a decade being quietly, unglamorously terrible to whoever the sea hands him. He is not secretly working for anyone. He is not a piece of a larger plot. He genuinely believes he is owed a toll for the use of his coastline, and he is genuinely surprised, every time, that anyone objects strenuously enough to do something about it.
+Ivor Thane is exactly what he appears to be: a minor lord who inherited a rock in the strait, worked out early that wrecked ships are worth more than the fishing rights ever were, and has spent nineteen years being quietly, unglamorously terrible to whoever the sea hands him. He is not secretly working for anyone. He is not a piece of a larger plot. He genuinely believes he is owed a toll for the use of his coastline, and he is genuinely surprised, every time, that anyone objects strenuously enough to do something about it.
 
 **DM Only:** the point of this module is not Thane himself. It is the choice at the end of Scene 4 — what the coalition does with a small, real place it now has power over — and it should feel exactly as weighty as the party lets it. A table that wants to think hard about it should be able to; a table that wants to hand it to Sera Vosk and move on should be able to do that too, without being made to feel they missed something.
 
@@ -54,7 +54,7 @@ The hold is less a fortress than a fortified manor — old stone, patched with n
 
 > *“Ah,” says the man in the doorway, unhurried, a ledger genuinely under one arm. “More of the fleet that thought my strait was free water. I’m Ivor Thane, and I’m told this happens to be my island. Your people are safe, fed, and entirely available — for a reasonable consideration. I find negotiations go better before anyone has drawn a sword, so let’s try that first, shall we?”*
 
-Calanthe itself is a fishing island of halflings and humans with a stubborn minority of everyone the sea has ever washed up, and it has been quietly resenting its Warden for a decade without ever being numerous enough to do anything about it. Let the party meet them before they meet Thane: a halfling harbour-wife who counts the coalition’s ships aloud and does not like the number, a human net-mender who will say exactly nothing about the Warden and a great deal about the weather.
+Calanthe itself is a fishing island of halflings and humans with a stubborn minority of everyone the sea has ever washed up, and it has been quietly resenting its Warden for nineteen years without ever being numerous enough to do anything about it. Let the party meet them before they meet Thane: a halfling harbour-wife who counts the coalition’s ships aloud and does not like the number, a human net-mender who will say exactly nothing about the Warden and a great deal about the weather.
 
 ### Running the Scene
 
@@ -159,7 +159,7 @@ Let the party decide Calanthe’s fate. A coalition garrison secures the strait 
 
 **DM Only:** record this choice in the DM Reference Guide as its own Branch Ledger entry, separate from the road choice. It is a small-scale rehearsal of the campaign’s largest question — what a liberator owes the place it liberates — and it is worth revisiting, briefly, whenever the party’s coalition allies discuss what Elduvaine should become after the war. Do not force the parallel; if the table draws it themselves, that is the module working as intended.
 
-The fleet resupplies, repairs what the storm damaged, and continues south within the day. Hand off directly to Module 5 for the approach to Vindana, where the mountain road’s own losses — including the second king’s — catch up with the party as news from the road not taken.
+The fleet resupplies, repairs what the storm damaged, and continues south within the day. Hand off directly to Module 3, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module 5, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news.
 
 # Puzzles and Set Pieces
 
@@ -211,6 +211,14 @@ Open thread: if he survives — captured, exiled, or simply talked out of his ho
 ## What the Locals Remember
 
 Before or after Thane’s hold, let the party spend some time among Calanthe’s ordinary people — fisherfolk, a handful of farms, an old woman who remembers a Warden before Thane and says the position used to mean something. Play this for texture and moral weight rather than plot: nobody here asked for a war to wash up on their coast, and their opinions about what should happen next are worth hearing even though the party is not obligated to follow them.
+
+## Four Hundred Years of Other People’s Cargo
+
+Under Thane’s hall is a cellar, and in the cellar are the manifests: four centuries of them, off every hull the Ossary Shoals have taken, kept because Calanthe has always understood that a cargo list is worth more than the cargo once the cargo is gone. Most of it is salt fish, timber and grievance. Three of the manifests are Elduvish.
+
+Two of the three are ordinary and old. The third is dated after the night the wards opened, out of Vindana, bound for Norvatch, and it is a cargo of cut light-stone by weight with no other description on it at all. It is signed, stamped, and entirely in order. Whoever loaded it was not smuggling.
+
+**DM Only:** this is the campaign’s earliest available look at the answer to a question nobody has asked yet: where a drained kingdom physically goes. It is one piece of paper, it explains nothing on its own, and a party that keeps it will find it fits exactly against Doria Kell in Module Four, the counting-house in Module Eight, and the ledgers in Module Ten. Do not explain it here. Thane cannot explain it either — he has never read the thing and only kept it because he keeps all of them.
 
 ## The Second Ship
 

@@ -154,7 +154,9 @@ c.push(PS([DM("DM Only: "), { t: "resist ending this module on a clean coalition
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Lines Close"));
 
-c.push(P("Vindana up close is larger and better defended than it looked from the ridge in Module Five \u2014 walls thick enough to have shrugged off worse than a first coalition army, a harbor still working under the garrison\u2019s control, watch-fires along every tower by the time the coalition\u2019s own lines are staked out around it."));
+c.push(P("Vindana up close is larger and better defended than it looked from the ridge in Module Five \u2014 walls thick enough to have shrugged off worse than a first coalition army, a harbour still working under the garrison\u2019s control, watch-fires along every tower by the time the coalition\u2019s own lines are staked out around it. Twenty-eight thousand people lived here before the fall. Perhaps nineteen thousand do now."));
+
+c.push(P("Two things about those walls are worth putting in front of the party on the first day, because both of them pay off later. The inner wall is Standing Light stone, and for six centuries this city glowed faintly from its own defences on any clear night \u2014 the outer face of the thing the coalition has come to break was, until fourteen months ago, the most beautiful curtain wall in the world, and it is dark. And the harbour behind it is not a harbour any more so much as a spout: everything that leaves Elduvaine leaves through Vindana, weighed, docketed, and carried in Norvatch bottoms under a standing contract. A coalition that closes this port is not only taking a city. It is putting a cork in the only hole the kingdom is draining out of, and Marshal Drell knows the arithmetic of that considerably better than the officers besieging him do."));
 
 c.push(BOX("By the second day, Vindana is ringed rather than merely approached \u2014 coalition tents in a wide arc from harbor-mouth to inland hill, cook-fires enough to be seen from the walls, and somewhere above the gatehouse, a banner the party does not recognize, raised deliberately high enough to be read from the coalition\u2019s own lines. Marshal Drell wants them to know exactly who they are besieging."));
 
@@ -180,11 +182,7 @@ c.push(BOX("The riders move like people who trust their horses more than their o
 
 c.push(H3("Running the Scene"));
 
-c.push(P("Vindana also has an undercity \u2014 a drain and cistern system older than the walls above it, which the coalition would very much like to use and which the garrison stopped guarding two years ago because something else took it over. Perhaps sixty kobolds (SRD, CR 1/8, 25 XP each) hold the tunnels now, and they have had two years and nothing else to do. Every junction is trapped, every trap is signposted in a language nobody in the coalition reads, and they will trade: the coalition wants a route under the walls, and the kobolds want the garrison\u2019s grain stores and a written promise that nobody comes back down afterwards. Run four to eight of them in any fight, in terrain that lets pack tactics and darkvision do the work, and let the negotiation be the real scene."));
-
-c.push(PS([DM("DM Only: "), { t: "the kobold route is the single best reward available for a party that solves Module Six sideways instead of by force, and it pays off directly in Module Seven \u2014 a party that has the tunnels does not need the postern gate and can open the assault from inside the walls. Do not require it. Do reward it enormously if they find it." }]));
-
-c.push(P("A supply column bound for Vindana \u2014 modest, lightly guarded, moving fast to avoid exactly this \u2014 can be intercepted on the road. This is a fast, mobile engagement; let mounted combat, terrain, and speed matter more than raw numbers. Use the Occupation Guard stat block (Module 3) for the column\u2019s escort, three or four of them, easily overwhelmed by a proper cavalry raid \u2014 the point of this scene is momentum and competence, not danger."));
+c.push(P("A supply column bound for Vindana \u2014 modest, lightly guarded, moving fast to avoid exactly this \u2014 can be intercepted on the road. This is a fast, mobile engagement; let mounted combat, terrain, and speed matter more than raw numbers. Use four Legionaries of the Sixth (Bestiary, CR 1/2) for the column\u2019s escort: they are professionals, they will not be surprised twice, and they are still four people against a cavalry raid. The point of this scene is momentum and competence rather than danger \u2014 but let the Formation trait bite once, so the table learns before Module Seven that the Sixth fights as a unit and not as a crowd."));
 
 c.push(P("A successful raid here (the column stopped, captured, or turned back) meaningfully weakens Vindana\u2019s position for Scene 4\u2019s assault \u2014 a DM may grant advantage on one relevant roll during the assault, or simply narrate the garrison as visibly shorter on options. This is the module\u2019s clearest chance for the party to feel unambiguously effective before Scene 4\u2019s setback."));
 
@@ -214,7 +212,7 @@ c.push(BOX("The first breach in the outer wall holds for less than a minute befo
 
 c.push(H3("Running the Scene"));
 
-c.push(P("This can be run as a large-scale combat with the party at its center (use Marshal Drell \u2014 see Stat Block \u2014 commanding a knot of Occupation Guards at the point of heaviest fighting) or narrated at the level of the assault as a whole, with the party\u2019s actions determining how badly it goes rather than whether it succeeds. Either way, the assault does not take Vindana. A clean tactical win for the party in their own local fight is entirely possible and should not contradict the larger setback \u2014 they can win their corner of a battle the coalition as a whole does not win, which is itself worth letting them feel."));
+c.push(P("This can be run as a large-scale combat with the party at its centre (use Marshal Drell \u2014 see Stat Block \u2014 with six Legionaries of the Sixth and an Optio at the point of heaviest fighting, which is what a breach on a defended wall actually contains) or narrated at the level of the assault as a whole, with the party\u2019s actions determining how badly it goes rather than whether it succeeds. Either way, the assault does not take Vindana. A clean tactical win for the party in their own local fight is entirely possible and should not contradict the larger setback \u2014 they can win their corner of a battle the coalition as a whole does not win, which is itself worth letting them feel."));
 
 c.push(H3("Stat Block"));
 
@@ -298,8 +296,14 @@ c.push(H1("Optional Content"));
 c.push(H2("The Coalition\u2019s Own Argument"));
 c.push(P("If the table wants more camp texture, let Oksitan and Auberitz officers disagree openly, for the first time, about how the siege should be run \u2014 patience versus a faster assault, roughly the tension the module itself just dramatized in Scene 4. No mechanical stakes; this is a chance to deepen the coalition\u2019s internal friction established in Module Four."));
 
-c.push(H2("The Ward\u2019s Read on the City"));
-c.push(P("If the Ward was rescued in Module Four, she has real, specific knowledge of Vindana from before the occupation \u2014 a postern gate, a garrison habit, something small but true. This does not need to change the module\u2019s outcome; it is a chance to let her earlier promise (see her NPC profile) pay off in a small way."));
+c.push(H2("Somebody Inside Is Still Filing"));
+
+c.push(P("A defector, a captured docket, or Ninian herself can tell the party that a magistrate of the Braid is inside Vindana and has been for three years \u2014 not in a cell, in what she insists on calling her chambers, producing correctly formatted objections at a rate the administration has never managed to stop. Ottoline Vahn is the Ward\u2019s great-aunt, she is somewhere behind the wall the coalition is about to break, and she is a hundred and sixty years into being a magistrate and quite immovable about it."));
+
+c.push(PS([DM("DM Only: "), { t: "this costs nothing and buys a great deal. It gives the siege a person inside it, it gives Module Eight\u2019s rescue somebody the party has been thinking about for two modules rather than a name off a list, and it gives the party a reason to care whether the assault in Scene Four goes into the wrong quarter. Do not let them reach her here. Do let them worry." }]));
+
+c.push(H2("Ninian\u2019s Read on the City"));
+c.push(P("If Ninian was freed at Sennoch Hall, she has real, specific knowledge of Vindana from before the occupation \u2014 a postern gate, a garrison habit, something small but true. This does not need to change the module\u2019s outcome; it is a chance to let her earlier promise (see her NPC profile) pay off in a small way."));
 
 // -------------------------------------------------------------- Diverging
 c.push(H1("Diverging Paths (DM Only)"));

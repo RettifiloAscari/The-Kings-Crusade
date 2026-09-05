@@ -116,7 +116,7 @@ The last of those is not a benefit and was never intended as one. It was made so
 
 # Recurring NPCs
 
-Named NPCs the campaign’s own modules flag as “open threads” — built to be brought back, not to be used once and discarded. The royal house is named in the sourcebook: Maelis, Aveline, Ninian, Ottoline and Emrys. The titles below are how the modules refer to them at the table, because that is how the party meets them.
+Named NPCs the campaign’s own modules flag as “open threads” — built to be brought back, not to be used once and discarded. The royal house is named in the sourcebook and now named in the modules as well: Maelis, Aveline, Ninian, Ottoline and Emrys. Earlier drafts referred to three of them by title alone; that gate is lifted and the names are the names.
 
 | **Name** | **Introduced** | **Role** |
 | --- | --- | --- |
@@ -126,16 +126,14 @@ Named NPCs the campaign’s own modules flag as “open threads” — built to 
 | Garrick Hollow (half-elf) | 2B | Hired mountain guide; a standing source for overland routes and rumor. |
 | Wyn Alder (gnome) | 3 | An occupation-era clerk at the Landfall checkpoint; the campaign’s first answer to what an ordinary complicit person looks like. |
 | Doria Kell (tiefling) | 4 | Norvatch factor, and the campaign’s second-largest lever. Her house has been buying Elduvaine by weight for three years; her ledgers are the clock. Names her price in Module 10. |
-| The Ward (half-elf) | 4 | Royal house, freed at Sennoch Hall. Precise rather than broken; a standing voice for what the liberated want. |
 | Tam Ondry | 5 | Harrowmark courier attached to the lost column; a standing source for news arriving from elsewhere. |
 | Marshal Ossian Drell (hobgoblin) | 6 | Commands Vindana’s garrison; a legionary professional on a contract, not a fanatic. Fate resolved in Module 7. |
-| The Magistrate (gnome) | 8 | Royal house, freed in Vindana; the Ward’s great-aunt by marriage. Fought her captivity with bureaucratic warfare and won. |
 | General Ilyana Voss (orc) | 9 | Commands Vale’s field army; came up through the same legion as Drell. Fate resolved this module; a captured Voss is a real long-term asset. |
 | Aveline Ysolde, the Regent (human) | 10 | Royal house, at large; runs what resistance survives and refuses evacuation. Has refused it in writing, twice. Stat block in the bestiary. |
 | Maelis Ysolde, the Veiled Sovereign (elf) | 11 | Held in Caer Ysolde. Dying at the same rate as the land, because a sovereign is bound to the habits. The campaign’s second clock, and the one that cannot be bought. No stat block, deliberately. |
 | Ninian Ysolde, the Ward (half-elf) | 4 | Freed at Sennoch Hall. Heir presumptive, and the one who has done the arithmetic on the Promise. |
 | Ottoline Vahn, the Magistrate (gnome) | 8 | Freed in Vindana. Fought three years of captivity by filing, and won. Holds the only complete record of the occupation. |
-| Emrys Ysolde, the Envoy (elf) | — | Held separately, and not entirely as a prisoner. Has been talking to Vale for three years. Complexity in the cost, not the cause; there is no reveal and no resolution. |
+| Emrys Ysolde, the Envoy (elf) | 9 alt. | Held separately, and not entirely as a prisoner. Has been talking to Vale for three years. Complexity in the cost, not the cause; there is no reveal and no resolution. |
 | Raimon V of Oksitan (human) | 5 | The second crown, seventy-one and undeterred. Takes the road the party does not and drowns fording the Vaskren. Reaches the party as rumour, then refugees, then a problem. |
 | Serjeant Hoth (hobgoblin) | 4 | Held Sennoch Hall correctly for three years and would like that written down. Surrenders on terms, with the file. |
 | Maedoc Vale | 11 | The wizard. Appears in person only here. Whether he is still human is deliberately unresolved. |

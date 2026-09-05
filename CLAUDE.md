@@ -619,7 +619,7 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
 
 ## Current State
 
-**Nineteen documents, 104 pages, all verified clean and byte-reproducible.**
+**Nineteen documents, 106 pages, all verified clean and byte-reproducible.**
 
 - `scripts/KC_Sourcebook.js` — the call, the peoples, **faith in the Nine Works** (the
   Concord, Elduvaine's Observances, the Order of the Tenth Work), Elduvaine before the fall,
@@ -681,8 +681,20 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
   it on every build. Ordered sequences — a set piece's phases, a battle's movements — are
   real numbered lists rather than unmarked bold-led prose printed beside real bulleted ones,
   both hanging at the same measure. And twenty-five one-item bulleted lists, chiefly the
-  Gazetteer's *Hooks*, became bold run-in notes, because a list of one is not a list. Page
-  count is unchanged at 101.
+  Gazetteer's *Hooks*, became bold run-in notes, because a list of one is not a list.
+- **A canon-integration pass has been through all twelve module files**, folding in the
+  material that was written after them. The House of Ysolde is now named *in the modules* —
+  **Ninian** at Sennoch Hall, **Ottoline Vahn** in Vindana, **Aveline Ysolde** at the lock-house
+  — where three drafts had carried a standing instruction to withhold those names and have the
+  Ward deflect the question; and **Raimon V of Oksitan** is named in Module Five, which had a
+  gated notice saying his realm must not be confirmed. Every one of those gates is lifted in
+  the sourcebook and the module headers now say so. The **Sixth Free Legion** blocks from the
+  Bestiary replaced the levy-grade SRD Guard wherever the party actually fights the Legion
+  (Modules 4, 5, 6, 7, 9 and 11), with Module Nine's encounter arithmetic recomputed and
+  restated at 7th level. The **Order of the Tenth Work** now appears at the muster and in the
+  coalition camp, having appeared in no module at all. And the gazetteer hooks that name their
+  own module were planted: the **Fenmarrow letter** in Module One, **Thane's Elduvish manifest**
+  in 2A, **Kir Halloway's Norvatch factor** and **Barrowfell** in 2B.
 
 **What the expansion deliberately did not do.** Auberitz still has no agenda, the deepest
 vaults still have no contents, Vale's humanity is still open, and whether Harrowmark was ever

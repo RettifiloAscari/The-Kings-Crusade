@@ -27,7 +27,7 @@ Fill the place out as you go. Duncarrow’s yard is humans and dwarves and orcs 
 | 1. The Summons | 20 min | Optional introductions fold in here if needed. |
 | 2. Audience with the King | 45–60 min | The Promise, the crusade, and the party’s place in it. |
 | 3. The Wyvern at Greywatch | 90–120 min | The session’s combat. See DC table and stat block below. |
-| 4. The Muster’s End | 30–45 min | Departure, and the road choice — Branch Ledger entry 1. |
+| 4. The Muster’s End | 40–55 min | Three things in the yard, departure, and the road choice — Branch Ledger entry 1. |
 | Optional Content | 30–45 min | Run if the table has time; cut cleanly if not. |
 
 # What Is Actually Happening (DM Only)
@@ -46,6 +46,8 @@ Play this scene short. Its only job is to get the party moving toward Duncarrow 
 
 ## Scene 2: Audience with the King
 
+The party comes up the Long Stair to reach him — four hundred and ten steps from the river gate to the Marchhold, which a king of Harrowmark walks rather than rides by a custom nobody can date. Xavier has walked it three times a week for eleven years and can tell you what each landing smells like. Partway up, the Ninefold House of Duncarrow stands open, and it is worth one line: this is where the Call was read aloud, in Ninefold Cant, on a wet morning, to a crowd that could not understand a word of it and understood the whole thing perfectly. The Concord put the crusade into words. The king only asked for it.
+
 Duncarrow is a working fortress, not a palace — grey stone, low ceilings, arrow-slit windows that let in more cold than light. The great hall smells of woodsmoke, wet dog, and oiled steel rather than incense; the tapestries on its walls are march-maps and hide charts, not heraldry. Guards at the door look tired rather than ceremonial, and nod the party through without announcing them — Duncarrow has had a great many visitors this season, and does not have the staff to make an occasion of one more.
 
 Xavier receives the party standing, at a steward’s table crowded with maps and weighted at the corners with what look like ordinary stones. He is not what the songs will eventually make of him: greying at the temples earlier than he should be, a soldier’s build going a little soft from a year of councils rather than campaigns, dressed plainly enough that a stranger might take him for one of his own captains. Only when he looks up does the room organize itself around him — not because anyone commands it to, but because everyone in it has clearly done this before.
@@ -57,6 +59,8 @@ Let Xavier speak plainly about the Promise — a share in Elduvaine’s resident
 **DM Only:** if a player pushes on why he chose them specifically, he has a real answer, not a flattering one: he asked his officers for the people other people trusted under pressure, not the people other people were impressed by. He believes this is the same thing Harrowmark has always valued in its own wyvern-hunters, and it is not a coincidence that Greywatch is where he is about to send them next.
 
 He closes the audience by asking one thing of them before the muster marches: Greywatch, three days out, has sent word that a wyvern has taken to raiding its herds and, twice now, its people. He would rather send the crusade’s own chosen than levy more of Greywatch’s own dead.
+
+**DM Only:** if a player asks what the Call actually promised, Xavier tells them straight and without enthusiasm: a share of Elduvaine’s own magic, meaning land held inside the Living Realm where the habits work, and the run of the Ysolde Archive, to everybody who answers. He is aware that neither is his to give. He is not aware — nobody is yet — that the same two things were offered to two powers at once, out of a country that is being spent while they march. Do not have him defend the Promise. Have him state it, and change the subject to march order, which is the subject he is actually good at.
 
 He does not walk them out. A steward does that, through a yard full of the ordinary business of a fortress readying for war — barrels counted, horses shod, a smith’s hammer going somewhere out of sight — and the party’s last sight of Xavier, glanced back through the hall door, is of a man already bent over his maps again before they have finished crossing the threshold.
 
@@ -138,6 +142,16 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 
 Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move. The yard that was ordinary business three days ago is now a camp too large for it — wagons loaded and lashed, Harrowmark levies falling into column by the sound of a horn rather than a shouted order, and, past the edge of the Harrowmark tents, the first coalition banners: colors and cuts of armor the party has not seen before, voices in accents that mark out where in the muster Oksitan and Auberitz have pitched their own camps. Nobody introduces the party to any of it yet — that is a later module’s work — but it should be visibly, unmistakably there, the first sign that this war is bigger than Harrowmark.
 
+### Three Things in the Yard
+
+Give the party the muster camp for ten minutes before Xavier finds them, and put three specific things in it. None of them is a hook that has to be taken. All three pay off later, and the first one pays off for the rest of the campaign.
+
+- **A letter from Fenmarrow.** A farming woman out of the low ground south of Duncarrow has walked two days to find somebody going where her son went, and the party will do. The letter is sealed with candle-wax and addressed in a careful, unpractised hand. She does not so much ask them to carry it as assume they will, thanks them before they have agreed, describes him at some length, and goes. Write the name down. Her son is in the column that takes the road the party does not, and from this moment the letter is the campaign’s cheapest recurring ache: it cannot be delivered in Module Two, it cannot be delivered in Module Five, and a DM should let the party carry it exactly as far as they are willing to.
+- **The Order of the Tenth Work, encamped and immaculate.** A Concord order marching at its own expense, in disciplined numbers, with a hospital tent already open to anybody’s wounded and a chapter-house frame going up on ground it does not own. Courteous, generous, well-supplied, and entirely open about the doctrine: Elduvaine’s habits are the tenth and last Work, left unfinished, and completing it is the crusade’s real purpose. Let a Warden of the Order say exactly that over good food, and let them be among the most likeable people in the camp. Do not comment on it, in narration or through any other NPC.
+- **Wyvern-riders, four of them, and nobody making anything of it.** Greywatch hands with four wyverns on long lines at the far edge of the camp, going south with the army because Harrowmark has always solved certain problems that way. Brenna Vane has views about lending them and will share those views at length if anybody asks. Mention it once, in passing, in the same tone as the horseshoes and the duty roster, and then never again.
+
+**DM Only:** the riders are here so that Module Seven has something to reach for, and the entire value of putting them in Module One is that nobody remarks on them. Do not give them a scene, a name, or a line of dialogue. Do not have Xavier look at them thoughtfully. Four animals on lines at the edge of a camp, one sentence, and then eight months of nothing.
+
 Xavier meets them once more, briefly, in the noise of it rather than the quiet of his hall, to say the thing he did not say at the audience.
 
 > *“Greywatch will remember this longer than I will be able to thank you for it,” he says, close enough to be heard over the camp without raising his voice. “That is worth more than anything I can pin to your coats. But I mean to pin something anyway.”*
@@ -201,6 +215,14 @@ A dwarf in her second century, Greywatch’s huntmaster for sixty years of it, m
 Open thread: if the party impresses her, she offers what Greywatch actually has to give — not gold, but competence: a standing invitation to send word if Harrowmark-trained hands are ever needed again, which a DM can call in during Module 8 or later as a recurring, grounded ally rather than a one-scene NPC.
 
 # Optional Content
+
+## Two Centuries of Unanswered Letters
+
+The Marchhold’s lower vaults hold Harrowmark’s correspondence with Elduvaine going back two hundred years: trade enquiries, boundary courtesies, three separate attempts to establish what the Willing Road measures, and a standing invitation to the Ysolde Archive that Harrowmark never once took up because the journey was long and the kingdom was busy. A steward will let the party in if they ask politely. Nobody has been down there in a generation and nobody thinks it is a secret.
+
+Two things are worth finding. Somebody in the Archive at Caer Ysolde wrote back every single time — clearly, at length, and with obvious pleasure at being asked — and for the last nineteen years of it the replies are signed by the Keeper. And the final letter in the sequence is dated eleven days before the wards opened, concerns a shipment of light-stone, and is entirely ordinary.
+
+**DM Only:** the party is reading Maedoc Vale’s handwriting before anybody has told them his name, in a scene with nothing dangerous in it. Do not point at it. Do not have the steward say anything. If somebody at the table works out later whose letters those were, that is worth more than any amount of foreshadowing — and if nobody ever does, the scene cost twenty minutes and gave them a warm room and an old kingdom being unfailingly polite to a cold one.
 
 ## The Betting Ledger
 

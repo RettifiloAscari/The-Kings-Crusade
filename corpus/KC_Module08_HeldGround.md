@@ -48,9 +48,9 @@ Let the party resolve this however they find funniest: mediate, cut through it w
 
 ## Scene 3: The Magistrate
 
-Among the captured administration’s own records is a name the party will recognize if they have been paying attention: a second member of the royal house, held not in a dungeon but under a kind of house arrest in a minor Vindana townhouse, kept comfortable and thoroughly bored by an occupation too disorganized, post-siege, to know quite what to do with her.
+Among the captured administration’s own records is a name the party will recognise if they have been paying attention, and it is not filed under prisoners. Ottoline Vahn — magistrate of the Braid for a hundred and sixty years, the Ward’s great-aunt by a marriage nobody now living attended, and a gnome somewhere past two hundred — has been held under house arrest in a Vindana townhouse she insists on calling her chambers, kept comfortable and thoroughly bored by an occupation that was too disorganised before the siege to know what to do with her and is considerably more disorganised now.
 
-> *The Magistrate — nobody has ever heard her called anything else, including, apparently, herself — receives the party with the weary patience of someone who has spent three years winning arguments with clerks half her age. “You’ll want papers,” she says, before anyone has explained themselves. “Everybody wants papers. Fortunately, I have spent three years becoming extremely good at papers.”*
+> *She receives the party at a desk, in what is unmistakably an office, with the weary patience of somebody who has spent three years winning arguments against clerks a tenth her age. “You’ll want papers,” she says, before anyone has explained themselves. “Everybody wants papers. Fortunately I have spent three years becoming extremely good at papers. Sit down. Do not move the third pile.”*
 
 ### Running the Scene
 
@@ -114,13 +114,21 @@ They do it anyway. They do it every night for the rest of the occupation of the 
 
 # NPC Profiles
 
-## The Magistrate
+## Ottoline Vahn, the Magistrate
 
-A gnome somewhere past two hundred, dry as a ledger and entirely unbroken by three years of house arrest — if anything, sharpened by it. She is the Ward’s great-aunt by marriage, which is the sort of thing old Elduvish houses are full of, and she has spent the occupation being underestimated by people who had every opportunity to know better. Speech: precise, faintly amused, allergic to being underestimated. Where the Ward met her captivity with fury, the Magistrate met hers with bureaucratic warfare, and won more of it than her captors ever noticed.
+A gnome somewhere past two hundred, dry as a ledger, and entirely unbroken by three years of house arrest — if anything sharpened by it. Ninian’s great-aunt by a marriage nobody now living attended, which is the sort of thing old Elduvish houses are full of. Speech: precise, faintly amused, allergic to being underestimated by people who had every opportunity to know better. She fought her captivity with the only weapon she has ever needed and won: three years of correctly formatted objections, appeals and requests for clarification, every one of them lawful under the occupation’s own published code, which have cost the administration of Vindana an estimated four hundred clerk-days and produced a written record of the occupation so complete that the occupation came to rely on it.
 
 Open thread: freed, she is a formidable and very funny recurring NPC — a DM can use her as a source of administrative chaos turned against the occupation in any later module, or simply as comic relief who happens to also be dangerous in exactly the way nobody expects from an old woman with a ledger.
 
 # Optional Content
+
+## Downtime, Properly, for the First Time
+
+This is the first stretch of the campaign long enough and safe enough for downtime, and the sourcebook’s six options under Downtime on a March are all available in a held city. Each is meant to produce a scene rather than a die roll, and a DM running this module should offer them by name rather than waiting to be asked.
+
+Stand a watch — four hours on a picket line with one other person, chosen by the player, and the DM asks what they talked about. It is the single most productive downtime action in the campaign and it costs nothing. Work the column, and earn the goodwill of Auberitz’s people, which converts directly into supply and being told things early. Drink with the levy, for one rumour that is true and one that is not, with no indication which. Keep the observance, at a Ninefold House or a wayside shrine, and be seen doing it, which in this coalition is a political act whichever one is chosen. Train with the watch, if Brenna Vane is here, and take the advantage it grants against the next large flying thing. Or copy, if anybody has Archive training, at about a page a week of something Vale would rather nobody had.
+
+**DM Only:** keep the observance is the one worth pushing in this module specifically. Vindana is a freshly-taken Elduvish city with a Concord army sitting in it and a Tenth Work chapter house being framed in a street that had an Observance on it last year. A player character who chooses one of those two on a given evening has made a statement, and somebody will comment, and it should cost nothing and be remembered.
 
 ## The Counting-House
 

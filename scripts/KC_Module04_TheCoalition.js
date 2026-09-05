@@ -13,11 +13,13 @@
 // CLAUDE.md and are deliberately NOT invented here. First, what Oksitan and
 // Auberitz each actually want beyond the Promise -- this module gives named,
 // individual officers personal opinions and friction, never a stated national
-// policy for either realm. Second, the royal family\u2019s names -- the captive
-// rescued in Scene 4 is written as a full, usable NPC with no proper name,
-// referred to as "the Ward" throughout, with a DM-only note on where to drop
-// a name in once CLAUDE.md\u2019s open item is signed off. Do not fill either gap
-// in without sign-off, including in future revisions of this file.
+// policy for either realm. Do not fill that gap in without sign-off, including
+// in future revisions of this file.
+//
+// GATE LIFTED: the captive rescued in Scene 4 is Ninian Ysolde, the Ward, and
+// the whole House of Ysolde is now named and peopled in the sourcebook. Earlier
+// drafts referred to her by title only and told the DM to have her deflect the
+// question of her name. That instruction is gone. Use the name.
 
 const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
 const fs = require('fs');
@@ -147,7 +149,7 @@ c.push(H1("What Is Actually Happening (DM Only)"));
 
 c.push(P("The coalition is exactly as fragile as a coalition built on the Promise should be. Oksitan and Auberitz both marched for their own reasons, which this module does not state, and both are already privately uneasy about how much of Elduvaine\u2019s resident magic will actually be theirs to hold once Vale is gone \u2014 a doubt none of their officers would say aloud to a superior, and several will say plainly to the party, who are outsiders to the coalition\u2019s own politics and therefore safe to be honest with."));
 
-c.push(PS([DM("DM Only: "), { t: "the Ward, held at Sennoch Hall, is a real, specific person with no proper name yet \u2014 this campaign\u2019s royal family is deliberately unnamed. Play them fully: young, sharp, has spent the occupation being quietly furious rather than afraid, and deeply unimpressed by the idea that their rescue is a political opportunity for whoever performs it. Do not invent a name for them at the table if it can be avoided; if a player asks directly, have the Ward deflect (\u201Cnames are for people with the leisure to be found by them\u201D) rather than supply one. Once the royal family\u2019s names are settled, insert the name here and everywhere else the Ward appears." }]));
+c.push(PS([DM("DM Only: "), { t: "the Ward is Ninian Ysolde \u2014 half-elf, twenty-six, heir presumptive, and named in the sourcebook, so use the name. Three years of house arrest have made her precise rather than broken: she keeps lists, she notices things, and she has thought very carefully about the difference between being rescued and being useful. She is also the one member of her house who has done the arithmetic on the Promise, and the conclusion is not comfortable \u2014 a coalition owed a kingdom will collect, and an Elduvaine that cannot pay has bought itself a second war against better-armed creditors. Do not have her say that in the first hour. Have her say it on the ride back, once she has decided the party is worth saying it to, and let it land against everything the officers said around the cookfire in Scene Two." }]));
 
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Muster Camp"));
@@ -176,6 +178,14 @@ c.push(P("Three armies, and they do not look alike. Harrowmark\u2019s lines are 
 
 c.push(P("Let the party walk through all three. The point is not information; it is that the coalition is a real coalition, with three ideas of how a war should be run and three cuisines, and that the party is about to spend months inside it."));
 
+c.push(H3("The Fourth Camp, Which Is Not an Army"));
+
+c.push(P("Between the Oksitan lines and the Auberitz park there is a camp that does not belong to any crown, and it is the tidiest in the field. The Order of the Tenth Work has marched with this crusade since the day it was called, at its own expense, and it shows: no drinking, no gambling, latrines dug properly, a hospital tent open to anybody\u2019s wounded including Elduvish, and a chapter house already framed in timber on ground the Order does not technically hold. They are generous, personally brave, literate, and entirely open about what they are here for. If the Works withdrew leaving the world unfinished, and there is a country where something unfinished is still lying about in the open, then Elduvaine is not a folk custom. It is the tenth and last Work, and completing it is the highest act available to hands."));
+
+c.push(P("Let a Warden of the Order say exactly that to the party, over good food, without a trace of menace, and let them be the most immediately likeable people in the camp. Nobody in the coalition has yet thought to ask an Elduvish person what completing it would involve."));
+
+c.push(PS([DM("DM Only: "), { t: "this is where the campaign keeps its complexity, and it is on the party\u2019s own side of the line. Do not make the Order hypocrites and do not give them a secret plan \u2014 they have neither. They will hold a wall for the party and lose people doing it, and they fully intend to consecrate a Kept Season orchard by burning it to the roots and raising a Ninefold House on the ash, lawfully, at the Concord\u2019s direction, with the Promise as their instrument. They do not experience those two facts as being in tension. That is the problem, and it is the only thing in this campaign the party cannot fix by winning a fight." }]));
+
 c.push(H2("Scene 3: Doria Kell\u2019s Offer"));
 
 c.push(P("Away from camp \u2014 at a well, on a supply run, wherever the party can be approached without an audience \u2014 a woman in plain, well-made traveling clothes falls into step beside them, unhurried and entirely unbothered by the coalition\u2019s presence."));
@@ -197,31 +207,37 @@ c.push(PS([DM("DM Only: "), { t: "she does not offer the ledgers here and should
 // ---------------------------------------------------------------- Scene 4
 c.push(H2("Scene 4: Sennoch Hall"));
 
-c.push(P("Doria\u2019s information is accurate: a half-day\u2019s ride from camp, Sennoch Hall \u2014 a minor Elduvish manor requisitioned early in the occupation \u2014 holds one member of the royal house, guarded lightly precisely because nobody expected a coalition to reach this far this fast. This is the campaign\u2019s first rescue, and it is meant to be winnable."));
+c.push(P("Doria\u2019s information is accurate: a half-day\u2019s ride from camp, Sennoch Hall \u2014 a country seat of the house itself, walled, moated in the ornamental sense, and entirely unsuited to being a place of detention, which is exactly why the occupation chose it \u2014 holds Ninian Ysolde, the Ward, heir presumptive of Elduvaine. She has been here three years in considerable comfort: a library, a garden, a staff who are not permitted to leave, and a garrison that is embarrassed about the whole arrangement. This is the campaign\u2019s first rescue, and it is meant to be winnable."));
 
-c.push(BOX("The Hall is quiet in the particular way of a place trying not to be noticed. Two guards at the gate, bored rather than alert; a third somewhere inside, audible before visible. Through a high window, briefly, a figure crosses a lit room without hurrying \u2014 someone who has stopped expecting rescue and has not stopped watching for it anyway."));
+c.push(BOX("The Hall is quiet in the particular way of a place trying not to be noticed. Two on the gate, bored rather than alert, a bell on a post above them, and lamplight in a great many more windows than two men could account for. Through a high one, briefly, a figure crosses a lit room without hurrying \u2014 someone who has stopped expecting rescue and has not stopped watching for it anyway."));
 
 c.push(H3("Running the Scene"));
 
-c.push(P("This can be played as stealth, as a direct assault, or as a mix of both \u2014 the guard presence is genuinely light, and the module should not force a fight. A DC 13 Stealth (Dexterity) check gets past the gate guards unseen; a DC 13 Investigation or Perception check finds the Ward\u2019s room without alerting the interior guard. The three guards are hobgoblin legionaries \u2014 professionals on a wage, bored, and a long way down anybody\u2019s list of priorities. If it comes to violence, use the Occupation Guard stat block (as in Module 3) for all three \u2014 none of them are heroes, and all three will surrender or flee once it is clear the fight is lost."));
+c.push(P("This can be played as stealth, as a caper, as a direct assault, or as any mix of the three, and the module should not force a fight. What is genuinely light here is the watch, not the garrison: two on the gate and one at the library door, with the rest of Serjeant Hoth\u2019s eighteen off duty and unarmoured in the converted stables. A DC 13 Dexterity (Stealth) check gets past the gate; a DC 13 Investigation or Perception check finds Ninian\u2019s rooms without waking the interior guard. Every one of them is a legionary of the Sixth \u2014 professionals on a wage, bored, and a long way down anybody\u2019s list of priorities \u2014 so use the block below, and run Hoth himself as a Legion Optio (Bestiary). A quiet party fights two or three of them. A loud party wakes eighteen, and the keyed Hall below is what that looks like."));
 
-c.push(P("The Ward (see NPC Profiles) is sharp, unharmed, and immediately useful rather than a burden once freed \u2014 she knows the Hall\u2019s layout, the guards\u2019 habits, and enough about the wider occupation\u2019s posture in this region to be a genuine asset on the ride back to camp, not just a rescued NPC to be delivered and forgotten."));
+c.push(P("Ninian (see NPC Profiles) is sharp, unharmed, and immediately useful rather than a burden once freed \u2014 she knows the Hall\u2019s layout, the guards\u2019 habits, three years of what the occupation asked her family and when, and enough about the region\u2019s posture to be a genuine asset on the ride back rather than a rescued NPC to be delivered and forgotten. She will also want to know, before anything else and before any thanks, whether the coalition has found her cousin Aveline, who was outside a wall on the night the wards opened and has not been heard from officially since. The honest answer is that it has been trying for weeks and has not managed it."));
 
 c.push(H3("Stat Block"));
 
 c.push(...SB({
-  name: "Occupation Guard",
-  meta: "Medium humanoid (hobgoblin, or any race), any alignment \u2014 SRD Guard, unmodified",
-  ac: "16 (chain shirt, shield)",
-  hp: "11 (2d8 + 2)",
+  name: "Legionary of the Sixth",
+  meta: "Medium humanoid (any race), lawful neutral \u2014 as the Bestiary",
+  ac: "18 (chain mail, shield)",
+  hp: "22 (4d8 + 4)",
   speed: "30 ft.",
-  str: 13, dex: 12, con: 12, int: 10, wis: 11, cha: 10,
-  skills: "Perception +2",
-  senses: "passive Perception 10",
-  langs: "Common",
-  cr: "1/8 (25 XP)",
+  str: 15, dex: 12, con: 13, int: 10, wis: 11, cha: 9,
+  skills: "Athletics +4, Perception +2",
+  senses: "Darkvision 60 ft., passive Perception 12",
+  langs: "Common, Goblin",
+  cr: "1/2 (100 XP)",
+  traits: [
+    { n: "Formation", t: "The legionary has advantage on attack rolls against a creature if at least one other legionary is within 5 feet of that creature and is not incapacitated. This is not flanking; it is drill, and it works whether or not the table uses flanking rules." },
+    { n: "Contracted", t: "The Sixth withdraws in good order when a fight has clearly been lost, when its officer orders it, or when its pay is in doubt. It does not fight to the last man for anybody, and Vale is not an exception." }
+  ],
   actions: [
-    { n: "Spear", t: "Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack." }
+    { n: "Legion Pike", t: "Melee Weapon Attack: +4 to hit, reach 10 ft., one target. Hit: 7 (1d10 + 2) piercing damage." },
+    { n: "Shortsword", t: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage." },
+    { n: "Light Crossbow", t: "Ranged Weapon Attack: +3 to hit, range 80/320 ft., one target. Hit: 5 (1d8 + 1) piercing damage." }
   ]
 }));
 
@@ -294,9 +310,9 @@ c.push(H2("Doria Kell"));
 c.push(P("A tiefling of middle years and Norvatch to the bone, dressed for travel rather than for a court, with the unhurried manner of somebody who has never once been the most anxious person in a negotiation. Speech: unhurried, transactional, entirely without malice \u2014 she genuinely does not care who wins this war, only that she is positioned well when it ends. Not a spy in any dramatic sense; simply a trader whose stock is information."));
 c.push(P("Open thread: Doria is a standing resource for the rest of the campaign \u2014 a DM can bring her back whenever the party needs information no ally would risk giving them, always for a price, and her price is never coin alone."));
 
-c.push(H2("The Ward"));
-c.push(P("A young half-elf of Elduvaine\u2019s royal house \u2014 which is, like most old Elduvish families, a mixed one, and does not think of itself as anything else \u2014 with no proper name yet assigned (see the DM-Only note in What Is Actually Happening). Speech: quick, dry, allergic to being treated as fragile \u2014 three years of captivity have made her precise rather than broken. Speaks of Vale, when she speaks of him at all, with contempt rather than fear."));
-c.push(P("Open thread: once freed, the Ward is a genuine resource and a genuine person with her own opinions about what Elduvaine should become after the war \u2014 opinions that may or may not match the rest of her family\u2019s, per the royal house\u2019s canon division on that question. A DM can bring her back throughout the rest of the campaign as a recurring ally with real standing to speak for what the liberated actually want."));
+c.push(H2("Ninian Ysolde, the Ward"));
+c.push(P("Half-elf, twenty-six, heir presumptive, and \u2014 like most old Elduvish houses \u2014 out of a family mixed enough that nobody in Elduvaine thinks of it as mixed at all. Speech: quick, dry, allergic to being treated as fragile. Three years of house arrest have made her precise rather than broken: she keeps lists, she notices things, and she has thought a great deal about the difference between being rescued and being useful. Speaks of Vale, when she speaks of him at all, with contempt rather than fear."));
+c.push(P("Open thread: Ninian is the one member of her house who has done the arithmetic on the Promise, and she will produce it unprompted at the worst possible moment for coalition morale. A coalition owed a kingdom will collect; an Elduvaine that cannot pay has bought itself a second war against better-armed creditors. She is not wrong, and her own family does not agree with her about what should follow the war. Let her be one real voice among five rather than the voice of Elduvaine \u2014 the campaign never adjudicates that argument and neither should the table."));
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));

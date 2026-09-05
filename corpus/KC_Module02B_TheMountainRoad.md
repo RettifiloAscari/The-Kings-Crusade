@@ -75,8 +75,8 @@ If it comes to violence — Vell refuses reasonable terms, the party attacks, or
 
 Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts — four total monsters, inside the 3–6 monster band, so no table’s party size crosses a multiplier boundary on its own.
 
-| **PCs** | **Mult.** | **Adj. XP** | **Medium** | **Reads as** |
-| --- | --- | --- | --- | --- |
+| **PCs** | **Base XP** | **Mult.** | **Adj. XP** | **Medium** | **Reads as** |
+| --- | --- | --- | --- | --- | --- |
 | 4 | 750 | ×2 | 1,500 | 2,000 | Easy–Medium |
 | 5 | 750 | ×2 | 1,500 | 2,500 | Easy–Medium, softer |
 | 6 | 750 | ×1.5 | 1,125 | 3,000 | below Easy |
@@ -170,7 +170,7 @@ However the ford and the toll-keep were settled, the column presses on beyond As
 
 > *Garrick Hollow, the column’s hired guide, falls into step beside the party as the toll-keep drops out of sight behind them. “Every mile past here I know less than the mile before it,” he says, without much apparent concern. “Which is either a comfort or it isn’t, depending on how you’ve found my company so far.”*
 
-This is where the module ends, and where the DM should let the weight of the road actually register — a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module 5 for the approach to Vindana, where the sea road’s own losses — including the second king’s — catch up with the party as news from the road not taken.
+This is where the module ends, and where the DM should let the weight of the road actually register — a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module 3, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module 5, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news.
 
 # Puzzles and Set Pieces
 
@@ -241,6 +241,20 @@ Above the toll-keep, half a day off the road, an abandoned dwarven working has b
 Run six to ten kobolds (SRD, CR 1/8, 25 XP each) in terrain that does all their work for them: darkvision against a party carrying light, pack tactics wherever two can reach the same target, and a readiness to collapse a passage and leave rather than lose. The honest resolution here is not slaughter — a party that offers the kobolds the tools instead of taking them back can buy a guide through the workings and out above the toll-keep entirely, which is a third route past Vell that no one in the column has thought of.
 
 If a table wants something heavier on this road instead, an ogre (SRD, CR 2, 450 XP) has been working the same stretch of scree for a season and is a straightforward, honest, dangerous obstacle for a party of this level — the mountain road’s equivalent of weather with arms.
+
+## Kir Halloway, and the Woman Who Has Been Counting
+
+Two days above Ashgate, wedged into a valley that gets four hours of direct sun in winter, Kir Halloway is the last place on this road where anybody can buy anything: one inn with eleven beds, four warehouses, a market on the third day of every week regardless of weather or war, and a population of dwarves, humans and a startling number of tieflings whose families came up from Norvatch three generations back and stayed for the trade. After this it is the pass, and then Elduvaine, and Elduvaine has permits.
+
+A Norvatch house factor has kept a permanent office here for sixty years. She is courteous, entirely unhurried, and will discuss anything the party can pay for. What she actually knows, and will sell cheaply because she does not regard it as sensitive, is not what has been going up the road. It is what has been coming down it, out of Elduvaine, for three years: volume, direction, and the fact that it tripled in the second year and has not stopped.
+
+**DM Only:** this is the mountain road’s equivalent of the manifest in Thane’s cellar, and it does the same job — one early, undramatic, entirely legal document that will fit against Doria Kell in Module Four and the ledgers in Module Ten. The factor is not a spy and has no agenda. She is a professional in a cold valley who has been writing numbers down for sixty years and is mildly pleased that somebody finally asked to see them.
+
+## Barrowfell
+
+Two days off the road, four hundred barrows across nine miles of moor, raised by people nobody can now name on a schedule nobody can reconstruct. Harrowmark’s scholars think they predate the kingdom by a wide margin. Harrowmark’s shepherds think they should be left alone and have been proved right on eleven recorded occasions. A table that wants a dungeon rather than a march can spend an entire session up here.
+
+**DM Only:** Barrowfell has nothing whatever to do with Vale, Elduvaine, or this war, and that is the entire point of it. A setting where every ruin is plot is a setting with no history in it. Put something genuinely old and genuinely unrelated down here, let the party spend an optional session on it, and never connect it to anything — including, especially, at the end of the campaign when it would be very easy to.
 
 ## What the Column Talks About
 

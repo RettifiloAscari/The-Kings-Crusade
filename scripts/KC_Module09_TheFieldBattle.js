@@ -174,7 +174,11 @@ c.push(P("Tam\u2019s warning reaches the column\u2019s officers in time regardle
 
 c.push(H3("The Alternate: A Third Thread"));
 
-c.push(P("If your table would rather not lose Tam, run this instead: his warning is the same, and he survives it, but what he saw scouting ahead of the ambush was not only Voss\u2019s army \u2014 it was a supply column flying royal colors, escorting a third member of the captive royal house toward what he assumes is a more secure holding further from the coalition\u2019s reach. This opens a new thread for a later module rather than closing Tam\u2019s. Do not run both versions; pick one before the session and commit to it."));
+c.push(P("If your table would rather not lose Tam, run this instead: his warning is the same and he survives it, but what he saw scouting ahead of the ambush was not only Voss\u2019s army. It was a small column under Elduvish colours moving the other way, unhurried, barely escorted, with a grey-haired elf riding in the middle of it who was not tied to anything and did not look like a prisoner. That is Emrys Ysolde, the Envoy, being moved somewhere quieter \u2014 and the reason Tam mentions the detail at all is that nobody in the column was guarding him so much as accompanying him."));
+
+c.push(PS([DM("DM Only: "), { t: "if the party pulled Serjeant Hoth\u2019s file out of Sennoch Hall in Module Four, they already have the first hard evidence that Emrys has spent three years talking to Vale. This is where that stops being a document and becomes a man on a road. He is not a traitor, there is no reveal, and he will not defend himself: he took the only job nobody else in his house would take, and he cannot produce a clean accounting of whether it helped. What his sister\u2019s physician, the published levy and two mass reprisals that did not happen actually cost is a question he has had three years to word and still cannot answer. Open the thread here and let it stay open." }]));
+
+c.push(P("Do not run both versions of this scene. Pick one before the session and commit to it."));
 
 // ---------------------------------------------------------------- Scene 3
 c.push(H2("Scene 3: Holding the Line"));
@@ -185,11 +189,24 @@ c.push(BOX("The coalition line buckles and does not break \u2014 Oksitan spears 
 
 c.push(H3("Running the Scene"));
 
-c.push(P("Use the Occupation Guard stat block (Module 3) for General Voss\u2019s rank and file \u2014 six to eight of them, engaging the party and the coalition line in waves rather than all at once \u2014 with General Voss herself (see Stat Block) as the encounter\u2019s real threat, seeking out whoever on the coalition side looks most like a commander to kill or capture. If the party has protected Xavier\u2019s officers or otherwise distinguished themselves, Voss may target them directly, which is a genuine compliment from an enemy tactician and should read as one."));
+c.push(P("Use Legionaries of the Sixth (Bestiary, CR 1/2) for General Voss\u2019s rank and file \u2014 six of them, engaging the party and the coalition line in waves rather than all at once, with Formation working every time two of them reach the same target \u2014 and General Voss herself (see Stat Block) as the encounter\u2019s real threat, seeking out whoever on the coalition side looks most like a commander to kill or capture. If the party has protected Xavier\u2019s officers or otherwise distinguished themselves, Voss may target them directly, which is a genuine compliment from an enemy tactician and should read as one."));
 
 c.push(H3("Scaling the Fight"));
 
-c.push(P("Voss (1,800 XP) plus six Occupation Guards (150 XP) totals 1,950 base XP \u2014 seven total monsters, inside the 7\u201310 band. At party sizes 3\u20135 the multiplier is \u00D72.5 (4,875 adjusted); at 6+ it drops to \u00D72 (3,900 adjusted). Against a Deadly threshold of 4,400 \u2014 four characters at 5th level, which by this point in the campaign your table will have outgrown, so recompute against their actual level before you run it \u2014 this reads as Hard-to-Deadly rather than the Easy-to-Medium calibration of this campaign\u2019s earlier fights, which is deliberate: this battle is supposed to be dangerous. If it reads as too hard once you have checked it against your own table\u2019s actual level and size, remove one or two Occupation Guards rather than reducing Voss \u2014 she is the fight\u2019s whole point."));
+c.push(P("Voss (1,800 XP) plus six Legionaries of the Sixth (100 XP each, 600) totals 2,400 base XP across seven monsters, which sits in the 7\u201310 band: \u00D72.5 at party sizes three to five, for 6,000 adjusted, and \u00D72 at six or more, for 4,800. The table below is computed at 7th level, because that is where most tables will actually be by Module Nine \u2014 but this campaign prescribes no milestone schedule, so check it against your own party\u2019s real level before you run it."));
+
+c.push(table(
+  ["PCs", "Adj. XP", "Hard", "Deadly", "Reads as"],
+  [10, 18, 16, 18, 38],
+  [
+    ["4 at 7th", "6,000", "4,200", "6,800", "Hard, close to Deadly. Run as written."],
+    ["5 at 7th", "6,000", "5,250", "8,500", "Hard. This is the calibration the module wants."],
+    ["6 at 7th", "4,800", "6,300", "10,200", "Medium. Add two more legionaries, not a second officer."],
+    ["4 at 5th", "6,000", "3,000", "4,400", "Well past Deadly. Cut to four legionaries."]
+  ]
+));
+
+c.push(P("This is deliberately the most dangerous fight in the campaign so far, and unlike every earlier encounter it is meant to read Hard rather than Easy-to-Medium. If it comes out too heavy against your own table, remove legionaries rather than reducing Voss \u2014 she is the fight\u2019s whole point, and a Voss who is not frightening has cost the module its subject."));
 
 c.push(H3("Stat Block"));
 

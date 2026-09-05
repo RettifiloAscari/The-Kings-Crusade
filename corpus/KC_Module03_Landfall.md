@@ -50,7 +50,7 @@ Play this scene short and quiet. There is nothing to fight and nothing to solve;
 
 ## Scene 3: The Caerwyn Checkpoint
 
-Past the Dead Mile, the road reaches a checkpoint — a barrier, a brazier, and a folding table with a ledger, staffed by two or three occupation soldiers and one Elduvish clerk who does the actual talking. This is Vale’s war in its least dramatic and most revealing form: permits, a grain levy receipt, a question about where the party is bound and why.
+Past the Dead Mile, the road reaches a checkpoint — a barrier, a brazier, and a folding table with a ledger, staffed by eight occupation soldiers — a clerk, a barrier and eight bored men is exactly what the occupation thought Caerwyn was worth — and one Elduvish clerk who does the actual talking. This is Vale’s war in its least dramatic and most revealing form: permits, a grain levy receipt, a question about where the party is bound and why.
 
 > *The clerk — a woman in a coat too well-made for the checkpoint she is standing at — does not look up immediately. “Papers, or a reason,” she says, pen already uncapped. “I don’t enjoy this part any more than you will. Let’s get through it quickly.”*
 
@@ -186,9 +186,21 @@ Open thread: Wyn is this campaign’s first answer to the question of the occupa
 
 # Optional Content
 
-## The Baker’s Ovens
+## Nobody Here Speaks Marchspeak
 
-If the table wants more of Caerwyn before moving on, its baker — matter-of-fact about her never-cooling ovens, per Scene 1 — is a good source of purely human texture: gossip, a minor local favor asked of the party, or simply an excuse to let the table enjoy the town a while longer before the checkpoint’s tension arrives. No mechanical stakes.
+Elduvish is a dialect of Elvish spoken by every race in the kingdom — dwarves, halflings and humans included — and being unable to speak it marks a traveller as foreign far more reliably than a face does. Caerwyn is the first place that costs the party anything. Run one scene where the language is the obstacle rather than the occupation: a price quoted twice and differently, a warning nobody manages to translate in time, a joke at the party’s expense that the whole room enjoys and then kindly explains.
+
+If exactly one character speaks Elduvish, they have just acquired a job for the rest of the campaign and everybody in every market will look at them first. If nobody does, that is the intended experience and the friction is a feature of the whole middle third. If the entire party speaks it, the arrival has been flattened and a DM should say so at the table rather than quietly resent it.
+
+**DM Only:** the campaign gets a great deal out of the party being visibly foreign in a country they have come to liberate, and gets it for free. Do not solve it with a spell, a helpful NPC translator, or a ruling that everyone here speaks Common anyway. Caerwyn speaks Common perfectly well. Caerwyn simply does not, among itself, and the party will hear the difference.
+
+## An Observance, and Nobody in Charge of It
+
+Somewhere in the party’s first evening ashore, about twenty people gather at a wayside above the orchard, do something for a quarter of an hour, and disperse. There is no priest. There is no building. Nobody collects anything, nobody preaches, and nobody explains, and if the party asks what it was for they will get four different answers from four different people, all of them local, none of them authoritative, and one of them frankly eccentric.
+
+This is an Observance: not worship, but good manners practised at enormous scale — the things you do so that a road stays willing, a wood stays kept, and water that has heard you has no cause to repeat the worst of it. Every parish has its own and no two agree. A Concord character from Harrowmark, Oksitan, Auberitz or Norvatch will find this either charming or alarming, and a Concord cleric will find it genuinely difficult, because Elduvaine never built a church and does not understand why anybody else needed one.
+
+**DM Only:** run this once, early, with no stakes on it at all, because it is the setup for the single ugliest thing the party’s own side does in this campaign. The Order of the Tenth Work intends to consecrate ground exactly like this — lawfully, generously, and by burning what is on it — and the party should have stood in a field at dusk with twenty ordinary people before they ever watch that happen. Do not connect the two here. Do not let a Tenth Work rider appear in this scene.
 
 ## What Wyn Knows
 

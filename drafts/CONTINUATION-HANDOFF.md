@@ -26,7 +26,7 @@ and it tells you the set is intact and the toolchain works.
 
 ## What you inherit
 
-**Nineteen documents, 104 pages, ~88,500 words**, all verified clean and byte-reproducible.
+**Nineteen documents, 106 pages, ~92,900 words**, all verified clean and byte-reproducible.
 Six core volumes (Sourcebook, Gazetteer, Bestiary, Character Options, DM Reference Guide,
 Player Guide), the Session Zero primer, and twelve module files covering eleven session slots.
 
@@ -38,7 +38,7 @@ eleven-module arc. `CLAUDE.md` states all of it precisely.
 ## The scale question, honestly
 
 The DM asked for something at published scale — 224–320 pages for a setting book, 50–100
-for an adventure module. **We are at 104 pages total.** That gap is real and it should be
+for an adventure module. **We are at 106 pages total.** That gap is real and it should be
 stated plainly rather than quietly ignored.
 
 The arithmetic, at this template's density of roughly 830 words per page:

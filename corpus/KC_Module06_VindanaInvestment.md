@@ -32,7 +32,9 @@ Vindana is well-garrisoned, well-supplied for the moment, and commanded by an of
 
 ## Scene 1: The Lines Close
 
-Vindana up close is larger and better defended than it looked from the ridge in Module Five — walls thick enough to have shrugged off worse than a first coalition army, a harbor still working under the garrison’s control, watch-fires along every tower by the time the coalition’s own lines are staked out around it.
+Vindana up close is larger and better defended than it looked from the ridge in Module Five — walls thick enough to have shrugged off worse than a first coalition army, a harbour still working under the garrison’s control, watch-fires along every tower by the time the coalition’s own lines are staked out around it. Twenty-eight thousand people lived here before the fall. Perhaps nineteen thousand do now.
+
+Two things about those walls are worth putting in front of the party on the first day, because both of them pay off later. The inner wall is Standing Light stone, and for six centuries this city glowed faintly from its own defences on any clear night — the outer face of the thing the coalition has come to break was, until fourteen months ago, the most beautiful curtain wall in the world, and it is dark. And the harbour behind it is not a harbour any more so much as a spout: everything that leaves Elduvaine leaves through Vindana, weighed, docketed, and carried in Norvatch bottoms under a standing contract. A coalition that closes this port is not only taking a city. It is putting a cork in the only hole the kingdom is draining out of, and Marshal Drell knows the arithmetic of that considerably better than the officers besieging him do.
 
 > *By the second day, Vindana is ringed rather than merely approached — coalition tents in a wide arc from harbor-mouth to inland hill, cook-fires enough to be seen from the walls, and somewhere above the gatehouse, a banner the party does not recognize, raised deliberately high enough to be read from the coalition’s own lines. Marshal Drell wants them to know exactly who they are besieging.*
 
@@ -56,11 +58,7 @@ Xavier’s own cavalry — mounted scouts and raiders, Harrowmark-trained — ra
 
 ### Running the Scene
 
-Vindana also has an undercity — a drain and cistern system older than the walls above it, which the coalition would very much like to use and which the garrison stopped guarding two years ago because something else took it over. Perhaps sixty kobolds (SRD, CR 1/8, 25 XP each) hold the tunnels now, and they have had two years and nothing else to do. Every junction is trapped, every trap is signposted in a language nobody in the coalition reads, and they will trade: the coalition wants a route under the walls, and the kobolds want the garrison’s grain stores and a written promise that nobody comes back down afterwards. Run four to eight of them in any fight, in terrain that lets pack tactics and darkvision do the work, and let the negotiation be the real scene.
-
-**DM Only:** the kobold route is the single best reward available for a party that solves Module Six sideways instead of by force, and it pays off directly in Module Seven — a party that has the tunnels does not need the postern gate and can open the assault from inside the walls. Do not require it. Do reward it enormously if they find it.
-
-A supply column bound for Vindana — modest, lightly guarded, moving fast to avoid exactly this — can be intercepted on the road. This is a fast, mobile engagement; let mounted combat, terrain, and speed matter more than raw numbers. Use the Occupation Guard stat block (Module 3) for the column’s escort, three or four of them, easily overwhelmed by a proper cavalry raid — the point of this scene is momentum and competence, not danger.
+A supply column bound for Vindana — modest, lightly guarded, moving fast to avoid exactly this — can be intercepted on the road. This is a fast, mobile engagement; let mounted combat, terrain, and speed matter more than raw numbers. Use four Legionaries of the Sixth (Bestiary, CR 1/2) for the column’s escort: they are professionals, they will not be surprised twice, and they are still four people against a cavalry raid. The point of this scene is momentum and competence rather than danger — but let the Formation trait bite once, so the table learns before Module Seven that the Sixth fights as a unit and not as a crowd.
 
 A successful raid here (the column stopped, captured, or turned back) meaningfully weakens Vindana’s position for Scene 4’s assault — a DM may grant advantage on one relevant roll during the assault, or simply narrate the garrison as visibly shorter on options. This is the module’s clearest chance for the party to feel unambiguously effective before Scene 4’s setback.
 
@@ -84,7 +82,7 @@ With the engines raised and the supply raid’s results in hand, the coalition t
 
 ### Running the Scene
 
-This can be run as a large-scale combat with the party at its center (use Marshal Drell — see Stat Block — commanding a knot of Occupation Guards at the point of heaviest fighting) or narrated at the level of the assault as a whole, with the party’s actions determining how badly it goes rather than whether it succeeds. Either way, the assault does not take Vindana. A clean tactical win for the party in their own local fight is entirely possible and should not contradict the larger setback — they can win their corner of a battle the coalition as a whole does not win, which is itself worth letting them feel.
+This can be run as a large-scale combat with the party at its centre (use Marshal Drell — see Stat Block — with six Legionaries of the Sixth and an Optio at the point of heaviest fighting, which is what a breach on a defended wall actually contains) or narrated at the level of the assault as a whole, with the party’s actions determining how badly it goes rather than whether it succeeds. Either way, the assault does not take Vindana. A clean tactical win for the party in their own local fight is entirely possible and should not contradict the larger setback — they can win their corner of a battle the coalition as a whole does not win, which is itself worth letting them feel.
 
 ### Stat Block
 
@@ -178,9 +176,15 @@ Open thread: Drell is this campaign’s model of the occupation’s real compete
 
 If the table wants more camp texture, let Oksitan and Auberitz officers disagree openly, for the first time, about how the siege should be run — patience versus a faster assault, roughly the tension the module itself just dramatized in Scene 4. No mechanical stakes; this is a chance to deepen the coalition’s internal friction established in Module Four.
 
-## The Ward’s Read on the City
+## Somebody Inside Is Still Filing
 
-If the Ward was rescued in Module Four, she has real, specific knowledge of Vindana from before the occupation — a postern gate, a garrison habit, something small but true. This does not need to change the module’s outcome; it is a chance to let her earlier promise (see her NPC profile) pay off in a small way.
+A defector, a captured docket, or Ninian herself can tell the party that a magistrate of the Braid is inside Vindana and has been for three years — not in a cell, in what she insists on calling her chambers, producing correctly formatted objections at a rate the administration has never managed to stop. Ottoline Vahn is the Ward’s great-aunt, she is somewhere behind the wall the coalition is about to break, and she is a hundred and sixty years into being a magistrate and quite immovable about it.
+
+**DM Only:** this costs nothing and buys a great deal. It gives the siege a person inside it, it gives Module Eight’s rescue somebody the party has been thinking about for two modules rather than a name off a list, and it gives the party a reason to care whether the assault in Scene Four goes into the wrong quarter. Do not let them reach her here. Do let them worry.
+
+## Ninian’s Read on the City
+
+If Ninian was freed at Sennoch Hall, she has real, specific knowledge of Vindana from before the occupation — a postern gate, a garrison habit, something small but true. This does not need to change the module’s outcome; it is a chance to let her earlier promise (see her NPC profile) pay off in a small way.
 
 # Diverging Paths (DM Only)
 

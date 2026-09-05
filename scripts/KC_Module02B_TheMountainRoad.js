@@ -207,8 +207,8 @@ c.push(H3("Scaling the Fight"));
 c.push(P("Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts \u2014 four total monsters, inside the 3\u20136 monster band, so no table\u2019s party size crosses a multiplier boundary on its own."));
 
 c.push(table(
-  ["PCs", "Mult.", "Adj. XP", "Medium", "Reads as"],
-  [12, 16, 16, 19, 37],
+  ["PCs", "Base XP", "Mult.", "Adj. XP", "Medium", "Reads as"],
+  [10, 15, 12, 16, 16, 31],
   [
     ["4", "750", "\u00D72", "1,500", "2,000", "Easy\u2013Medium"],
     ["5", "750", "\u00D72", "1,500", "2,500", "Easy\u2013Medium, softer"],
@@ -287,7 +287,7 @@ c.push(P("However the ford and the toll-keep were settled, the column presses on
 
 c.push(BOX("Garrick Hollow, the column\u2019s hired guide, falls into step beside the party as the toll-keep drops out of sight behind them. \u201CEvery mile past here I know less than the mile before it,\u201D he says, without much apparent concern. \u201CWhich is either a comfort or it isn\u2019t, depending on how you\u2019ve found my company so far.\u201D"));
 
-c.push(P("This is where the module ends, and where the DM should let the weight of the road actually register \u2014 a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module 5 for the approach to Vindana, where the sea road\u2019s own losses \u2014 including the second king\u2019s \u2014 catch up with the party as news from the road not taken."));
+c.push(P("This is where the module ends, and where the DM should let the weight of the road actually register \u2014 a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module 3, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module 5, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news."));
 
 // ------------------------------------------------------------ NPC Profiles
 c.push(H1("Puzzles and Set Pieces"));
@@ -360,6 +360,20 @@ c.push(P("Above the toll-keep, half a day off the road, an abandoned dwarven wor
 c.push(P("Run six to ten kobolds (SRD, CR 1/8, 25 XP each) in terrain that does all their work for them: darkvision against a party carrying light, pack tactics wherever two can reach the same target, and a readiness to collapse a passage and leave rather than lose. The honest resolution here is not slaughter \u2014 a party that offers the kobolds the tools instead of taking them back can buy a guide through the workings and out above the toll-keep entirely, which is a third route past Vell that no one in the column has thought of."));
 
 c.push(P("If a table wants something heavier on this road instead, an ogre (SRD, CR 2, 450 XP) has been working the same stretch of scree for a season and is a straightforward, honest, dangerous obstacle for a party of this level \u2014 the mountain road\u2019s equivalent of weather with arms."));
+
+c.push(H2("Kir Halloway, and the Woman Who Has Been Counting"));
+
+c.push(P("Two days above Ashgate, wedged into a valley that gets four hours of direct sun in winter, Kir Halloway is the last place on this road where anybody can buy anything: one inn with eleven beds, four warehouses, a market on the third day of every week regardless of weather or war, and a population of dwarves, humans and a startling number of tieflings whose families came up from Norvatch three generations back and stayed for the trade. After this it is the pass, and then Elduvaine, and Elduvaine has permits."));
+
+c.push(P("A Norvatch house factor has kept a permanent office here for sixty years. She is courteous, entirely unhurried, and will discuss anything the party can pay for. What she actually knows, and will sell cheaply because she does not regard it as sensitive, is not what has been going up the road. It is what has been coming down it, out of Elduvaine, for three years: volume, direction, and the fact that it tripled in the second year and has not stopped."));
+
+c.push(PS([DM("DM Only: "), { t: "this is the mountain road\u2019s equivalent of the manifest in Thane\u2019s cellar, and it does the same job \u2014 one early, undramatic, entirely legal document that will fit against Doria Kell in Module Four and the ledgers in Module Ten. The factor is not a spy and has no agenda. She is a professional in a cold valley who has been writing numbers down for sixty years and is mildly pleased that somebody finally asked to see them." }]));
+
+c.push(H2("Barrowfell"));
+
+c.push(P("Two days off the road, four hundred barrows across nine miles of moor, raised by people nobody can now name on a schedule nobody can reconstruct. Harrowmark\u2019s scholars think they predate the kingdom by a wide margin. Harrowmark\u2019s shepherds think they should be left alone and have been proved right on eleven recorded occasions. A table that wants a dungeon rather than a march can spend an entire session up here."));
+
+c.push(PS([DM("DM Only: "), { t: "Barrowfell has nothing whatever to do with Vale, Elduvaine, or this war, and that is the entire point of it. A setting where every ruin is plot is a setting with no history in it. Put something genuinely old and genuinely unrelated down here, let the party spend an optional session on it, and never connect it to anything \u2014 including, especially, at the end of the campaign when it would be very easy to." }]));
 
 c.push(H2("What the Column Talks About"));
 c.push(P("Before Ashgate, let the party spend some idle marching time among the coalition\u2019s ordinary soldiers \u2014 Harrowmark levies, and the first Oksitan or Auberitz troops the party has walked near long enough to actually talk to. Play this for texture: homesickness, rumors about Elduvaine that are mostly wrong, and the particular, unglamorous humor of people who have been walking together for weeks. No mechanical stakes."));

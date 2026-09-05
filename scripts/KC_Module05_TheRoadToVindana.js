@@ -17,10 +17,12 @@
 // technique. The Kyffh\u00E4user refrain from the Barbarossa touchstone (see
 // CLAUDE.md\u2019s Touchstones) pays off directly in one of the four voices here.
 //
-// GATED CONTENT NOTICE: the second king\u2019s realm is NOT named or confirmed as
-// Oksitan\u2019s here, even though CLAUDE.md notes that inference as plausible --
-// it is explicitly flagged there as not signed off, and this module does not
-// invent past that gate. He is referred to only as "the second king."
+// GATE LIFTED: the second king is Raimon V of Oksitan, seventy-one, and both he
+// and his death are signed-off canon in the sourcebook (The Crusade > Raimon V of
+// Oksitan). He drowns fording the Vaskren, in armour, at the head of his own
+// column -- the Vaskren is Oksitan\u2019s own river and his army must cross it to
+// join either road, which is why the manner of his death does not change with the
+// party\u2019s branch. Earlier drafts withheld the name; do not restore that.
 
 const { Document, Packer, Paragraph, TextRun, ImageRun, HeadingLevel, AlignmentType, LevelFormat } = require('docx');
 const fs = require('fs');
@@ -127,11 +129,11 @@ c.push(PS([{ t: "The King\u2019s Crusade \u2014 Module Five", i: true }],
 // ---------------------------------------------------------------- Overview
 c.push(H1("Overview"));
 
-c.push(P("The coalition, the Ward beside it now, marches the final stretch toward Vindana \u2014 and partway there, news catches up with them from the road they did not take. The second king, who led the other column, is dead: lost early, in water, his army come apart behind him. This module delivers that news and lets the party, and the coalition around them, sit with it before Vindana\u2019s siege begins in Module 6. It is shorter and quieter than the modules before it by design. Core scenes run two and a half to three hours; Optional Content fills out the rest of a five-hour session and can be cut cleanly if the table is short on time."));
+c.push(P("The coalition marches the final stretch toward Vindana \u2014 with Ninian Ysolde beside it, if Sennoch Hall went well \u2014 and partway there, news catches up with them from the road they did not take. Raimon V of Oksitan, who led the other column, is dead: drowned at a ford, in armour, at the head of his own people, and his army has come apart behind him. This module delivers that news and lets the party, and the coalition around them, sit with it before Vindana\u2019s siege begins in Module 6. It is shorter and quieter than the modules before it by design. Core scenes run two and a half to three hours; Optional Content fills out the rest of a five-hour session and can be cut cleanly if the table is short on time."));
 
 c.push(H2("Playing the News"));
 
-c.push(P("This module resolves Branch Ledger entry 1 \u2014 the road choice from Module One \u2014 regardless of which variant of Module Two the table played. If the party took the sea road (Module 2A), the second king took the mountain road and was lost fording a swollen river, much as the Ashgate crossing nearly cost the party something in that variant. If the party took the mountain road (Module 2B), the second king took the sea road and was lost in a storm, much as the party\u2019s own crossing was in Calanthe\u2019s telling. Either way, the parallel is deliberate: whatever the party\u2019s own road cost them, the other road cost more, and it is worth letting a player notice that without the module explaining it."));
+c.push(P("This module resolves Branch Ledger entry 1 \u2014 the road choice from Module One \u2014 regardless of which variant of Module Two the table played, and it resolves it the same way in both. Raimon never reached either road. Oksitan\u2019s army had to cross the Vaskren to join the march at all, and it was at a Vaskren ford, eight days out from Aurignan, that the king of the ford-holders went in first the way he always did and did not come up. The parallel is deliberate either way: a party that took the sea road never saw the Ashgate crossing and now hears what that kind of water does, and a party that took the mountain road has already stood in cold water holding a rope and knows exactly how little it takes. Let a player make the connection without the module explaining it."));
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
@@ -147,9 +149,11 @@ c.push(table(
 // --------------------------------------------- What Is Actually Happening
 c.push(H1("What Is Actually Happening (DM Only)"));
 
-c.push(P("The second king\u2019s death was exactly what it appears to be: an accident of weather and bad ground, not an ambush and not Vale\u2019s doing \u2014 he has never heard of this man and would not consider him worth the effort if he had. That plainness is the point. The coalition loses its second crown to a river or a storm, the same way real armies have, and the loss is not made more dramatic than it actually was. What the module is actually about is not the death itself but what the survivors do with it \u2014 and the old soldiers\u2019 belief that a king of that stamp does not die but sleeps in some hill, waiting until he is needed again, is offered here as one live option among several for how the coalition receives it, not the only one."));
+c.push(P("Raimon\u2019s death was exactly what it appears to be: an accident of snowmelt and bad ground, not an ambush and not Vale\u2019s doing \u2014 Vale has never heard of this man and would not consider him worth the effort if he had. That plainness is the point. The coalition loses its second crown to a river or a storm, the same way real armies have, and the loss is not made more dramatic than it actually was. What the module is actually about is not the death itself but what the survivors do with it \u2014 and the old soldiers\u2019 belief that a king of that stamp does not die but sleeps in some hill, waiting until he is needed again, is offered here as one live option among several for how the coalition receives it, not the only one."));
 
-c.push(PS([DM("DM Only: "), { t: "the second king\u2019s realm is deliberately not named in this module. Oksitan is the plausible candidate by elimination \u2014 Auberitz is a grand duchy, Norvatch does not march \u2014 but that has never actually been settled, and neither this module nor any NPC in it should confirm it. If a player asks directly which realm lost its king, the honest answer any NPC can give is that word has not settled that far down the column yet, which is true and also convenient." }]));
+c.push(PS([DM("DM Only: "), { t: "name him. Raimon V of Oksitan came to the throne at nineteen, spent four decades making his kingdom the arbiter of every crossing between three realms, and answered the Call within eleven days \u2014 not for the remission and not because a priest asked, but because he intended to walk the Willing Road himself before he died and could think of no other way to arrange it. His marshals, his heir, his physicians and the Concord all tried to talk him out of going in person, and his answer to all four is now quoted the length of the coalition with a good deal of affection: that he has been old for twenty years and it has not inconvenienced him yet. The king of the ford-holders, drowned in a ford, on his way to claim a road. Do not point at that. Let somebody at the table find it." }]));
+
+c.push(PS([DM("DM Only: "), { t: "there is a second thing this death costs and it is not grief. Oksitan wanted the Willing Road \u2014 its waystones, and the craft of cutting more of them \u2014 and Oksitan is structurally guaranteed never to have it, because nobody has ever established what the road measures and this campaign never will. The old man who wanted to walk it is dead in a river eight days from his own capital, and his officers are still marching for a thing that cannot be taken. Play them as competent, confident and entirely sincere. The tragedy only works if it is never signposted." }]));
 
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: Word on the Road"));
@@ -241,20 +245,16 @@ c.push(P("Open thread: Tam is a natural recurring minor NPC for the rest of the 
 c.push(H1("Optional Content"));
 
 c.push(H2("What the Coalition Believes Now"));
-c.push(P("If the table wants more of the coalition\u2019s reaction before Vindana, let the party spend time in camp hearing how differently Oksitan, Auberitz, and Harrowmark soldiers are each processing the loss \u2014 without confirming which realm the crown belonged to (see the DM-Only note above). Play this for texture: an argument about what kind of memorial, if any, is appropriate; a quiet, un-discussed uptick in soldiers touching still water on the march since. No mechanical stakes."));
+c.push(P("If the table wants more of the coalition\u2019s reaction before Vindana, let the party spend time in camp hearing how differently the three contingents are taking it. Oksitan is not grieving so much as calculating, badly and in public: with the king dead and the succession unsettled, every dragonborn house in that camp is quietly reckoning what its own crossing is worth now. Auberitz is genuinely sympathetic and is also already redrawing the supply tables. Harrowmark, which never met Raimon, is mostly worried about what a coalition does when a crown comes off it. Play it for texture: an argument about what kind of memorial is appropriate, and a quiet, undiscussed uptick in soldiers touching still water as they pass it. No mechanical stakes."));
 
-c.push(H2("The Held Winter"));
+c.push(H2("Bryn Aeling, the Held Winter"));
 
-c.push(P("The road to Vindana runs within half a day of a birch wood that was planted four days into spring three hundred years ago and has been nine weeks into a winter it was never sown in for most of a year. A party that goes to look finds the most legible single image of the draining the campaign has: a wood in the wrong season, dying of it, with an ecology that has moved in behind the change."));
+c.push(P("The road to Vindana runs within half a day of Bryn Aeling, the first and greatest of the Kept Season orchards, and a party that goes to look gets the campaign\u2019s most legible single image of the draining. It is written in full as this module\u2019s set piece above \u2014 Nine Weeks Into a Winter \u2014 because it is worth the whole ninety minutes if the table has them and forty if they do not. Budget it here rather than running it twice."));
 
-c.push(P("What lives there now came down out of the hills after the cold did. A pair of winter wolves (SRD, CR 3, 700 XP each) hunt the wood\u2019s edges and will shadow a small party for an hour before committing. Deeper in, a troll (SRD, CR 5, 1,800 XP) has taken the old orchard-keeper\u2019s cottage and is the reason the last two woodsmen did not come back \u2014 a straightforward, dangerous fight for a party of this level, and one that rewards anybody who remembers what regeneration does and does not survive. A DM running the wolves and the troll together should check the total against their table before committing; either alone is a full encounter."));
-
-c.push(P("The wood also has a dryad (SRD, CR 1), and she is the actual content of the scene. She is not an encounter. She has been the spirit of a spring wood for three centuries and is now the spirit of a winter one, and she is neither hostile nor grateful nor able to leave. She will talk, at length, and what she wants is for somebody to explain to her what has been done and why, which nobody in the party can do. A table that fights her has misread the scene; a table that sits down with her gets the campaign\u2019s grief in one conversation, from something that is not a person and is nonetheless quite plainly grieving."));
-
-c.push(PS([DM("DM Only: "), { t: "if the party asks whether killing Vale fixes her wood, the honest answer is that nobody knows and she does not expect it to. Do not have her forgive anyone, and do not have her curse anyone. She is a wood in the wrong season, and the wrong season is not going to end because a war did." }]));
+c.push(P("Two practical notes for a DM choosing between the optional scenes. This one and the ridge skirmish below do entirely different jobs, and a table that has just sat through the Standing Water is almost always better served by the wood than by a fight. And if the party has a Season-Keeper among them, or has met the Keepers at Nantcorrow, Bryn Aeling is where that background stops being flavour: the Keepers hold the map of which woods have turned and in what order, it is the best measurement of the draining outside Norvatch\u2019s ledgers, and they will give it to the right people."));
 
 c.push(H2("A Skirmish on the Ridge"));
-c.push(P("If the table wants combat before this module ends, a small occupation patrol \u2014 scouting Vindana\u2019s approaches, not expecting a coalition column this size \u2014 can be spotted and engaged on the final ridge before Scene 3. Use the Occupation Guard stat block from Module 3 (three or four is sufficient); they flee to warn the city the moment the fight turns against them, which is itself useful information for Module 6 rather than a failure state."));
+c.push(P("If the table wants combat before this module ends, a Legion patrol \u2014 scouting Vindana\u2019s approaches, not expecting a coalition column this size \u2014 can be spotted and engaged on the final ridge before Scene 3. Use four Legionaries of the Sixth (Bestiary, CR 1/2) rather than the levy-grade Occupation Guard from Module Three: this close to Vindana the patrols are professionals, and the difference should be felt. They do not flee so much as break contact in good order, taking their wounded and reporting accurately, which is worse for the coalition and better for Module Six than a rout would have been."));
 
 // -------------------------------------------------------------- Diverging
 c.push(H1("Diverging Paths (DM Only)"));
