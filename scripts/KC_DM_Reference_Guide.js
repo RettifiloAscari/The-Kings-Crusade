@@ -168,7 +168,7 @@ c.push(table(
 
 c.push(H1("Stat Block Index"));
 
-c.push(P("Every named stat block built so far, in order of first appearance. \u201cSRD base\u201d names the unmodified SRD creature a block was built from \u2014 renamed blocks keep the base creature\u2019s numbers exactly and change only name, flavor text, and (where noted in the module) minor cosmetic description. The Occupation Guard is defined in Module 3, reprinted in full in Module 4 because that module\u2019s own fight needs it to hand, and pointed at by reference in Modules 6, 7, 9 and 11."));
+c.push(P("Every stat block printed in a module, in order of first appearance. \u201cSRD base\u201d names the unmodified SRD creature a block was built from \u2014 renamed blocks keep the base creature\u2019s numbers exactly and change only name, flavour text, and (where noted in the module) minor cosmetic description. The Occupation Guard is the levy-grade garrison at Caerwyn and nowhere else; wherever the party fights the Sixth Free Legion itself, the modules use the Legion blocks from the Bestiary, listed in the second table below."));
 
 c.push(table(
   ["Name", "SRD Base", "CR (XP)", "AC", "HP", "Module"],
@@ -179,7 +179,10 @@ c.push(table(
     ["Thane\u2019s Guard", "Bandit, unmodified", "1/8 (25)", "12", "11", "2A \u2014 The Sea Road"],
     ["Baron Osgar Vell", "Bandit Captain, renamed", "2 (450)", "15", "65", "2B \u2014 The Mountain Road"],
     ["Ashgate Scout", "Scout, unmodified", "1/2 (100)", "13", "16", "2B \u2014 The Mountain Road"],
-    ["Occupation Guard", "Guard, unmodified", "1/8 (25)", "16", "11", "3 \u2014 Landfall (reused: 4, 6, 7, 9, 11)"],
+    ["Occupation Guard", "Guard, unmodified", "1/8 (25)", "16", "11", "3 \u2014 Landfall"],
+    ["Legionary of the Sixth", "Bestiary block, reprinted", "1/2 (100)", "18", "22", "4 \u2014 The Coalition"],
+    ["Winter Wolf", "Winter Wolf, unmodified", "3 (700)", "13", "75", "5 \u2014 The Road to Vindana"],
+    ["Troll", "Troll, unmodified", "5 (1,800)", "15", "84", "5 \u2014 The Road to Vindana"],
     ["Marshal Ossian Drell", "Veteran, renamed", "3 (700)", "17", "58", "6 \u2014 Vindana: Investment (returns: 7)"],
     ["General Ilyana Voss", "Gladiator, renamed", "5 (1,800)", "16", "112", "9 \u2014 The Field Battle"],
     ["Maedoc Vale", "Archmage, renamed", "12 (8,400)", "15", "99", "11 \u2014 The Decision at the Gates"]
@@ -197,11 +200,30 @@ c.push(table(
   [26, 16, 58],
   [
     ["Kobold", "1/8 (25)", "The old workings above Ashgate (2B, optional); Vindana\u2019s undercity (6). Trap-layers and negotiators, not a slaughter."],
-    ["Winter Wolf", "3 (700)", "The Held Winter (5, optional). Hunts the wood\u2019s edges."],
-    ["Troll", "5 (1,800)", "The Held Winter (5, optional). Has taken the orchard-keeper\u2019s cottage. Regeneration is the fight."],
-    ["Dryad", "1 (200)", "The Held Winter (5, optional). Not an encounter \u2014 a conversation, and the campaign\u2019s grief in one NPC."],
     ["Sprite", "1/4 (50)", "Caerwyn\u2019s orchard hedge (3). Four inches of extremely rude opinion. Pure texture."],
     ["Ogre", "2 (450)", "The mountain road (2B, optional), as an alternative to the kobold workings."]
+  ]
+));
+
+c.push(H2("Bestiary Blocks in Play"));
+
+c.push(P("The Bestiary\u2019s own blocks, and every module that calls for one. The Held Winter\u2019s dryad is run with the Withering if it ever comes to violence, which it should not."));
+
+c.push(table(
+  ["Block", "CR (XP)", "Where it is called for"],
+  [26, 16, 58],
+  [
+    ["Legionary of the Sixth", "1/2 (100)", "Sennoch Hall (4, reprinted there); the ridge patrol (5, optional); the supply escort and First Assault (6); the breach (7); the field battle and the Engine\u2019s guard (9); the gate of Caer Ysolde (11)."],
+    ["Legion Optio", "2 (450)", "Serjeant Hoth (4); First Assault (6); the breach (7); the Ironshanks\u2019 advance (9)."],
+    ["Legion Ironshank", "3 (700)", "The Fight in the Gap (7); the Ironshanks\u2019 advance (9)."],
+    ["Legion Battle-Mage", "6 (2,300)", "Vindana\u2019s harbour-mage, gone before the ending (7, loot); the Braid encounter table."],
+    ["Waystone Warden", "5 (1,800)", "The Willing Road to Vindana (5, optional). A puzzle wearing a stat block."],
+    ["The Withering", "3 (700)", "Bryn Aeling\u2019s dryad, if it comes to violence (5)."],
+    ["Season-Bound Stag", "2 (450)", "Bryn Aeling (5). Not a fight; a minute of spring."],
+    ["Light-Hollow", "4 (1,100)", "Under Vindana\u2019s inner wall (6, optional). Fought in the dark."],
+    ["Draining Engine", "6 (2,300)", "Behind Voss\u2019s reserve (9, optional). An objective, not an opponent."],
+    ["Echo of the Listening Water", "1 (200)", "Lisswater (10, optional). The Four Voices as a thing in the room."],
+    ["Xavier III, Aveline Ysolde, Brenna Vane, Doria Kell", "8, 4, 3, 2", "Named figures. Not meant to be fought; printed so a DM knows what they can do."]
   ]
 ));
 
@@ -213,8 +235,8 @@ c.push(table(
   ["Wonder", "What it does", "First available"],
   [24, 52, 24],
   [
-    ["Standing-stone lamp", "Gnome-cut stone that holds daylight poured into it and gives it back for hours.", "Module 3, from Caerwyn\u2019s baker"],
-    ["Flask of Listening Water", "Holds what is said at its mouth; gives it back once, in the speaker\u2019s own voice.", "Module 5, at the Standing Water"],
+    ["Standing-stone lamp", "Gnome-cut stone that holds daylight poured into it and gives it back for hours.", "Module Three, from Caerwyn\u2019s baker"],
+    ["Flask of Listening Water", "Holds what is said at its mouth; gives it back once, in the speaker\u2019s own voice.", "Module Five, at the Standing Water"],
     ["Road-token", "Cut from a Willing Road waystone. Explains itself no more than the road does.", "DM\u2019s discretion"],
     ["Kept Season seeds", "A small stand holds whatever season the seeds were sown in.", "DM\u2019s discretion"]
   ]
@@ -255,14 +277,14 @@ c.push(table(
   ["Name", "Introduced", "Role"],
   [22, 14, 64],
   [
-    ["Xavier III of Harrowmark", "1", "The calling king. Leads in person; not yet the Wyvernheart until Module 7."],
-    ["Huntmaster Brenna Vane (dwarf)", "1", "Greywatch\u2019s huntmaster, two centuries old; runs the wyvern hunt; a recurring source of camp levity."],
+    ["Xavier III of Harrowmark", "1", "The calling king. Leads in person; not yet the Wyvernheart until Module Seven."],
+    ["Huntmaster Brenna Vane (dwarf)", "1", "Greywatch\u2019s huntmaster, in her second century; runs the wyvern hunt; a recurring source of camp levity."],
     ["Sera Vosk (rock gnome)", "2A", "Auberitz quartermaster; a standing logistics and information contact."],
-    ["Garrick Hollow (half-elf)", "2B", "Hired mountain guide; a standing source for overland routes and rumor."],
+    ["Garrick Hollow (half-elf)", "2B", "Hired mountain guide; a standing source for overland routes and rumour."],
     ["Wyn Alder (gnome)", "3", "An occupation-era clerk at the Landfall checkpoint; the campaign\u2019s first answer to what an ordinary complicit person looks like."],
-    ["Doria Kell (tiefling)", "4", "Norvatch factor, and the campaign\u2019s second-largest lever. Her house has been buying Elduvaine by weight for three years; her ledgers are the clock. Names her price in Module 10."],
+    ["Doria Kell (tiefling)", "4", "Norvatch factor, and the campaign\u2019s second-largest lever. Her house has been buying Elduvaine by weight for three years; her ledgers are the clock. Names her price in Module Ten."],
     ["Tam Ondry", "5", "Harrowmark courier attached to the lost column; a standing source for news arriving from elsewhere."],
-    ["Marshal Ossian Drell (hobgoblin)", "6", "Commands Vindana\u2019s garrison; a legionary professional on a contract, not a fanatic. Fate resolved in Module 7."],
+    ["Marshal Ossian Drell (hobgoblin)", "6", "Commands Vindana\u2019s garrison; a legionary professional on a contract, not a fanatic. Fate resolved in Module Seven."],
     ["General Ilyana Voss (orc)", "9", "Commands Vale\u2019s field army; came up through the same legion as Drell. Fate resolved this module; a captured Voss is a real long-term asset."],
     ["Aveline Ysolde, the Regent (human)", "10", "Royal house, at large; runs what resistance survives and refuses evacuation. Has refused it in writing, twice. Stat block in the bestiary."],
     ["Maelis Ysolde, the Veiled Sovereign (elf)", "11", "Held in Caer Ysolde. Dying at the same rate as the land, because a sovereign is bound to the habits. The campaign\u2019s second clock, and the one that cannot be bought. No stat block, deliberately."],
@@ -346,6 +368,7 @@ c.push(table(
   [
     ["1", "The wyvern\u2019s fate", "Killed \u00b7 driven off \u00b7 roped and released", ""],
     ["1", "Branch Ledger entry 1: the road choice", "Sea road (2A) \u00b7 Mountain road (2B)", ""],
+    ["1", "The Fenmarrow letter (update every time it changes hands)", "Refused \u00b7 carried \u00b7 lost \u00b7 opened \u00b7 delivered", ""],
     ["2A", "How Thane\u2019s hold is settled", "Paid off \u00b7 talked down \u00b7 fought", ""],
     ["2A", "Calanthe\u2019s fate", "Garrisoned \u00b7 independent \u00b7 hybrid", ""],
     ["2B", "What the ford cost", "A wagon \u00b7 a delay \u00b7 a near-miss \u00b7 an actual loss", ""],
@@ -365,6 +388,7 @@ c.push(table(
     ["8", "Whether the party noticed the pressed clerk", "Yes \u00b7 No", ""],
     ["9", "Which Scene 2 was run", "Tam\u2019s death \u00b7 the third-thread alternate", ""],
     ["9", "General Voss\u2019s fate", "Killed \u00b7 captured \u00b7 fled", ""],
+    ["9", "Draining Engines broken (a running count, of about thirty)", "Number broken, and where", ""],
     ["10", "Whether Xavier signed Norvatch\u2019s contract", "Signed \u00b7 refused \u00b7 deferred", ""],
     ["10", "What the party told the Regent, and what the Regent told them", "(Private DM note \u2014 not mechanically tracked)", ""],
     ["11", "The campaign\u2019s final choice", "Held \u00b7 set down", ""],
@@ -390,7 +414,7 @@ c.push(table(
   ]
 ));
 
-c.push(P("The final choice draws on everything above it \u2014 before running Module 11\u2019s Scene 4, a DM may find it worth reading back across this whole ledger with the table."));
+c.push(P("The final choice draws on everything above it \u2014 before running Module Eleven\u2019s Scene 4, a DM may find it worth reading back across this whole ledger with the table."));
 
 const doc = new Document({
   numbering: { config: [

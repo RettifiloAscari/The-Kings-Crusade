@@ -159,7 +159,7 @@ c.push(P("Likewise, whatever the party glimpses of the vaults he has been readin
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Gates of Caer Ysolde"));
 
-c.push(P("Caer Ysolde\u2019s garrison, already thin after Vindana and the field battle, does not mount a real defense \u2014 this is not another Module Six or Module Seven, and should not be run at that length or intensity. A short, sharp engagement at the outer gate \u2014 four to six Legionaries of the Sixth (Bestiary), holding it exactly as long as a contract requires and not one minute longer \u2014 is enough; let the capital fall quickly, because the module\u2019s actual content is what waits underneath it, not another wall to break."));
+c.push(P("Caer Ysolde\u2019s garrison, already thin after Vindana and the field battle, does not mount a real defence \u2014 this is not another Module Six or Module Seven, and should not be run at that length or intensity. A short, sharp engagement at the outer gate \u2014 four to six Legionaries of the Sixth (Bestiary), holding it exactly as long as a contract requires and not one minute longer \u2014 is enough; let the capital fall quickly, because the module\u2019s actual content is what waits underneath it, not another wall to break."));
 
 c.push(BOX("The city opens ahead of the coalition almost too easily, streets emptying rather than resisting, until it becomes clear this is not fear of the coalition \u2014 it is the particular quiet of a place whose attention has been somewhere else entirely for three years. Nobody in Caer Ysolde seems especially surprised that today is the day it ends."));
 
@@ -168,11 +168,11 @@ c.push(P("Let the party move quickly through the city toward the Archive. This s
 // ---------------------------------------------------------------- Scene 2
 c.push(H2("Scene 2: Into the Archive"));
 
-c.push(P("The Ysolde Archive, even three years drained, is the largest collection of magical knowledge in the world, and the party descends through galleries that were built for scholarship rather than defense \u2014 which does not make them safe, only strange."));
+c.push(P("The Ysolde Archive, even three years drained, is the largest collection of magical knowledge in the world, and the party descends through galleries that were built for scholarship rather than defence \u2014 which does not make them safe, only strange."));
 
 c.push(BOX("The stacks go down further than the building above them should allow, and further than anyone escorting the party is willing to explain. Somewhere below, faintly, is a sound like a held breath, and a light that does not come from any torch or window doing something none of the party\u2019s own light sources do."));
 
-c.push(P("Run this as atmosphere and tension rather than a dungeon crawl \u2014 a handful of Tiered Skill DC checks (below) to navigate safely, and perhaps one non-lethal hazard (a ward triggered by curiosity rather than malice, a section of stacks that briefly does not behave like ordinary space) rather than a string of fights. The Archive\u2019s remaining wards are not trying to kill the party; they are simply still doing their job, and their job was never intruder defense in the ordinary sense."));
+c.push(P("Run this as atmosphere and tension rather than a dungeon crawl \u2014 a handful of Tiered Skill DC checks (below) to navigate safely, and perhaps one non-lethal hazard (a ward triggered by curiosity rather than malice, a section of stacks that briefly does not behave like ordinary space) rather than a string of fights. The Archive\u2019s remaining wards are not trying to kill the party; they are simply still doing their job, and their job was never intruder defence in the ordinary sense."));
 
 // -------------------------------------------------------------- Skill DCs
 c.push(H2("Tiered Skill DCs"));
@@ -184,8 +184,8 @@ c.push(table(
   [44, 26, 10, 20],
   [
     ["Navigate the Archive\u2019s stacks without becoming lost", "Investigation / Survival", "13", "Moderate"],
-    ["Recognize a ward as passive rather than hostile", "Arcana / Investigation", "13", "Moderate"],
-    ["Avoid triggering a curiosity-ward while examining the stacks", "Investigation / Wisdom (DM\u2019s judgment)", "13", "Moderate"],
+    ["Recognise a ward as passive rather than hostile", "Arcana / Investigation", "13", "Moderate"],
+    ["Avoid triggering a curiosity-ward while examining the stacks", "Investigation / Wisdom (DM\u2019s judgement)", "13", "Moderate"],
     ["Read Vale\u2019s intentions correctly before he speaks", "Insight", "16", "Hard"]
   ]
 ));
@@ -218,7 +218,7 @@ c.push(...SB({
   traits: [
     { n: "Magic Resistance", t: "Vale has advantage on saving throws against spells and other magical effects." },
     { n: "Spellcasting", t: "Vale is an 18th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). He can cast disguise self and invisibility at will, and has the following wizard spells prepared \u2014 Cantrips (at will): fire bolt, light, mage hand, prestidigitation, shocking grasp. 1st level (4 slots): detect magic, identify, mage armor*, magic missile. 2nd level (3 slots): detect thoughts, mirror image, misty step. 3rd level (3 slots): counterspell, fly, lightning bolt. 4th level (3 slots): banishment, fire shield, stoneskin*. 5th level (3 slots): cone of cold, scrying, wall of force. 6th level (1 slot): globe of invulnerability. 7th level (1 slot): teleport. 8th level (1 slot): mind blank*. 9th level (1 slot): time stop. Spells marked * he casts on himself before combat, and the stat block above assumes mage armor is already up." },
-    { n: "A Warder\u2019s Instinct", t: "Vale treats every spell as a rule to be applied rather than a force to be unleashed \u2014 flavor his spellcasting as precise and procedural, closer to a lock turning than an explosion, even when the effect is devastating." }
+    { n: "A Warder\u2019s Instinct", t: "Vale treats every spell as a rule to be applied rather than a force to be unleashed \u2014 flavour his spellcasting as precise and procedural, closer to a lock turning than an explosion, even when the effect is devastating." }
   ],
   actions: [
     { n: "Dagger", t: "Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d4 + 2) piercing damage. He will not reach for it while he has a slot left, which is the point of it being here." },
@@ -235,14 +235,14 @@ c.push(P("However Vale\u2019s confrontation ended, Elduvaine\u2019s occupation i
 
 c.push(BOX("Xavier finds the party one last time, in a city that is theirs now in whatever sense anyone can agree on. He does not tell them what to decide. He has clearly been thinking about the question as long as they have, and has not arrived anywhere he is willing to call an answer. \u201CI made a promise to get allies to march,\u201D he says. \u201CI never actually decided, myself, what I thought we should do once we got here. I don\u2019t know that it\u2019s mine to decide. I\u2019m not sure it\u2019s only yours, either. But I think it has to be somebody\u2019s, today.\u201D"));
 
-c.push(P("Let the table talk this through as themselves, not only as their characters \u2014 this is the campaign\u2019s actual final decision, and it is deliberately not adjudicated by any NPC, any mechanic, or this module. Weigh whatever the campaign has given them to weigh: the Promise and what the coalition is owed; the royal house\u2019s own divided opinions (the Ward, the Magistrate, the Regent, if met); what Elduvaine\u2019s ordinary people \u2014 Wyn Alder, Caerwyn\u2019s baker, the resistance the Regent led \u2014 actually seem to want; and what holding a kingdom whose magic responds to intention would even mean, held by people who marched here for a share of it."));
+c.push(P("Let the table talk this through as themselves, not only as their characters \u2014 this is the campaign\u2019s actual final decision, and it is deliberately not adjudicated by any NPC, any mechanic, or this module. Weigh whatever the campaign has given them to weigh: the Promise and what the coalition is owed; the royal house\u2019s own divided opinions (Ninian, Ottoline and Aveline if the party freed or met them, and Maelis herself if anybody went up to the Keep); what Elduvaine\u2019s ordinary people \u2014 Wyn Alder, Caerwyn\u2019s baker, the resistance the Regent led \u2014 actually seem to want; and what holding a kingdom whose magic responds to intention would even mean, held by people who marched here for a share of it."));
 
-c.push(P("When the table decides, run the matching ending below. Do not run both. Do not hint, before this moment, which one the campaign favors \u2014 it does not favor either."));
+c.push(P("When the table decides, run the matching ending below. Do not run both. Do not hint, before this moment, which one the campaign favours \u2014 it does not favour either."));
 
 // ============================================================ ENDING ONE
 c.push(H1("Ending One: The Crown Held"));
 
-c.push(P("The coalition claims Elduvaine. Xavier\u2019s champions stand at the center of it \u2014 this is the ending in the tradition of a war won and a promise kept, and it should be played with real, earned triumph."));
+c.push(P("The coalition claims Elduvaine. Xavier\u2019s champions stand at the centre of it \u2014 this is the ending in the tradition of a war won and a promise kept, and it should be played with real, earned triumph."));
 
 c.push(BOX("The banners go up over Caer Ysolde by evening \u2014 Harrowmark\u2019s, Oksitan\u2019s, Auberitz\u2019s, and, restored to its proper place above them, Elduvaine\u2019s own. The Standing Light does not come back all at once; that will take years, the royal house\u2019s own scholars say, now that Vale\u2019s draining has stopped. But somewhere in the city tonight, for the first time in three years, one single street lights itself without anyone striking a flame, and the crowd that gathers to watch it is not entirely sure whether they are permitted to cheer. They do anyway."));
 
@@ -316,6 +316,28 @@ c.push(P("See the sourcebook for his full established character. In this module 
 c.push(P("Open thread: whether he dies, escapes, or is captured is this module\u2019s to decide at the table (see Scene 3\u2019s stat block note) \u2014 a DM keeping the campaign\u2019s deliberate ambiguity about his humanity intact may prefer to leave his ultimate fate just as unresolved as that question, whatever the mechanical outcome of the fight."));
 
 // -------------------------------------------------------------- Diverging
+c.push(H2("Maelis Ysolde, the Veiled Sovereign"));
+
+c.push(P("Elf, sovereign of Elduvaine, and held for three years in her own apartments in the Ysolde Keep on the middle island, under guard, considerately. Ill for eleven years from an ordinary cause; declining for three at exactly the rate the land is, because a sovereign of Elduvaine is bound into the habits at accession and what the habits have, the sovereign has. She wears a veil because the wasting reached her face four years ago and she declines to have it discussed. She has not stood unaided since the second winter of the occupation. She is, without any competition at all, the most intelligent person in this campaign, and three years of confinement have given her nothing to do but think about the man holding her."));
+
+c.push(P("Speech: exact, unhurried, entirely without self-pity, and never once softened for the listener\u2019s comfort. She will not be evacuated, for the same reason her cousin will not \u2014 the habits are bound to her and nobody knows what leaving would do to them. She has no stat block, and that is deliberate: nothing in this campaign should ever ask the party to fight beside her or against her."));
+
+c.push(P("Open thread: her position on what Elduvaine should be afterward is the plainest of the five and the hardest to hear \u2014 the habits are restored first, and everything else is arranged around that. She is aware that it may not be survivable for her and considers the point irrelevant. She is one voice among five, and the campaign does not adjudicate."));
+
+c.push(H1("Optional Content"));
+
+c.push(P("This module is built to take the whole session. The scene below sits outside the core time and should be run only if the table has it \u2014 but if the table has it, it is the best forty minutes in the book."));
+
+c.push(H2("The Veiled Sovereign"));
+
+c.push(P("Somewhere between Vale and the decision at the gates, somebody has to go up to the Keep. The guard on Maelis\u2019s door is a legionary on a contract that has just been demonstrated to have no employer, and he stands aside. She receives the party sitting, veiled, at a window over the dark city, with Vale\u2019s skilled physician still in attendance because nobody has told him to go."));
+
+c.push(BOX("\u201cHe has not been cruel to me. He has been considerate, and prompt, and he sends a physician who is genuinely skilled, and none of it costs him anything, and all of it is true. I wanted you to understand that before you met him. I see that you have met him. Sit down.\u201d"));
+
+c.push(P("She is a status report on the entire war, and anybody who looks at her can read it. She wears the Sovereign\u2019s Veil (see the DM Reference Guide), which means she knows, precisely, how much of the Living Realm remains. If a party asks her the number, she tells them, without softening it \u2014 and it is somewhat worse than Norvatch\u2019s ledgers said, because the ledgers stopped at the last shipment and she did not."));
+
+c.push(PS([DM("DM Only: "), { t: "use her for nothing she would find beneath her, and never for exposition. She will not tell the party what to decide, will not say what is behind the deepest vaults, and will not settle whether Vale is still human; she will tell them exactly what the rule of the Archive says, because she appointed the Keeper under it, and she will tell them what she wants for her country, once, plainly. Then she will ask them what they want, and wait, and the silence is the scene. A table that brings her into the argument at the gates has one more real voice in it. A table that never comes up to the Keep has lost a great deal and will never know it, which is the right cost for an optional scene." }]));
+
 c.push(H1("Diverging Paths (DM Only)"));
 
 c.push(BUL("The campaign\u2019s final choice.", "Held or set down \u2014 this is the Branch Ledger\u2019s last and largest entry, and everything else tracked across the campaign (the road choice, Calanthe or Ashgate, every rescue, every NPC\u2019s fate) is worth revisiting here as context for how the table actually arrived at this decision."));
@@ -324,7 +346,7 @@ c.push(BUL("Vale\u2019s fate.", "Killed, escaped, or captured \u2014 record whic
 // ---------------------------------------------------------------- Loot
 c.push(H1("Loot"));
 
-c.push(B("Whatever the Archive itself now represents.", "Not itemized loot \u2014 the campaign\u2019s actual final reward is the ending the table chose, and this module does not attach a treasure list to that choice on purpose.", { keepNext: true }));
+c.push(B("Whatever the Archive itself now represents.", "Not itemised loot \u2014 the campaign\u2019s actual final reward is the ending the table chose, and this module does not attach a treasure list to that choice on purpose.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain
 c.push(H1("The Refrain"));

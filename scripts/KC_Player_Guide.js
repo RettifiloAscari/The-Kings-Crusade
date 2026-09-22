@@ -245,7 +245,7 @@ c.push(P("Both promises depend on one thing neither Xavier nor anyone else can c
 // ---------------------------------------------------------------- Elduvaine, As It\u2019s Told
 c.push(H1("Elduvaine, As It\u2019s Told"));
 
-c.push(P("Almost nothing below comes from a firsthand source. Elduvaine has been closed for three years, and what travels out of a closed country is rumor, old memory, and the occasional survivor\u2019s account, filtered through however many tellings it took to reach a Harrowmark tavern. Treat it as the stories your character grew up hearing, not as a briefing."));
+c.push(P("Almost nothing below comes from a firsthand source. Elduvaine has been closed for three years, and what travels out of a closed country is rumour, old memory, and the occasional survivor\u2019s account, filtered through however many tellings it took to reach a Harrowmark tavern. Treat it as the stories your character grew up hearing, not as a briefing."));
 
 c.push(P("The stories agree on one strange thing: in Elduvaine, magic is said to live in the land itself rather than being worked by a person. Nobody outside Elduvaine has ever fully explained what that means, and the accounts that follow are the closest anyone has come."));
 
@@ -260,11 +260,11 @@ c.push(table(
   ]
 ));
 
-c.push(P("More recent accounts \u2014 from the handful of people who have actually come out since the wards opened \u2014 say some of this is failing. Roads that no longer shorten. Rivers that answer with voices nobody recognizes, or don\u2019t answer at all. Whether that\u2019s true, and what it would mean if it is, your character will have to find out for themselves."));
+c.push(P("More recent accounts \u2014 from the handful of people who have actually come out since the wards opened \u2014 say some of this is failing. Roads that no longer shorten. Rivers that answer with voices nobody recognises, or don\u2019t answer at all. Whether that\u2019s true, and what it would mean if it is, your character will have to find out for themselves."));
 
-c.push(H2("Rumors from the Road"));
+c.push(H2("Rumours from the Road"));
 
-c.push(P("What follows is exactly what it sounds like \u2014 things travelers, refugees, and secondhand sources say. Some of it is certainly true. Some of it is certainly not. Nobody your character has ever met can tell them reliably which is which, and that includes their own party."));
+c.push(P("What follows is exactly what it sounds like \u2014 things travellers, refugees, and secondhand sources say. Some of it is certainly true. Some of it is certainly not. Nobody your character has ever met can tell them reliably which is which, and that includes their own party."));
 
 c.push(BULLET([{ t: "\u201cThere\u2019s a stretch of the old west road where nothing works right anymore \u2014 not good, not bad, just nothing. A mile of ordinary dirt, in a country where dirt was never ordinary before.\u201d" }]));
 c.push(BULLET([{ t: "\u201cA river between two market towns forgot eleven years of what was said to it. The towns started writing things down instead. They\u2019re bad at it.\u201d" }]));

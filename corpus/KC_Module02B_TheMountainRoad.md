@@ -26,9 +26,9 @@ Play the march as a slow accumulation of small costs rather than one large dange
 
 # What Is Actually Happening (DM Only)
 
-Nothing on this road is Vale’s doing. Baron Osgar Vell holds a toll-keep at the mouth of the Ashgate pass under a technicality of allegiance to Oksitan that nobody in Oksitan’s own court would recognize as binding, and has been quietly taxing every column through his valley for longer than the coalition’s maps have been current. The Ashgate Ford is not cursed or watched; it is simply a fast, cold, early-season river that has killed careless travellers for as long as there has been a road beside it. The column’s losses this module — to weather, to the ford, to Vell’s harassment if it comes to a fight — are the ordinary cost of moving an army overland, and should be played as exactly that: unglamorous, and real.
+Nothing on this road is Vale’s doing. Baron Osgar Vell holds a toll-keep at the mouth of the Ashgate pass under a technicality of allegiance to Oksitan that nobody in Oksitan’s own court would recognise as binding, and has been quietly taxing every column through his valley for longer than the coalition’s maps have been current. The Ashgate Ford is not cursed or watched; it is simply a fast, cold, early-season river that has killed careless travellers for as long as there has been a road beside it. The column’s losses this module — to weather, to the ford, to Vell’s harassment if it comes to a fight — are the ordinary cost of moving an army overland, and should be played as exactly that: unglamorous, and real.
 
-**DM Only:** the Ashgate Ford in Scene 2 is deliberately written to echo the second king’s death, which the party will learn about in Module 5 as news from the road they did not take. Do not explain this echo at the table. If a player nearly loses a companion to the water here and later hears that a king died the same way on the other road, let them draw that line themselves — it lands harder unexplained.
+**DM Only:** the Ashgate Ford in Scene 2 is deliberately written to echo the second king’s death, which the party will learn about in Module Five as news from the road they did not take. Do not explain this echo at the table. If a player nearly loses a companion to the water here and later hears that a king died the same way on the other road, let them draw that line themselves — it lands harder unexplained.
 
 ## Scene 1: The Long Column
 
@@ -42,7 +42,7 @@ Play this scene short and let it do exactly one job: establish that the march ha
 
 The road drops into a valley and the column’s scouts report the obvious problem: the ford that should be a shin-deep crossing is running high and fast with early snowmelt, and the column’s wagons and the coalition’s heavier troops cannot simply walk it.
 
-> *The water is the color of old iron and moves like something with a purpose. A supply wagon’s ox baulks at the bank and has to be led in blindfolded; halfway across, the current takes the wagon sideways for one long, silent moment before the ropes hold and it lurches up onto the far bank, half its load gone downstream.*
+> *The water is the colour of old iron and moves like something with a purpose. A supply wagon’s ox baulks at the bank and has to be led in blindfolded; halfway across, the current takes the wagon sideways for one long, silent moment before the ropes hold and it lurches up onto the far bank, half its load gone downstream.*
 
 This is a hazard scene, not a fight. Let the party help however they choose — anchoring ropes, calming panicked animals, physically steadying wagons and people through the crossing — and use the Tiered Skill DCs below to resolve it. Nobody needs to die here for the scene to matter; a lost wagon, a soaked and furious quartermaster, or a near-miss that everyone in earshot will still be talking about that evening is enough. If a PC fails badly and the table wants real stakes, a companion NPC or a nameless soldier can be swept downstream and require a rescue (see DC table) rather than simply be lost — reserve an actual death here for a table that has clearly bought into the danger and wants it to be real.
 
@@ -67,13 +67,13 @@ Vell’s scouts are a mixed company of humans, dwarves and one very bored half-o
 
 Vell will negotiate, and a table that wants to avoid a fight in this narrow, badly-chosen ground should be able to. A successful Charisma (Persuasion) check against DC 16, or convincing proof of a coalition writ of passage the party can produce or talk their way into being believed to have, gets the column through for a token payment. A successful Wisdom (Insight) check against DC 13 reveals that Vell is bluffing about his numbers — he has enough scouts to make a fight costly, not enough to actually hold the pass against a coalition column, and he knows it.
 
-If the party wants to avoid Vell entirely rather than pay or fight him, a DC 16 Survival check (working from a scout’s report or the party’s own reconnaissance) finds a longer goat-track around the toll-keep that costs the column an extra half-day but avoids the confrontation altogether — a different flavor of nonviolent resolution than talking Vell down, and one some tables will prefer.
+If the party wants to avoid Vell entirely rather than pay or fight him, a DC 16 Survival check (working from a scout’s report or the party’s own reconnaissance) finds a longer goat-track around the toll-keep that costs the column an extra half-day but avoids the confrontation altogether — a different flavour of nonviolent resolution than talking Vell down, and one some tables will prefer.
 
 If it comes to violence — Vell refuses reasonable terms, the party attacks, or negotiations simply fail — his scouts fight from cover on the high ground rather than committing to open melee, and break off and flee once Vell himself is dropped, captured, or clearly beaten; they are paid skirmishers, not zealots, and have no reason to die for a toll-keep. This should read as a real skirmish in bad terrain, not a formality; see Scaling the Fight for why it is not meant to be this module’s hardest moment regardless.
 
 ### Scaling the Fight
 
-Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts — four total monsters, inside the 3–6 monster band, so no table’s party size crosses a multiplier boundary on its own.
+Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavoured; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts — four total monsters, inside the 3–6 monster band, so no table’s party size crosses a multiplier boundary on its own.
 
 | **PCs** | **Base XP** | **Mult.** | **Adj. XP** | **Medium** | **Reads as** |
 | --- | --- | --- | --- | --- | --- |
@@ -170,7 +170,7 @@ However the ford and the toll-keep were settled, the column presses on beyond As
 
 > *Garrick Hollow, the column’s hired guide, falls into step beside the party as the toll-keep drops out of sight behind them. “Every mile past here I know less than the mile before it,” he says, without much apparent concern. “Which is either a comfort or it isn’t, depending on how you’ve found my company so far.”*
 
-This is where the module ends, and where the DM should let the weight of the road actually register — a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module 3, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module 5, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news.
+This is where the module ends, and where the DM should let the weight of the road actually register — a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module Three, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module Five, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news.
 
 # Puzzles and Set Pieces
 
@@ -224,13 +224,13 @@ Eleven miles of switchback cut into the eastern face, wind coming across rather 
 
 A half-elf hired out of the last town before the passes, paid to know these mountains better than the coalition’s own maps do, which he does. Speech: unbothered, faintly dry, prone to stating bad news as though it were simply weather. Genuinely good at his job, and genuinely indifferent to whether anyone finds that reassuring.
 
-Open thread: Garrick knows this road and, plausibly, others — a DM can bring him back as a recurring guide for any later overland stretch of the campaign, or use him as the source of a rumor or shortcut when the party needs one and has no other way to justify finding it.
+Open thread: Garrick knows this road and, plausibly, others — a DM can bring him back as a recurring guide for any later overland stretch of the campaign, or use him as the source of a rumour or shortcut when the party needs one and has no other way to justify finding it.
 
 ## Baron Osgar Vell
 
 Comfortable in bad terrain the way a man is comfortable in a home he built himself. Speech: measured, faintly amused, treats the toll as a fact of nature rather than a crime. Not personally vicious — his scouts are paid, not fanatical, and he has no interest in a fight he does not expect to win.
 
-Open thread: if he survives — paid off, talked down, or simply outmaneuvered — Vell keeps his keep and his technicality of allegiance, and a DM can bring him back later as a minor, recurring complication on any road that passes near Ashgate, or as a source of local intelligence if the party ever needs a favor from someone who owes them one.
+Open thread: if he survives — paid off, talked down, or simply outmanoeuvred — Vell keeps his keep and his technicality of allegiance, and a DM can bring him back later as a minor, recurring complication on any road that passes near Ashgate, or as a source of local intelligence if the party ever needs a favour from someone who owes them one.
 
 # Optional Content
 
@@ -258,7 +258,7 @@ Two days off the road, four hundred barrows across nine miles of moor, raised by
 
 ## What the Column Talks About
 
-Before Ashgate, let the party spend some idle marching time among the coalition’s ordinary soldiers — Harrowmark levies, and the first Oksitan or Auberitz troops the party has walked near long enough to actually talk to. Play this for texture: homesickness, rumors about Elduvaine that are mostly wrong, and the particular, unglamorous humor of people who have been walking together for weeks. No mechanical stakes.
+Before Ashgate, let the party spend some idle marching time among the coalition’s ordinary soldiers — Harrowmark levies, and the first Oksitan or Auberitz troops the party has walked near long enough to actually talk to. Play this for texture: homesickness, rumours about Elduvaine that are mostly wrong, and the particular, unglamorous humour of people who have been walking together for weeks. No mechanical stakes.
 
 ## The Wounded Wagon
 
@@ -266,7 +266,7 @@ If the table wants more to do before the ford, a supply wagon has thrown a wheel
 
 # Diverging Paths (DM Only)
 
-- **What the ford cost.** A wagon, a delay, a near-miss, or an actual loss — track which, and how the party responded. This has no mechanical follow-up but is worth a callback when the drowned king’s fate reaches the party in Module 5.
+- **What the ford cost.** A wagon, a delay, a near-miss, or an actual loss — track which, and how the party responded. This has no mechanical follow-up but is worth a callback when the drowned king’s fate reaches the party in Module Five.
 - **How Vell’s toll was settled.** Paid, talked down, bypassed, or fought — track which. A bypassed or talked-down Vell keeps his keep and his technicality of allegiance, which a DM can raise again if the coalition’s relationship with Oksitan becomes a live question later in the campaign.
 
 # Loot

@@ -67,7 +67,7 @@ Since the Call it has been the most crowded place in Harrowmark. Ninety-one hull
 
 ## Stannock
 
-*Population 2,400 · Dwarf crag hold · The armouries*
+*Population 1,600 · Dwarf crag hold · The armouries*
 
 Cut back into the western crags and reached by a road that switches back on itself eleven times, Stannock makes mail, pike-heads, and the particular long-hafted wyvern spear that no other kingdom has any use for. It has been making them for six hundred years, the pattern has changed twice, and both changes are still discussed.
 
@@ -215,7 +215,7 @@ Four hundred barrows across nine miles of moor, raised by people nobody can now 
 | 2–3 | A goat-track. It is shorter. It is also not what it looks like, and the party will be committed before they know. |
 | 4 | Six kobolds (SRD, CR 1/8) on a scouting loop, who would much rather talk and have prepared a speech. |
 | 5 | An ogre (SRD, CR 2) who has claimed a refuge hut and considers it his, which under the local rules of the road it now sort of is. |
-| 6 | A stranded Auberitz waggon, its crew, and a mathematical certainty that it cannot be got over the pass. |
+| 6 | A stranded Auberitz wagon, its crew, and a mathematical certainty that it cannot be got over the pass. |
 | 7 | Two griffons (SRD, CR 2) nesting above the switchbacks, hunting the pack animals. |
 | 8 | Pilgrims of the Tenth Work walking to Elduvaine unarmed, having refused an escort, three days from dying of it. |
 | 9 | A rockfall across the road. Four hours to clear, or a day to go around, and somebody is watching to see which. |
@@ -249,7 +249,7 @@ A small coastal town of grey-gold stone and slate, eleven miles of orchard behin
 
 It is the first wonder the party gets and it should be run as one. The light-stone in the doorsteps still holds a little of the afternoon. The baker’s ovens have not gone out in two hundred years and the whole street smells of it at four in the morning. This is a place worth saving, and the module says so by showing rather than arguing.
 
-**Hook.** Module 3. Wyn Alder clerks the checkpoint and is the campaign’s first honest look at what an ordinary complicit person is actually like.
+**Hook.** Module Three. Wyn Alder clerks the checkpoint and is the campaign’s first honest look at what an ordinary complicit person is actually like.
 
 ## The Dead Mile
 
@@ -301,7 +301,7 @@ Caer Ysolde is built of light-stone almost entirely. On a clear night before the
 
 It is dark now. Not lightless — the occupation burns lamps like anybody else — but the stone is out, and it went out over about fourteen months, quarter by quarter, in a way the people who live there could watch happening.
 
-**Hook.** Module 11, and the whole campaign points here. Maelis Ysolde is held in her own apartments in the Ysolde Keep on the middle island.
+**Hook.** Module Eleven, and the whole campaign points here. Maelis Ysolde is held in her own apartments in the Ysolde Keep on the middle island.
 
 ## The Ysolde Archive
 
@@ -321,7 +321,7 @@ The reading rooms are still open. That is the detail that unsettles people most.
 
 A country seat of the house, walled, moated in the ornamental sense, and entirely unsuited to being a place of detention — which is exactly why the occupation chose it. Ninian Ysolde has been held here for three years in considerable comfort, with a library, a garden, a staff who are not permitted to leave, and a garrison that is embarrassed about the whole arrangement.
 
-**Hook.** Module 4. The garrison commander here has been correct, courteous and humane for three years and would very much like somebody to notice that before this ends badly for him.
+**Hook.** Module Four. The garrison commander here has been correct, courteous and humane for three years and would very much like somebody to notice that before this ends badly for him.
 
 ## Lisswater
 
@@ -371,7 +371,7 @@ The first Kept Season planting and the greatest of them, forty acres of birch an
 
 It is nine weeks into a winter it was never sown in, and has been for most of a year. The trees are dying — not dead, dying, slowly and in the wrong order — and an ecology has moved in behind the change: winter wolves along the edges, and a troll in the orchard-keeper’s cottage, and the dryad who has been the spirit of this wood for three centuries and is now the spirit of a winter one and cannot leave.
 
-**Hook.** Module 5’s Held Winter. The single most legible image of the draining in the campaign, and the one scene where a party can simply sit down and talk to the grief.
+**Hook.** Module Five’s Held Winter. The single most legible image of the draining in the campaign, and the one scene where a party can simply sit down and talk to the grief.
 
 ## Nantcorrow
 
@@ -439,7 +439,7 @@ Guild-law country: dwarves and tieflings, humans throughout, and an entire realm
 
 Its great counting-city is Torvhal, where the Writ House sits — a court that has never in two centuries ruled on whether an agreement was fair, only on what it said. Norvatch does not want Elduvaine. Norvatch wants to remain the market for what leaves it, guaranteed in writing by whoever holds the place when the war ends, and it has held exactly that arrangement with the occupation for three years.
 
-**Hook.** House Kell’s ledgers are the campaign’s clock. Doria Kell will sell them. Her price is in Module 10 and it is worse than money.
+**Hook.** House Kell’s ledgers are the campaign’s clock. Doria Kell will sell them. Her price is in Module Ten and it is worse than money.
 
 ~
 

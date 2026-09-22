@@ -142,7 +142,7 @@ c.push(table(
     ["1. First Light of Elduvaine", "30\u201340 min", "A working habit. Play this for wonder, at length."],
     ["2. The Dead Mile", "20\u201330 min", "A failing habit. Short, quiet, and the module\u2019s gut-punch."],
     ["3. The Caerwyn Checkpoint", "45\u201375 min", "The occupation, in bureaucratic miniature. Rarely needs to be a fight."],
-    ["4. The Riverbank", "60\u201390 min", "The Four Voices. See below \u2014 this is the module\u2019s centerpiece."],
+    ["4. The Riverbank", "60\u201390 min", "The Four Voices. See below \u2014 this is the module\u2019s centrepiece."],
     ["Optional Content", "30\u201345 min", "Run if the table has time; cut cleanly if not."]
   ]
 ));
@@ -159,7 +159,7 @@ c.push(H2("Scene 1: First Light of Elduvaine"));
 
 c.push(P("The final approach to Caerwyn goes faster than the coalition\u2019s own maps predicted, and nobody aboard can quite say why \u2014 a current that ran the right way, a headland that seemed to arrive sooner than the charts allowed. It is the Willing Road\u2019s cousin at work, though nobody in the party has cause to name it yet."));
 
-c.push(BOX("Caerwyn rises out of the dusk already lit \u2014 not by torches, not by hearth-fires banked for evening, but from within: pale stone walls holding a soft, steady glow, as though the town had swallowed the last of the daylight and was giving it back slowly, all night, for anyone who needed it. A child on the harbor wall waves at the ship without any particular urgency, the way you wave at something ordinary."));
+c.push(BOX("Caerwyn rises out of the dusk already lit \u2014 not by torches, not by hearth-fires banked for evening, but from within: pale stone walls holding a soft, steady glow, as though the town had swallowed the last of the daylight and was giving it back slowly, all night, for anyone who needed it. A child on the harbour wall waves at the ship without any particular urgency, the way you wave at something ordinary."));
 
 c.push(P("Give this scene real time. Let the party walk Caerwyn\u2019s streets before anything else happens: stone that is warm to the touch after dark, a well that a local swears will repeat back a lullaby sung to it forty years ago if you ask it kindly, a baker who insists \u2014 matter-of-factly, not proudly \u2014 that the ovens here have never needed lighting twice. None of this is remarkable to the people living in it. That is exactly what should make it remarkable to the party."));
 
@@ -187,7 +187,7 @@ c.push(H3("Running the Scene"));
 
 c.push(P("A checkpoint this small cannot stop a coalition landing party and everyone present knows it. Wyn will not fight, will not raise an alarm she cannot win, and will answer honest questions honestly if approached without threats \u2014 she has no loyalty to Vale, only a family in Caerwyn she cannot afford to have marked as uncooperative. A Charisma (Persuasion) or Wisdom (Insight) check against DC 13 gets her talking plainly about levy quotas, patrol patterns, and how thin the occupation\u2019s actual presence is this far from the capital; nothing requires a check if the party simply treats her like a person rather than an obstacle."));
 
-c.push(P("If the party threatens or attacks the checkpoint, the soldiers (use the Occupation Guard stat block) fight briefly and then flee or surrender \u2014 they are a levy garrison, not a real defense, and know it. Wyn does not fight under any circumstances and should not be placed in danger by this module regardless of how the scene resolves; if combat breaks out, she ducks for cover and stays there. A violent resolution here has a real cost the table should feel: word of an attacked checkpoint reaches Caer Ysolde days sooner than it otherwise would have, which a DM can pay off later as tightened security somewhere that mattered."));
+c.push(P("If the party threatens or attacks the checkpoint, the soldiers (use the Occupation Guard stat block) fight briefly and then flee or surrender \u2014 they are a levy garrison, not a real defence, and know it. Wyn does not fight under any circumstances and should not be placed in danger by this module regardless of how the scene resolves; if combat breaks out, she ducks for cover and stays there. A violent resolution here has a real cost the table should feel: word of an attacked checkpoint reaches Caer Ysolde days sooner than it otherwise would have, which a DM can pay off later as tightened security somewhere that mattered."));
 
 c.push(H3("Stat Block (If Needed)"));
 
@@ -239,7 +239,7 @@ c.push(BOX("The water is unremarkable to look at \u2014 brown-green, unhurried, 
 
 c.push(H3("Running the Scene"));
 
-c.push(P("Let the party sit at the water\u2019s edge and listen. Read each of the four voices below as its own boxed passage, in order, with a pause between each \u2014 do not summarize or paraphrase them together. None of the four is lying. None of them is complete. The party\u2019s job, and the table\u2019s pleasure, is assembling what actually happened from four honest, incomplete, differently motivated accounts, the same technique named directly in the sourcebook under Running Elduvaine."));
+c.push(P("Let the party sit at the water\u2019s edge and listen. Read each of the four voices below as its own boxed passage, in order, with a pause between each \u2014 do not summarise or paraphrase them together. None of the four is lying. None of them is complete. The party\u2019s job, and the table\u2019s pleasure, is assembling what actually happened from four honest, incomplete, differently motivated accounts, the same technique named directly in the sourcebook under Running Elduvaine."));
 
 c.push(H3("The Court\u2019s Account"));
 c.push(BOX("\u201C...and so the Keeper, whom the realm trusted with its oldest law, unmade that trust in a single night. Let it be recorded that no siege took this kingdom, no army broke its walls \u2014 a man we ourselves elevated turned the key we ourselves gave him. History will not forgive us the choosing, whatever it makes of the choosing itself...\u201D"));

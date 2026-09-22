@@ -130,7 +130,7 @@ c.push(P("Run this module if the party chose the sea road at the end of Module O
 
 c.push(H2("The Shape of a Sea-Lane War"));
 
-c.push(P("Play Calanthe as ordinary and opportunistic, not sinister. Warden Thane is not a monster and has no connection to Vale, to Elduvaine, or to anything the party will learn about later \u2014 he is a petty ruler who found a profitable position at a strait every southbound fleet has to pass, and has been quietly working it for longer than anyone in the coalition realized. This module\u2019s tension is not \u201Cwhat is this evil,\u201D the way Elduvaine\u2019s will be. It is a smaller and in some ways harder question: what does a war for someone else\u2019s deliverance do to the small, uninvolved places it happens to pass through \u2014 and the party is about to decide the answer for one of them, in miniature, several modules before they have to decide it for a whole kingdom."));
+c.push(P("Play Calanthe as ordinary and opportunistic, not sinister. Warden Thane is not a monster and has no connection to Vale, to Elduvaine, or to anything the party will learn about later \u2014 he is a petty ruler who found a profitable position at a strait every southbound fleet has to pass, and has been quietly working it for longer than anyone in the coalition realised. This module\u2019s tension is not \u201Cwhat is this evil,\u201D the way Elduvaine\u2019s will be. It is a smaller and in some ways harder question: what does a war for someone else\u2019s deliverance do to the small, uninvolved places it happens to pass through \u2014 and the party is about to decide the answer for one of them, in miniature, several modules before they have to decide it for a whole kingdom."));
 
 c.push(table(
   ["Scene", "Target time", "Notes"],
@@ -158,7 +158,7 @@ c.push(P("Three days south of Harrowmark, with the coast long out of sight, the 
 
 c.push(BOX("The first anyone knows of it is the light going wrong \u2014 a green-grey dusk arriving hours early \u2014 and then the wind, which does not build so much as simply begin, all at once, as if a door somewhere had been thrown open. Somewhere off the bow, another ship\u2019s lantern swings wildly, then is gone."));
 
-c.push(P("Run this fast and mostly in narration. Let each PC make one relevant check if they want to help the crew (Strength (Athletics) to work the lines, Wisdom (Survival) to read the worst of it coming, an appropriate spell to calm water or clear fog) \u2014 success or failure barely matters mechanically and mostly colors how battered the party\u2019s own ship is when the storm breaks. What matters is the ending: the party\u2019s vessel, and at least one other coalition ship, are driven onto an unfamiliar coast as the wind finally drops. By morning, that coast has a name \u2014 Calanthe \u2014 offered by whichever sailor recognizes the headland first, along with a look that suggests the name means something unpleasant."));
+c.push(P("Run this fast and mostly in narration. Let each PC make one relevant check if they want to help the crew (Strength (Athletics) to work the lines, Wisdom (Survival) to read the worst of it coming, an appropriate spell to calm water or clear fog) \u2014 success or failure barely matters mechanically and mostly colours how battered the party\u2019s own ship is when the storm breaks. What matters is the ending: the party\u2019s vessel, and at least one other coalition ship, are driven onto an unfamiliar coast as the wind finally drops. By morning, that coast has a name \u2014 Calanthe \u2014 offered by whichever sailor recognises the headland first, along with a look that suggests the name means something unpleasant."));
 
 // ---------------------------------------------------------------- Scene 2
 c.push(H2("Scene 2: Landfall"));
@@ -174,7 +174,7 @@ c.push(P("Let the party spend some time here gathering what Calanthe\u2019s few 
 // ---------------------------------------------------------------- Scene 3
 c.push(H2("Scene 3: Thane\u2019s Hold"));
 
-c.push(P("The hold is less a fortress than a fortified manor \u2014 old stone, patched with newer and cheaper stone, flying a banner nobody recognizes over a gate that has clearly been rebuilt more than once. Thane receives visitors readily; ransom is, after all, his business, and armed strangers asking after his newest guests are simply customers who have not yet been told the price."));
+c.push(P("The hold is less a fortress than a fortified manor \u2014 old stone, patched with newer and cheaper stone, flying a banner nobody recognises over a gate that has clearly been rebuilt more than once. Thane receives visitors readily; ransom is, after all, his business, and armed strangers asking after his newest guests are simply customers who have not yet been told the price."));
 
 c.push(BOX("\u201CAh,\u201D says the man in the doorway, unhurried, a ledger genuinely under one arm. \u201CMore of the fleet that thought my strait was free water. I\u2019m Ivor Thane, and I\u2019m told this happens to be my island. Your people are safe, fed, and entirely available \u2014 for a reasonable consideration. I find negotiations go better before anyone has drawn a sword, so let\u2019s try that first, shall we?\u201D"));
 
@@ -188,7 +188,7 @@ c.push(P("If the party refuses to pay, threatens him convincingly, is caught try
 
 c.push(H3("Scaling the Fight"));
 
-c.push(P("Ivor Thane is the SRD Veteran (CR 3, 700 XP) renamed and reflavored, unmodified otherwise; his guards are SRD Bandits (CR 1/8, 25 XP each), both taken from the SRD unaltered. Run with Thane plus four Bandits \u2014 five total monsters, comfortably inside the 3\u20136 monster band, so no table\u2019s party size pushes the count across a multiplier boundary on its own."));
+c.push(P("Ivor Thane is the SRD Veteran (CR 3, 700 XP) renamed and reflavoured, unmodified otherwise; his guards are SRD Bandits (CR 1/8, 25 XP each), both taken from the SRD unaltered. Run with Thane plus four Bandits \u2014 five total monsters, comfortably inside the 3\u20136 monster band, so no table\u2019s party size pushes the count across a multiplier boundary on its own."));
 
 c.push(table(
   ["PCs", "Mult.", "Adj. XP", "Medium", "Reads as"],
@@ -214,7 +214,7 @@ c.push(table(
   [44, 26, 10, 20],
   [
     ["Help the crew through the worst of the storm", "Athletics / Survival / relevant spell", "13", "Moderate"],
-    ["Recognize Calanthe\u2019s coastline before making landfall", "Survival / Nature", "13", "Moderate"],
+    ["Recognise Calanthe\u2019s coastline before making landfall", "Survival / Nature", "13", "Moderate"],
     ["Get Calanthe\u2019s frightened locals talking about Thane", "Persuasion / Insight", "10", "Easy"],
     ["Talk Thane\u2019s price down without a fight", "Persuasion / Intimidation", "16", "Hard"],
     ["Cross the yard to reach the captives once a fight starts", "Athletics / Acrobatics", "13", "Moderate"],
@@ -271,7 +271,7 @@ c.push(P("Let the party decide Calanthe\u2019s fate. A coalition garrison secure
 
 c.push(PS([DM("DM Only: "), { t: "record this choice in the DM Reference Guide as its own Branch Ledger entry, separate from the road choice. It is a small-scale rehearsal of the campaign\u2019s largest question \u2014 what a liberator owes the place it liberates \u2014 and it is worth revisiting, briefly, whenever the party\u2019s coalition allies discuss what Elduvaine should become after the war. Do not force the parallel; if the table draws it themselves, that is the module working as intended." }]));
 
-c.push(P("The fleet resupplies, repairs what the storm damaged, and continues south within the day. Hand off directly to Module 3, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module 5, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news."));
+c.push(P("The fleet resupplies, repairs what the storm damaged, and continues south within the day. Hand off directly to Module Three, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module Five, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news."));
 
 // ------------------------------------------------------------ NPC Profiles
 c.push(H1("Puzzles and Set Pieces"));
@@ -347,7 +347,7 @@ c.push(BUL("The recovered stores.", "Enough of the fleet\u2019s lost supplies, p
 c.push(BUL("Thane\u2019s ledger.", "A genuinely useful item: years of records of ships, cargoes, and (if he is captured or cooperative) contacts along the southern sea-lanes. A DM can use it to justify a Diverging Paths hook or a piece of information the party needs later without it feeling handed to them."));
 c.push(BUL("A bag of holding.", "Bottom of Thane\u2019s stores, taken off a wreck years ago, and by a distance the most valuable thing on Calanthe \u2014 he has been using it to store rope. Sera Vosk will notice what it is roughly one second before anybody else does and will not pretend otherwise."));
 
-c.push(BUL("A signet ring.", "Thane\u2019s own, if he is defeated or surrenders it as part of a bargain. Non-magical, but recognizable to anyone in the region who has dealt with Calanthe\u2019s toll \u2014 a DM may let it open doors, or close them, wherever that is true.", { keepNext: true }));
+c.push(BUL("A signet ring.", "Thane\u2019s own, if he is defeated or surrenders it as part of a bargain. Non-magical, but recognisable to anyone in the region who has dealt with Calanthe\u2019s toll \u2014 a DM may let it open doors, or close them, wherever that is true.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain
 c.push(H1("The Refrain"));

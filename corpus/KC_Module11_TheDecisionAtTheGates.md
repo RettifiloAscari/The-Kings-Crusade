@@ -33,7 +33,7 @@ Likewise, whatever the party glimpses of the vaults he has been reading toward �
 
 ## Scene 1: The Gates of Caer Ysolde
 
-Caer Ysolde’s garrison, already thin after Vindana and the field battle, does not mount a real defense — this is not another Module Six or Module Seven, and should not be run at that length or intensity. A short, sharp engagement at the outer gate — four to six Legionaries of the Sixth (Bestiary), holding it exactly as long as a contract requires and not one minute longer — is enough; let the capital fall quickly, because the module’s actual content is what waits underneath it, not another wall to break.
+Caer Ysolde’s garrison, already thin after Vindana and the field battle, does not mount a real defence — this is not another Module Six or Module Seven, and should not be run at that length or intensity. A short, sharp engagement at the outer gate — four to six Legionaries of the Sixth (Bestiary), holding it exactly as long as a contract requires and not one minute longer — is enough; let the capital fall quickly, because the module’s actual content is what waits underneath it, not another wall to break.
 
 > *The city opens ahead of the coalition almost too easily, streets emptying rather than resisting, until it becomes clear this is not fear of the coalition — it is the particular quiet of a place whose attention has been somewhere else entirely for three years. Nobody in Caer Ysolde seems especially surprised that today is the day it ends.*
 
@@ -41,11 +41,11 @@ Let the party move quickly through the city toward the Archive. This scene’s j
 
 ## Scene 2: Into the Archive
 
-The Ysolde Archive, even three years drained, is the largest collection of magical knowledge in the world, and the party descends through galleries that were built for scholarship rather than defense — which does not make them safe, only strange.
+The Ysolde Archive, even three years drained, is the largest collection of magical knowledge in the world, and the party descends through galleries that were built for scholarship rather than defence — which does not make them safe, only strange.
 
 > *The stacks go down further than the building above them should allow, and further than anyone escorting the party is willing to explain. Somewhere below, faintly, is a sound like a held breath, and a light that does not come from any torch or window doing something none of the party’s own light sources do.*
 
-Run this as atmosphere and tension rather than a dungeon crawl — a handful of Tiered Skill DC checks (below) to navigate safely, and perhaps one non-lethal hazard (a ward triggered by curiosity rather than malice, a section of stacks that briefly does not behave like ordinary space) rather than a string of fights. The Archive’s remaining wards are not trying to kill the party; they are simply still doing their job, and their job was never intruder defense in the ordinary sense.
+Run this as atmosphere and tension rather than a dungeon crawl — a handful of Tiered Skill DC checks (below) to navigate safely, and perhaps one non-lethal hazard (a ward triggered by curiosity rather than malice, a section of stacks that briefly does not behave like ordinary space) rather than a string of fights. The Archive’s remaining wards are not trying to kill the party; they are simply still doing their job, and their job was never intruder defence in the ordinary sense.
 
 ## Tiered Skill DCs
 
@@ -54,8 +54,8 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 | **Task** | **Skill** | **DC** | **Tier** |
 | --- | --- | --- | --- |
 | Navigate the Archive’s stacks without becoming lost | Investigation / Survival | 13 | Moderate |
-| Recognize a ward as passive rather than hostile | Arcana / Investigation | 13 | Moderate |
-| Avoid triggering a curiosity-ward while examining the stacks | Investigation / Wisdom (DM’s judgment) | 13 | Moderate |
+| Recognise a ward as passive rather than hostile | Arcana / Investigation | 13 | Moderate |
+| Avoid triggering a curiosity-ward while examining the stacks | Investigation / Wisdom (DM’s judgement) | 13 | Moderate |
 | Read Vale’s intentions correctly before he speaks | Insight | 16 | Hard |
 
 ## Scene 3: Maedoc Vale
@@ -98,7 +98,7 @@ Let him talk before he fights. He will answer honest questions honestly and with
 
 ***Spellcasting.*** Vale is an 18th-level spellcaster. His spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). He can cast disguise self and invisibility at will, and has the following wizard spells prepared — Cantrips (at will): fire bolt, light, mage hand, prestidigitation, shocking grasp. 1st level (4 slots): detect magic, identify, mage armor*, magic missile. 2nd level (3 slots): detect thoughts, mirror image, misty step. 3rd level (3 slots): counterspell, fly, lightning bolt. 4th level (3 slots): banishment, fire shield, stoneskin*. 5th level (3 slots): cone of cold, scrying, wall of force. 6th level (1 slot): globe of invulnerability. 7th level (1 slot): teleport. 8th level (1 slot): mind blank*. 9th level (1 slot): time stop. Spells marked * he casts on himself before combat, and the stat block above assumes mage armor is already up.
 
-***A Warder’s Instinct.*** Vale treats every spell as a rule to be applied rather than a force to be unleashed — flavor his spellcasting as precise and procedural, closer to a lock turning than an explosion, even when the effect is devastating.
+***A Warder’s Instinct.*** Vale treats every spell as a rule to be applied rather than a force to be unleashed — flavour his spellcasting as precise and procedural, closer to a lock turning than an explosion, even when the effect is devastating.
 
 **ACTIONS**
 
@@ -114,13 +114,13 @@ However Vale’s confrontation ended, Elduvaine’s occupation is, in every prac
 
 > *Xavier finds the party one last time, in a city that is theirs now in whatever sense anyone can agree on. He does not tell them what to decide. He has clearly been thinking about the question as long as they have, and has not arrived anywhere he is willing to call an answer. “I made a promise to get allies to march,” he says. “I never actually decided, myself, what I thought we should do once we got here. I don’t know that it’s mine to decide. I’m not sure it’s only yours, either. But I think it has to be somebody’s, today.”*
 
-Let the table talk this through as themselves, not only as their characters — this is the campaign’s actual final decision, and it is deliberately not adjudicated by any NPC, any mechanic, or this module. Weigh whatever the campaign has given them to weigh: the Promise and what the coalition is owed; the royal house’s own divided opinions (the Ward, the Magistrate, the Regent, if met); what Elduvaine’s ordinary people — Wyn Alder, Caerwyn’s baker, the resistance the Regent led — actually seem to want; and what holding a kingdom whose magic responds to intention would even mean, held by people who marched here for a share of it.
+Let the table talk this through as themselves, not only as their characters — this is the campaign’s actual final decision, and it is deliberately not adjudicated by any NPC, any mechanic, or this module. Weigh whatever the campaign has given them to weigh: the Promise and what the coalition is owed; the royal house’s own divided opinions (Ninian, Ottoline and Aveline if the party freed or met them, and Maelis herself if anybody went up to the Keep); what Elduvaine’s ordinary people — Wyn Alder, Caerwyn’s baker, the resistance the Regent led — actually seem to want; and what holding a kingdom whose magic responds to intention would even mean, held by people who marched here for a share of it.
 
-When the table decides, run the matching ending below. Do not run both. Do not hint, before this moment, which one the campaign favors — it does not favor either.
+When the table decides, run the matching ending below. Do not run both. Do not hint, before this moment, which one the campaign favours — it does not favour either.
 
 # Ending One: The Crown Held
 
-The coalition claims Elduvaine. Xavier’s champions stand at the center of it — this is the ending in the tradition of a war won and a promise kept, and it should be played with real, earned triumph.
+The coalition claims Elduvaine. Xavier’s champions stand at the centre of it — this is the ending in the tradition of a war won and a promise kept, and it should be played with real, earned triumph.
 
 > *The banners go up over Caer Ysolde by evening — Harrowmark’s, Oksitan’s, Auberitz’s, and, restored to its proper place above them, Elduvaine’s own. The Standing Light does not come back all at once; that will take years, the royal house’s own scholars say, now that Vale’s draining has stopped. But somewhere in the city tonight, for the first time in three years, one single street lights itself without anyone striking a flame, and the crowd that gathers to watch it is not entirely sure whether they are permitted to cheer. They do anyway.*
 
@@ -193,6 +193,28 @@ See the sourcebook for his full established character. In this module specifical
 
 Open thread: whether he dies, escapes, or is captured is this module’s to decide at the table (see Scene 3’s stat block note) — a DM keeping the campaign’s deliberate ambiguity about his humanity intact may prefer to leave his ultimate fate just as unresolved as that question, whatever the mechanical outcome of the fight.
 
+## Maelis Ysolde, the Veiled Sovereign
+
+Elf, sovereign of Elduvaine, and held for three years in her own apartments in the Ysolde Keep on the middle island, under guard, considerately. Ill for eleven years from an ordinary cause; declining for three at exactly the rate the land is, because a sovereign of Elduvaine is bound into the habits at accession and what the habits have, the sovereign has. She wears a veil because the wasting reached her face four years ago and she declines to have it discussed. She has not stood unaided since the second winter of the occupation. She is, without any competition at all, the most intelligent person in this campaign, and three years of confinement have given her nothing to do but think about the man holding her.
+
+Speech: exact, unhurried, entirely without self-pity, and never once softened for the listener’s comfort. She will not be evacuated, for the same reason her cousin will not — the habits are bound to her and nobody knows what leaving would do to them. She has no stat block, and that is deliberate: nothing in this campaign should ever ask the party to fight beside her or against her.
+
+Open thread: her position on what Elduvaine should be afterward is the plainest of the five and the hardest to hear — the habits are restored first, and everything else is arranged around that. She is aware that it may not be survivable for her and considers the point irrelevant. She is one voice among five, and the campaign does not adjudicate.
+
+# Optional Content
+
+This module is built to take the whole session. The scene below sits outside the core time and should be run only if the table has it — but if the table has it, it is the best forty minutes in the book.
+
+## The Veiled Sovereign
+
+Somewhere between Vale and the decision at the gates, somebody has to go up to the Keep. The guard on Maelis’s door is a legionary on a contract that has just been demonstrated to have no employer, and he stands aside. She receives the party sitting, veiled, at a window over the dark city, with Vale’s skilled physician still in attendance because nobody has told him to go.
+
+> *“He has not been cruel to me. He has been considerate, and prompt, and he sends a physician who is genuinely skilled, and none of it costs him anything, and all of it is true. I wanted you to understand that before you met him. I see that you have met him. Sit down.”*
+
+She is a status report on the entire war, and anybody who looks at her can read it. She wears the Sovereign’s Veil (see the DM Reference Guide), which means she knows, precisely, how much of the Living Realm remains. If a party asks her the number, she tells them, without softening it — and it is somewhat worse than Norvatch’s ledgers said, because the ledgers stopped at the last shipment and she did not.
+
+**DM Only:** use her for nothing she would find beneath her, and never for exposition. She will not tell the party what to decide, will not say what is behind the deepest vaults, and will not settle whether Vale is still human; she will tell them exactly what the rule of the Archive says, because she appointed the Keeper under it, and she will tell them what she wants for her country, once, plainly. Then she will ask them what they want, and wait, and the silence is the scene. A table that brings her into the argument at the gates has one more real voice in it. A table that never comes up to the Keep has lost a great deal and will never know it, which is the right cost for an optional scene.
+
 # Diverging Paths (DM Only)
 
 - **The campaign’s final choice.** Held or set down — this is the Branch Ledger’s last and largest entry, and everything else tracked across the campaign (the road choice, Calanthe or Ashgate, every rescue, every NPC’s fate) is worth revisiting here as context for how the table actually arrived at this decision.
@@ -200,7 +222,7 @@ Open thread: whether he dies, escapes, or is captured is this module’s to deci
 
 # Loot
 
-**Whatever the Archive itself now represents.** Not itemized loot — the campaign’s actual final reward is the ending the table chose, and this module does not attach a treasure list to that choice on purpose.
+**Whatever the Archive itself now represents.** Not itemised loot — the campaign’s actual final reward is the ending the table chose, and this module does not attach a treasure list to that choice on purpose.
 
 # The Refrain
 

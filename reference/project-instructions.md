@@ -11,9 +11,9 @@ Third Crusade spine.
 > session module slots, the DM Reference Guide, and the Player Guide — nineteen documents.
 > The pipeline is proven and the setting's foundation is canon: the kingdom, the wizard,
 > the king, the occupation, the coalition's named members, and the shape of the war
-> across a signed-off eleven-module arc. Detail below that — what Oksitan and Auberitz
-> each want, the map, the royal names, the deepest vaults' contents — is **still
-> undecided and must not be invented without sign-off.** See *Canon and Sources of
+> across a signed-off eleven-module arc, the House of Ysolde by name, and what Oksitan and
+> Norvatch want. Detail below that — what Auberitz wants, the map, the deepest vaults'
+> contents — is **still undecided and must not be invented without sign-off.** See *Canon and Sources of
 > Truth*.
 
 ---
@@ -131,7 +131,8 @@ authority. What it supplies:
 - **The call as an institution, not a person.** The Latin section is the only passage not
   about Richard: it is the summons itself, naming the disaster and promising full remission
   and eternal life to whoever answers. What Xavier's call actually *promises* those who
-  answer it is an open question and a motive engine for every NPC in the coalition.
+  answer it is now settled as the Promise of the Call (below), and it is the motive engine
+  for every NPC in the coalition.
 
 **A Middle High German lay on Frederick Barbarossa** (title and author unstated; text
 supplied by the DM). A short lay praising Friderîch Rôtbart from his taking the cross
@@ -144,7 +145,7 @@ treated as gist, not scholarship. What it supplies:
   wunder grôȥ daȥ in dës nie verdrôȥ, unz ein mæhtiger fluȥ volendete sîne vârt*, roughly
   "it was a great wonder that this never wearied him, until a mighty river completed his
   journey" — describes exactly the beat already locked in this campaign: the second king,
-  lost early, in water, his own crusade unfinished (see *Not yet decided*, below). This
+  lost early, in water, his own crusade unfinished (now signed off as Raimon V of Oksitan, below). This
   campaign did not invent that beat to sound plausible; it is the historical record of the
   actual Barbarossa, set to verse, arriving in this repository independently of the
   decision that used his death as a model.
@@ -194,7 +195,7 @@ written in `scripts/KC_Sourcebook.js`):
 - **He is not yet the Wyvernheart.** At the campaign's start he is Xavier III and nothing
   more. **He earns the name during the crusade**, from the back of a wyvern, in a battle
   that is going badly — exactly as Richard earned Lionheart on crusade rather than before
-  it. Which battle, and in which module, is not yet decided. Until it is written, no
+  it. The battle is the siege of Vindana, in Module Seven (below), and no
   document may call him the Wyvernheart in narration set before that moment, and the
   Player Guide must not hint that the name is coming. **As a young man he made war on his own father**, Xavier II, alongside his
   brothers; he took three of Harrowmark's own hill forts and lost the war, and had to
@@ -284,9 +285,9 @@ written in `scripts/KC_Sourcebook.js`):
   They are united on the war and divided on what should follow it.
 - **The coalition** — Harrowmark marches with the **Kingdom of Oksitan** and the **Grand
   Duchy of Auberitz**. The **Kingdom of Norvatch** has not taken the call: it deals with
-  either side, answers to nobody, and will keep a bargain it has made. **What Oksitan and
-  Auberitz actually want, beyond the Promise, is still not decided** — run those two by
-  role until it is.
+  either side, answers to nobody, and will keep a bargain it has made. **What Auberitz
+  actually wants, beyond the Promise, is still not decided** — run it by role until it
+  is. Oksitan's want is settled, above.
 - **What Norvatch wants — signed off.** Norvatch does not want Elduvaine; it wants to
   remain **the market for what leaves it**, guaranteed in writing by whoever holds the
   place when the war ends. It has held exactly that arrangement with the occupation for
@@ -311,7 +312,8 @@ written in `scripts/KC_Sourcebook.js`):
   orcs fight on both sides of this war without a single NPC remarking on it. Named
   peoples: Brenna Vane (dwarf), Sera Vosk (rock gnome), Garrick Hollow (half-elf), Wyn
   Alder (gnome), Doria Kell (tiefling), Warden Thane (half-orc), Drell (hobgoblin), Voss
-  (orc), the Ward (half-elf), the Magistrate (gnome), the Regent (human). **Vale stays
+  (orc), Ninian Ysolde the Ward (half-elf), Ottoline Vahn the Magistrate (gnome), Aveline
+  Ysolde the Regent (human). **Vale stays
   human** — the open question about him is phrased "whether he is still human" and
   changing his race would break it.
 - **The occupation is a hired legion, not a horde.** Hobgoblin professionals at the core,
@@ -622,7 +624,7 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
 
 ## Current State
 
-**Nineteen documents, 106 pages, all verified clean and byte-reproducible.**
+**Nineteen documents, 112 pages, all verified clean and byte-reproducible — production ready.**
 
 - `scripts/KC_Sourcebook.js` — the call, the peoples, **faith in the Nine Works** (the
   Concord, Elduvaine's Observances, the Order of the Tenth Work), Elduvaine before the fall,
@@ -652,7 +654,7 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
   close** — while deliberately leaving what is behind the doors unanswered.
 - `scripts/KC_DM_Reference_Guide.js` — single-column. Campaign at a Glance, Peoples at a
   Glance, the Stat Block Index, **faith and factions at a glance**, **a puzzle index naming
-  what solves each one**, nineteen recurring NPCs, and a Branch Ledger now carrying **43**
+  what solves each one**, seventeen recurring NPCs, and a Branch Ledger now carrying **45**
   tracked divergences.
 - `scripts/KC_Session_Zero_Primer.js` — the table-setting primer, run before Module One and
   read by nobody but the DM. Five outputs (whether the party already knows itself, why the king
@@ -675,7 +677,7 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
   is repository furniture and commits to nothing; **the artwork question is still a tracked
   open item** (see *Not yet decided*), because a map fixes geography in ways the prose has
   deliberately not.
-- **The pipeline is unchanged and still proven.** Three new generators registered in
+- **The pipeline is unchanged and still proven.** Nineteen generators registered in
   `tools/build.sh`; `SINGLE_COL_MATCH` still names only the DM Reference Guide.
 - **A readability pass has been through the whole set**, changing how it reads and not what
   it says. Section headings now carry enough of their section across a column break that a
@@ -698,6 +700,19 @@ measure, and which documents are player-facing — live in `tools/pipeline.conf`
   coalition camp, having appeared in no module at all. And the gazetteer hooks that name their
   own module were planted: the **Fenmarrow letter** in Module One, **Thane's Elduvish manifest**
   in 2A, **Kir Halloway's Norvatch factor** and **Barrowfell** in 2B.
+- **A full production audit has been through the whole set** and is recorded in
+  `drafts/PRODUCTION-AUDIT.RESOLVED.md`. The main outcomes:
+  - The house style is **British spelling**, with 5e rules terms such as *Armor Class* kept
+    as the rulebook prints them.
+  - Every module now carries the **full ten-part skeleton**, including scaling for every
+    fight, checked against 2014 DMG thresholds.
+  - **Maelis Ysolde** has a profile and an optional scene in Module Eleven.
+  - All six **resident-magic creatures** in the Bestiary are placed in the modules; five
+    had appeared nowhere.
+  - The DM Reference Guide's **Stat Block Index** is rebuilt, with a map of every Bestiary
+    block to the modules that use it.
+  - The numeric contradictions are resolved: Greywatch's distance, Stannock's population,
+    Norvatch's tonnage, and where Raimon drowned.
 
 **What the expansion deliberately did not do.** Auberitz still has no agenda, the deepest
 vaults still have no contents, Vale's humanity is still open, and whether Harrowmark was ever

@@ -200,7 +200,7 @@ The creatures in the first section are not monsters that happen to know magic. T
 
 ***Give Back.*** The Echo repeats up to a minute of speech spoken at its water at any point in the last thirty years, chosen by the DM. This is the reason the creature is in this book.
 
-**DM Only:** the Echo is the Four Voices technique with a stat block attached, for tables that want the delivery mechanism to be a thing in the room rather than a riverbank. Use it when the party needs to hear something that happened somewhere they were not, and give them the court’s version, the commons' version, the proclamation and the private grief, in four different voices, none of them lying and none of them complete. Do not let anybody fight it. If they attack it, it leaves.
+**DM Only:** the Echo is the Four Voices technique with a stat block attached, for tables that want the delivery mechanism to be a thing in the room rather than a riverbank. Use it when the party needs to hear something that happened somewhere they were not, and give them the court’s version, the commons’ version, the proclamation and the private grief, in four different voices, none of them lying and none of them complete. Do not let anybody fight it. If they attack it, it leaves.
 
 **Draining Engine**
 
@@ -568,7 +568,7 @@ SRD creatures used by name in the modules and the gazetteer, without a reprinted
 | The sea road | Merrow (CR 2), giant octopus (CR 1), sahuagin (CR 1/2) |
 | The mountain road | Kobold (CR 1/8), ogre (CR 2), griffon (CR 2), troll (CR 5), giant eagle (CR 1) |
 | The Vaunt | Sprite (CR 1/4), ghoul (CR 1), scout (CR 1/2), giant crab (CR 1/8) |
-| The Braid | Will-o'-wisp (CR 2), spy (CR 1), veteran (CR 3), mage (CR 6) |
+| The Braid | Will-o’-wisp (CR 2), spy (CR 1), veteran (CR 3), mage (CR 6) |
 | The Orchard Marches | Dryad (CR 1), winter wolf (CR 3), troll (CR 5), satyr (CR 1/2), awakened tree (CR 2) |
 | The Standing Marches | Gargoyle (CR 2), earth elemental (CR 5), stone giant (CR 7) |
 | Vindana’s undercity | Kobold (CR 1/8), giant rat (CR 1/8), grey ooze (CR 1/2), otyugh (CR 5) |

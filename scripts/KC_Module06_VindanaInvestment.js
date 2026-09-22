@@ -158,9 +158,9 @@ c.push(P("Vindana up close is larger and better defended than it looked from the
 
 c.push(P("Two things about those walls are worth putting in front of the party on the first day, because both of them pay off later. The inner wall is Standing Light stone, and for six centuries this city glowed faintly from its own defences on any clear night \u2014 the outer face of the thing the coalition has come to break was, until fourteen months ago, the most beautiful curtain wall in the world, and it is dark. And the harbour behind it is not a harbour any more so much as a spout: everything that leaves Elduvaine leaves through Vindana, weighed, docketed, and carried in Norvatch bottoms under a standing contract. A coalition that closes this port is not only taking a city. It is putting a cork in the only hole the kingdom is draining out of, and Marshal Drell knows the arithmetic of that considerably better than the officers besieging him do."));
 
-c.push(BOX("By the second day, Vindana is ringed rather than merely approached \u2014 coalition tents in a wide arc from harbor-mouth to inland hill, cook-fires enough to be seen from the walls, and somewhere above the gatehouse, a banner the party does not recognize, raised deliberately high enough to be read from the coalition\u2019s own lines. Marshal Drell wants them to know exactly who they are besieging."));
+c.push(BOX("By the second day, Vindana is ringed rather than merely approached \u2014 coalition tents in a wide arc from harbour-mouth to inland hill, cook-fires enough to be seen from the walls, and somewhere above the gatehouse, a banner the party does not recognise, raised deliberately high enough to be read from the coalition\u2019s own lines. Marshal Drell wants them to know exactly who they are besieging."));
 
-c.push(P("Let the party see the siege take shape as a logistics problem as much as a military one: where the coalition\u2019s three contingents camp relative to each other, how supply lines from Caerwyn are organized, and \u2014 if Module Four was played \u2014 whether Doria Kell or her Norvatch contacts have already found a way to profit from a besieging army\u2019s needs."));
+c.push(P("Let the party see the siege take shape as a logistics problem as much as a military one: where the coalition\u2019s three contingents camp relative to each other, how supply lines from Caerwyn are organised, and \u2014 if Module Four was played \u2014 whether Doria Kell or her Norvatch contacts have already found a way to profit from a besieging army\u2019s needs."));
 
 // ---------------------------------------------------------------- Scene 2
 c.push(H2("Scene 2: Raising the Engines"));
@@ -197,7 +197,7 @@ c.push(table(
   [
     ["Correct a flawed siege engine joint before it fails", "Investigation / a relevant craft", "13", "Moderate"],
     ["Haul and position engine timber efficiently", "Athletics", "10", "Easy"],
-    ["Defend an engine work party from a probing sortie", "Combat or relevant skill, DM\u2019s judgment", "13", "Moderate"],
+    ["Defend an engine work party from a probing sortie", "Combat or relevant skill, DM\u2019s judgement", "13", "Moderate"],
     ["Track and intercept the supply column before it reaches Vindana", "Survival", "13", "Moderate"],
     ["Read Marshal Drell\u2019s dispositions during First Assault", "Investigation / Perception", "16", "Hard"]
   ]
@@ -206,7 +206,7 @@ c.push(table(
 // ---------------------------------------------------------------- Scene 4
 c.push(H2("Scene 4: First Assault"));
 
-c.push(P("With the engines raised and the supply raid\u2019s results in hand, the coalition tries the walls once, before the real siege settles into its longer rhythm \u2014 not out of impatience, but to test what Drell\u2019s defense actually looks like under pressure. This is meant to fail, or to succeed only at real cost, and the module should let that land honestly."));
+c.push(P("With the engines raised and the supply raid\u2019s results in hand, the coalition tries the walls once, before the real siege settles into its longer rhythm \u2014 not out of impatience, but to test what Drell\u2019s defence actually looks like under pressure. This is meant to fail, or to succeed only at real cost, and the module should let that land honestly."));
 
 c.push(BOX("The first breach in the outer wall holds for less than a minute before Vindana\u2019s garrison closes on it from three directions at once, and the coalition\u2019s own advance stalls in the gap rather than through it. Somewhere to the left, a company that went in confident comes back considerably smaller than it went."));
 
@@ -238,6 +238,8 @@ c.push(...SB({
 c.push(P("Drell does not die or fall back easily in this module \u2014 he is meant to survive Scene 4 regardless of how the fight at the point of contact goes, withdrawing his forces in good order once the breach fails rather than pressing an advantage he does not need. Save a real, decisive confrontation with him for Module Seven if the table wants one."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(B("Scaling First Assault.", "Drell (700 XP), six legionaries (600) and an optio (450) is 1,750 XP across eight monsters, \u00d72.5 for 4,375 adjusted, or \u00d72 for 3,500 with a party of six. Most tables are at 6th level by now: that reads Hard for four characters, Medium for five and Easy\u2013Medium for six. This is the module\u2019s setback, so do not soften it for four; for six, add the second optio rather than more legionaries, which keeps the count out of the next band."));
+
 c.push(H1("Puzzles and Set Pieces"));
 
 c.push(P("Raising the Engines is how that scene is run. The undercity is additive and substantial \u2014 sixty to ninety minutes, and a table that wants a proper dungeon crawl can take considerably longer. It is the best thing in the module and it is optional, which is deliberate: it pays out in Module Seven for the parties that go looking."));
@@ -287,14 +289,14 @@ c.push(H1("NPC Profiles"));
 c.push(H2("Marshal Ossian Drell"));
 
 c.push(P("A hobgoblin of perhaps fifty, and a legionary officer of the kind his people produce reliably and other peoples mostly envy: literate, unhurried, personally brave in a way he considers unremarkable, and entirely without any stake in Vale\u2019s war beyond the contract that pays for it. He has held Vindana for three years, competently, and has filed a monthly report about it every one of those months."));
-c.push(P("Vindana\u2019s garrison commander, professional rather than cruel, visibly proud of a defense he has had three years to prepare. Speech: economical, respectful of competence in an enemy, entirely without the theatrical menace a table might expect \u2014 he is fighting a siege, not delivering a villain\u2019s speech."));
+c.push(P("Vindana\u2019s garrison commander, professional rather than cruel, visibly proud of a defence he has had three years to prepare. Speech: economical, respectful of competence in an enemy, entirely without the theatrical menace a table might expect \u2014 he is fighting a siege, not delivering a villain\u2019s speech."));
 c.push(P("Open thread: Drell is this campaign\u2019s model of the occupation\u2019s real competence, and a DM can use him again in Module Seven as the officer whose actual weakness the party finds \u2014 or, if the table prefers, as an officer who can be talked into surrender once that weakness is found, rather than one who must be killed."));
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
 
 c.push(H2("The Coalition\u2019s Own Argument"));
-c.push(P("If the table wants more camp texture, let Oksitan and Auberitz officers disagree openly, for the first time, about how the siege should be run \u2014 patience versus a faster assault, roughly the tension the module itself just dramatized in Scene 4. No mechanical stakes; this is a chance to deepen the coalition\u2019s internal friction established in Module Four."));
+c.push(P("If the table wants more camp texture, let Oksitan and Auberitz officers disagree openly, for the first time, about how the siege should be run \u2014 patience versus a faster assault, roughly the tension the module itself just dramatised in Scene 4. No mechanical stakes; this is a chance to deepen the coalition\u2019s internal friction established in Module Four."));
 
 c.push(H2("Somebody Inside Is Still Filing"));
 
@@ -306,6 +308,14 @@ c.push(H2("Ninian\u2019s Read on the City"));
 c.push(P("If Ninian was freed at Sennoch Hall, she has real, specific knowledge of Vindana from before the occupation \u2014 a postern gate, a garrison habit, something small but true. This does not need to change the module\u2019s outcome; it is a chance to let her earlier promise (see her NPC profile) pay off in a small way."));
 
 // -------------------------------------------------------------- Diverging
+c.push(H2("What the Dark Wall Grew"));
+
+c.push(P("Where the undercity\u2019s drain passes beneath the inner wall \u2014 area F on the keyed map \u2014 the Standing Light stone was drained past what it could survive, and some of it got up. Use the Light-Hollow from the Bestiary: a figure of dull, cold masonry that puts out every nonmagical light within thirty feet at the start of its turn and, once the party has only spells left, pulls those down as well."));
+
+c.push(P("Fight it in the dark. That is the entire design: torches go on the first round, magic on the third or fourth, and the encounter becomes a problem about position and memory rather than damage. A party carrying the standing-stone lamp from Caerwyn\u2019s baker will find it works \u2014 once \u2014 because it holds daylight rather than making it. That is worth every copper they did not pay for it."));
+
+c.push(PS([DM("DM Only: "), { t: "a single Light-Hollow is 1,100 XP, which reads below Easy on paper for any party at 6th level, and is not. The darkness is the difficulty. If the table found the undercity too gentle, put it here; if the kobold negotiation already took the evening, leave it out, and let the kobolds mention that nobody goes past the wall any more and decline to say why." }]));
+
 c.push(H1("Diverging Paths (DM Only)"));
 
 c.push(BUL("How the engines were raised.", "Smoothly or roughly \u2014 track it, and carry forward any advantage or complication into Module Seven\u2019s assault."));

@@ -170,7 +170,7 @@ c.push(P("The party comes up the Long Stair to reach him \u2014 four hundred and
 
 c.push(P("Duncarrow is a working fortress, not a palace \u2014 grey stone, low ceilings, arrow-slit windows that let in more cold than light. The great hall smells of woodsmoke, wet dog, and oiled steel rather than incense; the tapestries on its walls are march-maps and hide charts, not heraldry. Guards at the door look tired rather than ceremonial, and nod the party through without announcing them \u2014 Duncarrow has had a great many visitors this season, and does not have the staff to make an occasion of one more."));
 
-c.push(P("Xavier receives the party standing, at a steward\u2019s table crowded with maps and weighted at the corners with what look like ordinary stones. He is not what the songs will eventually make of him: greying at the temples earlier than he should be, a soldier\u2019s build going a little soft from a year of councils rather than campaigns, dressed plainly enough that a stranger might take him for one of his own captains. Only when he looks up does the room organize itself around him \u2014 not because anyone commands it to, but because everyone in it has clearly done this before."));
+c.push(P("Xavier receives the party standing, at a steward\u2019s table crowded with maps and weighted at the corners with what look like ordinary stones. He is not what the songs will eventually make of him: greying at the temples earlier than he should be, a soldier\u2019s build going a little soft from a year of councils rather than campaigns, dressed plainly enough that a stranger might take him for one of his own captains. Only when he looks up does the room organise itself around him \u2014 not because anyone commands it to, but because everyone in it has clearly done this before."));
 
 c.push(BOX("He does not make them kneel. \u201CI know your names,\u201D he says, before anyone has given one, and it is not a boast \u2014 he simply has. \u201CA kingdom I have never seen has been taken by a man I have never met, and I am asking you to help me take it back. I will not pretend that is a small thing to ask of anyone."));
 
@@ -178,7 +178,7 @@ c.push(P("Let Xavier speak plainly about the Promise \u2014 a share in Elduvaine
 
 c.push(PS([DM("DM Only: "), { t: "if a player pushes on why he chose them specifically, he has a real answer, not a flattering one: he asked his officers for the people other people trusted under pressure, not the people other people were impressed by. He believes this is the same thing Harrowmark has always valued in its own wyvern-hunters, and it is not a coincidence that Greywatch is where he is about to send them next." }]));
 
-c.push(P("He closes the audience by asking one thing of them before the muster marches: Greywatch, three days out, has sent word that a wyvern has taken to raiding its herds and, twice now, its people. He would rather send the crusade\u2019s own chosen than levy more of Greywatch\u2019s own dead."));
+c.push(P("He closes the audience by asking one thing of them before the muster marches: Greywatch, four days out, has sent word that a wyvern has taken to raiding its herds and, twice now, its people. He would rather send the crusade\u2019s own chosen than levy more of Greywatch\u2019s own dead."));
 
 c.push(PS([DM("DM Only: "), { t: "if a player asks what the Call actually promised, Xavier tells them straight and without enthusiasm: a share of Elduvaine\u2019s own magic, meaning land held inside the Living Realm where the habits work, and the run of the Ysolde Archive, to everybody who answers. He is aware that neither is his to give. He is not aware \u2014 nobody is yet \u2014 that the same two things were offered to two powers at once, out of a country that is being spent while they march. Do not have him defend the Promise. Have him state it, and change the subject to march order, which is the subject he is actually good at." }]));
 
@@ -195,7 +195,7 @@ c.push(P("Give the party the rest of the daylight to see Greywatch properly befo
 
 c.push(H3("Running the Encounter"));
 
-c.push(P("The wyvern comes at dusk, out of a sky gone the color of a bruise, and is heard before it is seen \u2014 a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practiced shorthand of people who have done this before \u2014 an orc roper with a line already spinning before the thing is in range, two dwarves setting a pike-brace into the frozen ground and swearing at it in the tone of people who do this every winter."));
+c.push(P("The wyvern comes at dusk, out of a sky gone the colour of a bruise, and is heard before it is seen \u2014 a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practised shorthand of people who have done this before \u2014 an orc roper with a line already spinning before the thing is in range, two dwarves setting a pike-brace into the frozen ground and swearing at it in the tone of people who do this every winter."));
 
 c.push(P("Harrowmark does not fight wyverns the way most parties expect to fight a dragon. A PC adjacent to the wyvern, or within its reach, may spend their action fixing a hunting rope to a wing or leg (Strength (Athletics) or Dexterity (Sleight of Hand), DC 13 \u2014 Brenna will call out which, and why, the first time it comes up). Three successful ropes from three different characters ground the wyvern: it loses its fly speed until it breaks free (its action, a DC 13 Athletics contest against the ropes) or the encounter ends. A grounded wyvern fighting on the ground, hemmed in by pikes, is a substantially safer fight than one still in the air, and this is deliberate \u2014 it is the module\u2019s built-in partial resolution, not a trick or a trap. Play the moment it goes down for everything it is worth: the ropes snapping taut, the hold-folk shouting the count, the sudden and enormous silence of something huge no longer in the air."));
 
@@ -210,7 +210,7 @@ c.push(table(
   [12, 14, 19, 24, 31],
   [
     ["4", "2,300", "4,400", "Medium\u2013Hard", "Run as written."],
-    ["5", "2,300", "5,500", "just under Medium", "Run as written; the rope tactic and morale give it teeth the raw math understates."],
+    ["5", "2,300", "5,500", "just under Medium", "Run as written; the rope tactic and morale give it teeth the raw maths understates."],
     ["6", "1,150", "6,600", "below Easy", "Do not add a second wyvern \u2014 crossing the 1\u21922 monster boundary roughly doubles the multiplier and overcorrects badly. Instead add one complication: a burning hayrick blocking the herd pens, or a trapped child in the loft, that raises the practical stakes without touching the monster count."]
   ]
 ));
@@ -259,7 +259,7 @@ c.push(...SB({
 // ---------------------------------------------------------------- Scene 4
 c.push(H2("Scene 4: The Muster\u2019s End"));
 
-c.push(P("Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move. The yard that was ordinary business three days ago is now a camp too large for it \u2014 wagons loaded and lashed, Harrowmark levies falling into column by the sound of a horn rather than a shouted order, and, past the edge of the Harrowmark tents, the first coalition banners: colors and cuts of armor the party has not seen before, voices in accents that mark out where in the muster Oksitan and Auberitz have pitched their own camps. Nobody introduces the party to any of it yet \u2014 that is a later module\u2019s work \u2014 but it should be visibly, unmistakably there, the first sign that this war is bigger than Harrowmark."));
+c.push(P("Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move. The yard that was ordinary business ten days ago is now a camp too large for it \u2014 wagons loaded and lashed, Harrowmark levies falling into column by the sound of a horn rather than a shouted order, and, past the edge of the Harrowmark tents, the first coalition banners: colours and cuts of armour the party has not seen before, voices in accents that mark out where in the muster Oksitan and Auberitz have pitched their own camps. Nobody introduces the party to any of it yet \u2014 that is a later module\u2019s work \u2014 but it should be visibly, unmistakably there, the first sign that this war is bigger than Harrowmark."));
 
 c.push(H3("Three Things in the Yard"));
 
@@ -307,7 +307,7 @@ c.push(P("The Corrieholt discrepancy is a decoy and is entirely honest: light ho
 
 c.push(P("Three routes to it, and a party should be allowed any of them. Count the billets \u2014 the stable range is a fixed building and its capacity is a matter of public record. Walk the range at dawn and count bodies. Or ask a Stannock pikeman how many of his village came, and get an answer that is sixty short of the roll."));
 
-c.push(PS([DM("DM Only: "), { t: "there is no villain here and the party should be braced for one. Stannock sent four hundred people out of sixteen hundred and sixty of them were promised to a hold that then could not spare them, so a clerk carried them on the roll and sent the bread money home. It is embezzlement, it is feeding a village that gave a quarter of its people to this war, and the clerk will not deny a word of it. What the party does with that is the scene. Xavier, if asked, will decide in about four seconds and will not enjoy it." }]));
+c.push(PS([DM("DM Only: "), { t: "there is no villain here and the party should be braced for one. Stannock sent four hundred people out of sixteen hundred, and sixty of them were promised to a hold that then could not spare them, so a clerk carried them on the roll and sent the bread money home. It is embezzlement, it is feeding a village that gave a quarter of its people to this war, and the clerk will not deny a word of it. What the party does with that is the scene. Xavier, if asked, will decide in about four seconds and will not enjoy it." }]));
 
 c.push(H2("Set Piece: The Ledge"));
 
@@ -334,7 +334,7 @@ c.push(P("Open thread: he has told no one in this party, and will tell no one fo
 
 c.push(H2("Huntmaster Brenna Vane"));
 c.push(P("A dwarf in her second century, Greywatch\u2019s huntmaster for sixty years of it, missing two fingers on her left hand to a stinger she still calls \u201Ca fair trade.\u201D Runs Greywatch\u2019s wyvern-watch and, unofficially, a hold-wide betting ledger on every kill \u2014 which limb, which method, how long. Speech: dry, economical, allergic to being thanked directly; deflects gratitude by immediately assigning a chore."));
-c.push(P("Open thread: if the party impresses her, she offers what Greywatch actually has to give \u2014 not gold, but competence: a standing invitation to send word if Harrowmark-trained hands are ever needed again, which a DM can call in during Module 8 or later as a recurring, grounded ally rather than a one-scene NPC."));
+c.push(P("Open thread: if the party impresses her, she offers what Greywatch actually has to give \u2014 not gold, but competence: a standing invitation to send word if Harrowmark-trained hands are ever needed again, which a DM can call in during Module Eight or later as a recurring, grounded ally rather than a one-scene NPC."));
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
@@ -357,18 +357,19 @@ c.push(P("If the table wants a prep phase before the wyvern strikes, run a short
 c.push(H1("Diverging Paths (DM Only)"));
 
 c.push(BUL("The wyvern\u2019s fate.", "Killed, driven off, or (rarely) roped and released elsewhere \u2014 track which. Greywatch remembers a killing as competence and a driving-off as mercy; both earn Brenna\u2019s respect, and only a table that badly mishandles the fight (fleeing, refusing to help, or getting a Greywatch hunter killed through carelessness) should lose it."));
-c.push(BUL("The road choice \u2014 Branch Ledger entry 1.", "Sea road or mountain road, decided here and carried into Module 2A or 2B. This is the campaign\u2019s first tracked divergence; record it in the DM Reference Guide the moment it is made, including who argued for which and why, since that reasoning is worth revisiting when the drowned king\u2019s aftermath reaches the party in Module 5."));
+c.push(BUL("The Fenmarrow letter.", "Taken or refused, and then carried, lost, opened or delivered \u2014 track it for the whole campaign. It cannot be delivered before Module Five and may never be; what the party does with it once they know where the son\u2019s column went is worth a line in the ledger every time it changes hands."));
+c.push(BUL("The road choice \u2014 Branch Ledger entry 1.", "Sea road or mountain road, decided here and carried into Module 2A or 2B. This is the campaign\u2019s first tracked divergence; record it in the DM Reference Guide the moment it is made, including who argued for which and why, since that reasoning is worth revisiting when the drowned king\u2019s aftermath reaches the party in Module Five."));
 
 // ---------------------------------------------------------------- Loot
 c.push(H1("Loot"));
 
-c.push(BUL("A Greywatch hunting pike.", "Masterwork but not magical \u2014 a reach weapon balanced by people who use them for a living. Reflavor as a longspear or glaive per the wielder\u2019s preference; treat as a normal weapon of its type, finely made."));
+c.push(BUL("A Greywatch hunting pike.", "Masterwork but not magical \u2014 a reach weapon balanced by people who use them for a living. Reflavour as a longspear or glaive per the wielder\u2019s preference; treat as a normal weapon of its type, finely made."));
 c.push(BUL("A vial of Greywatch antitoxin.", "A single-use draught brewed from the hold\u2019s long experience with stinger wounds. Grants advantage on the next saving throw against poison damage or the poisoned condition within the next 24 hours."));
 
 c.push(BUL("Two potions of healing.", "Pressed on the party by Greywatch\u2019s healer with the flat instruction to bring them back empty rather than unused. Standard SRD potions of healing (2d4 + 2)."));
 
-c.push(BUL("A blade out of Duncarrow\u2019s armory.", "A +1 weapon of the recipient\u2019s type, cut with a dwarven runesmith\u2019s marks along the spine \u2014 worked magic, carried in the steel, exactly the kind Harrowmark makes and the only kind it has. Xavier hands it over without ceremony and slightly too fast, in the manner of a man who has decided not to make a speech about it."));
-c.push(BUL("Xavier\u2019s token.", "A plain iron badge, the king\u2019s own mark, given without ceremony. It carries no mechanical benefit and opens no doors by itself \u2014 but it is recognizable to anyone who has served under Xavier, and a DM may let it matter socially wherever that is true.", { keepNext: true }));
+c.push(BUL("A blade out of Duncarrow\u2019s armoury.", "A +1 weapon of the recipient\u2019s type, cut with a dwarven runesmith\u2019s marks along the spine \u2014 worked magic, carried in the steel, exactly the kind Harrowmark makes and the only kind it has. Xavier hands it over without ceremony and slightly too fast, in the manner of a man who has decided not to make a speech about it."));
+c.push(BUL("Xavier\u2019s token.", "A plain iron badge, the king\u2019s own mark, given without ceremony. It carries no mechanical benefit and opens no doors by itself \u2014 but it is recognisable to anyone who has served under Xavier, and a DM may let it matter socially wherever that is true.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain
 c.push(H1("The Refrain"));

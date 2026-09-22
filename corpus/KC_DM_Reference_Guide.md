@@ -48,7 +48,7 @@ Every realm is mixed; the table is who a party actually meets there and in what 
 
 # Stat Block Index
 
-Every named stat block built so far, in order of first appearance. “SRD base” names the unmodified SRD creature a block was built from — renamed blocks keep the base creature’s numbers exactly and change only name, flavor text, and (where noted in the module) minor cosmetic description. The Occupation Guard is defined in Module 3, reprinted in full in Module 4 because that module’s own fight needs it to hand, and pointed at by reference in Modules 6, 7, 9 and 11.
+Every stat block printed in a module, in order of first appearance. “SRD base” names the unmodified SRD creature a block was built from — renamed blocks keep the base creature’s numbers exactly and change only name, flavour text, and (where noted in the module) minor cosmetic description. The Occupation Guard is the levy-grade garrison at Caerwyn and nowhere else; wherever the party fights the Sixth Free Legion itself, the modules use the Legion blocks from the Bestiary, listed in the second table below.
 
 | **Name** | **SRD Base** | **CR (XP)** | **AC** | **HP** | **Module** |
 | --- | --- | --- | --- | --- | --- |
@@ -57,7 +57,10 @@ Every named stat block built so far, in order of first appearance. “SRD base�
 | Thane’s Guard | Bandit, unmodified | 1/8 (25) | 12 | 11 | 2A — The Sea Road |
 | Baron Osgar Vell | Bandit Captain, renamed | 2 (450) | 15 | 65 | 2B — The Mountain Road |
 | Ashgate Scout | Scout, unmodified | 1/2 (100) | 13 | 16 | 2B — The Mountain Road |
-| Occupation Guard | Guard, unmodified | 1/8 (25) | 16 | 11 | 3 — Landfall (reused: 4, 6, 7, 9, 11) |
+| Occupation Guard | Guard, unmodified | 1/8 (25) | 16 | 11 | 3 — Landfall |
+| Legionary of the Sixth | Bestiary block, reprinted | 1/2 (100) | 18 | 22 | 4 — The Coalition |
+| Winter Wolf | Winter Wolf, unmodified | 3 (700) | 13 | 75 | 5 — The Road to Vindana |
+| Troll | Troll, unmodified | 5 (1,800) | 15 | 84 | 5 — The Road to Vindana |
 | Marshal Ossian Drell | Veteran, renamed | 3 (700) | 17 | 58 | 6 — Vindana: Investment (returns: 7) |
 | General Ilyana Voss | Gladiator, renamed | 5 (1,800) | 16 | 112 | 9 — The Field Battle |
 | Maedoc Vale | Archmage, renamed | 12 (8,400) | 15 | 99 | 11 — The Decision at the Gates |
@@ -71,11 +74,26 @@ These are used by name in the modules without a reprinted block, because they ar
 | **Creature** | **CR (XP)** | **Where it is called for** |
 | --- | --- | --- |
 | Kobold | 1/8 (25) | The old workings above Ashgate (2B, optional); Vindana’s undercity (6). Trap-layers and negotiators, not a slaughter. |
-| Winter Wolf | 3 (700) | The Held Winter (5, optional). Hunts the wood’s edges. |
-| Troll | 5 (1,800) | The Held Winter (5, optional). Has taken the orchard-keeper’s cottage. Regeneration is the fight. |
-| Dryad | 1 (200) | The Held Winter (5, optional). Not an encounter — a conversation, and the campaign’s grief in one NPC. |
 | Sprite | 1/4 (50) | Caerwyn’s orchard hedge (3). Four inches of extremely rude opinion. Pure texture. |
 | Ogre | 2 (450) | The mountain road (2B, optional), as an alternative to the kobold workings. |
+
+## Bestiary Blocks in Play
+
+The Bestiary’s own blocks, and every module that calls for one. The Held Winter’s dryad is run with the Withering if it ever comes to violence, which it should not.
+
+| **Block** | **CR (XP)** | **Where it is called for** |
+| --- | --- | --- |
+| Legionary of the Sixth | 1/2 (100) | Sennoch Hall (4, reprinted there); the ridge patrol (5, optional); the supply escort and First Assault (6); the breach (7); the field battle and the Engine’s guard (9); the gate of Caer Ysolde (11). |
+| Legion Optio | 2 (450) | Serjeant Hoth (4); First Assault (6); the breach (7); the Ironshanks’ advance (9). |
+| Legion Ironshank | 3 (700) | The Fight in the Gap (7); the Ironshanks’ advance (9). |
+| Legion Battle-Mage | 6 (2,300) | Vindana’s harbour-mage, gone before the ending (7, loot); the Braid encounter table. |
+| Waystone Warden | 5 (1,800) | The Willing Road to Vindana (5, optional). A puzzle wearing a stat block. |
+| The Withering | 3 (700) | Bryn Aeling’s dryad, if it comes to violence (5). |
+| Season-Bound Stag | 2 (450) | Bryn Aeling (5). Not a fight; a minute of spring. |
+| Light-Hollow | 4 (1,100) | Under Vindana’s inner wall (6, optional). Fought in the dark. |
+| Draining Engine | 6 (2,300) | Behind Voss’s reserve (9, optional). An objective, not an opponent. |
+| Echo of the Listening Water | 1 (200) | Lisswater (10, optional). The Four Voices as a thing in the room. |
+| Xavier III, Aveline Ysolde, Brenna Vane, Doria Kell | 8, 4, 3, 2 | Named figures. Not meant to be fought; printed so a DM knows what they can do. |
 
 ## The Elduvish Wonders
 
@@ -83,8 +101,8 @@ Four habits made portable, and the campaign’s best treasure. Ordinary inside E
 
 | **Wonder** | **What it does** | **First available** |
 | --- | --- | --- |
-| Standing-stone lamp | Gnome-cut stone that holds daylight poured into it and gives it back for hours. | Module 3, from Caerwyn’s baker |
-| Flask of Listening Water | Holds what is said at its mouth; gives it back once, in the speaker’s own voice. | Module 5, at the Standing Water |
+| Standing-stone lamp | Gnome-cut stone that holds daylight poured into it and gives it back for hours. | Module Three, from Caerwyn’s baker |
+| Flask of Listening Water | Holds what is said at its mouth; gives it back once, in the speaker’s own voice. | Module Five, at the Standing Water |
 | Road-token | Cut from a Willing Road waystone. Explains itself no more than the road does. | DM’s discretion |
 | Kept Season seeds | A small stand holds whatever season the seeds were sown in. | DM’s discretion |
 
@@ -120,14 +138,14 @@ Named NPCs the campaign’s own modules flag as “open threads” — built to 
 
 | **Name** | **Introduced** | **Role** |
 | --- | --- | --- |
-| Xavier III of Harrowmark | 1 | The calling king. Leads in person; not yet the Wyvernheart until Module 7. |
-| Huntmaster Brenna Vane (dwarf) | 1 | Greywatch’s huntmaster, two centuries old; runs the wyvern hunt; a recurring source of camp levity. |
+| Xavier III of Harrowmark | 1 | The calling king. Leads in person; not yet the Wyvernheart until Module Seven. |
+| Huntmaster Brenna Vane (dwarf) | 1 | Greywatch’s huntmaster, in her second century; runs the wyvern hunt; a recurring source of camp levity. |
 | Sera Vosk (rock gnome) | 2A | Auberitz quartermaster; a standing logistics and information contact. |
-| Garrick Hollow (half-elf) | 2B | Hired mountain guide; a standing source for overland routes and rumor. |
+| Garrick Hollow (half-elf) | 2B | Hired mountain guide; a standing source for overland routes and rumour. |
 | Wyn Alder (gnome) | 3 | An occupation-era clerk at the Landfall checkpoint; the campaign’s first answer to what an ordinary complicit person looks like. |
-| Doria Kell (tiefling) | 4 | Norvatch factor, and the campaign’s second-largest lever. Her house has been buying Elduvaine by weight for three years; her ledgers are the clock. Names her price in Module 10. |
+| Doria Kell (tiefling) | 4 | Norvatch factor, and the campaign’s second-largest lever. Her house has been buying Elduvaine by weight for three years; her ledgers are the clock. Names her price in Module Ten. |
 | Tam Ondry | 5 | Harrowmark courier attached to the lost column; a standing source for news arriving from elsewhere. |
-| Marshal Ossian Drell (hobgoblin) | 6 | Commands Vindana’s garrison; a legionary professional on a contract, not a fanatic. Fate resolved in Module 7. |
+| Marshal Ossian Drell (hobgoblin) | 6 | Commands Vindana’s garrison; a legionary professional on a contract, not a fanatic. Fate resolved in Module Seven. |
 | General Ilyana Voss (orc) | 9 | Commands Vale’s field army; came up through the same legion as Drell. Fate resolved this module; a captured Voss is a real long-term asset. |
 | Aveline Ysolde, the Regent (human) | 10 | Royal house, at large; runs what resistance survives and refuses evacuation. Has refused it in writing, twice. Stat block in the bestiary. |
 | Maelis Ysolde, the Veiled Sovereign (elf) | 11 | Held in Caer Ysolde. Dying at the same rate as the land, because a sovereign is bound to the habits. The campaign’s second clock, and the one that cannot be bought. No stat block, deliberately. |
@@ -193,6 +211,7 @@ Every tracked divergence across the campaign, compiled from each module’s own 
 | --- | --- | --- | --- |
 | 1 | The wyvern’s fate | Killed · driven off · roped and released |  |
 | 1 | Branch Ledger entry 1: the road choice | Sea road (2A) · Mountain road (2B) |  |
+| 1 | The Fenmarrow letter (update every time it changes hands) | Refused · carried · lost · opened · delivered |  |
 | 2A | How Thane’s hold is settled | Paid off · talked down · fought |  |
 | 2A | Calanthe’s fate | Garrisoned · independent · hybrid |  |
 | 2B | What the ford cost | A wagon · a delay · a near-miss · an actual loss |  |
@@ -212,6 +231,7 @@ Every tracked divergence across the campaign, compiled from each module’s own 
 | 8 | Whether the party noticed the pressed clerk | Yes · No |  |
 | 9 | Which Scene 2 was run | Tam’s death · the third-thread alternate |  |
 | 9 | General Voss’s fate | Killed · captured · fled |  |
+| 9 | Draining Engines broken (a running count, of about thirty) | Number broken, and where |  |
 | 10 | Whether Xavier signed Norvatch’s contract | Signed · refused · deferred |  |
 | 10 | What the party told the Regent, and what the Regent told them | (Private DM note — not mechanically tracked) |  |
 | 11 | The campaign’s final choice | Held · set down |  |
@@ -235,4 +255,4 @@ Every tracked divergence across the campaign, compiled from each module’s own 
 | 11 | Whether the party established what the rule permits | Established · forced the doors · never reached them |  |
 | 11 | Whether the Sixth was bought out at term | Withdrew · declined to sortie · fought · never approached |  |
 
-The final choice draws on everything above it — before running Module 11’s Scene 4, a DM may find it worth reading back across this whole ledger with the table.
+The final choice draws on everything above it — before running Module Eleven’s Scene 4, a DM may find it worth reading back across this whole ledger with the table.

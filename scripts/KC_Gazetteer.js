@@ -174,7 +174,7 @@ c.push(P("Since the Call it has been the most crowded place in Harrowmark. Ninet
 
 c.push(B("Hook.", "Module 2A sails from here. Before that: something in the requisitioned tonnage is not seaworthy, the owner knows, and the manifest says otherwise."));
 
-c.push(...SITE("Stannock", "Population 2,400 \u00B7 Dwarf crag hold \u00B7 The armouries"));
+c.push(...SITE("Stannock", "Population 1,600 \u00B7 Dwarf crag hold \u00B7 The armouries"));
 
 c.push(P("Cut back into the western crags and reached by a road that switches back on itself eleven times, Stannock makes mail, pike-heads, and the particular long-hafted wyvern spear that no other kingdom has any use for. It has been making them for six hundred years, the pattern has changed twice, and both changes are still discussed."));
 
@@ -313,7 +313,7 @@ c.push(table(
     ["2\u20133", "A goat-track. It is shorter. It is also not what it looks like, and the party will be committed before they know."],
     ["4", "Six kobolds (SRD, CR 1/8) on a scouting loop, who would much rather talk and have prepared a speech."],
     ["5", "An ogre (SRD, CR 2) who has claimed a refuge hut and considers it his, which under the local rules of the road it now sort of is."],
-    ["6", "A stranded Auberitz waggon, its crew, and a mathematical certainty that it cannot be got over the pass."],
+    ["6", "A stranded Auberitz wagon, its crew, and a mathematical certainty that it cannot be got over the pass."],
     ["7", "Two griffons (SRD, CR 2) nesting above the switchbacks, hunting the pack animals."],
     ["8", "Pilgrims of the Tenth Work walking to Elduvaine unarmed, having refused an escort, three days from dying of it."],
     ["9", "A rockfall across the road. Four hours to clear, or a day to go around, and somebody is watching to see which."],
@@ -345,7 +345,7 @@ c.push(P("A small coastal town of grey-gold stone and slate, eleven miles of orc
 
 c.push(P("It is the first wonder the party gets and it should be run as one. The light-stone in the doorsteps still holds a little of the afternoon. The baker\u2019s ovens have not gone out in two hundred years and the whole street smells of it at four in the morning. This is a place worth saving, and the module says so by showing rather than arguing."));
 
-c.push(B("Hook.", "Module 3. Wyn Alder clerks the checkpoint and is the campaign\u2019s first honest look at what an ordinary complicit person is actually like."));
+c.push(B("Hook.", "Module Three. Wyn Alder clerks the checkpoint and is the campaign\u2019s first honest look at what an ordinary complicit person is actually like."));
 
 c.push(...SITE("The Dead Mile", "A mile of road \u00B7 Nothing lives on it \u00B7 Between Caerwyn and the interior"));
 
@@ -396,7 +396,7 @@ c.push(P("Caer Ysolde is built of light-stone almost entirely. On a clear night 
 
 c.push(P("It is dark now. Not lightless \u2014 the occupation burns lamps like anybody else \u2014 but the stone is out, and it went out over about fourteen months, quarter by quarter, in a way the people who live there could watch happening."));
 
-c.push(B("Hook.", "Module 11, and the whole campaign points here. Maelis Ysolde is held in her own apartments in the Ysolde Keep on the middle island."));
+c.push(B("Hook.", "Module Eleven, and the whole campaign points here. Maelis Ysolde is held in her own apartments in the Ysolde Keep on the middle island."));
 
 c.push(...SITE("The Ysolde Archive", "The largest collection of magical knowledge in the world \u00B7 Vale\u2019s, now"));
 
@@ -412,7 +412,7 @@ c.push(...SITE("Sennoch Hall", "A great house of the Braid \u00B7 Two days downr
 
 c.push(P("A country seat of the house, walled, moated in the ornamental sense, and entirely unsuited to being a place of detention \u2014 which is exactly why the occupation chose it. Ninian Ysolde has been held here for three years in considerable comfort, with a library, a garden, a staff who are not permitted to leave, and a garrison that is embarrassed about the whole arrangement."));
 
-c.push(B("Hook.", "Module 4. The garrison commander here has been correct, courteous and humane for three years and would very much like somebody to notice that before this ends badly for him."));
+c.push(B("Hook.", "Module Four. The garrison commander here has been correct, courteous and humane for three years and would very much like somebody to notice that before this ends badly for him."));
 
 c.push(...SITE("Lisswater", "Population 2,100 \u00B7 A river parish \u00B7 Halfling country, and the kingdom\u2019s manners"));
 
@@ -461,7 +461,7 @@ c.push(P("The first Kept Season planting and the greatest of them, forty acres o
 
 c.push(P("It is nine weeks into a winter it was never sown in, and has been for most of a year. The trees are dying \u2014 not dead, dying, slowly and in the wrong order \u2014 and an ecology has moved in behind the change: winter wolves along the edges, and a troll in the orchard-keeper\u2019s cottage, and the dryad who has been the spirit of this wood for three centuries and is now the spirit of a winter one and cannot leave."));
 
-c.push(B("Hook.", "Module 5\u2019s Held Winter. The single most legible image of the draining in the campaign, and the one scene where a party can simply sit down and talk to the grief."));
+c.push(B("Hook.", "Module Five\u2019s Held Winter. The single most legible image of the draining in the campaign, and the one scene where a party can simply sit down and talk to the grief."));
 
 c.push(...SITE("Nantcorrow", "Population 1,900 \u00B7 An orchard town \u00B7 The Season-keepers\u2019 seat"));
 
@@ -525,7 +525,7 @@ c.push(P("Guild-law country: dwarves and tieflings, humans throughout, and an en
 
 c.push(P("Its great counting-city is Torvhal, where the Writ House sits \u2014 a court that has never in two centuries ruled on whether an agreement was fair, only on what it said. Norvatch does not want Elduvaine. Norvatch wants to remain the market for what leaves it, guaranteed in writing by whoever holds the place when the war ends, and it has held exactly that arrangement with the occupation for three years."));
 
-c.push(B("Hook.", "House Kell\u2019s ledgers are the campaign\u2019s clock. Doria Kell will sell them. Her price is in Module 10 and it is worse than money."));
+c.push(B("Hook.", "House Kell\u2019s ledgers are the campaign\u2019s clock. Doria Kell will sell them. Her price is in Module Ten and it is worse than money."));
 
 c.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 300, after: 100 }, children: [new TextRun({ text: "~", size: 24 })] }));
 c.push(PS([{ t: "\u201CThere are sixty-one bridges in Caer Ysolde. There have been sixty-one bridges in Caer Ysolde for two hundred years. We have built nine in that time and lost none, and it is still sixty-one, and we would all be grateful if you did not raise it again.\u201D", i: true }], { alignment: AlignmentType.CENTER }));

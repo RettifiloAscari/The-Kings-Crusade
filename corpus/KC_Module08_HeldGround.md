@@ -26,17 +26,17 @@ This campaign’s relief valves are designed rather than accidental, and this mo
 
 # What Is Actually Happening (DM Only)
 
-Nothing in this module is a trap, a test, or a delayed complication. Vindana is genuinely secure, the coalition is genuinely at ease for the first time since Module One, and the Magistrate’s rescue in Scene 3 is genuinely as easy as it plays — the occupation’s administration in a freshly-fallen city is in real disarray, and a party willing to use its own paperwork against it will find that disarray works entirely in their favor. If a DM feels this module is too easy, that is correct and intentional.
+Nothing in this module is a trap, a test, or a delayed complication. Vindana is genuinely secure, the coalition is genuinely at ease for the first time since Module One, and the Magistrate’s rescue in Scene 3 is genuinely as easy as it plays — the occupation’s administration in a freshly-fallen city is in real disarray, and a party willing to use its own paperwork against it will find that disarray works entirely in their favour. If a DM feels this module is too easy, that is correct and intentional.
 
 **DM Only:** Xavier has still not directly addressed being called the Wyvernheart as of this module’s start — the gap held open in Module Seven continues into Scene 4, which is the one place this module allows real feeling. Do not let the earlier scenes anticipate it.
 
 ## Scene 1: The Long Exhale
 
-Vindana’s taken harbor district has become, within days, the loudest and most cheerful place the coalition has occupied since Harrowmark. Let the party spend real time here.
+Vindana’s taken harbour district has become, within days, the loudest and most cheerful place the coalition has occupied since Harrowmark. Let the party spend real time here.
 
 > *Someone has chalked a running tally on the side of a captured warehouse — days since the siege, casks emptied, and, unofficially, a tally of how many times a passing soldier has tried and failed to get a straight answer out of Huntmaster Brenna Vane about whether she actually rode south for the war or just to see the fuss for herself.*
 
-If Module One was played, Brenna Vane has arrived with a handful of Greywatch hands, drawn south by rumor of the Wyvernheart with an expression that suggests she will never admit that is the reason. If Module 2A or 2B was played, Sera Vosk or Garrick Hollow can likewise turn up here, already embedded in the coalition’s logistics or scouting corps. Use whichever recurring faces the table has earned; this scene’s only job is reunion and warmth.
+If Module One was played, Brenna Vane has arrived with a handful of Greywatch hands, drawn south by rumour of the Wyvernheart with an expression that suggests she will never admit that is the reason. If Module 2A or 2B was played, Sera Vosk or Garrick Hollow can likewise turn up here, already embedded in the coalition’s logistics or scouting corps. Use whichever recurring faces the table has earned; this scene’s only job is reunion and warmth.
 
 ## Scene 2: The Grain Ledger War
 
@@ -66,16 +66,20 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 | --- | --- | --- | --- |
 | Resolve the quartermasters’ dispute without violence | Persuasion / Insight | 10 | Easy |
 | Forge or produce convincing transfer papers | Deception / an appropriate tool proficiency | 13 | Moderate |
-| Talk a guard out of scrutinizing the papers | Persuasion | 10 | Easy |
+| Talk a guard out of scrutinising the papers | Persuasion | 10 | Easy |
 | Notice the pressed Elduvish clerk’s actual situation | Insight / Perception | 13 | Moderate |
 
 ## Scene 4: What the Name Costs
 
-Late, with the day’s business done, Xavier finds the party somewhere quiet — away from the harbor’s noise, away from anyone keeping official record of the conversation.
+Late, with the day’s business done, Xavier finds the party somewhere quiet — away from the harbour’s noise, away from anyone keeping official record of the conversation.
 
 > *“They’ve started calling me something,” he says, not quite a question. “I keep waiting for someone to explain it to me properly and nobody will. I remember the dragon. I remember being fairly sure I was about to die. I don’t remember deciding to be brave about it — I remember being too frightened to think of anything else to do.” He is quiet for a moment. “Is that what the songs are going to say happened? Because I’d rather they didn’t, if it’s all the same.”*
 
 Let this be a real conversation rather than a scene to resolve. Xavier is not fishing for reassurance and does not need the party to tell him he is a hero; he genuinely does not know yet how he feels about the name, and the party’s honest reaction — whatever it is — matters more here than any mechanical outcome. This scene needs no check and produces no loot. It is the module’s actual point, arriving last, exactly where a session built on deliberate levity has been heading since Scene 1.
+
+## Stat Blocks
+
+None, by design: nothing in this module is meant to be fought. If the Magistrate’s caper goes badly and somebody insists on a scuffle, the one or two soldiers on her door are Legionaries of the Sixth (Bestiary), in a city that has just changed hands, with no officer, no pay-chest and no reason at all to die on a doorstep. They surrender on the first round anybody asks them to.
 
 # Puzzles and Set Pieces
 

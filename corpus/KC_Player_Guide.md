@@ -107,7 +107,7 @@ Both promises depend on one thing neither Xavier nor anyone else can currently g
 
 # Elduvaine, As It’s Told
 
-Almost nothing below comes from a firsthand source. Elduvaine has been closed for three years, and what travels out of a closed country is rumor, old memory, and the occasional survivor’s account, filtered through however many tellings it took to reach a Harrowmark tavern. Treat it as the stories your character grew up hearing, not as a briefing.
+Almost nothing below comes from a firsthand source. Elduvaine has been closed for three years, and what travels out of a closed country is rumour, old memory, and the occasional survivor’s account, filtered through however many tellings it took to reach a Harrowmark tavern. Treat it as the stories your character grew up hearing, not as a briefing.
 
 The stories agree on one strange thing: in Elduvaine, magic is said to live in the land itself rather than being worked by a person. Nobody outside Elduvaine has ever fully explained what that means, and the accounts that follow are the closest anyone has come.
 
@@ -118,11 +118,11 @@ The stories agree on one strange thing: in Elduvaine, magic is said to live in t
 | The Kept Season | A wood that holds the season it was planted in, permanently, regardless of the calendar around it. |
 | The Standing Light | Worked stone that holds daylight poured into it, so that Elduvish cities are said to need no lamps at night. |
 
-More recent accounts — from the handful of people who have actually come out since the wards opened — say some of this is failing. Roads that no longer shorten. Rivers that answer with voices nobody recognizes, or don’t answer at all. Whether that’s true, and what it would mean if it is, your character will have to find out for themselves.
+More recent accounts — from the handful of people who have actually come out since the wards opened — say some of this is failing. Roads that no longer shorten. Rivers that answer with voices nobody recognises, or don’t answer at all. Whether that’s true, and what it would mean if it is, your character will have to find out for themselves.
 
-## Rumors from the Road
+## Rumours from the Road
 
-What follows is exactly what it sounds like — things travelers, refugees, and secondhand sources say. Some of it is certainly true. Some of it is certainly not. Nobody your character has ever met can tell them reliably which is which, and that includes their own party.
+What follows is exactly what it sounds like — things travellers, refugees, and secondhand sources say. Some of it is certainly true. Some of it is certainly not. Nobody your character has ever met can tell them reliably which is which, and that includes their own party.
 
 - “There’s a stretch of the old west road where nothing works right anymore — not good, not bad, just nothing. A mile of ordinary dirt, in a country where dirt was never ordinary before.”
 - “A river between two market towns forgot eleven years of what was said to it. The towns started writing things down instead. They’re bad at it.”

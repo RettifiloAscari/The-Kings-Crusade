@@ -170,7 +170,7 @@ c.push(BOX("Tam Ondry doesn\u2019t bother reining in properly, half-falling out 
 
 c.push(H3("Running the Default Scene"));
 
-c.push(P("Tam\u2019s warning reaches the column\u2019s officers in time regardless of what the party does \u2014 that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 16 Medicine check, attempted within the first round after he falls, stabilizes him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module\u2019s emotional cost, and it should be allowed to land before Scene 3\u2019s battle begins."));
+c.push(P("Tam\u2019s warning reaches the column\u2019s officers in time regardless of what the party does \u2014 that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 16 Medicine check, attempted within the first round after he falls, stabilises him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module\u2019s emotional cost, and it should be allowed to land before Scene 3\u2019s battle begins."));
 
 c.push(H3("The Alternate: A Third Thread"));
 
@@ -185,7 +185,7 @@ c.push(H2("Scene 3: Holding the Line"));
 
 c.push(P("The ambush breaks from both treelines at once, and for several very long minutes the outcome is genuinely uncertain. This is the module\u2019s real fight, and it should feel like one."));
 
-c.push(BOX("The coalition line buckles and does not break \u2014 Oksitan spears on the left with a dragonborn house-knight somewhere in the middle of them roaring instructions nobody can hear, Auberitz heavier foot anchoring the center, Harrowmark\u2019s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss\u2019s attack with the calm of someone who still, even now, believes this is winnable."));
+c.push(BOX("The coalition line buckles and does not break \u2014 Oksitan spears on the left with a dragonborn house-knight somewhere in the middle of them roaring instructions nobody can hear, Auberitz heavier foot anchoring the centre, Harrowmark\u2019s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss\u2019s attack with the calm of someone who still, even now, believes this is winnable."));
 
 c.push(H3("Running the Scene"));
 
@@ -199,9 +199,9 @@ c.push(table(
   ["PCs", "Adj. XP", "Hard", "Deadly", "Reads as"],
   [10, 18, 16, 18, 38],
   [
-    ["4 at 7th", "6,000", "4,200", "6,800", "Hard, close to Deadly. Run as written."],
-    ["5 at 7th", "6,000", "5,250", "8,500", "Hard. This is the calibration the module wants."],
-    ["6 at 7th", "4,800", "6,300", "10,200", "Medium. Add two more legionaries, not a second officer."],
+    ["4 at 7th", "6,000", "4,400", "6,800", "Hard, close to Deadly. Run as written."],
+    ["5 at 7th", "6,000", "5,500", "8,500", "Hard. This is the calibration the module wants."],
+    ["6 at 7th", "4,800", "6,600", "10,200", "Medium. Add two more legionaries, not a second officer."],
     ["4 at 5th", "6,000", "3,000", "4,400", "Well past Deadly. Cut to four legionaries."]
   ]
 ));
@@ -246,8 +246,8 @@ c.push(table(
   [44, 26, 10, 20],
   [
     ["Read the treeline as a prepared ambush site", "Investigation / Survival", "13", "Moderate"],
-    ["Recognize the missing scouts as deliberate", "Insight", "13", "Moderate"],
-    ["Stabilize Tam Ondry after he falls (default Scene 2)", "Medicine", "16", "Hard"],
+    ["Recognise the missing scouts as deliberate", "Insight", "13", "Moderate"],
+    ["Stabilise Tam Ondry after he falls (default Scene 2)", "Medicine", "16", "Hard"],
     ["Hold a coalition position against Voss\u2019s pressure", "Athletics / relevant combat skill", "13", "Moderate"],
     ["Talk Voss into a battlefield surrender once clearly beaten", "Persuasion / Intimidation", "16", "Hard"]
   ]
@@ -316,12 +316,20 @@ c.push(P("Open thread: if captured rather than killed, Voss is a genuine long-te
 c.push(H1("Optional Content"));
 
 c.push(H2("What the Column Says About Tam"));
-c.push(P("If Tam died in Scene 2, let the coalition\u2019s reaction be genuine rather than perfunctory \u2014 a name added to a growing list, spoken plainly rather than eulogized, echoing exactly the register the Standing Water gave the second king\u2019s death in Module Five. No mechanical stakes; this is the module giving its cost real weight."));
+c.push(P("If Tam died in Scene 2, let the coalition\u2019s reaction be genuine rather than perfunctory \u2014 a name added to a growing list, spoken plainly rather than eulogised, echoing exactly the register the Standing Water gave the second king\u2019s death in Module Five. No mechanical stakes; this is the module giving its cost real weight."));
 
 c.push(H2("Voss\u2019s Own Papers"));
 c.push(P("If Voss is captured or her body searched, her own field orders reveal real, specific intelligence about the remaining distance to Caer Ysolde and what defends it \u2014 useful DM ammunition for Module Ten rather than something that needs to resolve here."));
 
 // -------------------------------------------------------------- Diverging
+c.push(H2("An Engine Behind the Line"));
+
+c.push(P("Voss did not march without one. Behind her reserve, on a cart drawn by eight oxen and guarded by four Legionaries of the Sixth, is a Draining Engine (Bestiary): plated, humming, and drawing the resident magic out of the ground in a slow circle into racks of cut light-stone. The grass for sixty yards round it is the grey of the Dead Mile. Every Elduvish creature within sixty feet of it feels it working, and so does any Elduvish member of the party."));
+
+c.push(P("An Engine is an objective, not an opponent. Run it as one: the legionaries hold, the Engine discharges at whoever is closest, and a clock runs \u2014 every round it keeps working is a round of the Living Realm going into a cart. Breaking it is a real and permanent win. Tell the party what a prisoner or Ninian will tell them if asked: there are only about thirty of these in Elduvaine. Let them do that arithmetic themselves."));
+
+c.push(PS([DM("DM Only: "), { t: "this is the campaign\u2019s cleanest answer to a table that wants to hurt Vale before Module Eleven. The Engine (2,300 XP) and its four legionaries (400) are 2,700 XP across five monsters, \u00d72 for 5,400 adjusted, or \u00d71.5 for 4,050 with six characters. At 7th level that is Hard for four characters, Medium to Hard for five and Easy\u2013Medium for six. Track how many Engines the party breaks across the campaign; it belongs in the Branch Ledger." }]));
+
 c.push(H1("Diverging Paths (DM Only)"));
 
 c.push(BUL("Which Scene 2 was run.", "Tam\u2019s death or the third-thread alternate \u2014 record which, since it changes what Module Ten and beyond can reference."));
@@ -330,10 +338,10 @@ c.push(BUL("General Voss\u2019s fate.", "Killed, captured, or fled \u2014 a capt
 // ---------------------------------------------------------------- Loot
 c.push(H1("Loot"));
 
-c.push(BUL("Voss\u2019s field orders.", "Real intelligence about Caer Ysolde\u2019s defenses \u2014 see Optional Content."));
+c.push(BUL("Voss\u2019s field orders.", "Real intelligence about Caer Ysolde\u2019s defences \u2014 see Optional Content."));
 
 c.push(BUL("A cloak of elvenkind.", "Off one of Voss\u2019s scouts, and Elduvish work \u2014 which is to say looted, three years ago, from somebody who is not alive to want it back. A DM who wants that to land can let the party find out whose it was."));
-c.push(BUL("Captured field equipment.", "Modest but genuine \u2014 weapons, armor, and supply recovered from Voss\u2019s broken column, worth collecting rather than a windfall.", { keepNext: true }));
+c.push(BUL("Captured field equipment.", "Modest but genuine \u2014 weapons, armour, and supply recovered from Voss\u2019s broken column, worth collecting rather than a windfall.", { keepNext: true }));
 
 // -------------------------------------------------------------- Refrain
 c.push(H1("The Refrain"));

@@ -31,7 +31,7 @@ This repository is the source of truth for the campaign.
 
 ## Contents
 
-- [The documents](#the-documents) — [Sourcebook](#sourcebook) · [Core volumes](#core-volumes) · [Session modules](#session-modules) · [Guides](#guides)
+- [The documents](#the-documents) — [Sourcebook](#sourcebook) · [Core volumes](#core-volumes) · [At the table](#at-the-table) · [Session modules](#session-modules) · [Guides](#guides)
 - [How this repository works](#how-this-repository-works)
 - [Table specifications](#table-specifications)
 - [Rebuilding](#rebuilding)
@@ -165,6 +165,21 @@ without changing the document, so compare `pdftotext -layout` output before assu
 content bug.
 
 ## Start here
+
+**Running this campaign?**
+
+1. Hand the players the [Player Guide](corpus/KC_Player_Guide.md) and
+   [Character Options](corpus/KC_Character_Options.md). Both are spoiler-safe and are
+   checked for leaks on every build.
+2. Run [Session Zero](corpus/KC_Session_Zero_Primer.md) before anything else.
+3. Run [Module One](corpus/KC_Module01_TheMuster.md), keeping the
+   [DM Reference Guide](corpus/KC_DM_Reference_Guide.md) open beside it. Fill in its
+   Branch Ledger after every session.
+
+The set has had a full production audit, recorded in
+[`drafts/PRODUCTION-AUDIT.RESOLVED.md`](drafts/PRODUCTION-AUDIT.RESOLVED.md).
+
+**Working on the repository?**
 
 Read [`CLAUDE.md`](CLAUDE.md) — it carries the premise, the tone, what is canon, what is
 **deliberately** undecided, and the production practice. The distinction it draws between

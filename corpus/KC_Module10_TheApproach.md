@@ -85,6 +85,22 @@ Before the final push, let the coalition’s leadership — and the party themse
 
 Do not resolve this scene with a decision. Its entire purpose is to make sure the table has heard the question asked seriously, by people with real stakes in the answer, before Module Eleven makes them answer it. End the module on the coalition making final preparations — supply, formation, the ordinary business of an army about to do something enormous — and hand off directly to Module Eleven.
 
+## Tiered Skill DCs
+
+Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign. Nothing in the Regent’s meeting is gated behind a check; these are for the edges of it.
+
+| **Task** | **Skill** | **DC** | **Tier** |
+| --- | --- | --- | --- |
+| Satisfy Aveline’s contact that the party is who it says it is | Persuasion / Insight | 13 | Moderate |
+| Read the resistance’s chalk signs on the lock gates | Investigation | 13 | Moderate |
+| Notice Aveline changing the subject away from Ninian | Insight | 16 | Hard |
+| Read what Doria Kell will not negotiate on | Insight | 13 | Moderate |
+| Convert the ledgers into a single number without help | Intelligence | 16 | Hard |
+
+## Stat Blocks
+
+None. This module has no fights by design, and a DM tempted to add one should use Optional Content instead. Aveline Ysolde has a block in the Bestiary, and it is there only so that a DM knows what happens to anybody who corners her.
+
 # Puzzles and Set Pieces
 
 Reading the Ledgers follows the price scene and adds twenty minutes, and only happens at all if the party bought the folio. The Regent’s Council is the counsel scene, with the question turned around and put to the party instead.
@@ -98,8 +114,8 @@ Norvatch records by weight and by date, not by kind, because Norvatch is buying 
 | **Year** | **Cut light-stone, tons** | **Other cargo, tons** | **What the party can work out** |
 | --- | --- | --- | --- |
 | One | 1,400 | 9,100 | Ordinary trade, plus a little. This is close to a normal year for Vindana. |
-| Two | 6,800 | 8,900 | The other cargo has not moved. The light-stone has gone up nearly fivefold. |
-| Three | 19,200 | 8,400 | And again. The curve is not linear and has not flattened. |
+| Two | 4,200 | 8,900 | The other cargo has not moved. The light-stone has tripled. |
+| Three | 19,200 | 8,400 | And then more than quadrupled. The curve is not linear and has not flattened. |
 
 The insight is that the ordinary cargo is flat, which means Elduvaine’s actual economy is unchanged and everything in the increase is the draining. And cut light-stone is not building stone: it is the medium, drained and packaged, and every ton of it is a piece of the Living Realm in a cart.
 
@@ -145,10 +161,18 @@ If the table wants more of Elduvaine’s ordinary resistance before the finale, 
 
 If the table wants a quiet character scene, let each PC write (or dictate, or simply compose in their head) a letter home before the finale — to Harrowmark, to wherever they came from, to whoever they left behind. No mechanical content; this is purely for the players who want a moment of reflection before the campaign’s climax.
 
+## Lisswater
+
+The road upriver along the Braid runs through Lisswater: eleven halfling villages along nine slow miles of the middle river that consider themselves one place, the best food in Elduvaine, and the strongest Listening Water in the kingdom. It is also where Aveline’s miller lives — the one who has been miscounting the levy for two years and would very much like to stop being the only person doing it.
+
+Lisswater’s etiquette about the water is nine centuries deep and outsiders find it incomprehensible: you do not speak at the edge about anything you would not repeat, and you do not stand there angry. A party that breaks the rule is not scolded. It is quietly and permanently regarded as unserious, and every door in eleven villages is exactly as open as it was before and not one inch more.
+
+If the table wants to hear once more what happened somewhere it was not — the fall of the capital, the capital’s Standing Light going out quarter by quarter over fourteen months, the royal house taken in a single night — this is the place for the Four Voices, and the Echo of the Listening Water (Bestiary) is the way to deliver it as a thing in the room rather than a riverbank. Four voices, none lying, none complete. Do not let anybody fight it. If they attack it, it leaves, and Lisswater will know.
+
 # Diverging Paths (DM Only)
 
 - **Whether Xavier signed Norvatch’s contract.** Signed, refused, or deferred — track which, and who in the party argued for it. A signed contract means the coalition has promised the same kingdom three times and the party knows how much of Elduvaine is left; a refusal means they walk into the finale without that number. This is the last entry added before the campaign’s final choice and it bears directly on it.
-- **What the party told the Regent, and what the Regent told them.** Not mechanically trackable in the usual sense, but worth a DM’s private note — this conversation is the table’s clearest signal yet of which way they are leaning on the campaign’s central question, and it is worth remembering going into Module Eleven.
+- **What the party told Aveline, and what Aveline told them.** Not mechanically trackable in the usual sense, but worth a DM’s private note — this conversation is the table’s clearest signal yet of which way they are leaning on the campaign’s central question, and it is worth remembering going into Module Eleven.
 
 # Loot
 

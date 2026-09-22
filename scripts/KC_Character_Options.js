@@ -447,13 +447,13 @@ c.push(table(
   ["Item", "Rarity", "Where it first appears"],
   [30, 26, 44],
   [
-    ["Standing-stone lamp", "Common", "Module 3, from Caerwyn\u2019s baker"],
-    ["Flask of Listening Water", "Uncommon", "Module 5, at the Standing Water"],
+    ["Standing-stone lamp", "Common", "Module Three, from Caerwyn\u2019s baker"],
+    ["Flask of Listening Water", "Uncommon", "Module Five, at the Standing Water"],
     ["Road-token", "Uncommon, attuned", "DM\u2019s discretion"],
     ["Kept Season seeds", "Uncommon", "DM\u2019s discretion"],
-    ["Legion pattern blade (+1)", "Uncommon", "Module 7, Drell\u2019s campaign sword"],
-    ["Wand of magic missiles", "Uncommon", "Module 7, the harbour-mage\u2019s quarters"],
-    ["Cloak of elvenkind", "Uncommon, attuned", "Module 9, off one of Voss\u2019s scouts"],
+    ["Legion pattern blade (+1)", "Uncommon", "Module Seven, Drell\u2019s campaign sword"],
+    ["Wand of magic missiles", "Uncommon", "Module Seven, the harbour-mage\u2019s quarters"],
+    ["Cloak of elvenkind", "Uncommon, attuned", "Module Nine, off one of Voss\u2019s scouts"],
     ["Keeper\u2019s pruning hook", "Rare, attuned", "The Orchard Marches"],
     ["Ysolde reading-glass", "Rare, attuned", "The Archive, and not easily"]
   ]

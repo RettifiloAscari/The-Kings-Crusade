@@ -212,6 +212,26 @@ c.push(BOX("Nobody puts it that bluntly. It comes out instead as smaller questio
 c.push(P("Do not resolve this scene with a decision. Its entire purpose is to make sure the table has heard the question asked seriously, by people with real stakes in the answer, before Module Eleven makes them answer it. End the module on the coalition making final preparations \u2014 supply, formation, the ordinary business of an army about to do something enormous \u2014 and hand off directly to Module Eleven."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H2("Tiered Skill DCs"));
+
+c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign. Nothing in the Regent\u2019s meeting is gated behind a check; these are for the edges of it."));
+
+c.push(table(
+  ["Task", "Skill", "DC", "Tier"],
+  [44, 26, 10, 20],
+  [
+    ["Satisfy Aveline\u2019s contact that the party is who it says it is", "Persuasion / Insight", "13", "Moderate"],
+    ["Read the resistance\u2019s chalk signs on the lock gates", "Investigation", "13", "Moderate"],
+    ["Notice Aveline changing the subject away from Ninian", "Insight", "16", "Hard"],
+    ["Read what Doria Kell will not negotiate on", "Insight", "13", "Moderate"],
+    ["Convert the ledgers into a single number without help", "Intelligence", "16", "Hard"]
+  ]
+));
+
+c.push(H2("Stat Blocks"));
+
+c.push(P("None. This module has no fights by design, and a DM tempted to add one should use Optional Content instead. Aveline Ysolde has a block in the Bestiary, and it is there only so that a DM knows what happens to anybody who corners her."));
+
 c.push(H1("Puzzles and Set Pieces"));
 
 c.push(P("Reading the Ledgers follows the price scene and adds twenty minutes, and only happens at all if the party bought the folio. The Regent\u2019s Council is the counsel scene, with the question turned around and put to the party instead."));
@@ -227,8 +247,8 @@ c.push(table(
   [14, 32, 24, 30],
   [
     ["One", "1,400", "9,100", "Ordinary trade, plus a little. This is close to a normal year for Vindana."],
-    ["Two", "6,800", "8,900", "The other cargo has not moved. The light-stone has gone up nearly fivefold."],
-    ["Three", "19,200", "8,400", "And again. The curve is not linear and has not flattened."]
+    ["Two", "4,200", "8,900", "The other cargo has not moved. The light-stone has tripled."],
+    ["Three", "19,200", "8,400", "And then more than quadrupled. The curve is not linear and has not flattened."]
   ]
 ));
 
@@ -274,11 +294,19 @@ c.push(H2("Letters Home"));
 c.push(P("If the table wants a quiet character scene, let each PC write (or dictate, or simply compose in their head) a letter home before the finale \u2014 to Harrowmark, to wherever they came from, to whoever they left behind. No mechanical content; this is purely for the players who want a moment of reflection before the campaign\u2019s climax."));
 
 // -------------------------------------------------------------- Diverging
+c.push(H2("Lisswater"));
+
+c.push(P("The road upriver along the Braid runs through Lisswater: eleven halfling villages along nine slow miles of the middle river that consider themselves one place, the best food in Elduvaine, and the strongest Listening Water in the kingdom. It is also where Aveline\u2019s miller lives \u2014 the one who has been miscounting the levy for two years and would very much like to stop being the only person doing it."));
+
+c.push(P("Lisswater\u2019s etiquette about the water is nine centuries deep and outsiders find it incomprehensible: you do not speak at the edge about anything you would not repeat, and you do not stand there angry. A party that breaks the rule is not scolded. It is quietly and permanently regarded as unserious, and every door in eleven villages is exactly as open as it was before and not one inch more."));
+
+c.push(P("If the table wants to hear once more what happened somewhere it was not \u2014 the fall of the capital, the capital\u2019s Standing Light going out quarter by quarter over fourteen months, the royal house taken in a single night \u2014 this is the place for the Four Voices, and the Echo of the Listening Water (Bestiary) is the way to deliver it as a thing in the room rather than a riverbank. Four voices, none lying, none complete. Do not let anybody fight it. If they attack it, it leaves, and Lisswater will know."));
+
 c.push(H1("Diverging Paths (DM Only)"));
 
 c.push(BUL("Whether Xavier signed Norvatch\u2019s contract.", "Signed, refused, or deferred \u2014 track which, and who in the party argued for it. A signed contract means the coalition has promised the same kingdom three times and the party knows how much of Elduvaine is left; a refusal means they walk into the finale without that number. This is the last entry added before the campaign\u2019s final choice and it bears directly on it."));
 
-c.push(BUL("What the party told the Regent, and what the Regent told them.", "Not mechanically trackable in the usual sense, but worth a DM\u2019s private note \u2014 this conversation is the table\u2019s clearest signal yet of which way they are leaning on the campaign\u2019s central question, and it is worth remembering going into Module Eleven."));
+c.push(BUL("What the party told Aveline, and what Aveline told them.", "Not mechanically trackable in the usual sense, but worth a DM\u2019s private note \u2014 this conversation is the table\u2019s clearest signal yet of which way they are leaning on the campaign\u2019s central question, and it is worth remembering going into Module Eleven."));
 
 // ---------------------------------------------------------------- Loot
 c.push(H1("Loot"));

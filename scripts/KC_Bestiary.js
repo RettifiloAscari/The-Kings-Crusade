@@ -233,7 +233,7 @@ c.push(...SB({
   ]
 }));
 
-c.push(PS([DM("DM Only: "), { t: "the Echo is the Four Voices technique with a stat block attached, for tables that want the delivery mechanism to be a thing in the room rather than a riverbank. Use it when the party needs to hear something that happened somewhere they were not, and give them the court\u2019s version, the commons' version, the proclamation and the private grief, in four different voices, none of them lying and none of them complete. Do not let anybody fight it. If they attack it, it leaves." }]));
+c.push(PS([DM("DM Only: "), { t: "the Echo is the Four Voices technique with a stat block attached, for tables that want the delivery mechanism to be a thing in the room rather than a riverbank. Use it when the party needs to hear something that happened somewhere they were not, and give them the court\u2019s version, the commons\u2019 version, the proclamation and the private grief, in four different voices, none of them lying and none of them complete. Do not let anybody fight it. If they attack it, it leaves." }]));
 
 c.push(...SB({
   name: "Draining Engine",
@@ -444,7 +444,7 @@ c.push(table(
     ["The sea road", "Merrow (CR 2), giant octopus (CR 1), sahuagin (CR 1/2)"],
     ["The mountain road", "Kobold (CR 1/8), ogre (CR 2), griffon (CR 2), troll (CR 5), giant eagle (CR 1)"],
     ["The Vaunt", "Sprite (CR 1/4), ghoul (CR 1), scout (CR 1/2), giant crab (CR 1/8)"],
-    ["The Braid", "Will-o'-wisp (CR 2), spy (CR 1), veteran (CR 3), mage (CR 6)"],
+    ["The Braid", "Will-o\u2019-wisp (CR 2), spy (CR 1), veteran (CR 3), mage (CR 6)"],
     ["The Orchard Marches", "Dryad (CR 1), winter wolf (CR 3), troll (CR 5), satyr (CR 1/2), awakened tree (CR 2)"],
     ["The Standing Marches", "Gargoyle (CR 2), earth elemental (CR 5), stone giant (CR 7)"],
     ["Vindana\u2019s undercity", "Kobold (CR 1/8), giant rat (CR 1/8), grey ooze (CR 1/2), otyugh (CR 5)"]

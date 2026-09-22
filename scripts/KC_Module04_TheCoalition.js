@@ -154,11 +154,11 @@ c.push(PS([DM("DM Only: "), { t: "the Ward is Ninian Ysolde \u2014 half-elf, twe
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Muster Camp"));
 
-c.push(P("The camp above Caerwyn is the first time the party has seen the coalition as a whole rather than as a rumor at the edge of the Harrowmark muster: Oksitan tents in orderly rows, their banners a color the party has not seen before; Auberitz\u2019s heavier cavalry picketed apart, grooms working in a language half the camp does not speak; Harrowmark\u2019s own levies looking, for the first time, like the smallest contingent present."));
+c.push(P("The camp above Caerwyn is the first time the party has seen the coalition as a whole rather than as a rumour at the edge of the Harrowmark muster: Oksitan tents in orderly rows, their banners a colour the party has not seen before; Auberitz\u2019s heavier cavalry picketed apart, grooms working in a language half the camp does not speak; Harrowmark\u2019s own levies looking, for the first time, like the smallest contingent present."));
 
 c.push(BOX("The camp smells of a dozen different cooking fires and sounds like three armies that have not yet decided how loudly they are allowed to dislike each other. An Oksitan sergeant argues good-naturedly with a Harrowmark quartermaster over a supply wagon; an Auberitz officer watches both of them with the particular patience of someone counting days until the argument becomes his problem."));
 
-c.push(P("Let the party walk the camp and meet it at their own pace. If Module 2A was played, Sera Vosk (see her NPC profile in Module 2A) is a natural, familiar face to have turn up here, now properly attached to the Auberitz contingent\u2019s logistics; if Module 2B was played, use a new, unnamed Auberitz quartermaster instead, or introduce Garrick Hollow\u2019s opposite number for texture. Either way, someone in camp should treat the party as already known \u2014 the story of whichever Module Two variant they played has traveled ahead of them."));
+c.push(P("Let the party walk the camp and meet it at their own pace. If Module 2A was played, Sera Vosk (see her NPC profile in Module 2A) is a natural, familiar face to have turn up here, now properly attached to the Auberitz contingent\u2019s logistics; if Module 2B was played, use a new, unnamed Auberitz quartermaster instead, or introduce Garrick Hollow\u2019s opposite number for texture. Either way, someone in camp should treat the party as already known \u2014 the story of whichever Module Two variant they played has travelled ahead of them."));
 
 // ---------------------------------------------------------------- Scene 2
 c.push(H2("Scene 2: What the Promise Is Worth"));
@@ -188,9 +188,9 @@ c.push(PS([DM("DM Only: "), { t: "this is where the campaign keeps its complexit
 
 c.push(H2("Scene 3: Doria Kell\u2019s Offer"));
 
-c.push(P("Away from camp \u2014 at a well, on a supply run, wherever the party can be approached without an audience \u2014 a woman in plain, well-made traveling clothes falls into step beside them, unhurried and entirely unbothered by the coalition\u2019s presence."));
+c.push(P("Away from camp \u2014 at a well, on a supply run, wherever the party can be approached without an audience \u2014 a woman in plain, well-made travelling clothes falls into step beside them, unhurried and entirely unbothered by the coalition\u2019s presence."));
 
-c.push(BOX("\u201CDoria Kell, factor of Norvatch,\u201D she says, as though the introduction were a formality rather than an offer. \u201CI don\u2019t march with your coalition and I don\u2019t intend to. I trade with whoever\u2019s buying, on either side of this war, and just now I\u2019m buying goodwill. I know where one of Elduvaine\u2019s royal wards is being kept. I\u2019ll tell you, no charge, no favor owed \u2014 because it costs me nothing and it might cost the man holding her something later, and I find that arrangement agreeable.\u201D"));
+c.push(BOX("\u201CDoria Kell, factor of Norvatch,\u201D she says, as though the introduction were a formality rather than an offer. \u201CI don\u2019t march with your coalition and I don\u2019t intend to. I trade with whoever\u2019s buying, on either side of this war, and just now I\u2019m buying goodwill. I know where one of Elduvaine\u2019s royal wards is being kept. I\u2019ll tell you, no charge, no favour owed \u2014 because it costs me nothing and it might cost the man holding her something later, and I find that arrangement agreeable.\u201D"));
 
 c.push(P("Doria is not an ally and does not pretend to be one. She trades information the way she trades goods \u2014 because it is profitable, not because she is choosing a side \u2014 and this scene should make that legible without making her untrustworthy; what she says checks out exactly as she describes it. If the party wants to press her for more (payment for better information, a standing arrangement, anything beyond this one free lead), she will discuss terms plainly, and a DM can use this as a recurring thread: Norvatch as a source the party can return to, always for a price, never as a friend."));
 
@@ -242,6 +242,22 @@ c.push(...SB({
 }));
 
 // -------------------------------------------------------------- Skill DCs
+c.push(H3("Scaling the Fight"));
+
+c.push(P("Sennoch Hall is three different fights depending on how loud the party is, and the arithmetic below is why the module steers so hard toward quiet. Legionaries are 100 XP each and Hoth, as a Legion Optio, is 450; thresholds are for 5th level."));
+
+c.push(table(
+  ["How loud", "Who fights", "Adj. XP (4\u20135 / 6)", "Reads as"],
+  [18, 30, 20, 32],
+  [
+    ["Quiet", "The library guard and whoever is nearest: three legionaries", "600 / 450", "Below Easy at every size. The reward for being quiet."],
+    ["The gate", "Six on watch and Hoth: seven monsters, \u00d72.5", "2,625 / 2,100", "Medium for four or five, Easy for six."],
+    ["The whole Hall", "Eighteen legionaries and Hoth: nineteen, \u00d74", "9,000 / 6,750", "Past Deadly at every size. Do not run it as one fight."]
+  ]
+));
+
+c.push(P("Morale is the honest lever in all three. The Sixth withdraws in good order when a fight is clearly lost or its officer orders it, and Hoth orders it the moment the tower is taken \u2014 he has been waiting three years to be allowed to."));
+
 c.push(H2("Tiered Skill DCs"));
 
 c.push(P("Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign."));
@@ -302,7 +318,7 @@ c.push(BOX("\u201CI have eighteen. You have got past the water and the bell and 
 
 c.push(P("He means every word and there is no trick in it. The file is real and is genuinely valuable \u2014 it names the collaborator clerks in the Braid, it establishes what the occupation asked the royal house and when, and it is the campaign\u2019s first hard evidence that Emrys Ysolde has been talking to Vale."));
 
-c.push(P("A party that fights him instead wins. Eighteen legionaries and an optio against five characters at 5th level is a real fight and not a close one if the party has taken the range or the gate. They also lose the file, which Hoth burns, correctly, per his standing orders, in the four minutes it takes them to reach the study."));
+c.push(P("A party that fights him instead can win, but only on its own terms: eighteen legionaries and an optio awake and armoured are well past Deadly for any party at 5th level, and the fight is only winnable if the party has already taken the garrison range while its twelve were unarmoured, or holds the gate and fights them a file at a time. They also lose the file, which Hoth burns, correctly, per his standing orders, in the four minutes it takes them to reach the study."));
 
 c.push(H1("NPC Profiles"));
 

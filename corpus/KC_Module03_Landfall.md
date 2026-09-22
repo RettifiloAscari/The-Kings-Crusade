@@ -21,7 +21,7 @@ Run Scene 1 before Scene 2, in that order, without exception. The sourcebook’s
 | 1. First Light of Elduvaine | 30–40 min | A working habit. Play this for wonder, at length. |
 | 2. The Dead Mile | 20–30 min | A failing habit. Short, quiet, and the module’s gut-punch. |
 | 3. The Caerwyn Checkpoint | 45–75 min | The occupation, in bureaucratic miniature. Rarely needs to be a fight. |
-| 4. The Riverbank | 60–90 min | The Four Voices. See below — this is the module’s centerpiece. |
+| 4. The Riverbank | 60–90 min | The Four Voices. See below — this is the module’s centrepiece. |
 | Optional Content | 30–45 min | Run if the table has time; cut cleanly if not. |
 
 # What Is Actually Happening (DM Only)
@@ -34,7 +34,7 @@ Caerwyn is halflings and humans in about equal measure, with a gnome family runn
 
 The final approach to Caerwyn goes faster than the coalition’s own maps predicted, and nobody aboard can quite say why — a current that ran the right way, a headland that seemed to arrive sooner than the charts allowed. It is the Willing Road’s cousin at work, though nobody in the party has cause to name it yet.
 
-> *Caerwyn rises out of the dusk already lit — not by torches, not by hearth-fires banked for evening, but from within: pale stone walls holding a soft, steady glow, as though the town had swallowed the last of the daylight and was giving it back slowly, all night, for anyone who needed it. A child on the harbor wall waves at the ship without any particular urgency, the way you wave at something ordinary.*
+> *Caerwyn rises out of the dusk already lit — not by torches, not by hearth-fires banked for evening, but from within: pale stone walls holding a soft, steady glow, as though the town had swallowed the last of the daylight and was giving it back slowly, all night, for anyone who needed it. A child on the harbour wall waves at the ship without any particular urgency, the way you wave at something ordinary.*
 
 Give this scene real time. Let the party walk Caerwyn’s streets before anything else happens: stone that is warm to the touch after dark, a well that a local swears will repeat back a lullaby sung to it forty years ago if you ask it kindly, a baker who insists — matter-of-factly, not proudly — that the ovens here have never needed lighting twice. None of this is remarkable to the people living in it. That is exactly what should make it remarkable to the party.
 
@@ -60,7 +60,7 @@ This is Wyn Alder (see NPC Profiles). She has no papers to offer that would sati
 
 A checkpoint this small cannot stop a coalition landing party and everyone present knows it. Wyn will not fight, will not raise an alarm she cannot win, and will answer honest questions honestly if approached without threats — she has no loyalty to Vale, only a family in Caerwyn she cannot afford to have marked as uncooperative. A Charisma (Persuasion) or Wisdom (Insight) check against DC 13 gets her talking plainly about levy quotas, patrol patterns, and how thin the occupation’s actual presence is this far from the capital; nothing requires a check if the party simply treats her like a person rather than an obstacle.
 
-If the party threatens or attacks the checkpoint, the soldiers (use the Occupation Guard stat block) fight briefly and then flee or surrender — they are a levy garrison, not a real defense, and know it. Wyn does not fight under any circumstances and should not be placed in danger by this module regardless of how the scene resolves; if combat breaks out, she ducks for cover and stays there. A violent resolution here has a real cost the table should feel: word of an attacked checkpoint reaches Caer Ysolde days sooner than it otherwise would have, which a DM can pay off later as tightened security somewhere that mattered.
+If the party threatens or attacks the checkpoint, the soldiers (use the Occupation Guard stat block) fight briefly and then flee or surrender — they are a levy garrison, not a real defence, and know it. Wyn does not fight under any circumstances and should not be placed in danger by this module regardless of how the scene resolves; if combat breaks out, she ducks for cover and stays there. A violent resolution here has a real cost the table should feel: word of an attacked checkpoint reaches Caer Ysolde days sooner than it otherwise would have, which a DM can pay off later as tightened security somewhere that mattered.
 
 ### Stat Block (If Needed)
 
@@ -116,7 +116,7 @@ A short walk from Caerwyn, a slow, wide stream runs beneath old willows — a Li
 
 ### Running the Scene
 
-Let the party sit at the water’s edge and listen. Read each of the four voices below as its own boxed passage, in order, with a pause between each — do not summarize or paraphrase them together. None of the four is lying. None of them is complete. The party’s job, and the table’s pleasure, is assembling what actually happened from four honest, incomplete, differently motivated accounts, the same technique named directly in the sourcebook under Running Elduvaine.
+Let the party sit at the water’s edge and listen. Read each of the four voices below as its own boxed passage, in order, with a pause between each — do not summarise or paraphrase them together. None of the four is lying. None of them is complete. The party’s job, and the table’s pleasure, is assembling what actually happened from four honest, incomplete, differently motivated accounts, the same technique named directly in the sourcebook under Running Elduvaine.
 
 ### The Court’s Account
 

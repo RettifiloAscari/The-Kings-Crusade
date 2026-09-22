@@ -149,9 +149,9 @@ c.push(table(
 // --------------------------------------------- What Is Actually Happening
 c.push(H1("What Is Actually Happening (DM Only)"));
 
-c.push(P("Nothing on this road is Vale\u2019s doing. Baron Osgar Vell holds a toll-keep at the mouth of the Ashgate pass under a technicality of allegiance to Oksitan that nobody in Oksitan\u2019s own court would recognize as binding, and has been quietly taxing every column through his valley for longer than the coalition\u2019s maps have been current. The Ashgate Ford is not cursed or watched; it is simply a fast, cold, early-season river that has killed careless travellers for as long as there has been a road beside it. The column\u2019s losses this module \u2014 to weather, to the ford, to Vell\u2019s harassment if it comes to a fight \u2014 are the ordinary cost of moving an army overland, and should be played as exactly that: unglamorous, and real."));
+c.push(P("Nothing on this road is Vale\u2019s doing. Baron Osgar Vell holds a toll-keep at the mouth of the Ashgate pass under a technicality of allegiance to Oksitan that nobody in Oksitan\u2019s own court would recognise as binding, and has been quietly taxing every column through his valley for longer than the coalition\u2019s maps have been current. The Ashgate Ford is not cursed or watched; it is simply a fast, cold, early-season river that has killed careless travellers for as long as there has been a road beside it. The column\u2019s losses this module \u2014 to weather, to the ford, to Vell\u2019s harassment if it comes to a fight \u2014 are the ordinary cost of moving an army overland, and should be played as exactly that: unglamorous, and real."));
 
-c.push(PS([DM("DM Only: "), { t: "the Ashgate Ford in Scene 2 is deliberately written to echo the second king\u2019s death, which the party will learn about in Module 5 as news from the road they did not take. Do not explain this echo at the table. If a player nearly loses a companion to the water here and later hears that a king died the same way on the other road, let them draw that line themselves \u2014 it lands harder unexplained." }]));
+c.push(PS([DM("DM Only: "), { t: "the Ashgate Ford in Scene 2 is deliberately written to echo the second king\u2019s death, which the party will learn about in Module Five as news from the road they did not take. Do not explain this echo at the table. If a player nearly loses a companion to the water here and later hears that a king died the same way on the other road, let them draw that line themselves \u2014 it lands harder unexplained." }]));
 
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Long Column"));
@@ -167,7 +167,7 @@ c.push(H2("Scene 2: The Ashgate Ford"));
 
 c.push(P("The road drops into a valley and the column\u2019s scouts report the obvious problem: the ford that should be a shin-deep crossing is running high and fast with early snowmelt, and the column\u2019s wagons and the coalition\u2019s heavier troops cannot simply walk it."));
 
-c.push(BOX("The water is the color of old iron and moves like something with a purpose. A supply wagon\u2019s ox baulks at the bank and has to be led in blindfolded; halfway across, the current takes the wagon sideways for one long, silent moment before the ropes hold and it lurches up onto the far bank, half its load gone downstream."));
+c.push(BOX("The water is the colour of old iron and moves like something with a purpose. A supply wagon\u2019s ox baulks at the bank and has to be led in blindfolded; halfway across, the current takes the wagon sideways for one long, silent moment before the ropes hold and it lurches up onto the far bank, half its load gone downstream."));
 
 c.push(P("This is a hazard scene, not a fight. Let the party help however they choose \u2014 anchoring ropes, calming panicked animals, physically steadying wagons and people through the crossing \u2014 and use the Tiered Skill DCs below to resolve it. Nobody needs to die here for the scene to matter; a lost wagon, a soaked and furious quartermaster, or a near-miss that everyone in earshot will still be talking about that evening is enough. If a PC fails badly and the table wants real stakes, a companion NPC or a nameless soldier can be swept downstream and require a rescue (see DC table) rather than simply be lost \u2014 reserve an actual death here for a table that has clearly bought into the danger and wants it to be real."));
 
@@ -198,13 +198,13 @@ c.push(H3("Running the Scene"));
 
 c.push(P("Vell will negotiate, and a table that wants to avoid a fight in this narrow, badly-chosen ground should be able to. A successful Charisma (Persuasion) check against DC 16, or convincing proof of a coalition writ of passage the party can produce or talk their way into being believed to have, gets the column through for a token payment. A successful Wisdom (Insight) check against DC 13 reveals that Vell is bluffing about his numbers \u2014 he has enough scouts to make a fight costly, not enough to actually hold the pass against a coalition column, and he knows it."));
 
-c.push(P("If the party wants to avoid Vell entirely rather than pay or fight him, a DC 16 Survival check (working from a scout\u2019s report or the party\u2019s own reconnaissance) finds a longer goat-track around the toll-keep that costs the column an extra half-day but avoids the confrontation altogether \u2014 a different flavor of nonviolent resolution than talking Vell down, and one some tables will prefer."));
+c.push(P("If the party wants to avoid Vell entirely rather than pay or fight him, a DC 16 Survival check (working from a scout\u2019s report or the party\u2019s own reconnaissance) finds a longer goat-track around the toll-keep that costs the column an extra half-day but avoids the confrontation altogether \u2014 a different flavour of nonviolent resolution than talking Vell down, and one some tables will prefer."));
 
 c.push(P("If it comes to violence \u2014 Vell refuses reasonable terms, the party attacks, or negotiations simply fail \u2014 his scouts fight from cover on the high ground rather than committing to open melee, and break off and flee once Vell himself is dropped, captured, or clearly beaten; they are paid skirmishers, not zealots, and have no reason to die for a toll-keep. This should read as a real skirmish in bad terrain, not a formality; see Scaling the Fight for why it is not meant to be this module\u2019s hardest moment regardless."));
 
 c.push(H3("Scaling the Fight"));
 
-c.push(P("Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavored; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts \u2014 four total monsters, inside the 3\u20136 monster band, so no table\u2019s party size crosses a multiplier boundary on its own."));
+c.push(P("Baron Vell is the SRD Bandit Captain (CR 2, 450 XP) renamed and reflavoured; his scouts are the SRD Scout (CR 1/2, 100 XP each), both taken from the SRD unaltered. Run with Vell plus three Scouts \u2014 four total monsters, inside the 3\u20136 monster band, so no table\u2019s party size crosses a multiplier boundary on its own."));
 
 c.push(table(
   ["PCs", "Base XP", "Mult.", "Adj. XP", "Medium", "Reads as"],
@@ -287,7 +287,7 @@ c.push(P("However the ford and the toll-keep were settled, the column presses on
 
 c.push(BOX("Garrick Hollow, the column\u2019s hired guide, falls into step beside the party as the toll-keep drops out of sight behind them. \u201CEvery mile past here I know less than the mile before it,\u201D he says, without much apparent concern. \u201CWhich is either a comfort or it isn\u2019t, depending on how you\u2019ve found my company so far.\u201D"));
 
-c.push(P("This is where the module ends, and where the DM should let the weight of the road actually register \u2014 a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module 3, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module 5, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news."));
+c.push(P("This is where the module ends, and where the DM should let the weight of the road actually register \u2014 a brief moment of the column taking stock, tending its wounded, and continuing, rather than a triumphant scene. Hand off directly to Module Three, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module Five, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news."));
 
 // ------------------------------------------------------------ NPC Profiles
 c.push(H1("Puzzles and Set Pieces"));
@@ -344,11 +344,11 @@ c.push(H1("NPC Profiles"));
 
 c.push(H2("Garrick Hollow"));
 c.push(P("A half-elf hired out of the last town before the passes, paid to know these mountains better than the coalition\u2019s own maps do, which he does. Speech: unbothered, faintly dry, prone to stating bad news as though it were simply weather. Genuinely good at his job, and genuinely indifferent to whether anyone finds that reassuring."));
-c.push(P("Open thread: Garrick knows this road and, plausibly, others \u2014 a DM can bring him back as a recurring guide for any later overland stretch of the campaign, or use him as the source of a rumor or shortcut when the party needs one and has no other way to justify finding it."));
+c.push(P("Open thread: Garrick knows this road and, plausibly, others \u2014 a DM can bring him back as a recurring guide for any later overland stretch of the campaign, or use him as the source of a rumour or shortcut when the party needs one and has no other way to justify finding it."));
 
 c.push(H2("Baron Osgar Vell"));
 c.push(P("Comfortable in bad terrain the way a man is comfortable in a home he built himself. Speech: measured, faintly amused, treats the toll as a fact of nature rather than a crime. Not personally vicious \u2014 his scouts are paid, not fanatical, and he has no interest in a fight he does not expect to win."));
-c.push(P("Open thread: if he survives \u2014 paid off, talked down, or simply outmaneuvered \u2014 Vell keeps his keep and his technicality of allegiance, and a DM can bring him back later as a minor, recurring complication on any road that passes near Ashgate, or as a source of local intelligence if the party ever needs a favor from someone who owes them one."));
+c.push(P("Open thread: if he survives \u2014 paid off, talked down, or simply outmanoeuvred \u2014 Vell keeps his keep and his technicality of allegiance, and a DM can bring him back later as a minor, recurring complication on any road that passes near Ashgate, or as a source of local intelligence if the party ever needs a favour from someone who owes them one."));
 
 // --------------------------------------------------------------- Optional
 c.push(H1("Optional Content"));
@@ -376,7 +376,7 @@ c.push(P("Two days off the road, four hundred barrows across nine miles of moor,
 c.push(PS([DM("DM Only: "), { t: "Barrowfell has nothing whatever to do with Vale, Elduvaine, or this war, and that is the entire point of it. A setting where every ruin is plot is a setting with no history in it. Put something genuinely old and genuinely unrelated down here, let the party spend an optional session on it, and never connect it to anything \u2014 including, especially, at the end of the campaign when it would be very easy to." }]));
 
 c.push(H2("What the Column Talks About"));
-c.push(P("Before Ashgate, let the party spend some idle marching time among the coalition\u2019s ordinary soldiers \u2014 Harrowmark levies, and the first Oksitan or Auberitz troops the party has walked near long enough to actually talk to. Play this for texture: homesickness, rumors about Elduvaine that are mostly wrong, and the particular, unglamorous humor of people who have been walking together for weeks. No mechanical stakes."));
+c.push(P("Before Ashgate, let the party spend some idle marching time among the coalition\u2019s ordinary soldiers \u2014 Harrowmark levies, and the first Oksitan or Auberitz troops the party has walked near long enough to actually talk to. Play this for texture: homesickness, rumours about Elduvaine that are mostly wrong, and the particular, unglamorous humour of people who have been walking together for weeks. No mechanical stakes."));
 
 c.push(H2("The Wounded Wagon"));
 c.push(P("If the table wants more to do before the ford, a supply wagon has thrown a wheel on bad road and needs help before the column can move again \u2014 a short, low-stakes problem-solving scene (Investigation or Athletics, DC 10) that adds texture and a chance for a less combat-oriented character to shine, without adding a beat the module needs."));
@@ -384,7 +384,7 @@ c.push(P("If the table wants more to do before the ford, a supply wagon has thro
 // -------------------------------------------------------------- Diverging
 c.push(H1("Diverging Paths (DM Only)"));
 
-c.push(BUL("What the ford cost.", "A wagon, a delay, a near-miss, or an actual loss \u2014 track which, and how the party responded. This has no mechanical follow-up but is worth a callback when the drowned king\u2019s fate reaches the party in Module 5."));
+c.push(BUL("What the ford cost.", "A wagon, a delay, a near-miss, or an actual loss \u2014 track which, and how the party responded. This has no mechanical follow-up but is worth a callback when the drowned king\u2019s fate reaches the party in Module Five."));
 c.push(BUL("How Vell\u2019s toll was settled.", "Paid, talked down, bypassed, or fought \u2014 track which. A bypassed or talked-down Vell keeps his keep and his technicality of allegiance, which a DM can raise again if the coalition\u2019s relationship with Oksitan becomes a live question later in the campaign."));
 
 // ---------------------------------------------------------------- Loot

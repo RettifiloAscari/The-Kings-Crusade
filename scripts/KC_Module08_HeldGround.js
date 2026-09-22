@@ -149,18 +149,18 @@ c.push(table(
 // --------------------------------------------- What Is Actually Happening
 c.push(H1("What Is Actually Happening (DM Only)"));
 
-c.push(P("Nothing in this module is a trap, a test, or a delayed complication. Vindana is genuinely secure, the coalition is genuinely at ease for the first time since Module One, and the Magistrate\u2019s rescue in Scene 3 is genuinely as easy as it plays \u2014 the occupation\u2019s administration in a freshly-fallen city is in real disarray, and a party willing to use its own paperwork against it will find that disarray works entirely in their favor. If a DM feels this module is too easy, that is correct and intentional."));
+c.push(P("Nothing in this module is a trap, a test, or a delayed complication. Vindana is genuinely secure, the coalition is genuinely at ease for the first time since Module One, and the Magistrate\u2019s rescue in Scene 3 is genuinely as easy as it plays \u2014 the occupation\u2019s administration in a freshly-fallen city is in real disarray, and a party willing to use its own paperwork against it will find that disarray works entirely in their favour. If a DM feels this module is too easy, that is correct and intentional."));
 
 c.push(PS([DM("DM Only: "), { t: "Xavier has still not directly addressed being called the Wyvernheart as of this module\u2019s start \u2014 the gap held open in Module Seven continues into Scene 4, which is the one place this module allows real feeling. Do not let the earlier scenes anticipate it." }]));
 
 // ---------------------------------------------------------------- Scene 1
 c.push(H2("Scene 1: The Long Exhale"));
 
-c.push(P("Vindana\u2019s taken harbor district has become, within days, the loudest and most cheerful place the coalition has occupied since Harrowmark. Let the party spend real time here."));
+c.push(P("Vindana\u2019s taken harbour district has become, within days, the loudest and most cheerful place the coalition has occupied since Harrowmark. Let the party spend real time here."));
 
 c.push(BOX("Someone has chalked a running tally on the side of a captured warehouse \u2014 days since the siege, casks emptied, and, unofficially, a tally of how many times a passing soldier has tried and failed to get a straight answer out of Huntmaster Brenna Vane about whether she actually rode south for the war or just to see the fuss for herself."));
 
-c.push(P("If Module One was played, Brenna Vane has arrived with a handful of Greywatch hands, drawn south by rumor of the Wyvernheart with an expression that suggests she will never admit that is the reason. If Module 2A or 2B was played, Sera Vosk or Garrick Hollow can likewise turn up here, already embedded in the coalition\u2019s logistics or scouting corps. Use whichever recurring faces the table has earned; this scene\u2019s only job is reunion and warmth."));
+c.push(P("If Module One was played, Brenna Vane has arrived with a handful of Greywatch hands, drawn south by rumour of the Wyvernheart with an expression that suggests she will never admit that is the reason. If Module 2A or 2B was played, Sera Vosk or Garrick Hollow can likewise turn up here, already embedded in the coalition\u2019s logistics or scouting corps. Use whichever recurring faces the table has earned; this scene\u2019s only job is reunion and warmth."));
 
 // ---------------------------------------------------------------- Scene 2
 c.push(H2("Scene 2: The Grain Ledger War"));
@@ -195,7 +195,7 @@ c.push(table(
   [
     ["Resolve the quartermasters\u2019 dispute without violence", "Persuasion / Insight", "10", "Easy"],
     ["Forge or produce convincing transfer papers", "Deception / an appropriate tool proficiency", "13", "Moderate"],
-    ["Talk a guard out of scrutinizing the papers", "Persuasion", "10", "Easy"],
+    ["Talk a guard out of scrutinising the papers", "Persuasion", "10", "Easy"],
     ["Notice the pressed Elduvish clerk\u2019s actual situation", "Insight / Perception", "13", "Moderate"]
   ]
 ));
@@ -203,13 +203,17 @@ c.push(table(
 // ---------------------------------------------------------------- Scene 4
 c.push(H2("Scene 4: What the Name Costs"));
 
-c.push(P("Late, with the day\u2019s business done, Xavier finds the party somewhere quiet \u2014 away from the harbor\u2019s noise, away from anyone keeping official record of the conversation."));
+c.push(P("Late, with the day\u2019s business done, Xavier finds the party somewhere quiet \u2014 away from the harbour\u2019s noise, away from anyone keeping official record of the conversation."));
 
 c.push(BOX("\u201CThey\u2019ve started calling me something,\u201D he says, not quite a question. \u201CI keep waiting for someone to explain it to me properly and nobody will. I remember the dragon. I remember being fairly sure I was about to die. I don\u2019t remember deciding to be brave about it \u2014 I remember being too frightened to think of anything else to do.\u201D He is quiet for a moment. \u201CIs that what the songs are going to say happened? Because I\u2019d rather they didn\u2019t, if it\u2019s all the same.\u201D"));
 
 c.push(P("Let this be a real conversation rather than a scene to resolve. Xavier is not fishing for reassurance and does not need the party to tell him he is a hero; he genuinely does not know yet how he feels about the name, and the party\u2019s honest reaction \u2014 whatever it is \u2014 matters more here than any mechanical outcome. This scene needs no check and produces no loot. It is the module\u2019s actual point, arriving last, exactly where a session built on deliberate levity has been heading since Scene 1."));
 
 // ------------------------------------------------------------ NPC Profiles
+c.push(H2("Stat Blocks"));
+
+c.push(P("None, by design: nothing in this module is meant to be fought. If the Magistrate\u2019s caper goes badly and somebody insists on a scuffle, the one or two soldiers on her door are Legionaries of the Sixth (Bestiary), in a city that has just changed hands, with no officer, no pay-chest and no reason at all to die on a doorstep. They surrender on the first round anybody asks them to."));
+
 c.push(H1("Puzzles and Set Pieces"));
 
 c.push(P("Three Years of Filing expands the ledger war and adds twenty minutes. Putting the Light Back is additive, takes ten, and should not be cut \u2014 it is the beat the whole module is built around."));

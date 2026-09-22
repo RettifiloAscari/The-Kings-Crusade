@@ -50,7 +50,7 @@ The party comes up the Long Stair to reach him — four hundred and ten steps fr
 
 Duncarrow is a working fortress, not a palace — grey stone, low ceilings, arrow-slit windows that let in more cold than light. The great hall smells of woodsmoke, wet dog, and oiled steel rather than incense; the tapestries on its walls are march-maps and hide charts, not heraldry. Guards at the door look tired rather than ceremonial, and nod the party through without announcing them — Duncarrow has had a great many visitors this season, and does not have the staff to make an occasion of one more.
 
-Xavier receives the party standing, at a steward’s table crowded with maps and weighted at the corners with what look like ordinary stones. He is not what the songs will eventually make of him: greying at the temples earlier than he should be, a soldier’s build going a little soft from a year of councils rather than campaigns, dressed plainly enough that a stranger might take him for one of his own captains. Only when he looks up does the room organize itself around him — not because anyone commands it to, but because everyone in it has clearly done this before.
+Xavier receives the party standing, at a steward’s table crowded with maps and weighted at the corners with what look like ordinary stones. He is not what the songs will eventually make of him: greying at the temples earlier than he should be, a soldier’s build going a little soft from a year of councils rather than campaigns, dressed plainly enough that a stranger might take him for one of his own captains. Only when he looks up does the room organise itself around him — not because anyone commands it to, but because everyone in it has clearly done this before.
 
 > *He does not make them kneel. “I know your names,” he says, before anyone has given one, and it is not a boast — he simply has. “A kingdom I have never seen has been taken by a man I have never met, and I am asking you to help me take it back. I will not pretend that is a small thing to ask of anyone.*
 
@@ -58,7 +58,7 @@ Let Xavier speak plainly about the Promise — a share in Elduvaine’s resident
 
 **DM Only:** if a player pushes on why he chose them specifically, he has a real answer, not a flattering one: he asked his officers for the people other people trusted under pressure, not the people other people were impressed by. He believes this is the same thing Harrowmark has always valued in its own wyvern-hunters, and it is not a coincidence that Greywatch is where he is about to send them next.
 
-He closes the audience by asking one thing of them before the muster marches: Greywatch, three days out, has sent word that a wyvern has taken to raiding its herds and, twice now, its people. He would rather send the crusade’s own chosen than levy more of Greywatch’s own dead.
+He closes the audience by asking one thing of them before the muster marches: Greywatch, four days out, has sent word that a wyvern has taken to raiding its herds and, twice now, its people. He would rather send the crusade’s own chosen than levy more of Greywatch’s own dead.
 
 **DM Only:** if a player asks what the Call actually promised, Xavier tells them straight and without enthusiasm: a share of Elduvaine’s own magic, meaning land held inside the Living Realm where the habits work, and the run of the Ysolde Archive, to everybody who answers. He is aware that neither is his to give. He is not aware — nobody is yet — that the same two things were offered to two powers at once, out of a country that is being spent while they march. Do not have him defend the Promise. Have him state it, and change the subject to march order, which is the subject he is actually good at.
 
@@ -74,7 +74,7 @@ Give the party the rest of the daylight to see Greywatch properly before dusk br
 
 ### Running the Encounter
 
-The wyvern comes at dusk, out of a sky gone the color of a bruise, and is heard before it is seen — a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practiced shorthand of people who have done this before — an orc roper with a line already spinning before the thing is in range, two dwarves setting a pike-brace into the frozen ground and swearing at it in the tone of people who do this every winter.
+The wyvern comes at dusk, out of a sky gone the colour of a bruise, and is heard before it is seen — a dry, heavy beat of wings, then a cry that every dog in the hold answers at once. It strikes from height, going first for whatever looks least defended: a penned animal, a straggler, a party member who has wandered from the group. Brenna and two or three Greywatch hunters (use commoner or scout-tier statistics as needed; they are support, not combatants, and should not be expected to survive a direct hit) fight alongside the party with ropes and long pikes rather than swords, calling positions to each other in the flat, practised shorthand of people who have done this before — an orc roper with a line already spinning before the thing is in range, two dwarves setting a pike-brace into the frozen ground and swearing at it in the tone of people who do this every winter.
 
 Harrowmark does not fight wyverns the way most parties expect to fight a dragon. A PC adjacent to the wyvern, or within its reach, may spend their action fixing a hunting rope to a wing or leg (Strength (Athletics) or Dexterity (Sleight of Hand), DC 13 — Brenna will call out which, and why, the first time it comes up). Three successful ropes from three different characters ground the wyvern: it loses its fly speed until it breaks free (its action, a DC 13 Athletics contest against the ropes) or the encounter ends. A grounded wyvern fighting on the ground, hemmed in by pikes, is a substantially safer fight than one still in the air, and this is deliberate — it is the module’s built-in partial resolution, not a trick or a trap. Play the moment it goes down for everything it is worth: the ropes snapping taut, the hold-folk shouting the count, the sudden and enormous silence of something huge no longer in the air.
 
@@ -87,7 +87,7 @@ The wyvern below is the SRD statistics unmodified, run against Dungeon Master’
 | **PCs** | **Adj. XP** | **Deadly** | **Reads as** | **Compensate with** |
 | --- | --- | --- | --- | --- |
 | 4 | 2,300 | 4,400 | Medium–Hard | Run as written. |
-| 5 | 2,300 | 5,500 | just under Medium | Run as written; the rope tactic and morale give it teeth the raw math understates. |
+| 5 | 2,300 | 5,500 | just under Medium | Run as written; the rope tactic and morale give it teeth the raw maths understates. |
 | 6 | 1,150 | 6,600 | below Easy | Do not add a second wyvern — crossing the 1→2 monster boundary roughly doubles the multiplier and overcorrects badly. Instead add one complication: a burning hayrick blocking the herd pens, or a trapped child in the loft, that raises the practical stakes without touching the monster count. |
 
 ## Tiered Skill DCs
@@ -140,7 +140,7 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 
 ## Scene 4: The Muster’s End
 
-Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move. The yard that was ordinary business three days ago is now a camp too large for it — wagons loaded and lashed, Harrowmark levies falling into column by the sound of a horn rather than a shouted order, and, past the edge of the Harrowmark tents, the first coalition banners: colors and cuts of armor the party has not seen before, voices in accents that mark out where in the muster Oksitan and Auberitz have pitched their own camps. Nobody introduces the party to any of it yet — that is a later module’s work — but it should be visibly, unmistakably there, the first sign that this war is bigger than Harrowmark.
+Whatever became of the wyvern, the party returns to Duncarrow to find the muster nearly ready to move. The yard that was ordinary business ten days ago is now a camp too large for it — wagons loaded and lashed, Harrowmark levies falling into column by the sound of a horn rather than a shouted order, and, past the edge of the Harrowmark tents, the first coalition banners: colours and cuts of armour the party has not seen before, voices in accents that mark out where in the muster Oksitan and Auberitz have pitched their own camps. Nobody introduces the party to any of it yet — that is a later module’s work — but it should be visibly, unmistakably there, the first sign that this war is bigger than Harrowmark.
 
 ### Three Things in the Yard
 
@@ -181,7 +181,7 @@ The Corrieholt discrepancy is a decoy and is entirely honest: light horse draw a
 
 Three routes to it, and a party should be allowed any of them. Count the billets — the stable range is a fixed building and its capacity is a matter of public record. Walk the range at dawn and count bodies. Or ask a Stannock pikeman how many of his village came, and get an answer that is sixty short of the roll.
 
-**DM Only:** there is no villain here and the party should be braced for one. Stannock sent four hundred people out of sixteen hundred and sixty of them were promised to a hold that then could not spare them, so a clerk carried them on the roll and sent the bread money home. It is embezzlement, it is feeding a village that gave a quarter of its people to this war, and the clerk will not deny a word of it. What the party does with that is the scene. Xavier, if asked, will decide in about four seconds and will not enjoy it.
+**DM Only:** there is no villain here and the party should be braced for one. Stannock sent four hundred people out of sixteen hundred, and sixty of them were promised to a hold that then could not spare them, so a clerk carried them on the roll and sent the bread money home. It is embezzlement, it is feeding a village that gave a quarter of its people to this war, and the clerk will not deny a word of it. What the party does with that is the scene. Xavier, if asked, will decide in about four seconds and will not enjoy it.
 
 ## Set Piece: The Ledge
 
@@ -212,7 +212,7 @@ Open thread: he has told no one in this party, and will tell no one for some tim
 
 A dwarf in her second century, Greywatch’s huntmaster for sixty years of it, missing two fingers on her left hand to a stinger she still calls “a fair trade.” Runs Greywatch’s wyvern-watch and, unofficially, a hold-wide betting ledger on every kill — which limb, which method, how long. Speech: dry, economical, allergic to being thanked directly; deflects gratitude by immediately assigning a chore.
 
-Open thread: if the party impresses her, she offers what Greywatch actually has to give — not gold, but competence: a standing invitation to send word if Harrowmark-trained hands are ever needed again, which a DM can call in during Module 8 or later as a recurring, grounded ally rather than a one-scene NPC.
+Open thread: if the party impresses her, she offers what Greywatch actually has to give — not gold, but competence: a standing invitation to send word if Harrowmark-trained hands are ever needed again, which a DM can call in during Module Eight or later as a recurring, grounded ally rather than a one-scene NPC.
 
 # Optional Content
 
@@ -235,15 +235,16 @@ If the table wants a prep phase before the wyvern strikes, run a short group eff
 # Diverging Paths (DM Only)
 
 - **The wyvern’s fate.** Killed, driven off, or (rarely) roped and released elsewhere — track which. Greywatch remembers a killing as competence and a driving-off as mercy; both earn Brenna’s respect, and only a table that badly mishandles the fight (fleeing, refusing to help, or getting a Greywatch hunter killed through carelessness) should lose it.
-- **The road choice — Branch Ledger entry 1.** Sea road or mountain road, decided here and carried into Module 2A or 2B. This is the campaign’s first tracked divergence; record it in the DM Reference Guide the moment it is made, including who argued for which and why, since that reasoning is worth revisiting when the drowned king’s aftermath reaches the party in Module 5.
+- **The Fenmarrow letter.** Taken or refused, and then carried, lost, opened or delivered — track it for the whole campaign. It cannot be delivered before Module Five and may never be; what the party does with it once they know where the son’s column went is worth a line in the ledger every time it changes hands.
+- **The road choice — Branch Ledger entry 1.** Sea road or mountain road, decided here and carried into Module 2A or 2B. This is the campaign’s first tracked divergence; record it in the DM Reference Guide the moment it is made, including who argued for which and why, since that reasoning is worth revisiting when the drowned king’s aftermath reaches the party in Module Five.
 
 # Loot
 
-- **A Greywatch hunting pike.** Masterwork but not magical — a reach weapon balanced by people who use them for a living. Reflavor as a longspear or glaive per the wielder’s preference; treat as a normal weapon of its type, finely made.
+- **A Greywatch hunting pike.** Masterwork but not magical — a reach weapon balanced by people who use them for a living. Reflavour as a longspear or glaive per the wielder’s preference; treat as a normal weapon of its type, finely made.
 - **A vial of Greywatch antitoxin.** A single-use draught brewed from the hold’s long experience with stinger wounds. Grants advantage on the next saving throw against poison damage or the poisoned condition within the next 24 hours.
 - **Two potions of healing.** Pressed on the party by Greywatch’s healer with the flat instruction to bring them back empty rather than unused. Standard SRD potions of healing (2d4 + 2).
-- **A blade out of Duncarrow’s armory.** A +1 weapon of the recipient’s type, cut with a dwarven runesmith’s marks along the spine — worked magic, carried in the steel, exactly the kind Harrowmark makes and the only kind it has. Xavier hands it over without ceremony and slightly too fast, in the manner of a man who has decided not to make a speech about it.
-- **Xavier’s token.** A plain iron badge, the king’s own mark, given without ceremony. It carries no mechanical benefit and opens no doors by itself — but it is recognizable to anyone who has served under Xavier, and a DM may let it matter socially wherever that is true.
+- **A blade out of Duncarrow’s armoury.** A +1 weapon of the recipient’s type, cut with a dwarven runesmith’s marks along the spine — worked magic, carried in the steel, exactly the kind Harrowmark makes and the only kind it has. Xavier hands it over without ceremony and slightly too fast, in the manner of a man who has decided not to make a speech about it.
+- **Xavier’s token.** A plain iron badge, the king’s own mark, given without ceremony. It carries no mechanical benefit and opens no doors by itself — but it is recognisable to anyone who has served under Xavier, and a DM may let it matter socially wherever that is true.
 
 # The Refrain
 

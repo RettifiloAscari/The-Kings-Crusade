@@ -32,11 +32,11 @@ The coalition is exactly as fragile as a coalition built on the Promise should b
 
 ## Scene 1: The Muster Camp
 
-The camp above Caerwyn is the first time the party has seen the coalition as a whole rather than as a rumor at the edge of the Harrowmark muster: Oksitan tents in orderly rows, their banners a color the party has not seen before; Auberitz’s heavier cavalry picketed apart, grooms working in a language half the camp does not speak; Harrowmark’s own levies looking, for the first time, like the smallest contingent present.
+The camp above Caerwyn is the first time the party has seen the coalition as a whole rather than as a rumour at the edge of the Harrowmark muster: Oksitan tents in orderly rows, their banners a colour the party has not seen before; Auberitz’s heavier cavalry picketed apart, grooms working in a language half the camp does not speak; Harrowmark’s own levies looking, for the first time, like the smallest contingent present.
 
 > *The camp smells of a dozen different cooking fires and sounds like three armies that have not yet decided how loudly they are allowed to dislike each other. An Oksitan sergeant argues good-naturedly with a Harrowmark quartermaster over a supply wagon; an Auberitz officer watches both of them with the particular patience of someone counting days until the argument becomes his problem.*
 
-Let the party walk the camp and meet it at their own pace. If Module 2A was played, Sera Vosk (see her NPC profile in Module 2A) is a natural, familiar face to have turn up here, now properly attached to the Auberitz contingent’s logistics; if Module 2B was played, use a new, unnamed Auberitz quartermaster instead, or introduce Garrick Hollow’s opposite number for texture. Either way, someone in camp should treat the party as already known — the story of whichever Module Two variant they played has traveled ahead of them.
+Let the party walk the camp and meet it at their own pace. If Module 2A was played, Sera Vosk (see her NPC profile in Module 2A) is a natural, familiar face to have turn up here, now properly attached to the Auberitz contingent’s logistics; if Module 2B was played, use a new, unnamed Auberitz quartermaster instead, or introduce Garrick Hollow’s opposite number for texture. Either way, someone in camp should treat the party as already known — the story of whichever Module Two variant they played has travelled ahead of them.
 
 ## Scene 2: What the Promise Is Worth
 
@@ -64,9 +64,9 @@ Let a Warden of the Order say exactly that to the party, over good food, without
 
 ## Scene 3: Doria Kell’s Offer
 
-Away from camp — at a well, on a supply run, wherever the party can be approached without an audience — a woman in plain, well-made traveling clothes falls into step beside them, unhurried and entirely unbothered by the coalition’s presence.
+Away from camp — at a well, on a supply run, wherever the party can be approached without an audience — a woman in plain, well-made travelling clothes falls into step beside them, unhurried and entirely unbothered by the coalition’s presence.
 
-> *“Doria Kell, factor of Norvatch,” she says, as though the introduction were a formality rather than an offer. “I don’t march with your coalition and I don’t intend to. I trade with whoever’s buying, on either side of this war, and just now I’m buying goodwill. I know where one of Elduvaine’s royal wards is being kept. I’ll tell you, no charge, no favor owed — because it costs me nothing and it might cost the man holding her something later, and I find that arrangement agreeable.”*
+> *“Doria Kell, factor of Norvatch,” she says, as though the introduction were a formality rather than an offer. “I don’t march with your coalition and I don’t intend to. I trade with whoever’s buying, on either side of this war, and just now I’m buying goodwill. I know where one of Elduvaine’s royal wards is being kept. I’ll tell you, no charge, no favour owed — because it costs me nothing and it might cost the man holding her something later, and I find that arrangement agreeable.”*
 
 Doria is not an ally and does not pretend to be one. She trades information the way she trades goods — because it is profitable, not because she is choosing a side — and this scene should make that legible without making her untrustworthy; what she says checks out exactly as she describes it. If the party wants to press her for more (payment for better information, a standing arrangement, anything beyond this one free lead), she will discuss terms plainly, and a DM can use this as a recurring thread: Norvatch as a source the party can return to, always for a price, never as a friend.
 
@@ -128,6 +128,18 @@ Ninian (see NPC Profiles) is sharp, unharmed, and immediately useful rather than
 
 ***Light Crossbow.*** Ranged Weapon Attack: +3 to hit, range 80/320 ft., one target. Hit: 5 (1d8 + 1) piercing damage.
 
+### Scaling the Fight
+
+Sennoch Hall is three different fights depending on how loud the party is, and the arithmetic below is why the module steers so hard toward quiet. Legionaries are 100 XP each and Hoth, as a Legion Optio, is 450; thresholds are for 5th level.
+
+| **How loud** | **Who fights** | **Adj. XP (4–5 / 6)** | **Reads as** |
+| --- | --- | --- | --- |
+| Quiet | The library guard and whoever is nearest: three legionaries | 600 / 450 | Below Easy at every size. The reward for being quiet. |
+| The gate | Six on watch and Hoth: seven monsters, ×2.5 | 2,625 / 2,100 | Medium for four or five, Easy for six. |
+| The whole Hall | Eighteen legionaries and Hoth: nineteen, ×4 | 9,000 / 6,750 | Past Deadly at every size. Do not run it as one fight. |
+
+Morale is the honest lever in all three. The Sixth withdraws in good order when a fight is clearly lost or its officer orders it, and Hoth orders it the moment the tower is taken — he has been waiting three years to be allowed to.
+
 ## Tiered Skill DCs
 
 Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
@@ -179,7 +191,7 @@ The garrison commander at Sennoch Hall is a hobgoblin of the Sixth who has held 
 
 He means every word and there is no trick in it. The file is real and is genuinely valuable — it names the collaborator clerks in the Braid, it establishes what the occupation asked the royal house and when, and it is the campaign’s first hard evidence that Emrys Ysolde has been talking to Vale.
 
-A party that fights him instead wins. Eighteen legionaries and an optio against five characters at 5th level is a real fight and not a close one if the party has taken the range or the gate. They also lose the file, which Hoth burns, correctly, per his standing orders, in the four minutes it takes them to reach the study.
+A party that fights him instead can win, but only on its own terms: eighteen legionaries and an optio awake and armoured are well past Deadly for any party at 5th level, and the fight is only winnable if the party has already taken the garrison range while its twelve were unarmoured, or holds the gate and fights them a file at a time. They also lose the file, which Hoth burns, correctly, per his standing orders, in the four minutes it takes them to reach the study.
 
 # NPC Profiles
 

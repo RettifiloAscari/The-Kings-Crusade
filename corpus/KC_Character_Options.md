@@ -379,13 +379,13 @@ Elduvaine’s great treasures are habits made portable, and their defining quali
 
 | **Item** | **Rarity** | **Where it first appears** |
 | --- | --- | --- |
-| Standing-stone lamp | Common | Module 3, from Caerwyn’s baker |
-| Flask of Listening Water | Uncommon | Module 5, at the Standing Water |
+| Standing-stone lamp | Common | Module Three, from Caerwyn’s baker |
+| Flask of Listening Water | Uncommon | Module Five, at the Standing Water |
 | Road-token | Uncommon, attuned | DM’s discretion |
 | Kept Season seeds | Uncommon | DM’s discretion |
-| Legion pattern blade (+1) | Uncommon | Module 7, Drell’s campaign sword |
-| Wand of magic missiles | Uncommon | Module 7, the harbour-mage’s quarters |
-| Cloak of elvenkind | Uncommon, attuned | Module 9, off one of Voss’s scouts |
+| Legion pattern blade (+1) | Uncommon | Module Seven, Drell’s campaign sword |
+| Wand of magic missiles | Uncommon | Module Seven, the harbour-mage’s quarters |
+| Cloak of elvenkind | Uncommon, attuned | Module Nine, off one of Voss’s scouts |
 | Keeper’s pruning hook | Rare, attuned | The Orchard Marches |
 | Ysolde reading-glass | Rare, attuned | The Archive, and not easily |
 

@@ -46,7 +46,7 @@ A rider comes back down the column at a dead run — the same shape of scene as 
 
 ### Running the Default Scene
 
-Tam’s warning reaches the column’s officers in time regardless of what the party does — that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 16 Medicine check, attempted within the first round after he falls, stabilizes him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module’s emotional cost, and it should be allowed to land before Scene 3’s battle begins.
+Tam’s warning reaches the column’s officers in time regardless of what the party does — that is not in question, and the party cannot fail to receive it. What is in question is whether they reach him before the end. A DC 16 Medicine check, attempted within the first round after he falls, stabilises him long enough for a few last words; failing that check, or simply not reaching him in time, means he dies having delivered exactly the warning he came to give, aware that it worked. Either way, this is the module’s emotional cost, and it should be allowed to land before Scene 3’s battle begins.
 
 ### The Alternate: A Third Thread
 
@@ -60,7 +60,7 @@ Do not run both versions of this scene. Pick one before the session and commit t
 
 The ambush breaks from both treelines at once, and for several very long minutes the outcome is genuinely uncertain. This is the module’s real fight, and it should feel like one.
 
-> *The coalition line buckles and does not break — Oksitan spears on the left with a dragonborn house-knight somewhere in the middle of them roaring instructions nobody can hear, Auberitz heavier foot anchoring the center, Harrowmark’s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss’s attack with the calm of someone who still, even now, believes this is winnable.*
+> *The coalition line buckles and does not break — Oksitan spears on the left with a dragonborn house-knight somewhere in the middle of them roaring instructions nobody can hear, Auberitz heavier foot anchoring the centre, Harrowmark’s own discipline holding a flank that has no business holding against these numbers. Somewhere in the press, unmistakable even through a helm, is a woman directing Voss’s attack with the calm of someone who still, even now, believes this is winnable.*
 
 ### Running the Scene
 
@@ -72,9 +72,9 @@ Voss (1,800 XP) plus six Legionaries of the Sixth (100 XP each, 600) totals 2,40
 
 | **PCs** | **Adj. XP** | **Hard** | **Deadly** | **Reads as** |
 | --- | --- | --- | --- | --- |
-| 4 at 7th | 6,000 | 4,200 | 6,800 | Hard, close to Deadly. Run as written. |
-| 5 at 7th | 6,000 | 5,250 | 8,500 | Hard. This is the calibration the module wants. |
-| 6 at 7th | 4,800 | 6,300 | 10,200 | Medium. Add two more legionaries, not a second officer. |
+| 4 at 7th | 6,000 | 4,400 | 6,800 | Hard, close to Deadly. Run as written. |
+| 5 at 7th | 6,000 | 5,500 | 8,500 | Hard. This is the calibration the module wants. |
+| 6 at 7th | 4,800 | 6,600 | 10,200 | Medium. Add two more legionaries, not a second officer. |
 | 4 at 5th | 6,000 | 3,000 | 4,400 | Well past Deadly. Cut to four legionaries. |
 
 This is deliberately the most dangerous fight in the campaign so far, and unlike every earlier encounter it is meant to read Hard rather than Easy-to-Medium. If it comes out too heavy against your own table, remove legionaries rather than reducing Voss — she is the fight’s whole point, and a Voss who is not frightening has cost the module its subject.
@@ -128,8 +128,8 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 | **Task** | **Skill** | **DC** | **Tier** |
 | --- | --- | --- | --- |
 | Read the treeline as a prepared ambush site | Investigation / Survival | 13 | Moderate |
-| Recognize the missing scouts as deliberate | Insight | 13 | Moderate |
-| Stabilize Tam Ondry after he falls (default Scene 2) | Medicine | 16 | Hard |
+| Recognise the missing scouts as deliberate | Insight | 13 | Moderate |
+| Stabilise Tam Ondry after he falls (default Scene 2) | Medicine | 16 | Hard |
 | Hold a coalition position against Voss’s pressure | Athletics / relevant combat skill | 13 | Moderate |
 | Talk Voss into a battlefield surrender once clearly beaten | Persuasion / Intimidation | 16 | Hard |
 
@@ -188,11 +188,19 @@ Open thread: if captured rather than killed, Voss is a genuine long-term asset f
 
 ## What the Column Says About Tam
 
-If Tam died in Scene 2, let the coalition’s reaction be genuine rather than perfunctory — a name added to a growing list, spoken plainly rather than eulogized, echoing exactly the register the Standing Water gave the second king’s death in Module Five. No mechanical stakes; this is the module giving its cost real weight.
+If Tam died in Scene 2, let the coalition’s reaction be genuine rather than perfunctory — a name added to a growing list, spoken plainly rather than eulogised, echoing exactly the register the Standing Water gave the second king’s death in Module Five. No mechanical stakes; this is the module giving its cost real weight.
 
 ## Voss’s Own Papers
 
 If Voss is captured or her body searched, her own field orders reveal real, specific intelligence about the remaining distance to Caer Ysolde and what defends it — useful DM ammunition for Module Ten rather than something that needs to resolve here.
+
+## An Engine Behind the Line
+
+Voss did not march without one. Behind her reserve, on a cart drawn by eight oxen and guarded by four Legionaries of the Sixth, is a Draining Engine (Bestiary): plated, humming, and drawing the resident magic out of the ground in a slow circle into racks of cut light-stone. The grass for sixty yards round it is the grey of the Dead Mile. Every Elduvish creature within sixty feet of it feels it working, and so does any Elduvish member of the party.
+
+An Engine is an objective, not an opponent. Run it as one: the legionaries hold, the Engine discharges at whoever is closest, and a clock runs — every round it keeps working is a round of the Living Realm going into a cart. Breaking it is a real and permanent win. Tell the party what a prisoner or Ninian will tell them if asked: there are only about thirty of these in Elduvaine. Let them do that arithmetic themselves.
+
+**DM Only:** this is the campaign’s cleanest answer to a table that wants to hurt Vale before Module Eleven. The Engine (2,300 XP) and its four legionaries (400) are 2,700 XP across five monsters, ×2 for 5,400 adjusted, or ×1.5 for 4,050 with six characters. At 7th level that is Hard for four characters, Medium to Hard for five and Easy–Medium for six. Track how many Engines the party breaks across the campaign; it belongs in the Branch Ledger.
 
 # Diverging Paths (DM Only)
 
@@ -201,9 +209,9 @@ If Voss is captured or her body searched, her own field orders reveal real, spec
 
 # Loot
 
-- **Voss’s field orders.** Real intelligence about Caer Ysolde’s defenses — see Optional Content.
+- **Voss’s field orders.** Real intelligence about Caer Ysolde’s defences — see Optional Content.
 - **A cloak of elvenkind.** Off one of Voss’s scouts, and Elduvish work — which is to say looted, three years ago, from somebody who is not alive to want it back. A DM who wants that to land can let the party find out whose it was.
-- **Captured field equipment.** Modest but genuine — weapons, armor, and supply recovered from Voss’s broken column, worth collecting rather than a windfall.
+- **Captured field equipment.** Modest but genuine — weapons, armour, and supply recovered from Voss’s broken column, worth collecting rather than a windfall.
 
 # The Refrain
 

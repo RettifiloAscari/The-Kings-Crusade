@@ -14,7 +14,7 @@ Run this module if the party chose the sea road at the end of Module One. If the
 
 ## The Shape of a Sea-Lane War
 
-Play Calanthe as ordinary and opportunistic, not sinister. Warden Thane is not a monster and has no connection to Vale, to Elduvaine, or to anything the party will learn about later — he is a petty ruler who found a profitable position at a strait every southbound fleet has to pass, and has been quietly working it for longer than anyone in the coalition realized. This module’s tension is not “what is this evil,” the way Elduvaine’s will be. It is a smaller and in some ways harder question: what does a war for someone else’s deliverance do to the small, uninvolved places it happens to pass through — and the party is about to decide the answer for one of them, in miniature, several modules before they have to decide it for a whole kingdom.
+Play Calanthe as ordinary and opportunistic, not sinister. Warden Thane is not a monster and has no connection to Vale, to Elduvaine, or to anything the party will learn about later — he is a petty ruler who found a profitable position at a strait every southbound fleet has to pass, and has been quietly working it for longer than anyone in the coalition realised. This module’s tension is not “what is this evil,” the way Elduvaine’s will be. It is a smaller and in some ways harder question: what does a war for someone else’s deliverance do to the small, uninvolved places it happens to pass through — and the party is about to decide the answer for one of them, in miniature, several modules before they have to decide it for a whole kingdom.
 
 | **Scene** | **Target time** | **Notes** |
 | --- | --- | --- |
@@ -36,7 +36,7 @@ Three days south of Harrowmark, with the coast long out of sight, the sky does w
 
 > *The first anyone knows of it is the light going wrong — a green-grey dusk arriving hours early — and then the wind, which does not build so much as simply begin, all at once, as if a door somewhere had been thrown open. Somewhere off the bow, another ship’s lantern swings wildly, then is gone.*
 
-Run this fast and mostly in narration. Let each PC make one relevant check if they want to help the crew (Strength (Athletics) to work the lines, Wisdom (Survival) to read the worst of it coming, an appropriate spell to calm water or clear fog) — success or failure barely matters mechanically and mostly colors how battered the party’s own ship is when the storm breaks. What matters is the ending: the party’s vessel, and at least one other coalition ship, are driven onto an unfamiliar coast as the wind finally drops. By morning, that coast has a name — Calanthe — offered by whichever sailor recognizes the headland first, along with a look that suggests the name means something unpleasant.
+Run this fast and mostly in narration. Let each PC make one relevant check if they want to help the crew (Strength (Athletics) to work the lines, Wisdom (Survival) to read the worst of it coming, an appropriate spell to calm water or clear fog) — success or failure barely matters mechanically and mostly colours how battered the party’s own ship is when the storm breaks. What matters is the ending: the party’s vessel, and at least one other coalition ship, are driven onto an unfamiliar coast as the wind finally drops. By morning, that coast has a name — Calanthe — offered by whichever sailor recognises the headland first, along with a look that suggests the name means something unpleasant.
 
 ## Scene 2: Landfall
 
@@ -50,7 +50,7 @@ Let the party spend some time here gathering what Calanthe’s few frightened lo
 
 ## Scene 3: Thane’s Hold
 
-The hold is less a fortress than a fortified manor — old stone, patched with newer and cheaper stone, flying a banner nobody recognizes over a gate that has clearly been rebuilt more than once. Thane receives visitors readily; ransom is, after all, his business, and armed strangers asking after his newest guests are simply customers who have not yet been told the price.
+The hold is less a fortress than a fortified manor — old stone, patched with newer and cheaper stone, flying a banner nobody recognises over a gate that has clearly been rebuilt more than once. Thane receives visitors readily; ransom is, after all, his business, and armed strangers asking after his newest guests are simply customers who have not yet been told the price.
 
 > *“Ah,” says the man in the doorway, unhurried, a ledger genuinely under one arm. “More of the fleet that thought my strait was free water. I’m Ivor Thane, and I’m told this happens to be my island. Your people are safe, fed, and entirely available — for a reasonable consideration. I find negotiations go better before anyone has drawn a sword, so let’s try that first, shall we?”*
 
@@ -64,7 +64,7 @@ If the party refuses to pay, threatens him convincingly, is caught trying to fre
 
 ### Scaling the Fight
 
-Ivor Thane is the SRD Veteran (CR 3, 700 XP) renamed and reflavored, unmodified otherwise; his guards are SRD Bandits (CR 1/8, 25 XP each), both taken from the SRD unaltered. Run with Thane plus four Bandits — five total monsters, comfortably inside the 3–6 monster band, so no table’s party size pushes the count across a multiplier boundary on its own.
+Ivor Thane is the SRD Veteran (CR 3, 700 XP) renamed and reflavoured, unmodified otherwise; his guards are SRD Bandits (CR 1/8, 25 XP each), both taken from the SRD unaltered. Run with Thane plus four Bandits — five total monsters, comfortably inside the 3–6 monster band, so no table’s party size pushes the count across a multiplier boundary on its own.
 
 | **PCs** | **Mult.** | **Adj. XP** | **Medium** | **Reads as** |
 | --- | --- | --- | --- | --- |
@@ -83,7 +83,7 @@ Easy 10, Moderate 13, Hard 16, matching the tiers used throughout this campaign.
 | **Task** | **Skill** | **DC** | **Tier** |
 | --- | --- | --- | --- |
 | Help the crew through the worst of the storm | Athletics / Survival / relevant spell | 13 | Moderate |
-| Recognize Calanthe’s coastline before making landfall | Survival / Nature | 13 | Moderate |
+| Recognise Calanthe’s coastline before making landfall | Survival / Nature | 13 | Moderate |
 | Get Calanthe’s frightened locals talking about Thane | Persuasion / Insight | 10 | Easy |
 | Talk Thane’s price down without a fight | Persuasion / Intimidation | 16 | Hard |
 | Cross the yard to reach the captives once a fight starts | Athletics / Acrobatics | 13 | Moderate |
@@ -159,7 +159,7 @@ Let the party decide Calanthe’s fate. A coalition garrison secures the strait 
 
 **DM Only:** record this choice in the DM Reference Guide as its own Branch Ledger entry, separate from the road choice. It is a small-scale rehearsal of the campaign’s largest question — what a liberator owes the place it liberates — and it is worth revisiting, briefly, whenever the party’s coalition allies discuss what Elduvaine should become after the war. Do not force the parallel; if the table draws it themselves, that is the module working as intended.
 
-The fleet resupplies, repairs what the storm damaged, and continues south within the day. Hand off directly to Module 3, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module 5, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news.
+The fleet resupplies, repairs what the storm damaged, and continues south within the day. Hand off directly to Module Three, Landfall, and the first sight of Elduvaine. The road not taken catches up with the party later, in Module Five, when what happened to Raimon V of Oksitan at a Vaskren ford reaches them as news.
 
 # Puzzles and Set Pieces
 
@@ -234,7 +234,7 @@ If the table wants more to do before Thane’s hold, a third coalition vessel ca
 - **The recovered stores.** Enough of the fleet’s lost supplies, plus a portion of Thane’s accumulated plunder, to be a genuine funding boost for the crusade — play this narratively as the coalition arriving at Vindana somewhat better supplied than it otherwise would have, rather than a large individual coin payout at 5th level.
 - **Thane’s ledger.** A genuinely useful item: years of records of ships, cargoes, and (if he is captured or cooperative) contacts along the southern sea-lanes. A DM can use it to justify a Diverging Paths hook or a piece of information the party needs later without it feeling handed to them.
 - **A bag of holding.** Bottom of Thane’s stores, taken off a wreck years ago, and by a distance the most valuable thing on Calanthe — he has been using it to store rope. Sera Vosk will notice what it is roughly one second before anybody else does and will not pretend otherwise.
-- **A signet ring.** Thane’s own, if he is defeated or surrenders it as part of a bargain. Non-magical, but recognizable to anyone in the region who has dealt with Calanthe’s toll — a DM may let it open doors, or close them, wherever that is true.
+- **A signet ring.** Thane’s own, if he is defeated or surrenders it as part of a bargain. Non-magical, but recognisable to anyone in the region who has dealt with Calanthe’s toll — a DM may let it open doors, or close them, wherever that is true.
 
 # The Refrain
 
