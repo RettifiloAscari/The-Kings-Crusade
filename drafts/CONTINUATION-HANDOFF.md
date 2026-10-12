@@ -35,6 +35,37 @@ the calling king, the occupation as a hired legion, the Nine Works and the schis
 Ysolde by name, Oksitan and Norvatch's agendas, and the shape of the war across an approved
 eleven-module arc. `CLAUDE.md` states all of it precisely.
 
+**The set is production ready and the DM is running it at the table now.** As of commit
+`3db55af`, `main` and `claude/dnd-campaign-setup-t3p4zz` point at the same commit, and
+`tools/verify.sh --full` passes clean.
+
+## What the last passes did
+
+Read `drafts/PRODUCTION-AUDIT.RESOLVED.md` before changing anything. It lists what was
+checked, what changed, and — most important — what was found and **deliberately left
+alone**, so you do not "fix" it again. In short, the last four commits were:
+
+| Commit | Pass |
+|---|---|
+| `7c2860d` | Readability: headings bound to what follows, real ordered lists, `check_widows.py` |
+| `2062b25` | The Session Zero primer (`KC_Session_Zero_Primer.js`), DM-facing, invents no canon |
+| `6186593` | Canon integration into all twelve module files: royals named, Legion blocks, Tenth Work, gazetteer hooks planted |
+| `3db55af` | Full production audit: British spelling, full ten-part skeleton, scaling everywhere, Maelis's scene, all six resident creatures placed, Stat Block Index rebuilt |
+
+## House style the audit settled
+
+- **British spelling throughout**, except 5e rules terms, which stay as the rulebook prints
+  them: *Armor Class*, SRD armour names inside AC parentheses, *mage armor*. Do not
+  "correct" those.
+- **Module references are spelled out** in prose (*Module Five*), except *2A* and *2B*.
+- **Encounter maths is 2014 DMG.** Per-character thresholds (Easy/Medium/Hard/Deadly):
+  5th 250/500/750/1,100; 6th 300/600/900/1,400; 7th 350/750/1,100/1,700. Multipliers: 1
+  ×1, 2 ×1.5, 3–6 ×2, 7–10 ×2.5, 11–14 ×3, 15+ ×4; six or more characters shift down one
+  step. Every scaling table from Module Six on states the level it assumes. Three
+  arithmetic errors were found in the last pass, one in that pass's own work: **recompute,
+  never trust a table because it is printed.**
+- **No fixed milestone schedule** is prescribed anywhere, deliberately.
+
 ## The scale question, honestly
 
 The DM asked for something at published scale — 224–320 pages for a setting book, 50–100
@@ -59,6 +90,10 @@ Do not promise a page count you will not reach in one pass. Say what you actuall
 
 ## Where the next pass should go, ranked
 
+0. **Table feedback first.** The DM is running the campaign now. Anything they report from
+   play outranks everything below, and anything already run at the table needs sign-off
+   to change (`CLAUDE.md`, *Creative Latitude*). Ask what happened before proposing work,
+   and offer to fill the Branch Ledger's blank column from their notes.
 1. **Settle what Auberitz wants.** It is the last coalition member with no agenda, and it
    blocks more than it looks: Auberitz owns the siege train, the engineers and the
    quartermasters, so it appears in nearly every module and is currently run by role only.
@@ -66,8 +101,8 @@ Do not promise a page count you will not reach in one pass. Say what you actuall
    Road it can never have, Norvatch the market, the Tenth Work the tenth work. Auberitz
    builds the engines and wants nothing. **Put it to the DM as short multiple choice with a
    recommendation, then propagate in one pass.**
-2. **The modules are the thinnest thing in the set relative to published work.** Each has a
-   puzzle and a set piece now; what they lack is keyed depth — more locations, more scene
+2. **The modules are the thinnest thing in the set relative to published work.** Each now
+   carries the full skeleton, a puzzle and a set piece; what they still lack is keyed depth — more locations, more scene
    text, more NPC lines, and per-module encounter tables. This is where the largest number
    of pages lives and it needs no new canon.
 3. **The Gazetteer's regions can carry adventure seeds.** Thirty keyed places exist with a
@@ -101,6 +136,14 @@ Keep them apart.
 
 ## Loose threads left open
 
+- **One line wants the DM's sign-off.** Maelis's profile in Module Eleven
+  (`scripts/KC_Module11_TheDecisionAtTheGates.js`, the "status report" paragraph) says the
+  number she gives is "somewhat worse than Norvatch's ledgers said, because the ledgers
+  stopped at the last shipment and she did not". It follows from canon (she knows the
+  exact figure; the ledgers record shipments), but it commits to a direction. Confirm it
+  or soften it to "she tells them, without softening it".
+- **General *Ilyana* Voss** is not on the sourcebook's Legion names list. Left alone on
+  purpose: the list is illustrative and the name is used consistently.
 - **A 3.1 MB PNG sits in git history.** The title banner was committed as PNG, then
   re-encoded to a 540 KB JPEG. The blob costs ~3 MB on a fresh clone and nothing on page
   views. Purging it needs a history rewrite and a force-push; that was attempted, verified
